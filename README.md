@@ -1,1 +1,1 @@
-# HaloWeb
+# HaloWeb-Halo Project Landing Page
