@@ -24,6 +24,7 @@ up automatically. Test locally with `npx vercel dev` or any static server.
 HaloWeb/
 ├── index.html        # the whole page
 ├── favicon.svg
+├── vercel.json       # static deployment adapter config
 ├── css/
 │   ├── tokens.css    # design tokens ported from the app's ui/theme/Color.kt
 │   └── main.css      # layout + components
@@ -33,7 +34,7 @@ HaloWeb/
 ```
 
 No build step, no dependencies. Serve statically (any static host works,
-e.g. GitHub Pages from this repo's root).
+e.g. Vercel or GitHub Pages from this repo's root).
 
 ## Design
 
