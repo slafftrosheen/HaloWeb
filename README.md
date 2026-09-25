@@ -1,12 +1,12 @@
 # HaloWeb — Halo landing page
 
 A static, no-build single-page site introducing [Halo](https://github.com/slafftrosheen/Halo),
-a **host-native personal cognitive runtime** — one persistent intelligence with phones, models,
-workspace and devices as interchangeable capabilities around it.
+a **host-native personal cognitive runtime**. Your Android phone is the first complete host;
+local AI, a persistent Notebook and capability-driven devices extend it.
 
-The page is built to *demonstrate Halo's mental model*, not describe it: interactive runtime
-scenarios, a capability constellation, a privacy topology diagram, an origin-routing demo and
-a scroll-driven Notebook loop — all in the app's visual language.
+The page demonstrates Halo's mental model with product-truthful content: the app surface and
+routes come first, architecture diagrams support them, and everything future-facing is
+visibly labeled **Planned / In development / Experimental**.
 
 ## Deployment (Vercel)
 
@@ -16,71 +16,75 @@ a scroll-driven Notebook loop — all in the app's visual language.
 - `outputDirectory: "."` — index.html, css/, js/ and favicon.svg are served directly
 - `cleanUrls` — `/index.html` is canonicalized to `/`
 - security headers (nosniff, referrer policy, frame options, permissions policy) and
-  1-day revalidation caching for `/css/*` and `/js/*`
+  1-day revalidation caching for `/css/*` and `/js/*` (HTML references carry cache-busting
+  `?v=` params)
 
-Import the repo at vercel.com → New Project → framework preset **Other**; the config is picked
-up automatically. Test locally with `npx vercel dev` or any static server.
+Import the repo at vercel.com → New Project → framework preset **Other**. Test locally with
+`npx vercel dev` or any static server.
 
 ## Structure
 
 ```
 HaloWeb/
-├── index.html          # the whole page (13 sections)
+├── index.html          # 7 chapters
 ├── favicon.svg
 ├── vercel.json         # static deployment adapter config
 ├── css/
 │   ├── tokens.css      # design tokens from the app's ui/theme/Color.kt + editorial scale
-│   └── main.css        # layout, components, topology/constellation styling
+│   └── main.css        # layout, components, SVG diagram styling, responsive rules
 └── js/
-    ├── presence.js     # canvas port of the app's HaloOrb/HaloPresence (multi-instance)
-    ├── interactions.js # scenario pipelines, notebook loop, continuity routing, reveals
-    └── main.js         # theme toggle (System/Light/Dark), motion preference, resize
+    ├── presence.js     # canvas port of the app's HaloOrb/HaloPresence (bounded motion)
+    ├── interactions.js # route pipelines, notebook demo, continuity routing, reveals
+    └── main.js         # System/Light/Dark theme, motion preference, resize handling
 ```
 
-No build step, no dependencies, no framework. Serves statically anywhere.
+No build step, no dependencies, no framework.
 
-## Page architecture
+## Page chapters
 
-1. **Hero** (~92vh) — "Your intelligence shouldn't live inside one device." Presence floats at
-   ~500px as the spatial center; capability labels (PHONE, GLASSES, EARPHONES…) orbit it and
-   gently lean the cluster on hover. Runtime rail: Listening → Understanding → Reasoning →
-   Responding, each with a one-line runtime trace.
-2. **What Halo is** — one editorial statement + a simple input→runtime→output diagram.
-3. **See it working** — three clickable scenarios (glasses, capture, robot) animated through
-   the real pipeline stages with a runtime-terminal trace.
-4. **The Android host** — floating phone mockups showing Home/Notebook/Devices surfaces,
-   including a live mini presence orb.
-5. **Notebook** — scroll-triggered loop: capture → inbox → summary → explicit memory.
-6. **Devices** — capability constellation (SVG): devices connect to the capabilities they
-   provide. "Halo cares about capabilities, not logos."
-7. **Local by architecture** — privacy topology (SVG): everything inside the device box;
-   cloud model access drawn as optional and user-chosen.
-8. **Continuity** — interactive origin-routing demo with capability toggles and fallbacks.
-9. **Beyond the screen** — quiet rover schematic, "Experimental embodiment."
-10. **What Halo is not** — big editorial break.
-11. **Now / Next / Later** — condensed roadmap; details live on GitHub.
-12. **CTA** — GitHub links.
+1. **Hero** — "Your assistant shouldn't live inside one device." Presence at the center,
+   orbiting capability *buttons* that pulse the cluster on hover/focus, runtime state rail
+   (Ready → Understanding → Reasoning → Responding) with a semantic trace line.
+2. **Halo working + Android host** — phone-first. A reconstructed app surface with a
+   Home/Notebook/Devices switcher beside three interaction routes with status chips:
+   **Ask on phone (Current)**, **Ask through glasses (In dev)**, **Capture from glasses (In dev)**,
+   plus a semantic runtime route trace.
+3. **Notebook** — the shipped NB-01 path animates once (Capture → Inbox → Organize); the
+   memory/Working Set continuation is shown statically with a **Planned** chip.
+4. **One runtime, many capabilities** — layered diagram: runtime core (reasoning, workspace,
+   speech) inside, physical endpoints around it, cloud provider drawn as optional and
+   user-selected. "Halo cares about capabilities, not logos."
+5. **Local by architecture + origin continuity** — device-boundary topology, proof chips
+   (no account / no cloud required / no helper apps / perpetual ownership), and an
+   interactive origin-routing demo with fallbacks.
+6. **Beyond the phone** — wearable layer, experimental tracked platform, cross-host future.
+7. **Now / Next / Later** — condensed roadmap; GitHub carries the detail. Plus a short
+   "Not a chatbot…" editorial band for pacing.
 
-## Design
+## Motion contract (matches the app's "no permanent idle animation")
 
-- Visual authority: the user design mockup and `HALO-WORKSPACE-DESIGN.md` in the main repo —
-  soft depth and spatial cells; no rings, gauges or glowing-orb clichés.
-- Palette: exact values from `app/src/main/java/com/halo/app/ui/theme/Color.kt`
-  (light `#F6F7FB`/`#182033`/…, dark `#17191E`/`#20232A`/…, pastel object colors).
-- Motion discipline: presence renders 1:1 with the app (same cell geometry, 280ms tween);
-  render loops stop when settled; demo pulses are one-shot 600ms; reduced motion collapses
-  everything to instant state changes (CSS media query + JS `data-motion` attribute).
-- Theme toggle mirrors the app's System/Light/Dark appearance preference (System default,
-  persisted choice, follows OS changes while unset). All presence instances re-theme live.
+- `setState`: one bounded 280ms transition, then RAF stops.
+- `activityBurst`: bounded ≤1.5s envelope, then stops.
+- `pulse`: one-shot 600ms lean, then stops.
+- After load and entrance effects settle, no render loops run.
+- Reduced motion is evaluated live; enabling it mid-session cancels loops, renders the
+  settled state once and stops. The mini orb in the app mockup renders a static Ready state.
+
+## Theme contract
+
+Three-state System / Light / Dark like the app's AppearanceMode selector. The header control
+cycles System → Light → Dark; System removes the persisted override and follows the OS.
+All presence instances re-theme with exactly one redraw.
 
 ## Honesty rules (deliberate)
 
-- Every demo trace and pipeline is labeled **illustrative** — the terminal shows the
-  architecture, not fabricated benchmarks. No performance numbers are advertised.
-- Notebook features shown are the shipped scope (notes/search/lifecycle) plus the planned
-  memory promotion, which the demo labels as the mental model, not a shipped flow.
-- HeyCyan appears only as a reference implementation, never as the definition of Halo hardware.
-- The Halo Platform (tracked base) is explicitly marked experimental and kept visually minor.
-- Copy follows the consolidated 2026-09-24 docs (VISION.md, PRD.md, PRINCIPLES.md):
-  host-native runtime, standalone phone assistant, capability-driven devices, no mandatory
-  account, perpetual ownership, interaction-origin continuity.
+- Traces are **semantic** ("INPUT · phone microphone"), never fabricated telemetry —
+  no invented timestamps, sizes, receipts or percentages.
+- Scenario and pipeline statuses are labeled Current / In development / Planned / Experimental.
+- Notebook shows only shipped NB-01 behavior as current; memory promotion is Planned.
+- HeyCyan is a reference implementation, never the definition of Halo hardware.
+- The tracked platform is explicitly Experimental and visually minor.
+- The app mockups are reconstructions of the real Compose surfaces with staged (not live)
+  content, and say so.
+- Copy follows the consolidated 2026-09-24 Halo docs (CURRENT-STATE, VISION, PRD, PRINCIPLES,
+  provider architecture). Performance numbers are not advertised.

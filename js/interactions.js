@@ -1,36 +1,39 @@
-/* HaloWeb v2 interactions.
- * Scenario pipelines, notebook loop, continuity routing, capability pulses,
- * reveal-on-scroll and the in-mockup orb. All demo content is labeled as
- * illustrative; motion stays within the site's restrained language and
- * collapses to instant state changes under reduced motion.
+/* HaloWeb v2.1 interactions.
+ * Demos are deferred until their sections are visible; traces are semantic,
+ * not fabricated telemetry; scenario controls are a plain aria-pressed button
+ * group (no fake tabs). Motion stays bounded and reduced-motion aware.
  */
 (function () {
   'use strict';
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  function reducedMotion() { return reduced.matches || document.documentElement.getAttribute('data-motion') === 'reduced'; }
+  function reducedMotion() {
+    return reduced.matches || document.documentElement.getAttribute('data-motion') === 'reduced';
+  }
   function wait(ms) { return reducedMotion() ? Promise.resolve() : new Promise(function (r) { setTimeout(r, ms); }); }
+
+  function presence() {
+    return window.HaloPresence && window.HaloPresence._hero ? window.HaloPresence._hero : null;
+  }
 
   /* ---------- Hero presence + runtime rail ---------- */
   var heroCanvas = document.getElementById('presence-canvas');
-  var presence = window.HaloPresence && heroCanvas ? window.HaloPresence.mount(heroCanvas) : null;
+  var hero = window.HaloPresence && heroCanvas ? window.HaloPresence.mount(heroCanvas) : null;
+  if (window.HaloPresence) window.HaloPresence._hero = hero;
   var traceEl = document.getElementById('runtime-trace');
 
-  var stateOrder = ['listening', 'understanding', 'reasoning', 'responding'];
+  var TRACES = {
+    ready: 'Ready',
+    listening: 'invoke → capture · microphone active',
+    understanding: 'speech → text · intent recognized',
+    reasoning: 'context assembled · provider: selected',
+    responding: 'answer streaming · output → origin'
+  };
 
-  function setState(key) {
-    if (!presence) return;
-    presence.setState(key);
+  function setRailState(key) {
+    if (hero) hero.setState(key);
     if (traceEl) {
-      var st = window.HaloPresence.states;
-      // presence.js exposes state keys only; trace text lives here.
-      var traces = {
-        listening: 'wake → capture · VAD active',
-        understanding: 'speech → text · locale · intent',
-        reasoning: 'context assembled · provider: local',
-        responding: 'answer streaming · output route: origin'
-      };
-      traceEl.innerHTML = '<span class="step step--active">' + (traces[key] || '') + '</span>';
+      traceEl.innerHTML = '<span class="step step--active">' + (TRACES[key] || '') + '</span>';
     }
   }
 
@@ -38,115 +41,135 @@
   Array.prototype.forEach.call(railBtns, function (btn) {
     btn.addEventListener('click', function () {
       var key = btn.getAttribute('data-state');
-      setState(key);
+      setRailState(key);
       Array.prototype.forEach.call(railBtns, function (b) {
         b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
       });
     });
   });
 
-  /* Capability labels lean the presence toward them on hover/focus. */
-  if (presence) {
-    Array.prototype.forEach.call(document.querySelectorAll('.cap-label'), function (label) {
-      var dir = parseFloat(label.getAttribute('data-dir') || '0');
+  /* Capability labels: real buttons; hover/focus produces one bounded pulse. */
+  if (hero) {
+    Array.prototype.forEach.call(document.querySelectorAll('.cap-label'), function (btn) {
+      var dir = parseFloat(btn.getAttribute('data-dir') || '0');
       var amp = Math.min(0.045, Math.abs(dir) * 0.045);
       function lean() {
-        label.classList.add('cap-label--pulse');
-        presence.pulse(dir, amp);
+        btn.classList.add('cap-label--pulse');
+        hero.pulse(dir, amp);
       }
-      function leanOff() { label.classList.remove('cap-label--pulse'); }
-      label.addEventListener('mouseenter', lean);
-      label.addEventListener('mouseleave', leanOff);
-      label.addEventListener('focus', lean);
-      label.addEventListener('blur', leanOff);
+      function leanOff() { btn.classList.remove('cap-label--pulse'); }
+      btn.addEventListener('mouseenter', lean);
+      btn.addEventListener('mouseleave', leanOff);
+      btn.addEventListener('focus', lean);
+      btn.addEventListener('blur', leanOff);
+      btn.addEventListener('click', lean);
     });
   }
 
-  /* ---------- Scenario pipelines + terminal ---------- */
+  /* ---------- Scenario pipelines + semantic terminal ---------- */
   var SCENARIOS = {
+    phone: {
+      title: 'runtime route — ask on the phone',
+      status: 'CURRENT',
+      note: '<b>Ask on the phone.</b> Halo is a complete assistant on Android by itself — invoke, ask, act. No wearable or extra service required.',
+      steps: [
+        { tag: 'INPUT',    text: 'phone microphone · invoked by you' },
+        { tag: 'STT',      text: 'local speech recognition' },
+        { tag: 'REASON',   text: 'selected provider · default: local llama.cpp' },
+        { tag: 'ROUTE',    text: 'response → phone' },
+        { tag: 'RESULT',   text: 'playback on phone' }
+      ],
+      term: [
+        'INPUT     phone microphone',
+        'STT       local speech recognition',
+        'REASON    selected provider (default: local llama.cpp)',
+        'ROUTE     response → interaction origin',
+        'RESULT    playback acknowledged'
+      ]
+    },
     glasses: {
-      title: 'runtime trace — ask through glasses (illustrative)',
-      note: '<b>Ask through glasses.</b> The wearable captures the question, the local model reasons on the phone, and the answer returns to the glasses. No cloud, no account.',
+      title: 'runtime route — ask through glasses',
+      status: 'IN DEVELOPMENT',
+      note: '<b>Ask through glasses.</b> The glasses contribute microphone and speakers as capabilities; Halo keeps the conversation on the device where it began. HeyCyan is the reference implementation while this track is validated on hardware.',
       steps: [
-        { tag: 'INPUT',    text: 'HeyCyan · microphone' },
-        { tag: 'STT',      text: 'speech → text · on device' },
-        { tag: 'REASON',   text: 'llama.cpp · qwen3 · local' },
-        { tag: 'ROUTE',    text: 'origin: glasses' },
-        { tag: 'OUTPUT',   text: 'HeyCyan · speakers' },
-        { tag: 'RESULT',   text: 'success · verified by playback' }
+        { tag: 'INPUT',    text: 'glasses microphone · capability: audio input' },
+        { tag: 'STT',      text: 'local speech recognition' },
+        { tag: 'REASON',   text: 'selected provider' },
+        { tag: 'ROUTE',    text: 'response → interaction origin' },
+        { tag: 'OUTPUT',   text: 'glasses speakers · capability: audio output', planned: true },
+        { tag: 'STATUS',   text: 'hardware validation in progress', planned: true }
       ],
       term: [
-        '09:41:21  INPUT     HeyCyan / microphone',
-        '09:41:21  STT       whisper.cpp · partial "what changed in the spec"',
-        '09:41:22  PROVIDER  llama.cpp / qwen3 · context: notebook',
-        '09:41:23  ANSWER    streamed 41 tokens · tts ready',
-        '09:41:23  OUTPUT    HeyCyan / audio · origin route',
-        '09:41:23  RESULT    success'
+        'INPUT     glasses microphone (capability: audio input)',
+        'STT       local speech recognition',
+        'REASON    selected provider',
+        'ROUTE     response → interaction origin',
+        'OUTPUT    glasses speakers          [IN DEVELOPMENT]',
+        'STATUS    hardware validation in progress'
       ]
     },
-    camera: {
-      title: 'runtime trace — capture to notebook (illustrative)',
-      note: '<b>Capture to Notebook.</b> A photo from any camera becomes a workspace object, gets summarized, and can be promoted to memory with provenance.',
+    capture: {
+      title: 'runtime route — capture from glasses',
+      status: 'IN DEVELOPMENT',
+      note: '<b>Capture from glasses.</b> A wearable photo becomes a Notebook object. The receive-into-Inbox step is in development; summarization and memory promotion are planned slices, not current behavior.',
       steps: [
-        { tag: 'INPUT',   text: 'camera · photo captured' },
-        { tag: 'TRANSFER',text: 'media → phone · checksum verified' },
-        { tag: 'VISION',  text: 'on-device vision model' },
-        { tag: 'WORKSPACE', text: 'notebook object created · inbox' },
-        { tag: 'SUMMARY', text: 'diff vs supplier spec · 3 findings' },
-        { tag: 'RESULT',  text: 'saved · memory promotion explicit' }
+        { tag: 'INPUT',    text: 'glasses camera · photo capture' },
+        { tag: 'TRANSFER', text: 'media → phone · verified transfer', planned: true },
+        { tag: 'WORKSPACE',text: 'notebook object · Inbox', planned: true },
+        { tag: 'STATUS',   text: 'media path acceptance in progress', planned: true }
       ],
       term: [
-        '09:41:21  INPUT     HeyCyan / camera · IMG_0941.jpg',
-        '09:41:22  TRANSFER  wifi · sha256 verified · 2.1 MB',
-        '09:41:23  VISION    local vision model · 3 regions',
-        '09:41:24  WORKSPACE note + media object · inbox',
-        '09:41:24  SUMMARY   "diffuser gap 2mm wider than spec"',
-        '09:41:24  RESULT    saved · provenance: HeyCyan capture'
-      ]
-    },
-    robot: {
-      title: 'runtime trace — drive the robot (illustrative)',
-      note: '<b>Drive the robot.</b> Intents pass a safety layer before any motor moves: arming required, bounded pulses, stop on release, telemetry freshness enforced.',
-      steps: [
-        { tag: 'INTENT',  text: 'user command · drive forward 1m' },
-        { tag: 'POLICY',  text: 'capability check · drive allowed' },
-        { tag: 'SAFETY',  text: 'armed? telemetry fresh? bounds ok' },
-        { tag: 'ACT',     text: 'bounded drive pulses · throttled' },
-        { tag: 'VERIFY',  text: 'odometry + stop confirmation' },
-        { tag: 'RESULT',  text: 'complete · receipt in Activity' }
-      ],
-      term: [
-        '09:41:21  INTENT    drive · forward 1.0m',
-        '09:41:21  POLICY    capability: drive · allowed',
-        '09:41:22  SAFETY    motors armed · telemetry 120ms · ok',
-        '09:41:22  ACT       pulses 1..4 · bounded · throttle 40%',
-        '09:41:23  VERIFY    odometry 1.02m · stopped',
-        '09:41:23  RESULT    complete · receipt #4021'
+        'INPUT     glasses camera (capability: still capture)',
+        'TRANSFER  media → phone             [IN DEVELOPMENT]',
+        'WORKSPACE notebook object · Inbox    [PLANNED]',
+        'STATUS    media path acceptance in progress'
       ]
     }
   };
 
   var pipelineEl = document.getElementById('pipeline');
   var noteEl = document.getElementById('scenario-note');
+  var statusChip = document.getElementById('scenario-status');
   var termEl = document.getElementById('term');
   var termTitle = document.getElementById('term-title');
   var scenarioBtns = document.querySelectorAll('.scenario-bar .btn[data-scenario]');
   var scenarioRun = 0;
+  var currentScenario = 'phone';
 
   function renderPipeline(scenario) {
     if (!pipelineEl) return;
     pipelineEl.innerHTML = scenario.steps.map(function (s) {
-      return '<li><span class="tag">' + s.tag + '</span><span>' + s.text + '</span></li>';
+      var suffix = s.planned ? '<span class="step-chip">PLANNED</span>' : '';
+      return '<li><span class="tag">' + s.tag + '</span><span>' + s.text + '</span>' + suffix + '</li>';
     }).join('');
+  }
+
+  function applyScenarioStatic(scenario) {
+    renderPipeline(scenario);
+    if (noteEl) noteEl.innerHTML = scenario.note;
+    if (statusChip) {
+      statusChip.textContent = scenario.status;
+      statusChip.className = 'pill ' + (scenario.status === 'CURRENT' ? 'pill--shipped' : 'pill--planned');
+    }
+    if (termTitle) termTitle.textContent = scenario.title;
+    if (termEl) {
+      termEl.textContent = scenario.term.join('\n');
+      // Mark planned/in-development lines so the terminal is truth-telling at rest.
+      termEl.innerHTML = scenario.term.map(function (line) {
+        return line.indexOf('[IN DEVELOPMENT]') > -1 || line.indexOf('[PLANNED]') > -1
+          ? '<span class="term-planned">' + line + '</span>'
+          : line;
+      }).join('\n');
+    }
   }
 
   function runScenario(key) {
     var scenario = SCENARIOS[key];
     if (!scenario) return;
+    currentScenario = key;
     var run = ++scenarioRun;
-    renderPipeline(scenario);
-    if (noteEl) noteEl.innerHTML = scenario.note;
-    if (termTitle) termTitle.textContent = scenario.title;
+    applyScenarioStatic(scenario);
+    if (reducedMotion()) return;
     var items = pipelineEl ? Array.prototype.slice.call(pipelineEl.children) : [];
     items.forEach(function (li) { li.className = ''; });
     if (termEl) termEl.textContent = '';
@@ -155,14 +178,17 @@
       if (run !== scenarioRun) return;
       if (i >= items.length) {
         items.forEach(function (li) { li.className = 'done'; });
-        if (termEl) termEl.textContent = scenario.term.join('\n');
-        if (presence) presence.pulse(1, 0.03);
+        applyScenarioStatic(scenario);
+        if (hero) hero.pulse(1, 0.03);
         return;
       }
       items[i].className = 'on';
-      if (termEl) termEl.textContent = scenario.term.slice(0, i + 1).join('\n');
-      if (presence) presence.pulse(i % 2 === 0 ? 1 : -1, 0.02);
-      wait(650).then(function () {
+      if (termEl) {
+        var done = scenario.term.slice(0, i + 1).join('\n');
+        termEl.textContent = done;
+      }
+      if (hero) hero.pulse(i % 2 === 0 ? 1 : -1, 0.02);
+      wait(620).then(function () {
         if (run !== scenarioRun) return;
         items[i].className = 'done';
         next(i + 1);
@@ -179,14 +205,16 @@
     });
   });
 
-  /* ---------- Notebook loop (scroll-triggered) ---------- */
+  /* ---------- Notebook loop: current path animates once; planned stays static ---------- */
   var nbSteps = document.querySelectorAll('#nb-steps li');
   var nbArrive = document.getElementById('nb-arrive');
   var nbRun = 0;
 
   function runNotebook() {
     var run = ++nbRun;
-    var steps = Array.prototype.slice.call(nbSteps);
+    var steps = Array.prototype.slice.call(nbSteps).filter(function (li) {
+      return li.getAttribute('data-current') === 'true';
+    });
     steps.forEach(function (li) { li.classList.remove('on'); });
     if (nbArrive) nbArrive.classList.remove('on');
     (function next(i) {
@@ -194,11 +222,7 @@
       if (i >= steps.length) return;
       steps[i].classList.add('on');
       if (i === 0 && nbArrive) nbArrive.classList.add('on');
-      if (i === 2) {
-        var halo = document.getElementById('nb-halo');
-        if (halo) { halo.style.background = 'var(--wash-a)'; }
-      }
-      wait(1200).then(function () { next(i + 1); });
+      wait(1100).then(function () { next(i + 1); });
     })(0);
   }
 
@@ -213,18 +237,18 @@
     var gMic = caps['glasses-mic'];
     var gSpk = caps['glasses-speaker'];
 
-    var input = gMic ? ['GLASSES', 'glasses microphone · capture'] : (earbuds ? ['EARBUDS', 'earbuds microphone · capture'] : ['PHONE', 'phone microphone · capture']);
-    var output = gSpk && gMic ? ['GLASSES', 'glasses speakers · response'] : (earbuds ? ['EARBUDS', 'earbuds speakers · response'] : ['PHONE', 'phone speaker · response']);
+    var input = gMic ? ['glasses microphone · capture'] : (earbuds ? ['earbuds microphone · capture'] : ['phone microphone · capture']);
+    var output = (gSpk && gMic) ? ['glasses speakers · response'] : (earbuds ? ['earbuds speakers · response'] : ['phone speaker · response']);
 
-    var reason = 'Response route: interaction origin';
-    if (gMic && !gSpk) reason = 'Fallback: glasses output unavailable → ' + (earbuds ? 'earbuds' : 'phone speaker');
-    if (!gMic) reason = 'Fallback: glasses input unavailable → ' + (earbuds ? 'earbuds' : 'phone') + ' for capture and response';
+    var reason;
+    if (gMic && gSpk) reason = 'Response route: interaction origin';
+    else if (gMic && !gSpk) reason = 'Fallback: glasses output unavailable → ' + (earbuds ? 'earbuds' : 'phone speaker');
+    else reason = 'Fallback: glasses input unavailable → ' + (earbuds ? 'earbuds' : 'phone') + ' for capture and response';
 
     var nodes = [
-      { tag: 'INPUT', text: input[1], dim: false },
-      { tag: 'HALO', text: 'runtime · local reasoning', dim: false },
-      { tag: 'MODEL', text: 'llama.cpp · on device', dim: false },
-      { tag: 'OUTPUT', text: output[1], dim: false }
+      { tag: 'INPUT', text: input[0] },
+      { tag: 'HALO', text: 'runtime · selected provider' },
+      { tag: 'OUTPUT', text: output[0] }
     ];
 
     routeEl.innerHTML = nodes.map(function (n, i) {
@@ -244,10 +268,39 @@
     });
   });
 
-  /* ---------- Reveal on scroll ---------- */
+  /* ---------- Host showcase segmented selector (mobile/tablet) ---------- */
+  var hostScreens = document.querySelectorAll('.host-screen[data-screen]');
+  var hostBtns = document.querySelectorAll('.host-switch .btn[data-screen-target]');
+  function showHostScreen(name) {
+    Array.prototype.forEach.call(hostScreens, function (el) {
+      el.hidden = el.getAttribute('data-screen') !== name;
+    });
+  }
+  Array.prototype.forEach.call(hostBtns, function (btn) {
+    btn.addEventListener('click', function () {
+      Array.prototype.forEach.call(hostBtns, function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      showHostScreen(btn.getAttribute('data-screen-target'));
+    });
+  });
+
+  /* ---------- Reveal on scroll (demos deferred until visible) ---------- */
+  var scenarioShown = false;
+  var notebookShown = false;
+
   function revealEl(el) {
     el.classList.add('in');
-    if (el.getAttribute && el.getAttribute('data-demo') === 'notebook') runNotebook();
+    if (el.hasAttribute('data-demo')) {
+      var demo = el.getAttribute('data-demo');
+      if (demo === 'scenario' && !scenarioShown) {
+        scenarioShown = true;
+        runScenario(currentScenario); // one short demonstration on first reveal
+      } else if (demo === 'notebook' && !notebookShown) {
+        notebookShown = true;
+        runNotebook();
+      }
+    }
   }
 
   function checkReveals() {
@@ -272,8 +325,7 @@
     });
   }
 
-  /* Geometry fallback: covers environments where IO callbacks don't fire
-     (and ancient browsers). Idempotent — classList.add guards re-runs. */
+  /* Geometry fallback: covers environments where IO callbacks don't fire. */
   var revealTick = 0;
   window.addEventListener('scroll', function () {
     if (revealTick) return;
@@ -282,16 +334,15 @@
   window.addEventListener('resize', checkReveals);
   setTimeout(checkReveals, 1200);
 
-  /* ---------- Mini orb in the phone mockup ---------- */
+  /* ---------- Mini orb: static Ready state in the mockup ---------- */
   var mini = document.getElementById('orb-mini');
   if (mini && window.HaloPresence) {
     var miniPresence = window.HaloPresence.mount(mini);
-    miniPresence.setState('listening');
+    miniPresence.setState('ready'); // renders once; no loops in the mockup
   }
 
-  /* ---------- Boot ---------- */
-  setState('listening');
-  var initial = document.querySelector('.scenario-bar .btn[aria-pressed="true"]');
-  runScenario(initial ? initial.getAttribute('data-scenario') : 'glasses');
+  /* ---------- Boot: everything settles statically; demos wait for visibility ---------- */
+  setRailState('ready');
+  applyScenarioStatic(SCENARIOS[currentScenario]);
   routeContinuity();
 })();

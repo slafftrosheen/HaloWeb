@@ -7,13 +7,15 @@
  *  - a short "light-break" line on the upper-right edge, never a progress ring
  *
  * Cell colors come from the page CSS custom properties (--cell-a…--cell-f),
- * so the presence re-themes itself with the page. No idle animation runs:
- * the render loop stops when the cluster is settled and the state is static.
+ * so the presence re-themes itself with the page.
  *
- * v2: multiple instances, theme-change refresh, and a restrained directional
- * pulse used by the capability constellation and demo pipelines. The pulse is
- * a one-shot 600ms ease-in-out of the state shift — same motion language as
- * state transitions, no loops.
+ * Motion contract (matches the app's "no permanent idle animation"):
+ *  - setState: one bounded 280ms transition
+ *  - activityBurst: one bounded (<=1500ms) input/output envelope
+ *  - pulse: one bounded 600ms lean
+ *  - otherwise the render loop is fully stopped; RAF count returns to zero
+ *  - reduced motion is evaluated live; enabling it mid-session cancels
+ *    everything, renders once and stops.
  */
 (function () {
   'use strict';
@@ -30,31 +32,38 @@
   ];
 
   var STATES = {
-    listening:   { label: 'Listening',   shift: 0,     dynamic: true,  envelope: 'input',  trace: 'wake → capture · VAD active' },
-    understanding: { label: 'Understanding', shift: -0.035, dynamic: false, trace: 'speech → text · locale · intent' },
-    reasoning:   { label: 'Reasoning',    shift: 0.025, dynamic: false, trace: 'context assembled · provider: local' },
-    responding:  { label: 'Responding',   shift: 0.018, dynamic: true,  envelope: 'output', trace: 'answer streaming · output route: origin' }
+    ready:        { label: 'Ready',        shift: 0,      trace: 'invoke → capture · microphone active' },
+    listening:    { label: 'Listening',    shift: 0,      trace: 'invoke → capture · microphone active' },
+    understanding:{ label: 'Understanding',shift: -0.035, trace: 'speech → text · intent recognized' },
+    reasoning:    { label: 'Reasoning',    shift: 0.025,  trace: 'context assembled · provider: selected' },
+    responding:   { label: 'Responding',   shift: 0.018,  trace: 'answer streaming · output → origin' }
   };
 
   var TWEEN_MS = 280;
   var PULSE_MS = 600;
+  var BURST_MS = 1200;
 
-  function Presence(canvas, opts) {
-    opts = opts || {};
+  function Presence(canvas) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
-    this.state = 'listening';
-    this.source = 'Phone';
+    this.state = 'ready';
     this.shift = 0;
     this.shiftFrom = 0;
     this.shiftTo = 0;
     this.tweenStart = 0;
+    this.burstStart = 0;
+    this.burstAmp = 0;
+    this.pulseStart = 0;
     this.pulseAmp = 0;
     this.pulseDir = 1;
-    this.pulseStart = 0;
-    this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.raf = 0;
     this.vars = null;
+    this._onMotionChange = this._onMotionChange.bind(this);
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (mq.addEventListener) mq.addEventListener('change', this._onMotionChange);
+      this._motionQuery = mq;
+    }
     this.refreshTheme();
     this.render();
     Presence.instances.push(this);
@@ -66,6 +75,24 @@
     Presence.instances.forEach(function (p) { p.refreshTheme(); });
   };
 
+  Presence.prototype._onMotionChange = function () {
+    if (this.reducedMotionLive()) {
+      // Cancel everything, render the settled state once, stop.
+      this.stopLoop();
+      this.burstStart = 0;
+      this.pulseStart = 0;
+      this.tweenStart = 0;
+      this.shift = (STATES[this.state] || STATES.ready).shift;
+      this.render();
+    }
+  };
+
+  Presence.prototype.reducedMotionLive = function () {
+    if (!this._motionQuery) return false;
+    return this._motionQuery.matches ||
+      document.documentElement.getAttribute('data-motion') === 'reduced';
+  };
+
   Presence.prototype.refreshTheme = function () {
     var s = getComputedStyle(document.documentElement);
     this.vars = {
@@ -74,17 +101,17 @@
       cells: ['--cell-a', '--cell-b', '--cell-c', '--cell-d', '--cell-e', '--cell-f']
         .map(function (v) { return s.getPropertyValue(v).trim() || '#CCCCCC'; })
     };
-    // Re-draw immediately: the loop is usually stopped when settled, so a theme
-    // switch would otherwise leave the old palette on screen until the next state.
+    // Re-draw immediately: the loop is stopped when settled, so a theme
+    // switch would otherwise leave the old palette on screen.
     this.render();
   };
 
-  Presence.prototype.setState = function (key, source) {
+  Presence.prototype.setState = function (key, options) {
+    options = options || {};
     if (!STATES[key]) return;
     this.state = key;
-    if (typeof source === 'string' && source) this.source = source;
     var target = STATES[key].shift;
-    if (this.reducedMotion) {
+    if (this.reducedMotionLive()) {
       this.shift = target;
       this.stopLoop();
       this.render();
@@ -96,12 +123,24 @@
     this.startLoop();
   };
 
-  /* One-shot directional pulse: a gentle lean toward a nearby capability.
-   * direction: -1 (left/up) … 1 (right/down). amplitude in shift units. */
+  /* Bounded activity envelope (input/output). Duration is capped at BURST_MS;
+   * after it the loop stops. Used only while a demo is actually animating. */
+  Presence.prototype.activityBurst = function (duration) {
+    if (this.reducedMotionLive()) return;
+    this.burstStart = performance.now();
+    this.burstAmp = Math.min(0.06, Math.max(0.01, (duration || BURST_MS) / 20000));
+    this.startLoop();
+  };
+
+  Presence.prototype.endBurst = function () {
+    this.burstStart = 0;
+  };
+
+  /* One-shot directional pulse: a gentle lean toward a nearby capability. */
   Presence.prototype.pulse = function (direction, amplitude) {
-    if (this.reducedMotion) return;
+    if (this.reducedMotionLive()) return;
     this.pulseDir = direction >= 0 ? 1 : -1;
-    this.pulseAmp = Math.min(0.05, amplitude || 0.02);
+    this.pulseAmp = Math.min(0.045, amplitude || 0.02);
     this.pulseStart = performance.now();
     this.startLoop();
   };
@@ -121,26 +160,28 @@
   };
 
   Presence.prototype.tick = function (now) {
-    var st = STATES[this.state];
     var t;
-    var base;
+    var base = this.shiftTo;
 
-    if (this.tweenStart && now - this.tweenStart < TWEEN_MS) {
-      // Ease-out approximation of Compose's FastOutSlowIn tween.
-      t = Math.min(1, (now - this.tweenStart) / TWEEN_MS);
-      t = 1 - Math.pow(1 - t, 3);
-      base = this.shiftFrom + (this.shiftTo - this.shiftFrom) * t;
-    } else if (st && st.dynamic) {
-      // Envelope: a gentle wave, clearly labeled demo input.
-      var wave = 0.5 + 0.5 * Math.sin(now / 550);
-      if (st.envelope === 'input') {
-        base = 0.06 * (0.25 + 0.75 * wave);
+    if (this.tweenStart) {
+      t = (now - this.tweenStart) / TWEEN_MS;
+      if (t < 1) {
+        t = 1 - Math.pow(1 - t, 3);
+        base = this.shiftFrom + (this.shiftTo - this.shiftFrom) * t;
       } else {
-        base = 0.012 + 0.008 * wave;
+        this.tweenStart = 0;
       }
-    } else {
-      base = this.shiftTo;
-      this.tweenStart = 0;
+    }
+
+    // Bounded burst envelope (linear fade out; no sine loop).
+    var burst = 0;
+    if (this.burstStart) {
+      var bt = (now - this.burstStart) / BURST_MS;
+      if (bt >= 1) {
+        this.burstStart = 0;
+      } else {
+        burst = (1 - bt) * this.burstAmp * (0.5 + 0.5 * Math.sin(now / 90));
+      }
     }
 
     // One-shot pulse envelope.
@@ -154,10 +195,12 @@
       }
     }
 
-    var settled = !this.pulseStart && (!st || !st.dynamic) && !this.tweenStart;
-    this.shift = base + extra;
+    this.shift = base + burst + extra;
     this.render();
-    if (settled) this.stopLoop();
+
+    if (!this.tweenStart && !this.burstStart && !this.pulseStart) {
+      this.stopLoop();
+    }
   };
 
   Presence.prototype.render = function () {
@@ -247,7 +290,7 @@
   }
 
   window.HaloPresence = {
-    mount: function (canvas, opts) { return new Presence(canvas, opts); },
+    mount: function (canvas) { return new Presence(canvas); },
     refreshAllThemes: Presence.refreshAllThemes,
     states: Object.keys(STATES)
   };
