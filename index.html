@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halo — a local-first AI layer for your wearables</title>
-  <meta name="description" content="Halo is a cognitive layer for your wearables — glasses, headphones, watches, rings and more. It listens, sees, remembers and acts with on-device, local-first AI, and tracks your movement across devices. Open source and provider-independent." />
+  <title>Halo — your personal cognitive runtime</title>
+  <meta name="description" content="Halo is a host-native personal cognitive runtime: one open-source assistant across your Android phone, your AI models, your workspace and the devices around you — glasses, earbuds, watches, rings, robots. Local-first, no account required." />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -28,6 +28,7 @@
         <a href="#privacy">Privacy</a>
         <a href="#notebook">Notebook</a>
         <a href="#devices">Devices</a>
+        <a href="#origin">Continuity</a>
         <a href="#platform">Platform</a>
         <a href="#roadmap">Roadmap</a>
       </nav>
@@ -51,12 +52,12 @@
     <section class="hero">
       <div class="container">
         <div class="hero-copy">
-          <span class="eyebrow"><span class="dot"></span> Open source · Early development</span>        <h1>Your wearables are the senses. Your phone is the brain.</h1>
+          <span class="eyebrow"><span class="dot"></span> Open source · Early development</span>        <h1>One intelligence across your phone and everything around it.</h1>
           <p class="lede">
-            Halo is a cognitive layer for the wearables you already own — glasses, headphones,
-            watches, health rings. It listens, sees, remembers and acts through an Android app,
-            running its AI locally first, on your terms. No Halo cloud. No lock-in. Choose your
-            own AI providers, or none at all.
+            Halo is a personal cognitive runtime. It connects your phone, your AI models, your
+            workspace and the devices around you — glasses, earbuds, watches, rings, cameras,
+            robots — into one coherent assistant. Local-first, open source, no account required.
+            Halo is a useful phone assistant on its own; wearables extend its reach.
           </p>
           <div class="hero-cta">
             <a class="btn btn--primary" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Get Halo on GitHub</a>
@@ -64,7 +65,7 @@
           </div>
           <ul class="hero-facts">
             <li><strong>Local-first</strong> on-device before cloud</li>
-            <li><strong>Provider-free</strong> works with any LLM</li>
+            <li><strong>No account</strong> no mandatory cloud or login</li>
             <li><strong>Open source</strong> inspect everything</li>
           </ul>
         </div>
@@ -99,7 +100,7 @@
           <div class="loop-card">
             <span class="loop-num" style="background: var(--halo-pastel-mint);">1</span>
             <h3>Capture</h3>
-            <p>Speak, type, or press the button on your glasses. Photos, voice notes and conversations land in one place.</p>
+            <p>Speak, type, or use a connected device — glasses, earbuds, whatever is at hand. Photos, voice notes and conversations land in one place.</p>
           </div>
           <div class="loop-card">
             <span class="loop-num" style="background: var(--halo-pastel-blue);">2</span>
@@ -119,7 +120,7 @@
           <div class="loop-card">
             <span class="loop-num" style="background: var(--halo-pastel-pink);">5</span>
             <h3>Revisit</h3>
-            <p>Notes, conversations and captures stay in your Notebook, searchable and exportable. Your data stays yours.</p>
+            <p>Notes, conversations and captures stay in your Notebook — the persistent cognitive workspace. Searchable and exportable; your data stays yours.</p>
           </div>
           <div class="loop-card">
             <span class="loop-num" style="background: var(--halo-pastel-coral);">6</span>
@@ -134,22 +135,22 @@
     <section class="section" id="privacy">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Privacy &amp; local-first</p>
-          <h2>Your data never has to leave your phone</h2>
-          <p>Halo is built local-first: on-device processing wins whenever it can. When a task does need a bigger model, you decide which provider gets it.</p>
+          <p class="kicker">Privacy &amp; ownership</p>
+          <h2>Your assistant should outlive its vendor</h2>
+          <p>Halo is built local-first: on-device processing is the default direction. When a task does need a bigger model, you decide which provider gets it — and nothing in Halo requires an account or a Halo-operated cloud.</p>
         </div>
         <div class="privacy-grid">
           <div class="privacy-card">
-            <h3>Runs on your phone</h3>
-            <p>Wake word, speech recognition, and even full language models can run locally on Android. No Halo-operated cloud exists.</p>
+            <h3>Perpetual ownership</h3>
+            <p>A legitimately installed Halo keeps working with just your host OS and a local model — even if every Halo-operated online service disappeared tomorrow.</p>
           </div>
           <div class="privacy-card">
-            <h3>Choose your providers</h3>
-            <p>Connect OpenRouter, Ollama, or local llama.cpp models — or none. Halo works without any AI configured.</p>
+            <h3>No account. No helper apps.</h3>
+            <p>No mandatory login or cloud. And no required Tasker, automation apps or vendor companions — native OS APIs first. External integrations extend Halo; they never complete it.</p>
           </div>
           <div class="privacy-card">
-            <h3>Own your data</h3>
-            <p>Notes, conversations and memories are exportable in open formats. You can inspect, correct, and delete what Halo remembers.</p>
+            <h3>Your models, your data</h3>
+            <p>Local llama.cpp models by default; Ollama or OpenRouter as explicit, optional choices. Notes, memories and models belong to you — inspectable, exportable, deletable.</p>
           </div>
         </div>
       </div>
@@ -189,8 +190,8 @@ Reference:
       <div class="container">
         <div class="section-head">
           <p class="kicker">Devices</p>
-          <h2>One cognitive layer, many wearables</h2>
-          <p>Halo treats every wearable as a replaceable module — senses and outputs that plug into the same runtime. Device support grows with verified evidence, so capabilities are documented when they are tested, not before.</p>
+          <h2>A capability-driven device ecosystem</h2>
+          <p>Halo evaluates every device by what it can do — audio input, buttons, cameras, speakers — not by brand. Wearables are a major target, not the boundary: device support grows with verified evidence, so capabilities are documented when they are tested, not before.</p>
         </div>
         <div class="devices-grid">
           <div class="device-card">
@@ -198,97 +199,83 @@ Reference:
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 9.5 10.5 4a2 2 0 0 1 3 0L21 9.5M5 10v6.5A2.5 2.5 0 0 0 7.5 19h9a2.5 2.5 0 0 0 2.5-2.5V10"/><circle cx="12" cy="14" r="2.6"/></svg>
             </div>
             <h3>Smart glasses &amp; AR glasses</h3>
-            <p>Capture photos and voice, hear answers — your look-out into the world (HeyCyan verified in development).</p>
-            <p class="mono">In active development</p>
+            <p>Capture photos and voice, hear answers back — your look-out into the world. HeyCyan is the current reference implementation.</p>
+            <p class="mono">Reference device · in development</p>
           </div>
           <div class="device-card">
             <div class="device-glyph" style="background: var(--halo-pastel-blue);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="7" rx="1.5"/><rect x="17" y="13" width="4" height="7" rx="1.5"/></svg>
             </div>
-            <h3>Headphones &amp; earbuds</h3>
-            <p>Conversations and audio through the headphones you already own — planned via Android audio routing.</p>
+            <h3>Earbuds &amp; headphones</h3>
+            <p>Conversations through the audio devices you already own — Halo's capability model evaluates what a device can do, not what it's called.</p>
             <p class="mono">Planned</p>
           </div>
           <div class="device-card">
             <div class="device-glyph" style="background: var(--halo-pastel-lilac);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M10.5 17.5h3"/></svg>
             </div>
-            <h3>Watches</h3>
-            <p>Glanceable answers and quiet signals from your wrist — planned.</p>
+            <h3>Watches, rings, pendants</h3>
+            <p>Glanceable answers, quiet signals, ambient context from whatever you wear — planned.</p>
             <p class="mono">Planned</p>
           </div>
           <div class="device-card">
             <div class="device-glyph" style="background: var(--halo-pastel-yellow);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg>
             </div>
-            <h3>Health rings</h3>
-            <p>Recovery and readiness as context for when Halo speaks up — planned.</p>
+            <h3>Cameras &amp; sensors</h3>
+            <p>Rooms, desks and environments as context for what Halo does next — planned.</p>
             <p class="mono">Planned</p>
           </div>
           <div class="device-card">
             <div class="device-glyph" style="background: var(--halo-pastel-pink);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="7" y="8" width="10" height="9" rx="3"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8M4 12h3m10 0h3"/></svg>
             </div>
-            <h3>Companion robots (BuddyBot)</h3>
-            <p>Drive a small robot from Halo with safety interlocks: motors arm only when telemetry says it's safe.</p>
+            <h3>Robots</h3>
+            <p>Halo can drive robots with safety interlocks: motors arm only when telemetry says it's safe, release means stop. BuddyBot is the current example.</p>
             <p class="mono">In active development</p>
           </div>
           <div class="device-card">
             <div class="device-glyph" style="background: var(--halo-pastel-coral);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>
             </div>
-            <h3>Your Android phone</h3>
-            <p>The compute hub — microphone, speaker, screen, and local AI models. Halo runs its runtime here.</p>
-            <p class="mono">Ready today</p>
+            <h3>Your phone — and beyond</h3>
+            <p>The first host: microphone, speaker, screen, local AI models. The runtime itself is host-agnostic — Linux and Windows hosts are future targets.</p>
+            <p class="mono">Android today · Linux/Windows future</p>
+          </div>
+        </div>
+        <div class="platform-note" style="margin-top: var(--space-4);">
+          <p class="mono" style="color: var(--text-2); margin: 0;">Devices may include smart glasses, earbuds, watches, rings, pendants, cameras, sensors, robots, and devices not yet designed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ORIGIN CONTINUITY ================= -->
+    <section class="section section--alt" id="origin">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Interaction-origin continuity</p>
+          <h2>Answers return to where they began</h2>
+          <p>If you speak through a wearable, Halo prefers that wearable for the response when its capabilities allow it — and falls back deliberately and visibly, never accidentally.</p>
+        </div>
+        <div class="privacy-grid">
+          <div class="privacy-card">
+            <h3>Glasses mic → glasses speakers</h3>
+            <p>Capture and reply stay on the device where the conversation started, keeping context with the interaction.</p>
+          </div>
+          <div class="privacy-card">
+            <h3>Earbuds → earbuds</h3>
+            <p>The same rule applies to any capable audio device — input and output stay together.</p>
+          </div>
+          <div class="privacy-card">
+            <h3>Phone → phone</h3>
+            <p>No wearable? The phone handles everything — Halo remains a complete assistant without any wearable attached.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= ROADMAP ================= -->
-    <section class="section section--alt" id="roadmap">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Roadmap</p>
-          <h2>Where Halo is heading</h2>
-          <p>Halo is in early, active development. The plan below follows the project's published roadmap.</p>
-        </div>
-        <ul class="road-list">
-          <li>
-            <span class="road-status">In progress</span>
-            <div><h3>The Halo app</h3><p>Home, Activity, Notebook, Devices and Settings — the working Android companion.</p></div>
-          </li>
-          <li>
-            <span class="road-status">In progress</span>
-            <div><h3>Wearable capture loop</h3><p>Photo and voice capture from glasses, transferred and usable in Halo.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Next</span>
-            <div><h3>Dependable assistant actions</h3><p>Reminders, calls, messages and app control with receipts — Halo reports what actually happened.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Next</span>
-            <div><h3>Android assistant role</h3><p>Halo becomes a system voice assistant you can summon anywhere.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Next</span>
-            <div><h3>Halo Platform (tracked base)</h3><p>Motorised track platform with pan servo; docked phone drives it with BuddyBot-style safety interlocks.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Planned</span>
-            <div><h3>Notebook memory &amp; canvas</h3><p>Inspectable long-term memory and spatial canvases across projects.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Planned</span>
-            <div><h3>Local model pipeline</h3><p>Fully offline capture-to-answer with local speech and language models.</p></div>
-          </li>
-        </ul>
-        <p class="target-note mono">Performance goals — targets under test, not measured results: wake latency &lt;150&nbsp;ms · local answer &lt;1&nbsp;s · &gt;80% of system tasks fully offline.</p>
-      </div>
-    </section>
-
     <!-- ================= TRACKED PLATFORM ================= -->
-    <section class="section section--alt" id="platform">
+    <section class="section" id="platform">
       <div class="container">
         <div class="section-head">
           <p class="kicker">Halo Platform</p>
@@ -312,6 +299,51 @@ Reference:
       </div>
     </section>
 
+    <!-- ================= ROADMAP ================= -->
+    <section class="section section--alt" id="roadmap">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Roadmap</p>
+          <h2>Where Halo is heading</h2>
+          <p>Halo is in early, active development. The plan below follows the project's published roadmap.</p>
+        </div>
+        <ul class="road-list">
+          <li>
+            <span class="road-status">In progress</span>
+            <div><h3>The Halo app</h3><p>Home, Activity, Notebook, Devices and Settings — the working Android host.</p></div>
+          </li>
+          <li>
+            <span class="road-status">In progress</span>
+            <div><h3>Host-native Android assistant</h3><p>Halo as a system-level assistant built on supported Android APIs — not an add-on that depends on other helper apps.</p></div>
+          </li>
+          <li>
+            <span class="road-status">In progress</span>
+            <div><h3>Local inference by default</h3><p>Native llama.cpp is the designated default provider, with GGUF download integrity checks and preload while you speak.</p></div>
+          </li>
+          <li>
+            <span class="road-status">Next</span>
+            <div><h3>Generalized wearable capability layer</h3><p>Devices join by capability — audio, buttons, cameras — starting with the verified glasses track, then earbuds, watches and beyond.</p></div>
+          </li>
+          <li>
+            <span class="road-status">Next</span>
+            <div><h3>Dependable assistant actions</h3><p>Reminders, calls, messages and app control with receipts — firing an intent is never reported as completion.</p></div>
+          </li>
+          <li>
+            <span class="road-status">Next</span>
+            <div><h3>Notebook expansion &amp; Study</h3><p>Full workspace objects, durable memory with provenance — and Study, a guided-learning workflow (Ask → Hint → Explain → Check) built on the Notebook.</p></div>
+          </li>
+          <li>
+            <span class="road-status">Planned</span>
+            <div><h3>Real hardware acceptance</h3><p>Every claim re-proven on physical devices: speaker output, battery, reconnects, latency. Evidence outranks assumptions.</p></div>
+          </li>
+          <li>
+            <span class="road-status">Planned</span>
+            <div><h3>Cross-host groundwork</h3><p>The runtime is host-agnostic: Linux and Windows hosts are future targets. Android is the first host, not the only one.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ================= CTA ================= -->
     <section class="section cta">
       <div class="container">
@@ -327,7 +359,7 @@ Reference:
 
   <footer class="site-footer">
     <div class="container">
-      <span>Halo — a local-first, privacy-first cognitive layer for wearables.</span>
+      <span>Halo — a host-native personal cognitive runtime. Open source, local-first, no account required.</span>
       <span><a href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Project</a> · <a href="https://github.com/slafftrosheen/HaloWeb" target="_blank" rel="noopener">Site source</a></span>
     </div>
   </footer>

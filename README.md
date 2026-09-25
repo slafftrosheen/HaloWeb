@@ -1,9 +1,12 @@
 # HaloWeb — Halo landing page
 
 A static, no-build single-page site introducing [Halo](https://github.com/slafftrosheen/Halo),
-a local-first, privacy-first **cognitive layer for wearables** — glasses, headphones, watches,
-health rings, companion robots and the motorised Halo Platform (tracked base + pan servo that
-carries the docked phone around).
+a **host-native personal cognitive runtime** — one assistant across your phone, your AI models,
+your workspace and the devices around you: glasses, earbuds, watches, rings, cameras, robots,
+plus the motorised Halo Platform (tracked base + pan servo that carries the docked phone).
+Copy follows the project's consolidated 2026-09-24 documentation (VISION.md, PRD.md,
+PRINCIPLES.md): host-native runtime, standalone phone assistant, capability-driven devices,
+no mandatory account, perpetual ownership and interaction-origin continuity.
 
 ## Deployment (Vercel)
 
@@ -56,3 +59,6 @@ e.g. Vercel or GitHub Pages from this repo's root).
 - The demo states in the playground are clearly marked as demo — the real app derives
   them from runtime telemetry.
 - The Halo Platform (tracked base) is described as a planned/next item, not a shipped product.
+- HeyCyan is named only as a reference implementation, never as the definition of Halo hardware.
+- Performance targets from the pre-2026-09-24 docs were removed; no numbers are advertised
+  until they are measured and published.
