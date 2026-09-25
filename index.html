@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Halo — your personal cognitive runtime</title>
-  <meta name="description" content="Halo is a host-native personal cognitive runtime: one open-source assistant across your Android phone, your AI models, your workspace and the devices around you — glasses, earbuds, watches, rings, robots. Local-first, no account required." />
+  <meta name="description" content="Halo is a host-native personal cognitive runtime: one open-source intelligence across your phone, your AI models, your workspace and the devices around you. Local-first, no account, no required cloud." />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/tokens.css" />
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/tokens.css?v=2" />
+  <link rel="stylesheet" href="css/main.css?v=2" />
 </head>
 <body>
   <header class="site-header">
@@ -24,12 +24,11 @@
         Halo
       </a>
       <nav class="site-nav" aria-label="Sections">
-        <a href="#how">How it works</a>
-        <a href="#privacy">Privacy</a>
+        <a href="#working">See it working</a>
+        <a href="#host">The app</a>
         <a href="#notebook">Notebook</a>
         <a href="#devices">Devices</a>
-        <a href="#origin">Continuity</a>
-        <a href="#platform">Platform</a>
+        <a href="#privacy">Local by architecture</a>
         <a href="#roadmap">Roadmap</a>
       </nav>
       <div class="header-actions">
@@ -48,310 +47,447 @@
   </header>
 
   <main id="top">
+
     <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="container">
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
         <div class="hero-copy">
-          <span class="eyebrow"><span class="dot"></span> Open source · Early development</span>        <h1>One intelligence across your phone and everything around it.</h1>
+          <span class="eyebrow"><span class="dot"></span> Open source · Early development</span>
+          <h1>Your intelligence shouldn't live inside one device.</h1>
           <p class="lede">
-            Halo is a personal cognitive runtime. It connects your phone, your AI models, your
-            workspace and the devices around you — glasses, earbuds, watches, rings, cameras,
-            robots — into one coherent assistant. Local-first, open source, no account required.
-            Halo is a useful phone assistant on its own; wearables extend its reach.
+            Halo is a personal cognitive runtime connecting your phone, your models,
+            your workspace and the devices around you.
+          </p>
+          <p class="hero-values mono">
+            <strong>Local-first</strong><span class="sep">·</span>
+            <strong>Open source</strong><span class="sep">·</span>
+            <strong>No account</strong><span class="sep">·</span>
+            <strong>No required cloud</strong>
           </p>
           <div class="hero-cta">
-            <a class="btn btn--primary" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Get Halo on GitHub</a>
-            <a class="btn" href="#how">See how it works</a>
+            <a class="btn btn--primary btn--lg" href="#working">Explore Halo</a>
+            <a class="btn btn--lg" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
           </div>
-          <ul class="hero-facts">
-            <li><strong>Local-first</strong> on-device before cloud</li>
-            <li><strong>No account</strong> no mandatory cloud or login</li>
-            <li><strong>Open source</strong> inspect everything</li>
+        </div>
+
+        <div class="hero-stage">
+          <div class="presence-orbit" aria-label="Halo presence surrounded by nearby capabilities">
+            <span class="cap-label cap-label--1" data-dir="-0.4">PHONE</span>
+            <span class="cap-label cap-label--2" data-dir="0.5">EARPHONES</span>
+            <span class="cap-label cap-label--3" data-dir="0.8">GLASSES</span>
+            <span class="cap-label cap-label--4" data-dir="0.5">NOTEBOOK</span>
+            <span class="cap-label cap-label--5" data-dir="-0.5">MEMORY</span>
+            <span class="cap-label cap-label--6" data-dir="-0.8">ROBOT</span>
+            <span class="cap-label cap-label--7" data-dir="-0.5">WATCH</span>
+            <canvas id="presence-canvas" width="520" height="520" role="img"
+                    aria-label="Halo presence: soft spatial cells that change with what Halo is doing"></canvas>
+          </div>
+          <div class="state-rail" role="group" aria-label="Runtime states">
+            <button class="btn" type="button" data-state="listening" aria-pressed="true">Listening</button>
+            <span class="arrow" aria-hidden="true">→</span>
+            <button class="btn" type="button" data-state="understanding" aria-pressed="false">Understanding</button>
+            <span class="arrow" aria-hidden="true">→</span>
+            <button class="btn" type="button" data-state="reasoning" aria-pressed="false">Reasoning</button>
+            <span class="arrow" aria-hidden="true">→</span>
+            <button class="btn" type="button" data-state="responding" aria-pressed="false">Responding</button>
+          </div>
+          <p class="runtime-trace" id="runtime-trace" aria-live="polite">
+            <span class="step step--active">wake → capture · VAD active</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHAT HALO IS ================= -->
+    <section class="section section--wash-a" id="what">
+      <div class="container what-grid">
+        <div class="reveal">
+          <h2 class="statement">Halo is <em>one persistent intelligence.</em> Everything else is a capability around it.</h2>
+        </div>
+        <div class="reveal">
+          <ul class="what-points">
+            <li><span class="tick"></span><span><strong>Phones</strong> — the first host, a complete assistant on its own.</span></li>
+            <li><span class="tick"></span><span><strong>Models</strong> — replaceable reasoning backends, never the runtime itself.</span></li>
+            <li><span class="tick"></span><span><strong>Notebook</strong> — the persistent workspace; your captures, notes and memory.</span></li>
+            <li><span class="tick"></span><span><strong>Devices</strong> — glasses, earbuds, robots: capabilities that plug in and unplug.</span></li>
           </ul>
         </div>
-
-        <div class="presence-stage" aria-label="Halo presence demo">
-          <canvas id="presence-canvas" width="480" height="480" role="img"
-                  aria-label="Halo presence: soft spatial cells that change with what Halo is doing"></canvas>
-          <p class="presence-caption">
-            <span class="label">Ready</span><br />
-            <span class="source">Demo state — the app drives this from real runtime telemetry</span>
-          </p>
-          <div class="playground" role="group" aria-label="Presence state playground">
-            <button class="btn" type="button" data-state="ready"       data-label="Ready">Ready</button>
-            <button class="btn" type="button" data-state="capturing"   data-label="Capturing" data-source="Phone">Capturing</button>
-            <button class="btn" type="button" data-state="recognizing" data-label="Recognizing">Recognizing</button>
-            <button class="btn" type="button" data-state="reasoning"   data-label="Reasoning">Reasoning</button>
-            <button class="btn" type="button" data-state="speaking"    data-label="Speaking">Speaking</button>
+      </div>
+      <div class="container reveal">
+        <div class="flow" role="img" aria-label="Simple runtime diagram: inputs and outputs around the Halo runtime loop">
+          <div class="flow-col">
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-mint);">🎤</span> Glasses mic</div>
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-blue);">📱</span> Phone</div>
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-lilac);">📷</span> Camera</div>
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-yellow);">✍️</span> Notebook</div>
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-pink);">🧠</span> Memory</div>
+          </div>
+          <div class="flow-line" aria-hidden="true">⟶</div>
+          <div class="flow-core">
+            <span class="core-name">Halo</span>
+            <div class="core-steps">
+              <span><b>Observe</b> · hear, see, read</span>
+              <span><b>Understand</b> · speech, text, vision</span>
+              <span><b>Reason</b> · local model, your choice</span>
+              <span><b>Act</b> · tools, receipts, verify</span>
+            </div>
+          </div>
+          <div class="flow-line" aria-hidden="true">⟶</div>
+          <div class="flow-col">
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-mint);">🔊</span> Glasses audio</div>
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-blue);">📱</span> Phone speaker</div>
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-coral);">🤖</span> Robot</div>
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-yellow);">🗒️</span> Note created</div>
+            <div class="flow-chip"><span class="ic" style="background: var(--halo-pastel-pink);">✓</span> Verified result</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= HOW IT WORKS ================= -->
-    <section class="section section--alt" id="how">
+    <!-- ================= SEE IT WORKING ================= -->
+    <section class="section section--alt" id="working">
       <div class="container">
-        <div class="section-head">
-          <p class="kicker">How it works</p>
-          <h2>One loop: capture, understand, remember, act</h2>
-          <p>Halo is not a chatbot with a history — it is a cognitive workspace. Everything it hears or captures can flow through the same loop.</p>
+        <div class="section-head reveal">
+          <p class="kicker">See it working</p>
+          <h2>Pick an interaction. Watch the runtime route it.</h2>
+          <p>Three real paths through Halo. Every step is a stage the runtime actually has — observation, understanding, reasoning, action, verification.</p>
         </div>
-        <div class="loop">
-          <div class="loop-card">
-            <span class="loop-num" style="background: var(--halo-pastel-mint);">1</span>
-            <h3>Capture</h3>
-            <p>Speak, type, or use a connected device — glasses, earbuds, whatever is at hand. Photos, voice notes and conversations land in one place.</p>
+        <div class="scenario-bar reveal" role="tablist" aria-label="Interaction scenarios">
+          <button class="btn" type="button" data-scenario="glasses" aria-pressed="true">Ask through glasses</button>
+          <button class="btn" type="button" data-scenario="camera" aria-pressed="false">Capture to Notebook</button>
+          <button class="btn" type="button" data-scenario="robot" aria-pressed="false">Drive the robot</button>
+        </div>
+        <div class="scenario-stage reveal">
+          <div>
+            <ol class="pipeline" id="pipeline" aria-live="polite"></ol>
+            <p class="scenario-note" id="scenario-note"></p>
           </div>
-          <div class="loop-card">
-            <span class="loop-num" style="background: var(--halo-pastel-blue);">2</span>
-            <h3>Understand</h3>
-            <p>Speech-to-text, vision and reasoning run on your phone where possible — through the AI provider you choose.</p>
-          </div>
-          <div class="loop-card">
-            <span class="loop-num" style="background: var(--halo-pastel-lilac);">3</span>
-            <h3>Work</h3>
-            <p>Ask questions, draft notes, set reminders, control your phone. Halo explains what it did and why.</p>
-          </div>
-          <div class="loop-card">
-            <span class="loop-num" style="background: var(--halo-pastel-yellow);">4</span>
-            <h3>Remember</h3>
-            <p>What matters can be promoted to memory — explicitly, with provenance. Nothing is remembered behind your back.</p>
-          </div>
-          <div class="loop-card">
-            <span class="loop-num" style="background: var(--halo-pastel-pink);">5</span>
-            <h3>Revisit</h3>
-            <p>Notes, conversations and captures stay in your Notebook — the persistent cognitive workspace. Searchable and exportable; your data stays yours.</p>
-          </div>
-          <div class="loop-card">
-            <span class="loop-num" style="background: var(--halo-pastel-coral);">6</span>
-            <h3>Act</h3>
-            <p>Set a timer, call a contact, capture on the go. Every action shows its result — no silent side effects.</p>
+          <div>
+            <div class="nb-window" style="max-width: 520px;">
+              <div class="bar"><span class="mono" id="term-title">runtime trace — demo</span><span class="mono">illustrative</span></div>
+              <div class="body">
+                <pre id="term" class="mono" style="margin:0; white-space:pre-wrap; font-size: 0.78rem; line-height: 1.7; color: var(--term-text); background: var(--term-bg); border-radius: var(--radius-soft); padding: var(--space-4); min-height: 15.5em;"></pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= PRIVACY ================= -->
-    <section class="section" id="privacy">
+    <!-- ================= THE ANDROID HOST ================= -->
+    <section class="section section--wash-b" id="host">
       <div class="container">
-        <div class="section-head">
-          <p class="kicker">Privacy &amp; ownership</p>
-          <h2>Your assistant should outlive its vendor</h2>
-          <p>Halo is built local-first: on-device processing is the default direction. When a task does need a bigger model, you decide which provider gets it — and nothing in Halo requires an account or a Halo-operated cloud.</p>
+        <div class="section-head section-head--center reveal">
+          <p class="kicker">The Android host</p>
+          <h2>Halo already has a home.</h2>
+          <p>The runtime ships as a working Android app — Home with its presence, a persistent Notebook, live Devices, and provider selection you control.</p>
         </div>
-        <div class="privacy-grid">
-          <div class="privacy-card">
-            <h3>Perpetual ownership</h3>
-            <p>A legitimately installed Halo keeps working with just your host OS and a local model — even if every Halo-operated online service disappeared tomorrow.</p>
+        <div class="host-stage reveal">
+          <div class="host-phone ghost ghost--left" aria-hidden="true">
+            <div class="screen">
+              <div class="app-top"><span class="title">Notebook</span><span class="time">9:41</span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-yellow);"></span><span>Lightbox redesign<br /><span class="meta">edited 2m ago</span></span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-blue);"></span><span>HeyCyan protocol<br /><span class="meta">conversation</span></span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-pink);"></span><span>Ceramics suppliers<br /><span class="meta">note · archived</span></span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-mint);"></span><span>Inbox capture<br /><span class="meta">photo · 11:02</span></span></div>
+              <div class="app-tabbar"><span class="app-tab">Home</span><span class="app-tab">Activity</span><span class="app-tab app-tab--on">Notebook</span><span class="app-tab">Devices</span><span class="app-tab">Settings</span></div>
+            </div>
           </div>
-          <div class="privacy-card">
-            <h3>No account. No helper apps.</h3>
-            <p>No mandatory login or cloud. And no required Tasker, automation apps or vendor companions — native OS APIs first. External integrations extend Halo; they never complete it.</p>
+          <div class="host-phone ghost ghost--right" aria-hidden="true">
+            <div class="screen">
+              <div class="app-top"><span class="title">Devices</span><span class="time">9:41</span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-mint);"></span><span>HeyCyan glasses<br /><span class="meta">connected · 84%</span></span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-lilac);"></span><span>BuddyBot<br /><span class="meta">ready · motors disarmed</span></span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-coral);"></span><span>This phone<br /><span class="meta">host · llama.cpp ready</span></span></div>
+              <div class="app-top" style="margin-top: 1rem;"><span class="title">Intelligence</span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-blue);"></span><span>Native llama.cpp<br /><span class="meta">default · on device</span></span></div>
+              <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-yellow);"></span><span>Ollama / OpenRouter<br /><span class="meta">optional · your keys</span></span></div>
+            </div>
           </div>
-          <div class="privacy-card">
-            <h3>Your models, your data</h3>
-            <p>Local llama.cpp models by default; Ollama or OpenRouter as explicit, optional choices. Notes, memories and models belong to you — inspectable, exportable, deletable.</p>
+          <div class="host-phone">
+            <div class="screen">
+              <div class="notch" aria-hidden="true"></div>
+              <div class="app-top"><span class="title">Home</span><span class="time">9:41</span></div>
+              <div class="app-orb"><canvas id="orb-mini" width="240" height="240" aria-hidden="true"></canvas></div>
+              <p class="app-ready">Ready · local</p>
+              <div class="app-ask"><span>Ask Halo anything…</span><span aria-hidden="true">🎙</span></div>
+              <div class="app-tiles">
+                <div class="app-tile" style="background: var(--halo-pastel-mint);">Talk<span>push to talk</span></div>
+                <div class="app-tile" style="background: var(--halo-pastel-blue);">Capture<span>from glasses</span></div>
+                <div class="app-tile" style="background: var(--halo-pastel-yellow);">Notebook<span>4 new items</span></div>
+                <div class="app-tile" style="background: var(--halo-pastel-lilac);">Devices<span>2 connected</span></div>
+              </div>
+              <div class="app-tabbar"><span class="app-tab app-tab--on">Home</span><span class="app-tab">Activity</span><span class="app-tab">Notebook</span><span class="app-tab">Devices</span><span class="app-tab">Settings</span></div>
+            </div>
           </div>
         </div>
+        <p class="host-caption reveal">Home · Notebook · Devices — the real surfaces, rendered in the workspace language. Home/Activity/Notebook/Devices/Settings are the five destinations in the shipped app.</p>
       </div>
     </section>
 
     <!-- ================= NOTEBOOK ================= -->
-    <section class="section section--alt" id="notebook">
+    <section class="section" id="notebook">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <p class="kicker">Notebook</p>
-          <h2>A workspace that remembers your context</h2>
-          <p>Notebook is Halo's persistent workspace for notes and captures — the part of Halo that keeps working when the conversation ends.</p>
+          <h2>The workspace that remembers.</h2>
+          <p>Captures land in the Inbox, get organized, get summarized — and become memory only when you say so. Scroll to watch one capture travel the loop.</p>
         </div>
-        <div class="notebook-grid">
-          <div class="note-peek" aria-label="Example note">
-            <div class="bar"><span>Lightbox redesign.md</span><span class="mono">Saved · just now</span></div>
-            <div class="body"><span class="check">[x]</span> measure the diffuser
-<span class="check">[ ]</span> reduce extrusion count
-
-Reference:
-<span class="ref">→ warehouse-photo.jpg</span>
-<span class="ref">→ supplier-spec.pdf</span>
-<span class="halo-block">Halo: Summarize these references</span></div>
-          </div>
-          <ul class="note-status">
-            <li><span class="pill pill--shipped">Shipped</span><span>Persistent notes with quick create, search, and an autosaving Markdown editor.</span></li>
-            <li><span class="pill pill--shipped">Shipped</span><span>Inbox, archive and trash — captured material stays recoverable.</span></li>
-            <li><span class="pill pill--planned">Planned</span><span>Working memory that Halo can consult — explicit, inspectable, reversible.</span></li>
-            <li><span class="pill pill--planned">Planned</span><span>Canvas and projects for spatial, connected thinking.</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= DEVICES ================= -->
-    <section class="section" id="devices">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker">Devices</p>
-          <h2>A capability-driven device ecosystem</h2>
-          <p>Halo evaluates every device by what it can do — audio input, buttons, cameras, speakers — not by brand. Wearables are a major target, not the boundary: device support grows with verified evidence, so capabilities are documented when they are tested, not before.</p>
-        </div>
-        <div class="devices-grid">
-          <div class="device-card">
-            <div class="device-glyph" style="background: var(--halo-pastel-mint);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 9.5 10.5 4a2 2 0 0 1 3 0L21 9.5M5 10v6.5A2.5 2.5 0 0 0 7.5 19h9a2.5 2.5 0 0 0 2.5-2.5V10"/><circle cx="12" cy="14" r="2.6"/></svg>
+        <div class="notebook-demo">
+          <div class="nb-window reveal" data-demo="notebook">
+            <div class="bar"><span>Halo Notebook — Lightbox redesign</span><span class="mono">autosaved</span></div>
+            <div class="body">
+              <p class="nb-title">Lightbox redesign</p>
+              <p class="nb-task done"><span class="box">✓</span>measure diffuser</p>
+              <p class="nb-task"><span class="box">○</span>reduce extrusion count</p>
+              <p class="nb-sub">References</p>
+              <p class="nb-file">▣ warehouse-photo.jpg</p>
+              <p class="nb-file">▤ supplier-spec.pdf</p>
+              <div class="nb-halo" id="nb-halo"><b>Halo</b> — I found three differences between the photo and the spec. The diffuser gap is 2&nbsp;mm wider than drawn.</div>
+              <div class="nb-arrive" id="nb-arrive">📥 <span>New capture from glasses — warehouse-photo.jpg</span><span class="mono">just now</span></div>
             </div>
-            <h3>Smart glasses &amp; AR glasses</h3>
-            <p>Capture photos and voice, hear answers back — your look-out into the world. HeyCyan is the current reference implementation.</p>
-            <p class="mono">Reference device · in development</p>
           </div>
-          <div class="device-card">
-            <div class="device-glyph" style="background: var(--halo-pastel-blue);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="7" rx="1.5"/><rect x="17" y="13" width="4" height="7" rx="1.5"/></svg>
-            </div>
-            <h3>Earbuds &amp; headphones</h3>
-            <p>Conversations through the audio devices you already own — Halo's capability model evaluates what a device can do, not what it's called.</p>
-            <p class="mono">Planned</p>
-          </div>
-          <div class="device-card">
-            <div class="device-glyph" style="background: var(--halo-pastel-lilac);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M10.5 17.5h3"/></svg>
-            </div>
-            <h3>Watches, rings, pendants</h3>
-            <p>Glanceable answers, quiet signals, ambient context from whatever you wear — planned.</p>
-            <p class="mono">Planned</p>
-          </div>
-          <div class="device-card">
-            <div class="device-glyph" style="background: var(--halo-pastel-yellow);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg>
-            </div>
-            <h3>Cameras &amp; sensors</h3>
-            <p>Rooms, desks and environments as context for what Halo does next — planned.</p>
-            <p class="mono">Planned</p>
-          </div>
-          <div class="device-card">
-            <div class="device-glyph" style="background: var(--halo-pastel-pink);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="7" y="8" width="10" height="9" rx="3"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8M4 12h3m10 0h3"/></svg>
-            </div>
-            <h3>Robots</h3>
-            <p>Halo can drive robots with safety interlocks: motors arm only when telemetry says it's safe, release means stop. BuddyBot is the current example.</p>
-            <p class="mono">In active development</p>
-          </div>
-          <div class="device-card">
-            <div class="device-glyph" style="background: var(--halo-pastel-coral);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>
-            </div>
-            <h3>Your phone — and beyond</h3>
-            <p>The first host: microphone, speaker, screen, local AI models. The runtime itself is host-agnostic — Linux and Windows hosts are future targets.</p>
-            <p class="mono">Android today · Linux/Windows future</p>
-          </div>
-        </div>
-        <div class="platform-note" style="margin-top: var(--space-4);">
-          <p class="mono" style="color: var(--text-2); margin: 0;">Devices may include smart glasses, earbuds, watches, rings, pendants, cameras, sensors, robots, and devices not yet designed.</p>
+          <ol class="nb-steps reveal" id="nb-steps" aria-live="polite">
+            <li data-step="0"><b>Capture</b>A photo arrives from your glasses mid-walk.</li>
+            <li data-step="1"><b>Inbox</b>It lands in the Notebook — nothing classified yet, nothing lost.</li>
+            <li data-step="2"><b>Summarize</b>Halo compares it with the supplier spec and writes what changed.</li>
+            <li data-step="3"><b>Remember</b>Promote it to memory explicitly — with provenance, editable, reversible.</li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <!-- ================= ORIGIN CONTINUITY ================= -->
-    <section class="section section--alt" id="origin">
+    <!-- ================= DEVICES / CONSTELLATION ================= -->
+    <section class="section section--alt" id="devices">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="kicker">One runtime, many devices</p>
+          <h2>Devices join by what they can do.</h2>
+          <p>Halo evaluates capabilities — microphone, speaker, camera, display, buttons, motion — not brands. Any device that offers capabilities can participate.</p>
+        </div>
+        <div class="constellation reveal">
+          <svg viewBox="0 0 640 560" role="img" aria-label="Capability constellation: devices around Halo, each contributing capabilities">
+            <g class="const-links" aria-hidden="true">
+              <line class="const-line" x1="320" y1="270" x2="110"  y2="80"/>
+              <line class="const-line" x1="320" y1="270" x2="540"  y2="96"/>
+              <line class="const-line" x1="320" y1="270" x2="576"  y2="300"/>
+              <line class="const-line" x1="320" y1="270" x2="484"  y2="492"/>
+              <line class="const-line" x1="320" y1="270" x2="156"  y2="492"/>
+              <line class="const-line" x1="320" y1="270" x2="64"   y2="300"/>
+            </g>
+            <g aria-hidden="true">
+              <circle class="const-dot" cx="320" cy="270" r="5"/>
+              <circle class="const-dot" cx="110" cy="80"  r="5"/>
+              <circle class="const-dot" cx="540" cy="96"  r="5"/>
+              <circle class="const-dot" cx="576" cy="300" r="5"/>
+              <circle class="const-dot" cx="484" cy="492" r="5"/>
+              <circle class="const-dot" cx="156" cy="492" r="5"/>
+              <circle class="const-dot" cx="64"  cy="300" r="5"/>
+            </g>
+            <g>
+              <text class="const-hub" x="320" y="276" text-anchor="middle">HALO</text>
+              <text class="const-name" x="110" y="62"  text-anchor="middle">Phone</text>
+              <text class="const-cap"  x="110" y="78"  text-anchor="middle">camera · mic · speaker · display · sensors</text>
+              <text class="const-name" x="540" y="78"  text-anchor="middle">Glasses</text>
+              <text class="const-cap"  x="540" y="94"  text-anchor="middle">camera · mic · speaker · buttons</text>
+              <text class="const-name" x="576" y="282" text-anchor="middle">Earbuds</text>
+              <text class="const-cap"  x="576" y="298" text-anchor="middle">mic · speaker · touch</text>
+              <text class="const-name" x="484" y="474" text-anchor="middle">Notebook</text>
+              <text class="const-cap"  x="484" y="490" text-anchor="middle">workspace · files · memory</text>
+              <text class="const-name" x="156" y="474" text-anchor="middle">Local model</text>
+              <text class="const-cap"  x="156" y="490" text-anchor="middle">reasoning · speech · vision</text>
+              <text class="const-name" x="64"  y="282" text-anchor="middle">Watch / ring</text>
+              <text class="const-cap"  x="64"  y="298" text-anchor="middle">display · haptics · sensors</text>
+            </g>
+          </svg>
+          <div class="constellation-legend">
+            <div class="const-item"><strong>Glasses</strong><span class="mono">camera · microphone · speaker · buttons</span></div>
+            <div class="const-item"><strong>Earbuds</strong><span class="mono">microphone · speaker · touch</span></div>
+            <div class="const-item"><strong>Phone</strong><span class="mono">camera · microphone · speaker · display · sensors · compute</span></div>
+            <div class="const-item"><strong>Robots</strong><span class="mono">drive · camera · safety telemetry</span></div>
+          </div>
+        </div>
+        <p class="keyline reveal">Halo cares about <em>capabilities, not logos.</em></p>
+      </div>
+    </section>
+
+    <!-- ================= LOCAL BY ARCHITECTURE ================= -->
+    <section class="section section--wash-c" id="privacy">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="kicker">Local by architecture</p>
+          <h2>Privacy you can trace through the diagram.</h2>
+          <p>Not a slogan — a topology. Everything inside the box lives on your device. The only thing that ever crosses the line is a model request you explicitly configured.</p>
+        </div>
+        <div class="topology reveal">
+          <svg viewBox="0 0 760 470" role="img" aria-label="Data topology: everything inside your device; cloud model access is optional and user-chosen">
+            <text class="topo-optional" x="380" y="26" text-anchor="middle">OPTIONAL</text>
+            <rect class="topo-box" x="280" y="42" width="200" height="44" rx="12"/>
+            <text class="topo-label--mono" x="380" y="69" text-anchor="middle">OpenRouter / API model</text>
+            <line class="topo-line" x1="380" y1="120" x2="380" y2="86"/>
+            <text class="topo-label--mono" x="394" y="108">user chooses · only when configured</text>
+            <rect class="topo-edge" x="86"  y="120" width="588" height="316" rx="26"/>
+            <text class="topo-label--mono" x="110" y="150" letter-spacing="3">YOUR DEVICE</text>
+            <rect class="topo-box topo-box--inner" x="120" y="176" width="150" height="52" rx="12"/>
+            <text class="topo-label" x="195" y="207" text-anchor="middle">Phone</text>
+            <line class="topo-line topo-line--solid" x1="270" y1="202" x2="322" y2="202"/>
+            <rect class="topo-box topo-box--inner" x="322" y="176" width="170" height="52" rx="12"/>
+            <text class="topo-label" x="407" y="207" text-anchor="middle">Halo Runtime</text>
+            <line class="topo-line topo-line--solid" x1="492" y1="202" x2="544" y2="202"/>
+            <rect class="topo-box topo-box--inner" x="544" y="176" width="130" height="52" rx="12"/>
+            <text class="topo-label--mono" x="609" y="207" text-anchor="middle">llama.cpp</text>
+            <line class="topo-line topo-line--solid" x1="407" y1="228" x2="407" y2="266"/>
+            <rect class="topo-box topo-box--inner" x="322" y="266" width="170" height="52" rx="12"/>
+            <text class="topo-label" x="407" y="297" text-anchor="middle">Notebook</text>
+            <line class="topo-line topo-line--solid" x1="407" y1="318" x2="407" y2="356"/>
+            <rect class="topo-box topo-box--inner" x="322" y="356" width="170" height="52" rx="12"/>
+            <text class="topo-label" x="407" y="387" text-anchor="middle">Memory</text>
+            <text class="topo-label--mono" x="195" y="412" text-anchor="middle">stays inside</text>
+            <text class="topo-label--mono" x="609" y="412" text-anchor="middle">stays inside</text>
+          </svg>
+        </div>
+        <div class="privacy-proof reveal">
+          <span class="chip"><b>No Halo account.</b> Nothing to sign into.</span>
+          <span class="chip"><b>No Halo cloud required.</b> The runtime runs without it.</span>
+          <span class="chip"><b>No helper application.</b> Native OS APIs first.</span>
+          <span class="chip"><b>Perpetual ownership.</b> Works even if our services vanish.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTINUITY ================= -->
+    <section class="section section--alt" id="continuity">
+      <div class="container">
+        <div class="section-head reveal">
           <p class="kicker">Interaction-origin continuity</p>
-          <h2>Answers return to where they began</h2>
-          <p>If you speak through a wearable, Halo prefers that wearable for the response when its capabilities allow it — and falls back deliberately and visibly, never accidentally.</p>
+          <h2>Answers return to where they began.</h2>
+          <p>If you speak through a wearable, Halo prefers that wearable for the response. Toggle a capability off and watch the fallback happen — deliberately and visibly.</p>
         </div>
-        <div class="privacy-grid">
-          <div class="privacy-card">
-            <h3>Glasses mic → glasses speakers</h3>
-            <p>Capture and reply stay on the device where the conversation started, keeping context with the interaction.</p>
+        <div class="cont-demo reveal">
+          <div class="cont-toggles">
+            <button class="cont-toggle" type="button" data-caps="glasses-speaker" aria-pressed="true">
+              <span class="sw" aria-hidden="true"></span>
+              <span><span class="name">Glasses speakers</span><br /><span class="desc">output capability of the reference glasses</span></span>
+            </button>
+            <button class="cont-toggle" type="button" data-caps="glasses-mic" aria-pressed="true">
+              <span class="sw" aria-hidden="true"></span>
+              <span><span class="name">Glasses microphone</span><br /><span class="desc">input capability of the reference glasses</span></span>
+            </button>
+            <button class="cont-toggle" type="button" data-caps="earbuds" aria-pressed="false">
+              <span class="sw" aria-hidden="true"></span>
+              <span><span class="name">Earbuds</span><br /><span class="desc">alternative mic + speaker, connected</span></span>
+            </button>
           </div>
-          <div class="privacy-card">
-            <h3>Earbuds → earbuds</h3>
-            <p>The same rule applies to any capable audio device — input and output stay together.</p>
-          </div>
-          <div class="privacy-card">
-            <h3>Phone → phone</h3>
-            <p>No wearable? The phone handles everything — Halo remains a complete assistant without any wearable attached.</p>
+          <div>
+            <div class="cont-route" id="cont-route" aria-live="polite"></div>
+            <p class="cont-status" id="cont-status"></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= TRACKED PLATFORM ================= -->
-    <section class="section" id="platform">
+    <!-- ================= BEYOND THE SCREEN ================= -->
+    <section class="section section--wash-b section--tight" id="beyond">
       <div class="container">
-        <div class="section-head">
-          <p class="kicker">Halo Platform</p>
-          <h2>A tracked base that carries Halo around</h2>
-          <p>The Halo Platform is a motorised base with tank-style tracks and a pan servo. Your phone docks on top — running the full Halo runtime — and drives the platform, so your assistant can physically come to you, face you, and see the room.</p>
-        </div>
-        <div class="privacy-grid">
-          <div class="privacy-card">
-            <h3>Phone docks, Halo drives</h3>
-            <p>Your phone snaps onto the platform and connects over Bluetooth/Wi-Fi. The docked app runs Halo as usual — plus a drive surface for the base.</p>
+        <div class="embodiment">
+          <div class="reveal">
+            <p class="kicker" style="color: var(--action); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em;">Beyond the screen</p>
+            <h2 style="font-size: var(--display-lg); margin: var(--space-3) 0;">And intelligence doesn't have to stay virtual.</h2>
+            <p style="color: var(--text-2); font-size: var(--text-lg);">
+              The Halo Platform is a tracked base with a pan servo. Your phone docks on top,
+              running the full runtime — and Halo can physically come to you, face you, and see the room.
+            </p>
+            <p class="emb-path"><b>Halo Runtime</b> → control source → safety layer → motors</p>
+            <span class="pill-note">Experimental embodiment</span>
           </div>
-          <div class="privacy-card">
-            <h3>Tracks + pan servo</h3>
-            <p>Tank-style tracks handle floors and thresholds; the pan servo turns Halo to face you while it talks, listens, or captures.</p>
-          </div>
-          <div class="privacy-card">
-            <h3>Safety comes standard</h3>
-            <p>Borrowing the BuddyBot contract: motors stay disarmed until armed, motion is bounded and throttled, release means stop, and telemetry on screen stays fresh or the drive stops.</p>
+          <div class="rover reveal">
+            <svg viewBox="0 0 420 300" role="img" aria-label="Schematic of the Halo Platform: tracked base, pan servo, docked phone">
+              <rect class="rover-track" x="60" y="216" width="300" height="46" rx="23"/>
+              <g class="rover-track-lug">
+                <circle cx="86" cy="239" r="12"/><circle cx="140" cy="239" r="12"/><circle cx="196" cy="239" r="12"/>
+                <circle cx="252" cy="239" r="12"/><circle cx="308" cy="239" r="12"/>
+              </g>
+              <rect class="rover-body" x="92" y="164" width="236" height="52" rx="14"/>
+              <rect class="rover-acc" x="178" y="150" width="30" height="14" rx="5"/>
+              <text class="rover-anno" x="193" y="146" text-anchor="middle">PAN SERVO</text>
+              <rect class="rover-acc--2" x="152" y="58" width="116" height="92" rx="16"/>
+              <text class="rover-anno" x="210" y="108" text-anchor="middle" style="fill: var(--text);">PHONE DOCK</text>
+              <line class="rover-line" x1="92" y1="190" x2="328" y2="190"/>
+              <text class="rover-anno" x="60" y="290">TRACK DRIVE ×2</text>
+              <text class="rover-anno" x="360" y="290" text-anchor="end">SAFETY LAYER</text>
+              <text class="rover-anno" x="210" y="40" text-anchor="middle">HALO RUNTIME ON BOARD</text>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= ROADMAP ================= -->
+    <!-- ================= WHAT HALO IS NOT ================= -->
+    <section class="not-section" id="not">
+      <div class="container container--narrow">
+        <ul class="not-list reveal">
+          <li>Not <span class="strike">another chatbot.</span></li>
+          <li>Not <span class="strike">a glasses companion app.</span></li>
+          <li>Not tied to <span class="strike">one model.</span></li>
+          <li>Not dependent on <span class="strike">our cloud.</span></li>
+          <li>Not dependent on <span class="strike">helper apps.</span></li>
+          <li>Not limited to <span class="strike">one device.</span></li>
+        </ul>
+        <p class="not-final reveal">It is <em>the runtime between all of them.</em></p>
+      </div>
+    </section>
+
+    <!-- ================= NOW / NEXT / LATER ================= -->
     <section class="section section--alt" id="roadmap">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <p class="kicker">Roadmap</p>
-          <h2>Where Halo is heading</h2>
-          <p>Halo is in early, active development. The plan below follows the project's published roadmap.</p>
+          <h2>Now, next, later.</h2>
+          <p>The short version. The complete, evidence-linked roadmap lives on GitHub.</p>
         </div>
-        <ul class="road-list">
-          <li>
-            <span class="road-status">In progress</span>
-            <div><h3>The Halo app</h3><p>Home, Activity, Notebook, Devices and Settings — the working Android host.</p></div>
-          </li>
-          <li>
-            <span class="road-status">In progress</span>
-            <div><h3>Host-native Android assistant</h3><p>Halo as a system-level assistant built on supported Android APIs — not an add-on that depends on other helper apps.</p></div>
-          </li>
-          <li>
-            <span class="road-status">In progress</span>
-            <div><h3>Local inference by default</h3><p>Native llama.cpp is the designated default provider, with GGUF download integrity checks and preload while you speak.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Next</span>
-            <div><h3>Generalized wearable capability layer</h3><p>Devices join by capability — audio, buttons, cameras — starting with the verified glasses track, then earbuds, watches and beyond.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Next</span>
-            <div><h3>Dependable assistant actions</h3><p>Reminders, calls, messages and app control with receipts — firing an intent is never reported as completion.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Next</span>
-            <div><h3>Notebook expansion &amp; Study</h3><p>Full workspace objects, durable memory with provenance — and Study, a guided-learning workflow (Ask → Hint → Explain → Check) built on the Notebook.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Planned</span>
-            <div><h3>Real hardware acceptance</h3><p>Every claim re-proven on physical devices: speaker output, battery, reconnects, latency. Evidence outranks assumptions.</p></div>
-          </li>
-          <li>
-            <span class="road-status">Planned</span>
-            <div><h3>Cross-host groundwork</h3><p>The runtime is host-agnostic: Linux and Windows hosts are future targets. Android is the first host, not the only one.</p></div>
-          </li>
-        </ul>
+        <div class="horizon reveal">
+          <div class="horizon-col">
+            <span class="horizon-tag">Now</span>
+            <ul>
+              <li>Android host</li>
+              <li>Notebook (persistent notes)</li>
+              <li>llama.cpp local inference</li>
+              <li>HeyCyan reference track</li>
+            </ul>
+          </div>
+          <div class="horizon-col">
+            <span class="horizon-tag">Next</span>
+            <ul>
+              <li>Generalized wearable layer</li>
+              <li>Reliable assistant actions</li>
+              <li>Durable memory with provenance</li>
+              <li>Study workflow</li>
+            </ul>
+          </div>
+          <div class="horizon-col">
+            <span class="horizon-tag">Later</span>
+            <ul>
+              <li>Linux host</li>
+              <li>Windows host</li>
+              <li>Broader hardware</li>
+              <li>Full hardware acceptance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="horizon-cta reveal">
+          <a class="btn" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Full roadmap → GitHub</a>
+        </div>
       </div>
     </section>
 
     <!-- ================= CTA ================= -->
     <section class="section cta">
       <div class="container">
-        <h2>Follow along, or build it with us</h2>
-        <p>Halo is open source under active development. Star the repo, read the docs, or run it on your own phone.</p>
+        <h2>Build it with us.</h2>
+        <p>Halo is open source under active development. Read the docs, run it on your phone, or help build the capability layer.</p>
         <div class="cta-actions">
-          <a class="btn btn--primary" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Halo on GitHub</a>
-          <a class="btn" href="https://github.com/slafftrosheen/HaloWeb" target="_blank" rel="noopener">This site's source</a>
+          <a class="btn btn--primary btn--lg" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Halo on GitHub</a>
+          <a class="btn btn--lg" href="https://github.com/slafftrosheen/HaloWeb" target="_blank" rel="noopener">This site's source</a>
         </div>
       </div>
     </section>
@@ -364,7 +500,8 @@ Reference:
     </div>
   </footer>
 
-  <script src="js/presence.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/presence.js?v=2"></script>
+  <script src="js/interactions.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>

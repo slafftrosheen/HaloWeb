@@ -9,6 +9,11 @@
  * Cell colors come from the page CSS custom properties (--cell-a…--cell-f),
  * so the presence re-themes itself with the page. No idle animation runs:
  * the render loop stops when the cluster is settled and the state is static.
+ *
+ * v2: multiple instances, theme-change refresh, and a restrained directional
+ * pulse used by the capability constellation and demo pipelines. The pulse is
+ * a one-shot 600ms ease-in-out of the state shift — same motion language as
+ * state transitions, no loops.
  */
 (function () {
   'use strict';
@@ -25,31 +30,41 @@
   ];
 
   var STATES = {
-    ready:      { label: 'Ready',        shift: 0,     dynamic: false },
-    capturing:  { label: 'Capturing',    shift: 0,     dynamic: true,  envelope: 'input' },
-    recognizing:{ label: 'Recognizing',  shift: -0.035,dynamic: false },
-    reasoning:  { label: 'Reasoning',    shift: 0.025, dynamic: false },
-    executing:  { label: 'Executing',    shift: 0.035, dynamic: false },
-    speaking:   { label: 'Speaking',     shift: 0.018, dynamic: true,  envelope: 'output' }
+    listening:   { label: 'Listening',   shift: 0,     dynamic: true,  envelope: 'input',  trace: 'wake → capture · VAD active' },
+    understanding: { label: 'Understanding', shift: -0.035, dynamic: false, trace: 'speech → text · locale · intent' },
+    reasoning:   { label: 'Reasoning',    shift: 0.025, dynamic: false, trace: 'context assembled · provider: local' },
+    responding:  { label: 'Responding',   shift: 0.018, dynamic: true,  envelope: 'output', trace: 'answer streaming · output route: origin' }
   };
 
-  var TWEEN_MS = 280; // matches tween(280) in HaloOrb.kt
+  var TWEEN_MS = 280;
+  var PULSE_MS = 600;
 
-  function Presence(canvas) {
+  function Presence(canvas, opts) {
+    opts = opts || {};
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
-    this.state = 'ready';
+    this.state = 'listening';
     this.source = 'Phone';
     this.shift = 0;
     this.shiftFrom = 0;
     this.shiftTo = 0;
     this.tweenStart = 0;
+    this.pulseAmp = 0;
+    this.pulseDir = 1;
+    this.pulseStart = 0;
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.raf = 0;
     this.vars = null;
     this.refreshTheme();
     this.render();
+    Presence.instances.push(this);
   }
+
+  Presence.instances = [];
+
+  Presence.refreshAllThemes = function () {
+    Presence.instances.forEach(function (p) { p.refreshTheme(); });
+  };
 
   Presence.prototype.refreshTheme = function () {
     var s = getComputedStyle(document.documentElement);
@@ -81,6 +96,16 @@
     this.startLoop();
   };
 
+  /* One-shot directional pulse: a gentle lean toward a nearby capability.
+   * direction: -1 (left/up) … 1 (right/down). amplitude in shift units. */
+  Presence.prototype.pulse = function (direction, amplitude) {
+    if (this.reducedMotion) return;
+    this.pulseDir = direction >= 0 ? 1 : -1;
+    this.pulseAmp = Math.min(0.05, amplitude || 0.02);
+    this.pulseStart = performance.now();
+    this.startLoop();
+  };
+
   Presence.prototype.startLoop = function () {
     if (this.raf) return;
     var self = this;
@@ -98,26 +123,41 @@
   Presence.prototype.tick = function (now) {
     var st = STATES[this.state];
     var t;
+    var base;
 
     if (this.tweenStart && now - this.tweenStart < TWEEN_MS) {
       // Ease-out approximation of Compose's FastOutSlowIn tween.
       t = Math.min(1, (now - this.tweenStart) / TWEEN_MS);
       t = 1 - Math.pow(1 - t, 3);
-      this.shift = this.shiftFrom + (this.shiftTo - this.shiftFrom) * t;
-    } else if (st.dynamic) {
-      // Playground envelope: a gentle simulated wave, clearly labeled demo input.
+      base = this.shiftFrom + (this.shiftTo - this.shiftFrom) * t;
+    } else if (st && st.dynamic) {
+      // Envelope: a gentle wave, clearly labeled demo input.
       var wave = 0.5 + 0.5 * Math.sin(now / 550);
       if (st.envelope === 'input') {
-        this.shift = 0.06 * (0.25 + 0.75 * wave);
+        base = 0.06 * (0.25 + 0.75 * wave);
       } else {
-        this.shift = 0.012 + 0.008 * wave;
+        base = 0.012 + 0.008 * wave;
       }
     } else {
-      this.shift = this.shiftTo;
+      base = this.shiftTo;
       this.tweenStart = 0;
-      this.stopLoop();
     }
+
+    // One-shot pulse envelope.
+    var extra = 0;
+    if (this.pulseStart) {
+      var pt = (now - this.pulseStart) / PULSE_MS;
+      if (pt >= 1) {
+        this.pulseStart = 0;
+      } else {
+        extra = Math.sin(Math.PI * pt) * this.pulseAmp * this.pulseDir;
+      }
+    }
+
+    var settled = !this.pulseStart && (!st || !st.dynamic) && !this.tweenStart;
+    this.shift = base + extra;
     this.render();
+    if (settled) this.stopLoop();
   };
 
   Presence.prototype.render = function () {
@@ -133,11 +173,12 @@
     var center = D / 2;
     var radius = D * 0.47;
     var v = this.vars;
+    if (!v) return;
 
     ctx.clearRect(0, 0, D, D);
 
     // Ground shadow: ink at 5% alpha, nudged down 1.8% (HaloOrb.kt).
-    ctx.fillStyle = hexOrCurrent(v.ink, 0.05);
+    ctx.fillStyle = withAlpha(v.ink, 0.05);
     ctx.beginPath();
     ctx.arc(center, center + D * 0.018, radius, 0, Math.PI * 2);
     ctx.fill();
@@ -197,17 +238,17 @@
   }
 
   function withAlpha(color, alpha) {
-    var c = color.replace('#', '');
+    var c = String(color).replace('#', '');
     if (c.length === 3) c = c[0] + c[0] + c[1] + c[1] + c[2] + c[2];
     var n = parseInt(c, 16);
     if (isNaN(n)) return color;
     var r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
     return 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
   }
-  function hexOrCurrent(color, alpha) { return withAlpha(color, alpha); }
 
   window.HaloPresence = {
-    mount: function (canvas) { return new Presence(canvas); },
+    mount: function (canvas, opts) { return new Presence(canvas, opts); },
+    refreshAllThemes: Presence.refreshAllThemes,
     states: Object.keys(STATES)
   };
 })();
