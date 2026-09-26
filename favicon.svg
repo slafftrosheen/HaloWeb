@@ -1,9 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
-  <rect width="26" height="26" rx="6" fill="#17191E"/>
-  <rect x="6"  y="5"  width="8" height="8" rx="2" fill="#A6EBD8"/>
-  <rect x="12" y="3"  width="7" height="7" rx="2" fill="#B9D9FF"/>
-  <rect x="16" y="9"  width="6" height="6" rx="2" fill="#D5C8FF"/>
-  <rect x="4"  y="11" width="7" height="7" rx="2" fill="#F3C0D9"/>
-  <rect x="9"  y="10" width="8" height="8" rx="2" fill="#F7DFA3" opacity="0.85"/>
-  <rect x="12" y="15" width="6" height="6" rx="2" fill="#F4BEA9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="ring" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D5C8FF"/>
+      <stop offset=".5" stop-color="#B9D9FF"/>
+      <stop offset="1" stop-color="#A6EBD8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="url(#ring)" stroke-width="8"/>
+  <circle cx="32" cy="32" r="22" fill="#17191E"/>
+  <g fill="#FAFAFC" shape-rendering="crispEdges">
+    <rect x="25" y="20" width="14" height="3"/>
+    <rect x="21" y="23" width="4" height="3"/><rect x="39" y="23" width="4" height="3"/>
+    <rect x="18" y="26" width="4" height="12"/><rect x="42" y="26" width="4" height="12"/>
+    <rect x="21" y="38" width="4" height="3"/><rect x="39" y="38" width="4" height="3"/>
+    <rect x="25" y="41" width="14" height="3"/>
+  </g>
 </svg>

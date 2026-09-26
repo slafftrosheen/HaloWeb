@@ -1,112 +1,107 @@
-/* HaloWeb page behavior: three-state theme preference (System/Light/Dark,
- * matching the Halo app's AppearanceMode selector), motion preference, and
- * Presence lifecycle (theme refresh + resize re-render for all instances).
- */
+/* HaloWeb shell behavior: System/Light/Dark theme, scroll progress and active-section nav. */
 (function () {
   'use strict';
 
-  var KEY = 'halo-web-theme';
   var root = document.documentElement;
-
-  /* Signal that JS is running; scroll-reveal styling is gated on this so the
-   * page remains fully readable when scripts are disabled. */
-  root.setAttribute('data-js', 'on');
-
-  /* ---------- Motion preference ---------- */
-  function applyMotion() {
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    root.setAttribute('data-motion', reduced ? 'reduced' : 'full');
-  }
-  var motionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (motionMedia.addEventListener) {
-    motionMedia.addEventListener('change', applyMotion);
-  }
-  applyMotion();
-
-  /* ---------- Theme: System / Light / Dark (like the app) ---------- */
-  function systemTheme() {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
-  function stored() {
-    try { return localStorage.getItem(KEY); } catch (e) { return null; }
-  }
-
-  function persist(value) {
-    try {
-      if (value === null) localStorage.removeItem(KEY);
-      else localStorage.setItem(KEY, value);
-    } catch (e) { /* private mode: selection stays for the session only */ }
-  }
-
-  function resolvedTheme() {
-    var pref = stored();
-    return pref === 'light' || pref === 'dark' ? pref : systemTheme();
-  }
-
-  function apply() {
-    var resolved = resolvedTheme();
-    root.setAttribute('data-theme', resolved);
-    root.setAttribute('data-dark-active', resolved === 'dark' ? 'true' : 'false');
-    if (window.HaloPresence) window.HaloPresence.refreshAllThemes();
-    updateThemeUi();
-  }
-
-  function updateThemeUi() {
-    var mode = stored() || 'system';
-    var resolved = resolvedTheme();
-    var group = document.querySelector('.theme-switch');
-    if (group) {
-      Array.prototype.forEach.call(group.querySelectorAll('.btn[data-mode]'), function (btn) {
-        btn.setAttribute('aria-pressed', btn.getAttribute('data-mode') === mode ? 'true' : 'false');
-      });
-      group.setAttribute('data-dark-active', resolved === 'dark' ? 'true' : 'false');
-    }
-    // Keep the compact header control in sync (cycles System → Light → Dark).
-    var cycle = document.querySelector('.theme-toggle');
-    if (cycle) {
-      cycle.setAttribute('data-mode', mode);
-      cycle.setAttribute('aria-pressed', resolved === 'dark' ? 'true' : 'false');
-      cycle.setAttribute('aria-label',
-        'Theme: ' + mode + (mode === 'system' ? ' (' + resolved + ')' : '') + '. Activate to change.');
-    }
-  }
-
-  // Follow the OS only while the user has no explicit choice.
+  var KEY = 'halo-web-theme';
   var media = window.matchMedia('(prefers-color-scheme: dark)');
-  if (media.addEventListener) {
-    media.addEventListener('change', function () {
-      if (!stored()) apply();
+
+  root.setAttribute('data-js','on');
+
+  function storedMode() {
+    try { return localStorage.getItem(KEY) || 'system'; } catch (e) { return 'system'; }
+  }
+  function systemTheme() { return media.matches ? 'dark' : 'light'; }
+  function resolvedTheme(mode) { return mode === 'light' || mode === 'dark' ? mode : systemTheme(); }
+
+  function persist(mode) {
+    try {
+      if (mode === 'system') localStorage.removeItem(KEY);
+      else localStorage.setItem(KEY, mode);
+    } catch (e) {}
+  }
+
+  function applyTheme(mode) {
+    mode = mode || storedMode();
+    var resolved = resolvedTheme(mode);
+    root.setAttribute('data-theme', resolved);
+    Array.prototype.forEach.call(document.querySelectorAll('.theme-option[data-mode]'), function (button) {
+      button.setAttribute('aria-pressed', button.getAttribute('data-mode') === mode ? 'true' : 'false');
     });
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', resolved === 'dark' ? '#17191E' : '#F6F7FB');
   }
 
-  apply();
-
-  function setMode(mode) {
-    if (mode === 'system') persist(null);
-    else persist(mode);
-    apply();
-  }
-
-  Array.prototype.forEach.call(document.querySelectorAll('.theme-switch .btn[data-mode]'), function (btn) {
-    btn.addEventListener('click', function () { setMode(btn.getAttribute('data-mode')); });
-  });
-
-  var toggle = document.querySelector('.theme-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var order = ['system', 'light', 'dark'];
-      var current = stored() || 'system';
-      setMode(order[(order.indexOf(current) + 1) % order.length]);
+  function initTheme() {
+    applyTheme(storedMode());
+    Array.prototype.forEach.call(document.querySelectorAll('.theme-option[data-mode]'), function (button) {
+      button.addEventListener('click', function () {
+        var mode = button.getAttribute('data-mode');
+        persist(mode);
+        applyTheme(mode);
+      });
     });
+    if (media.addEventListener) {
+      media.addEventListener('change', function () {
+        if (storedMode() === 'system') applyTheme('system');
+      });
+    }
   }
 
-  /* Re-render presences on layout resize (DPR-aware canvas sizing). */
-  var resizeTimer = 0;
-  window.addEventListener('resize', function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () {
-      if (window.HaloPresence) window.HaloPresence.refreshAllThemes();
-    }, 120);
+  function initScrollProgress() {
+    var bar = document.getElementById('scroll-progress');
+    if (!bar) return;
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var doc = document.documentElement;
+      var max = Math.max(1, doc.scrollHeight - window.innerHeight);
+      var value = Math.max(0, Math.min(1, window.scrollY / max));
+      bar.style.width = (value * 100).toFixed(2) + '%';
+    }
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }, { passive:true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  function initActiveNav() {
+    if (!('IntersectionObserver' in window)) return;
+    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a[href^="#"]'));
+    var targets = links.map(function (link) {
+      return document.querySelector(link.getAttribute('href'));
+    }).filter(Boolean);
+    if (!targets.length) return;
+
+    var visible = {};
+    function refresh() {
+      var best = null;
+      var bestScore = -Infinity;
+      targets.forEach(function (target) {
+        if (!visible[target.id]) return;
+        var rect = target.getBoundingClientRect();
+        var score = -Math.abs(rect.top - window.innerHeight * .26);
+        if (score > bestScore) { bestScore = score; best = target.id; }
+      });
+      links.forEach(function (link) {
+        link.classList.toggle('is-active', best && link.getAttribute('href') === '#' + best);
+      });
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { visible[entry.target.id] = entry.isIntersecting; });
+      refresh();
+    }, { rootMargin:'-12% 0px -68% 0px', threshold:0 });
+
+    targets.forEach(function (target) { observer.observe(target); });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initTheme();
+    initScrollProgress();
+    initActiveNav();
   });
 })();

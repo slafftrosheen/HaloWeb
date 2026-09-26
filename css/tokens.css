@@ -1,160 +1,106 @@
-/* ============================================================
-   Halo design tokens — ported from
-   app/src/main/java/com/halo/app/ui/theme/Color.kt (main)
-   Light/dark values follow HALO-WORKSPACE-DESIGN.md, which is the
-   visual authority together with the user mockup. Values marked
-   with a source comment match the Kotlin file exactly.
-
-   v2 additions: editorial type scale, wide canvas, background
-   washes, runtime-terminal palette and topology lines.
-   ============================================================ */
-
 :root {
-  /* -- App palette: workspace object / category colors (Color.kt) -- */
-  --halo-pastel-mint:   #A6EBD8; /* HaloPastelMint  */
-  --halo-pastel-blue:   #B9D9FF; /* HaloPastelBlue  */
-  --halo-pastel-lilac:  #D5C8FF; /* HaloPastelLilac */
-  --halo-pastel-pink:   #F3C0D9; /* HaloPastelPink  */
-  --halo-pastel-yellow: #F7DFA3; /* HaloPastelYellow*/
-  --halo-pastel-coral:  #F4BEA9; /* HaloPastelCoral */
+  --font-sans: Inter, Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "SFMono-Regular", Consolas, monospace;
 
-  /* -- App palette: stronger semantic runtime colors (Color.kt) -- */
-  --halo-ready:         #2FCB9A; /* HaloReady  */
-  --halo-action:        #5B8DEF; /* HaloAction */
-  --halo-info:          #4EA8FF; /* HaloInfo   */
-  --halo-warning:       #E8A84D; /* HaloWarning / HaloSemanticWarning */
-  --halo-danger:        #EB5A67; /* HaloDanger / HaloSemanticDanger   */
-  --halo-idle:          #8E9199; /* HaloIdle   */
+  --pastel-mint: #A6EBD8;
+  --pastel-blue: #B9D9FF;
+  --pastel-lilac: #D5C8FF;
+  --pastel-pink: #F3C0D9;
+  --pastel-yellow: #F7DFA3;
+  --pastel-coral: #F4BEA9;
 
-  /* Typography */
-  --font-sans: "Inter", "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+  --ready: #2FCB9A;
+  --action: #5B8DEF;
+  --warning: #E8A84D;
+  --danger: #EB5A67;
 
-  /* Editorial display scale */
-  --display-xl: clamp(2.6rem, 6.2vw, 4.6rem);
-  --display-lg: clamp(1.9rem, 3.8vw, 2.9rem);
-  --display-md: clamp(1.4rem, 2.4vw, 1.8rem);
-  --text-lg: 1.12rem;
-  --text-md: 0.98rem;
-  --text-sm: 0.86rem;
+  --graphite: #1C1D22;
+  --graphite-deep: #141519;
+  --oled-ink: #FAFAFC;
 
-  /* Shape */
-  --radius-card: 20px;
-  --radius-soft: 14px;
-  --radius-pill: 999px;
-  --radius-cell: 12px;
+  --container: 1260px;
+  --header-h: 66px;
 
-  /* Spacing rhythm */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.5rem;
-  --space-6: 2.25rem;
-  --space-7: 3.5rem;
-  --space-8: 5rem;
-  --space-9: 7.5rem;
+  --r-xs: 10px;
+  --r-sm: 14px;
+  --r-md: 20px;
+  --r-lg: 28px;
+  --r-xl: 38px;
+  --r-pill: 999px;
 
-  /* Wider canvas: a product page, not a marketing card site */
-  --container-max: 1240px;
+  --s1: .25rem;
+  --s2: .5rem;
+  --s3: .75rem;
+  --s4: 1rem;
+  --s5: 1.5rem;
+  --s6: 2rem;
+  --s7: 3rem;
+  --s8: 4.5rem;
+  --s9: 7rem;
 
-  --header-height: 60px;
+  --display-xl: clamp(3rem, 7vw, 6.35rem);
+  --display-lg: clamp(2.25rem, 4.8vw, 4.4rem);
+  --display-md: clamp(1.55rem, 2.6vw, 2.35rem);
+  --body-lg: clamp(1.05rem, 1.5vw, 1.22rem);
+  --body: .98rem;
+  --small: .82rem;
 
-  /* Motion */
-  --ease-soft: cubic-bezier(0.25, 0.6, 0.3, 1);
-  --dur-fast: 160ms;
-  --dur-med: 280ms; /* matches HaloOrb's 280ms state tween */
-  --dur-slow: 640ms;
+  --ease: cubic-bezier(.22,.72,.2,1);
+  --fast: 160ms;
+  --med: 320ms;
+  --slow: 720ms;
 }
 
-/* ---------- Light workspace theme ---------- */
-/* Source: Color.kt "Light cognitive workspace" block (exact values). */
 :root,
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg:            #F6F7FB; /* LightBackground      */
-  --surface:       #FFFFFF; /* LightSurface         */
-  --surface-2:     #EEF0F5; /* LightSurfaceVariant  */
-  --text:          #182033; /* LightOnBackground    */
-  --text-2:        #697184; /* LightOnSurfaceVariant*/
-  --outline:       #D9DEE8; /* LightOutline         */
-  --outline-soft:  #E8EBF1; /* LightOutlineVariant  */
-
-  --action:        #5B8DEF; /* primary action blue  */
-  --on-action:     #FFFFFF;
-  --accent-strong: #2FCB9A;
-
-  /* Soft background color fields (6-10% pastel washes) */
-  --wash-a: rgba(166, 235, 216, 0.10); /* mint   */
-  --wash-b: rgba(185, 217, 255, 0.10); /* blue   */
-  --wash-c: rgba(213, 200, 255, 0.09); /* lilac  */
-
-  --cell-a: var(--halo-pastel-mint);
-  --cell-b: var(--halo-pastel-blue);
-  --cell-c: var(--halo-pastel-lilac);
-  --cell-d: var(--halo-pastel-pink);
-  --cell-e: var(--halo-pastel-yellow);
-  --cell-f: var(--halo-pastel-coral);
-
-  --shadow-soft: 0 2px 6px rgba(24, 32, 51, 0.06), 0 12px 32px rgba(24, 32, 51, 0.08);
-  --shadow-lift: 0 4px 10px rgba(24, 32, 51, 0.08), 0 18px 44px rgba(24, 32, 51, 0.12);
-
-  /* Runtime terminal */
-  --term-bg:   #101519;
-  --term-surface: #171D22;
-  --term-line: #232B32;
-  --term-text: #D6DEE4;
-  --term-dim:  #7C8B95;
-  --term-mint: #7FDDBC;
-  --term-blue: #9CC4F5;
-  --term-amber: #E8B873;
+  --bg: #F6F7FB;
+  --bg-soft: #F0F2F7;
+  --surface: #FFFFFF;
+  --surface-2: #EEF0F5;
+  --text: #182033;
+  --text-2: #697184;
+  --text-3: #9299A8;
+  --line: #D9DEE8;
+  --line-soft: #E8EBF1;
+  --primary: #5B8DEF;
+  --primary-ink: #FFFFFF;
+  --focus: #3F73D8;
+  --shadow-1: 0 1px 2px rgba(24,32,51,.05), 0 12px 32px rgba(24,32,51,.08);
+  --shadow-2: 0 10px 30px rgba(24,32,51,.10), 0 28px 70px rgba(24,32,51,.12);
+  --grid: rgba(24,32,51,.045);
+  --wash-blue: rgba(185,217,255,.24);
+  --wash-lilac: rgba(213,200,255,.20);
+  --wash-mint: rgba(166,235,216,.18);
 }
 
-/* ---------- Dark companion theme ---------- */
-/* Source: Color.kt "Dark companion theme" block (exact values). */
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg:            #17191E; /* DarkBackground       */
-  --surface:       #20232A; /* DarkSurface          */
-  --surface-2:     #292C34; /* DarkSurfaceVariant   */
-  --text:          #F3F3F1; /* DarkOnBackground     */
-  --text-2:        #A8AAB2; /* DarkOnSurfaceVariant */
-  --outline:       #3A3E48; /* DarkOutline          */
-  --outline-soft:  #2D3038; /* DarkOutlineVariant   */
-
-  --action:        #7FA9F5; /* luminous blue adjusted for dark contrast per design guide */
-  --on-action:     #10131A;
-  --accent-strong: var(--halo-ready);
-
-  --wash-a: rgba(166, 235, 216, 0.06);
-  --wash-b: rgba(185, 217, 255, 0.06);
-  --wash-c: rgba(213, 200, 255, 0.05);
-
-  --cell-a: #9FE0CD;
-  --cell-b: #A9C9F2;
-  --cell-c: #BCB1E6;
-  --cell-d: #DDB1CB;
-  --cell-e: #E4CFA0;
-  --cell-f: #E0B3A2;
-
-  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.35), 0 12px 32px rgba(0, 0, 0, 0.35);
-  --shadow-lift: 0 4px 10px rgba(0, 0, 0, 0.45), 0 18px 44px rgba(0, 0, 0, 0.5);
-
-  --term-bg:   #101519;
-  --term-surface: #171D22;
-  --term-line: #232B32;
-  --term-text: #D6DEE4;
-  --term-dim:  #7C8B95;
-  --term-mint: #7FDDBC;
-  --term-blue: #9CC4F5;
-  --term-amber: #E8B873;
+  --bg: #17191E;
+  --bg-soft: #1C1F25;
+  --surface: #20232A;
+  --surface-2: #292C34;
+  --text: #F3F3F1;
+  --text-2: #A8AAB2;
+  --text-3: #747780;
+  --line: #3A3E48;
+  --line-soft: #2D3038;
+  --primary: #7FA9F5;
+  --primary-ink: #10131A;
+  --focus: #A9C9F2;
+  --shadow-1: 0 2px 8px rgba(0,0,0,.28), 0 16px 38px rgba(0,0,0,.24);
+  --shadow-2: 0 14px 38px rgba(0,0,0,.35), 0 36px 80px rgba(0,0,0,.38);
+  --grid: rgba(255,255,255,.035);
+  --wash-blue: rgba(127,169,245,.10);
+  --wash-lilac: rgba(188,177,230,.10);
+  --wash-mint: rgba(159,224,205,.08);
 }
 
-/* Reduced motion: honor the OS before JS can apply the page toggle. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 1ms !important;
   }
 }
