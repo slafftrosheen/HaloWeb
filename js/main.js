@@ -52,12 +52,14 @@
     var bar = document.getElementById('scroll-progress');
     if (!bar) return;
     var ticking = false;
+    var header = document.querySelector('.site-header');
     function update() {
       ticking = false;
       var doc = document.documentElement;
       var max = Math.max(1, doc.scrollHeight - window.innerHeight);
       var value = Math.max(0, Math.min(1, window.scrollY / max));
       bar.style.width = (value * 100).toFixed(2) + '%';
+      if (header) header.classList.toggle('is-scrolled', window.scrollY > 12);
     }
     window.addEventListener('scroll', function () {
       if (ticking) return;
@@ -87,7 +89,10 @@
         if (score > bestScore) { bestScore = score; best = target.id; }
       });
       links.forEach(function (link) {
-        link.classList.toggle('is-active', best && link.getAttribute('href') === '#' + best);
+        var active = !!(best && link.getAttribute('href') === '#' + best);
+        link.classList.toggle('is-active', active);
+        if (active) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
       });
     }
 
@@ -99,9 +104,7 @@
     targets.forEach(function (target) { observer.observe(target); });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    initTheme();
-    initScrollProgress();
-    initActiveNav();
-  });
+  initTheme();
+  initScrollProgress();
+  initActiveNav();
 })();

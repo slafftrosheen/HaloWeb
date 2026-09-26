@@ -121,22 +121,26 @@
     var trace = document.getElementById('signal-trace');
     var buttons = document.querySelectorAll('.state-rail [data-state]');
 
-    function setState(state) {
+    var capabilityChips = document.querySelectorAll('.capability-chip[data-signal]');
+    function setState(state, sourceChip) {
       if (heroFace) heroFace.setState(state);
       if (trace) trace.textContent = STATE_TRACES[state] || '';
       Array.prototype.forEach.call(buttons, function (btn) {
         btn.setAttribute('aria-pressed', btn.getAttribute('data-state') === state ? 'true' : 'false');
       });
+      Array.prototype.forEach.call(capabilityChips, function (chip) {
+        chip.setAttribute('aria-pressed', chip === sourceChip ? 'true' : 'false');
+      });
     }
 
     Array.prototype.forEach.call(buttons, function (btn) {
-      btn.addEventListener('click', function () { setState(btn.getAttribute('data-state')); });
+      btn.addEventListener('click', function () { setState(btn.getAttribute('data-state'), null); });
     });
 
-    Array.prototype.forEach.call(document.querySelectorAll('.capability-chip[data-signal]'), function (chip) {
+    Array.prototype.forEach.call(capabilityChips, function (chip) {
       chip.addEventListener('click', function () {
         var state = chip.getAttribute('data-signal') || 'ready';
-        setState(state);
+        setState(state, chip);
         if (trace) {
           var name = chip.querySelector('b');
           trace.textContent = (name ? name.textContent.toLowerCase() : 'capability') + ' joined · ' + (STATE_TRACES[state] || '');
@@ -148,12 +152,16 @@
   function initScreenSwitcher() {
     var controls = document.querySelectorAll('[data-screen-target]');
     var screens = document.querySelectorAll('.app-screen[data-screen]');
+    var order = ['home','notebook','devices'];
+    var current = 'home';
 
     function show(name) {
+      var direction = order.indexOf(name) >= order.indexOf(current) ? 1 : -1;
       Array.prototype.forEach.call(screens, function (screen) {
         var active = screen.getAttribute('data-screen') === name;
         screen.hidden = !active;
         if (active && !prefersReduced()) {
+          screen.style.setProperty('--screen-shift', (direction * 14) + 'px');
           screen.classList.remove('screen-in');
           void screen.offsetWidth;
           screen.classList.add('screen-in');
@@ -164,6 +172,7 @@
         control.setAttribute('aria-pressed', active ? 'true' : 'false');
         control.setAttribute('aria-controls', 'mock-' + control.getAttribute('data-screen-target'));
       });
+      current = name;
     }
 
     Array.prototype.forEach.call(controls, function (control) {
@@ -190,6 +199,7 @@
     Array.prototype.forEach.call(items, function (item) {
       item.addEventListener('click', function () {
         item.classList.toggle('selected');
+        item.setAttribute('aria-pressed', item.classList.contains('selected') ? 'true' : 'false');
         var small = item.querySelector('small');
         if (small) small.textContent = item.classList.contains('selected') ? 'selected' : 'available';
         if (count) count.textContent = document.querySelectorAll('.context-item.selected').length;
@@ -253,6 +263,35 @@
     });
   }
 
+
+  function initProductTilt() {
+    var frame = document.querySelector('[data-tilt]');
+    if (!frame || prefersReduced() || !window.matchMedia('(pointer:fine)').matches) return;
+    var raf = 0;
+
+    function reset() {
+      if (raf) cancelAnimationFrame(raf);
+      frame.classList.remove('is-tilting');
+      frame.style.transform = '';
+    }
+
+    frame.addEventListener('pointermove', function (event) {
+      var rect = frame.getBoundingClientRect();
+      var px = (event.clientX - rect.left) / rect.width - 0.5;
+      var py = (event.clientY - rect.top) / rect.height - 0.5;
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function () {
+        frame.classList.add('is-tilting');
+        frame.style.transform =
+          'rotateX(' + (-py * 3.2).toFixed(2) + 'deg) rotateY(' +
+          (px * 4.2).toFixed(2) + 'deg) translateY(-2px)';
+      });
+    });
+
+    frame.addEventListener('pointerleave', reset);
+    frame.addEventListener('blur', reset, true);
+  }
+
   function initReveals() {
     var items = document.querySelectorAll('.reveal');
     if (prefersReduced() || !('IntersectionObserver' in window)) {
@@ -270,13 +309,12 @@
     Array.prototype.forEach.call(items, function (item) { observer.observe(item); });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    initHeroSignal();
-    initScreenSwitcher();
-    initScenarios();
-    initWorkingSet();
-    initContinuity();
-    initRuntimeBoard();
-    initReveals();
-  });
+  initHeroSignal();
+  initScreenSwitcher();
+  initScenarios();
+  initWorkingSet();
+  initContinuity();
+  initRuntimeBoard();
+  initProductTilt();
+  initReveals();
 })();

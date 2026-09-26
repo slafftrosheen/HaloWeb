@@ -5,18 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Halo — one runtime, every surface</title>
   <meta name="description" content="Halo is an open-source, local-first cognitive runtime. Android is the first complete host; local AI, a persistent workspace and capability-driven devices extend it." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#F6F7FB" />
   <link rel="canonical" href="https://halo-web-blue.vercel.app/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Halo" />
   <meta property="og:title" content="Halo — one runtime, every surface" />
   <meta property="og:description" content="A local-first cognitive runtime across your phone, models, workspace and devices." />
   <meta property="og:url" content="https://halo-web-blue.vercel.app/" />
   <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/tokens.css?v=4" />
-  <link rel="stylesheet" href="css/main.css?v=4" />
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml" />
+  <script>
+    (function(){try{var m=localStorage.getItem("halo-web-theme")||"system";var d=m==="system"?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):m;document.documentElement.setAttribute("data-js","on");document.documentElement.setAttribute("data-theme",d);}catch(e){}})();
+  </script>
+  <link rel="stylesheet" href="css/tokens.css?v=5" />
+  <link rel="stylesheet" href="css/main.css?v=5" />
 </head>
 <body>
+  <a class="skip-link" href="#product">Skip to product</a>
   <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
 
   <header class="site-header">
@@ -67,19 +74,19 @@
 
         <div class="signal-lab hero-enter" style="--enter-delay:120ms">
           <div class="signal-field">
-            <button class="capability-chip cap-phone" type="button" data-capability="phone" data-signal="ready">
+            <button class="capability-chip cap-phone" type="button" data-capability="phone" data-signal="ready" aria-pressed="true">
               <span class="halo-glyph" data-glyph="phone" aria-hidden="true"></span>
               <span><b>Phone</b><small>host</small></span>
             </button>
-            <button class="capability-chip cap-glasses" type="button" data-capability="glasses" data-signal="listening">
+            <button class="capability-chip cap-glasses" type="button" data-capability="glasses" data-signal="listening" aria-pressed="false">
               <span class="halo-glyph" data-glyph="glasses" aria-hidden="true"></span>
               <span><b>Glasses</b><small>audio · vision</small></span>
             </button>
-            <button class="capability-chip cap-notebook" type="button" data-capability="notebook" data-signal="acting">
+            <button class="capability-chip cap-notebook" type="button" data-capability="notebook" data-signal="acting" aria-pressed="false">
               <span class="halo-glyph" data-glyph="note" aria-hidden="true"></span>
               <span><b>Notebook</b><small>workspace</small></span>
             </button>
-            <button class="capability-chip cap-model" type="button" data-capability="model" data-signal="thinking">
+            <button class="capability-chip cap-model" type="button" data-capability="model" data-signal="thinking" aria-pressed="false">
               <span class="halo-glyph" data-glyph="model" aria-hidden="true"></span>
               <span><b>Model</b><small>replaceable</small></span>
             </button>
@@ -101,7 +108,7 @@
               <button type="button" data-state="acting" aria-pressed="false">Acting</button>
               <button type="button" data-state="speaking" aria-pressed="false">Responding</button>
             </div>
-            <p class="signal-trace mono" id="signal-trace">runtime settled · waiting for explicit input</p>
+            <p class="signal-trace mono" id="signal-trace" aria-live="polite">runtime settled · waiting for explicit input</p>
           </div>
         </div>
       </div>
@@ -130,7 +137,7 @@
               <button type="button" data-screen-target="devices" aria-pressed="false">Devices</button>
             </div>
 
-            <div class="phone-frame">
+            <div class="phone-frame" data-tilt>
               <div class="phone-speaker" aria-hidden="true"></div>
               <div class="phone-screen">
                 <div class="app-screen" id="mock-home" data-screen="home">
@@ -346,9 +353,9 @@ OUTPUT   phone</pre>
           <div class="workspace-body">
             <aside class="working-set">
               <div class="working-set-head"><span class="halo-glyph" data-glyph="halo"></span><b>In Halo's context</b><em>2</em></div>
-              <button class="context-item selected" type="button"><span class="halo-glyph" data-glyph="note"></span><span>Halo interface notes<small>selected</small></span></button>
+              <button class="context-item selected" type="button" aria-pressed="true"><span class="halo-glyph" data-glyph="note"></span><span>Halo interface notes<small>selected</small></span></button>
               <button class="context-item selected" type="button"><span class="halo-glyph" data-glyph="note"></span><span>Runtime architecture<small>selected</small></span></button>
-              <button class="context-item" type="button"><span class="halo-glyph" data-glyph="file"></span><span>Protocol notes<small>available</small></span></button>
+              <button class="context-item" type="button" aria-pressed="false"><span class="halo-glyph" data-glyph="file"></span><span>Protocol notes<small>available</small></span></button>
             </aside>
             <article class="workspace-document">
               <span class="micro-label">NOTE</span>
@@ -391,12 +398,12 @@ OUTPUT   phone</pre>
             <h3>Answers prefer the surface where the interaction began.</h3>
             <p>Toggle capabilities and watch Halo choose an explicit route rather than silently pretending the original surface still exists.</p>
             <div class="continuity-controls">
-              <button type="button" data-cap="glasses-mic" aria-pressed="true"><span class="switch-dot"></span>Glasses microphone</button>
-              <button type="button" data-cap="glasses-speaker" aria-pressed="true"><span class="switch-dot"></span>Glasses speaker</button>
-              <button type="button" data-cap="earbuds" aria-pressed="false"><span class="switch-dot"></span>Earbuds fallback</button>
+              <button type="button" data-cap="glasses-mic" aria-pressed="true" aria-controls="continuity-route"><span class="switch-dot"></span>Glasses microphone</button>
+              <button type="button" data-cap="glasses-speaker" aria-pressed="true" aria-controls="continuity-route"><span class="switch-dot"></span>Glasses speaker</button>
+              <button type="button" data-cap="earbuds" aria-pressed="false" aria-controls="continuity-route"><span class="switch-dot"></span>Earbuds fallback</button>
             </div>
             <div class="continuity-route" id="continuity-route" aria-live="polite"></div>
-            <p class="continuity-status mono" id="continuity-status"></p>
+            <p class="continuity-status mono" id="continuity-status" aria-live="polite"></p>
           </div>
         </div>
       </div>
@@ -460,8 +467,8 @@ OUTPUT   phone</pre>
     </div>
   </footer>
 
-  <script src="js/presence.js?v=4" defer></script>
-  <script src="js/interactions.js?v=4" defer></script>
-  <script src="js/main.js?v=4" defer></script>
+  <script src="js/presence.js?v=5" defer></script>
+  <script src="js/interactions.js?v=5" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </body>
 </html>

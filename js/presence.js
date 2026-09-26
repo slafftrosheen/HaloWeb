@@ -191,10 +191,8 @@
     return el && el.__haloSignalFace ? el.__haloSignalFace : null;
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    renderGlyphs(document);
-    mountFaces();
-  });
+  renderGlyphs(document);
+  mountFaces();
 
   window.HaloVisual = {
     glyphs: GLYPHS,
