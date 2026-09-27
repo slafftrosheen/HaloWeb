@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932" role="img" aria-label="Halo Canvas editor screen">
+<rect width="430" height="932" fill="#F7F8FC"/>
+<style>
+text{font-family:Inter,Arial,sans-serif;fill:#182033}.muted{fill:#70798B}.micro{fill:#9299A8;font-size:10px;letter-spacing:.08em}.label{font-size:12px;font-weight:600}.small{font-size:11px}.body{font-size:13px}.title{font-size:27px;font-weight:700;letter-spacing:-.7px}.h2{font-size:17px;font-weight:700}.line{stroke:#E1E5EC;stroke-width:1}.surface{fill:#FFFFFF;stroke:#E0E4EC}.soft{fill:#EEF1F6}.blue{fill:#5B8DEF}.mint{fill:#A6EBD8}.lilac{fill:#D5C8FF}.yellow{fill:#F7DFA3}.graphite{fill:#20242A}.nav{font-size:8px;fill:#8B93A2}
+</style>
+
+<text x="20" y="27" class="micro">10:49</text><text x="410" y="27" text-anchor="end" class="micro">5G  86%</text>
+<text x="22" y="78" class="small muted">‹ Back</text><text x="84" y="72" class="h2">Runtime map</text><text x="84" y="92" class="micro">100% · 5 NODES</text>
+<rect x="332" y="55" width="76" height="40" rx="14" fill="#E7EEFC"/><text x="370" y="80" text-anchor="middle" class="label" style="fill:#4979D0">+ Text</text>
+<defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#E0E4EC" stroke-width="1"/></pattern></defs>
+<rect x="0" y="116" width="430" height="816" fill="url(#grid)"/>
+<path d="M135 296 C180 296 180 240 224 240M135 296 C180 296 180 410 224 410M304 240 C345 240 345 324 376 324" fill="none" stroke="#C4CAD5" stroke-width="2"/>
+<rect x="28" y="252" width="128" height="88" rx="18" fill="#fff" stroke="#5B8DEF" stroke-width="2"/><text x="45" y="281" class="micro">HOST</text><text x="45" y="306" class="label">Android</text><text x="45" y="325" class="small muted">runtime + UI</text>
+<rect x="218" y="194" width="126" height="92" rx="18" class="surface"/><text x="236" y="222" class="micro">MODEL</text><text x="236" y="247" class="label">LiteRT</text><text x="236" y="267" class="small muted">on-device</text>
+<rect x="218" y="366" width="138" height="92" rx="18" class="surface"/><text x="236" y="394" class="micro">WORKSPACE</text><text x="236" y="419" class="label">Notebook</text><text x="236" y="439" class="small muted">context + files</text>
+<rect x="294" y="283" width="112" height="84" rx="18" class="surface"/><text x="312" y="311" class="micro">DEVICE</text><text x="312" y="336" class="label">Glasses</text><text x="312" y="356" class="small muted">audio · camera</text>
+<rect x="72" y="515" width="152" height="108" rx="18" class="surface"/><text x="90" y="545" class="micro">NOTE</text><text x="90" y="570" class="label">Product principle</text><text x="90" y="594" class="small muted">Runtime stays.</text><text x="90" y="612" class="small muted">Surfaces change.</text>
+
+</svg>

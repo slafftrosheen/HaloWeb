@@ -3,456 +3,366 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halo — one runtime, every surface</title>
-  <meta name="description" content="Halo is an open-source, local-first cognitive runtime. Android is the first complete host; local AI, a persistent workspace and capability-driven devices extend it." />
+  <title>Halo — a local-first cognitive runtime</title>
+  <meta name="description" content="Halo is an open-source cognitive runtime for Android: on-device LiteRT inference, a persistent Notebook workspace, system-assistant integration and capability-driven devices." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#F6F7FB" />
+  <meta name="theme-color" content="#F4F5F7" />
   <link rel="canonical" href="https://halo-web-blue.vercel.app/" />
+
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Halo" />
-  <meta property="og:title" content="Halo — one runtime, every surface" />
-  <meta property="og:description" content="A local-first cognitive runtime across your phone, models, workspace and devices." />
+  <meta property="og:title" content="Halo — a local-first cognitive runtime" />
+  <meta property="og:description" content="Android host. On-device AI. Persistent workspace. Capability-driven devices." />
   <meta property="og:url" content="https://halo-web-blue.vercel.app/" />
   <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml" />
+
+  <link rel="icon" href="favicon.svg?v=3" type="image/svg+xml" />
   <script>
-    (function(){try{var m=localStorage.getItem("halo-web-theme")||"system";var d=m==="system"?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):m;document.documentElement.setAttribute("data-js","on");document.documentElement.setAttribute("data-theme",d);}catch(e){}})();
+    (function () {
+      try {
+        var mode = localStorage.getItem("halo-web-theme") || "system";
+        var theme = mode === "system"
+          ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+          : mode;
+        document.documentElement.setAttribute("data-js", "on");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (_) {}
+    })();
   </script>
-  <link rel="stylesheet" href="css/tokens.css?v=5" />
-  <link rel="stylesheet" href="css/main.css?v=5" />
+  <link rel="stylesheet" href="css/tokens.css?v=6" />
+  <link rel="stylesheet" href="css/main.css?v=6" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Halo",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Android",
+    "description": "Open-source local-first cognitive runtime and personal assistant host.",
+    "codeRepository": "https://github.com/slafftrosheen/Halo"
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#product">Skip to product</a>
-  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+  <div class="page-progress" aria-hidden="true"><span id="page-progress"></span></div>
 
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Halo home">
-        <span class="brand-face" aria-hidden="true"><span class="halo-glyph" data-glyph="halo"></span></span>
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-ring"></span>
+          <span class="brand-core"></span>
+        </span>
         <span>Halo</span>
       </a>
 
-      <nav class="site-nav" aria-label="Sections">
+      <nav class="site-nav" aria-label="Page">
         <a href="#product">Product</a>
         <a href="#runtime">Runtime</a>
-        <a href="#notebook">Notebook</a>
-        <a href="#local">Local-first</a>
-        <a href="#roadmap">Roadmap</a>
+        <a href="#workspace">Workspace</a>
+        <a href="#local-ai">Local AI</a>
+        <a href="#devices">Devices</a>
       </nav>
 
       <div class="header-actions">
-        <div class="theme-switch" role="group" aria-label="Theme">
-          <button class="theme-option" type="button" data-mode="system" aria-pressed="true">System</button>
-          <button class="theme-option" type="button" data-mode="light" aria-pressed="false">Light</button>
-          <button class="theme-option" type="button" data-mode="dark" aria-pressed="false">Dark</button>
+        <div class="theme-switch" role="group" aria-label="Color theme">
+          <button type="button" data-theme-mode="system" aria-pressed="true">System</button>
+          <button type="button" data-theme-mode="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme-mode="dark" aria-pressed="false">Dark</button>
         </div>
-        <a class="button button--primary header-github" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="header-link" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-grid-bg" aria-hidden="true"></div>
-      <div class="container hero-layout">
-        <div class="hero-copy hero-enter">
-          <div class="eyebrow"><span class="status-dot"></span> Open source · Active development</div>
-          <h1>One runtime.<br /><span>Every surface.</span></h1>
+      <div class="container hero-grid">
+        <div class="hero-copy intro-enter">
+          <p class="kicker">OPEN SOURCE · ANDROID FIRST · LOCAL FIRST</p>
+          <h1>One runtime.<br />Any surface.</h1>
           <p class="hero-lede">
-            Halo turns your Android phone into a complete personal AI host, then lets models,
-            workspaces and devices join by capability — without making any one of them the product.
+            Halo is a personal cognitive runtime, not a wrapper around one model or one device.
+            The Android host can run local inference, keep a persistent workspace, act through
+            system capabilities and extend the same interaction to connected hardware.
           </p>
-          <div class="hero-proof" aria-label="Halo principles">
-            <span>Local-first</span><span>No Halo account</span><span>No required cloud</span><span>Model-independent</span>
-          </div>
           <div class="hero-actions">
-            <a class="button button--primary button--large" href="#product">See Halo working</a>
-            <a class="button button--large" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Explore the code</a>
+            <a class="button button--dark" href="#product">See the product</a>
+            <a class="button" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">View source ↗</a>
           </div>
+          <dl class="hero-facts">
+            <div><dt>HOST</dt><dd>Android</dd></div>
+            <div><dt>DEFAULT LOCAL AI</dt><dd>LiteRT-LM</dd></div>
+            <div><dt>WORKSPACE</dt><dd>Notebook</dd></div>
+            <div><dt>DEVICE MODEL</dt><dd>Capabilities</dd></div>
+          </dl>
         </div>
 
-        <div class="signal-lab hero-enter" style="--enter-delay:120ms">
-          <div class="signal-field">
-            <button class="capability-chip cap-phone" type="button" data-capability="phone" data-signal="ready" aria-pressed="true">
-              <span class="halo-glyph" data-glyph="phone" aria-hidden="true"></span>
-              <span><b>Phone</b><small>host</small></span>
-            </button>
-            <button class="capability-chip cap-glasses" type="button" data-capability="glasses" data-signal="listening" aria-pressed="false">
-              <span class="halo-glyph" data-glyph="glasses" aria-hidden="true"></span>
-              <span><b>Glasses</b><small>audio · vision</small></span>
-            </button>
-            <button class="capability-chip cap-notebook" type="button" data-capability="notebook" data-signal="acting" aria-pressed="false">
-              <span class="halo-glyph" data-glyph="note" aria-hidden="true"></span>
-              <span><b>Notebook</b><small>workspace</small></span>
-            </button>
-            <button class="capability-chip cap-model" type="button" data-capability="model" data-signal="thinking" aria-pressed="false">
-              <span class="halo-glyph" data-glyph="model" aria-hidden="true"></span>
-              <span><b>Model</b><small>replaceable</small></span>
-            </button>
-
-            <div class="signal-face signal-face--hero" id="hero-signal" data-state="ready" role="img" aria-label="Halo Signal Face, Ready">
-              <div class="signal-glow"></div>
-              <div class="signal-ring"></div>
-              <div class="signal-display">
-                <span class="halo-glyph signal-glyph" data-glyph="halo" aria-hidden="true"></span>
-              </div>
-            </div>
+        <figure class="hero-shot shot-reveal intro-enter" style="--intro-delay:120ms">
+          <div class="shot-frame">
+            <img src="assets/screens/home.svg" width="430" height="932" alt="Halo Android Home screen showing the Signal Face, Ready state and Ask Halo composer." />
           </div>
-
-          <div class="signal-console">
-            <div class="state-rail" role="group" aria-label="Halo runtime state">
-              <button type="button" data-state="ready" aria-pressed="true">Ready</button>
-              <button type="button" data-state="listening" aria-pressed="false">Listening</button>
-              <button type="button" data-state="thinking" aria-pressed="false">Thinking</button>
-              <button type="button" data-state="acting" aria-pressed="false">Acting</button>
-              <button type="button" data-state="speaking" aria-pressed="false">Responding</button>
-            </div>
-            <p class="signal-trace mono" id="signal-trace" aria-live="polite">runtime settled · waiting for explicit input</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container hero-system-strip hero-enter" style="--enter-delay:220ms">
-        <div><span class="micro-label">HOST</span><strong>Android</strong><small>complete assistant</small></div>
-        <div><span class="micro-label">DEFAULT AI</span><strong>llama.cpp</strong><small>on-device GGUF</small></div>
-        <div><span class="micro-label">WORKSPACE</span><strong>Notebook</strong><small>persistent & offline</small></div>
-        <div><span class="micro-label">DEVICE MODEL</span><strong>Capabilities</strong><small>not logos</small></div>
+          <figcaption>
+            <span>ANDROID HOST</span>
+            <small>Current-source reconstruction · staged content</small>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section product-section" id="product">
+    <section class="section product" id="product">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-index mono">01 / PRODUCT</span>
-          <h2>Your phone is not a remote control.<br />It is the first Halo host.</h2>
-          <p>No wearable required. The Android app can listen, reason, act, keep context and continue work on its own. Connected hardware extends that runtime.</p>
+        <header class="section-head reveal">
+          <p class="section-label">01 · PRODUCT</p>
+          <h2>A real Android host.<br />Not a wearable companion screen.</h2>
+          <p>
+            The product starts on the phone. Wearables and physical devices extend its reach;
+            they do not own the intelligence, workspace or runtime.
+          </p>
+        </header>
+
+        <div class="screen-gallery">
+          <figure class="screen-card screen-card--large shot-reveal">
+            <img src="assets/screens/home.svg" width="430" height="932" alt="Halo Home screen." />
+            <figcaption><b>Home</b><span>Presence, conversation, context and voice/text entry.</span></figcaption>
+          </figure>
+
+          <figure class="screen-card shot-reveal">
+            <img loading="lazy" src="assets/screens/notebook.svg" width="430" height="932" alt="Halo Notebook screen." />
+            <figcaption><b>Notebook</b><span>Search, context, collections, canvases and persistent work.</span></figcaption>
+          </figure>
+
+          <figure class="screen-card shot-reveal">
+            <img loading="lazy" src="assets/screens/intelligence.svg" width="430" height="932" alt="Halo Intelligence screen showing LiteRT, Ollama and OpenRouter providers." />
+            <figcaption><b>Intelligence</b><span>LiteRT on-device by default; LAN and cloud stay optional.</span></figcaption>
+          </figure>
+
+          <figure class="screen-card shot-reveal">
+            <img loading="lazy" src="assets/screens/devices.svg" width="430" height="932" alt="Halo Devices screen showing phone host, glasses and BuddyBot." />
+            <figcaption><b>Devices</b><span>Saved hardware, live capabilities and active resource state.</span></figcaption>
+          </figure>
         </div>
 
-        <div class="product-stage">
-          <div class="product-shell reveal">
-            <div class="screen-switch" role="group" aria-label="Preview Halo app surface">
-              <button type="button" data-screen-target="home" aria-pressed="true">Home</button>
-              <button type="button" data-screen-target="notebook" aria-pressed="false">Notebook</button>
-              <button type="button" data-screen-target="devices" aria-pressed="false">Devices</button>
-            </div>
-
-            <div class="phone-frame" data-tilt>
-              <div class="phone-speaker" aria-hidden="true"></div>
-              <div class="phone-screen">
-                <div class="app-screen" id="mock-home" data-screen="home">
-                  <div class="mock-header">
-                    <div><h3>Halo</h3></div>
-                  </div>
-
-                  <div class="home-presence">
-                    <div class="signal-face signal-face--app" id="app-signal" data-state="ready" role="img" aria-label="Halo Signal Face, Ready">
-                      <div class="signal-glow"></div>
-                      <div class="signal-ring"></div>
-                      <div class="signal-display">
-                        <span class="halo-glyph signal-glyph" data-glyph="halo" aria-hidden="true"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="home-state">Ready</div>
-                  <p class="home-sub">Tap the presence or use the composer</p>
-                  <p class="context-line mono">Context · 2</p>
-                  <button class="mock-text-button" type="button" tabindex="-1">More</button>
-
-                  <div class="mock-response">
-                    <span class="micro-label">RECENT</span>
-                    <p>Continue from the two notes currently in context.</p>
-                  </div>
-
-                  <div class="mock-composer">
-                    <span class="halo-glyph" data-glyph="listen" aria-hidden="true"></span>
-                    <span>Ask Halo…</span>
-                    <span class="send-mark">↗</span>
-                  </div>
-
-                  <div class="mock-nav" aria-hidden="true">
-                    <span class="on"><i class="halo-glyph" data-glyph="home"></i><small>Home</small></span>
-                    <span><i class="halo-glyph" data-glyph="activity"></i><small>Activity</small></span>
-                    <span><i class="halo-glyph" data-glyph="note"></i><small>Notebook</small></span>
-                    <span><i class="halo-glyph" data-glyph="device"></i><small>Devices</small></span>
-                    <span><i class="halo-glyph" data-glyph="settings"></i><small>Settings</small></span>
-                  </div>
-                </div>
-
-                <div class="app-screen" id="mock-notebook" data-screen="notebook" hidden>
-                  <div class="mock-header mock-header--action">
-                    <div><h3>Notebook</h3><p>Your workspace</p></div>
-                    <button type="button" tabindex="-1">New</button>
-                  </div>
-                  <div class="context-control">
-                    <span class="halo-glyph" data-glyph="halo" aria-hidden="true"></span>
-                    <span>In Halo's context · 2</span>
-                    <small>In development</small>
-                  </div>
-                  <div class="mock-search"><span class="halo-glyph" data-glyph="search" aria-hidden="true"></span><span>Search Notebook</span></div>
-                  <div class="filter-row">
-                    <span class="on">All</span><span>Notes</span><span>Files</span><span>Chats</span><span>Memory</span><span>Inbox</span>
-                  </div>
-                  <div class="object-list">
-                    <div class="object-row">
-                      <span class="object-mark"><i class="halo-glyph" data-glyph="note"></i></span>
-                      <span><b>Halo interface notes</b><small>Use the Signal Face as the single runtime identity.</small></span>
-                      <em>Add</em>
-                    </div>
-                    <div class="object-row">
-                      <span class="object-mark"><i class="halo-glyph" data-glyph="note"></i></span>
-                      <span><b>Lightbox redesign</b><small>Working notes · edited recently</small></span>
-                      <em>Remove</em>
-                    </div>
-                    <div class="object-row">
-                      <span class="object-mark"><i class="halo-glyph" data-glyph="conversation"></i></span>
-                      <span><b>Runtime architecture</b><small>Conversation · local provider</small></span>
-                      <em>Add</em>
-                    </div>
-                  </div>
-
-                  <div class="mock-nav" aria-hidden="true">
-                    <span><i class="halo-glyph" data-glyph="home"></i><small>Home</small></span>
-                    <span><i class="halo-glyph" data-glyph="activity"></i><small>Activity</small></span>
-                    <span class="on"><i class="halo-glyph" data-glyph="note"></i><small>Notebook</small></span>
-                    <span><i class="halo-glyph" data-glyph="device"></i><small>Devices</small></span>
-                    <span><i class="halo-glyph" data-glyph="settings"></i><small>Settings</small></span>
-                  </div>
-                </div>
-
-                <div class="app-screen" id="mock-devices" data-screen="devices" hidden>
-                  <div class="mock-header mock-header--action">
-                    <div><h3>Devices</h3><p>Connected hardware and saved sessions.</p></div>
-                    <button class="square-action" type="button" tabindex="-1">+</button>
-                  </div>
-
-                  <p class="mock-group-title">Connected</p>
-                  <div class="device-card">
-                    <span class="device-icon"><i class="halo-glyph" data-glyph="glasses"></i></span>
-                    <div class="device-main">
-                      <b>HeyCyan glasses</b>
-                      <span><i class="connection-dot"></i> Connected</span>
-                    </div>
-                    <span class="chevron">›</span>
-                    <div class="device-meta"><span>Battery<b>Live</b></span><span>Seen<b>Now</b></span><span>Auto<b>On</b></span></div>
-                  </div>
-
-                  <p class="mock-group-title">Saved</p>
-                  <div class="device-card">
-                    <span class="device-icon"><i class="halo-glyph" data-glyph="robot"></i></span>
-                    <div class="device-main">
-                      <b>BuddyBot</b>
-                      <span><i class="connection-dot muted"></i> Saved session</span>
-                    </div>
-                    <span class="chevron">›</span>
-                    <div class="device-meta"><span>Battery<b>—</b></span><span>Seen<b>Saved</b></span><span>Auto<b>Off</b></span></div>
-                  </div>
-
-                  <div class="mock-nav" aria-hidden="true">
-                    <span><i class="halo-glyph" data-glyph="home"></i><small>Home</small></span>
-                    <span><i class="halo-glyph" data-glyph="activity"></i><small>Activity</small></span>
-                    <span><i class="halo-glyph" data-glyph="note"></i><small>Notebook</small></span>
-                    <span class="on"><i class="halo-glyph" data-glyph="device"></i><small>Devices</small></span>
-                    <span><i class="halo-glyph" data-glyph="settings"></i><small>Settings</small></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p class="mock-caption">Reconstructed from the current Android source. Content is staged; it is not live device telemetry.</p>
-          </div>
-
-          <div class="route-panel reveal" style="--reveal-delay:100ms">
-            <div class="route-panel-head">
-              <span class="micro-label">INTERACTION ROUTE</span>
-              <span class="semantic-note mono">semantic trace · not telemetry</span>
-            </div>
-            <div class="scenario-switch" role="group" aria-label="Choose an interaction route">
-              <button type="button" data-scenario="phone" aria-pressed="true">Phone <small class="status status--current">Current</small></button>
-              <button type="button" data-scenario="glasses" aria-pressed="false">Glasses <small class="status status--development">In development</small></button>
-              <button type="button" data-scenario="capture" aria-pressed="false">Capture <small class="status status--development">In development</small></button>
-            </div>
-            <h3 id="scenario-title">Ask on the phone</h3>
-            <p id="scenario-copy">Explicit input enters the Android host, uses the selected provider, and returns to the same surface.</p>
-            <div class="route-flow" id="route-flow" aria-live="polite"></div>
-            <pre class="semantic-trace mono" id="semantic-trace">INPUT    phone
-SPEECH   local recognition
-REASON   selected provider
-OUTPUT   phone</pre>
-          </div>
-        </div>
+        <p class="asset-note reveal">
+          The repository does not yet contain committed emulator/device captures for these screens.
+          These are static screenshot assets reconstructed from the current Compose source—not interactive HTML mockups.
+        </p>
       </div>
     </section>
 
-    <section class="section runtime-section" id="runtime">
+    <section class="section runtime" id="runtime">
       <div class="container">
-        <div class="runtime-heading reveal">
-          <span class="section-index mono">02 / RUNTIME</span>
-          <h2>The runtime stays.<br />Surfaces change.</h2>
-          <p>Models are replaceable. Devices can appear and disappear. Halo keeps the interaction model, workspace, routing and action truth coherent between them.</p>
-        </div>
+        <header class="section-head section-head--dark reveal">
+          <p class="section-label">02 · RUNTIME</p>
+          <h2>The model is replaceable.<br />The runtime isn't.</h2>
+          <p>
+            Speech, context assembly, provider routing, tools, approvals, resource arbitration,
+            device capabilities and action truth stay above individual models and hardware.
+          </p>
+        </header>
 
-        <div class="runtime-board reveal">
-          <div class="runtime-endpoint endpoint-phone">
-            <span class="endpoint-icon"><i class="halo-glyph" data-glyph="phone"></i></span>
-            <b>Phone</b><small>host · display · audio · compute</small>
+        <div class="runtime-flow reveal" data-runtime-flow>
+          <div class="runtime-step">
+            <span class="runtime-index">01</span>
+            <div><b>Observe</b><small>voice · text · image · device event</small></div>
           </div>
-          <div class="runtime-endpoint endpoint-glasses">
-            <span class="endpoint-icon"><i class="halo-glyph" data-glyph="glasses"></i></span>
-            <b>Glasses</b><small>camera · mic · speaker · controls</small>
+          <span class="runtime-link" aria-hidden="true"></span>
+          <div class="runtime-step">
+            <span class="runtime-index">02</span>
+            <div><b>Assemble</b><small>conversation · workspace · policy · origin</small></div>
           </div>
-          <div class="runtime-endpoint endpoint-workspace">
-            <span class="endpoint-icon"><i class="halo-glyph" data-glyph="note"></i></span>
-            <b>Notebook</b><small>persistent work · context</small>
+          <span class="runtime-link" aria-hidden="true"></span>
+          <div class="runtime-step runtime-step--core">
+            <span class="signal-mini" aria-hidden="true"></span>
+            <div><b>Halo Runtime</b><small>reason · plan · authorize · coordinate</small></div>
           </div>
-          <div class="runtime-endpoint endpoint-robot">
-            <span class="endpoint-icon"><i class="halo-glyph" data-glyph="robot"></i></span>
-            <b>Embodiment</b><small>capabilities · safety · telemetry</small>
+          <span class="runtime-link" aria-hidden="true"></span>
+          <div class="runtime-step">
+            <span class="runtime-index">04</span>
+            <div><b>Execute</b><small>host tools · device tools · resources</small></div>
           </div>
-
-          <div class="runtime-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-
-          <div class="runtime-core">
-            <div class="signal-face signal-face--runtime" data-state="thinking" role="img" aria-label="Halo runtime">
-              <div class="signal-glow"></div>
-              <div class="signal-ring"></div>
-              <div class="signal-display"><span class="halo-glyph signal-glyph" data-glyph="halo"></span></div>
-            </div>
-            <strong>HALO RUNTIME</strong>
-            <div class="runtime-core-grid mono">
-              <span>OBSERVE</span><span>UNDERSTAND</span><span>REASON</span><span>ACT</span><span>VERIFY</span>
-            </div>
+          <span class="runtime-link" aria-hidden="true"></span>
+          <div class="runtime-step">
+            <span class="runtime-index">05</span>
+            <div><b>Verify</b><small>completed · failed · rejected · unknown</small></div>
           </div>
         </div>
 
-        <div class="runtime-principles reveal">
-          <div><b>Host-native</b><p>Android is first, not permanent. Runtime contracts stay portable.</p></div>
-          <div><b>Capability-driven</b><p>A microphone is a microphone whether it lives on a phone, glasses or earbuds.</p></div>
-          <div><b>Truthful actions</b><p>Requested, authorized, completed and unknown are different states — and Halo keeps them different.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section notebook-section" id="notebook">
-      <div class="container notebook-layout">
-        <div class="section-heading reveal">
-          <span class="section-index mono">03 / NOTEBOOK</span>
-          <h2>Context you can see,<br />not hidden memory magic.</h2>
-          <p>Notebook is a real workspace first: persisted notes, search and lifecycle flows work without an AI provider. Context selection is visible while the broader memory/provenance system continues to mature.</p>
-          <div class="maturity-list">
-            <span><i class="status status--current">Current</i> Notes · search · Inbox · archive / trash</span>
-            <span><i class="status status--development">In development</i> Working Set / context integration</span>
-            <span><i class="status status--planned">Planned</i> Durable cognitive memory + provenance</span>
-          </div>
-        </div>
-
-        <div class="workspace-window reveal" style="--reveal-delay:100ms">
-          <div class="workspace-topbar">
-            <span><i class="halo-glyph" data-glyph="note"></i> Notebook</span>
-            <span class="mono">LOCAL WORKSPACE</span>
-          </div>
-          <div class="workspace-body">
-            <aside class="working-set">
-              <div class="working-set-head"><span class="halo-glyph" data-glyph="halo"></span><b>In Halo's context</b><em>2</em></div>
-              <button class="context-item selected" type="button" aria-pressed="true"><span class="halo-glyph" data-glyph="note"></span><span>Halo interface notes<small>selected</small></span></button>
-              <button class="context-item selected" type="button"><span class="halo-glyph" data-glyph="note"></span><span>Runtime architecture<small>selected</small></span></button>
-              <button class="context-item" type="button" aria-pressed="false"><span class="halo-glyph" data-glyph="file"></span><span>Protocol notes<small>available</small></span></button>
-            </aside>
-            <article class="workspace-document">
-              <span class="micro-label">NOTE</span>
-              <h3>Halo interface notes</h3>
-              <p class="document-meta mono">LOCAL · AUTOSAVED</p>
-              <p>The Signal Face is the single visual identity for runtime state. Pixel glyphs carry the same meaning into navigation, devices and compact surfaces.</p>
-              <div class="document-rule"></div>
-              <p><b>Principle:</b> a surface may disappear. The runtime and the user's work should not.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section local-section" id="local">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-index mono">04 / LOCAL-FIRST</span>
-          <h2>Local is the default path.<br />Network is an explicit capability.</h2>
-          <p>Halo does not require a Halo cloud or Halo account. Native llama.cpp is the clean-install inference path; LAN or cloud providers remain user-selected options.</p>
-        </div>
-
-        <div class="local-grid">
-          <div class="local-stack reveal">
-            <div class="stack-label mono">YOUR PHONE</div>
-            <div class="stack-node stack-node--primary"><span class="halo-glyph" data-glyph="phone"></span><span><b>Halo Android host</b><small>runtime · UI · speech · tools</small></span></div>
-            <div class="stack-link"></div>
-            <div class="stack-node"><span class="halo-glyph" data-glyph="local"></span><span><b>Native llama.cpp</b><small>default local inference</small></span><em class="status status--current">Default</em></div>
-            <div class="stack-link"></div>
-            <div class="stack-node"><span class="halo-glyph" data-glyph="note"></span><span><b>Notebook</b><small>persistent local workspace</small></span></div>
-            <div class="optional-edge"><span>OPTIONAL · USER CONFIGURED</span></div>
-            <div class="optional-providers">
-              <div><span class="halo-glyph" data-glyph="device"></span><b>Ollama</b><small>LAN</small></div>
-              <div><span class="halo-glyph" data-glyph="cloud"></span><b>OpenRouter</b><small>remote</small></div>
-            </div>
-          </div>
-
-          <div class="continuity-card reveal" style="--reveal-delay:100ms">
-            <span class="micro-label">INTERACTION-ORIGIN CONTINUITY</span>
-            <h3>Answers prefer the surface where the interaction began.</h3>
-            <p>Toggle capabilities and watch Halo choose an explicit route rather than silently pretending the original surface still exists.</p>
-            <div class="continuity-controls">
-              <button type="button" data-cap="glasses-mic" aria-pressed="true" aria-controls="continuity-route"><span class="switch-dot"></span>Glasses microphone</button>
-              <button type="button" data-cap="glasses-speaker" aria-pressed="true" aria-controls="continuity-route"><span class="switch-dot"></span>Glasses speaker</button>
-              <button type="button" data-cap="earbuds" aria-pressed="false" aria-controls="continuity-route"><span class="switch-dot"></span>Earbuds fallback</button>
-            </div>
-            <div class="continuity-route" id="continuity-route" aria-live="polite"></div>
-            <p class="continuity-status mono" id="continuity-status" aria-live="polite"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section roadmap-section" id="roadmap">
-      <div class="container">
-        <div class="roadmap-heading reveal">
-          <span class="section-index mono">05 / DIRECTION</span>
-          <h2>Phone first.<br />Runtime everywhere.</h2>
-          <p>The product is deliberately staged. The website should make that boundary visible rather than making tomorrow look shipped today.</p>
-        </div>
-
-        <div class="horizon reveal">
-          <article class="horizon-card horizon-card--now">
-            <span class="horizon-label">NOW</span>
-            <span class="horizon-glyph"><i class="halo-glyph" data-glyph="phone"></i></span>
-            <h3>Android host</h3>
-            <p>Voice/text interaction, local provider path, Notebook, device management, runtime actions and diagnostics.</p>
+        <div class="runtime-evidence reveal">
+          <article>
+            <span>PORTABLE CONTRACTS</span>
+            <h3>Capabilities, not brand checks.</h3>
+            <p>Tools declare semantic requirements. Phones, glasses, watches and robots publish what they can actually do.</p>
           </article>
-          <article class="horizon-card">
-            <span class="horizon-label">NEXT</span>
-            <span class="horizon-glyph"><i class="halo-glyph" data-glyph="glasses"></i></span>
-            <h3>Wearable continuity</h3>
-            <p>Generalized wearable capabilities, stronger hardware acceptance, durable context and reliable assistant actions.</p>
+          <article>
+            <span>DURABLE EXECUTION</span>
+            <h3>Action truth survives the UI.</h3>
+            <p>Approvals and tool outcomes are journaled so a hidden surface, restart or retry does not rewrite what actually happened.</p>
           </article>
-          <article class="horizon-card">
-            <span class="horizon-label">LATER</span>
-            <span class="horizon-glyph"><i class="halo-glyph" data-glyph="device"></i></span>
-            <h3>More hosts</h3>
-            <p>Linux, Windows and broader physical embodiments without redesigning the runtime around any one host.</p>
+          <article>
+            <span>RESOURCE OWNERSHIP</span>
+            <h3>One camera. One microphone. Explicit arbitration.</h3>
+            <p>The runtime coordinates scarce host and wearable resources instead of letting features silently fight over them.</p>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="experimental-strip reveal">
-          <span class="experimental-icon"><i class="halo-glyph" data-glyph="robot"></i></span>
-          <div><span class="status status--experimental">Experimental</span><h3>Embodiment</h3><p>BuddyBot remains a physical Halo host track — useful for proving capability, safety and action contracts without redefining Halo as a robot project.</p></div>
-          <span class="mono">HALO → SAFETY → HARDWARE</span>
+    <section class="section workspace" id="workspace">
+      <div class="container workspace-grid">
+        <div class="workspace-copy reveal">
+          <p class="section-label">03 · NOTEBOOK</p>
+          <h2>The workspace is becoming first-class.</h2>
+          <p>
+            Notebook is no longer just a notes list. Current source now includes structured note
+            blocks, file attachments, collections, favorites and a real freeform Canvas editor.
+          </p>
+
+          <div class="status-line">
+            <span class="status-dot status-dot--source"></span>
+            <b>Implemented in source</b>
+            <small>device/accessibility acceptance still pending</small>
+          </div>
+
+          <ul class="feature-list">
+            <li><b>Structured notes</b><span>paragraphs, headings, checklists and attachment-aware editing</span></li>
+            <li><b>Collections + favorites</b><span>organization without turning Notebook into a hidden memory store</span></li>
+            <li><b>Canvas</b><span>pan, zoom, move and edit spatial text nodes</span></li>
+            <li><b>Working context</b><span>explicitly selected material remains visible to the user</span></li>
+          </ul>
         </div>
 
-        <div class="cta reveal">
+        <div class="workspace-assets">
+          <figure class="workspace-shot workspace-shot--canvas shot-reveal">
+            <img loading="lazy" src="assets/screens/canvas.svg" width="430" height="932" alt="Halo Canvas editor screenshot reconstruction." />
+            <figcaption>Canvas editor</figcaption>
+          </figure>
+          <figure class="workspace-shot workspace-shot--notebook shot-reveal">
+            <img loading="lazy" src="assets/screens/notebook.svg" width="430" height="932" alt="Halo Notebook screenshot reconstruction." />
+            <figcaption>Notebook</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section local-ai" id="local-ai">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label">04 · LOCAL AI</p>
+          <h2>On-device is the default.<br />Network access is explicit.</h2>
+          <p>
+            Halo's embedded local provider now uses LiteRT-LM.
+            The clean-install path is a packaged <code>.litertlm</code> model with GPU→CPU fallback.
+          </p>
+        </header>
+
+        <div class="provider-table reveal">
+          <div class="provider-row provider-row--head">
+            <span>Provider</span><span>Where it runs</span><span>Role</span><span>Network</span>
+          </div>
+          <div class="provider-row provider-row--primary">
+            <span><b>LiteRT-LM</b><small>provider.litert.local</small></span>
+            <span>Android host</span>
+            <span>Default on-device inference</span>
+            <span>Not required</span>
+          </div>
+          <div class="provider-row">
+            <span><b>Ollama</b><small>optional</small></span>
+            <span>Local network host</span>
+            <span>LAN inference</span>
+            <span>LAN</span>
+          </div>
+          <div class="provider-row">
+            <span><b>OpenRouter</b><small>optional</small></span>
+            <span>Remote provider</span>
+            <span>Cloud model access</span>
+            <span>Internet</span>
+          </div>
+        </div>
+
+        <div class="local-note reveal">
+          <span class="signal-mini signal-mini--small" aria-hidden="true"></span>
+          <p><b>No silent provider substitution.</b> The selected provider is part of the interaction contract; local-only policy remains explicit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section devices" id="devices">
+      <div class="container devices-grid">
+        <header class="section-head reveal">
+          <p class="section-label">05 · DEVICES</p>
+          <h2>Same runtime.<br />Different endpoints.</h2>
+          <p>
+            A connected device contributes capabilities and resources. Interaction origin is preserved:
+            start on glasses, and Halo prefers to answer through glasses when that route is actually available.
+          </p>
+        </header>
+
+        <div class="device-matrix reveal">
+          <div class="device-matrix-head">
+            <span>Endpoint</span><span>Input</span><span>Output</span><span>Other capabilities</span><span>Status</span>
+          </div>
           <div>
-            <span class="micro-label">BUILD IN THE OPEN</span>
-            <h2>Halo is early enough to shape.</h2>
-            <p>Read the architecture, inspect the runtime and follow the implementation as it moves from source-complete paths to real-device acceptance.</p>
+            <b>Android phone</b><span>mic · text · camera</span><span>display · speaker</span><span>compute · apps · system tools</span><em>Host</em>
           </div>
-          <div class="cta-actions">
-            <a class="button button--primary button--large" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Open Halo on GitHub ↗</a>
-            <a class="button button--large" href="https://github.com/slafftrosheen/Halo/tree/main/docs" target="_blank" rel="noopener">Read the docs</a>
+          <div>
+            <b>HeyCyan glasses</b><span>mic · camera · controls</span><span>speaker</span><span>wear state · media</span><em>Integration</em>
+          </div>
+          <div>
+            <b>Earbuds / headset</b><span>mic · controls</span><span>speaker</span><span>audio route</span><em>Capability path</em>
+          </div>
+          <div>
+            <b>BuddyBot</b><span>telemetry</span><span>physical action</span><span>motion · sensors</span><em>Experimental</em>
+          </div>
+        </div>
+
+        <div class="origin-rule reveal">
+          <span class="origin-label">ORIGIN RULE</span>
+          <div class="origin-flow">
+            <span>Glasses microphone</span><i>→</i><span>Halo Runtime</span><i>→</i><span>Selected provider</span><i>→</i><span>Glasses speaker</span>
+          </div>
+          <p>Fallback happens only when the preferred output capability is unavailable—and should be visible rather than silent.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section direction" id="direction">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label">06 · DIRECTION</p>
+          <h2>Android is the first host.<br />The runtime is the product.</h2>
+        </header>
+
+        <div class="direction-grid reveal">
+          <article>
+            <span>NOW</span>
+            <h3>Make the Android host undeniable.</h3>
+            <p>System assistant, LiteRT local inference, Notebook workspace, device fabric, tools and hardware acceptance.</p>
+          </article>
+          <article>
+            <span>NEXT</span>
+            <h3>Finish continuity across real hardware.</h3>
+            <p>Wearable audio/output acceptance, richer multimodal flows, durable context and broader device capability profiles.</p>
+          </article>
+          <article>
+            <span>LATER</span>
+            <h3>Move the same runtime to more hosts.</h3>
+            <p>Linux, Windows and dedicated compute without rebuilding the cognitive layer around a new platform.</p>
+          </article>
+        </div>
+
+        <div class="closing reveal">
+          <div>
+            <p class="section-label">BUILD IN THE OPEN</p>
+            <h2>Halo is early, but the architecture is already real.</h2>
+            <p>Read the source, current-state ledger and design documents. Claims on this page intentionally distinguish source presence from physical acceptance.</p>
+          </div>
+          <div class="closing-actions">
+            <a class="button button--light" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Open GitHub ↗</a>
+            <a class="button button--ghost-dark" href="https://github.com/slafftrosheen/Halo/tree/main/docs" target="_blank" rel="noopener">Read docs</a>
           </div>
         </div>
       </div>
@@ -460,15 +370,13 @@ OUTPUT   phone</pre>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <span class="footer-brand"><span class="halo-glyph" data-glyph="halo" aria-hidden="true"></span> Halo</span>
-      <span>Open source · Local-first · No Halo account required</span>
+    <div class="container footer-inner">
+      <span class="footer-brand"><span class="signal-mini signal-mini--micro" aria-hidden="true"></span> Halo</span>
+      <span>Open source · local-first · no Halo account required</span>
       <a href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
   </footer>
 
-  <script src="js/presence.js?v=5" defer></script>
-  <script src="js/interactions.js?v=5" defer></script>
-  <script src="js/main.js?v=5" defer></script>
+  <script src="js/main.js?v=6" defer></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932" role="img" aria-label="Halo Intelligence screen">
+<rect width="430" height="932" fill="#F7F8FC"/>
+<style>
+text{font-family:Inter,Arial,sans-serif;fill:#182033}.muted{fill:#70798B}.micro{fill:#9299A8;font-size:10px;letter-spacing:.08em}.label{font-size:12px;font-weight:600}.small{font-size:11px}.body{font-size:13px}.title{font-size:27px;font-weight:700;letter-spacing:-.7px}.h2{font-size:17px;font-weight:700}.line{stroke:#E1E5EC;stroke-width:1}.surface{fill:#FFFFFF;stroke:#E0E4EC}.soft{fill:#EEF1F6}.blue{fill:#5B8DEF}.mint{fill:#A6EBD8}.lilac{fill:#D5C8FF}.yellow{fill:#F7DFA3}.graphite{fill:#20242A}.nav{font-size:8px;fill:#8B93A2}
+</style>
+
+<text x="20" y="27" class="micro">10:49</text><text x="410" y="27" text-anchor="end" class="micro">5G  86%</text>
+<text x="22" y="78" class="title">Intelligence</text><text x="22" y="101" class="body muted">Models, providers and inference activity</text>
+<text x="22" y="145" class="micro">ACTIVE PROVIDER</text>
+<rect x="22" y="160" width="386" height="104" rx="18" class="surface"/>
+<circle cx="56" cy="195" r="18" fill="#20242A"/><text x="56" y="200" text-anchor="middle" style="font-size:12px;fill:#fff;font-weight:700">L</text>
+<text x="88" y="189" class="label">LiteRT · On-device</text><text x="88" y="211" class="small muted">Embedded local inference</text><rect x="322" y="181" width="66" height="27" rx="14" fill="#E7F7F2"/><text x="355" y="199" text-anchor="middle" class="micro" style="fill:#2A765E">READY</text>
+<text x="40" y="242" class="small muted">Qwen3 0.6B Dynamic INT4</text>
+<text x="22" y="306" class="micro">PROVIDERS & ACCESS</text>
+<rect x="22" y="322" width="386" height="62" rx="15" class="surface"/><text x="40" y="347" class="label">LiteRT</text><text x="40" y="367" class="small muted">Default · on-device</text><text x="390" y="356" text-anchor="end" class="micro">Selected</text><rect x="22" y="394" width="386" height="62" rx="15" class="surface"/><text x="40" y="419" class="label">Ollama</text><text x="40" y="439" class="small muted">Optional · local network</text><text x="390" y="428" text-anchor="end" class="micro">LAN</text><rect x="22" y="466" width="386" height="62" rx="15" class="surface"/><text x="40" y="491" class="label">OpenRouter</text><text x="40" y="511" class="small muted">Optional · remote provider</text><text x="390" y="500" text-anchor="end" class="micro">Cloud</text>
+<text x="22" y="566" class="micro">MODELS</text>
+<rect x="22" y="581" width="386" height="48" rx="14" class="surface"/><text x="42" y="611" class="body muted">Search local, LAN and cloud models</text>
+<rect x="22" y="648" width="386" height="104" rx="18" class="surface"/>
+<text x="40" y="678" class="label">Qwen3 0.6B Dynamic INT4</text><text x="40" y="701" class="small muted">LiteRT · packaged model · on-device</text><rect x="326" y="670" width="62" height="25" rx="13" fill="#E7F7F2"/><text x="357" y="687" text-anchor="middle" class="micro" style="fill:#2A765E">ACTIVE</text>
+<text x="40" y="730" class="micro">GPU → CPU FALLBACK</text>
+
+<line x1="20" y1="860" x2="410" y2="860" class="line"/>
+<circle cx="43" cy="881" r="8" fill="#CAD0DA"/><text x="43" y="904" text-anchor="middle" class="nav" >Home</text><circle cx="125" cy="881" r="8" fill="#CAD0DA"/><text x="125" y="904" text-anchor="middle" class="nav" >Activity</text><circle cx="207" cy="881" r="8" fill="#CAD0DA"/><text x="207" y="904" text-anchor="middle" class="nav" >Notebook</text><circle cx="289" cy="881" r="8" fill="#CAD0DA"/><text x="289" y="904" text-anchor="middle" class="nav" >Devices</text><circle cx="371" cy="881" r="8" fill="#5B8DEF"/><text x="371" y="904" text-anchor="middle" class="nav" style="fill:#5B8DEF;font-weight:700">Settings</text>
+
+</svg>

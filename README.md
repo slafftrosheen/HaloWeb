@@ -1,75 +1,80 @@
 # HaloWeb
 
-Static landing page for [Halo](https://github.com/slafftrosheen/Halo), the open-source personal cognitive runtime.
+Public landing page for [Halo](https://github.com/slafftrosheen/Halo), the open-source local-first cognitive runtime.
 
-The site intentionally stays dependency-free: plain HTML, CSS and JavaScript, deployed directly on Vercel with no build step.
+HaloWeb is deliberately static: HTML, CSS, JavaScript and checked-in visual assets. No framework, package manager, analytics SDK, remote font or build step is required.
 
-## Current visual direction
+## Current direction
 
-HaloWeb follows the current Halo app identity introduced by RUNTIME/UI-024:
+The site is product-led rather than demo-led.
 
-- **Halo Signal Face** — semantic outer state halo + graphite OLED-style inner display
-- **HaloGlyph** — shared 16×16 pixel pictograms across navigation, devices and runtime surfaces
-- airy light workspace / charcoal dark companion themes
-- pastel color is semantic/accent color, not generic card decoration
-- bounded motion only: state transitions, interaction pulses and scroll entrances; no permanent web animation loop
+- typography and real product surfaces carry the page
+- every Android preview is a static screenshot asset under `assets/screens/`
+- no interactive HTML phone mockups
+- no floating capability toys or decorative dashboard cards
+- Halo's pastel palette is reserved for semantic Signal Face identity and small state accents
+- architecture sections use restrained graphite surfaces and hairline structure
+- motion is viewport-triggered and bounded: content reveal, screenshot mask reveal and one runtime-flow assembly
 
-The previous spatial-cell / pearl-orb web identity is intentionally retired.
+The screenshot assets are reconstructed from current Compose source because the Halo repository does not yet contain a committed set of emulator/device screen captures. Replace these files with native captures when those become available; the web layout intentionally treats them as ordinary image assets so that swap is trivial.
 
-## Page flow
+## Product source of truth
 
-1. **Hero** — "One runtime. Every surface." Interactive Signal Face and capability satellites.
-2. **Product** — faithful Android-host reconstruction (Home / Notebook / Devices) plus semantic interaction routes.
-3. **Runtime** — capability-driven runtime board showing stable runtime contracts around replaceable surfaces.
-4. **Notebook** — persistent workspace and visible context maturity, with current/in-development/planned boundaries.
-5. **Local-first** — native llama.cpp default path, optional network providers and interaction-origin routing.
-6. **Direction** — Now / Next / Later plus the experimental embodiment track.
-7. **CTA** — GitHub and project docs.
+Website UI/content is synchronized against the current Halo source, including:
 
-## Product-truth rules
+- `HomeScreen.kt`
+- `NotebookScreen.kt`
+- `CanvasEditorScreen.kt`
+- `NoteEditorScreen.kt`
+- `DevicesScreen.kt`
+- `IntelligenceScreen.kt`
+- `AppShell.kt`
+- `CURRENT-STATE.md`
+- design docs under `docs/03-design/`
 
-Halo changes quickly, so public claims are deliberately conservative.
+Current notable product changes reflected by HaloWeb:
 
-- UI depiction follows current source (HomeScreen.kt, NotebookScreen.kt, DevicesScreen.kt, AppShell.kt).
-- Maturity claims follow current-state / delivery documentation.
-- When code exists but full acceptance is incomplete, HaloWeb says **In development**.
-- No fabricated latency, benchmark, battery, receipt or success telemetry is shown.
-- HeyCyan is a reference hardware track, not the definition of Halo.
-- BuddyBot/robot embodiment is explicitly experimental.
-- Native llama.cpp is the clean-install/default inference path; Ollama and OpenRouter are optional configured providers.
-- No Halo account or Halo-operated cloud is required for the core local path.
+- Halo Signal Face + unified pixel glyph identity
+- embedded **LiteRT-LM** is the default clean-install local inference path
+- Ollama remains optional LAN inference
+- OpenRouter remains optional remote inference
+- Notebook now has source-level structured blocks, attachments, collections, favorites and Canvas support
+- Android is the first host; capability contracts are intended to remain host/device independent
+
+Source presence is not presented as physical acceptance. Hardware-dependent paths remain qualified where current Halo documentation says they require real-device validation.
 
 ## Structure
 
 ```text
 HaloWeb/
-├── index.html
-├── favicon.svg
-├── vercel.json
+├── assets/
+│   └── screens/
+│       ├── home.svg
+│       ├── notebook.svg
+│       ├── intelligence.svg
+│       ├── devices.svg
+│       └── canvas.svg
 ├── css/
 │   ├── tokens.css
 │   └── main.css
-└── js/
-    ├── presence.js      # Signal Face + 16×16 HaloGlyph renderer
-    ├── interactions.js  # routes, app surfaces, continuity, bounded reveals
-    └── main.js          # theme, scroll progress, active nav
+├── js/
+│   └── main.js
+├── favicon.svg
+├── index.html
+├── robots.txt
+├── sitemap.xml
+└── vercel.json
 ```
 
 ## Motion contract
 
-The website is deliberately quieter than a demo reel.
-
-- Signal Face state swap: bounded CSS transition
-- user-triggered Signal pulse: < 1 second
-- route animation: only after explicit scenario selection
-- scroll reveal: once per section
-- no idle requestAnimationFrame loop
-- prefers-reduced-motion collapses motion to static state changes
+- no permanent requestAnimationFrame loop
+- no pointer-tilt phone gimmicks
+- no hidden autoplay scenario carousel
+- one-shot scroll reveals only
+- one-shot runtime flow assembly
+- `prefers-reduced-motion` collapses all motion to static content
 
 ## Deployment
 
-vercel.json serves the repo root directly.
-
-There are no npm packages, runtime dependencies, analytics packages or external fonts.
-
-To preview locally, serve the repository root with any static HTTP server.
+The repository is served directly as a static site by Vercel.
