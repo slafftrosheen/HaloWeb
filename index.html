@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halo — a local-first cognitive runtime</title>
-  <meta name="description" content="Halo is an open-source cognitive runtime for Android: on-device LiteRT inference, a persistent Notebook workspace, system-assistant integration and capability-driven devices." />
+  <title>Halo — a local-first AI assistant and cognitive runtime</title>
+  <meta name="description" content="Halo is an open-source Android AI assistant and cognitive runtime: local LiteRT inference, phone actions, Notebook and Study, configurable providers, and capability-driven devices." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#F4F5F7" />
@@ -12,12 +12,12 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Halo" />
-  <meta property="og:title" content="Halo — a local-first cognitive runtime" />
-  <meta property="og:description" content="Android host. On-device AI. Persistent workspace. Capability-driven devices." />
+  <meta property="og:title" content="Halo — a local-first AI assistant and cognitive runtime" />
+  <meta property="og:description" content="Runs on Android, works locally, can act on the phone, keeps a workspace, and extends to connected devices." />
   <meta property="og:url" content="https://halo-web-blue.vercel.app/" />
   <meta name="twitter:card" content="summary" />
 
-  <link rel="icon" href="favicon.svg?v=3" type="image/svg+xml" />
+  <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml" />
   <script>
     (function () {
       try {
@@ -30,8 +30,8 @@
       } catch (_) {}
     })();
   </script>
-  <link rel="stylesheet" href="css/tokens.css?v=6" />
-  <link rel="stylesheet" href="css/main.css?v=6" />
+  <link rel="stylesheet" href="css/tokens.css?v=7" />
+  <link rel="stylesheet" href="css/main.css?v=7" />
 
   <script type="application/ld+json">
   {
@@ -40,7 +40,7 @@
     "name": "Halo",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Android",
-    "description": "Open-source local-first cognitive runtime and personal assistant host.",
+    "description": "Open-source local-first AI assistant and cognitive runtime.",
     "codeRepository": "https://github.com/slafftrosheen/Halo"
   }
   </script>
@@ -61,10 +61,11 @@
 
       <nav class="site-nav" aria-label="Page">
         <a href="#product">Product</a>
-        <a href="#runtime">Runtime</a>
+        <a href="#actions">Phone actions</a>
+        <a href="#ai">AI</a>
         <a href="#workspace">Workspace</a>
-        <a href="#local-ai">Local AI</a>
         <a href="#devices">Devices</a>
+        <a href="#status">Status</a>
       </nav>
 
       <div class="header-actions">
@@ -82,287 +83,419 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy intro-enter">
-          <p class="kicker">OPEN SOURCE · ANDROID FIRST · LOCAL FIRST</p>
-          <h1>One runtime.<br />Any surface.</h1>
+          <p class="kicker">OPEN SOURCE · ANDROID FIRST · LOCAL FIRST · ACTIVE DEVELOPMENT</p>
+          <h1>An AI assistant that actually lives on your phone.</h1>
           <p class="hero-lede">
-            Halo is a personal cognitive runtime, not a wrapper around one model or one device.
-            The Android host can run local inference, keep a persistent workspace, act through
-            system capabilities and extend the same interaction to connected hardware.
+            Halo is an open-source Android assistant and cognitive runtime. It can answer with an
+            on-device model, use real phone tools, work with your notes and study material, and extend
+            the same runtime to connected devices. No Halo account or mandatory cloud is required.
           </p>
           <div class="hero-actions">
-            <a class="button button--dark" href="#product">See the product</a>
+            <a class="button button--dark" href="#product">See what Halo does</a>
             <a class="button" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">View source ↗</a>
           </div>
           <dl class="hero-facts">
-            <div><dt>HOST</dt><dd>Android</dd></div>
-            <div><dt>DEFAULT LOCAL AI</dt><dd>LiteRT-LM</dd></div>
-            <div><dt>WORKSPACE</dt><dd>Notebook</dd></div>
-            <div><dt>DEVICE MODEL</dt><dd>Capabilities</dd></div>
+            <div><dt>WORKS WITHOUT WEARABLES</dt><dd>Phone is a complete host</dd></div>
+            <div><dt>LOCAL BY DEFAULT</dt><dd>LiteRT-LM + Qwen 3 0.6B</dd></div>
+            <div><dt>REAL ANDROID TOOLS</dt><dd>Actions, files, screen and system</dd></div>
+            <div><dt>YOUR PROVIDER CHOICE</dt><dd>Local, LAN or remote</dd></div>
           </dl>
         </div>
 
         <figure class="hero-shot shot-reveal intro-enter" style="--intro-delay:120ms">
           <div class="shot-frame">
-            <img src="assets/screens/home.svg" width="430" height="932" alt="Halo Android Home screen showing the Signal Face, Ready state and Ask Halo composer." />
+            <img src="assets/screens/home.svg" width="430" height="932" alt="Halo Home showing the Signal Face, Ready state, context and Ask Halo composer." />
           </div>
           <figcaption>
-            <span>ANDROID HOST</span>
-            <small>Current-source reconstruction · staged content</small>
+            <span>HALO HOME</span>
+            <small>Source-aligned UI capture · staged content</small>
           </figcaption>
         </figure>
+      </div>
+    </section>
+
+    <section class="plain-summary">
+      <div class="container summary-grid reveal">
+        <div>
+          <span>01</span>
+          <b>Use Halo on the phone by itself.</b>
+          <p>Voice, text, local AI, phone actions, Notebook and Study do not depend on smart glasses.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <b>Choose where your AI runs.</b>
+          <p>Keep inference on-device, use a machine on your LAN, or connect a remote provider explicitly.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <b>Add hardware as capabilities.</b>
+          <p>Glasses, headsets and robots extend input, output and actions instead of becoming a separate assistant.</p>
+        </div>
       </div>
     </section>
 
     <section class="section product" id="product">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-label">01 · PRODUCT</p>
-          <h2>A real Android host.<br />Not a wearable companion screen.</h2>
+          <p class="section-label">01 · THE PRODUCT</p>
+          <h2>One assistant. A few clear places to work.</h2>
           <p>
-            The product starts on the phone. Wearables and physical devices extend its reach;
-            they do not own the intelligence, workspace or runtime.
+            Halo is not a pile of AI demos. Home is the assistant. Notebook is the workspace.
+            Study turns workspace material into guided learning. Intelligence controls models and
+            providers. Devices show the hardware currently attached to the runtime.
           </p>
         </header>
 
-        <div class="screen-gallery">
-          <figure class="screen-card screen-card--large shot-reveal">
+        <div class="screen-gallery screen-gallery--product">
+          <figure class="screen-card screen-card--featured shot-reveal">
             <img src="assets/screens/home.svg" width="430" height="932" alt="Halo Home screen." />
-            <figcaption><b>Home</b><span>Presence, conversation, context and voice/text entry.</span></figcaption>
+            <figcaption><b>Home</b><span>Ask by voice or text, see runtime state, continue a conversation and control context.</span></figcaption>
           </figure>
 
           <figure class="screen-card shot-reveal">
             <img loading="lazy" src="assets/screens/notebook.svg" width="430" height="932" alt="Halo Notebook screen." />
-            <figcaption><b>Notebook</b><span>Search, context, collections, canvases and persistent work.</span></figcaption>
+            <figcaption><b>Notebook</b><span>Notes, files, conversations, collections, favorites, Canvas and explicit working context.</span></figcaption>
           </figure>
 
           <figure class="screen-card shot-reveal">
-            <img loading="lazy" src="assets/screens/intelligence.svg" width="430" height="932" alt="Halo Intelligence screen showing LiteRT, Ollama and OpenRouter providers." />
-            <figcaption><b>Intelligence</b><span>LiteRT on-device by default; LAN and cloud stay optional.</span></figcaption>
+            <img loading="lazy" src="assets/screens/study.svg" width="430" height="932" alt="Halo Study screen." />
+            <figcaption><b>Study</b><span>Guided learning from a workspace source, with attempts, feedback, review history and narration.</span></figcaption>
           </figure>
 
           <figure class="screen-card shot-reveal">
-            <img loading="lazy" src="assets/screens/devices.svg" width="430" height="932" alt="Halo Devices screen showing phone host, glasses and BuddyBot." />
-            <figcaption><b>Devices</b><span>Saved hardware, live capabilities and active resource state.</span></figcaption>
+            <img loading="lazy" src="assets/screens/intelligence.svg" width="430" height="932" alt="Halo Intelligence screen." />
+            <figcaption><b>Intelligence</b><span>Pick the model and provider; inspect readiness, setup and inference activity.</span></figcaption>
+          </figure>
+
+          <figure class="screen-card shot-reveal">
+            <img loading="lazy" src="assets/screens/devices.svg" width="430" height="932" alt="Halo Devices screen." />
+            <figcaption><b>Devices</b><span>Phone host, saved hardware, live capabilities, health and connection state.</span></figcaption>
           </figure>
         </div>
 
         <p class="asset-note reveal">
-          The repository does not yet contain committed emulator/device captures for these screens.
-          These are static screenshot assets reconstructed from the current Compose source—not interactive HTML mockups.
+          Halo does not yet keep a canonical set of emulator/device screenshots in the main repository.
+          These static UI captures are reconstructed from the current Compose source and are intentionally
+          separate assets so native captures can replace them without changing the page layout.
         </p>
+      </div>
+    </section>
+
+    <section class="section actions" id="actions">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label">02 · PHONE ACTIONS</p>
+          <h2>It can do things, not just talk about them.</h2>
+          <p>
+            Halo's current Android source contains host tools for everyday phone work. The model does not
+            receive the entire tool registry at once: Halo discovers and exposes the small set of tools
+            relevant to the current request.
+          </p>
+        </header>
+
+        <div class="action-groups reveal">
+          <article>
+            <span class="action-number">A</span>
+            <div>
+              <h3>Control the phone</h3>
+              <p>Set alarms and timers. Change volume, ringer mode, brightness and flashlight. Open settings and apps.</p>
+              <small>Examples: “Set a 12 minute timer.” · “Put the phone on vibrate.”</small>
+            </div>
+          </article>
+
+          <article>
+            <span class="action-number">B</span>
+            <div>
+              <h3>Navigate and communicate</h3>
+              <p>Find contacts, open the dialer, launch navigation, open URLs, search the web, share text and control media.</p>
+              <small>External handoffs are reported as dispatched—not falsely claimed as completed.</small>
+            </div>
+          </article>
+
+          <article>
+            <span class="action-number">C</span>
+            <div>
+              <h3>Read useful context</h3>
+              <p>Inspect device, battery and network state; read clipboard text; fetch a web page; search files and Notebook.</p>
+              <small>Sensitive reads use the tool policy and approval system rather than bypassing it.</small>
+            </div>
+          </article>
+
+          <article>
+            <span class="action-number">D</span>
+            <div>
+              <h3>Work with the screen</h3>
+              <p>Read the current Android screen, find UI elements, and use accessibility-backed click, scroll and text entry when needed.</p>
+              <small>Screen-changing accessibility actions are explicitly confirmation-gated.</small>
+            </div>
+          </article>
+        </div>
+
+        <div class="truth-panel reveal">
+          <div>
+            <p class="section-label">ACTION TRUTH</p>
+            <h3>Requested is not the same as completed.</h3>
+          </div>
+          <p>
+            Halo journals tool calls and outcomes before continuing the conversation. It distinguishes a
+            successful action from a rejection, failure, external handoff or unknown completion state, and
+            recovery is designed not to replay a completed side effect just because the app restarted.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ai" id="ai">
+      <div class="container ai-layout">
+        <div class="ai-copy reveal">
+          <p class="section-label">03 · CHOOSE YOUR AI</p>
+          <h2>Local first. Remote when you choose it.</h2>
+          <p>
+            Halo separates the runtime from the model. Changing provider changes where reasoning happens;
+            it does not replace the assistant, workspace, tools or device layer.
+          </p>
+
+          <div class="ai-lanes">
+            <article>
+              <span>ON DEVICE</span>
+              <h3>LiteRT-LM</h3>
+              <p>Halo's first-run target is Qwen 3 0.6B Dynamic INT4. After the model is installed, normal local inference does not require a Halo account or cloud service.</p>
+            </article>
+            <article>
+              <span>LOCAL NETWORK</span>
+              <h3>Ollama + companions</h3>
+              <p>Use Ollama, OpenCode Companion or a custom OpenAI-compatible endpoint on a machine you control.</p>
+            </article>
+            <article>
+              <span>REMOTE</span>
+              <h3>Bring a provider</h3>
+              <p>Gemini, OpenRouter, OpenAI, Anthropic, Groq, Cerebras, xAI, OpenCode Zen and compatible endpoints can join the provider fabric.</p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="ai-shot shot-reveal">
+          <img loading="lazy" src="assets/screens/intelligence.svg" width="430" height="932" alt="Halo Intelligence and provider setup UI." />
+          <figcaption>Provider and model setup is separate from the assistant itself.</figcaption>
+        </figure>
+      </div>
+
+      <div class="container provider-facts reveal">
+        <div>
+          <b>Gemini can use Google OAuth.</b>
+          <p>The current app supports Google authorization with a Cloud project, alongside an API-key fallback.</p>
+        </div>
+        <div>
+          <b>Groq and Cerebras are marked as free-tier providers.</b>
+          <p>Halo treats free-tier labels as current provider metadata, not a promise that quotas will stay unchanged.</p>
+        </div>
+        <div>
+          <b>Explicit routing stays explicit.</b>
+          <p>A selected provider failure is not permission to silently move private context to another provider.</p>
+        </div>
+        <div>
+          <b>Provider secrets are protected.</b>
+          <p>Credential storage is migrated to Android Keystore-backed secret storage instead of ordinary app preferences.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workspace" id="workspace">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label">04 · NOTEBOOK + STUDY</p>
+          <h2>Your AI should have a workspace, not a mysterious memory bucket.</h2>
+          <p>
+            Halo keeps user-visible work in Notebook. You decide what enters the working context, and Study
+            can turn a chosen source into a persistent learning session instead of hiding everything inside
+            a chat history.
+          </p>
+        </header>
+
+        <div class="workspace-story">
+          <div class="workspace-assets">
+            <figure class="workspace-shot shot-reveal">
+              <img loading="lazy" src="assets/screens/notebook.svg" width="430" height="932" alt="Halo Notebook UI capture." />
+              <figcaption>Notebook</figcaption>
+            </figure>
+            <figure class="workspace-shot shot-reveal">
+              <img loading="lazy" src="assets/screens/study.svg" width="430" height="932" alt="Halo Study UI capture." />
+              <figcaption>Study</figcaption>
+            </figure>
+            <figure class="workspace-shot workspace-shot--canvas shot-reveal">
+              <img loading="lazy" src="assets/screens/canvas.svg" width="430" height="932" alt="Halo Canvas UI capture." />
+              <figcaption>Canvas</figcaption>
+            </figure>
+          </div>
+
+          <div class="workspace-points reveal">
+            <article>
+              <span>VISIBLE CONTEXT</span>
+              <h3>Working Set</h3>
+              <p>Add or remove workspace objects from Halo's context deliberately instead of guessing what the assistant remembers.</p>
+            </article>
+            <article>
+              <span>REAL DOCUMENTS</span>
+              <h3>Notes, files and Canvas</h3>
+              <p>Structured note blocks, attachments, collections, favorites, conversations and spatial Canvas documents live in the workspace.</p>
+            </article>
+            <article>
+              <span>GUIDED LEARNING</span>
+              <h3>Study</h3>
+              <p>Study sessions bind to a source revision, persist attempts before AI feedback, track review history and can narrate through Halo's speech route.</p>
+            </article>
+            <article>
+              <span>MEMORY WITH PROVENANCE</span>
+              <h3>Remember intentionally</h3>
+              <p>Notebook storage and cognitive memory are separate concepts. Promoting something into memory is a distinct action, not an automatic side effect of writing a note.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section devices" id="devices">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label">05 · DEVICES</p>
+          <h2>The phone is the host. Devices extend it.</h2>
+          <p>
+            Halo models hardware by capability: microphone, speaker, camera, controls, sensors or physical
+            actions. That lets the same runtime work with different devices without turning one glasses brand
+            into the architecture.
+          </p>
+        </header>
+
+        <div class="devices-layout">
+          <figure class="devices-shot shot-reveal">
+            <img loading="lazy" src="assets/screens/devices.svg" width="430" height="932" alt="Halo Devices UI capture." />
+          </figure>
+
+          <div class="device-list reveal">
+            <article>
+              <span>PRIMARY HOST</span>
+              <h3>Android phone</h3>
+              <p>Runs the UI, runtime, local inference, system tools and workspace. Halo remains useful with no wearable connected.</p>
+            </article>
+            <article>
+              <span>REFERENCE WEARABLE</span>
+              <h3>HeyCyan glasses</h3>
+              <p>BLE/device control, microphone capture, media transfer and glasses-aware routing are integrated. Microphone capture has physical evidence; the latest speaker-output route still needs post-fix hardware acceptance.</p>
+            </article>
+            <article>
+              <span>GENERIC AUDIO</span>
+              <h3>Headsets and earbuds</h3>
+              <p>Android audio devices can participate as input/output endpoints. Interaction-origin routing prefers the surface where the interaction started when the route is available.</p>
+            </article>
+            <article>
+              <span>EXPERIMENTAL EMBODIMENT</span>
+              <h3>BuddyBot</h3>
+              <p>A physical Halo host for proving capability, safety and action contracts. It is an experimental embodiment—not the definition of Halo.</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section runtime" id="runtime">
       <div class="container">
         <header class="section-head section-head--dark reveal">
-          <p class="section-label">02 · RUNTIME</p>
-          <h2>The model is replaceable.<br />The runtime isn't.</h2>
+          <p class="section-label">06 · WHY A RUNTIME?</p>
+          <h2>Models come and go. Your assistant shouldn't have to.</h2>
           <p>
-            Speech, context assembly, provider routing, tools, approvals, resource arbitration,
-            device capabilities and action truth stay above individual models and hardware.
+            Halo keeps the durable parts—context, provider choice, tools, approvals, execution truth,
+            devices and recovery—outside any single model. Android is the first host, not the permanent boundary.
           </p>
         </header>
 
         <div class="runtime-flow reveal" data-runtime-flow>
           <div class="runtime-step">
             <span class="runtime-index">01</span>
-            <div><b>Observe</b><small>voice · text · image · device event</small></div>
+            <div><b>Input</b><small>voice · text · image · device event</small></div>
           </div>
           <span class="runtime-link" aria-hidden="true"></span>
           <div class="runtime-step">
             <span class="runtime-index">02</span>
-            <div><b>Assemble</b><small>conversation · workspace · policy · origin</small></div>
+            <div><b>Context</b><small>conversation · workspace · current surface</small></div>
           </div>
           <span class="runtime-link" aria-hidden="true"></span>
           <div class="runtime-step runtime-step--core">
             <span class="signal-mini" aria-hidden="true"></span>
-            <div><b>Halo Runtime</b><small>reason · plan · authorize · coordinate</small></div>
+            <div><b>Reason</b><small>selected model · explicit sharing policy</small></div>
           </div>
           <span class="runtime-link" aria-hidden="true"></span>
           <div class="runtime-step">
             <span class="runtime-index">04</span>
-            <div><b>Execute</b><small>host tools · device tools · resources</small></div>
+            <div><b>Act</b><small>discover tools · approve · execute</small></div>
           </div>
           <span class="runtime-link" aria-hidden="true"></span>
           <div class="runtime-step">
             <span class="runtime-index">05</span>
-            <div><b>Verify</b><small>completed · failed · rejected · unknown</small></div>
+            <div><b>Verify</b><small>result · failure · handoff · unknown</small></div>
           </div>
         </div>
 
         <div class="runtime-evidence reveal">
           <article>
-            <span>PORTABLE CONTRACTS</span>
-            <h3>Capabilities, not brand checks.</h3>
-            <p>Tools declare semantic requirements. Phones, glasses, watches and robots publish what they can actually do.</p>
+            <span>CAPABILITIES, NOT LOGOS</span>
+            <h3>Hardware can change.</h3>
+            <p>Tools request semantic capabilities; hosts and devices publish what they can actually provide.</p>
           </article>
           <article>
-            <span>DURABLE EXECUTION</span>
-            <h3>Action truth survives the UI.</h3>
-            <p>Approvals and tool outcomes are journaled so a hidden surface, restart or retry does not rewrite what actually happened.</p>
+            <span>NO SILENT CLOUD ESCAPE</span>
+            <h3>Privacy policy is part of routing.</h3>
+            <p>Local-only and explicit provider choices are enforced before context is acquired and sent.</p>
           </article>
           <article>
-            <span>RESOURCE OWNERSHIP</span>
-            <h3>One camera. One microphone. Explicit arbitration.</h3>
-            <p>The runtime coordinates scarce host and wearable resources instead of letting features silently fight over them.</p>
+            <span>RECOVERABLE ACTIONS</span>
+            <h3>Restarts should not duplicate side effects.</h3>
+            <p>The durable execution journal records claims and outcomes so recovery can continue without blindly repeating completed work.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section workspace" id="workspace">
-      <div class="container workspace-grid">
-        <div class="workspace-copy reveal">
-          <p class="section-label">03 · NOTEBOOK</p>
-          <h2>The workspace is becoming first-class.</h2>
-          <p>
-            Notebook is no longer just a notes list. Current source now includes structured note
-            blocks, file attachments, collections, favorites and a real freeform Canvas editor.
-          </p>
-
-          <div class="status-line">
-            <span class="status-dot status-dot--source"></span>
-            <b>Implemented in source</b>
-            <small>device/accessibility acceptance still pending</small>
-          </div>
-
-          <ul class="feature-list">
-            <li><b>Structured notes</b><span>paragraphs, headings, checklists and attachment-aware editing</span></li>
-            <li><b>Collections + favorites</b><span>organization without turning Notebook into a hidden memory store</span></li>
-            <li><b>Canvas</b><span>pan, zoom, move and edit spatial text nodes</span></li>
-            <li><b>Working context</b><span>explicitly selected material remains visible to the user</span></li>
-          </ul>
-        </div>
-
-        <div class="workspace-assets">
-          <figure class="workspace-shot workspace-shot--canvas shot-reveal">
-            <img loading="lazy" src="assets/screens/canvas.svg" width="430" height="932" alt="Halo Canvas editor screenshot reconstruction." />
-            <figcaption>Canvas editor</figcaption>
-          </figure>
-          <figure class="workspace-shot workspace-shot--notebook shot-reveal">
-            <img loading="lazy" src="assets/screens/notebook.svg" width="430" height="932" alt="Halo Notebook screenshot reconstruction." />
-            <figcaption>Notebook</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section local-ai" id="local-ai">
+    <section class="section status" id="status">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-label">04 · LOCAL AI</p>
-          <h2>On-device is the default.<br />Network access is explicit.</h2>
+          <p class="section-label">07 · PROJECT STATUS</p>
+          <h2>Real project. Active development. No fake “production ready” badge.</h2>
           <p>
-            Halo's embedded local provider now uses LiteRT-LM.
-            The clean-install path is a packaged <code>.litertlm</code> model with GPU→CPU fallback.
+            Halo is moving quickly and the source is ahead of full physical acceptance. This page describes
+            what exists in current source and calls out the most important validation boundaries.
           </p>
         </header>
 
-        <div class="provider-table reveal">
-          <div class="provider-row provider-row--head">
-            <span>Provider</span><span>Where it runs</span><span>Role</span><span>Network</span>
-          </div>
-          <div class="provider-row provider-row--primary">
-            <span><b>LiteRT-LM</b><small>provider.litert.local</small></span>
-            <span>Android host</span>
-            <span>Default on-device inference</span>
-            <span>Not required</span>
-          </div>
-          <div class="provider-row">
-            <span><b>Ollama</b><small>optional</small></span>
-            <span>Local network host</span>
-            <span>LAN inference</span>
-            <span>LAN</span>
-          </div>
-          <div class="provider-row">
-            <span><b>OpenRouter</b><small>optional</small></span>
-            <span>Remote provider</span>
-            <span>Cloud model access</span>
-            <span>Internet</span>
-          </div>
-        </div>
-
-        <div class="local-note reveal">
-          <span class="signal-mini signal-mini--small" aria-hidden="true"></span>
-          <p><b>No silent provider substitution.</b> The selected provider is part of the interaction contract; local-only policy remains explicit.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section devices" id="devices">
-      <div class="container devices-grid">
-        <header class="section-head reveal">
-          <p class="section-label">05 · DEVICES</p>
-          <h2>Same runtime.<br />Different endpoints.</h2>
-          <p>
-            A connected device contributes capabilities and resources. Interaction origin is preserved:
-            start on glasses, and Halo prefers to answer through glasses when that route is actually available.
-          </p>
-        </header>
-
-        <div class="device-matrix reveal">
-          <div class="device-matrix-head">
-            <span>Endpoint</span><span>Input</span><span>Output</span><span>Other capabilities</span><span>Status</span>
-          </div>
-          <div>
-            <b>Android phone</b><span>mic · text · camera</span><span>display · speaker</span><span>compute · apps · system tools</span><em>Host</em>
-          </div>
-          <div>
-            <b>HeyCyan glasses</b><span>mic · camera · controls</span><span>speaker</span><span>wear state · media</span><em>Integration</em>
-          </div>
-          <div>
-            <b>Earbuds / headset</b><span>mic · controls</span><span>speaker</span><span>audio route</span><em>Capability path</em>
-          </div>
-          <div>
-            <b>BuddyBot</b><span>telemetry</span><span>physical action</span><span>motion · sensors</span><em>Experimental</em>
-          </div>
-        </div>
-
-        <div class="origin-rule reveal">
-          <span class="origin-label">ORIGIN RULE</span>
-          <div class="origin-flow">
-            <span>Glasses microphone</span><i>→</i><span>Halo Runtime</span><i>→</i><span>Selected provider</span><i>→</i><span>Glasses speaker</span>
-          </div>
-          <p>Fallback happens only when the preferred output capability is unavailable—and should be visible rather than silent.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section direction" id="direction">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="section-label">06 · DIRECTION</p>
-          <h2>Android is the first host.<br />The runtime is the product.</h2>
-        </header>
-
-        <div class="direction-grid reveal">
-          <article>
-            <span>NOW</span>
-            <h3>Make the Android host undeniable.</h3>
-            <p>System assistant, LiteRT local inference, Notebook workspace, device fabric, tools and hardware acceptance.</p>
+        <div class="status-grid reveal">
+          <article class="status-good">
+            <span>PHYSICALLY PROVEN</span>
+            <h3>Local text inference works on a real phone.</h3>
+            <p>Qwen has produced successful local answers on-device. HeyCyan microphone capture also has physical evidence from the supplied hardware run.</p>
           </article>
           <article>
-            <span>NEXT</span>
-            <h3>Finish continuity across real hardware.</h3>
-            <p>Wearable audio/output acceptance, richer multimodal flows, durable context and broader device capability profiles.</p>
+            <span>COMPILE / UNIT EVIDENCE</span>
+            <h3>The agentic phone path has real test coverage.</h3>
+            <p>Runtime, LiteRT, Android host, AI engine and app unit/compile suites passed for the RUNTIME-050 phone-action batch.</p>
           </article>
-          <article>
-            <span>LATER</span>
-            <h3>Move the same runtime to more hosts.</h3>
-            <p>Linux, Windows and dedicated compute without rebuilding the cognitive layer around a new platform.</p>
+          <article class="status-warn">
+            <span>STILL NEEDS ACCEPTANCE</span>
+            <h3>The newest integrations are not all release-validated.</h3>
+            <p>Recent assistant-role, provider, resource, action-continuation and hardware-output changes still require the planned physical-phone and HIL stabilization runs.</p>
           </article>
         </div>
 
         <div class="closing reveal">
           <div>
-            <p class="section-label">BUILD IN THE OPEN</p>
-            <h2>Halo is early, but the architecture is already real.</h2>
-            <p>Read the source, current-state ledger and design documents. Claims on this page intentionally distinguish source presence from physical acceptance.</p>
+            <p class="section-label">OPEN DEVELOPMENT</p>
+            <h2>Read the code. Follow the evidence.</h2>
+            <p>
+              Halo is open source and intentionally local-first. The repository keeps a current-state ledger
+              so “present in code,” “tested,” and “physically accepted” do not get collapsed into one claim.
+            </p>
           </div>
           <div class="closing-actions">
-            <a class="button button--light" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Open GitHub ↗</a>
-            <a class="button button--ghost-dark" href="https://github.com/slafftrosheen/Halo/tree/main/docs" target="_blank" rel="noopener">Read docs</a>
+            <a class="button button--light" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Open Halo on GitHub ↗</a>
+            <a class="button button--ghost-dark" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" target="_blank" rel="noopener">Current state</a>
           </div>
         </div>
       </div>
@@ -377,6 +510,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=6" defer></script>
+  <script src="js/main.js?v=7" defer></script>
 </body>
 </html>
