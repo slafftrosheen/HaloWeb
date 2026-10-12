@@ -253,5 +253,10 @@ window.HaloTranslations.lv={
   "Select the template above to copy it manually.": "Atlasi augstāk esošo paraugu un nokopē to manuāli.",
   "Template copied.": "Paraugs nokopēts.",
   "Copy unavailable. Select the template above instead.": "Kopēšana nav pieejama. Atlasi augstāk esošo paraugu.",
-  "{done} of {total} tried": "Izmēģināti {done} no {total}"
+  "{done} of {total} tried": "Izmēģināti {done} no {total}",
+  "Hardware can change.": "Aparatūra var mainīties.",
+  "Privacy policy is part of routing.": "Privātums ir daļa no datu maršrutēšanas.",
+  "Restarts should not duplicate side effects.": "Restartēšana nedrīkst atkārtot jau paveiktās darbības.",
+  "Open Halo on GitHub ↗": "Atvērt Halo vietnē GitHub ↗",
+  "Halo — a local-first AI assistant and cognitive runtime": "Halo — lokāls AI asistents un izpildvide Android ierīcēm"
 };
