@@ -253,5 +253,10 @@ window.HaloTranslations.ru={
   "Select the template above to copy it manually.": "Выдели шаблон выше и скопируй его вручную.",
   "Template copied.": "Шаблон скопирован.",
   "Copy unavailable. Select the template above instead.": "Копирование недоступно. Выдели шаблон выше.",
-  "{done} of {total} tried": "Проверено {done} из {total}"
+  "{done} of {total} tried": "Проверено {done} из {total}",
+  "Hardware can change.": "Оборудование может меняться.",
+  "Privacy policy is part of routing.": "Приватность встроена в маршрутизацию данных.",
+  "Restarts should not duplicate side effects.": "Перезапуск не должен повторять уже выполненные действия.",
+  "Open Halo on GitHub ↗": "Открыть Halo на GitHub ↗",
+  "Halo — a local-first AI assistant and cognitive runtime": "Halo — локальный ИИ-ассистент для Android"
 };
