@@ -6,6 +6,11 @@
   var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
   var reducedQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  function localized(key) {
+    return window.HaloI18n ? window.HaloI18n.t(key) : key;
+  }
+
+
   function storedThemeMode() {
     try { return localStorage.getItem(themeKey) || 'system'; }
     catch (_) { return 'system'; }
@@ -167,7 +172,9 @@
 
     function refresh() {
       var done = checks.filter(function (check) { return check.checked; });
-      if (counter) counter.textContent = done.length + ' of ' + checks.length + ' tried';
+      if (counter) counter.textContent = window.HaloI18n
+        ? window.HaloI18n.formatProgress(done.length, checks.length)
+        : done.length + ' of ' + checks.length + ' tried';
       if (bar) bar.style.width = (done.length / checks.length * 100) + '%';
       try {
         localStorage.setItem(storageKey, JSON.stringify(done.map(function (check) {
@@ -187,6 +194,7 @@
       refresh();
       if (checks[0]) checks[0].focus();
     });
+    window.addEventListener('halo:languagechange', refresh);
     refresh();
   }
 
@@ -195,16 +203,27 @@
     var template = document.getElementById('alpha-issue-template');
     var status = document.getElementById('alpha-copy-status');
     if (!button || !template) return;
+    var lastMessage = null;
+
+    function report(message) {
+      lastMessage = message;
+      if (status) status.textContent = localized(message);
+    }
+
+    window.addEventListener('halo:languagechange', function () {
+      if (lastMessage) report(lastMessage);
+    });
+
     button.addEventListener('click', function () {
       var text = template.textContent.trim();
       if (!navigator.clipboard || !navigator.clipboard.writeText) {
-        if (status) status.textContent = 'Select the template above to copy it manually.';
+        report('Select the template above to copy it manually.');
         return;
       }
       navigator.clipboard.writeText(text).then(function () {
-        if (status) status.textContent = 'Template copied.';
+        report('Template copied.');
       }, function () {
-        if (status) status.textContent = 'Copy unavailable. Select the template above instead.';
+        report('Copy unavailable. Select the template above instead.');
       });
     });
   }
