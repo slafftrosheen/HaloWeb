@@ -1,7 +1,7 @@
-/* HaloWeb v2.1 interactions.
- * Demos are deferred until their sections are visible; traces are semantic,
- * not fabricated telemetry; scenario controls are a plain aria-pressed button
- * group (no fake tabs). Motion stays bounded and reduced-motion aware.
+/* HaloWeb v2.2 interactions.
+ * Scenarios animate only after explicit user selection; the notebook demo runs
+ * once on first reveal. Status maturity is an enum (current/in-development/
+ * planned/experimental). Traces are semantic, never fabricated telemetry.
  */
 (function () {
   'use strict';
@@ -12,10 +12,6 @@
   }
   function wait(ms) { return reducedMotion() ? Promise.resolve() : new Promise(function (r) { setTimeout(r, ms); }); }
 
-  function presence() {
-    return window.HaloPresence && window.HaloPresence._hero ? window.HaloPresence._hero : null;
-  }
-
   /* ---------- Hero presence + runtime rail ---------- */
   var heroCanvas = document.getElementById('presence-canvas');
   var hero = window.HaloPresence && heroCanvas ? window.HaloPresence.mount(heroCanvas) : null;
@@ -25,8 +21,7 @@
   var TRACES = {
     ready: 'Ready',
     listening: 'invoke → capture · microphone active',
-    understanding: 'speech → text · intent recognized',
-    reasoning: 'context assembled · provider: selected',
+    thinking: 'context assembled · selected provider',
     responding: 'answer streaming · output → origin'
   };
 
@@ -40,44 +35,43 @@
   var railBtns = document.querySelectorAll('.state-rail .btn[data-state]');
   Array.prototype.forEach.call(railBtns, function (btn) {
     btn.addEventListener('click', function () {
-      var key = btn.getAttribute('data-state');
-      setRailState(key);
+      setRailState(btn.getAttribute('data-state'));
       Array.prototype.forEach.call(railBtns, function (b) {
         b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
       });
     });
   });
 
-  /* Capability labels: real buttons; hover/focus produces one bounded pulse. */
-  if (hero) {
-    Array.prototype.forEach.call(document.querySelectorAll('.cap-label'), function (btn) {
-      var dir = parseFloat(btn.getAttribute('data-dir') || '0');
-      var amp = Math.min(0.045, Math.abs(dir) * 0.045);
-      function lean() {
-        btn.classList.add('cap-label--pulse');
-        hero.pulse(dir, amp);
-      }
-      function leanOff() { btn.classList.remove('cap-label--pulse'); }
-      btn.addEventListener('mouseenter', lean);
-      btn.addEventListener('mouseleave', leanOff);
-      btn.addEventListener('focus', lean);
-      btn.addEventListener('blur', leanOff);
-      btn.addEventListener('click', lean);
-    });
+  /* Capability labels: one activation → one bounded pulse (coalesced). */
+  var lastPulse = 0;
+  function activateCapability(btn) {
+    var now = performance.now();
+    if (now - lastPulse < 250) return;
+    lastPulse = now;
+    var dir = parseFloat(btn.getAttribute('data-dir') || '0');
+    btn.classList.add('cap-label--pulse');
+    if (hero) hero.pulse(dir, Math.min(0.045, Math.abs(dir) * 0.045));
+    setTimeout(function () { btn.classList.remove('cap-label--pulse'); }, 620);
   }
+  Array.prototype.forEach.call(document.querySelectorAll('.cap-label'), function (btn) {
+    btn.addEventListener('mouseenter', function () { activateCapability(btn); });
+    btn.addEventListener('focus', function () { activateCapability(btn); });
+    btn.addEventListener('click', function () { activateCapability(btn); });
+  });
 
   /* ---------- Scenario pipelines + semantic terminal ---------- */
+  /* Stage maturity enum: current | in-development | planned | experimental */
   var SCENARIOS = {
     phone: {
       title: 'runtime route — ask on the phone',
-      status: 'CURRENT',
-      note: '<b>Ask on the phone.</b> Halo is a complete assistant on Android by itself — invoke, ask, act. No wearable or extra service required.',
+      status: 'current',
+      note: '<b>Ask on the phone.</b> Halo is a complete assistant on Android by itself — invoke it, ask, act. No wearable or extra service required.',
       steps: [
-        { tag: 'INPUT',    text: 'phone microphone · invoked by you' },
-        { tag: 'STT',      text: 'local speech recognition' },
-        { tag: 'REASON',   text: 'selected provider · default: local llama.cpp' },
-        { tag: 'ROUTE',    text: 'response → phone' },
-        { tag: 'RESULT',   text: 'playback on phone' }
+        { tag: 'INPUT',    text: 'phone microphone · invoked by you', status: 'current' },
+        { tag: 'STT',      text: 'local speech recognition', status: 'current' },
+        { tag: 'REASON',   text: 'selected provider · default: local llama.cpp', status: 'current' },
+        { tag: 'ROUTE',    text: 'response → phone', status: 'current' },
+        { tag: 'RESULT',   text: 'playback on phone', status: 'current' }
       ],
       term: [
         'INPUT     phone microphone',
@@ -89,15 +83,15 @@
     },
     glasses: {
       title: 'runtime route — ask through glasses',
-      status: 'IN DEVELOPMENT',
-      note: '<b>Ask through glasses.</b> The glasses contribute microphone and speakers as capabilities; Halo keeps the conversation on the device where it began. HeyCyan is the reference implementation while this track is validated on hardware.',
+      status: 'in-development',
+      note: '<b>Ask through glasses.</b> The glasses contribute microphone and speakers as capabilities; Halo keeps the conversation on the device where it began. HeyCyan is the reference implementation while this track completes hardware validation.',
       steps: [
-        { tag: 'INPUT',    text: 'glasses microphone · capability: audio input' },
-        { tag: 'STT',      text: 'local speech recognition' },
-        { tag: 'REASON',   text: 'selected provider' },
-        { tag: 'ROUTE',    text: 'response → interaction origin' },
-        { tag: 'OUTPUT',   text: 'glasses speakers · capability: audio output', planned: true },
-        { tag: 'STATUS',   text: 'hardware validation in progress', planned: true }
+        { tag: 'INPUT',    text: 'glasses microphone · capability: audio input', status: 'current' },
+        { tag: 'STT',      text: 'local speech recognition', status: 'current' },
+        { tag: 'REASON',   text: 'selected provider', status: 'current' },
+        { tag: 'ROUTE',    text: 'response → interaction origin', status: 'current' },
+        { tag: 'OUTPUT',   text: 'glasses speakers · origin route', status: 'in-development' },
+        { tag: 'VALIDATION', text: 'physical acceptance pending', status: 'in-development' }
       ],
       term: [
         'INPUT     glasses microphone (capability: audio input)',
@@ -105,88 +99,108 @@
         'REASON    selected provider',
         'ROUTE     response → interaction origin',
         'OUTPUT    glasses speakers          [IN DEVELOPMENT]',
-        'STATUS    hardware validation in progress'
+        'VALIDATION  physical acceptance pending'
       ]
     },
     capture: {
       title: 'runtime route — capture from glasses',
-      status: 'IN DEVELOPMENT',
-      note: '<b>Capture from glasses.</b> A wearable photo becomes a Notebook object. The receive-into-Inbox step is in development; summarization and memory promotion are planned slices, not current behavior.',
+      status: 'in-development',
+      note: '<b>Capture from glasses.</b> A wearable photo becomes a Notebook object. Capture sources exist today; verified transfer, Inbox ingest and any memory promotion are later stages on this track.',
       steps: [
-        { tag: 'INPUT',    text: 'glasses camera · photo capture' },
-        { tag: 'TRANSFER', text: 'media → phone · verified transfer', planned: true },
-        { tag: 'WORKSPACE',text: 'notebook object · Inbox', planned: true },
-        { tag: 'STATUS',   text: 'media path acceptance in progress', planned: true }
+        { tag: 'CAPTURE',  text: 'glasses camera · photo capture', status: 'current' },
+        { tag: 'TRANSFER', text: 'media → phone · verified transfer', status: 'in-development' },
+        { tag: 'INGEST',   text: 'notebook object · Inbox', status: 'in-development' },
+        { tag: 'MEMORY',   text: 'promotion with provenance', status: 'planned' }
       ],
       term: [
-        'INPUT     glasses camera (capability: still capture)',
+        'CAPTURE   glasses camera (capability: still capture)',
         'TRANSFER  media → phone             [IN DEVELOPMENT]',
-        'WORKSPACE notebook object · Inbox    [PLANNED]',
-        'STATUS    media path acceptance in progress'
+        'INGEST    notebook object · Inbox   [IN DEVELOPMENT]',
+        'MEMORY    promotion with provenance [PLANNED]'
       ]
     }
   };
 
+  var STATUS_CLASS = {
+    'current': 'status--current',
+    'in-development': 'status--development',
+    'planned': 'status--planned',
+    'experimental': 'status--experimental'
+  };
+  var STATUS_LABEL = {
+    'current': 'Current',
+    'in-development': 'In development',
+    'planned': 'Planned',
+    'experimental': 'Experimental'
+  };
+  function chip(status) {
+    return '<span class="status ' + (STATUS_CLASS[status] || 'status--planned') + '">' +
+      (STATUS_LABEL[status] || status) + '</span>';
+  }
+
   var pipelineEl = document.getElementById('pipeline');
   var noteEl = document.getElementById('scenario-note');
-  var statusChip = document.getElementById('scenario-status');
   var termEl = document.getElementById('term');
   var termTitle = document.getElementById('term-title');
   var scenarioBtns = document.querySelectorAll('.scenario-bar .btn[data-scenario]');
   var scenarioRun = 0;
   var currentScenario = 'phone';
+  var scenarioAnimated = false;
 
-  function renderPipeline(scenario) {
+  function scenarioHeader(scenario) {
+    if (noteEl) noteEl.innerHTML = scenario.note;
+    if (termTitle) termTitle.textContent = scenario.title;
+  }
+
+  function renderPipelineStatic(scenario) {
     if (!pipelineEl) return;
     pipelineEl.innerHTML = scenario.steps.map(function (s) {
-      var suffix = s.planned ? '<span class="step-chip">PLANNED</span>' : '';
-      return '<li><span class="tag">' + s.tag + '</span><span>' + s.text + '</span>' + suffix + '</li>';
+      var stageChip = s.status !== 'current' ? chip(s.status) : '';
+      return '<li class="done"><span class="tag">' + s.tag + '</span><span>' + s.text + '</span>' + stageChip + '</li>';
     }).join('');
   }
 
-  function applyScenarioStatic(scenario) {
-    renderPipeline(scenario);
-    if (noteEl) noteEl.innerHTML = scenario.note;
-    if (statusChip) {
-      statusChip.textContent = scenario.status;
-      statusChip.className = 'pill ' + (scenario.status === 'CURRENT' ? 'pill--shipped' : 'pill--planned');
-    }
-    if (termTitle) termTitle.textContent = scenario.title;
-    if (termEl) {
-      termEl.textContent = scenario.term.join('\n');
-      // Mark planned/in-development lines so the terminal is truth-telling at rest.
-      termEl.innerHTML = scenario.term.map(function (line) {
-        return line.indexOf('[IN DEVELOPMENT]') > -1 || line.indexOf('[PLANNED]') > -1
-          ? '<span class="term-planned">' + line + '</span>'
-          : line;
-      }).join('\n');
-    }
+  function renderTerminalStatic(scenario) {
+    if (!termEl) return;
+    termEl.innerHTML = scenario.term.map(function (line) {
+      return line.indexOf('[IN DEVELOPMENT]') > -1 || line.indexOf('[PLANNED]') > -1
+        ? '<span class="term-planned">' + line + '</span>'
+        : line;
+    }).join('\n');
   }
 
+  function applyScenarioStatic(scenario) {
+    scenarioHeader(scenario);
+    renderPipelineStatic(scenario);
+    renderTerminalStatic(scenario);
+  }
+
+  /* Runs only on explicit user selection. */
   function runScenario(key) {
     var scenario = SCENARIOS[key];
     if (!scenario) return;
     currentScenario = key;
     var run = ++scenarioRun;
-    applyScenarioStatic(scenario);
-    if (reducedMotion()) return;
-    var items = pipelineEl ? Array.prototype.slice.call(pipelineEl.children) : [];
-    items.forEach(function (li) { li.className = ''; });
+    scenarioHeader(scenario);
+    renderTerminalStatic(scenario);
+    if (reducedMotion() || !pipelineEl) return;
+    var items = Array.prototype.slice.call(pipelineEl.children);
+    pipelineEl.innerHTML = scenario.steps.map(function (s) {
+      var stageChip = s.status !== 'current' ? chip(s.status) : '';
+      return '<li><span class="tag">' + s.tag + '</span><span>' + s.text + '</span>' + stageChip + '</li>';
+    }).join('');
+    items = Array.prototype.slice.call(pipelineEl.children);
     if (termEl) termEl.textContent = '';
 
     (function next(i) {
       if (run !== scenarioRun) return;
       if (i >= items.length) {
-        items.forEach(function (li) { li.className = 'done'; });
         applyScenarioStatic(scenario);
         if (hero) hero.pulse(1, 0.03);
         return;
       }
       items[i].className = 'on';
-      if (termEl) {
-        var done = scenario.term.slice(0, i + 1).join('\n');
-        termEl.textContent = done;
-      }
+      if (termEl) termEl.textContent = scenario.term.slice(0, i + 1).join('\n');
       if (hero) hero.pulse(i % 2 === 0 ? 1 : -1, 0.02);
       wait(620).then(function () {
         if (run !== scenarioRun) return;
@@ -201,6 +215,7 @@
       Array.prototype.forEach.call(scenarioBtns, function (b) {
         b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
       });
+      scenarioAnimated = true;
       runScenario(btn.getAttribute('data-scenario'));
     });
   });
@@ -268,7 +283,7 @@
     });
   });
 
-  /* ---------- Host showcase segmented selector (mobile/tablet) ---------- */
+  /* ---------- Host showcase segmented selector ---------- */
   var hostScreens = document.querySelectorAll('.host-screen[data-screen]');
   var hostBtns = document.querySelectorAll('.host-switch .btn[data-screen-target]');
   function showHostScreen(name) {
@@ -285,21 +300,14 @@
     });
   });
 
-  /* ---------- Reveal on scroll (demos deferred until visible) ---------- */
-  var scenarioShown = false;
+  /* ---------- Reveal on scroll (notebook demo once; scenarios only on click) ---------- */
   var notebookShown = false;
 
   function revealEl(el) {
     el.classList.add('in');
-    if (el.hasAttribute('data-demo')) {
-      var demo = el.getAttribute('data-demo');
-      if (demo === 'scenario' && !scenarioShown) {
-        scenarioShown = true;
-        runScenario(currentScenario); // one short demonstration on first reveal
-      } else if (demo === 'notebook' && !notebookShown) {
-        notebookShown = true;
-        runNotebook();
-      }
+    if (el.getAttribute('data-demo') === 'notebook' && !notebookShown) {
+      notebookShown = true;
+      runNotebook();
     }
   }
 
@@ -325,7 +333,7 @@
     });
   }
 
-  /* Geometry fallback: covers environments where IO callbacks don't fire. */
+  /* Geometry fallback for environments where IO callbacks don't fire. */
   var revealTick = 0;
   window.addEventListener('scroll', function () {
     if (revealTick) return;
@@ -334,14 +342,13 @@
   window.addEventListener('resize', checkReveals);
   setTimeout(checkReveals, 1200);
 
-  /* ---------- Mini orb: static Ready state in the mockup ---------- */
+  /* ---------- Mini orb: static Ready in the mockup ---------- */
   var mini = document.getElementById('orb-mini');
   if (mini && window.HaloPresence) {
-    var miniPresence = window.HaloPresence.mount(mini);
-    miniPresence.setState('ready'); // renders once; no loops in the mockup
+    window.HaloPresence.mount(mini).setState('ready');
   }
 
-  /* ---------- Boot: everything settles statically; demos wait for visibility ---------- */
+  /* ---------- Boot: static, settled ---------- */
   setRailState('ready');
   applyScenarioStatic(SCENARIOS[currentScenario]);
   routeContinuity();

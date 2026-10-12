@@ -5,9 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Halo — your personal cognitive runtime</title>
   <meta name="description" content="Halo is a host-native personal cognitive runtime: your Android phone is the first complete host, with local AI, a persistent Notebook, and capability-driven devices around it. Open source, local-first, no account." />
+  <meta name="theme-color" content="#F6F7FB" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#17191E" media="(prefers-color-scheme: dark)" />
+  <link rel="canonical" href="https://haloweb.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Halo" />
+  <meta property="og:title" content="Halo — your personal cognitive runtime" />
+  <meta property="og:description" content="Your assistant shouldn't live inside one device. Halo connects your phone, local AI, workspace and devices — open source, local-first, no account." />
+  <meta property="og:url" content="https://haloweb.vercel.app/" />
+  <meta property="og:image" content="https://haloweb.vercel.app/assets/halo-og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Halo — your personal cognitive runtime" />
+  <meta name="twitter:description" content="Your assistant shouldn't live inside one device. Open source, local-first, no account." />
+  <meta name="twitter:image" content="https://haloweb.vercel.app/assets/halo-og.png" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/tokens.css?v=3" />
-  <link rel="stylesheet" href="css/main.css?v=3" />
+  <link rel="stylesheet" href="css/tokens.css?v=4" />
+  <link rel="stylesheet" href="css/main.css?v=4" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Halo",
+    "applicationCategory": "PersonalAssistantsApplication",
+    "operatingSystem": "Android",
+    "description": "A host-native personal cognitive runtime: local AI, a persistent Notebook workspace, and capability-driven connections to wearables and other devices.",
+    "codeRepository": "https://github.com/slafftrosheen/Halo",
+    "license": "https://github.com/slafftrosheen/Halo/blob/main/LICENSE"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -72,7 +99,7 @@
             <button class="cap-label cap-label--2" type="button" data-dir="0.5">EARPHONES</button>
             <button class="cap-label cap-label--3" type="button" data-dir="0.8">GLASSES</button>
             <button class="cap-label cap-label--4" type="button" data-dir="0.5">NOTEBOOK</button>
-            <button class="cap-label cap-label--5" type="button" data-dir="-0.5">MEMORY</button>
+            <button class="cap-label cap-label--5" type="button" data-dir="-0.5">MODEL</button>
             <button class="cap-label cap-label--6" type="button" data-dir="-0.8">ROBOT</button>
             <button class="cap-label cap-label--7" type="button" data-dir="-0.5">WATCH</button>
             <canvas id="presence-canvas" width="520" height="520" role="img"
@@ -81,9 +108,9 @@
           <div class="state-rail" role="group" aria-label="Runtime states">
             <button class="btn" type="button" data-state="ready" aria-pressed="true">Ready</button>
             <span class="arrow" aria-hidden="true">→</span>
-            <button class="btn" type="button" data-state="understanding" aria-pressed="false">Understanding</button>
+            <button class="btn" type="button" data-state="listening" aria-pressed="false">Listening</button>
             <span class="arrow" aria-hidden="true">→</span>
-            <button class="btn" type="button" data-state="reasoning" aria-pressed="false">Reasoning</button>
+            <button class="btn" type="button" data-state="thinking" aria-pressed="false">Thinking</button>
             <span class="arrow" aria-hidden="true">→</span>
             <button class="btn" type="button" data-state="responding" aria-pressed="false">Responding</button>
           </div>
@@ -105,66 +132,150 @@
         </div>
 
         <div class="halo-grid">
-          <!-- The product surface -->
+          <!-- The product surface, reconstructed from the current Compose screens -->
           <div class="host-column reveal">
             <div class="host-switch" role="group" aria-label="Choose an app surface">
-              <button class="btn" type="button" data-screen-target="home" aria-pressed="true">Home</button>
-              <button class="btn" type="button" data-screen-target="notebook" aria-pressed="false">Notebook</button>
-              <button class="btn" type="button" data-screen-target="devices" aria-pressed="false">Devices</button>
+              <button class="btn" type="button" data-screen-target="home" aria-controls="mock-home" aria-pressed="true">Home</button>
+              <button class="btn" type="button" data-screen-target="notebook" aria-controls="mock-notebook" aria-pressed="false">Notebook</button>
+              <button class="btn" type="button" data-screen-target="devices" aria-controls="mock-devices" aria-pressed="false">Devices</button>
             </div>
             <div class="host-phone">
               <div class="screen">
                 <div class="notch" aria-hidden="true"></div>
 
-                <div class="host-screen" data-screen="home">
-                  <div class="app-top"><span class="title">Halo</span><span class="time mono">Ready when you are</span></div>
-                  <div class="app-orb"><canvas id="orb-mini" width="240" height="240" aria-hidden="true"></canvas></div>
-                  <p class="app-ready">Ready · Tap the presence or use the composer</p>
-                  <div class="app-ask"><span>Ask Halo anything…</span>
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
+                <!-- HOME — HomeScreen.kt: title, presence + mic, Ready, hint, context, More, composer -->
+                <div class="host-screen" data-screen="home" id="mock-home">
+                  <div class="mock-screen-header">
+                    <div class="titles"><span class="title">Halo</span></div>
+                    <span class="mono mock-subtitle">Ready when you are</span>
                   </div>
-                  <div class="app-tiles">
-                    <div class="app-tile" style="background: var(--halo-pastel-mint);">Talk<span>push to talk</span></div>
-                    <div class="app-tile" style="background: var(--halo-pastel-blue);">Capture<span>camera or glasses</span></div>
-                    <div class="app-tile" style="background: var(--halo-pastel-yellow);">Notebook<span>your workspace</span></div>
-                    <div class="app-tile" style="background: var(--halo-pastel-lilac);">More<span>actions</span></div>
+                  <div class="mock-presence-box">
+                    <canvas id="orb-mini" width="300" height="300" role="img" aria-label="Halo presence, ready"></canvas>
+                    <span class="mock-mic-btn" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
+                    </span>
                   </div>
-                  <div class="app-tabbar"><span class="app-tab app-tab--on">Home</span><span class="app-tab">Activity</span><span class="app-tab">Notebook</span><span class="app-tab">Devices</span><span class="app-tab">Settings</span></div>
+                  <p class="mock-state-label">Ready</p>
+                  <p class="mock-hint">Tap the presence or use the composer</p>
+                  <p class="mock-context">Context · 0</p>
+                  <p class="mock-more"><span>More</span></p>
+                  <div class="mock-composer">
+                    <span class="composer-ic">
+                      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
+                    </span>
+                    <span>Ask Halo…</span>
+                    <span class="composer-send">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                    </span>
+                  </div>
+                  <div class="mock-bottom-nav">
+                    <span class="mock-tab mock-tab--on">Home</span><span class="mock-tab">Activity</span><span class="mock-tab">Notebook</span><span class="mock-tab">Devices</span><span class="mock-tab">Settings</span>
+                  </div>
                 </div>
 
-                <div class="host-screen" data-screen="notebook" hidden>
-                  <div class="app-top"><span class="title">Notebook</span><span class="time mono">Your workspace</span></div>
-                  <div class="app-search">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4-4"/></svg>
-                    Search Notebook
+                <!-- NOTEBOOK — NotebookScreen.kt: header+New, context line, search, filters, rows -->
+                <div class="host-screen" data-screen="notebook" id="mock-notebook" hidden>
+                  <div class="mock-screen-header">
+                    <div class="titles">
+                      <span class="title">Notebook</span>
+                      <span class="mock-subtitle">Your workspace</span>
+                    </div>
+                    <span class="mock-primary-action mock-primary-action--text">New</span>
                   </div>
-                  <div class="app-chips"><span class="chip chip--on">All</span><span class="chip">Notes</span><span class="chip">Inbox</span><span class="chip">Archived</span><span class="chip">Trash</span></div>
-                  <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-yellow);"></span><span>Lightbox redesign<br /><span class="meta">note · edited recently</span></span></div>
-                  <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-blue);"></span><span>Warehouse photo<br /><span class="meta">inbox capture</span></span></div>
-                  <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-mint);"></span><span>Ceramics suppliers<br /><span class="meta">archived note</span></span></div>
-                  <div class="app-tabbar"><span class="app-tab">Home</span><span class="app-tab">Activity</span><span class="app-tab app-tab--on">Notebook</span><span class="app-tab">Devices</span><span class="app-tab">Settings</span></div>
+                  <div class="mock-object-row" style="margin-top:0;">
+                    <span>In Halo's context · 2</span>
+                    <span class="row-action">Open</span>
+                  </div>
+                  <div class="mock-object-row">
+                    <span class="glyph" style="background: var(--surface-2); display:grid; place-items:center; color: var(--text-2);">
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4-4"/></svg>
+                    </span>
+                    <span>Search Notebook</span>
+                  </div>
+                  <div class="mock-filter-row" aria-label="Notebook filters">
+                    <span class="mock-filter-chip mock-filter-chip--on">All</span>
+                    <span class="mock-filter-chip">Notes</span>
+                    <span class="mock-filter-chip">Files</span>
+                    <span class="mock-filter-chip">Chats</span>
+                    <span class="mock-filter-chip">Memory</span>
+                  </div>
+                  <div class="mock-filter-row" style="margin-top:-0.45rem;">
+                    <span class="mock-filter-chip">Inbox</span>
+                    <span class="mock-filter-chip">Archived</span>
+                    <span class="mock-filter-chip">Trash</span>
+                  </div>
+                  <div class="mock-object-row">
+                    <span class="glyph" style="background: var(--halo-pastel-yellow);"></span>
+                    <span>Lightbox redesign<br /><span class="meta">note</span></span>
+                    <span class="row-action">Add to context</span>
+                  </div>
+                  <div class="mock-object-row">
+                    <span class="glyph" style="background: var(--halo-pastel-blue);"></span>
+                    <span>Supplier spec<br /><span class="meta">note · archived</span></span>
+                    <span class="row-action">Add to context</span>
+                  </div>
+                  <div class="mock-object-row">
+                    <span class="glyph" style="background: var(--halo-pastel-mint);"></span>
+                    <span>Warehouse photo<br /><span class="meta">inbox capture</span></span>
+                    <span class="row-action">Remove</span>
+                  </div>
+                  <div class="mock-bottom-nav">
+                    <span class="mock-tab">Home</span><span class="mock-tab">Activity</span><span class="mock-tab mock-tab--on">Notebook</span><span class="mock-tab">Devices</span><span class="mock-tab">Settings</span>
+                  </div>
                 </div>
 
-                <div class="host-screen" data-screen="devices" hidden>
-                  <div class="app-top"><span class="title">Devices</span><span class="time mono">Where Halo can act</span></div>
-                  <div class="app-group">Connected</div>
-                  <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-mint);"></span><span>This phone<br /><span class="meta">host · local inference</span></span></div>
-                  <div class="app-group">Saved</div>
-                  <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-lilac);"></span><span>Glasses (HeyCyan)<br /><span class="meta">reference device</span></span></div>
-                  <div class="app-row"><span class="glyph" style="background: var(--halo-pastel-coral);"></span><span>Robot (BuddyBot)<br /><span class="meta">experimental embodiment</span></span></div>
-                  <div class="app-tabbar"><span class="app-tab">Home</span><span class="app-tab">Activity</span><span class="app-tab">Notebook</span><span class="app-tab">Devices</span><span class="app-tab app-tab--on">Settings</span></div>
+                <!-- DEVICES — DevicesScreen.kt: header+Add, Connected/Saved groups, cards -->
+                <div class="host-screen" data-screen="devices" id="mock-devices" hidden>
+                  <div class="mock-screen-header">
+                    <div class="titles">
+                      <span class="title">Devices</span>
+                      <span class="mock-subtitle">Connected hardware and saved sessions.</span>
+                    </div>
+                    <span class="mock-primary-action">+</span>
+                  </div>
+                  <p class="app-group" style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-2); margin: 0.6rem 0 0.3rem;">Connected</p>
+                  <div class="mock-device-card">
+                    <div class="card-top">
+                      <span class="mark" style="background: var(--halo-pastel-mint);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 9.5 10.5 4a2 2 0 0 1 3 0L21 9.5M5 10v6.5A2.5 2.5 0 0 0 7.5 19h9a2.5 2.5 0 0 0 2.5-2.5V10"/><circle cx="12" cy="14" r="2.6"/></svg>
+                      </span>
+                      <span class="name">HeyCyan glasses</span>
+                      <span class="chevron" aria-hidden="true">›</span>
+                    </div>
+                    <div class="card-top" style="margin-top:0.3rem;">
+                      <span class="conn"><span class="dot" style="background: var(--halo-ready);"></span>Connected</span>
+                    </div>
+                    <div class="card-meta"><span>Battery —</span><span>Seen just now</span><span>Auto On</span></div>
+                  </div>
+                  <p class="app-group" style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-2); margin: 0.7rem 0 0.3rem;">Saved</p>
+                  <div class="mock-device-card">
+                    <div class="card-top">
+                      <span class="mark" style="background: var(--halo-pastel-coral);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="7" y="8" width="10" height="9" rx="3"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8M4 12h3m10 0h3"/></svg>
+                      </span>
+                      <span class="name">BuddyBot</span>
+                      <span class="chevron" aria-hidden="true">›</span>
+                    </div>
+                    <div class="card-top" style="margin-top:0.3rem;">
+                      <span class="conn"><span class="dot" style="background: var(--halo-idle);"></span>Saved · no session</span>
+                    </div>
+                    <div class="card-meta"><span>Battery —</span><span>Seen earlier</span><span>Auto Off</span></div>
+                  </div>
+                  <div class="mock-bottom-nav">
+                    <span class="mock-tab">Home</span><span class="mock-tab">Activity</span><span class="mock-tab">Notebook</span><span class="mock-tab mock-tab--on">Devices</span><span class="mock-tab">Settings</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <p class="host-caption">Reconstructed from the current Android app — Home, Notebook and Devices are the real destinations. Staged content, not live device state.</p>
+            <p class="host-caption">Reconstructed from the current Android app — Home, Notebook and Devices are the real destinations and navigation. Staged content, not live device state.</p>
           </div>
 
           <!-- The route explanation beside the product -->
           <div class="route-column reveal">
             <div class="scenario-bar" aria-label="Interaction routes">
-              <button class="btn" type="button" data-scenario="phone" aria-pressed="true">Ask on phone <span class="pill pill--shipped">Current</span></button>
-              <button class="btn" type="button" data-scenario="glasses" aria-pressed="false">Ask through glasses <span class="pill pill--planned">In dev</span></button>
-              <button class="btn" type="button" data-scenario="capture" aria-pressed="false">Capture from glasses <span class="pill pill--planned">In dev</span></button>
+              <button class="btn" type="button" data-scenario="phone" aria-pressed="true">Ask on phone <span class="status status--current">Current</span></button>
+              <button class="btn" type="button" data-scenario="glasses" aria-pressed="false">Ask through glasses <span class="status status--development">In development</span></button>
+              <button class="btn" type="button" data-scenario="capture" aria-pressed="false">Capture from glasses <span class="status status--development">In development</span></button>
             </div>
             <ol class="pipeline" id="pipeline" aria-live="polite"></ol>
             <p class="scenario-note" id="scenario-note"></p>
@@ -206,8 +317,9 @@
           <ol class="nb-steps reveal" id="nb-steps" aria-live="polite">
             <li data-current="true"><b>Capture</b>A photo arrives from a connected device.</li>
             <li data-current="true"><b>Inbox</b>It lands in the Notebook — nothing classified yet, nothing lost.</li>
-            <li data-current="true"><b>Organize</b>Archive, search, and keep editing — all offline, no provider needed.</li>
-            <li data-current="false" class="nb-planned"><b>Remember <span class="pill pill--planned">Planned</span></b>Explicit memory promotion and a visible Working Set are the next slices — not current behavior.</li>
+            <li data-current="true"><b>Organize</b>Archive, search, keep editing — offline, no provider needed.</li>
+            <li data-current="true"><b>Working Set <span class="status status--development">In development</span></b>Select what Halo should consider next — visible in the current development build; the full flow is still being completed.</li>
+            <li data-current="false" class="nb-planned"><b>Memory promotion <span class="status status--planned">Planned</span></b>Explicit promotion with provenance, correction and forgetting — a later slice, not current behavior.</li>
           </ol>
         </div>
       </div>
@@ -221,59 +333,67 @@
           <h2>Devices join by what they can do.</h2>
           <p>Halo evaluates capabilities — microphone, speaker, camera, display, buttons — not brands. The runtime supplies reasoning and the workspace; devices contribute senses and outputs.</p>
         </div>
-        <div class="constellation reveal">
-          <svg viewBox="0 0 640 540" role="img" aria-label="Diagram: the Halo runtime supplies reasoning and workspace capabilities; physical devices supply senses and outputs; remote cloud providers are optional and user-selected">
-            <!-- runtime core -->
-            <rect class="topo-box" x="205" y="200" width="230" height="120" rx="18"/>
-            <text class="const-hub" x="320" y="248" text-anchor="middle">HALO RUNTIME</text>
-            <text class="const-cap" x="320" y="272" text-anchor="middle">REASONING · WORKSPACE · SPEECH</text>
-            <text class="const-cap" x="320" y="290" text-anchor="middle">LOCAL BY DEFAULT</text>
-            <!-- endpoints -->
-            <g>
-              <circle class="const-dot" cx="100" cy="90" r="5"/>
-              <text class="const-name" x="100" y="66" text-anchor="middle">Phone</text>
-              <text class="const-cap" x="100" y="112" text-anchor="middle">display · mic · speaker · compute</text>
-              <line class="const-line" x1="320" y1="200" x2="115" y2="105"/>
 
-              <circle class="const-dot" cx="540" cy="90" r="5"/>
-              <text class="const-name" x="540" y="66" text-anchor="middle">Glasses</text>
-              <text class="const-cap" x="540" y="112" text-anchor="middle">camera · mic · speaker</text>
-              <line class="const-line" x1="320" y1="200" x2="525" y2="105"/>
-
-              <circle class="const-dot" cx="590" cy="330" r="5"/>
-              <text class="const-name" x="590" y="306" text-anchor="middle">Earbuds</text>
-              <text class="const-cap" x="590" y="352" text-anchor="middle">mic · speaker · touch</text>
-              <line class="const-line" x1="435" y1="270" x2="575" y2="322"/>
-
-              <circle class="const-dot" cx="490" cy="470" r="5"/>
-              <text class="const-name" x="490" y="446" text-anchor="middle">Watch · ring</text>
-              <text class="const-cap" x="490" y="492" text-anchor="middle">display · haptics · sensors</text>
-              <line class="const-line" x1="390" y1="320" x2="472" y2="452"/>
-
-              <circle class="const-dot" cx="150" cy="470" r="5"/>
-              <text class="const-name" x="150" y="446" text-anchor="middle">Robot</text>
-              <text class="const-cap" x="150" y="492" text-anchor="middle">drive · camera · safety telemetry</text>
-              <line class="const-line" x1="250" y1="320" x2="168" y2="452"/>
-
-              <circle class="const-dot" cx="50" cy="330" r="5"/>
-              <text class="const-name" x="50" y="306" text-anchor="middle">Notebook</text>
-              <text class="const-cap" x="50" y="352" text-anchor="middle">workspace · persistent context</text>
-              <line class="const-line" x1="205" y1="270" x2="66" y2="322"/>
-            </g>
-            <!-- optional cloud -->
+        <!-- Desktop: full constellation -->
+        <div class="constellation reveal diagram-desktop">
+          <svg viewBox="0 0 640 540" role="img" aria-label="Diagram: the Halo runtime supplies reasoning, workspace and speech; physical devices supply senses and outputs; a cloud provider is optional and user-selected">
             <text class="topo-optional" x="320" y="36" text-anchor="middle">OPTIONAL · USER-SELECTED</text>
             <rect class="topo-box topo-box--dashed" x="230" y="46" width="180" height="38" rx="12"/>
             <text class="const-cap" x="320" y="70" text-anchor="middle">CLOUD MODEL PROVIDER</text>
             <line class="topo-line" x1="320" y1="118" x2="320" y2="84"/>
-            <text class="const-cap" x="334" y="106">explicit configuration</text>
+            <rect class="topo-box" x="205" y="200" width="230" height="120" rx="18"/>
+            <text class="const-hub" x="320" y="248" text-anchor="middle">HALO RUNTIME</text>
+            <text class="const-cap" x="320" y="272" text-anchor="middle">REASONING · WORKSPACE · SPEECH</text>
+            <text class="const-cap" x="320" y="290" text-anchor="middle">LOCAL BY DEFAULT</text>
+            <g>
+              <circle class="const-dot" cx="100" cy="120" r="5"/>
+              <text class="const-name" x="100" y="96" text-anchor="middle">Phone</text>
+              <text class="const-cap" x="100" y="142" text-anchor="middle">display · mic · speaker · compute</text>
+              <line class="const-line" x1="320" y1="200" x2="115" y2="132"/>
+              <circle class="const-dot" cx="540" cy="120" r="5"/>
+              <text class="const-name" x="540" y="96" text-anchor="middle">Glasses</text>
+              <text class="const-cap" x="540" y="142" text-anchor="middle">camera · mic · speaker</text>
+              <line class="const-line" x1="320" y1="200" x2="525" y2="132"/>
+              <circle class="const-dot" cx="580" cy="320" r="5"/>
+              <text class="const-name" x="580" y="296" text-anchor="middle">Earbuds</text>
+              <text class="const-cap" x="580" y="342" text-anchor="middle">mic · speaker · touch</text>
+              <line class="const-line" x1="435" y1="270" x2="565" y2="312"/>
+              <circle class="const-dot" cx="480" cy="460" r="5"/>
+              <text class="const-name" x="480" y="436" text-anchor="middle">Watch · ring</text>
+              <text class="const-cap" x="480" y="482" text-anchor="middle">display · haptics · sensors</text>
+              <line class="const-line" x1="390" y1="320" x2="464" y2="440"/>
+              <circle class="const-dot" cx="160" cy="460" r="5"/>
+              <text class="const-name" x="160" y="436" text-anchor="middle">Robot</text>
+              <text class="const-cap" x="160" y="482" text-anchor="middle">motion · telemetry · camera</text>
+              <line class="const-line" x1="250" y1="320" x2="176" y2="440"/>
+              <circle class="const-dot" cx="60" cy="320" r="5"/>
+              <text class="const-name" x="60" y="296" text-anchor="middle">Notebook</text>
+              <text class="const-cap" x="60" y="342" text-anchor="middle">workspace · persistent context</text>
+              <line class="const-line" x1="205" y1="270" x2="76" y2="312"/>
+            </g>
           </svg>
           <div class="constellation-legend">
             <div class="const-item"><strong>Glasses</strong><span class="mono">camera · microphone · speaker · buttons</span></div>
             <div class="const-item"><strong>Earbuds</strong><span class="mono">microphone · speaker · touch</span></div>
             <div class="const-item"><strong>Phone</strong><span class="mono">camera · microphone · speaker · display · sensors · compute</span></div>
-            <div class="const-item"><strong>Robots</strong><span class="mono">drive · camera · safety telemetry · experimental</span></div>
+            <div class="const-item"><strong>Robots</strong><span class="mono">motion · telemetry · camera — experimental embodiment</span></div>
           </div>
         </div>
+
+        <!-- Mobile: readable HTML flow instead of a shrunken SVG -->
+        <div class="diagram-mobile reveal" aria-label="Capability model: the runtime at the center, devices around it">
+          <div class="dm-hub">
+            <b>HALO RUNTIME</b>
+            <span class="mono">Reasoning · Workspace · Speech — local by default</span>
+          </div>
+          <div class="dm-node"><b>Phone</b><span class="mono">display · microphone · speaker · compute</span></div>
+          <div class="dm-node"><b>Glasses</b><span class="mono">camera · microphone · speaker</span></div>
+          <div class="dm-node"><b>Earbuds</b><span class="mono">microphone · speaker · touch</span></div>
+          <div class="dm-node"><b>Watch / ring</b><span class="mono">display · haptics · sensors</span></div>
+          <div class="dm-node"><b>Robot</b><span class="mono">motion · telemetry · camera</span></div>
+          <p class="dm-optional"><b>Optional, user-selected:</b> a remote cloud model provider, explicitly configured.</p>
+        </div>
+
         <p class="keyline reveal">Halo cares about <em>capabilities, not logos.</em></p>
       </div>
     </section>
@@ -292,8 +412,9 @@
           </p>
         </div>
         <div class="local-grid">
-          <div class="topology reveal">
-            <svg viewBox="0 0 760 420" role="img" aria-label="Topology: runtime, Notebook and local model inside the device boundary; a cloud provider sits outside as an optional, explicitly configured capability">
+          <!-- Desktop topology -->
+          <div class="topology reveal diagram-desktop">
+            <svg viewBox="0 0 760 420" role="img" aria-label="Topology: runtime, Notebook and local model inside the device boundary; a remote provider sits outside as an optional, explicitly configured capability">
               <text class="topo-optional" x="380" y="24" text-anchor="middle">OPTIONAL · EXPLICITLY CONFIGURED</text>
               <rect class="topo-box topo-box--dashed" x="280" y="38" width="200" height="42" rx="12"/>
               <text class="topo-label--mono" x="380" y="64" text-anchor="middle">Remote model (OpenRouter)</text>
@@ -314,17 +435,24 @@
               <line class="topo-line topo-line--solid" x1="407" y1="298" x2="407" y2="336"/>
               <rect class="topo-box topo-box--inner" x="322" y="336" width="170" height="50" rx="12"/>
               <text class="topo-label" x="407" y="366" text-anchor="middle">Memory (planned)</text>
-              <text class="topo-label--mono" x="195" y="380" text-anchor="middle">local</text>
-              <text class="topo-label--mono" x="609" y="380" text-anchor="middle">local default</text>
             </svg>
           </div>
+          <!-- Mobile topology flow -->
+          <div class="diagram-mobile reveal" aria-label="Where processing happens">
+            <div class="dm-hub"><b>YOUR PHONE</b><span class="mono">the device boundary</span></div>
+            <div class="dm-node"><b>Halo Runtime</b><span class="mono">observe · understand · reason · act</span></div>
+            <div class="dm-node"><b>Notebook</b><span class="mono">persistent workspace</span></div>
+            <div class="dm-node"><b>Local llama.cpp</b><span class="mono">default inference, on device</span></div>
+            <p class="dm-optional"><b>Optional boundary crossing:</b> OpenRouter or a configured remote provider — only when you select it.</p>
+          </div>
+
           <div class="local-side">
-            <div class="privacy-proof reveal">
-              <span class="chip"><b>No Halo account.</b> Nothing to sign into.</span>
-              <span class="chip"><b>No Halo cloud required.</b></span>
-              <span class="chip"><b>No helper application.</b> Native OS APIs first.</span>
-              <span class="chip"><b>Perpetual ownership.</b> Works even if our services vanish.</span>
-            </div>
+            <p class="privacy-proof reveal">
+              <span><b>No Halo account.</b> Nothing to sign into.</span>
+              <span><b>No Halo cloud required.</b></span>
+              <span><b>No helper application.</b> Native OS APIs first.</span>
+              <span><b>Perpetual ownership.</b> Works even if our services vanish.</span>
+            </p>
             <div class="cont-demo reveal">
               <p class="cont-title">Origin continuity — try it</p>
               <div class="cont-toggles">
@@ -368,11 +496,10 @@
         <div class="embodiment">
           <div class="reveal">
             <ul class="beyond-list">
-              <li><span><b>Wearable capability layer</b><br />Devices join by capability, starting from the verified glasses track — in development.</span></li>
-              <li><span><b>Halo Platform</b><br />A tracked base with a pan servo. Your phone docks on top, running the full runtime.</span></li>
-              <li><span><b>Cross-host future</b><br />The runtime is host-agnostic — Linux and Windows are future targets.</span></li>
+              <li><span><b>Wearable capability layer</b> — devices join by capability, starting from the verified glasses track. <span class="status status--development">In development</span></span></li>
+              <li><span><b>Halo Platform</b> — a tracked base with a pan servo; your phone docks on top, running the full runtime. <span class="status status--experimental">Experimental</span></span></li>
+              <li><span><b>Cross-host future</b> — the runtime is host-agnostic; Linux and Windows are future targets. <span class="status status--planned">Planned</span></span></li>
             </ul>
-            <span class="pill-note">Experimental embodiment</span>
           </div>
           <div class="rover reveal">
             <svg viewBox="0 0 420 300" role="img" aria-label="Schematic of the experimental Halo Platform: tracked base, pan servo, docked phone running the runtime">
@@ -436,6 +563,7 @@
         </div>
         <div class="horizon-cta reveal">
           <a class="btn" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Full roadmap → GitHub</a>
+          <a class="btn" href="https://github.com/slafftrosheen/Halo/tree/main/docs" target="_blank" rel="noopener">Read the docs ↗</a>
         </div>
       </div>
     </section>
@@ -446,6 +574,7 @@
         <p>Halo is open source under active development. Read the docs, run it on your phone, or help build the capability layer.</p>
         <div class="cta-actions">
           <a class="btn btn--primary btn--lg" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">Halo on GitHub</a>
+          <a class="btn btn--lg" href="https://github.com/slafftrosheen/Halo/tree/main/docs" target="_blank" rel="noopener">Read the architecture</a>
           <a class="btn btn--lg" href="https://github.com/slafftrosheen/HaloWeb" target="_blank" rel="noopener">This site's source</a>
         </div>
       </div>
@@ -459,8 +588,8 @@
     </div>
   </footer>
 
-  <script src="js/presence.js?v=3"></script>
-  <script src="js/interactions.js?v=3"></script>
-  <script src="js/main.js?v=3"></script>
+  <script src="js/presence.js?v=4" defer></script>
+  <script src="js/interactions.js?v=4" defer></script>
+  <script src="js/main.js?v=4" defer></script>
 </body>
 </html>
