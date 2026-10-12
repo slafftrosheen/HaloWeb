@@ -354,3 +354,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 @media(max-width:860px){.alpha-kit{grid-template-columns:1fr}.alpha-kit__visual{max-width:740px}.alpha-report{grid-template-columns:1fr;gap:15px}.alpha-subhead{align-items:start;flex-direction:column}.alpha-progress{align-self:start}}
 @media(max-width:620px){.alpha-path{grid-template-columns:1fr}.alpha-path article{padding:17px}.alpha-kit{padding:20px;border-radius:22px}.alpha-kit__copy h3{font-size:clamp(2rem,9vw,3rem)}.alpha-kit__actions{flex-direction:column;align-items:stretch}.alpha-kit__visual figcaption{flex-direction:column;gap:4px}.alpha-file-grid{grid-template-columns:1fr}.alpha-file{min-height:192px;padding:20px}.alpha-file__type{margin-bottom:18px}.alpha-checklist label{gap:13px;padding:20px 4px}.alpha-report{padding:26px 20px}.alpha-report__actions{flex-direction:column;align-items:stretch}.alpha-report__intro h3{font-size:2.1rem}}
 @media(prefers-reduced-motion:reduce){.alpha-file,.alpha-progress__track span,.alpha-checklist label{transition:none}.alpha-file:hover{transform:none}}
+
+/* Language selector */
+.language-picker{display:flex;align-items:center}
+.language-picker select{appearance:none;-webkit-appearance:none;min-height:38px;max-width:132px;padding:0 29px 0 12px;border:1px solid var(--line-strong);border-radius:10px;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23818b99' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;color:var(--text);font:600 .75rem var(--font-sans);cursor:pointer}
+.language-picker select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:620px){.language-picker select{max-width:115px;min-height:36px;padding-left:9px;padding-right:23px}.header-actions{gap:6px}.theme-switch button{padding-inline:6px}}
