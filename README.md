@@ -106,6 +106,36 @@ HaloWeb/
 - one-shot runtime-flow assembly;
 - `prefers-reduced-motion` collapses motion to static presentation.
 
+## Alpha tester programme
+
+The website's [Early Access](https://halo-web-blue.vercel.app/#alpha) section provides a lightweight test route rather than claiming there is already a public Android build. The release button goes to the canonical [Halo Android Releases](https://github.com/slafftrosheen/Halo/releases); no APK is bundled by HaloWeb.
+
+The five example assets are committed **at the repository root** and served by Vercel as static files:
+
+| File | Used for |
+| --- | --- |
+| `03_halo_alpha_quick_test.pdf` | One-page app-wide checklist |
+| `02_study_how_light_affects_plants.pdf` | Study text and citation checks |
+| `01_study_basil_observation.png` | Vision and multimodal comparison |
+| `04_sample_note.txt` | Notebook / Canvas creation and retrieval |
+| `05_copy_paste_prompts.txt` | Reusable questions, expected answers and issue format |
+
+The site uses root-relative same-origin download links with HTML's `download` attribute; **do not move or rename these files without updating `index.html`**. The actual image is also used as a preview. Do not duplicate generated PDF contents into the HTML. The files are small, synthetic, and contain no personal information.
+
+Tester checklist state is kept in the visitor's own browser `localStorage` under `halo-web-alpha-steps-v1`. It is a list of steps **tried**, not a grade or telemetry, and works without storage. The issue template uses the browser Clipboard API on user request; copy failures are shown honestly and users can manually select the template.
+
+### Quick regression checks
+
+1. Open `/#alpha` in light and dark themes on narrow and wide screens.
+2. Download all five files. Check signatures/types: PNG for the illustration, PDF for the two guides, UTF-8 text for the notes and prompts.
+3. Verify that image preview, relative paths and files still work after a static Vercel deployment.
+4. Mark several steps, reload, and confirm only browser-local checkmarks persist. Reset the list; verify the count returns to zero.
+5. Expand the issue template. Copy it over HTTPS; confirm a failure message appears if clipboard access is rejected.
+6. Use keyboard focus and screen reader, then test `prefers-reduced-motion`.
+7. Confirm that the release link never silently points to a fictitious APK and issues go to the actual Halo repository.
+
+No API/backend, signup, analytics, or browser-to-Halo data transmission is involved.
+
 ## Deployment
 
 Vercel serves the repository root directly as a static site.

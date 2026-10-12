@@ -148,8 +148,71 @@
     }
   }
 
+
+  function initAlphaChecklist() {
+    var checks = Array.prototype.slice.call(document.querySelectorAll('[data-alpha-step]'));
+    if (!checks.length) return;
+    var storageKey = 'halo-web-alpha-steps-v1';
+    var counter = document.getElementById('alpha-progress-label');
+    var bar = document.getElementById('alpha-progress-fill');
+    var reset = document.getElementById('alpha-reset');
+
+    function readSaved() {
+      try {
+        var raw = localStorage.getItem(storageKey);
+        var parsed = raw ? JSON.parse(raw) : [];
+        return Array.isArray(parsed) ? parsed.filter(function (v) { return typeof v === 'string'; }) : [];
+      } catch (_) { return []; }
+    }
+
+    function refresh() {
+      var done = checks.filter(function (check) { return check.checked; });
+      if (counter) counter.textContent = done.length + ' of ' + checks.length + ' tried';
+      if (bar) bar.style.width = (done.length / checks.length * 100) + '%';
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(done.map(function (check) {
+          return check.getAttribute('data-alpha-step');
+        })));
+      } catch (_) { /* Checklist still works without local storage. */ }
+    }
+
+    var saved = readSaved();
+    checks.forEach(function (check) {
+      check.checked = saved.indexOf(check.getAttribute('data-alpha-step')) !== -1;
+      check.addEventListener('change', refresh);
+    });
+
+    if (reset) reset.addEventListener('click', function () {
+      checks.forEach(function (check) { check.checked = false; });
+      refresh();
+      if (checks[0]) checks[0].focus();
+    });
+    refresh();
+  }
+
+  function initAlphaReportCopy() {
+    var button = document.getElementById('alpha-copy-template');
+    var template = document.getElementById('alpha-issue-template');
+    var status = document.getElementById('alpha-copy-status');
+    if (!button || !template) return;
+    button.addEventListener('click', function () {
+      var text = template.textContent.trim();
+      if (!navigator.clipboard || !navigator.clipboard.writeText) {
+        if (status) status.textContent = 'Select the template above to copy it manually.';
+        return;
+      }
+      navigator.clipboard.writeText(text).then(function () {
+        if (status) status.textContent = 'Template copied.';
+      }, function () {
+        if (status) status.textContent = 'Copy unavailable. Select the template above instead.';
+      });
+    });
+  }
+
   initTheme();
   initScrollChrome();
   initActiveNavigation();
   initReveals();
+  initAlphaChecklist();
+  initAlphaReportCopy();
 })();

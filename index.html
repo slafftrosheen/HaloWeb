@@ -31,7 +31,7 @@
     })();
   </script>
   <link rel="stylesheet" href="css/tokens.css?v=7" />
-  <link rel="stylesheet" href="css/main.css?v=8" />
+  <link rel="stylesheet" href="css/main.css?v=9" />
 
   <script type="application/ld+json">
   {
@@ -66,7 +66,7 @@
         <a href="#workspace">Workspace</a>
         <a href="#devices">Devices</a>
         <a href="#status">Status</a>
-        <a class="nav-alpha" href="#alpha">Join alpha <span aria-hidden="true">↗</span></a>
+        <a class="nav-alpha" href="#alpha">For testers <span aria-hidden="true">↗</span></a>
       </nav>
 
       <div class="header-actions">
@@ -92,7 +92,7 @@
             the same runtime to connected devices. No Halo account or mandatory cloud is required.
           </p>
           <div class="hero-actions">
-            <a class="button button--dark" href="#alpha">Try the alpha</a>
+            <a class="button button--dark" href="#alpha">Get the alpha test kit</a>
             <a class="button" href="#product">Explore Halo</a>
             <a class="button" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">View source ↗</a>
           </div>
@@ -502,25 +502,122 @@
         </div>
       </div>
     </section>
+
     <section class="section alpha" id="alpha" aria-labelledby="alpha-title">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-label">08 · EARLY ACCESS</p>
-          <h2 id="alpha-title">Build the next Halo with us.</h2>
-          <p>Halo is getting ready for its first alpha testers. You can explore the latest published builds, try everyday tasks and help us find what still needs work. This is experimental software, not a finished product.</p>
+          <p class="section-label">08 · HALO ALPHA TESTING</p>
+          <h2 id="alpha-title">Help make Halo make sense.</h2>
+          <p>You don't need smart glasses, technical experience, or your own documents. Start with a published Android build if one is available, download the free example files below, and tell us where Halo feels clear—or confusing. The test route is a guide, not an exam.</p>
         </header>
-        <div class="status-grid reveal">
-          <article><span>01 · GET A BUILD</span><h3>Check GitHub Releases</h3><p>Download an Android APK from a published release when one is available. If there are no releases yet, the programme is still being prepared.</p></article>
-          <article><span>02 · TRY IT</span><h3>Start with the basics</h3><p>Test setup, voice and text, local models, Notebook, Canvas and phone actions. Some features need permissions, a model download or your own provider credentials.</p></article>
-          <article><span>03 · REPORT BACK</span><h3>Tell us what happened</h3><p>Include your phone model, Android version, Halo version, steps to reproduce and expected versus actual results. Remove API keys, personal data and private logs before posting.</p></article>
+
+        <div class="alpha-path reveal" aria-label="How to participate">
+          <article><span class="alpha-path__number">01</span><div><h3>Get Halo</h3><p>Check <a href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer">Android releases ↗</a>. No published APK? The app is not yet available through this programme.</p></div></article>
+          <article><span class="alpha-path__number">02</span><div><h3>Grab the test kit</h3><p>One short reading, one observation image, and a quick route through the wider app.</p></div></article>
+          <article><span class="alpha-path__number">03</span><div><h3>Try real workflows</h3><p>Use the checklist, skip hardware you don't own, and note what actually happens.</p></div></article>
+          <article><span class="alpha-path__number">04</span><div><h3>Share a finding</h3><p>Report confusing moments as well as broken features. Both help shape Halo.</p></div></article>
         </div>
-        <div class="closing reveal">
-          <div><p class="section-label">ALPHA TESTER PROGRAMME</p><h2>Early access, with clear expectations.</h2><p>Expect rough edges, incomplete device support and changes between builds. Back up important work; do not rely on alpha builds for critical tasks. No invitation or release is implied until it appears on GitHub.</p></div>
-          <div class="closing-actions">
-            <a class="button button--light" href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener">View Android releases ↗</a>
-            <a class="button button--ghost-dark" href="https://github.com/slafftrosheen/Halo/issues/new/choose" target="_blank" rel="noopener">Report an issue ↗</a>
+
+        <div class="alpha-kit reveal" id="alpha-kit">
+          <div class="alpha-kit__copy">
+            <p class="section-label">FREE · NO ACCOUNT · TEST DATA</p>
+            <h3>Everything you need for a first run.</h3>
+            <p>The small Study example follows three basil seedlings with different daily light exposure. Its PDF has the background facts, and the image holds the final measurements. Together they reveal whether Halo actually uses the source—or merely makes up a convincing answer.</p>
+            <div class="alpha-kit__actions">
+              <a class="button button--dark" href="/03_halo_alpha_quick_test.pdf" download="Halo_Alpha_Quick_Test.pdf" type="application/pdf">Download quick test guide <span aria-hidden="true">↓</span></a>
+              <a class="button" href="#alpha-files">Browse all five files <span aria-hidden="true">↘</span></a>
+            </div>
+            <p class="alpha-fineprint">Sample measurements are fictional and intended only for testing. Some Study image tasks require a configured vision-capable model.</p>
+          </div>
+          <figure class="alpha-kit__visual">
+            <img src="/01_study_basil_observation.png" alt="Sample study illustration: basil pots A, B and C under different light exposure, labeled 6 cm, 10 cm and 14 cm in final height." loading="lazy" decoding="async" width="2100" height="1260" />
+            <figcaption><span>01 / OBSERVATION IMAGE</span><span>USE WITH THE ONE-PAGE READING</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="alpha-resources reveal" id="alpha-files">
+          <div class="alpha-subhead">
+            <div><p class="section-label">YOUR DOWNLOADS</p><h3>Five files. No signup.</h3><p>Each file downloads directly from this website. Start with the guide, then import the other materials into Halo as needed.</p></div>
+            <span class="alpha-count">05 FILES · READY TO USE</span>
+          </div>
+          <div class="alpha-file-grid">
+            <a class="alpha-file alpha-file--guide" href="/03_halo_alpha_quick_test.pdf" download="03_halo_alpha_quick_test.pdf" type="application/pdf" aria-label="Download Halo alpha quick test guide PDF">
+              <span class="alpha-file__type">PDF <span>57 KB</span></span>
+              <strong>Alpha quick test guide</strong>
+              <span class="alpha-file__description">One-page checklist for trying the whole app. Best place to start.</span>
+              <span class="alpha-file__action">Download file <span aria-hidden="true">↘</span></span>
+            </a>
+            <a class="alpha-file" href="/02_study_how_light_affects_plants.pdf" download="02_study_how_light_affects_plants.pdf" type="application/pdf" aria-label="Download How light affects plants study PDF">
+              <span class="alpha-file__type">PDF <span>56 KB</span></span>
+              <strong>Short science reading</strong>
+              <span class="alpha-file__description">A one-page lesson about light, photosynthesis and a fair experiment.</span>
+              <span class="alpha-file__action">Download file <span aria-hidden="true">↘</span></span>
+            </a>
+            <a class="alpha-file" href="/01_study_basil_observation.png" download="01_study_basil_observation.png" type="image/png" aria-label="Download basil observation study image PNG">
+              <span class="alpha-file__type">PNG <span>170 KB</span></span>
+              <strong>Plant observation image</strong>
+              <span class="alpha-file__description">Three labeled pots and their measured heights; use it to check visual understanding.</span>
+              <span class="alpha-file__action">Download file <span aria-hidden="true">↘</span></span>
+            </a>
+            <a class="alpha-file" href="/04_sample_note.txt" download="04_sample_note.txt" type="text/plain" aria-label="Download sample notebook note TXT">
+              <span class="alpha-file__type">TXT <span>285 B</span></span>
+              <strong>Sample Notebook note</strong>
+              <span class="alpha-file__description">Ready-made text to test adding, editing and finding content in Notebook or Canvas.</span>
+              <span class="alpha-file__action">Download file <span aria-hidden="true">↘</span></span>
+            </a>
+            <a class="alpha-file" href="/05_copy_paste_prompts.txt" download="05_copy_paste_prompts.txt" type="text/plain" aria-label="Download copy and paste test prompts TXT">
+              <span class="alpha-file__type">TXT <span>2.3 KB</span></span>
+              <strong>Copy-and-paste prompts</strong>
+              <span class="alpha-file__description">Ready-to-use questions, expected observations and an issue report template.</span>
+              <span class="alpha-file__action">Download file <span aria-hidden="true">↘</span></span>
+            </a>
           </div>
         </div>
+
+        <div class="alpha-walkthrough reveal" id="alpha-walkthrough">
+          <div class="alpha-subhead">
+            <div><p class="section-label">A THOUGHTFUL FIRST RUN</p><h3>Try the app in about 15–25 minutes.</h3><p>Tick a step when you've tried it—not only if it passed. Checkmarks are stored in this browser, never sent to Halo.</p></div>
+            <div class="alpha-progress" aria-live="polite" aria-atomic="true"><span id="alpha-progress-label">0 of 7 tried</span><div class="alpha-progress__track"><span id="alpha-progress-fill"></span></div><button type="button" class="alpha-reset" id="alpha-reset">Reset</button></div>
+          </div>
+          <ol class="alpha-checklist">
+            <li><label><input type="checkbox" data-alpha-step="setup" /><span class="alpha-checklist__body"><strong>Get oriented <span>01 · SETUP</span></strong><small>Open Halo, find Home, Notebook, Devices and Settings. Configure one usable AI model/provider. If no APK is published, skip app tests for now.</small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="home" /><span class="alpha-checklist__body"><strong>Ask a basic question <span>02 · HOME</span></strong><small>Try: “Explain photosynthesis in two simple sentences.” Look for a clear answer and honest processing or failure status.</small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="study-pdf" /><span class="alpha-checklist__body"><strong>Read from a real PDF <span>03 · STUDY</span></strong><small>Start a lesson using the science PDF. Ask which days the plants were watered and how much each received altogether. Expected: days 1, 3, 5, 7, 9, 11; <b>300 mL per pot</b>.</small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="study-image" /><span class="alpha-checklist__body"><strong>Understand the image <span>04 · STUDY / VISION</span></strong><small>Use the basil PNG. Ask which pot is tallest and by how much compared with A. Expected: <b>C at 14 cm, 8 cm taller than A</b>. If vision isn't available, Halo should say so—not guess.</small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="guidance" /><span class="alpha-checklist__body"><strong>Learn rather than just receive answers <span>05 · STUDY / PRACTICE</span></strong><small>Say “Give me one hint, not the answer.” Try an answer, request another explanation, then draft practice cards. They should not enter the review queue without your choice.</small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="workspace" /><span class="alpha-checklist__body"><strong>Save and find something <span>06 · NOTEBOOK / CANVAS</span></strong><small>Import or paste the sample note. Edit it, locate it again, and try sending content into Canvas if available. Check Activity for an accurate record of actions.</small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="extras" /><span class="alpha-checklist__body"><strong>Try one extra path <span>07 · YOUR CHOICE</span></strong><small>Try voice in your language, reconnect a supported device, switch an app language, or recover from an unavailable model. Skip anything requiring hardware or credentials you don't have.</small></span></label></li>
+          </ol>
+          <p class="alpha-fineprint">A missed feature, unsupported file, failed provider, or missing permission is valuable test evidence. Record the actual outcome instead of marking a guess as success.</p>
+        </div>
+
+        <div class="alpha-report reveal" id="alpha-report">
+          <div class="alpha-report__intro">
+            <p class="section-label">FOUND SOMETHING?</p>
+            <h3>Even a confusing button is worth reporting.</h3>
+            <p>Tell us which screen you were on, what you tried, what you expected and what actually happened. Include your Android and Halo versions if relevant. Never post API keys, personal files, identifiers, or unredacted private logs.</p>
+            <div class="alpha-report__actions">
+              <a class="button button--light" href="https://github.com/slafftrosheen/Halo/issues/new/choose" target="_blank" rel="noopener noreferrer">Report on GitHub <span aria-hidden="true">↗</span></a>
+              <a class="button button--ghost-dark" href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer">Check Android releases <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <details class="alpha-report__template">
+            <summary>Quick issue template <span aria-hidden="true">+</span></summary>
+            <div class="alpha-report__template-content">
+              <pre id="alpha-issue-template">Halo version / Android version:
+Screen or feature:
+What I tried:
+Expected:
+Actual:
+Steps to reproduce:
+Screenshot (redact private data):</pre>
+              <button type="button" id="alpha-copy-template" class="alpha-copy">Copy template</button>
+              <span id="alpha-copy-status" class="alpha-copy-status" role="status" aria-live="polite"></span>
+            </div>
+          </details>
+        </div>
+
+        <p class="alpha-availability reveal">Alpha means unfinished software. Features and supported devices can change. Back up important work and avoid relying on Halo for safety-critical tasks. A public build only exists when a release appears on <a href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer">GitHub Releases ↗</a>.</p>
       </div>
     </section>
   </main>
@@ -529,10 +626,11 @@
     <div class="container footer-inner">
       <span class="footer-brand"><span class="signal-mini signal-mini--micro" aria-hidden="true"></span> Halo</span>
       <span>Open source · local-first · no Halo account required</span>
+      <a href="#alpha">Alpha test kit ↗</a>
       <a href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
   </footer>
 
-  <script src="js/main.js?v=7" defer></script>
+  <script src="js/main.js?v=8" defer></script>
 </body>
 </html>
