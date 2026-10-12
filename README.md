@@ -55,6 +55,28 @@ The page keeps these boundaries visible:
 
 `CURRENT-STATE.md` remains authoritative when source presence and acceptance status differ.
 
+## Languages and translation maintenance
+
+HaloWeb supports **English, Latvian (Latviešu), and Russian (Русский)** without a framework or translation service. The native language selector uses endonyms and an accessible label translated into the currently selected language.
+
+- `index.html` is the English source of truth.
+- `js/i18n.lv.js` and `js/i18n.ru.js` contain the translated English text keys.
+- `js/i18n.js` applies translations to text nodes (including multiline copy and the issue-report template), alt/ARIA labels, titles, metadata, and structured descriptions.
+- `js/main.js` uses the localization API for live checklist progress and clipboard success/failure messages.
+- Visitors may share a language using `?lang=lv` or `?lang=ru`. An explicit URL choice wins over the last saved browser choice; otherwise the browser language is used, falling back to English. Language changes update `<html lang>`, persist locally, and do **not** clear checked test steps.
+- English product names, file formats, and hardware/model identifiers intentionally remain untranslated.
+- Downloadable test documents and the text printed *inside* temporary SVG mockups are independent assets and are **not** dynamically translated. Native screenshots should be captured in the languages desired for each gallery.
+
+When editing visible English website copy, add matching entries to **both** locale files. When introducing new interactive status messages, look them up through `window.HaloI18n.t(key)` and handle `halo:languagechange` for an already-displayed message.
+
+Run the dependency-free regression suite with:
+
+```sh
+node --test tests/i18n.test.mjs
+```
+
+It checks translation coverage, accessibility text, metadata, script load order, issue-template localization, and English → Latvian → Russian → English switching. Real mobile-browser and screen-reader checks should still accompany release acceptance.
+
 ## UI assets
 
 All phone previews are separate static assets under `assets/screens/`; no phone UI is rebuilt in HTML.
