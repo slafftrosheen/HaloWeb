@@ -258,5 +258,6 @@ window.HaloTranslations.lv={
   "Privacy policy is part of routing.": "Privātums ir daļa no datu maršrutēšanas.",
   "Restarts should not duplicate side effects.": "Restartēšana nedrīkst atkārtot jau paveiktās darbības.",
   "Open Halo on GitHub ↗": "Atvērt Halo vietnē GitHub ↗",
-  "Halo — a local-first AI assistant and cognitive runtime": "Halo — lokāls AI asistents un izpildvide Android ierīcēm"
+  "Halo — a local-first AI assistant and cognitive runtime": "Halo — lokāls AI asistents un izpildvide Android ierīcēm",
+  "Site language": "Vietnes valoda"
 };
