@@ -258,5 +258,6 @@ window.HaloTranslations.ru={
   "Privacy policy is part of routing.": "Приватность встроена в маршрутизацию данных.",
   "Restarts should not duplicate side effects.": "Перезапуск не должен повторять уже выполненные действия.",
   "Open Halo on GitHub ↗": "Открыть Halo на GitHub ↗",
-  "Halo — a local-first AI assistant and cognitive runtime": "Halo — локальный ИИ-ассистент для Android"
+  "Halo — a local-first AI assistant and cognitive runtime": "Halo — локальный ИИ-ассистент для Android",
+  "Site language": "Язык сайта"
 };
