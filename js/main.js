@@ -259,6 +259,16 @@
     var header = document.querySelector('.site-header');
     var raf = 0;
 
+    // The sticky header becomes two rows on smaller screens. Use its measured
+    // height for all in-page links, including the alpha download/feedback paths.
+    function syncHeaderHeight() {
+      if (header) root.style.setProperty('--sticky-header-height', Math.ceil(header.getBoundingClientRect().height + 16) + 'px');
+    }
+    syncHeaderHeight();
+    if (header && 'ResizeObserver' in window) new ResizeObserver(syncHeaderHeight).observe(header);
+    window.addEventListener('resize', syncHeaderHeight);
+    window.addEventListener('pageshow', syncHeaderHeight);
+
     function update() {
       raf = 0;
       var doc = document.documentElement;
