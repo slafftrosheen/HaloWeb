@@ -472,7 +472,7 @@ body{overflow-x:clip}
 :is(.site-nav,.carousel-nav,.app-track){-webkit-overflow-scrolling:touch}
 .site-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
 .site-nav a:focus-visible,.carousel-nav button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
-.section[id],#alpha-files,#alpha-walkthrough,#feedback{scroll-margin-top:var(--sticky-header-height,calc(var(--header-h) + 20px))}
+.section[id],#alpha-files,#alpha-walkthrough,#feedback{scroll-margin-top:0}
 html{scroll-padding-top:var(--sticky-header-height,calc(var(--header-h) + 20px))}
 .hero{padding-block:clamp(46px,7vw,88px)}
 .hero-grid{grid-template-columns:minmax(0,1fr) minmax(260px,360px);gap:clamp(30px,5vw,76px)}
