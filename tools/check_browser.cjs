@@ -11,7 +11,7 @@ const fs = require('node:fs');
  page.on('response', r => {if(r.status() >= 400) errors.push(`${r.status()} ${r.url()}`);});
  const output = path.resolve(__dirname, '../../.codex/haloweb-review-20261013');
  fs.mkdirSync(output, {recursive:true});
- for (const width of [1440, 768, 390, 320]) {
+ for (const width of [1440, 1280, 1024, 768, 390, 320]) {
   await page.setViewportSize({width, height:960});
   await page.goto('http://127.0.0.1:8765/?lang=en');
   for (const lang of ['en','lv','ru']) {
@@ -28,6 +28,18 @@ const fs = require('node:fs');
      }
      const header = document.querySelector('.header-actions').getBoundingClientRect();
      if(header.right > innerWidth || header.left < 0) problems.push('header clipped');
+     const masthead = document.querySelector('.site-header');
+     const nav = document.querySelector('.site-nav');
+     const navRect = nav.getBoundingClientRect();
+     if(getComputedStyle(nav).display === 'none' || navRect.width < 140 || navRect.height < 35)
+      problems.push('navigation is missing or too small');
+     if([...nav.querySelectorAll('a')].some(link => link.getBoundingClientRect().height < 43))
+      problems.push('navigation touch target below 44px');
+     const offset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-header-height'));
+     if(!Number.isFinite(offset) || offset + 1 < masthead.getBoundingClientRect().height)
+      problems.push('in-page links can hide behind sticky header');
+     const hero = document.querySelector('.hero-shot img').getBoundingClientRect();
+     if(hero.height > 635) problems.push('hero screenshot is oversized');
      for(const img of document.images) {
       if(img.complete && !img.naturalWidth) problems.push(`broken image ${img.src}`);
       if(img.complete && img.naturalWidth && img.getBoundingClientRect().width) {
@@ -41,6 +53,21 @@ const fs = require('node:fs');
    }
   }
  }
+ // Verify an anchor actually lands below the two-row sticky header.
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('http://127.0.0.1:8765/?lang=ru');
+ await page.evaluate(() => {
+  document.documentElement.style.scrollBehavior = 'auto';
+  document.querySelector('.site-nav a[href="#alpha"]').click();
+ });
+ await page.waitForTimeout(100);
+ const anchorMetrics = await page.evaluate(() => ({
+  top: document.getElementById('alpha').getBoundingClientRect().top,
+  header: document.querySelector('.site-header').getBoundingClientRect().height
+ }));
+ assert.ok(anchorMetrics.top >= anchorMetrics.header - 3
+   && anchorMetrics.top <= anchorMetrics.header + 60,
+   'alpha anchor must remain visible below responsive header');
  await page.setViewportSize({width:1440,height:1000});
  await page.goto('http://127.0.0.1:8765/?lang=en');
  await page.emulateMedia({reducedMotion:'reduce'});
@@ -152,7 +179,7 @@ const fs = require('node:fs');
  await blockedPage.selectOption('#site-language','ru');
  assert.equal(await blockedPage.locator('html').getAttribute('lang'),'ru');
  assert.deepEqual(errors,[]);
- console.log('PASS: 24 viewport/language/theme combinations, workspace tabs and keyboard navigation, carousel navigation, mail draft encoding and recipient, form state and reset, assets, persistence, checklist, copy, no-JS and blocked-storage fallback.');
+ console.log('PASS: 36 viewport/language/theme combinations, workspace tabs and keyboard navigation, carousel navigation, mail draft encoding and recipient, form state and reset, assets, persistence, checklist, copy, no-JS and blocked-storage fallback.');
  console.log(`Review images: ${output}`);
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1);});
