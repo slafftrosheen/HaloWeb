@@ -27,13 +27,12 @@
         var theme = mode === "system"
           ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
           : mode;
-        document.documentElement.setAttribute("data-js", "on");
         document.documentElement.setAttribute("data-theme", theme);
       } catch (_) {}
     })();
   </script>
   <link rel="stylesheet" href="css/tokens.css?v=10" />
-  <link rel="stylesheet" href="css/main.css?v=12" />
+  <link rel="stylesheet" href="css/main.css?v=13" />
 
   <script type="application/ld+json">
   {
@@ -107,7 +106,7 @@
 
         <figure class="hero-shot shot-reveal intro-enter" style="--intro-delay:120ms">
           <div class="shot-frame">
-            <img src="assets/screens/home.jpg" width="1080" height="2400" alt="Halo Home with a paused task, an unconfirmed action and the message composer." data-i18n-alt="t031" />
+            <img src="assets/screens/home.jpg" width="1080" height="2400" fetchpriority="high" decoding="async" alt="Halo Home with a paused task, an unconfirmed action and the message composer." data-i18n-alt="t031" />
           </div>
           <figcaption>
             <span><span data-i18n="t032">HALO HOME</span></span>
@@ -162,7 +161,7 @@
 <button type="button" data-app-screen="10" aria-controls="app-slide-10" aria-pressed="false"><span data-i18n="t073">Memory</span></button>
 <button type="button" data-app-screen="11" aria-controls="app-slide-11" aria-pressed="false">Canvas</button></div>
           <div class="app-track" id="app-track" tabindex="0" aria-label="Explore the Android app" data-i18n-aria-label="carouselLabel"><figure class="app-slide" id="app-slide-0">
-            <a href="assets/screens/home.jpg" target="_blank" rel="noopener"><img src="assets/screens/home.jpg" width="1080" height="2400" alt="Halo Home screen." data-i18n-alt="t043" /></a>
+            <a href="assets/screens/home.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/screens/home.jpg" width="1080" height="2400" alt="Halo Home screen." data-i18n-alt="t043" /></a>
             <figcaption><b><span data-i18n="t044">Home</span></b><span><span data-i18n="t045">Ask by voice or text, follow task status, continue a conversation and manage context.</span></span><a class="capture-link" href="assets/screens/home.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
           </figure>
 <figure class="app-slide" id="app-slide-1">
@@ -623,6 +622,6 @@ Screenshot (redact private data):</pre>
   </footer>
 
   <script src="js/translations.js?v=3" defer></script>
-  <script src="js/main.js?v=12" defer></script>
+  <script src="js/main.js?v=13" defer></script>
 </body>
 </html>
