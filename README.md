@@ -4,6 +4,15 @@ Public landing page for [Halo](https://github.com/slafftrosheen/Halo), an open-s
 
 HaloWeb is deliberately static: plain HTML, CSS, JavaScript and checked-in UI assets. No framework, package manager, analytics SDK, remote font or build step is required.
 
+## Responsive public-alpha UX polish — 2026-10-13
+
+- Navigation is available on tablet and mobile, with horizontally scrollable section links and **For testers** kept first on narrow screens. There is no JavaScript-only menu; keyboard navigation works even if scripts fail.
+- The sticky header is measured with `ResizeObserver`, so section, download and feedback anchors land below it after resizing or switching languages.
+- Hero, carousel and Workspace previews preserve the original screenshots' aspect ratios and cap their rendered heights; no screenshot pixels are cropped, reconstructed or relabeled.
+- Copy, label sizes, touch targets and feedback/download cards are sized for narrow screens and longer Latvian/Russian text. All three theme modes remain available on mobile.
+- Site content stays visible if the interactive script fails; translation catalog and existing alpha kit files remain unchanged.
+- `tools/check_browser.cjs` now covers **36 viewport/language/theme combinations** (320, 390, 768, 1024, 1280, 1440 pixels × EN/LV/RU × light/dark) plus navigation visibility, rendered screenshot scale and sticky-header anchor placement. Browser and deploy checks should be run on the release checkout; this documentation records the assertions, not a fresh physical browser test result.
+
 ## Product framing
 
 The landing page answers the product questions in human order:
@@ -93,7 +102,7 @@ The palette follows Halo's `Color.kt`: primary mint `#7DE2B1`, dark background `
 
 ## Validation
 
-`python -X utf8 tools/validate_site.py` checks page structure, links, assets, merge markers and language coverage. Serve the site at `127.0.0.1:8765`, then run `node tools/check_browser.cjs` with Playwright available through `NODE_PATH` and Edge installed. Browser checks cover four viewport widths, three languages, both themes, image proportions, checklist persistence, clipboard feedback, and no-JavaScript/blocked-storage fallbacks. Review screenshots are saved outside the repository in `../.codex/haloweb-review-20261013/`.
+`python -X utf8 tools/validate_site.py` checks page structure, links, assets, merge markers and language coverage. Serve the site at `127.0.0.1:8765`, then run `node tools/check_browser.cjs` with Playwright available through `NODE_PATH` and Edge installed. Browser checks cover six viewport widths, three languages, both themes, image proportions, checklist persistence, clipboard feedback, and no-JavaScript/blocked-storage fallbacks. Review screenshots are saved outside the repository in `../.codex/haloweb-review-20261013/`.
 
 ## Structure
 
