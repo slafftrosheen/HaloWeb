@@ -12,9 +12,9 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (path) => readFileSync(join(root, path), 'utf8');
 const html = read('index.html');
 const english = JSON.parse(read('tools/english-catalog.json'));
-const bundle = JSON.parse(read('js/translations.js').split('window.HaloTranslations = ')[1].replace(/;\\s*$/, ''));
-const rows = read('tools/translations.tsv').trimEnd().split('\\n')
-  .map((line) => line.split('\\t'));
+const bundle = JSON.parse(read('js/translations.js').split('window.HaloTranslations = ')[1].replace(/;\s*$/, ''));
+const rows = read('tools/translations.tsv').trimEnd().split('\n')
+  .map((line) => line.split('\t'));
 
 test('the visitor sees the product before technical architecture', () => {
   const sections = ['product', 'actions', 'workspace', 'ai', 'devices', 'status', 'runtime', 'alpha'];
@@ -39,7 +39,7 @@ test('editable catalogs match the generated EN, LV and RU bundle', () => {
 });
 
 test('English HTML works without JavaScript and matches the copy source', () => {
-  for (const [, key, fallback] of html.matchAll(/<span data-i18n="([^"]+)">([^<]*)<\\/span>/g)) {
+  for (const [, key, fallback] of html.matchAll(/<span data-i18n="([^"]+)">([^<]*)<\/span>/g)) {
     assert.equal(fallback, bundle.en[key], 'outdated HTML fallback for ' + key);
   }
   assert.ok(html.includes('<title>' + bundle.en.title + '</title>'));
