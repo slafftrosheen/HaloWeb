@@ -1,41 +1,79 @@
 # HaloWeb content sources
 
-Halo moves fast. This ledger keeps HaloWeb from drifting.
+This ledger exists to stop the landing page from drifting behind Halo.
 
-## Rule
+Positioning review, 2026-10-13: the user explicitly positions Halo as a host and device independent runtime, with no main gadget. Android is described as the first host implementation; broader host support is an architectural direction and remains under development. This framing is applied to hero text, summary, Devices, runtime section and metadata in EN/LV/RU.
 
-1. **UI depiction follows current source.** If the current app visibly renders
-   something (e.g. the Working Set line in `NotebookScreen.kt`), the reconstructed
-   app mockup may render it.
-2. **Capability/acceptance claims follow current-state documentation.** Never call
-   something shipped merely because some source exists — use `CURRENT-STATE.md`,
-   `NOTEBOOK-DELIVERY.md` and maturity labels.
-3. When the two conflict, use conservative wording: **In development**.
+Feedback delivery, 2026-10-13: the user selected a prefilled email in the visitor's own mail app, addressed to `slaff.trosheen@gmail.com`. Preparing a draft is not sending it; the site must not claim delivery. Form text is not persisted in browser storage.
 
-## Ledger
+Last source audit: 2026-09-30
+Halo source head used: `faca1ae45cb1fc3ac8d8f7dee5836244e6deebc6`
 
-| Claim / surface on HaloWeb | Halo source of truth |
-|---|---|
-| Primary navigation (Home/Activity/Notebook/Devices/Settings) | `app/src/main/java/com/halo/app/ui/shell/AppShell.kt` (`bottomNavItems`) |
-| Home layout (title, presence + mic, Ready, hint, Context · N, More, composer) | `app/src/main/java/com/halo/app/ui/screens/home/HomeScreen.kt` |
-| Notebook layout (header/New, context line, search, NotebookFilter set, rows with Add/Remove context) | `app/src/main/java/com/halo/app/ui/screens/notebook/NotebookScreen.kt` |
-| Devices layout (header + Add, Connected/Saved groups, cards with Battery/Seen/Auto) | `app/src/main/java/com/halo/app/ui/screens/devices/DevicesScreen.kt` |
-| Default inference (native llama.cpp; Ollama optional LAN; OpenRouter optional remote; assistant = handoff only) | `docs/08-providers/ARCHITECTURE.md`, `docs/08-providers/SETUP.md` |
-| Current maturity of everything | `CURRENT-STATE.md` |
-| Notebook maturity (NB-01 vs Working Set/memory slices) | `docs/02-product/NOTEBOOK-DELIVERY.md` |
-| Working Set UI visible, NB-02 flow in development | `NotebookScreen.kt` (visual) + `NOTEBOOK-DELIVERY.md` (acceptance) |
-| Vision/positioning | `PROJECT-DIRECTION.md`, `docs/01-vision/VISION.md`, `docs/01-vision/PRINCIPLES.md` |
-| Visual language (palette, presence, no rings/gauges) | `docs/03-design/HALO-WORKSPACE-DESIGN.md`, `app/src/main/java/com/halo/app/ui/theme/Color.kt` |
-| Presence geometry/motion | `app/src/main/java/com/halo/app/ui/presence/HaloOrb.kt` |
-| Roadmap themes | `docs/14-roadmap/ROADMAP.md`, `docs/14-roadmap/NEXT-PHASE-2027.md` |
-| Robot / Halo Platform maturity | Experimental — user direction; no production claims |
-| Performance | No numbers advertised until measured and published |
+Visual/localization update: 2026-10-13. All displayed app images now use the 12 original Android JPG screenshots supplied by the user. The `08-46-58-829` capture is Settings, not the Intelligence configuration screen. The images retain English text, app state and original proportions; no captures were retouched. Website captions, accessibility labels and controls are localized into EN/LV/RU. Downloadable test-kit files remain English and are labelled accordingly.
 
-## Status vocabulary
+The website palette follows the current `app/src/main/java/com/halo/app/ui/theme/Color.kt`: `HaloPrimary #7DE2B1`, `DarkBackground #131B19`, `DarkSurface #1D2723`, `LightBackground #F7F8F4`. The existing capability/acceptance audit below remains dated; the screenshot update does not re-certify those integrations.
 
-`CURRENT` · `IN DEVELOPMENT` · `PLANNED` · `EXPERIMENTAL` — nothing else for maturity labels.
+## Claim priority
 
-## Canonical URL
+When sources disagree:
 
-`https://haloweb.vercel.app/` (update `robots.txt`, `sitemap.xml`, canonical and OG
-tags together if the domain changes).
+1. **Current code** decides what UI/contracts exist.
+2. **CURRENT-STATE.md and acceptance docs** decide whether something is verified, source-complete, compiled, unit-tested or physically accepted.
+3. **Design/product docs** decide intended framing when code and acceptance do not contradict it.
+4. The website uses the most conservative truthful maturity wording.
+
+A UI control present in source may be shown visually even when its end-to-end behavior is still labeled active development.
+
+## Primary files
+
+### Product shell and UI
+
+- `app/src/main/java/com/halo/app/ui/shell/AppShell.kt`
+- `app/src/main/java/com/halo/app/ui/screens/home/HomeScreen.kt`
+- `app/src/main/java/com/halo/app/ui/screens/notebook/NotebookScreen.kt`
+- `app/src/main/java/com/halo/app/ui/screens/notebook/CanvasEditorScreen.kt`
+- `app/src/main/java/com/halo/app/ui/screens/notebook/NoteEditorScreen.kt`
+- `app/src/main/java/com/halo/app/ui/screens/study/StudyScreen.kt`
+- `app/src/main/java/com/halo/app/ui/screens/devices/DevicesScreen.kt`
+- `app/src/main/java/com/halo/app/ui/screens/settings/IntelligenceScreen.kt`
+- `app/src/main/java/com/halo/app/ui/screens/settings/ProviderMatrixScreen.kt`
+
+### Providers
+
+- `app/src/main/java/com/halo/app/ui/screens/settings/ProviderIds.kt`
+- `sdk/provider-sdk/src/main/java/com/halo/sdk/provider/RemoteProviderPresence.kt`
+- `app/src/main/java/com/halo/app/di/AndroidProviderFactory.kt`
+- LiteRT provider/model catalog under `providers/litert/`
+
+### Tools and agentic execution
+
+- `app/src/main/java/com/halo/app/di/tools/HaloToolDescriptors.kt`
+- `app/src/main/java/com/halo/app/di/tools/host/`
+- `app/src/main/assets/skills/*.json`
+- runtime cognition tool/agent/recovery packages
+
+### Workspace and Study
+
+- `app/src/main/java/com/halo/app/data/notebook/`
+- `app/src/main/java/com/halo/app/study/`
+- `app/src/main/java/com/halo/app/data/study/`
+- `docs/rfc/0002-notebook-editor-and-study.md`
+
+### Acceptance and project truth
+
+- `CURRENT-STATE.md`
+- `docs/testing/AGENTIC-PHONE-ACCEPTANCE.md`
+- `docs/testing/PHONE-ACCEPTANCE.md`
+- `docs/testing/7-day-hardware-test.md`
+- `docs/13-engineering/`
+
+## Claims that must stay qualified
+
+- Do not call the current branch “production ready”.
+- Do not claim all LiteRT models are physically verified.
+- Do not claim HeyCyan speaker output is accepted until a current post-fix hardware run proves it.
+- Do not claim remote provider free tiers are permanent quotas.
+- Do not imply Google OAuth lets Halo consume a consumer Gemini subscription without the required Google project/API setup.
+- Do not imply OpenAI/Anthropic/OpenRouter consumer subscriptions automatically become API access.
+- Do not imply a dispatched Android intent is proof the external action completed.
+- Do not describe BuddyBot as Halo's primary product.

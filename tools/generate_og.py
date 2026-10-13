@@ -10,11 +10,11 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1200, 630
-BG = (246, 247, 251)        # LightBackground #F6F7FB
+BG = (247, 248, 244)        # LightBackground #F6F7FB
 SURFACE = (255, 255, 255)   # LightSurface #FFFFFF
 INK = (24, 32, 51)          # LightOnBackground #182033
-SLATE = (105, 113, 132)     # LightOnSurfaceVariant #697184
-ACTION = (91, 141, 239)     # HaloAction #5B8DEF
+SLATE = (86, 99, 93)     # LightOnSurfaceVariant #697184
+ACTION = (32, 116, 82)     # HaloAction #5B8DEF
 OUTLINE = (217, 222, 232)   # LightOutline #D9DEE8
 LIGHT_BREAK = (176, 186, 197)
 
@@ -102,7 +102,7 @@ def main():
 
     draw.text((72, 386), "Halo is a personal cognitive runtime —",
               font=font(21), fill=SLATE)
-    draw.text((72, 416), "your phone, local AI, workspace and devices,",
+    draw.text((72, 416), "independent of hosts, models and devices,",
               font=font(21), fill=SLATE)
     draw.text((72, 446), "one open-source assistant.",
               font=font(21), fill=SLATE)

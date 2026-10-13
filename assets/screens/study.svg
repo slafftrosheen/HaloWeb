@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932" role="img" aria-label="Halo Study screen">
+<rect width="430" height="932" fill="#F7F8FC"/>
+<style>
+text{font-family:Inter,Arial,sans-serif;fill:#182033}.muted{fill:#70798B}.micro{fill:#9299A8;font-size:10px;letter-spacing:.08em}.label{font-size:12px;font-weight:600}.small{font-size:11px}.body{font-size:13px}.title{font-size:27px;font-weight:700;letter-spacing:-.7px}.h2{font-size:17px;font-weight:700}.line{stroke:#E1E5EC;stroke-width:1}.surface{fill:#FFFFFF;stroke:#E0E4EC}.soft{fill:#EEF1F6}.blue{fill:#5B8DEF}.mint{fill:#A6EBD8}.lilac{fill:#D5C8FF}.yellow{fill:#F7DFA3}.coral{fill:#F4BEA9}
+</style>
+<text x="20" y="27" class="micro">10:49</text><text x="410" y="27" text-anchor="end" class="micro">5G  86%</text>
+<text x="22" y="70" class="small muted">‹ Notebook</text>
+<text x="22" y="108" class="title">Study with Halo</text>
+<text x="22" y="132" class="body muted">Learn from material already in your workspace</text>
+
+<rect x="22" y="158" width="386" height="88" rx="18" class="surface"/>
+<rect x="40" y="177" width="48" height="48" rx="14" class="lilac"/>
+<text x="64" y="207" text-anchor="middle" class="label">N</text>
+<text x="103" y="188" class="micro">SOURCE</text>
+<text x="103" y="211" class="label">Halo runtime notes</text>
+<text x="103" y="231" class="small muted">Full source · revision 12</text>
+
+<text x="22" y="283" class="micro">GUIDED SESSION</text>
+<g transform="translate(22 298)">
+<rect width="72" height="30" rx="15" fill="#E7EEFC"/><text x="36" y="20" text-anchor="middle" class="small" style="fill:#4979D0">Explain</text>
+<rect x="80" width="72" height="30" rx="15" class="soft"/><text x="116" y="20" text-anchor="middle" class="small">Hint</text>
+<rect x="160" width="82" height="30" rx="15" class="soft"/><text x="201" y="20" text-anchor="middle" class="small">Attempt</text>
+<rect x="250" width="82" height="30" rx="15" class="soft"/><text x="291" y="20" text-anchor="middle" class="small">Review</text>
+</g>
+
+<rect x="22" y="350" width="386" height="195" rx="18" class="surface"/>
+<text x="40" y="378" class="micro">HALO</text>
+<text x="40" y="408" class="h2">Why does Halo separate tools from models?</text>
+<text x="40" y="438" class="body">Think about what should stay stable when you</text>
+<text x="40" y="459" class="body">switch from one model to another.</text>
+<line x1="40" y1="480" x2="390" y2="480" class="line"/>
+<text x="40" y="507" class="small muted">Your answer is saved before AI feedback runs.</text>
+<rect x="40" y="520" width="118" height="31" rx="10" class="soft"/><text x="99" y="541" text-anchor="middle" class="label">Read aloud</text>
+
+<text x="22" y="590" class="micro">YOUR ATTEMPT</text>
+<rect x="22" y="606" width="386" height="100" rx="18" class="surface"/>
+<text x="40" y="638" class="body muted">Write your explanation…</text>
+<rect x="300" y="659" width="88" height="32" rx="11" fill="#E7EEFC"/><text x="344" y="680" text-anchor="middle" class="label" style="fill:#4979D0">Submit</text>
+
+<text x="22" y="750" class="micro">REVIEW</text>
+<rect x="22" y="766" width="386" height="96" rx="18" class="surface"/>
+<text x="40" y="793" class="label">Practice is scheduled from review history</text>
+<text x="40" y="817" class="small muted">Mastery is derived from persisted attempts and reviews,</text>
+<text x="40" y="836" class="small muted">not chat length or a single AI score.</text>
+<rect x="330" y="783" width="58" height="26" rx="13" fill="#E7F7F2"/><text x="359" y="800" text-anchor="middle" class="micro" style="fill:#2A765E">LOCAL</text>
+</svg>

@@ -1,90 +1,163 @@
-# HaloWeb — Halo landing page
+# HaloWeb
 
-A static, no-build single-page site introducing [Halo](https://github.com/slafftrosheen/Halo),
-a **host-native personal cognitive runtime**. Your Android phone is the first complete host;
-local AI, a persistent Notebook and capability-driven devices extend it.
+Public landing page for [Halo](https://github.com/slafftrosheen/Halo), an open-source cognitive runtime independent of particular hosts and devices. Android is the first host implementation; no gadget is positioned as the primary device.
 
-The page demonstrates Halo's mental model with product-truthful content: the app surface and
-routes come first, architecture diagrams support them, and everything future-facing is
-visibly labeled **Planned / In development / Experimental**.
+HaloWeb is deliberately static: plain HTML, CSS, JavaScript and checked-in UI assets. No framework, package manager, analytics SDK, remote font or build step is required.
 
-## Deployment (Vercel)
+## Product framing
 
-`vercel.json` configures the adapter for a static, zero-build site:
+The landing page answers the product questions in human order:
 
-- `framework: null`, `buildCommand: null` — nothing to compile; the repo root is deployed as-is
-- `outputDirectory: "."` — index.html, css/, js/ and favicon.svg are served directly
-- `cleanUrls` — `/index.html` is canonicalized to `/`
-- security headers (nosniff, referrer policy, frame options, permissions policy) and
-  1-day revalidation caching for `/css/*` and `/js/*` (HTML references carry cache-busting
-  `?v=` params)
+1. What is Halo?
+2. What can it actually do on an Android phone?
+3. Where does the AI run?
+4. What are Notebook and Study for?
+5. How do glasses and other devices fit in?
+6. Why does Halo have a runtime layer?
+7. What is physically verified versus still under acceptance?
 
-Import the repo at vercel.com → New Project → framework preset **Other**. Test locally with
-`npx vercel dev` or any static server.
+The runtime architecture remains important, but it no longer appears before the user can understand the product.
+
+## Current product truth
+
+The page is synchronized against Halo `main` through commit `faca1ae45cb1fc3ac8d8f7dee5836244e6deebc6` and the preceding September 29 provider/action/runtime batches.
+
+Current public claims intentionally reflect:
+
+- Android is the first host implementation. The architecture is host and device independent; other host implementations remain in development.
+- LiteRT-LM is the on-device provider and Qwen 3 0.6B Dynamic INT4 is the deterministic first-run local target.
+- Ollama is optional LAN inference.
+- Gemini supports Google OAuth in current source, with API-key fallback.
+- OpenRouter, OpenAI and Anthropic are configurable remote providers.
+- Groq and Cerebras are declared free-tier remote providers.
+- xAI, OpenCode Zen, OpenCode Companion and custom OpenAI-compatible endpoints are present in the remote provider fabric.
+- Provider connection/setup is separate from active provider/model selection.
+- Provider credentials use Android Keystore-backed secret storage.
+- Host tools cover phone controls, apps, alarms/timers, communication/navigation, screen observation/control, clipboard, web reading, device insight, files, Notebook, memory and Study.
+- Tool discovery is bounded; a model does not receive the complete host tool registry by default.
+- Deterministic phone actions and agentic tool execution remain explicit execution routes.
+- Tool/action outcomes distinguish success, rejection, failure, external dispatch and unknown completion.
+- Notebook contains structured documents, attachments, collections, favorites, conversations, Canvas and explicit working context.
+- Study binds to workspace sources, persists attempts before AI feedback and tracks review/mastery evidence.
+- HeyCyan is a reference wearable integration, not the product architecture.
+- BuddyBot is an experimental embodiment.
+
+## Acceptance wording
+
+Code presence is not presented as release readiness.
+
+The page keeps these boundaries visible:
+
+- local Qwen text inference has physical-phone evidence;
+- HeyCyan microphone capture has physical evidence from the supplied hardware run;
+- the RUNTIME-050 agentic phone batch has compile/unit evidence;
+- newer provider, assistant-role, resource, continuation and hardware-output work still needs the planned physical/HIL acceptance.
+
+`CURRENT-STATE.md` remains authoritative when source presence and acceptance status differ.
+
+## UI assets
+
+All displayed phone previews are original Android screenshots supplied on 13 October 2026 under `assets/screens/`. No screenshot text or application state has been edited.
+
+Current real phone captures:
+
+- `home.jpg`, `activity.jpg`, `notifications.jpg`
+- `notebook.jpg`, `workspace-tools.jpg`, `skills.jpg`, `canvas.jpg`
+- `study.jpg`, `devices.jpg`, `settings.jpg`, `access.jpg`, `memory.jpg`
+
+Older SVG reconstructions remain historical assets and are not displayed. Settings shows entry points to Intelligence and Voice, not the provider configuration screen. Screenshots show visible UI and do not establish successful completion of actions.
+
+## Languages and palette
+
+English, Latvian and Russian cover the page, image descriptions, accessibility labels, metadata, checklist progress, clipboard feedback and issue template. Switching language preserves theme and checklist state. `?lang=en`, `?lang=lv` and `?lang=ru` override the saved language. Otherwise the browser language is used, with English as fallback. Screenshots and downloadable test materials retain their original English text, as explained on the page.
+
+Edit `tools/english-catalog.json` and `tools/translations.tsv`, then run `python tools/build_translations.py`. Final English editorial overrides are in that script. `js/translations.js` is generated locally, without a translation service.
+
+Reviewed host/device positioning and feedback/carousel strings are in `tools/annotation_copy.json`; this file overrides the older catalog during generation. All displayed languages are kept in sync.
+
+The product section contains a single manual carousel for all 12 captures, with screen selectors, arrows, native touch scrolling, keyboard arrows/Home/End and full-resolution links. It does not advance automatically.
+
+The Workspace section explains a Save → Connect → Learn flow through three selectable steps, paired with one screenshot and explanation at a time. Its vertical tabs support arrows/Home/End, preserve selection during language changes, and stack above the preview on mobile. A separate context/memory strip explains user control. Without JavaScript, the three previews remain readable as static content. Copy is maintained in `tools/workspace_copy.json`.
+
+## Feedback form
+
+The first-run checklist leads to a localized feedback form for configuration details, feedback category, screen, observations, expected behaviour, reproduction steps and clarity rating. Only the screen and observations are required. Preparing feedback includes the steps marked as tried. Form answers are held in the current page only, not stored or transmitted by the site.
+
+At the user's request, delivery uses a `mailto:` draft addressed to `slaff.trosheen@gmail.com`. The visitor reviews and sends it in their own mail app. The UI reports draft preparation, never successful delivery. A preview and copy option handle visitors without a configured mail app. Screenshots can be attached manually in the mail app. No mail backend, API key or paid service is required.
+
+The palette follows Halo's `Color.kt`: primary mint `#7DE2B1`, dark background `#131B19`, dark surface `#1D2723`, and light background `#F7F8F4`. Light-theme text accents use darker green for contrast. Primary controls, focus, progress, hero treatments, favicon and share-card accents use green.
+
+## Validation
+
+`python -X utf8 tools/validate_site.py` checks page structure, links, assets, merge markers and language coverage. Serve the site at `127.0.0.1:8765`, then run `node tools/check_browser.cjs` with Playwright available through `NODE_PATH` and Edge installed. Browser checks cover four viewport widths, three languages, both themes, image proportions, checklist persistence, clipboard feedback, and no-JavaScript/blocked-storage fallbacks. Review screenshots are saved outside the repository in `../.codex/haloweb-review-20261013/`.
 
 ## Structure
 
-```
+```text
 HaloWeb/
-├── index.html          # 7 chapters
-├── favicon.svg
-├── vercel.json         # static deployment adapter config
+├── assets/
+│   └── screens/
+│       ├── home.jpg
+│       ├── notebook.jpg
+│       ├── study.jpg
+│       ├── settings.jpg
+│       ├── devices.jpg
+│       └── ... (12 real phone screenshots)
 ├── css/
-│   ├── tokens.css      # design tokens from the app's ui/theme/Color.kt + editorial scale
-│   └── main.css        # layout, components, SVG diagram styling, responsive rules
-└── js/
-    ├── presence.js     # canvas port of the app's HaloOrb/HaloPresence (bounded motion)
-    ├── interactions.js # route pipelines, notebook demo, continuity routing, reveals
-    └── main.js         # System/Light/Dark theme, motion preference, resize handling
+│   ├── tokens.css
+│   └── main.css
+├── js/
+│   ├── main.js
+│   └── translations.js
+├── CONTENT-SOURCES.md
+├── README.md
+├── favicon.svg
+├── index.html
+├── robots.txt
+├── sitemap.xml
+└── vercel.json
 ```
 
-No build step, no dependencies, no framework.
+## Motion contract
 
-## Page chapters
+- no permanent animation loop;
+- no interactive fake phone;
+- no pointer tilt;
+- no autoplay demo carousel;
+- one-shot content and asset reveals;
+- one-shot runtime-flow assembly;
+- `prefers-reduced-motion` collapses motion to static presentation.
 
-1. **Hero** — "Your assistant shouldn't live inside one device." Presence at the center,
-   orbiting capability *buttons* that pulse the cluster on hover/focus, runtime state rail
-   (Ready → Understanding → Reasoning → Responding) with a semantic trace line.
-2. **Halo working + Android host** — phone-first. A reconstructed app surface with a
-   Home/Notebook/Devices switcher beside three interaction routes with status chips:
-   **Ask on phone (Current)**, **Ask through glasses (In dev)**, **Capture from glasses (In dev)**,
-   plus a semantic runtime route trace.
-3. **Notebook** — the shipped NB-01 path animates once (Capture → Inbox → Organize); the
-   memory/Working Set continuation is shown statically with a **Planned** chip.
-4. **One runtime, many capabilities** — layered diagram: runtime core (reasoning, workspace,
-   speech) inside, physical endpoints around it, cloud provider drawn as optional and
-   user-selected. "Halo cares about capabilities, not logos."
-5. **Local by architecture + origin continuity** — device-boundary topology, proof chips
-   (no account / no cloud required / no helper apps / perpetual ownership), and an
-   interactive origin-routing demo with fallbacks.
-6. **Beyond the phone** — wearable layer, experimental tracked platform, cross-host future.
-7. **Now / Next / Later** — condensed roadmap; GitHub carries the detail. Plus a short
-   "Not a chatbot…" editorial band for pacing.
+## Alpha tester programme
 
-## Motion contract (matches the app's "no permanent idle animation")
+The website's [Early Access](https://haloweb.vercel.app/#alpha) section provides a lightweight test route rather than claiming there is already a public Android build. The release button goes to the canonical [Halo Android Releases](https://github.com/slafftrosheen/Halo/releases); no APK is bundled by HaloWeb.
 
-- `setState`: one bounded 280ms transition, then RAF stops.
-- `activityBurst`: bounded ≤1.5s envelope, then stops.
-- `pulse`: one-shot 600ms lean, then stops.
-- After load and entrance effects settle, no render loops run.
-- Reduced motion is evaluated live; enabling it mid-session cancels loops, renders the
-  settled state once and stops. The mini orb in the app mockup renders a static Ready state.
+The five example assets are committed **at the repository root** and served by Vercel as static files:
 
-## Theme contract
+| File | Used for |
+| --- | --- |
+| `03_halo_alpha_quick_test.pdf` | One-page app-wide checklist |
+| `02_study_how_light_affects_plants.pdf` | Study text and citation checks |
+| `01_study_basil_observation.png` | Vision and multimodal comparison |
+| `04_sample_note.txt` | Notebook / Canvas creation and retrieval |
+| `05_copy_paste_prompts.txt` | Reusable questions, expected answers and issue format |
 
-Three-state System / Light / Dark like the app's AppearanceMode selector. The header control
-cycles System → Light → Dark; System removes the persisted override and follows the OS.
-All presence instances re-theme with exactly one redraw.
+The site uses same-origin download links with HTML's `download` attribute; **do not move or rename these files without updating `index.html`**. The actual image is also used as a preview. Do not duplicate generated PDF contents into the HTML. The files are small, synthetic, and contain no personal information.
 
-## Honesty rules (deliberate)
+Tester checklist state is kept in the visitor's own browser `localStorage` under `halo-web-alpha-steps-v1`. It is a list of steps **tried**, not a grade or telemetry, and works without storage. The issue template uses the browser Clipboard API on user request; copy failures are shown honestly and users can manually select the template.
 
-- Traces are **semantic** ("INPUT · phone microphone"), never fabricated telemetry —
-  no invented timestamps, sizes, receipts or percentages.
-- Scenario and pipeline statuses are labeled Current / In development / Planned / Experimental.
-- Notebook shows only shipped NB-01 behavior as current; memory promotion is Planned.
-- HeyCyan is a reference implementation, never the definition of Halo hardware.
-- The tracked platform is explicitly Experimental and visually minor.
-- The app mockups are reconstructions of the real Compose surfaces with staged (not live)
-  content, and say so.
-- Copy follows the consolidated 2026-09-24 Halo docs (CURRENT-STATE, VISION, PRD, PRINCIPLES,
-  provider architecture). Performance numbers are not advertised.
+### Quick regression checks
+
+1. Open `/#alpha` in light and dark themes on narrow and wide screens.
+2. Download all five files. Check signatures/types: PNG for the illustration, PDF for the two guides, UTF-8 text for the notes and prompts.
+3. Verify that image preview, relative paths and files still work after a static Vercel deployment.
+4. Mark several steps, reload, and confirm only browser-local checkmarks persist. Reset the list; verify the count returns to zero.
+5. Expand the issue template. Copy it over HTTPS; confirm a failure message appears if clipboard access is rejected.
+6. Use keyboard focus and screen reader, then test `prefers-reduced-motion`.
+7. Confirm that the release link never silently points to a fictitious APK and issues go to the actual Halo repository.
+
+No API/backend, signup, analytics, or browser-to-Halo data transmission is involved.
+
+## Deployment
+
+Vercel serves the repository root directly as a static site.

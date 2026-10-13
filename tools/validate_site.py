@@ -59,15 +59,11 @@ def main() -> int:
             fail(f"internal anchor #{anchor} has no destination")
 
     # -- referenced local assets exist ---------------------------------------
-    for attr, path in re.findall(r'(?:src|href)="([^"]+)"', html), re.findall(
-        r'(?:src|href)="([^"]+)"', html
-    ):
-        pass  # placeholder replaced below
     refs = re.findall(r'(?:src|href)="([^"]+)"', html)
     for ref in refs:
         if ref.startswith(("http://", "https://", "#", "mailto:")):
             continue
-        local = ref.split("?")[0].split("#")[0]
+        local = ref.split("?")[0].split("#")[0].lstrip('/')
         if not local:
             continue
         if not (ROOT / local).exists():
@@ -139,6 +135,25 @@ def main() -> int:
         fail("external script reference found — HaloWeb must be dependency-free")
     if re.search(r'<link[^>]+rel="stylesheet"[^>]+href="https?://', html):
         fail("external stylesheet reference found")
+
+    # Real device captures replace reconstructed screens throughout the page.
+    shots = set(re.findall(r'src="assets/screens/([^"]+)"', html))
+    if len(shots) != 12 or any(not shot.endswith('.jpg') for shot in shots):
+        fail(f"expected all 12 real JPG captures, found {sorted(shots)}")
+    if 'reconstructed from' in html or 'Source-aligned UI capture' in html:
+        fail('obsolete reconstruction label')
+    for file in ['index.html', 'css/main.css', 'js/main.js', 'CONTENT-SOURCES.md', 'robots.txt', 'sitemap.xml']:
+        if re.search(r'^(<<<<<<<|=======|>>>>>>>)', read(file), re.M):
+            fail(f'unresolved merge marker in {file}')
+    import json
+    source = read('js/translations.js')
+    catalog = json.loads(source.split('window.HaloTranslations = ', 1)[1].rstrip(';\n'))
+    keys = set(re.findall(r'data-i18n(?:-alt|-aria-label)?="([^"]+)"', html))
+    for language in ['en', 'lv', 'ru']:
+        if not keys.issubset(catalog[language]):
+            fail(f'{language}: missing translations {sorted(keys - set(catalog[language]))}')
+        if any(not text.strip() for text in catalog[language].values()):
+            fail(f'{language}: empty translation')
 
     # -- report ----------------------------------------------------------------
     for w in warnings:
