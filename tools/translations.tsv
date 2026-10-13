@@ -1,46 +1,46 @@
 t000	Pāriet pie produkta	Перейти к продукту
 t001	Halo sākumlapa	Главная Halo
 t002	Lapas sadaļas	Разделы страницы
-t003	Produkts	Продукт
-t004	Darbības tālrunī	Действия на телефоне
-t005	MI	ИИ
-t006	Darba vide	Рабочее пространство
+t003	Pārskats	Обзор
+t004	Tālruņa rīki	Инструменты телефона
+t005	MI iespējas	Варианты ИИ
+t006	Piezīmes un mācības	Заметки и учёба
 t007	Ierīces	Устройства
-t008	Projekta statuss	Статус проекта
-t009	Testētājiem	Для тестировщиков
+t008	Izstrādes statuss	Статус разработки
+t009	Izmēģināt alfa versiju	Попробовать альфу
 t010	Vietnes valoda	Язык сайта
 t011	Krāsu motīvs	Цветовая тема
 t012	Sistēmas	Системная
 t013	Gaišs	Светлая
 t014	Tumšs	Тёмная
-t015	ATVĒRTAIS KODS · VISPIRMS ANDROID · GATAVOJAM ALFA VERSIJU	ОТКРЫТЫЙ КОД · СНАЧАЛА ANDROID · ПОДГОТОВКА АЛЬФА-ВЕРСИИ
-t016	Viens palīgs.	Один помощник.
-t017	Tavas ierīces.	Твои устройства.
-t018	Tava izvēle.	Твой выбор.
-t019	Halo ir Android palīgs ar atvērtu pirmkodu un vienotu MI darbības vidi. Tas var atbildēt ar tālrunī darbinātu modeli, veikt darbības tālrunī, strādāt ar tavām piezīmēm un mācību materiāliem un izmantot pievienotās ierīces. Halo konts nav nepieciešams, un mākoņpakalpojumi nav obligāti.	Halo — Android-помощник с открытым кодом и единой средой для работы ИИ. Он может отвечать с помощью модели на телефоне, выполнять действия, работать с твоими заметками и учебными материалами и использовать подключённые устройства. Аккаунт Halo не нужен, облачные сервисы необязательны.
-t020	Saņemt alfa testēšanas materiālus	Скачать материалы для альфа-теста
-t021	Iepazīt Halo	Познакомиться с Halo
+t015	ATVĒRTAIS KODS · ANDROID ALFA	ОТКРЫТЫЙ КОД · АЛЬФА ДЛЯ ANDROID
+t016	MI palīgs.	ИИ-помощник.
+t017	Android tālrunim.	Для Android.
+t018	Ar tālruņa rīkiem.	С инструментами телефона.
+t019	Halo ir atvērtā koda MI palīgs Android ierīcēm. Uzdod jautājumus ar balsi vai tekstu, izmanto atbalstītās tālruņa darbības, glabā piezīmes un failus vienuviet un mācies no saviem materiāliem. Darbini modeli tālrunī vai pieslēdz paša izvēlētu pakalpojumu. Brilles nav nepieciešamas; citas platformas vēl tiek izstrādātas.	Halo — ИИ-помощник для Android с открытым исходным кодом. Задавай вопросы голосом или текстом, используй поддерживаемые действия на телефоне, храни заметки и файлы в одном месте и учись по своим материалам. Запускай модель на телефоне или подключай выбранный сервис. Очки необязательны; поддержка других платформ пока разрабатывается.
+t020	Izmēģināt Android alfa versiju	Попробовать альфу для Android
+t021	Skatīt Halo iespējas	Посмотреть возможности
 t022	Skatīt pirmkodu ↗	Посмотреть код ↗
-t023	DARBOJAS BEZ VALKĀJAMĀM IERĪCĒM	РАБОТАЕТ БЕЗ НОСИМЫХ УСТРОЙСТВ
-t024	Ar tālruni pilnībā pietiek	Телефона достаточно
-t025	PRIEKŠROKA VIETĒJAI DARBĪBAI	ПРИОРИТЕТ ЛОКАЛЬНОЙ РАБОТЕ
-t026	LiteRT-LM + Qwen 3 0.6B	LiteRT-LM + Qwen 3 0.6B
-t027	ĪSTI ANDROID RĪKI	НАСТОЯЩИЕ ИНСТРУМЕНТЫ ANDROID
-t028	Darbības, faili, ekrāns un sistēma	Действия, файлы, экран и система
-t029	PAKALPOJUMA SNIEDZĒJU IZVĒLIES TU	ПРОВАЙДЕРА ВЫБИРАЕШЬ ТЫ
-t030	Tālrunī, vietējā tīklā vai attālināti	На телефоне, в локальной сети или удалённо
+t023	SĀC AR TĀLRUNI	НАЧНИ С ТЕЛЕФОНА
+t024	Brilles nav nepieciešamas	Очки не нужны
+t025	IZVĒLIES SAVU MI	ВЫБИРАЙ ИИ
+t026	Ierīcē, lokālajā tīklā vai mākonī	На устройстве, в сети или облаке
+t027	TĀLRUŅA DARBĪBAS	ДЕЙСТВИЯ НА ТЕЛЕФОНЕ
+t028	Iestatījumi, lietotnes un ekrāns	Настройки, приложения и экран
+t029	IEBŪVĒTA DARBA VIDE	РАБОЧЕЕ ПРОСТРАНСТВО
+t030	Piezīmju grāmata, Canvas un Mācības	Блокнот, Canvas и Учёба
 t031	Halo sākuma ekrāns ar apturētu uzdevumu, neapstiprinātu darbības rezultātu un ziņas ievades lauku.	Главный экран Halo: приостановленная задача, неподтверждённый результат действия и поле сообщения.
 t032	HALO SĀKUMA EKRĀNS	ГЛАВНЫЙ ЭКРАН HALO
 t033	Īsts tālruņa ekrānuzņēmums · 2026. gada 13. oktobris	Настоящий скриншот с телефона · 13 октября 2026 года
-t034	Lieto Halo tikai tālrunī.	Пользуйся Halo на одном телефоне.
-t035	Balss, teksts, vietējais MI, darbības tālrunī, Piezīmju grāmata un Mācības darbojas arī bez viedajām brillēm.	Голос, текст, локальный ИИ, действия на телефоне, Блокнот и Учёба работают без умных очков.
-t036	Izvēlies, kur darbojas tavs MI.	Выбирай, где работает твой ИИ.
-t037	Darbini modeli tālrunī, izmanto datoru savā vietējā tīklā vai apzināti pievieno attālinātu pakalpojuma sniedzēju.	Запускай модель на телефоне, используй компьютер в своей локальной сети или явно подключи удалённого провайдера.
-t038	Pievieno ierīces jaunām iespējām.	Подключай устройства для новых возможностей.
-t039	Brilles, austiņas un roboti papildina ievadi, izvadi un darbības, saglabājot vienu un to pašu palīgu.	Очки, гарнитуры и роботы расширяют возможности ввода, вывода и действий одного и того же помощника.
-t040	01 · PRODUKTS	01 · ПРОДУКТ
-t041	Viens palīgs. Skaidra vieta katram darbam.	Один помощник. Понятное место для каждого дела.
-t042	Halo apvieno ikdienas palīdzību, dokumentus, mācības un pievienotās ierīces. Sākuma ekrānā ir palīgs, Piezīmju grāmatā — tava darba vide. Mācības palīdz apgūt darba vides materiālus. Sadaļā Intelekts pārvaldi modeļus un pakalpojumu sniedzējus, bet sadaļā Ierīces redzi pievienoto aparatūru.	Halo объединяет повседневную помощь, документы, обучение и подключённые устройства. На главном экране — помощник, в Блокноте — рабочее пространство. Учёба помогает осваивать сохранённые материалы. В разделе Интеллект настраиваются модели и провайдеры, а в разделе Устройства отображается подключённое оборудование.
+t034	Uzdod jautājumus ar balsi vai tekstu.	Спрашивай голосом или текстом.
+t035	Uzdod jautājumus vai pieprasi atbalstītās darbības tālrunī. Halo parāda rezultātus un kļūmes, nevis tās slēpj.	Задавай вопросы или проси выполнить поддерживаемые действия. Halo показывает результаты и ошибки, а не скрывает их.
+t036	Strādā ar saviem materiāliem.	Работай со своими материалами.
+t037	Saglabā piezīmes un failus Piezīmju grāmatā, izkārto idejas Canvas un izmanto izvēlētus avotus Mācībās.	Сохраняй заметки и файлы в Блокноте, раскладывай идеи в Canvas и используй выбранные источники в Учёбе.
+t038	Izvēlies, kur darbojas MI.	Выбирай, где работает ИИ.
+t039	Iestati modeli tālrunī, serveri lokālajā tīklā vai attālinātu pakalpojumu. Pievienotās ierīces nav obligātas.	Настрой модель на телефоне, сервер в локальной сети или удалённый сервис. Дополнительные устройства не обязательны.
+t040	01 · LIETOTNĒ	01 · ВНУТРИ ПРИЛОЖЕНИЯ
+t041	Viena Android lietotne, vairāki noderīgi rīki.	Одно Android-приложение, несколько полезных инструментов.
+t042	Izmanto sākumskatu jautājumiem, Piezīmju grāmatu piezīmēm un failiem, Canvas ideju izkārtošanai, Mācības apguvei un Ierīces aparatūras pārvaldībai. Attēlos redzama pašreizējā Android alfa versija.	На главном экране задавай вопросы, в Блокноте храни заметки и файлы, в Canvas располагай идеи, в Учёбе занимайся по материалам, а в разделе «Устройства» управляй оборудованием. На снимках — текущая альфа-версия для Android.
 t043	Halo sākuma ekrāns.	Главный экран Halo.
 t044	Sākums	Главная
 t045	Jautā ar balsi vai tekstu, seko uzdevuma statusam, turpini sarunu un pārvaldi kontekstu.	Задавай вопросы голосом или текстом, следи за состоянием задачи, продолжай разговор и управляй контекстом.
@@ -73,10 +73,10 @@ t071	Pārskati atļaujas, krātuvi, dublēšanu un iestatījumu gatavību darbam
 t072	Halo Atmiņas ekrāns Android tālrunī.	Экран Памяти Halo на Android-телефоне.
 t073	Atmiņa	Память
 t074	Izvēlies, kādus ieteikumus Halo var sniegt. To saglabāšanai nepieciešams tavs apstiprinājums.	Выбирай, какие предложения может делать Halo. Для сохранения нужно твоё подтверждение.
-t075	Īsti ekrānuzņēmumi no Android tālruņa, iesniegti 2026. gada 13. oktobrī. Lietotne attēlos ir angļu valodā. Vietnes valodas maiņa tulko lapas tekstu; ekrānuzņēmumos saglabājas sākotnējais teksts un stāvoklis.	Настоящие скриншоты с Android-телефона, предоставленные 13 октября 2026 года. Интерфейс приложения на них — на английском. Смена языка сайта переводит текст страницы; скриншоты сохраняют исходный текст и состояние.
-t076	02 · DARBĪBAS TĀLRUNĪ	02 · ДЕЙСТВИЯ НА ТЕЛЕФОНЕ
-t077	Palīgs, kas spēj arī rīkoties.	Помощник, который умеет действовать.
-t078	Halo Android pirmkodā ir rīki ikdienas darbībām tālrunī. Modelim netiek nodots viss rīku reģistrs uzreiz: Halo atlasa un piedāvā nelielu konkrētajam pieprasījumam piemērotu rīku kopu.	В Android-коде Halo есть инструменты для повседневных действий на телефоне. Модель не получает весь реестр сразу: Halo подбирает небольшой набор инструментов для конкретного запроса.
+t075	Īsti Android testa versijas ekrānuzņēmumi no 2026. gada 13. oktobra. Lietotne attēlota angļu valodā; valodas izvēlne maina vietnes tekstu, nevis ekrānuzņēmumus.	Настоящие снимки тестовой сборки Android от 13 октября 2026 года. Приложение показано на английском; переключатель языка переводит сайт, но не снимки экрана.
+t076	02 · TĀLRUŅA DARBĪBAS	02 · ДЕЙСТВИЯ НА ТЕЛЕФОНЕ
+t077	Palūdz Halo kaut ko izdarīt tālrunī.	Попроси Halo выполнить действие на телефоне.
+t078	Halo ir rīki taimeriem, skaļumam, lietotņu atvēršanai un redzamo ekrāna vadīklu izmantošanai. Vajadzīgas attiecīgās atļaujas un apstiprinājumi. Daudzsoļu darbības un pārejas uz citām lietotnēm vēl tiek testētas.	Halo умеет работать с таймерами, громкостью, открытием приложений и видимыми элементами экрана. Нужны соответствующие разрешения и подтверждения. Многошаговые действия и переходы в другие приложения ещё проходят тестирование.
 t079	Pārvaldi tālruni	Управляй телефоном
 t080	Iestati modinātājus un taimerus. Maini skaļumu, zvana režīmu, spilgtumu un zibspuldzi. Atver iestatījumus un lietotnes.	Ставь будильники и таймеры. Меняй громкость, режим звонка, яркость и состояние фонарика. Открывай настройки и приложения.
 t081	Piemēri: «Iestati taimeri uz 12 minūtēm.» · «Ieslēdz tālrunim vibrācijas režīmu.»	Примеры: «Поставь таймер на 12 минут». · «Переведи телефон в режим вибрации».
@@ -89,20 +89,20 @@ t087	Piekļuvi sensitīviem datiem regulē rīku politika un apstiprināšanas s
 t088	Strādā ar ekrānu	Работай с экраном
 t089	Lasi pašreizējo Android ekrānu, atrodi saskarnes elementus un vajadzības gadījumā izmanto pieejamības pakalpojumu, lai pieskartos, ritinātu vai ievadītu tekstu.	Читай текущий экран Android, находи элементы интерфейса и при необходимости используй службу специальных возможностей для нажатий, прокрутки и ввода текста.
 t090	Pieejamības darbībām, kas maina ekrāna stāvokli, nepieciešams atsevišķs apstiprinājums.	Действия через службу специальных возможностей, меняющие экран, требуют явного подтверждения.
-t091	PRECĪZS DARBĪBAS STATUSS	ТОЧНЫЙ СТАТУС ДЕЙСТВИЯ
-t092	Pieprasīts vēl nenozīmē pabeigts.	Запрошено — ещё не значит выполнено.
-t093	Pirms sarunas turpināšanas Halo reģistrē rīku izsaukumus un rezultātus. Tas atšķir veiksmīgu darbību no noraidījuma, kļūmes, nodošanas citai lietotnei vai nezināma rezultāta. Atkopšana ir veidota tā, lai lietotnes pārstartēšana neatkārtotu jau pabeigtu darbību.	Прежде чем продолжить разговор, Halo записывает вызовы инструментов и результаты. Он различает успех, отказ, ошибку, передачу другому приложению и неизвестный результат. Восстановление устроено так, чтобы перезапуск приложения не повторял уже выполненное действие.
-t094	03 · IZVĒLIES SAVU MI	03 · ВЫБЕРИ СВОЙ ИИ
-t095	Vispirms vietēji. Attālināti — pēc tavas izvēles.	Сначала локально. Удалённо — по твоему выбору.
-t096	Halo darbības vide ir neatkarīga no modeļa. Pakalpojuma sniedzēja maiņa nosaka, kur modelis strādā, bet nemaina palīgu, darba vidi, rīkus vai ierīču pārvaldību.	Среда Halo независима от модели. Смена провайдера определяет, где работает модель, сохраняя помощника, рабочее пространство, инструменты и управление устройствами.
+t091	PATIESA DARBĪBU STATUSA UZSKAITE	ЧЕСТНЫЙ СТАТУС ДЕЙСТВИЙ
+t092	Pieprasījums vēl nenozīmē, ka darbība izdevās.	Команда ещё не означает успех.
+t093	Halo reģistrē mēģinātās darbības un to rezultātus. Ja vadību pārņem cita lietotne vai Android nevar apstiprināt rezultātu, palīgam tas jāpasaka, nevis jāapgalvo, ka uzdevums pabeigts.	Halo фиксирует попытки действий и их результаты. Если управление перешло другому приложению или Android не может подтвердить итог, помощник должен об этом сообщить, а не заявлять, что задача выполнена.
+t094	04 · MI IESPĒJAS	04 · ВАРИАНТЫ ИИ
+t095	Izvēlies, kur darbojas tavs MI.	Выбирай, где работает твой ИИ.
+t096	Instalē atbalstītu modeli tālrunī, pieslēdz datoru savā tīklā vai iestati mākoņpakalpojumu. Halo rīki un darba vide paliek tie paši; tīklā darbinātais modelis var saņemt pieprasījumam vajadzīgo kontekstu.	Установи поддерживаемую модель на телефон, подключись к компьютеру в своей сети или настрой облачный сервис. Инструменты и рабочее пространство Halo останутся теми же; сетевая модель может получить контекст, необходимый для запроса.
 t097	TĀLRUNĪ	НА ТЕЛЕФОНЕ
-t098	Pirmajai palaišanai Halo paredz Qwen 3 0.6B Dynamic INT4. Pēc modeļa instalēšanas parastai vietējai darbībai nav nepieciešams Halo konts vai mākoņpakalpojums.	Для первого запуска Halo предусмотрена модель Qwen 3 0.6B Dynamic INT4. После её установки обычная локальная работа не требует аккаунта Halo или облачного сервиса.
-t099	VIETĒJĀ TĪKLĀ	В ЛОКАЛЬНОЙ СЕТИ
-t100	Ollama un papildu savienojumi	Ollama и дополнительные подключения
-t101	Izmanto Ollama, OpenCode Companion vai savu ar OpenAI saderīgu galapunktu datorā, kuru pārvaldi pats.	Используй Ollama, OpenCode Companion или собственный совместимый с OpenAI адрес API на компьютере под твоим управлением.
-t102	ATTĀLINĀTI	УДАЛЁННО
-t103	Pievieno savu pakalpojuma sniedzēju	Подключи своего провайдера
-t104	Var pievienot Gemini, OpenRouter, OpenAI, Anthropic, Groq, Cerebras, xAI, OpenCode Zen un saderīgus galapunktus.	Можно подключить Gemini, OpenRouter, OpenAI, Anthropic, Groq, Cerebras, xAI, OpenCode Zen и совместимые адреса API.
+t098	LiteRT-LM nodrošina modeļa darbību tālrunī. Qwen 3 0.6B Dynamic INT4 ir pašreizējais testēšanas pamats; saderība, ātrums un atmiņas patēriņš ir atkarīgs no tālruņa.	LiteRT-LM позволяет запускать модель на телефоне. Qwen 3 0.6B Dynamic INT4 — текущая базовая модель для тестов; совместимость, скорость и расход памяти зависят от устройства.
+t099	TAVĀ LOKĀLAJĀ TĪKLĀ	В ТВОЕЙ ЛОКАЛЬНОЙ СЕТИ
+t100	Lokāls modeļa serveris	Локальный сервер модели
+t101	Pieslēdz Ollama, OpenCode Companion vai saderīgu galapunktu savā datorā.	Подключи Ollama, OpenCode Companion или совместимый сервер на своём компьютере.
+t102	MĀKONIS	ОБЛАКО
+t103	MI mākoņpakalpojumi pēc izvēles	Облачный ИИ по желанию
+t104	Iestati OpenRouter, Gemini, OpenAI vai citu atbalstītu pakalpojumu. Katram ir savi iestatījumi, izmaksas un ierobežojumi.	Настрой OpenRouter, Gemini, OpenAI или другого поддерживаемого провайдера. У каждого свои настройки, стоимость и ограничения.
 t105	Halo Iestatījumi ar piekļuvi intelekta un balss iestatīšanai.	Настройки Halo с переходом к настройке интеллекта и голоса.
 t106	Atver sadaļu Intelekts Iestatījumos, lai konfigurētu modeļus un pakalpojumu sniedzējus.	Открой раздел Интеллект в Настройках, чтобы настроить модели и провайдеров.
 t107	Gemini var izmantot Google OAuth.	Gemini поддерживает Google OAuth.
@@ -113,7 +113,7 @@ t111	Tava izvēle tiek ievērota.	Твой выбор соблюдается.
 t112	Izvēlētā pakalpojuma sniedzēja kļūme nedod atļauju nemanāmi nosūtīt privāto kontekstu citam sniedzējam.	Сбой выбранного провайдера не даёт разрешения незаметно передать личный контекст другому.
 t113	Piekļuves dati ir aizsargāti.	Учётные данные защищены.
 t114	Piekļuves dati tiek glabāti ar Android Keystore aizsargātā krātuvē, nevis parastajos lietotnes iestatījumos.	Учётные данные хранятся в защищённом хранилище с использованием Android Keystore, а не в обычных настройках приложения.
-t115	04 · PIEZĪMJU GRĀMATA UN MĀCĪBAS	04 · БЛОКНОТ И УЧЁБА
+t115	03 · PIEZĪMES UN MĀCĪBAS	03 · ЗАМЕТКИ И УЧЁБА
 t116	Skaidra darba vide tavam MI.	Понятное рабочее пространство для твоего ИИ.
 t117	Halo glabā tavu darbu Piezīmju grāmatā. Tu izvēlies, ko pievienot darba kontekstam. Mācības pārvērš izvēlēto materiālu saglabājamā mācību sesijā, lai viss nepaliktu tikai sarunu vēsturē.	Halo хранит твою работу в Блокноте. Ты выбираешь, что включить в рабочий контекст. Учёба превращает выбранный материал в сохраняемую учебную сессию, чтобы всё не оставалось только в истории чата.
 t118	Halo Piezīmju grāmatas ekrānuzņēmums.	Скриншот Блокнота Halo.
@@ -130,24 +130,24 @@ t128	Mācību sesijas ir piesaistītas konkrētai avota versijai, saglabā tavas
 t129	ATMIŅA AR ZINĀMU IZCELSMI	ПАМЯТЬ С ИЗВЕСТНЫМ ИСТОЧНИКОМ
 t130	Saglabā atmiņā apzināti	Сохраняй в памяти осознанно
 t131	Piezīmju grāmata un palīga atmiņa ir atšķirīgas lietas. Saglabāšana atmiņā ir atsevišķa darbība; piezīmes izveidošana to automātiski nepievieno atmiņai.	Блокнот и память помощника — разные вещи. Сохранение в памяти — отдельное действие; создание заметки не добавляет её в память автоматически.
-t132	05 · IERĪCES	05 · УСТРОЙСТВА
-t133	Tālrunis ir pamats. Ierīces to papildina.	Телефон — основа. Устройства расширяют его возможности.
-t134	Halo apraksta aparatūru pēc tās iespējām: mikrofons, skaļrunis, kamera, vadīklas, sensori vai fiziskas darbības. Tāpēc viena darbības vide var izmantot dažādas ierīces, nepiesaistot arhitektūru vienam briļļu zīmolam.	Halo описывает оборудование по возможностям: микрофон, динамик, камера, органы управления, датчики или физические действия. Так одна среда работает с разными устройствами, не привязывая архитектуру к одной марке очков.
+t132	05 · PIEVIENOTĀS IERĪCES	05 · ПОДКЛЮЧЁННЫЕ УСТРОЙСТВА
+t133	Sāc ar Android. Ierīces pievieno vēlāk.	Начни с Android. Устройства добавишь позже.
+t134	Halo lietošanai brilles nav vajadzīgas. Android ir pirmā platforma. Brilles, austiņas un eksperimentāli roboti var pievienot ievades vai izvades iespējas, taču atbalsts atšķiras un vēl tiek testēts.	Для Halo не нужны очки. Android — первая платформа. Очки, гарнитуры и экспериментальные роботы могут расширять ввод и вывод, но поддержка зависит от устройства и ещё тестируется.
 t135	Halo Ierīču ekrānuzņēmums.	Скриншот Устройств Halo.
-t136	GALVENĀ IERĪCE	ОСНОВНОЕ УСТРОЙСТВО
+t136	PIRMĀ PLATFORMA	ПЕРВАЯ ПЛАТФОРМА
 t137	Android tālrunis	Android-телефон
-t138	Darbina saskarni, Halo vidi, vietējos modeļus, sistēmas rīkus un darba vidi. Halo ir noderīgs arī bez pievienotām valkājamām ierīcēm.	Запускает интерфейс, среду Halo, локальные модели, системные инструменты и рабочее пространство. Halo полезен и без носимых устройств.
-t139	ATSAUCES VALKĀJAMĀ IERĪCE	ЭТАЛОННАЯ ИНТЕГРАЦИЯ
+t138	Android lietotnē ir palīgs, modeļu iestatīšana, tālruņa rīki, Piezīmju grāmata un Mācības. Dažas darbplūsmas vēl jāpārbauda uz īstām ierīcēm.	Приложение Android содержит помощника, настройки моделей, инструменты телефона, Блокнот и Учёбу. Некоторые сценарии ещё нужно проверить на реальных устройствах.
+t139	TESTĒŠANAS APARATŪRA	ТЕСТОВОЕ УСТРОЙСТВО
 t140	HeyCyan brilles	Очки HeyCyan
-t141	Ir integrēta BLE vadība, mikrofona ieraksts, multivides pārsūtīšana un briļļu audio maršrutēšana. Mikrofona ieraksts ir pārbaudīts ar īstu aparatūru; jaunākajam skaļruņa izvades ceļam vēl vajadzīga pārbaude pēc labojumiem.	Интегрированы управление по BLE, запись с микрофона, передача медиа и маршрутизация звука для очков. Запись с микрофона проверена на оборудовании; новейший путь вывода на динамик ещё требует проверки после исправлений.
-t142	ANDROID AUDIO IERĪCES	АУДИОУСТРОЙСТВА ANDROID
+t141	HeyCyan brilles ir pašreizējā Bluetooth un mikrofona integrācijas platforma. Daži skaļruņa un multivides scenāriji vēl jāpārbauda ar reālu aparatūru.	Очки HeyCyan — текущее тестовое устройство для Bluetooth и микрофона. Некоторые сценарии вывода звука и передачи медиа ещё требуют проверки на оборудовании.
+t142	AUDIO PIEDERUMI	АУДИОАКСЕССУАРЫ
 t143	Austiņas un brīvroku ierīces	Наушники и гарнитуры
-t144	Android audio ierīces var izmantot skaņas ievadei un izvadei. Ja attiecīgais savienojums ir pieejams, skaņai tiek dota priekšroka ierīcē, kurā sāki mijiedarbību.	Аудиоустройства Android могут использоваться для ввода и вывода звука. Если нужное соединение доступно, предпочтение отдаётся устройству, на котором началось взаимодействие.
-t145	EKSPERIMENTĀLA FIZISKA IERĪCE	ЭКСПЕРИМЕНТАЛЬНОЕ ВОПЛОЩЕНИЕ
-t146	Fiziska Halo ierīce iespēju, drošības un darbību noteikumu pārbaudei. BuddyBot ir eksperimentāls projekta virziens.	Физическое устройство Halo для проверки возможностей, безопасности и правил выполнения действий. BuddyBot — экспериментальное направление проекта.
-t147	06 · KĀPĒC VIENOTA DARBĪBAS VIDE?	06 · ЗАЧЕМ ЕДИНАЯ СРЕДА?
-t148	Modeļi mainās. Tavs palīgs paliek.	Модели меняются. Твой помощник остаётся.
-t149	Halo glabā kontekstu, pakalpojuma sniedzēja izvēli, rīkus, apstiprinājumus, darbību rezultātus, ierīces un atkopšanas datus neatkarīgi no viena modeļa. Android ir pirmā platforma, bet projekts ar to neaprobežojas.	Halo хранит контекст, выбор провайдера, инструменты, подтверждения, результаты действий, устройства и данные восстановления независимо от конкретной модели. Android — первая платформа, но проект ею не ограничивается.
+t144	Atbalstītās Android austiņas var nodrošināt mikrofonu un skaņas izvadi atkarībā no maršrutēšanas un atļaujām.	Совместимые Android-гарнитуры могут обеспечивать ввод и вывод звука с учётом маршрутизации и разрешений.
+t145	EKSPERIMENTĀLA APARATŪRA	ЭКСПЕРИМЕНТАЛЬНОЕ ОБОРУДОВАНИЕ
+t146	BuddyBot ir robotikas projekts fizisku darbību un drošības izpētei. Tas ir eksperimentāls un Halo lietošanai nav vajadzīgs.	BuddyBot — экспериментальный робототехнический проект для проверки физических действий и безопасности. Для использования Halo он не нужен.
+t147	07 · IZSTRĀDĀTĀJIEM	07 · ДЛЯ РАЗРАБОТЧИКОВ
+t148	Kāpēc Halo ir atsevišķa darbības vide.	Зачем Halo отдельная среда выполнения.
+t149	Darbības vide koordinē ievadi, kontekstu, izvēlēto MI modeli, atļaujas un rīku izpildi. Šāda nodalīšana ļaus atbalstīt dažādus modeļus un nākotnes platformas bez palīga pārbūvēšanas katrai ierīcei.	Среда выполнения координирует ввод, контекст, выбранную модель ИИ, разрешения и выполнение инструментов. Это позволит поддерживать разные модели и будущие платформы без переписывания помощника под каждое устройство.
 t150	Ievade	Ввод
 t151	balss · teksts · attēls · ierīces notikums	голос · текст · изображение · событие устройства
 t152	Konteksts	Контекст
@@ -158,35 +158,35 @@ t156	Darbība	Действие
 t157	atlasīt rīkus · apstiprināt · izpildīt	подобрать инструменты · подтвердить · выполнить
 t158	Pārbaude	Проверка
 t159	rezultāts · kļūme · nodošana · nezināms iznākums	результат · ошибка · передача · неизвестный исход
-t160	IESPĒJAS, NEVIS ZĪMOLI	ВОЗМОЖНОСТИ ВАЖНЕЕ МАРОК
-t161	Aparatūru var mainīt.	Оборудование можно менять.
-t162	Rīki pieprasa konkrētas iespējas, un tālrunis un ierīces norāda, ko tie patiešām spēj nodrošināt.	Инструменты запрашивают нужные возможности, а телефон и устройства сообщают, что действительно могут предоставить.
-t163	MĀKONIS TIKAI AR TAVU IZVĒLI	ОБЛАКО — ТОЛЬКО ПО ТВОЕМУ ВЫБОРУ
-t164	Privātuma noteikumi nosaka datu ceļu.	Правила конфиденциальности определяют путь данных.
-t165	Vietējās darbības režīms un tava pakalpojuma sniedzēja izvēle tiek pārbaudīti pirms konteksta iegūšanas un nosūtīšanas.	Локальный режим и твой выбор провайдера проверяются до получения и отправки контекста.
-t166	ATKOPJAMAS DARBĪBAS	ВОССТАНАВЛИВАЕМЫЕ ДЕЙСТВИЯ
-t167	Pārstartēšana nedrīkst atkārtot paveikto.	Перезапуск не должен повторять выполненное.
-t168	Pastāvīgais izpildes žurnāls reģistrē darbību sākšanu un rezultātus, lai atkopšanas laikā varētu turpināt darbu, akli neatkārtojot jau paveikto.	Постоянный журнал выполнения записывает начало действий и результаты, чтобы при восстановлении продолжать работу, не повторяя вслепую уже выполненное.
-t169	07 · PROJEKTA STATUSS	07 · СТАТУС ПРОЕКТА
-t170	Īsts projekts. Aktīva izstrāde. Gatavību pamato pārbaudes.	Настоящий проект. Активная разработка. Готовность подтверждается проверками.
-t171	Halo gatavojas pirmajiem testētājiem. Funkcijas vēl mainās, un pirmkodā ir vairāk iespēju, nekā pilnībā pārbaudīts ar īstām ierīcēm. Šī lapa apraksta pirmkodā pieejamo un norāda svarīgākās pārbaudes robežas.	Halo готовится к первым тестировщикам. Функции ещё меняются, и в коде есть возможности, пока не прошедшие полную проверку на устройствах. Эта страница описывает доступное в коде и отмечает важные границы проверки.
-t172	PĀRBAUDĪTS AR ĪSTĀM IERĪCĒM	ПРОВЕРЕНО НА УСТРОЙСТВАХ
-t173	Vietējais teksta modelis darbojas īstā tālrunī.	Локальная текстовая модель работает на настоящем телефоне.
-t174	Qwen ir sniedzis veiksmīgas vietējas atbildes tālrunī. Arī HeyCyan mikrofona ierakstam ir pierādījumi no iesniegtās aparatūras pārbaudes.	Qwen успешно отвечал локально на телефоне. Для записи с микрофона HeyCyan также есть результаты предоставленной аппаратной проверки.
-t175	KOMPILĀCIJA UN VIENĪBU TESTI	КОМПИЛЯЦИЯ И МОДУЛЬНЫЕ ТЕСТЫ
-t176	Darbību izpildes ceļš ir pārbaudīts ar testiem.	Путь выполнения действий покрыт тестами.
-t177	RUNTIME-050 tālruņa darbību izmaiņu kopai izturētas darbības vides, LiteRT, Android platformas, MI dzinēja un lietotnes kompilācijas un vienību testu pārbaudes.	Для пакета действий на телефоне RUNTIME-050 пройдены проверки компиляции и модульные тесты среды, LiteRT, Android-платформы, движка ИИ и приложения.
-t178	VĒL JĀPĀRBAUDA	ЕЩЁ НУЖНА ПРОВЕРКА
-t179	Jaunākās integrācijas vēl nav visas pārbaudītas laidienam.	Не все новые интеграции прошли проверку для выпуска.
-t180	Jaunākajām palīga lomas, pakalpojumu sniedzēju, resursu, darbību turpināšanas un aparatūras izvades izmaiņām vēl nepieciešamas plānotās pārbaudes ar īstu tālruni un aparatūru izpildes ciklā (HIL).	Последние изменения роли помощника, провайдеров, ресурсов, продолжения действий и аппаратного вывода ещё требуют запланированных проверок на телефоне и испытаний с оборудованием в контуре (HIL).
-t181	ATKLĀTA IZSTRĀDE	ОТКРЫТАЯ РАЗРАБОТКА
-t182	Lasi kodu. Seko pārbaudēm.	Читай код. Следи за проверками.
-t183	Halo ir atvērtā pirmkoda projekts ar priekšroku vietējai darbībai. Repozitorijā ir pašreizējā stāvokļa uzskaite, kas atsevišķi norāda pirmkodā pieejamo, testēto un ar īstu aparatūru pārbaudīto.	Halo — проект с открытым кодом и приоритетом локальной работы. В репозитории ведётся учёт текущего состояния, который отдельно отмечает наличие в коде, результаты тестов и проверку на оборудовании.
+t160	IERĪČU IESPĒJAS	ВОЗМОЖНОСТИ УСТРОЙСТВ
+t161	Dažāda aparatūra, kopīgi rīki.	Разные устройства, общие инструменты.
+t162	Pievienotās ierīces paziņo savas iespējas. Halo neuzskata, ka visām ir vienādi sensori vai vadības elementi.	Подключённые устройства сообщают о своих возможностях. Halo не предполагает, что у всех одинаковые датчики или органы управления.
+t163	MODEĻU MARŠRUTĒŠANA	МАРШРУТИЗАЦИЯ МОДЕЛЕЙ
+t164	Izvēlies, kad dati atstāj tālruni.	Решай, когда данные уходят с телефона.
+t165	Izmanto lokālu modeli vai skaidri izvēlies tīkla pakalpojumu. Attālinātiem pieprasījumiem piemēro šī pakalpojuma datu apstrādes noteikumus.	Используй локальную модель или явно выбери сетевого провайдера. При удалённых запросах действуют правила обработки данных выбранного сервиса.
+t166	DARBĪBU VĒSTURE	ИСТОРИЯ ДЕЙСТВИЙ
+t167	Redzi, kas izdevās un kas ne.	Видно, что выполнено, а что нет.
+t168	Halo reģistrē rīku izsaukumus un rezultātus, lai varētu pārbaudīt pārtrauktus uzdevumus un neatkārtotu jau izpildītas darbības.	Halo записывает вызовы инструментов и результаты, чтобы можно было проверить прерванную работу и не повторять вслепую уже выполненные действия.
+t169	06 · IZSTRĀDES STATUSS	06 · СТАТУС РАЗРАБОТКИ
+t170	Halo ir alfa versija, nevis gatavs palīgs.	Halo — альфа, а не готовый помощник.
+t171	Android pirmkodā ir šeit aprakstītās iespējas, taču ne visas darbplūsmas ir pārbaudītas praksē. Instalējamu versiju meklē GitHub Releases. Rēķinies ar kļūdām, izmaiņām un neatbalstītām ierīcēm.	В коде Android уже есть описанные возможности, но не все сценарии проверены на практике. Установочную сборку ищи в GitHub Releases. Возможны ошибки, изменения и неподдерживаемые устройства.
+t172	PĀRBAUDĪTS UZ IERĪCĒM	ПРОВЕРЕНО НА УСТРОЙСТВАХ
+t173	Lokāls modelis ir atbildējis tālrunī.	Локальная модель отвечала на телефоне.
+t174	Neliels Qwen modelis ir sniedzis lokālas atbildes Android testa ierīcē. Arī HeyCyan mikrofona uztveršanai ir reālas aparatūras testu pierādījumi.	Небольшая модель Qwen отвечала локально на тестовом Android-устройстве. Захват звука с микрофона HeyCyan тоже подтверждён испытаниями на оборудовании.
+t175	AUTOMĀTISKĀS PĀRBAUDES	АВТОМАТИЧЕСКИЕ ПРОВЕРКИ
+t176	Tālruņa rīkiem ir koda līmeņa testi.	Инструменты телефона покрыты тестами.
+t177	Tālruņa darbību videi ir veiksmīgas kompilācijas un vienību testu pierādījumi. Tas neapstiprina katru darbību uz reāla tālruņa.	Среда телефонных действий прошла сборку и модульные тесты. Это ещё не подтверждает каждую операцию на реальном телефоне.
+t178	VAJADZĪGA PILNA TESTĒŠANA	НУЖНО СКВОЗНОЕ ТЕСТИРОВАНИЕ
+t179	Dažas integrācijas vēl nav pārbaudītas.	Часть интеграций ещё не проверена.
+t180	Jaunākām modeļu pakalpojumu, sistēmas palīga lomas, ilgstošu darbību un ierīču skaņas maršrutu izmaiņām vēl vajadzīgi pilni testi uz ierīcēm.	Новые изменения провайдеров, роль системного помощника, длительные действия и некоторые аудиомаршруты ещё требуют полных проверок на устройствах.
+t181	PIRMKODS UN TESTU REZULTĀTI	КОД И РЕЗУЛЬТАТЫ ТЕСТОВ
+t182	Vēlies tehniskās detaļas?	Нужны технические подробности?
+t183	Repozitorijā ir nodalīts ieviestais kods, testu pierādījumi un zināmie trūkumi. Vari pārbaudīt progresu, nevis paļauties tikai uz vietnes apgalvojumiem.	В репозитории разделены реализованный код, результаты тестов и известные пробелы. Прогресс можно проверить, а не верить только тексту сайта.
 t184	Atvērt Halo GitHub ↗	Открыть Halo на GitHub ↗
 t185	Pašreizējais stāvoklis	Текущее состояние
-t186	08 · HALO ALFA TESTĒŠANA	08 · АЛЬФА-ТЕСТИРОВАНИЕ HALO
-t187	Palīdzi padarīt Halo saprotamu.	Помоги сделать Halo понятнее.
-t188	Tev nav vajadzīgas viedās brilles, tehniskā pieredze vai savi dokumenti. Ja Android laidiens ir publicēts, sāc ar to, lejupielādē bezmaksas piemērus un pastāsti, kas Halo ir skaidrs un kas mulsina. Testēšanas plāns ir ceļvedis, nevis eksāmens.	Не нужны умные очки, технический опыт или собственные документы. Начни с опубликованной Android-сборки, если она доступна, скачай бесплатные примеры и расскажи, что в Halo понятно, а что сбивает с толку. План тестирования — подсказка, а не экзамен.
+t186	08 · IZMĒĢINI ALFA VERSIJU	08 · ПОПРОБУЙ АЛЬФУ
+t187	Izmēģini Halo Android tālrunī.	Проверь Halo на Android-телефоне.
+t188	Pārbaudi, vai GitHub Releases ir Android versija. Ja tā ir pieejama, seko īsajai testa pamācībai un izmanto zemāk esošos piemēru failus. Viedbrilles un paša testa dokumenti nav vajadzīgi. Ziņo par kļūmēm un nesaprotamiem ekrāniem.	Проверь, есть ли сборка Android в GitHub Releases. Если она доступна, пройди короткое руководство и используй примеры файлов ниже. Умные очки и свои тестовые документы не нужны. Сообщай об ошибках и непонятных экранах.
 t189	Kā piedalīties	Как участвовать
 t190	Iegūsti Halo	Установи Halo
 t191	Pārbaudi	Проверь
@@ -198,8 +198,8 @@ t196	Izmēģini īstus uzdevumus	Попробуй реальные задачи
 t197	Izmanto kontrolsarakstu, izlaid ierīces, kuru tev nav, un pieraksti, kas patiesībā notiek.	Используй список шагов, пропускай оборудование, которого у тебя нет, и записывай фактический результат.
 t198	Dalies ar novērojumu	Поделись наблюдением
 t199	Ziņo gan par neskaidriem brīžiem, gan kļūmēm. Abi palīdz uzlabot Halo.	Сообщай и о непонятных моментах, и о поломках. И то и другое помогает улучшать Halo.
-t200	BEZ MAKSAS · BEZ KONTA · TESTA DATI	БЕСПЛАТНО · БЕЗ АККАУНТА · ТЕСТОВЫЕ ДАННЫЕ
-t201	Viss pirmajai izmēģināšanai.	Всё для первой пробы.
+t200	BEZMAKSAS PIEMĒRU FAILI	БЕСПЛАТНЫЕ ТЕСТОВЫЕ ФАЙЛЫ
+t201	Sāc ar īso testa pamācību.	Начни с короткой инструкции.
 t202	Mācību piemērā ir trīs bazilika stādi ar atšķirīgu ikdienas apgaismojumu. PDF ir aprakstīti apstākļi, bet attēlā — galīgie mērījumi. Kopā tie palīdz pārbaudīt, vai Halo izmanto avotu vai izdomā ticamu atbildi. Lejupielādējamie piemēri ir angļu valodā.	Учебный пример показывает три ростка базилика с разным ежедневным освещением. В PDF описаны условия, а на изображении — итоговые измерения. Вместе они помогают проверить, использует ли Halo источник или выдумывает убедительный ответ. Материалы для скачивания — на английском.
 t203	Lejupielādēt īso testēšanas ceļvedi	Скачать краткое руководство
 t204	Skatīt visus piecus failus	Посмотреть все пять файлов
@@ -207,8 +207,8 @@ t205	Piemēru mērījumi ir izdomāti un paredzēti tikai testēšanai. Dažiem 
 t206	Mācību ilustrācija: bazilika podi A, B un C ar atšķirīgu apgaismojumu un galīgo augstumu 6 cm, 10 cm un 14 cm.	Учебная иллюстрация: горшки с базиликом A, B и C при разном освещении, итоговая высота — 6, 10 и 14 см.
 t207	01 / NOVĒROJUMU ATTĒLS	01 / ИЗОБРАЖЕНИЕ С НАБЛЮДЕНИЯМИ
 t208	IZMANTO KOPĀ AR VIENAS LAPAS TEKSTU	ИСПОЛЬЗУЙ ВМЕСТЕ С ТЕКСТОМ НА ОДНОЙ СТРАНИЦЕ
-t209	LEJUPIELĀDES	МАТЕРИАЛЫ ДЛЯ СКАЧИВАНИЯ
-t210	Pieci faili. Bez reģistrēšanās.	Пять файлов. Без регистрации.
+t209	TESTA MATERIĀLI	МАТЕРИАЛЫ ДЛЯ ТЕСТА
+t210	Pieci lejupielādējami piemēru faili.	Пять файлов для тестирования.
 t211	Katru failu var lejupielādēt tieši no šīs vietnes. Sāc ar ceļvedi un pēc vajadzības importē pārējos materiālus Halo.	Каждый файл скачивается прямо с этого сайта. Начни с руководства, затем импортируй остальные материалы в Halo по мере необходимости.
 t212	05 FAILI · GATAVI LIETOŠANAI	05 ФАЙЛОВ · ГОТОВЫ К ИСПОЛЬЗОВАНИЮ
 t213	Lejupielādēt Halo alfa testēšanas īso ceļvedi PDF formātā	Скачать краткое руководство по альфа-тесту Halo в PDF
@@ -227,9 +227,9 @@ t225	Gatavs teksts, lai pārbaudītu satura pievienošanu, rediģēšanu un atra
 t226	Lejupielādēt kopējamus testēšanas pieprasījumus TXT formātā	Скачать тестовые запросы для копирования в TXT
 t227	Kopējami pieprasījumi	Запросы для копирования
 t228	Gatavi jautājumi, sagaidāmie novērojumi un kļūmes ziņojuma veidne.	Готовые вопросы, ожидаемые наблюдения и шаблон сообщения о проблеме.
-t229	PĀRDOMĀTA PIRMĀ IZMĒĢINĀŠANA	ВДУМЧИВАЯ ПЕРВАЯ ПРОБА
-t230	Izmēģini lietotni aptuveni 15–25 minūtēs.	Попробуй приложение примерно за 15–25 минут.
-t231	Atzīmē soli, kad esi to izmēģinājis, arī tad, ja tas neizdevās. Atzīmes glabājas tikai šajā pārlūkā un netiek nosūtītas Halo.	Отмечай шаг, когда попробовал его, даже если он не сработал. Отметки хранятся только в этом браузере и не отправляются в Halo.
+t229	ĪSS TESTĒŠANAS PLĀNS	КОРОТКИЙ ПЛАН ПРОВЕРКИ
+t230	Pirmais tests aizņem apmēram 15–25 minūtes.	Первая проверка занимает около 15–25 минут.
+t231	Atzīmē katru izmēģināto soli, arī neveiksmīgu mēģinājumu. Atzīmes glabājas šajā pārlūkā un tiek iekļautas atsauksmē, kad izvēlies to sagatavot.	Отмечай каждый попробованный шаг, даже если он не сработал. Отметки хранятся в этом браузере и включаются в отзыв, когда ты выбираешь его подготовить.
 t232	Izmēģināts: 0 no 7	Попробовано: 0 из 7
 t233	Notīrīt atzīmes	Сбросить отметки
 t234	Iepazīsti lietotni	Осмотрись в приложении

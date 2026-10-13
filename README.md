@@ -13,19 +13,30 @@ HaloWeb is deliberately static: plain HTML, CSS, JavaScript and checked-in UI as
 - Site content stays visible if the interactive script fails; translation catalog and existing alpha kit files remain unchanged.
 - `tools/check_browser.cjs` now covers **36 viewport/language/theme combinations** (320, 390, 768, 1024, 1280, 1440 pixels × EN/LV/RU × light/dark) plus navigation visibility, rendered screenshot scale and sticky-header anchor placement. Browser and deploy checks should be run on the release checkout; this documentation records the assertions, not a fresh physical browser test result.
 
-## Product framing
+## Content and visitor journey
 
-The landing page answers the product questions in human order:
+The website is for someone who has not heard of Halo before. Lead with what
+the Android app does, not with the name of its runtime architecture.
 
-1. What is Halo?
-2. What can it actually do on an Android phone?
-3. Where does the AI run?
-4. What are Notebook and Study for?
-5. How do glasses and other devices fit in?
-6. Why does Halo have a runtime layer?
-7. What is physically verified versus still under acceptance?
+1. **Understand the product:** open-source AI assistant for Android; no glasses required.
+2. **See real screens:** Home, Notebook, Canvas, Study and Devices.
+3. **Try useful actions:** ask by voice or text and run supported phone tools.
+4. **Work with own content:** keep notes and files, then use them in Study.
+5. **Choose the model:** device, local network or optional cloud connection.
+6. **Add hardware when useful:** wearables are optional, with varying acceptance.
+7. **Assess maturity:** distinguish code, unit tests and physical verification.
+8. **Try the alpha:** GitHub Releases, the downloadable test kit, and feedback.
 
-The runtime architecture remains important, but it no longer appears before the user can understand the product.
+Architecture belongs after the product story, in the developers' section.
+Do not imply an APK is published until it appears on GitHub Releases.
+
+**Single source of copy:** edit `tools/english-catalog.json` for English
+`tNNN` strings and `tools/translations.tsv` for Latvian/Russian counterparts.
+Use `tools/workspace_copy.json` for workspace-interaction text,
+`tools/annotation_copy.json` for feedback/carousel text, and
+`tools/build_translations.py` for metadata and runtime strings. Run
+`python tools/build_translations.py` to regenerate `js/translations.js`
+and English no-JS HTML fallbacks. Avoid adding copy overrides in the builder.
 
 ## Current product truth
 
