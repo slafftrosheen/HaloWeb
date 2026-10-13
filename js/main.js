@@ -36,6 +36,12 @@
     document.querySelector('meta[name="description"]').content = t('description');
     document.querySelector('meta[property="og:title"]').content = t('title');
     document.querySelector('meta[property="og:description"]').content = t('description');
+    var schema = document.querySelector('script[type="application/ld+json"]');
+    if (schema) {
+      var application = JSON.parse(schema.textContent);
+      application.description = t('description');
+      schema.textContent = JSON.stringify(application);
+    }
     document.getElementById('site-language').value = language;
     document.getElementById('alpha-issue-template').textContent = t('template');
     if (copyStatusKey) document.getElementById('alpha-copy-status').textContent = t(copyStatusKey);

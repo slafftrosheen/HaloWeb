@@ -55,6 +55,10 @@ The page keeps these boundaries visible:
 
 `CURRENT-STATE.md` remains authoritative when source presence and acceptance status differ.
 
+## Translation regressions
+
+`node --test tests/i18n.test.mjs` validates the active keyed catalog, accessibility and dynamic strings, metadata, and script load order. It also preserves the upstream legacy-runtime switching regression. The older `js/i18n*.js` files remain in history and this checkout for those regression checks; they are not loaded by the page. Current maintenance is documented under Languages and palette below.
+
 ## UI assets
 
 All displayed phone previews are original Android screenshots supplied on 13 October 2026 under `assets/screens/`. No screenshot text or application state has been edited.
