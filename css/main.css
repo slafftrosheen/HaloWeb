@@ -769,3 +769,9 @@ p{line-height:1.62}
 @media(prefers-reduced-motion:reduce){
  .brand-wordmark,.footer-brand-wordmark{transition:none}
 }
+
+/* 2026-10-14: product-first heading; the campaign statement stays secondary. */
+.hero h1{max-width:16ch;line-height:1.12;overflow-wrap:normal}
+.hero-tagline{max-width:52ch;margin:-8px 0 24px;color:var(--mint-tint);font-family:var(--font-display);font-weight:560;font-size:clamp(1rem,1.5vw,1.24rem);line-height:1.4}
+.hero-promise{margin-top:0}
+@media(max-width:620px){.hero-tagline{font-size:1rem}}

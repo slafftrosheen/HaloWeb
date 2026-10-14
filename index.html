@@ -40,7 +40,7 @@
   <link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-variable.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="stylesheet" href="css/fonts.css?v=1" />
   <link rel="stylesheet" href="css/tokens.css?v=15" />
-  <link rel="stylesheet" href="css/main.css?v=15" />
+  <link rel="stylesheet" href="css/main.css?v=16" />
 
   <script type="application/ld+json">
   {
@@ -92,9 +92,10 @@
       <div class="container hero-grid">
         <div class="hero-copy intro-enter">
           <p class="kicker"><span class="live-dot" aria-hidden="true"></span> <span data-i18n="t015">OPEN SOURCE · ANDROID ALPHA</span></p>
-          <h1><span data-i18n="t016">AI that feels</span><br><span class="hero-gradient"><span data-i18n="t017">like second nature.</span></span></h1>
+          <h1><span data-i18n="t016">A personal AI assistant.</span><br><span class="hero-gradient"><span data-i18n="t017">Starting on Android.</span></span></h1>
+          <p class="hero-tagline"><span data-i18n="brandTagline">AI that feels like second nature.</span></p>
           <p class="hero-lede">
-            <span data-i18n="t019">Halo is an open-source AI assistant for Android. Ask by voice or text, use supported phone actions, keep notes and files in one workspace, and study from your own material. Run a model on your phone or connect a provider you choose. Glasses are optional; other host platforms are still in development.</span>
+            <span data-i18n="t019">Halo is an open-source AI assistant for Android today, designed around a portable runtime for other devices in the future. Ask by voice or text, use supported phone actions, keep notes and files in Notebook and Canvas, and study from material you choose. Use a model on your phone or explicitly select your own network server or cloud provider. Glasses are optional; some workflows are still being tested.</span>
           </p>
           <p class="hero-promise"><span data-i18n="brandPromise">Private by default. Open by design.</span></p>
           <div class="hero-actions">
@@ -126,18 +127,18 @@
       <div class="container summary-grid reveal">
         <div>
           <span>01</span>
-          <b><span data-i18n="t034">Ask by voice or text.</span></b>
-          <p><span data-i18n="t035">Ask questions or request supported phone actions. Halo shows results and failures instead of hiding them.</span></p>
+          <b><span data-i18n="t034">Ask, then see what happened.</span></b>
+          <p><span data-i18n="t035">Request an answer or a supported phone action by voice or text. Halo should distinguish completed work from failed and unconfirmed steps.</span></p>
         </div>
         <div>
           <span>02</span>
-          <b><span data-i18n="t036">Work with your own material.</span></b>
-          <p><span data-i18n="t037">Save notes and files in Notebook, arrange ideas in Canvas, and use chosen sources in Study.</span></p>
+          <b><span data-i18n="t036">Keep your material together.</span></b>
+          <p><span data-i18n="t037">Save notes and files, arrange ideas in Canvas, and study from sources you choose.</span></p>
         </div>
         <div>
           <span>03</span>
-          <b><span data-i18n="t038">Choose how AI runs.</span></b>
-          <p><span data-i18n="t039">Configure a phone model, local-network server or remote provider. Connected devices are optional.</span></p>
+          <b><span data-i18n="t038">Choose the AI behind it.</span></b>
+          <p><span data-i18n="t039">Run a compatible model on your phone, connect your own server or select a cloud provider. Privacy and performance differ by choice.</span></p>
         </div>
       </div>
     </section>
@@ -146,9 +147,9 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="section-label"><span data-i18n="t040">01 · INSIDE THE APP</span></p>
-          <h2><span data-i18n="t041">One Android app, several useful tools.</span></h2>
+          <h2><span data-i18n="t041">What you can try in the Android alpha.</span></h2>
           <p>
-            <span data-i18n="t042">Use Home for requests, Notebook for notes and files, Canvas to arrange ideas, Study for guided learning, and Devices to manage hardware. These are screenshots of the current Android alpha interface.</span>
+            <span data-i18n="t042">Home handles requests. Activity shows actions and approvals. Notebook keeps notes and files; Canvas and Study work with those sources. Devices and Settings manage hardware, models and permissions. These are real Android screenshots, not proof that every feature is fully tested.</span>
           </p>
         </header>
 
@@ -202,9 +203,9 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="section-label"><span data-i18n="t076">02 · PHONE ACTIONS</span></p>
-          <h2><span data-i18n="t077">Ask Halo to do something on your phone.</span></h2>
+          <h2><span data-i18n="t077">Ask Halo to help with a phone task.</span></h2>
           <p>
-            <span data-i18n="t078">Halo has tools for timers, volume, opening apps and interacting with visible screen controls. Permissions and confirmations apply. Some multi-step actions and third-party app handoffs are still being tested.</span>
+            <span data-i18n="t078">Try setting a timer, opening an app or adjusting a setting. With permission and approval, Halo can also work with visible screen controls. Multi-step actions and handoffs to third-party apps are still being tested.</span>
           </p>
         </header>
 
@@ -264,7 +265,7 @@
           <p class="section-label"><span data-i18n="t115">03 · NOTES AND STUDY</span></p>
           <h2><span data-i18n="workspaceFlow">Notes, files and study tools in one place.</span></h2>
           <p>
-            <span data-i18n="workspaceIntro">Notebook stores notes and files. Canvas helps you arrange ideas visually. Study uses material you select for questions, explanations and practice.</span>
+            <span data-i18n="workspaceIntro">Notebook saves notes and files. Canvas lets you arrange, annotate and connect your sources. Study turns material you choose into explanations, questions and guided practice.</span>
           </p>
         </header>
 
@@ -280,16 +281,16 @@
       <div class="container ai-layout">
         <div class="ai-copy reveal">
           <p class="section-label"><span data-i18n="t094">04 · AI OPTIONS</span></p>
-          <h2><span data-i18n="t095">Choose where your AI runs.</span></h2>
+          <h2><span data-i18n="t095">Choose where Halo thinks.</span></h2>
           <p>
-            <span data-i18n="t096">Install a supported model on the phone, connect to a computer on your network, or configure a cloud provider. Halo keeps the same tools and workspace; network-based models may receive the context needed for your request.</span>
+            <span data-i18n="t096">Download and test a model on your phone, connect a server on your network, or configure a cloud provider. Remote requests can send relevant context to the provider you select. Halo must not silently move your data to a different provider after a failure.</span>
           </p>
 
           <div class="ai-lanes">
             <article>
               <span><span data-i18n="t097">ON DEVICE</span></span>
               <h3>LiteRT-LM</h3>
-              <p><span data-i18n="t098">LiteRT-LM provides on-device inference. Qwen 3 0.6B Dynamic INT4 is the current testing baseline; compatibility, speed and memory use depend on your phone.</span></p>
+              <p><span data-i18n="t098">Discover and download LiteRT models in Settings, test an answer, then choose a model for supported roles. A fit estimate is not a real device test: speed and compatibility depend on the phone.</span></p>
             </article>
             <article>
               <span><span data-i18n="t099">ON YOUR NETWORK</span></span>
@@ -334,9 +335,9 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="section-label"><span data-i18n="t132">05 · CONNECTED DEVICES</span></p>
-          <h2><span data-i18n="t133">Start with Android. Add devices later.</span></h2>
+          <h2><span data-i18n="t133">Start on Android. Other devices are optional.</span></h2>
           <p>
-            <span data-i18n="t134">You do not need glasses to use Halo. Android is the first host platform. Glasses, headsets and experimental robots can add input or output, but support varies by device and is still being tested.</span>
+            <span data-i18n="t134">Halo is not a glasses-only assistant. Android is the first host platform. Glasses, headsets and experimental robots may extend interaction where drivers and hands-on tests support them; other host platforms remain in development.</span>
           </p>
         </header>
 
@@ -375,9 +376,9 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="section-label"><span data-i18n="t169">06 · DEVELOPMENT STATUS</span></p>
-          <h2><span data-i18n="t170">Halo is an alpha, not a finished assistant.</span></h2>
+          <h2><span data-i18n="t170">Built in the source. Still being tested.</span></h2>
           <p>
-            <span data-i18n="t171">The Android codebase includes the features described here, but not every workflow has passed hands-on testing. Check GitHub Releases for an installable build. Expect bugs, changes and unsupported devices.</span>
+            <span data-i18n="t171">The Android alpha has working paths and substantial code, but compile checks, unit tests and physical device acceptance are different things. Some actions and integrations remain unverified. Check GitHub Releases for builds and their known limits.</span>
           </p>
         </header>
 
@@ -389,13 +390,13 @@
           </article>
           <article>
             <span><span data-i18n="t175">AUTOMATED CHECKS</span></span>
-            <h3><span data-i18n="t176">Phone tools have code-level tests.</span></h3>
-            <p><span data-i18n="t177">The phone-action runtime has compile and unit-test evidence. That does not verify every action on a real phone.</span></p>
+            <h3><span data-i18n="t176">Automated tests cover core paths.</span></h3>
+            <p><span data-i18n="t177">The app has code-level tests for actions, workspace and model-related behavior. Passing tests does not establish that every command works on every phone.</span></p>
           </article>
           <article class="status-warn">
             <span><span data-i18n="t178">NEEDS END-TO-END TESTING</span></span>
             <h3><span data-i18n="t179">Some integrations are still unverified.</span></h3>
-            <p><span data-i18n="t180">Newer provider changes, assistant-role integration, long-running actions and some device audio routes still need full device testing.</span></p>
+            <p><span data-i18n="t180">Model compatibility, multi-step actions, remote-provider failures and some wearable audio paths still need end-to-end acceptance on real hardware.</span></p>
           </article>
         </div>
 
@@ -419,9 +420,9 @@
       <div class="container">
         <header class="section-head section-head--dark reveal">
           <p class="section-label"><span data-i18n="t147">07 · FOR DEVELOPERS</span></p>
-          <h2><span data-i18n="t148">Why Halo has a separate runtime.</span></h2>
+          <h2><span data-i18n="t148">One runtime, different devices and models.</span></h2>
           <p>
-            <span data-i18n="t149">The runtime coordinates input, context, the selected AI model, permissions and tool execution. That separation is intended to support different models and future host platforms without rebuilding the assistant for every device.</span>
+            <span data-i18n="t149">Halo separates input, context, model reasoning, permissions and tool execution. Android is the first host; Linux and Windows are development targets, not released apps. The aim is to keep the assistant useful without committing to a single model or gadget.</span>
           </p>
         </header>
 
@@ -476,8 +477,8 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="section-label"><span data-i18n="t186">08 · TRY THE ALPHA</span></p>
-          <h2 id="alpha-title"><span data-i18n="t187">Test Halo on an Android phone.</span></h2>
-          <p><span data-i18n="t188">Check GitHub Releases for an Android build. If one is available, follow the short test guide and use the example files below. You do not need smart glasses or your own test documents. Please report broken flows and confusing screens.</span></p>
+          <h2 id="alpha-title"><span data-i18n="t187">Help test Halo on Android.</span></h2>
+          <p><span data-i18n="t188">Check GitHub Releases for an installable Android build. If one is available, use the short test guide and sample files, then report what worked, failed or was confusing. Glasses and personal documents are not required.</span></p>
         </header>
 
         <div class="alpha-path reveal" aria-label="How to participate" data-i18n-aria-label="t189">
@@ -627,7 +628,7 @@ Screenshot (redact private data):</pre>
     </div>
   </footer>
 
-  <script src="js/translations.js?v=4" defer></script>
+  <script src="js/translations.js?v=6" defer></script>
   <script src="js/main.js?v=14" defer></script>
 </body>
 </html>

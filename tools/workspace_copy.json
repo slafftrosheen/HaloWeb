@@ -1,7 +1,7 @@
 {
   "en": {
     "workspaceFlow": "Notes, files and study tools in one place.",
-    "workspaceIntro": "Notebook stores notes and files. Canvas helps you arrange ideas visually. Study uses material you select for questions, explanations and practice.",
+    "workspaceIntro": "Notebook saves notes and files. Canvas lets you arrange, annotate and connect your sources. Study turns material you choose into explanations, questions and guided practice.",
     "workspaceTabs": "Explore the workspace",
     "workspaceSave": "Organize notes and files",
     "workspaceSaveHint": "Notes, files and conversations in Notebook.",
@@ -18,7 +18,7 @@
   },
   "lv": {
     "workspaceFlow": "Piezīmes, faili un mācību rīki vienuviet.",
-    "workspaceIntro": "Piezīmju grāmata glabā piezīmes un failus. Canvas palīdz vizuāli izkārtot idejas. Mācības izmanto tavus izvēlētos materiālus jautājumiem, skaidrojumiem un vingrinājumiem.",
+    "workspaceIntro": "Notebook glabā piezīmes un failus. Canvas ļauj sakārtot, anotēt un savienot savus avotus. Study no izvēlētā materiāla veido skaidrojumus, jautājumus un mācību uzdevumus.",
     "workspaceTabs": "Iepazīsti darba vidi",
     "workspaceSave": "Sakārto piezīmes un failus",
     "workspaceSaveHint": "Piezīmes, faili un sarunas Piezīmju grāmatā.",
@@ -35,7 +35,7 @@
   },
   "ru": {
     "workspaceFlow": "Заметки, файлы и учёба в одном месте.",
-    "workspaceIntro": "Блокнот хранит заметки и файлы. Canvas помогает наглядно располагать идеи. Учёба использует выбранные тобой материалы для вопросов, объяснений и практики.",
+    "workspaceIntro": "Notebook хранит заметки и файлы. Canvas помогает размещать, аннотировать и связывать материалы. Study использует выбранные источники для объяснений, вопросов и практики.",
     "workspaceTabs": "Познакомься с рабочим пространством",
     "workspaceSave": "Организуй заметки и файлы",
     "workspaceSaveHint": "Заметки, файлы и разговоры в Блокноте.",

@@ -11,7 +11,7 @@ Halo source head used: `faca1ae45cb1fc3ac8d8f7dee5836244e6deebc6`
 
 Visual/localization update: 2026-10-13. All displayed app images now use the 12 original Android JPG screenshots supplied by the user. The `08-46-58-829` capture is Settings, not the Intelligence configuration screen. The images retain English text, app state and original proportions; no captures were retouched. Website captions, accessibility labels and controls are localized into EN/LV/RU. Downloadable test-kit files remain English and are labelled accordingly.
 
-The website palette follows the current `app/src/main/java/com/halo/app/ui/theme/Color.kt`: `HaloPrimary #7DE2B1`, `DarkBackground #131B19`, `DarkSurface #1D2723`, `LightBackground #F7F8F4`. The existing capability/acceptance audit below remains dated; the screenshot update does not re-certify those integrations.
+The website follows the updated Halo Brand Book palette (Night Ink, Halo Mint and Cream), not the older Android `Color.kt` tokens. Brand alignment does not prove that the current APK implements the same UI.
 
 ## Claim priority
 
@@ -77,3 +77,7 @@ A UI control present in source may be shown visually even when its end-to-end be
 - Do not imply OpenAI/Anthropic/OpenRouter consumer subscriptions automatically become API access.
 - Do not imply a dispatched Android intent is proof the external action completed.
 - Do not describe BuddyBot as Halo's primary product.
+
+## 2026-10-14 — updated content review
+
+Read the supplied 31-page Halo Brand Book and Halo in-app graphics v0.3 ZIP. Compared public claims with Halo's CURRENT-STATE.md, AppShell.kt, LOCAL-MODELS.md, FIRST-RUN-SETUP.md and CANVAS-DAILY-FLOW.md. The five Android bottom destinations are Home, Activity, Notebook, Devices and Settings; Study is a separate route. This copy pass gives the visitor a concrete Android-first explanation before the campaign line, distinguishes future hosts from current support, qualifies third-party phone actions and avoids treating UI plans as hardware acceptance. English, Latvian and Russian copy are updated together.

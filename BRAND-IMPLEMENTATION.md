@@ -30,3 +30,7 @@ Run `node --test tests/*.test.mjs` and `python tools/validate_site.py` from repo
 
 `assets/halo-og.png` is a lightweight (600 × 315) Night Ink/mint preview with the open ring, original wordmark silhouette, simple campaign copy and the Android alpha label. The image is static PNG (not SVG) for social crawler compatibility and has a versioned URL in both Open Graph and Twitter metadata. Use `assets/brand/halo-ring.svg` as its source mark. The card is intentionally not loaded in the web page content, only by social preview crawlers.
 
+
+## Brand/content pass · 2026-10-14
+
+The updated 31-page source book includes mission/audience (pp.3–5), logo and usage (pp.6–10), accessible palette and type (pp.11–14), voice and visual language (pp.15–18) and the presence, icons, kids/onboarding design directions (pp.21–31). The supplied asset ZIP v0.3 includes 21 static state pairs, context/condition badges, 85 icon families, Lottie motion, Mini/Floating Halo, widgets and kids mockups. These are **design specifications**, not proof of implementation on a device. The site's product headline now answers what Halo is first; the tagline remains a secondary line. No unverified design concept was presented as shipped.
