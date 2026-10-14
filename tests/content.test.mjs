@@ -48,3 +48,14 @@ test('English HTML works without JavaScript and matches the copy source', () => 
   assert.ok(html.includes('<title>' + bundle.en.title + '</title>'));
   assert.ok(html.includes('name="description" content="' + bundle.en.description + '"'));
 });
+
+test('alpha visitor can reach the actual product and testing route before design reference',()=>{
+ const index=id=>html.indexOf('id="'+id+'"');
+ assert.ok(index('product')>0&&index('alpha')>index('product'));
+ assert.ok(index('mission')>index('alpha')&&index('ring')>index('mission')&&index('presence')>index('ring'));
+ assert.match(bundle.en.t019,/AI assistant for Android/);
+ assert.match(bundle.en.t075,/earlier/);
+ assert.match(bundle.en.productKidsBody,/device testing/);
+ assert.match(bundle.en.t126,/PDF-page extraction/);
+ assert.match(bundle.en.t098,/fit estimate/);
+});

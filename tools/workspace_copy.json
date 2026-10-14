@@ -1,7 +1,7 @@
 {
   "en": {
     "workspaceFlow": "Notes, files and study tools in one place.",
-    "workspaceIntro": "Notebook saves notes and files. Canvas lets you arrange, annotate and connect your sources. Study turns material you choose into explanations, questions and guided practice.",
+    "workspaceIntro": "Notebook saves notes, files and voice memos. Canvas connects and annotates selected material; Study creates lessons from chosen sources. Adding something to the workspace does not automatically share it with AI.",
     "workspaceTabs": "Explore the workspace",
     "workspaceSave": "Organize notes and files",
     "workspaceSaveHint": "Notes, files and conversations in Notebook.",
@@ -10,15 +10,15 @@
     "workspaceLearn": "Study material you choose",
     "workspaceLearnHint": "Choose a goal and materials in Study.",
     "workspaceNotebookBody": "Find your notes, imported files and saved conversations in one library. Choose the materials you want to work with next.",
-    "workspaceCanvasBody": "Place notes, images and documents on a visual canvas. Connect related ideas and arrange them in a way that makes sense to you.",
-    "workspaceStudyBody": "Start with a question or learning goal. Add your own material when useful, then learn through explanations, practice and review.",
+    "workspaceCanvasBody": "Arrange notes, images, PDFs and recordings as source-linked cards. Draw, annotate, search, and review suggested arrangements before accepting them. Check imported or extracted content against the source.",
+    "workspaceStudyBody": "Set a learning goal, select material, then try guided explanations and practice. Lessons can track attempts and reviews; AI feedback and image understanding depend on the selected model.",
     "workspaceChoice": "You choose what the assistant uses",
     "workspaceContextBody": "Adding an item to working context gives Halo material for the current task. You can add or remove items deliberately.",
     "workspaceMemoryBody": "Saving a note does not save it as a memory. Keeping something in memory is a separate choice that requires your approval."
   },
   "lv": {
     "workspaceFlow": "Piezīmes, faili un mācību rīki vienuviet.",
-    "workspaceIntro": "Notebook glabā piezīmes un failus. Canvas ļauj sakārtot, anotēt un savienot savus avotus. Study no izvēlētā materiāla veido skaidrojumus, jautājumus un mācību uzdevumus.",
+    "workspaceIntro": "Notebook glabā piezīmes, failus un balss piezīmes. Canvas ļauj sasaistīt un anotēt izvēlētos materiālus, savukārt Study no tiem veido nodarbības. Materiāla saglabāšana automātiski nenozīmē tā nosūtīšanu MI.",
     "workspaceTabs": "Iepazīsti darba vidi",
     "workspaceSave": "Sakārto piezīmes un failus",
     "workspaceSaveHint": "Piezīmes, faili un sarunas Piezīmju grāmatā.",
@@ -27,15 +27,15 @@
     "workspaceLearn": "Mācies no izvēlētiem materiāliem",
     "workspaceLearnHint": "Izvēlies mērķi un materiālus Mācībās.",
     "workspaceNotebookBody": "Atrodi piezīmes, importētos failus un saglabātās sarunas vienā bibliotēkā. Izvēlies materiālus nākamajam darbam.",
-    "workspaceCanvasBody": "Novieto piezīmes, attēlus un dokumentus uz vizuālas tāfeles. Savieno saistītās idejas un izkārto tās sev saprotamā veidā.",
-    "workspaceStudyBody": "Sāc ar jautājumu vai mācību mērķi. Ja noder, pievieno savus materiālus un mācies ar skaidrojumiem, vingrinājumiem un atkārtošanu.",
+    "workspaceCanvasBody": "Izkārto piezīmes, attēlus, PDF un ierakstus kartītēs ar norādēm uz avotiem. Zīmē, anotē, meklē un pirms pieņemšanas pārskati piedāvāto izkārtojumu. Importēto un izvilkto tekstu pārbaudi pret avotu.",
+    "workspaceStudyBody": "Izvēlies mācību mērķi un materiālu, pēc tam izmēģini skaidrojumus un uzdevumus. Nodarbības saglabā mēģinājumus un atkārtojumus; MI atsauksmes un attēlu analīze ir atkarīga no izvēlētā modeļa.",
     "workspaceChoice": "Tu izvēlies, ko palīgs izmanto",
     "workspaceContextBody": "Pievienojot vienumu darba kontekstam, tu dod Halo materiālu pašreizējam uzdevumam. Vienumus vari apzināti pievienot vai izņemt.",
     "workspaceMemoryBody": "Piezīmes saglabāšana to nepievieno atmiņai. Saglabāšana atmiņā ir atsevišķa izvēle, kam vajadzīgs tavs apstiprinājums."
   },
   "ru": {
     "workspaceFlow": "Заметки, файлы и учёба в одном месте.",
-    "workspaceIntro": "Notebook хранит заметки и файлы. Canvas помогает размещать, аннотировать и связывать материалы. Study использует выбранные источники для объяснений, вопросов и практики.",
+    "workspaceIntro": "Notebook хранит заметки, файлы и голосовые записи. Canvas помогает связывать и аннотировать выбранные материалы, а Study создаёт по ним занятия. Добавление файла в рабочее пространство не означает его автоматическую передачу ИИ.",
     "workspaceTabs": "Познакомься с рабочим пространством",
     "workspaceSave": "Организуй заметки и файлы",
     "workspaceSaveHint": "Заметки, файлы и разговоры в Блокноте.",
@@ -44,8 +44,8 @@
     "workspaceLearn": "Учись по выбранным материалам",
     "workspaceLearnHint": "Выбирай цель и материалы в Учёбе.",
     "workspaceNotebookBody": "Находи заметки, импортированные файлы и сохранённые разговоры в одной библиотеке. Выбирай материалы для следующей задачи.",
-    "workspaceCanvasBody": "Размещай заметки, изображения и документы на визуальном полотне. Связывай близкие идеи и располагай их так, как удобно тебе.",
-    "workspaceStudyBody": "Начни с вопроса или учебной цели. Добавь свои материалы, если они нужны, и учись через объяснения, практику и повторение.",
+    "workspaceCanvasBody": "Размещайте заметки, изображения, PDF и записи на карточках со ссылками на источники. Рисуйте, делайте пометки, ищите материалы и проверяйте предложенные изменения перед применением. Сверяйте импортированный и извлечённый текст с оригиналом.",
+    "workspaceStudyBody": "Выберите учебную цель и материалы, затем попробуйте объяснения и практические задания. Занятия могут сохранять попытки и повторения; обратная связь и понимание изображений зависят от выбранной модели.",
     "workspaceChoice": "Ты выбираешь, что использует помощник",
     "workspaceContextBody": "Добавляя материал в рабочий контекст, ты даёшь Halo источник для текущей задачи. Материалы можно осознанно добавлять и убирать.",
     "workspaceMemoryBody": "Сохранение заметки не добавляет её в память. Сохранение в памяти — отдельный выбор, который требует твоего подтверждения."
