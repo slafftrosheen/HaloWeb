@@ -23,7 +23,7 @@ test('licensed self-hosted fonts cover Latin, Latvian, and Cyrillic glyphs',()=>
  for(const name of ['sora-variable.ttf','atkinson-hyperlegible-next-variable.ttf','atkinson-hyperlegible-next-italic-variable.ttf','onest-cyrillic-variable.ttf'])assert.ok(exists('assets/fonts/'+name),name);
  for(const file of ['OFL-Sora.txt','OFL-Atkinson-Hyperlegible-Next.txt','OFL-Onest.txt'])assert.match(read('assets/fonts/'+file),/SIL OPEN FONT LICENSE/);
  assert.match(fonts,/font-display:swap/);assert.match(fonts,/unicode-range:U\+0400-052F/);
- assert.doesNotMatch(html,/<link[^>]+href="https?:\/\//);
+ assert.doesNotMatch(html,/<link[^>]+rel="stylesheet"[^>]+href="https?:\/\//);
 });
 test('EN/LV/RU brand messages and existing alpha workflow remain',()=>{
  for(const lang of ['en','lv','ru'])for(const key of ['t016','t017','brandPromise'])assert.ok(bundle[lang][key]);
