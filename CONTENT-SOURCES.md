@@ -6,8 +6,9 @@ Positioning review, 2026-10-13: the user explicitly positions Halo as a host and
 
 Feedback delivery, 2026-10-13: the user selected a prefilled email in the visitor's own mail app, addressed to `slaff.trosheen@gmail.com`. Preparing a draft is not sending it; the site must not claim delivery. Form text is not persisted in browser storage.
 
-Last source audit: 2026-09-30
-Halo source head used: `faca1ae45cb1fc3ac8d8f7dee5836244e6deebc6`
+Historical website baseline audit: 2026-09-30
+Historical source head: `faca1ae45cb1fc3ac8d8f7dee5836244e6deebc6` (not current acceptance)
+Latest source review: 2026-10-14; Halo main `303216f33a7f842faa7d0684ccef52afaeca6d0c`
 
 Visual/localization update: 2026-10-13. All displayed app images now use the 12 original Android JPG screenshots supplied by the user. The `08-46-58-829` capture is Settings, not the Intelligence configuration screen. The images retain English text, app state and original proportions; no captures were retouched. Website captions, accessibility labels and controls are localized into EN/LV/RU. Downloadable test-kit files remain English and are labelled accordingly.
 
@@ -85,3 +86,7 @@ Read the supplied 31-page Halo Brand Book and Halo in-app graphics v0.3 ZIP. Com
 ### In-app visual previews — evidence boundary
 
 The new gallery demonstrates four open-ring states based on the supplied v0.3 graphics bundle. It is labelled design-only and does not claim runtime integration. The book's four-screen onboarding concept (PDF p.31) is a design direction; the Android FIRST-RUN-SETUP document describes the implemented nine-step guided setup. The website does not present the mockups as released app behavior.
+
+### New site metadata · 2026-10-14
+
+The English/Latvian/Russian document descriptions now lead with Android product functionality and model choice rather than future platform promises. The build generator, initial HTML meta, and runtime language bundle are synchronized. Android source head reviewed: `303216f33a7f842faa7d0684ccef52afaeca6d0c`; brand-parity status remains source-integrated but not hardware-signed-off.

@@ -16,21 +16,21 @@ extras = {
   'copyManual': 'Select the template above to copy it manually.', 'copyFailure': 'Copy unavailable. Select the template above instead.',
   'template': 'Halo version / Android version:\nScreen or feature:\nWhat I tried:\nExpected:\nActual:\nSteps to reproduce:\nScreenshot (hide private data):',
   'title': 'Halo — open-source AI assistant for Android',
-  'description': 'Halo is an open-source Android AI assistant for voice, phone actions, notes, Canvas and Study. Use local AI or choose a connected provider.',
+  'description': 'Halo is an open-source AI assistant starting on Android. Ask by voice or text, try supported phone actions, and use Notebook, Canvas and Study with on-device or connected AI.',
  },
  'lv': {
   'progress': 'Izmēģināts: {done} no {total}', 'copySuccess': 'Veidne nokopēta.',
   'copyManual': 'Atlasīto veidni vari nokopēt manuāli.', 'copyFailure': 'Kopēšana nav pieejama. Atlasi veidni un nokopē to manuāli.',
   'template': 'Halo versija / Android versija:\nEkrāns vai funkcija:\nKo mēģināju:\nSagaidāmais rezultāts:\nFaktiskais rezultāts:\nAtkārtošanas soļi:\nEkrānuzņēmums (aizklāj privātos datus):',
   'title': 'Halo — atvērtā koda MI palīgs Android',
-  'description': 'Halo ir atvērtā koda Android MI palīgs balss jautājumiem, tālruņa darbībām, piezīmēm, Canvas un mācībām. Izmanto lokālu MI vai izvēlētu pakalpojumu.',
+  'description': 'Halo ir atvērtā koda MI palīgs, kas sākas ar Android. Jautā ar balsi vai tekstu, izmanto atbalstītas tālruņa darbības, kā arī Notebook, Canvas un Study ar lokālu vai pieslēgtu MI.',
  },
  'ru': {
   'progress': 'Попробовано: {done} из {total}', 'copySuccess': 'Шаблон скопирован.',
   'copyManual': 'Выдели шаблон выше и скопируй его вручную.', 'copyFailure': 'Копирование недоступно. Выдели шаблон выше и скопируй вручную.',
   'template': 'Версия Halo / версия Android:\nЭкран или функция:\nЧто я попробовал:\nОжидаемый результат:\nФактический результат:\nШаги для воспроизведения:\nСкриншот (скрой личные данные):',
   'title': 'Halo — ИИ-помощник для Android с открытым кодом',
-  'description': 'Halo — ИИ-помощник для Android: голос, действия на телефоне, заметки, Canvas и Учёба. Работает с локальной моделью или выбранным сервисом.',
+  'description': 'Halo — ИИ-помощник с открытым кодом, сначала для Android. Общайтесь голосом или текстом, пробуйте поддерживаемые действия с телефоном и работайте с Notebook, Canvas и Study через локальные или подключённые модели.',
  }
 }
 catalog = {'en': en, 'lv': lv, 'ru': ru}

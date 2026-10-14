@@ -38,3 +38,7 @@ The updated 31-page source book includes mission/audience (pp.3–5), logo and u
 ## Open-ring presence preview · 2026-10-14
 
 The runtime section now displays four static, localized and accessible state illustrations based on the owner's supplied in-app graphics v0.3 SVG set: IDLE, LISTENING, THINKING and APPROVAL_REQUIRED. The shown artwork follows the kit's 240×240 dimensions and mint/apricot semantic vocabulary. It is a **design preview**, not a live Android-state assertion. The full supplied bundle includes 21 states, 15 animated state pairs and additional icons/surfaces, whose existence is not proof of runtime integration. The preview loads no animation library and respects reduced motion.
+
+## Cross-repository parity (Android main, 2026-10-14)
+
+Android `Halo/docs/15-brand/ANDROID-BRAND-PARITY.md` reports source-integrated matching tokens, ring/wordmark vector paths and licensed Sora, Atkinson and Onest fonts. It explicitly records **no Gradle/emulator/device pixel-acceptance sign-off**. HaloWeb and the Android app are aligned at the source/token level, not certified as visually identical in a running build. This is separate from the design-specification-only presence preview shown in the site runtime section.
