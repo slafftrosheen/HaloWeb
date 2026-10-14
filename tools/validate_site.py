@@ -157,7 +157,7 @@ def main() -> int:
 
     # -- translation consistency and interpolation contracts ----------------------
     source_en = json.loads(read('tools/english-catalog.json'))
-    rows = [line.split('\\t') for line in read('tools/translations.tsv').splitlines()]
+    rows = [line.split('\t') for line in read('tools/translations.tsv').splitlines()]
     if len(rows) != len(source_en):
         fail(f'translation row count {len(rows)} != English source {len(source_en)}')
     for row in rows:
@@ -173,7 +173,7 @@ def main() -> int:
     for language in ['lv','ru']:
         if set(catalog[language]) != expected_keys:
             fail(f'{language}: dictionary key mismatch with English')
-    token = re.compile(r'\\{[A-Za-z_][A-Za-z_0-9]*\\}')
+    token = re.compile(r'\{[A-Za-z_][A-Za-z_0-9]*\}')
     for key, value in catalog['en'].items():
         source_tokens = set(token.findall(value))
         for language in ['lv', 'ru']:
