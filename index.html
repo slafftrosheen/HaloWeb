@@ -31,8 +31,11 @@
       } catch (_) {}
     })();
   </script>
-  <link rel="stylesheet" href="css/tokens.css?v=14" />
-  <link rel="stylesheet" href="css/main.css?v=14" />
+  <link rel="preload" href="assets/fonts/sora-variable.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-variable.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="stylesheet" href="css/fonts.css?v=1" />
+  <link rel="stylesheet" href="css/tokens.css?v=15" />
+  <link rel="stylesheet" href="css/main.css?v=15" />
 
   <script type="application/ld+json">
   {
@@ -54,7 +57,7 @@
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Halo home" data-i18n-aria-label="t001">
         <span class="brand-mark" aria-hidden="true"><img src="assets/brand/halo-ring.svg" width="34" height="38" alt="" /></span>
-        <span class="brand-word">halo</span>
+        <img class="brand-wordmark" src="assets/brand/halo-wordmark.svg" width="93" height="39" alt="" />
       </a>
 
       <nav class="site-nav" aria-label="Page" data-i18n-aria-label="t002">
@@ -612,7 +615,7 @@ Screenshot (redact private data):</pre>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span class="footer-brand"><img class="footer-brand-mark" src="assets/brand/halo-ring.svg" width="23" height="27" alt="" /> halo</span>
+      <span class="footer-brand" aria-label="Halo"><img class="footer-brand-mark" src="assets/brand/halo-ring.svg" width="27" height="28" alt="" /><img class="footer-brand-wordmark" src="assets/brand/halo-wordmark.svg" width="69" height="29" alt="" /></span>
       <span><span data-i18n="t268">Open source · local-first · no Halo account required</span></span>
       <a href="#alpha"><span data-i18n="t269">Alpha test kit ↗</span></a>
       <a href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener">GitHub ↗</a>

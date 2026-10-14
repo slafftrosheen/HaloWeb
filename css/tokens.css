@@ -1,7 +1,7 @@
 /* Halo Brand Book 1.0 · 2026 · palette / type */
 :root{
- --font-display:"Sora","Avenir Next","Century Gothic","Trebuchet MS",sans-serif;
- --font-sans:"Atkinson Hyperlegible Next","Atkinson Hyperlegible","Segoe UI",Arial,sans-serif;
+ --font-display:"Sora","Onest","Avenir Next","Century Gothic","Trebuchet MS",sans-serif;
+ --font-sans:"Atkinson Hyperlegible Next","Atkinson Hyperlegible","Onest","Segoe UI",Arial,sans-serif;
  --font-mono:"SFMono-Regular","Cascadia Code",Consolas,monospace;
  --halo-mint:#0CF2BA;--night-ink:#060330;--deep-mint:#047A5E;
  --cream:#FAFAF4;--slate:#4A4F63;--sunrise-apricot:#FF9F6B;--mint-tint:#B4E6D6;

@@ -1,15 +1,27 @@
-# HaloWeb · Halo Brand Book v1.0 implementation
+# HaloWeb · Halo Brand Book v1.0
 
-Applied to the existing static website, including EN/LV/RU copy, Android alpha and real device screenshots.
+Applied to the existing dependency-free Halo website, including EN/LV/RU copy, Android alpha and real phone screenshots.
 
-**Canonical tokens:** Halo Mint `#0CF2BA`, Night Ink `#060330`, Deep Mint `#047A5E`, Cream `#FAFAF4`, Slate `#4A4F63`, Sunrise Apricot `#FF9F6B`, ring highlight `#B4E6D6` in `css/tokens.css`.
+## Colors and typography
 
-**Typography:** Sora display and Atkinson Hyperlegible Next body are declared, with local fallbacks. Webfont binaries are **not yet bundled**; the site retains its dependency-free, privacy-first no-font-CDN policy. Exact font rendering on machines without those faces requires later self-hosted WOFF2 files with appropriate licenses.
+Canonical palette: Halo Mint `#0CF2BA`, Night Ink `#060330`, Deep Mint `#047A5E`, Cream `#FAFAF4`, Slate `#4A4F63`, Sunrise Apricot `#FF9F6B`, ring highlight `#B4E6D6`. All are centralized in `css/tokens.css`.
 
-**Logo:** `assets/brand/halo-ring.svg` and `favicon.svg` implement the open rounded ring (mint to mint-cloud). SVG is a geometric reconstruction; replace with official master logo vector and wordmark once exported separately from the supplied brand book. Do not close, stretch, rotate or recolor the mark.
+Self-hosted SIL OFL 1.1 variable TTF fonts (no CDN, no Google requests):
+- `assets/fonts/sora-variable.ttf` (display Latin/Latin Extended, 100–800)
+- `assets/fonts/atkinson-hyperlegible-next-variable.ttf` (body Latin/Latin Extended, 200–800)
+- `assets/fonts/atkinson-hyperlegible-next-italic-variable.ttf` (italic body)
+- `assets/fonts/onest-cyrillic-variable.ttf` (Cyrillic-only fallback, 100–900)
 
-**Visual language:** Cream and Night Ink foundations, large type, real Android screenshots, gentle mint radial light. No robotic eye, circuit-grid motif, hologram or purple-blue sci-fi palette. Home hero is always Night Ink in both themes; the rest retains theme switching.
+Sources: Google Fonts git `google/fonts` OFL directories `sora`, `atkinsonhyperlegiblenext`, `onest`. License notices are preserved as `assets/fonts/OFL-*.txt`. Onest is deliberately restricted to Cyrillic ranges; Sora / Atkinson do not include Cyrillic in the distributed files.
 
-**Content:** Brand headline and privacy promise are localized through `tools/english-catalog.json`, `tools/translations.tsv` and generated `js/translations.js`. The product paragraph stays explicit about current Android alpha limitations and optional glasses. Functional tester checklists, file downloads and reporting remain present.
+## Source-derived logo
 
-**Verification:** `node --test tests/*.test.mjs`, `python tools/validate_site.py`. Inspect 360/768/1440px, both themes, three languages and reduced motion.
+`assets/brand/halo-ring.svg` and `assets/brand/halo-wordmark.svg` were traced from the **raster** artwork on page 6 of the owner's 20-page *Halo Brand Book (2026)*. These are an approximation derived from the provided identity artwork, not an official editable vector master. Rounded open ring, approximate gradients, original custom lower-case glyph silhouettes. The monochrome wordmark uses Night Ink on light and a CSS-filtered light version on dark. Do not transform, close, recolor, or distort the ring.
+
+## Interface and workflow
+
+Night Ink editorial hero, soft mint lighting, cream/ink alternating sections, generous typography and live Android screenshot. The complete tri-language beta/alpha workflow including GitHub releases, tester files, feedback reporting, and live screenshot carousel remains. Small-screen header layout is deliberately allowed three rows to prevent clipped language/theme controls. Reduced-motion respects user preferences.
+
+## Checks
+
+Run `node --test tests/*.test.mjs` and `python tools/validate_site.py` from repo root. Verify browser behavior at 320/360/768/1440 px, EN/LV/RU, light/dark and reduced-motion. Font loading and visual appearance still require a real deployed-browser pass; no claim is made that these have been run remotely.

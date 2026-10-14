@@ -736,3 +736,36 @@ p{line-height:1.62}
  .hero-facts div+div,.hero-facts div:nth-child(n+3){border-top:1px solid #54516D}
 }
 @media(prefers-reduced-motion:reduce){.hero::before,.hero::after,.closing::after{filter:none}}
+
+/* Brand fidelity pass 2: source-traced logo, responsive lockup and locale-safe typography. */
+.brand{gap:5px;min-width:0}
+.brand-mark{width:40px;height:40px}
+.brand-wordmark{display:block;flex:none;width:93px;height:auto;max-width:none}
+.footer-brand{gap:5px}
+.footer-brand-mark{width:28px;height:29px;object-fit:contain}
+.footer-brand-wordmark{display:block;width:69px;height:auto}
+:root[data-theme="dark"] .brand-wordmark,
+:root[data-theme="dark"] .footer-brand-wordmark{filter:brightness(0) invert(.97)}
+/* Avoid the mint accent becoming illegible against light cards. */
+:root:not([data-theme="dark"]) .alpha-file__action,
+:root:not([data-theme="dark"]) .alpha-file__type,
+:root:not([data-theme="dark"]) .alpha-path p a{color:var(--deep-mint)}
+@media(max-width:620px){
+ .brand-mark{width:34px;height:35px}
+ .brand-wordmark{width:82px}
+ .hero-facts div:nth-child(n+3){border-color:#54516D}
+}
+@media(max-width:480px){
+ /* Explicit three-row mobile header: no clipped controls at 320–390 px. */
+ .header-inner{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0;padding-block:8px 3px}
+ .header-inner>.brand{order:1;flex:1 1 100%}
+ .header-inner>.header-actions{order:2;flex:1 1 100%;max-width:none;justify-content:flex-start;flex-wrap:wrap;gap:6px}
+ .header-inner>.site-nav{order:3;flex:1 1 100%;width:100%;min-width:0}
+ .header-actions .language-picker{flex:none}
+ .header-actions .theme-switch{flex:none}
+ .header-link{display:none}
+ .hero h1{hyphens:auto;text-wrap:pretty}
+}
+@media(prefers-reduced-motion:reduce){
+ .brand-wordmark,.footer-brand-wordmark{transition:none}
+}
