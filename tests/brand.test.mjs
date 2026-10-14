@@ -32,3 +32,13 @@ test('EN/LV/RU brand messages and existing alpha workflow remain',()=>{
  assert.match(html,/href="https:\/\/github.com\/slafftrosheen\/Halo\/releases"/);
  assert.match(css,/halo-ring\.svg/);assert.match(css,/var\(--night-ink\)/);
 });
+
+test('Open Graph preview is a lightweight, brand-aligned PNG with correct dimensions',()=>{
+ const og=readFileSync(new URL('../assets/halo-og.png',import.meta.url));
+ assert.equal(og.subarray(1,4).toString(),'PNG');
+ assert.equal(og.readUInt32BE(16),600);
+ assert.equal(og.readUInt32BE(20),315);
+ assert.ok(og.length<300_000,'social image should be optimized');
+ assert.match(html,/og:image:width" content="600"/);
+ assert.match(html,/halo-og\.png\?v=2/);
+});

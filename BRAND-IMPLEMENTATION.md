@@ -25,3 +25,8 @@ Night Ink editorial hero, soft mint lighting, cream/ink alternating sections, ge
 ## Checks
 
 Run `node --test tests/*.test.mjs` and `python tools/validate_site.py` from repo root. Verify browser behavior at 320/360/768/1440 px, EN/LV/RU, light/dark and reduced-motion. Font loading and visual appearance still require a real deployed-browser pass; no claim is made that these have been run remotely.
+
+## Social previews
+
+`assets/halo-og.png` is a lightweight (600 × 315) Night Ink/mint preview with the open ring, original wordmark silhouette, simple campaign copy and the Android alpha label. The image is static PNG (not SVG) for social crawler compatibility and has a versioned URL in both Open Graph and Twitter metadata. Use `assets/brand/halo-ring.svg` as its source mark. The card is intentionally not loaded in the web page content, only by social preview crawlers.
+
