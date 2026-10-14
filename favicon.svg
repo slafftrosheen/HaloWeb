@@ -1,18 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="ring" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#54D99A"/>
-      <stop offset=".5" stop-color="#7DE2B1"/>
-      <stop offset="1" stop-color="#A6EBD8"/>
-    </linearGradient>
-  </defs>
-  <circle cx="32" cy="32" r="28" fill="none" stroke="url(#ring)" stroke-width="8"/>
-  <circle cx="32" cy="32" r="22" fill="#131B19"/>
-  <g fill="#FAFAFC" shape-rendering="crispEdges">
-    <rect x="25" y="20" width="14" height="3"/>
-    <rect x="21" y="23" width="4" height="3"/><rect x="39" y="23" width="4" height="3"/>
-    <rect x="18" y="26" width="4" height="12"/><rect x="42" y="26" width="4" height="12"/>
-    <rect x="21" y="38" width="4" height="3"/><rect x="39" y="38" width="4" height="3"/>
-    <rect x="25" y="41" width="14" height="3"/>
-  </g>
+<defs><linearGradient id="cloud" x1="31" y1="15" x2="55" y2="49" gradientUnits="userSpaceOnUse"><stop stop-color="#75E5C8"/><stop offset="1" stop-color="#B4E6D6"/></linearGradient></defs>
+<rect width="64" height="64" rx="15" fill="#060330"/>
+<path d="M22.4 17.5 A20 20 0 0 0 32 52" fill="none" stroke="#0CF2BA" stroke-width="9" stroke-linecap="round"/>
+<path d="M32 52 A20 20 0 0 0 41.6 17.5" fill="none" stroke="url(#cloud)" stroke-width="9" stroke-linecap="round"/>
 </svg>

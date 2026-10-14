@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-labelledby="title">
+<title id="title">Halo open ring</title>
+<defs><linearGradient id="mint-cloud" x1="26" y1="35" x2="82" y2="75" gradientUnits="userSpaceOnUse"><stop stop-color="#69E6C4"/><stop offset="1" stop-color="#B4E6D6"/></linearGradient></defs>
+<path d="M35.5 24.9 A29 29 0 0 0 50 79" stroke="#0CF2BA" stroke-width="12" stroke-linecap="round"/>
+<path d="M50 79 A29 29 0 0 0 64.5 24.9" stroke="url(#mint-cloud)" stroke-width="12" stroke-linecap="round"/>
+</svg>

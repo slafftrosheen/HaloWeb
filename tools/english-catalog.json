@@ -15,8 +15,8 @@
   "t013": "Light",
   "t014": "Dark",
   "t015": "OPEN SOURCE · ANDROID ALPHA",
-  "t016": "An AI assistant.",
-  "t017": "For Android.",
+  "t016": "AI that feels",
+  "t017": "like second nature.",
   "t018": "With phone tools.",
   "t019": "Halo is an open-source AI assistant for Android. Ask by voice or text, use supported phone actions, keep notes and files in one workspace, and study from your own material. Run a model on your phone or connect a provider you choose. Glasses are optional; other host platforms are still in development.",
   "t020": "Try the Android alpha",
@@ -268,5 +268,6 @@
   "t266": "Alpha means unfinished software. Features and supported devices can change. Back up important work and avoid relying on Halo for safety-critical tasks. A public build only exists when a release appears on",
   "t267": "GitHub Releases ↗",
   "t268": "Open source · local-first · no Halo account required",
-  "t269": "Alpha test kit ↗"
+  "t269": "Alpha test kit ↗",
+  "brandPromise": "Private by default. Open by design."
 }

@@ -230,7 +230,7 @@
     });
 
     var themeMeta = document.querySelector('meta[name="theme-color"]');
-    if (themeMeta) themeMeta.setAttribute('content', resolved === 'dark' ? '#131B19' : '#F7F8F4');
+    if (themeMeta) themeMeta.setAttribute('content', resolved === 'dark' ? '#060330' : '#FAFAF4');
   }
 
   function initTheme() {

@@ -17,8 +17,8 @@ window.HaloTranslations = {
     "t013": "Light",
     "t014": "Dark",
     "t015": "OPEN SOURCE · ANDROID ALPHA",
-    "t016": "An AI assistant.",
-    "t017": "For Android.",
+    "t016": "AI that feels",
+    "t017": "like second nature.",
     "t018": "With phone tools.",
     "t019": "Halo is an open-source AI assistant for Android. Ask by voice or text, use supported phone actions, keep notes and files in one workspace, and study from your own material. Run a model on your phone or connect a provider you choose. Glasses are optional; other host platforms are still in development.",
     "t020": "Try the Android alpha",
@@ -334,7 +334,8 @@ window.HaloTranslations = {
     "workspaceStudyBody": "Start with a question or learning goal. Add your own material when useful, then learn through explanations, practice and review.",
     "workspaceChoice": "You choose what the assistant uses",
     "workspaceContextBody": "Adding an item to working context gives Halo material for the current task. You can add or remove items deliberately.",
-    "workspaceMemoryBody": "Saving a note does not save it as a memory. Keeping something in memory is a separate choice that requires your approval."
+    "workspaceMemoryBody": "Saving a note does not save it as a memory. Keeping something in memory is a separate choice that requires your approval.",
+    "brandPromise": "Private by default. Open by design."
   },
   "lv": {
     "t000": "Pāriet pie produkta",
@@ -353,8 +354,8 @@ window.HaloTranslations = {
     "t013": "Gaišs",
     "t014": "Tumšs",
     "t015": "ATVĒRTAIS KODS · ANDROID ALFA",
-    "t016": "MI palīgs.",
-    "t017": "Android tālrunim.",
+    "t016": "Mākslīgais intelekts,",
+    "t017": "kas kļūst pašsaprotams.",
     "t018": "Ar tālruņa rīkiem.",
     "t019": "Halo ir atvērtā koda MI palīgs Android ierīcēm. Uzdod jautājumus ar balsi vai tekstu, izmanto atbalstītās tālruņa darbības, glabā piezīmes un failus vienuviet un mācies no saviem materiāliem. Darbini modeli tālrunī vai pieslēdz paša izvēlētu pakalpojumu. Brilles nav nepieciešamas; citas platformas vēl tiek izstrādātas.",
     "t020": "Izmēģināt Android alfa versiju",
@@ -670,7 +671,8 @@ window.HaloTranslations = {
     "workspaceStudyBody": "Sāc ar jautājumu vai mācību mērķi. Ja noder, pievieno savus materiālus un mācies ar skaidrojumiem, vingrinājumiem un atkārtošanu.",
     "workspaceChoice": "Tu izvēlies, ko palīgs izmanto",
     "workspaceContextBody": "Pievienojot vienumu darba kontekstam, tu dod Halo materiālu pašreizējam uzdevumam. Vienumus vari apzināti pievienot vai izņemt.",
-    "workspaceMemoryBody": "Piezīmes saglabāšana to nepievieno atmiņai. Saglabāšana atmiņā ir atsevišķa izvēle, kam vajadzīgs tavs apstiprinājums."
+    "workspaceMemoryBody": "Piezīmes saglabāšana to nepievieno atmiņai. Saglabāšana atmiņā ir atsevišķa izvēle, kam vajadzīgs tavs apstiprinājums.",
+    "brandPromise": "Privātums pēc noklusējuma. Atvērts pēc būtības."
   },
   "ru": {
     "t000": "Перейти к продукту",
@@ -689,8 +691,8 @@ window.HaloTranslations = {
     "t013": "Светлая",
     "t014": "Тёмная",
     "t015": "ОТКРЫТЫЙ КОД · АЛЬФА ДЛЯ ANDROID",
-    "t016": "ИИ-помощник.",
-    "t017": "Для Android.",
+    "t016": "ИИ, который",
+    "t017": "ощущается естественно.",
     "t018": "С инструментами телефона.",
     "t019": "Halo — ИИ-помощник для Android с открытым исходным кодом. Задавай вопросы голосом или текстом, используй поддерживаемые действия на телефоне, храни заметки и файлы в одном месте и учись по своим материалам. Запускай модель на телефоне или подключай выбранный сервис. Очки необязательны; поддержка других платформ пока разрабатывается.",
     "t020": "Попробовать альфу для Android",
@@ -1006,6 +1008,7 @@ window.HaloTranslations = {
     "workspaceStudyBody": "Начни с вопроса или учебной цели. Добавь свои материалы, если они нужны, и учись через объяснения, практику и повторение.",
     "workspaceChoice": "Ты выбираешь, что использует помощник",
     "workspaceContextBody": "Добавляя материал в рабочий контекст, ты даёшь Halo источник для текущей задачи. Материалы можно осознанно добавлять и убирать.",
-    "workspaceMemoryBody": "Сохранение заметки не добавляет её в память. Сохранение в памяти — отдельный выбор, который требует твоего подтверждения."
+    "workspaceMemoryBody": "Сохранение заметки не добавляет её в память. Сохранение в памяти — отдельный выбор, который требует твоего подтверждения.",
+    "brandPromise": "Приватность по умолчанию. Открытость по замыслу."
   }
 };

@@ -1,66 +1,32 @@
-:root {
-  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "SFMono-Regular", "Cascadia Code", "Roboto Mono", Consolas, monospace;
-
-  --bg: #F7F8F4;
-  --surface: #FFFFFF;
-  --surface-subtle: #EDF1EB;
-  --text: #18251F;
-  --text-secondary: #56635D;
-  --text-tertiary: #606F66;
-  --line: #DDE5DE;
-  --line-strong: #BBCBBF;
-  --accent: #207452;
-  --accent-strong: #185A40;
-  --primary: #7DE2B1;
-  --primary-ink: #102D21;
-
-  --graphite: #131B19;
-  --graphite-2: #1D2723;
-  --graphite-3: #29352F;
-
-  --signal-blue: #B9D9FF;
-  --signal-mint: #A6EBD8;
-  --signal-lilac: #D5C8FF;
-  --signal-coral: #F4BEA9;
-  --signal-yellow: #F7DFA3;
-
-  --success: #2F9D7A;
-  --warning: #B9812F;
-
-  --container: 1240px;
-  --header-h: 68px;
-  --r-sm: 12px;
-  --r-md: 18px;
-  --r-lg: 28px;
-  --r-xl: 40px;
-  --shadow-shot: 0 24px 80px rgba(20,24,31,.12), 0 2px 8px rgba(20,24,31,.05);
-  --ease: cubic-bezier(.22,.72,.2,1);
+/* Halo Brand Book 1.0 · 2026 · palette / type */
+:root{
+ --font-display:"Sora","Avenir Next","Century Gothic","Trebuchet MS",sans-serif;
+ --font-sans:"Atkinson Hyperlegible Next","Atkinson Hyperlegible","Segoe UI",Arial,sans-serif;
+ --font-mono:"SFMono-Regular","Cascadia Code",Consolas,monospace;
+ --halo-mint:#0CF2BA;--night-ink:#060330;--deep-mint:#047A5E;
+ --cream:#FAFAF4;--slate:#4A4F63;--sunrise-apricot:#FF9F6B;--mint-tint:#B4E6D6;
+ --bg:var(--cream);--surface:#FFFFFF;--surface-subtle:#F0F3EF;
+ --text:var(--night-ink);--text-secondary:#454961;--text-tertiary:#555B6D;
+ --line:#DDE2DD;--line-strong:#BCC9C4;
+ --accent:var(--deep-mint);--accent-strong:#065D49;
+ --primary:var(--halo-mint);--primary-ink:var(--night-ink);
+ --graphite:var(--night-ink);--graphite-2:#120F41;--graphite-3:#1D1A4D;
+ --signal-blue:#B6DFE2;--signal-mint:var(--mint-tint);--signal-lilac:#D7E2DD;
+ --signal-coral:var(--sunrise-apricot);--signal-yellow:#F3DBC4;
+ --success:var(--deep-mint);--warning:#93601C;
+ --container:1240px;--header-h:72px;
+ --r-sm:12px;--r-md:18px;--r-lg:28px;--r-xl:40px;
+ --shadow-shot:0 26px 90px rgba(6,3,48,.16),0 3px 12px rgba(6,3,48,.08);
+ --ease:cubic-bezier(.22,.72,.2,1)
 }
-
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #131B19;
-  --surface: #1D2723;
-  --surface-subtle: #29352F;
-  --text: #F3F3F1;
-  --text-secondary: #B3C3BA;
-  --text-tertiary: #A3B5A9;
-  --line: #35453C;
-  --line-strong: #53685B;
-  --accent: #7DE2B1;
-  --accent-strong: #A6EBD8;
-  --graphite: #101815;
-  --graphite-2: #1D2723;
-  --graphite-3: #29352F;
-  --shadow-shot: 0 28px 90px rgba(0,0,0,.36), 0 2px 10px rgba(0,0,0,.32);
+:root[data-theme="dark"]{
+ color-scheme:dark;--bg:var(--night-ink);--surface:#12103E;--surface-subtle:#1D1A4D;
+ --text:var(--cream);--text-secondary:#CACCDC;--text-tertiary:#ADB2C8;
+ --line:#343159;--line-strong:#514E75;
+ --accent:var(--halo-mint);--accent-strong:#B4E6D6;
+ --graphite:#060330;--graphite-2:#120F41;--graphite-3:#1D1A4D;
+ --shadow-shot:0 28px 90px rgba(0,0,0,.4),0 2px 10px rgba(0,0,0,.25)
 }
-
-@media (prefers-reduced-motion: reduce) {
-  *,*::before,*::after {
-    scroll-behavior: auto !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 1ms !important;
-  }
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important}
 }

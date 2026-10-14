@@ -14,8 +14,8 @@ t012	Sistēmas	Системная
 t013	Gaišs	Светлая
 t014	Tumšs	Тёмная
 t015	ATVĒRTAIS KODS · ANDROID ALFA	ОТКРЫТЫЙ КОД · АЛЬФА ДЛЯ ANDROID
-t016	MI palīgs.	ИИ-помощник.
-t017	Android tālrunim.	Для Android.
+t016	Mākslīgais intelekts,	ИИ, который
+t017	kas kļūst pašsaprotams.	ощущается естественно.
 t018	Ar tālruņa rīkiem.	С инструментами телефона.
 t019	Halo ir atvērtā koda MI palīgs Android ierīcēm. Uzdod jautājumus ar balsi vai tekstu, izmanto atbalstītās tālruņa darbības, glabā piezīmes un failus vienuviet un mācies no saviem materiāliem. Darbini modeli tālrunī vai pieslēdz paša izvēlētu pakalpojumu. Brilles nav nepieciešamas; citas platformas vēl tiek izstrādātas.	Halo — ИИ-помощник для Android с открытым исходным кодом. Задавай вопросы голосом или текстом, используй поддерживаемые действия на телефоне, храни заметки и файлы в одном месте и учись по своим материалам. Запускай модель на телефоне или подключай выбранный сервис. Очки необязательны; поддержка других платформ пока разрабатывается.
 t020	Izmēģināt Android alfa versiju	Попробовать альфу для Android
@@ -268,3 +268,4 @@ t266	Alfa versija vēl ir izstrādē. Funkcijas un atbalstītās ierīces var ma
 t267	GitHub Releases ↗	GitHub Releases ↗
 t268	Atvērtais kods · priekšroka vietējai darbībai · Halo konts nav vajadzīgs	Открытый код · приоритет локальной работе · аккаунт Halo не нужен
 t269	Alfa testēšanas materiāli ↗	Материалы для альфа-теста ↗
+brandPromise	Privātums pēc noklusējuma. Atvērts pēc būtības.	Приватность по умолчанию. Открытость по замыслу.
