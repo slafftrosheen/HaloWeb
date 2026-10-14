@@ -111,3 +111,6 @@ Reviewed supplied 45-page BrandBook(1).pdf, especially pp.39–45 (tools, action
 ### Language tooling regression (2026-10-14)
 
 The generator previously indexed main-page `en` when updating no-JavaScript fallbacks, including keys supplied by `annotation_copy.json` and `workspace_copy.json`, and incorrectly looked for metadata keys in the main catalog. It now reads the fully merged `catalog['en']`, validates EN/LV/RU key parity and interpolation placeholders, and retains metadata from the dedicated extras block. The dependency-free site validator also checks the translation TSV and bundles for source parity and placeholder drift.
+
+### Responsive design-board review — 2026-10-14
+The four uploaded BrandAssets devices/settings design images are each 2400×1500 PNG. They remain visual references, not app-build screenshots. The website now exposes the original source file through focusable, localized full-size links. CSS preserves native 8:5 aspect ratios, uses a single column at ≤600px, prevents 320px copy overflow and adds keyboard focus treatment. Main navigation now follows section reading order, with the design-system Presence section after the alpha route. Dynamic Russian feedback/template copy uses the same polite form as the website. This is a static source pass; browser-level visual acceptance remains pending.

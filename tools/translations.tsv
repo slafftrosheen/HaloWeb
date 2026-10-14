@@ -426,3 +426,8 @@ settingsMapVoice	Voice — runas ievade, atskaņošana un skaņas ierīces	Voice
 settingsMapPrivacy	Privacy un Permissions — datu apstrāde un Android atļaujas	Privacy и Permissions — работа с данными и разрешения Android
 settingsMapAdvanced	Advanced — diagnostika un tehniskās detaļas testētājiem	Advanced — диагностика и технические сведения для тестирования
 settingsMapDisclaimer	Dizaina grāmata rāda plānoto Settings izkārtojumu. Android lietotne vēl mainās; nosaukumi un pieejamība var atšķirties.	Брендбук показывает целевую структуру Settings. Android-приложение меняется, поэтому названия и доступность пунктов могут отличаться.
+brandViewFull	Skatīt pilna izmēra attēlu ↗	Открыть в полном размере ↗
+brandOpenDevices	Atvērt Devices dizaina attēlu pilnā izmērā	Открыть макет Devices в полном размере
+brandOpenPairing	Atvērt ierīču savienošanas dizaina attēlu pilnā izmērā	Открыть макет подключения устройств в полном размере
+brandOpenSettings	Atvērt Intelligence un Settings dizaina attēlu pilnā izmērā	Открыть макет Intelligence и Settings в полном размере
+brandOpenPrivacy	Atvērt Voice, Privacy un Permissions dizaina attēlu pilnā izmērā	Открыть макет Voice, Privacy и Permissions в полном размере

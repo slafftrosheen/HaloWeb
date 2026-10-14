@@ -492,7 +492,12 @@ window.HaloTranslations = {
     "settingsMapVoice": "Voice — speech input, playback and output devices",
     "settingsMapPrivacy": "Privacy & Permissions — data choices and Android access",
     "settingsMapAdvanced": "Advanced — diagnostics and runtime details for testers",
-    "settingsMapDisclaimer": "The design book depicts the intended organization of Settings. The Android implementation is evolving; exact names and availability can differ by build."
+    "settingsMapDisclaimer": "The design book depicts the intended organization of Settings. The Android implementation is evolving; exact names and availability can differ by build.",
+    "brandViewFull": "View full-size image ↗",
+    "brandOpenDevices": "Open the full-size Devices design image",
+    "brandOpenPairing": "Open the full-size pairing design image",
+    "brandOpenSettings": "Open the full-size Intelligence and Settings design image",
+    "brandOpenPrivacy": "Open the full-size Voice, Privacy and Permissions design image"
   },
   "lv": {
     "t000": "Pāriet pie produkta",
@@ -986,7 +991,12 @@ window.HaloTranslations = {
     "settingsMapVoice": "Voice — runas ievade, atskaņošana un skaņas ierīces",
     "settingsMapPrivacy": "Privacy un Permissions — datu apstrāde un Android atļaujas",
     "settingsMapAdvanced": "Advanced — diagnostika un tehniskās detaļas testētājiem",
-    "settingsMapDisclaimer": "Dizaina grāmata rāda plānoto Settings izkārtojumu. Android lietotne vēl mainās; nosaukumi un pieejamība var atšķirties."
+    "settingsMapDisclaimer": "Dizaina grāmata rāda plānoto Settings izkārtojumu. Android lietotne vēl mainās; nosaukumi un pieejamība var atšķirties.",
+    "brandViewFull": "Skatīt pilna izmēra attēlu ↗",
+    "brandOpenDevices": "Atvērt Devices dizaina attēlu pilnā izmērā",
+    "brandOpenPairing": "Atvērt ierīču savienošanas dizaina attēlu pilnā izmērā",
+    "brandOpenSettings": "Atvērt Intelligence un Settings dizaina attēlu pilnā izmērā",
+    "brandOpenPrivacy": "Atvērt Voice, Privacy un Permissions dizaina attēlu pilnā izmērā"
   },
   "ru": {
     "t000": "Перейти к продукту",
@@ -1385,9 +1395,9 @@ window.HaloTranslations = {
     "navAlpha": "Альфа",
     "progress": "Попробовано: {done} из {total}",
     "copySuccess": "Шаблон скопирован.",
-    "copyManual": "Выдели шаблон выше и скопируй его вручную.",
-    "copyFailure": "Копирование недоступно. Выдели шаблон выше и скопируй вручную.",
-    "template": "Версия Halo / версия Android:\nЭкран или функция:\nЧто я попробовал:\nОжидаемый результат:\nФактический результат:\nШаги для воспроизведения:\nСкриншот (скрой личные данные):",
+    "copyManual": "Выделите шаблон выше и скопируйте его вручную.",
+    "copyFailure": "Копирование недоступно. Выделите шаблон выше и скопируйте его вручную.",
+    "template": "Версия Halo / версия Android:\nЭкран или функция:\nЧто я попробовал:\nОжидаемый результат:\nФактический результат:\nШаги для воспроизведения:\nСкриншот (скройте личные данные):",
     "title": "Halo — ИИ-помощник для Android с открытым кодом",
     "description": "Halo — ИИ-помощник с открытым кодом, сначала для Android. Общайтесь голосом или текстом, пробуйте поддерживаемые действия с телефоном и работайте с Notebook, Canvas и Study через локальные или подключённые модели.",
     "carouselLabel": "Познакомься с Android-приложением",
@@ -1480,6 +1490,11 @@ window.HaloTranslations = {
     "settingsMapVoice": "Voice — распознавание, озвучивание и устройства вывода",
     "settingsMapPrivacy": "Privacy и Permissions — работа с данными и разрешения Android",
     "settingsMapAdvanced": "Advanced — диагностика и технические сведения для тестирования",
-    "settingsMapDisclaimer": "Брендбук показывает целевую структуру Settings. Android-приложение меняется, поэтому названия и доступность пунктов могут отличаться."
+    "settingsMapDisclaimer": "Брендбук показывает целевую структуру Settings. Android-приложение меняется, поэтому названия и доступность пунктов могут отличаться.",
+    "brandViewFull": "Открыть в полном размере ↗",
+    "brandOpenDevices": "Открыть макет Devices в полном размере",
+    "brandOpenPairing": "Открыть макет подключения устройств в полном размере",
+    "brandOpenSettings": "Открыть макет Intelligence и Settings в полном размере",
+    "brandOpenPrivacy": "Открыть макет Voice, Privacy и Permissions в полном размере"
   }
 };

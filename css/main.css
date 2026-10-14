@@ -558,3 +558,25 @@ b,strong{font-weight:700}
 .settings-map li{line-height:1.6}
 @media(max-width:860px){.phone-abilities__list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.brand-updates__grid,.phone-abilities__list{grid-template-columns:1fr}.brand-updates__grid{gap:12px}}
+
+/* 45-page BrandBook pp.42–45: accessible high-resolution mockup inspection. */
+.brand-updates__grid{align-items:start}
+.brand-updates__grid .brand-design-board{min-width:0;display:flex;flex-direction:column}
+.brand-design-board__link{position:relative;display:block;min-width:0;overflow:hidden;background:var(--night-ink);border-bottom:1px solid var(--line);text-decoration:none;cursor:zoom-in}
+.brand-design-board__link img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain}
+.brand-design-board__link:focus-visible{outline:3px solid var(--accent-strong);outline-offset:-3px}
+.brand-design-board__hint{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;min-height:32px;max-width:calc(100% - 24px);padding:6px 12px;border-radius:999px;background:rgba(6,3,48,.94);color:#FAFAF4;font:600 .81rem/1.25 var(--font-sans);text-align:center}
+.brand-updates__grid .brand-design-board figcaption{min-width:0;overflow-wrap:break-word;hyphens:auto}
+.brand-updates__header h3,.phone-abilities h3,.settings-map h3,.phone-abilities__list li,.settings-map li{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:600px){
+ .brand-updates__grid{grid-template-columns:minmax(0,1fr)}
+ .brand-updates__grid .brand-design-board{width:100%}
+ .brand-updates__grid .brand-design-board figcaption{padding:12px 14px}
+ .brand-design-board__hint{font-size:.78rem}
+}
+@media(max-width:360px){
+ .brand-updates,.phone-abilities,.settings-map{padding:18px 14px}
+ .brand-updates__header h3,.phone-abilities h3,.settings-map h3{letter-spacing:-.018em}
+ .brand-design-board__hint{right:8px;bottom:8px;max-width:calc(100% - 16px);padding:5px 10px}
+}
+@media(prefers-reduced-motion:reduce){.brand-design-board__link{scroll-behavior:auto}}

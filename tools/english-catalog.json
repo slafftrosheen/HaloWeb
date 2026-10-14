@@ -426,5 +426,10 @@
   "settingsMapVoice": "Voice — speech input, playback and output devices",
   "settingsMapPrivacy": "Privacy & Permissions — data choices and Android access",
   "settingsMapAdvanced": "Advanced — diagnostics and runtime details for testers",
-  "settingsMapDisclaimer": "The design book depicts the intended organization of Settings. The Android implementation is evolving; exact names and availability can differ by build."
+  "settingsMapDisclaimer": "The design book depicts the intended organization of Settings. The Android implementation is evolving; exact names and availability can differ by build.",
+  "brandViewFull": "View full-size image ↗",
+  "brandOpenDevices": "Open the full-size Devices design image",
+  "brandOpenPairing": "Open the full-size pairing design image",
+  "brandOpenSettings": "Open the full-size Intelligence and Settings design image",
+  "brandOpenPrivacy": "Open the full-size Voice, Privacy and Permissions design image"
 }
