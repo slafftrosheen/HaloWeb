@@ -40,7 +40,7 @@
   <link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-variable.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="stylesheet" href="css/fonts.css?v=1" />
   <link rel="stylesheet" href="css/tokens.css?v=15" />
-  <link rel="stylesheet" href="css/main.css?v=16" />
+  <link rel="stylesheet" href="css/main.css?v=17" />
 
   <script type="application/ld+json">
   {
@@ -470,6 +470,33 @@
             <p><span data-i18n="t168">Halo records tool calls and their results so interrupted work can be inspected and recovery does not blindly repeat completed actions.</span></p>
           </article>
         </div>
+
+        <aside class="presence-story reveal" role="region" aria-label="A clear signal for what Halo is doing." data-i18n-aria-label="presenceTitle">
+          <div class="presence-story__head">
+            <p class="section-label"><span data-i18n="presenceLabel">DESIGN SYSTEM · OPEN RING</span></p>
+            <h3><span data-i18n="presenceTitle">A clear signal for what Halo is doing.</span></h3>
+            <p><span data-i18n="presenceIntro">The Open Ring has meaningful states for ready, listening, thinking and approval. These images come from the updated visual design kit, not from a running Android session.</span></p>
+          </div>
+          <div class="presence-grid">
+            <figure class="presence-card">
+              <img src="assets/brand/presence/idle.svg" loading="lazy" decoding="async" width="176" height="176" alt="Halo&#39;s open mint ring, ready state." data-i18n-alt="presenceAltIdle" />
+              <figcaption><b><span data-i18n="presenceIdle">Ready</span></b><span data-i18n="presenceIdleInfo">Quiet until you ask.</span></figcaption>
+            </figure>
+            <figure class="presence-card">
+              <img src="assets/brand/presence/listening.svg" loading="lazy" decoding="async" width="176" height="176" alt="Halo&#39;s open mint ring with center dot, listening." data-i18n-alt="presenceAltListen" />
+              <figcaption><b><span data-i18n="presenceListen">Listening</span></b><span data-i18n="presenceListenInfo">Only with an active microphone.</span></figcaption>
+            </figure>
+            <figure class="presence-card">
+              <img src="assets/brand/presence/thinking.svg" loading="lazy" decoding="async" width="176" height="176" alt="Halo&#39;s open mint ring with three dots, thinking." data-i18n-alt="presenceAltThink" />
+              <figcaption><b><span data-i18n="presenceThink">Thinking</span></b><span data-i18n="presenceThinkInfo">Working on your request.</span></figcaption>
+            </figure>
+            <figure class="presence-card">
+              <img src="assets/brand/presence/approval.svg" loading="lazy" decoding="async" width="176" height="176" alt="Halo&#39;s open mint ring with apricot approval indicator." data-i18n-alt="presenceAltApprove" />
+              <figcaption><b><span data-i18n="presenceApprove">Needs your OK</span></b><span data-i18n="presenceApproveInfo">A step is waiting for approval.</span></figcaption>
+            </figure>
+          </div>
+          <p class="presence-disclaimer"><span data-i18n="presenceNote">Design-system preview, not a verified app feature. State indicators must follow real microphone, action and permission events.</span></p>
+        </aside>
       </div>
     </section>
 

@@ -81,3 +81,7 @@ A UI control present in source may be shown visually even when its end-to-end be
 ## 2026-10-14 — updated content review
 
 Read the supplied 31-page Halo Brand Book and Halo in-app graphics v0.3 ZIP. Compared public claims with Halo's CURRENT-STATE.md, AppShell.kt, LOCAL-MODELS.md, FIRST-RUN-SETUP.md and CANVAS-DAILY-FLOW.md. The five Android bottom destinations are Home, Activity, Notebook, Devices and Settings; Study is a separate route. This copy pass gives the visitor a concrete Android-first explanation before the campaign line, distinguishes future hosts from current support, qualifies third-party phone actions and avoids treating UI plans as hardware acceptance. English, Latvian and Russian copy are updated together.
+
+### In-app visual previews — evidence boundary
+
+The new gallery demonstrates four open-ring states based on the supplied v0.3 graphics bundle. It is labelled design-only and does not claim runtime integration. The book's four-screen onboarding concept (PDF p.31) is a design direction; the Android FIRST-RUN-SETUP document describes the implemented nine-step guided setup. The website does not present the mockups as released app behavior.

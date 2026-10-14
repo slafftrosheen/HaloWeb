@@ -42,3 +42,11 @@ test('Open Graph preview is a lightweight, brand-aligned PNG with correct dimens
  assert.match(html,/og:image:width" content="600"/);
  assert.match(html,/halo-og\.png\?v=2/);
 });
+
+test('design state examples are named, static, translated and not represented as live APK behavior',()=>{
+ for(const state of ['idle','listening','thinking','approval']) assert.ok(exists('assets/brand/presence/'+state+'.svg'));
+ for(const lang of ['en','lv','ru']) for(const key of ['presenceTitle','presenceIntro','presenceNote']) assert.ok(bundle[lang][key]);
+ assert.match(html,/presence-story/);
+ assert.match(bundle.en.presenceIntro,/not from a running Android session/);
+ assert.match(bundle.en.presenceNote,/not a verified app feature/);
+});
