@@ -69,3 +69,16 @@ test('new brand reference art and Android capability wording stay clear',()=>{
   assert.match(bundle.en.settingsMapDisclaimer,/differ by build/);
   assert.match(bundle.en.ringGradientBody,/symbolic, not a live indicator/);
 });
+
+test('generator reads the merged translation catalog for workspace, brand and metadata fallbacks',()=>{
+ const builder=read('tools/build_translations.py');
+ assert.match(builder,/catalog\['en'\]\[m\[2\]\]/);
+ assert.match(builder,/catalog\['en'\]\['title'\]/);
+ assert.match(builder,/catalog\['en'\]\['description'\]/);
+ assert.match(builder,/Placeholder mismatch/);
+ // Workspace and annotation keys live outside the editable main-page English catalog.
+ for(const key of ['workspaceCanvasBody','workspaceIntro','feedbackAbout']){
+   assert.equal(english[key],undefined);
+   assert.ok(bundle.en[key],key);
+ }
+});

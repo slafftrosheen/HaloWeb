@@ -107,3 +107,7 @@ Reviewed Halo main `d1a713d4926dd4b83c7bbe9db408511cb5adcf8d` and the recent `be
 
 ## 2026-10-14 — Brand Book 45-page update and Android devices/settings parity
 Reviewed supplied 45-page BrandBook(1).pdf, especially pp.39–45 (tools, actions, Devices, pairing, Settings, voice/privacy). The brand artwork was present in HaloWeb's BrandAssets directory after commit f161829d; it is now shown as **design reference** beside the older Oct 13 **real test-build screenshots**, never conflated with a live APK. Cross-checked Halo Android main at 75d08faf (HALO-BRAND-064) including PhoneCapabilityGroups.kt (seven categories), PairingScreen.kt and IntelligenceScreen.kt. Phone capability reporting is NOT permission grant; the app specifically presents Available/Not reported, not Allowed/Ask first/Blocked. Pairing is scan/select/connect and still needs permission and deliberate capture controls. EN/LV/RU are maintained together. The website does not assert untested runtime visual parity.
+
+### Language tooling regression (2026-10-14)
+
+The generator previously indexed main-page `en` when updating no-JavaScript fallbacks, including keys supplied by `annotation_copy.json` and `workspace_copy.json`, and incorrectly looked for metadata keys in the main catalog. It now reads the fully merged `catalog['en']`, validates EN/LV/RU key parity and interpolation placeholders, and retains metadata from the dedicated extras block. The dependency-free site validator also checks the translation TSV and bundles for source parity and placeholder drift.
