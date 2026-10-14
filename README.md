@@ -13,6 +13,16 @@ HaloWeb is deliberately static: plain HTML, CSS, JavaScript and checked-in UI as
 - Site content stays visible if the interactive script fails; translation catalog and existing alpha kit files remain unchanged.
 - `tools/check_browser.cjs` now covers **36 viewport/language/theme combinations** (320, 390, 768, 1024, 1280, 1440 pixels × EN/LV/RU × light/dark) plus navigation visibility, rendered screenshot scale and sticky-header anchor placement. Browser and deploy checks should be run on the release checkout; this documentation records the assertions, not a fresh physical browser test result.
 
+## Brand-book redesign — 2026-10-14
+
+The page was rebuilt around the owner's 38-page *Halo Brand Book* and the supplied `BrandAssets/` graphics kit, keeping the static, dependency-free stack.
+
+- **Three new chapters before the product story:** `01 · Mission`, `02 · The open ring` and `03 · Halo's presence`. They explain why the ring is open, what the ring means, and what Halo is doing — before any feature list.
+- **Presence studio:** all 21 kit states are selectable. Each one swaps the large open ring, its localized name and its explanation. Fifteen states play their supplied Lottie animation; the six the kit never animated are shown as stills and labelled as such, so no state fakes motion. The open-ring chapter plays one short sequence (listening → thinking → acting → success) when it scrolls into view, then holds.
+- **Vendored artwork:** the site serves the kit from `assets/brand/` — 21 state stills, 15 state animations, a 133-symbol icon sprite, the ring and wordmark. `js/vendor/lottie_light.min.js` (MIT, license included) renders the animations; nothing is fetched from a CDN at runtime.
+- **Honest motion:** animations run only while on screen and never under `prefers-reduced-motion`, where the kit still frame is used instead.
+- Design documentation and the evidence boundary are recorded in `BRAND-IMPLEMENTATION.md` and `CONTENT-SOURCES.md`.
+
 ## Content and visitor journey
 
 The website is for someone who has not heard of Halo before. Lead with what
@@ -109,30 +119,40 @@ The first-run checklist leads to a localized feedback form for configuration det
 
 At the user's request, delivery uses a `mailto:` draft addressed to `slaff.trosheen@gmail.com`. The visitor reviews and sends it in their own mail app. The UI reports draft preparation, never successful delivery. A preview and copy option handle visitors without a configured mail app. Screenshots can be attached manually in the mail app. No mail backend, API key or paid service is required.
 
-The palette follows Halo's `Color.kt`: primary mint `#7DE2B1`, dark background `#131B19`, dark surface `#1D2723`, and light background `#F7F8F4`. Light-theme text accents use darker green for contrast. Primary controls, focus, progress, hero treatments, favicon and share-card accents use green.
+The palette follows the *Halo Brand Book* (Halo Mint `#0CF2BA` on Night Ink `#060330` with Cream `#FAFAF4`, Deep Mint for mint text on light, Sunrise Apricot for “Halo needs you”, Ember for errors only), not the older Android `Color.kt` values. All colour, type and motion tokens live in `css/tokens.css`.
 
 ## Validation
 
-`python -X utf8 tools/validate_site.py` checks page structure, links, assets, merge markers and language coverage. Serve the site at `127.0.0.1:8765`, then run `node tools/check_browser.cjs` with Playwright available through `NODE_PATH` and Edge installed. Browser checks cover six viewport widths, three languages, both themes, image proportions, checklist persistence, clipboard feedback, and no-JavaScript/blocked-storage fallbacks. Review screenshots are saved outside the repository in `../.codex/haloweb-review-20261013/`.
+`python -X utf8 tools/validate_site.py` checks page structure, links, assets, merge markers and language coverage. `node --test tests/*.mjs` runs the content, brand and i18n contracts, including the new presence contracts (21 states present with artwork and copy, exactly 15 animated, the six still-only states not claiming motion, the vendored renderer licensed and loaded before the site script, every icon the page references defined in the sprite, and every class the page uses styled).
+
+Serve the site at `127.0.0.1:8765`, then run `node tools/check_browser.cjs` with Playwright available through `NODE_PATH` and Edge installed. Browser checks cover six viewport widths, three languages, both themes, image proportions, the presence studio (state selection, localized captions, animation versus still-only states, theme switching) and the orb motion contract (hero ring animating, reduced motion leaving no renderer and no live animation), plus checklist persistence, clipboard feedback, carousel and workspace keyboard navigation, and no-JavaScript/blocked-storage fallbacks. Review screenshots are saved outside the repository in `../.codex/haloweb-review-20261013/`.
 
 ## Structure
 
 ```text
 HaloWeb/
 ├── assets/
-│   └── screens/
-│       ├── home.jpg
-│       ├── notebook.jpg
-│       ├── study.jpg
-│       ├── settings.jpg
-│       ├── devices.jpg
-│       └── ... (12 real phone screenshots)
+│   ├── brand/
+│   │   ├── icons.svg            (133 kit icon families, one sprite)
+│   │   ├── halo-ring.svg
+│   │   ├── halo-wordmark.svg
+│   │   └── orb/
+│   │       ├── svg/             (21 state stills, currentColor)
+│   │       └── lottie/          (15 state animations)
+│   └── screens/                 (12 real phone screenshots)
 ├── css/
 │   ├── tokens.css
+│   ├── fonts.css
 │   └── main.css
 ├── js/
+│   ├── vendor/
+│   │   ├── lottie_light.min.js
+│   │   └── lottie-web-LICENSE.txt
 │   ├── main.js
 │   └── translations.js
+├── tests/                       (content, brand and i18n contracts)
+├── tools/                       (copy catalogs, validator, browser check)
+├── BRAND-IMPLEMENTATION.md
 ├── CONTENT-SOURCES.md
 ├── README.md
 ├── favicon.svg
@@ -150,7 +170,10 @@ HaloWeb/
 - no autoplay demo carousel;
 - one-shot content and asset reveals;
 - one-shot runtime-flow assembly;
-- `prefers-reduced-motion` collapses motion to static presentation.
+- the presence studio animates only the state a visitor picks, and only while it is on screen;
+- the open-ring chapter plays its state sequence once per visit, then holds;
+- states the kit never animated stay still and say so;
+- `prefers-reduced-motion` collapses motion to static presentation, including the ring artwork, which falls back to the kit still frame.
 
 ## Alpha tester programme
 

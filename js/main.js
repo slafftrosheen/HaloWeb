@@ -194,6 +194,171 @@
     });
   }
 
+  /* --- Halo presence ------------------------------------------------------
+     The ring artwork comes from the Halo graphics kit that ships with the
+     brand book. Fifteen states are animated (Lottie, shape layers only) and
+     six are stills. Motion is always user- or scroll-triggered, is paused when
+     the orb leaves the viewport, and collapses to the static SVG when the
+     visitor prefers reduced motion. */
+  var LOOPING_STATES = ['idle', 'listening', 'capturing_voice', 'capturing_vision', 'thinking',
+    'acting', 'speaking', 'streaming_text', 'waiting', 'approval_required', 'planning',
+    'acting_phone', 'preparing_context', 'recovering', 'model_loading', 'permission_missing'];
+  var ANIMATED_STATES = ['idle', 'listening', 'capturing_voice', 'capturing_vision', 'thinking',
+    'acting', 'speaking', 'streaming_text', 'waiting', 'approval_required', 'success', 'warning',
+    'error', 'offline', 'stopped'];
+  var orbs = [];
+
+  function orbStaticSource(state) { return 'assets/brand/orb/svg/halo_orb_' + state + '.svg'; }
+  function orbLottieSource(state) { return 'assets/brand/orb/lottie/halo_orb_' + state + '.json'; }
+  function orbKey(state) {
+    return 'state' + state.split('_').map(function (part) {
+      return part.charAt(0).toUpperCase() + part.slice(1);
+    }).join('');
+  }
+  function orbMotionAllowed(state) {
+    return !reducedQuery.matches && !!window.lottie && ANIMATED_STATES.indexOf(state) !== -1;
+  }
+
+  function orbCanvas(el) {
+    var canvas = el.querySelector('.orb-canvas');
+    if (!canvas) {
+      canvas = document.createElement('div');
+      canvas.className = 'orb-canvas';
+      canvas.setAttribute('aria-hidden', 'true');
+      el.appendChild(canvas);
+    }
+    return canvas;
+  }
+
+  function orbDestroy(el) {
+    if (el._orbAnim) {
+      el._orbAnim.removeEventListener('complete', el._orbComplete);
+      try { el._orbAnim.destroy(); } catch (_) { /* already gone */ }
+      el._orbAnim = null;
+    }
+    el._orbState = null;
+    el.classList.remove('is-live');
+  }
+
+  function orbShowStatic(el, state) {
+    var image = el.querySelector('.orb-fallback');
+    if (!image) return;
+    var next = orbStaticSource(state);
+    if (image.getAttribute('src') !== next) image.setAttribute('src', next);
+    el.dataset.orbState = state;
+  }
+
+  /* mount(el, state, looping) — render one state, reusing the running animation. */
+  function orbMount(el, state, looping) {
+    if (!orbMotionAllowed(state)) {
+      orbDestroy(el);
+      orbShowStatic(el, state);
+      return;
+    }
+    if (el._orbAnim && el._orbState === state) {
+      if (!el._orbPaused) el._orbAnim.play();
+      return;
+    }
+    orbDestroy(el);
+    el._orbState = state;
+    el.dataset.orbState = state;
+    el.classList.add('is-live');
+    var animation = window.lottie.loadAnimation({
+      container: orbCanvas(el),
+      renderer: 'svg',
+      loop: looping !== false,
+      autoplay: true,
+      path: orbLottieSource(state),
+      rendererSettings: { preserveAspectRatio: 'xMidYMid meet' }
+    });
+    el._orbAnim = animation;
+    el._orbPaused = false;
+    /* Keep the still frame current so it is right if motion is switched off. */
+    orbShowStatic(el, state);
+    if (orbs.indexOf(el) === -1) orbs.push(el);
+  }
+
+  /* The open-ring chapter walks through one turn: it rests, travels, acts and
+     closes, then holds. It replays only after the section has left the screen. */
+  function orbRunSequence(el) {
+    var states = (el.dataset.orbSequence || '').split(',').filter(Boolean);
+    if (!states.length) return;
+    var index = 0;
+    function advance() {
+      if (index >= states.length) return;
+      var state = states[index++];
+      orbMount(el, state, false);
+      if (el._orbAnim) el._orbAnim.addEventListener('complete', advance);
+      el._orbComplete = advance;
+    }
+    advance();
+  }
+
+  function initOrbs() {
+    var elements = Array.prototype.slice.call(document.querySelectorAll('.orb'));
+    var watching = ('IntersectionObserver' in window);
+
+    elements.forEach(function (el) {
+      if (el.dataset.orbSequence) return;
+      var state = el.dataset.orb || 'idle';
+      orbMount(el, state, el.dataset.orbMode !== 'once');
+    });
+
+    if (!watching) {
+      elements.forEach(function (el) { if (el.dataset.orbSequence) orbRunSequence(el); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var el = entry.target;
+        el._orbVisible = entry.isIntersecting;
+        if (el.dataset.orbSequence) {
+          if (entry.isIntersecting) orbRunSequence(el);
+          else orbDestroy(el); /* reset so it can play again on the next visit */
+          return;
+        }
+        if (!el._orbAnim) return;
+        /* A permanent animation loop is not wanted: only run while on screen. */
+        if (entry.isIntersecting) { el._orbPaused = false; el._orbAnim.play(); }
+        else { el._orbPaused = true; el._orbAnim.pause(); }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(function (el) { observer.observe(el); });
+
+    window.addEventListener('resize', function () {
+      orbs.forEach(function (el) { if (el._orbAnim && el._orbAnim.resize) el._orbAnim.resize(); });
+    });
+  }
+
+  function initPresenceStudio() {
+    var stage = document.getElementById('orb-stage');
+    var label = document.getElementById('orb-state-label');
+    var copy = document.getElementById('orb-state-copy');
+    if (!stage || !label || !copy) return;
+    var chips = Array.prototype.slice.call(document.querySelectorAll('[data-orb-state][data-orb-animated]'));
+
+    function select(state, animated) {
+      stage.dataset.orbAnimated = String(animated);
+      orbMount(stage, state, LOOPING_STATES.indexOf(state) !== -1);
+      var key = orbKey(state);
+      label.setAttribute('data-i18n', key);
+      label.textContent = t(key);
+      copy.setAttribute('data-i18n', key + 'Info');
+      copy.textContent = t(key + 'Info');
+      chips.forEach(function (chip) {
+        chip.setAttribute('aria-pressed', String(chip.getAttribute('data-orb-state') === state));
+      });
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        select(chip.getAttribute('data-orb-state'), chip.getAttribute('data-orb-animated') === 'true');
+      });
+    });
+  }
+
   function initLanguage() {
     var preferred = new URLSearchParams(location.search).get('lang');
     if (!preferred) {
@@ -436,4 +601,6 @@
   initCarousel();
   initFeedback();
   initWorkspace();
+  initOrbs();
+  initPresenceStudio();
 })();

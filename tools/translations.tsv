@@ -2,11 +2,11 @@ t000	Pāriet pie produkta	Перейти к продукту
 t001	Halo sākumlapa	Главная Halo
 t002	Lapas sadaļas	Разделы страницы
 t003	Pārskats	Обзор
-t004	Tālruņa rīki	Инструменты телефона
+t004	Tālruņa rīki	Действия
 t005	MI iespējas	Варианты ИИ
 t006	Piezīmes un mācības	Заметки и учёба
 t007	Ierīces	Устройства
-t008	Izstrādes statuss	Статус разработки
+t008	Statuss	Статус
 t009	Izmēģināt alfa versiju	Попробовать альфу
 t010	Vietnes valoda	Язык сайта
 t011	Krāsu motīvs	Цветовая тема
@@ -21,13 +21,13 @@ t019	Halo šobrīd ir atvērtā koda MI palīgs Android ierīcēm; tā darbības
 t020	Izmēģināt Android alfa versiju	Попробовать альфу для Android
 t021	Skatīt Halo iespējas	Посмотреть возможности
 t022	Skatīt pirmkodu ↗	Посмотреть код ↗
-t023	SĀC AR TĀLRUNI	НАЧНИ С ТЕЛЕФОНА
+t023	VISPIRMS TĀLRUNIS	СНАЧАЛА ТЕЛЕФОН
 t024	Brilles nav nepieciešamas	Очки не нужны
 t025	IZVĒLIES SAVU MI	ВЫБИРАЙ ИИ
 t026	Ierīcē, lokālajā tīklā vai mākonī	На устройстве, в сети или облаке
 t027	TĀLRUŅA DARBĪBAS	ДЕЙСТВИЯ НА ТЕЛЕФОНЕ
 t028	Iestatījumi, lietotnes un ekrāns	Настройки, приложения и экран
-t029	IEBŪVĒTA DARBA VIDE	РАБОЧЕЕ ПРОСТРАНСТВО
+t029	PIEZĪMES UN MĀCĪBAS	ЗАМЕТКИ И УЧЁБА
 t030	Piezīmju grāmata, Canvas un Mācības	Блокнот, Canvas и Учёба
 t031	Halo sākuma ekrāns ar apturētu uzdevumu, neapstiprinātu darbības rezultātu un ziņas ievades lauku.	Главный экран Halo: приостановленная задача, неподтверждённый результат действия и поле сообщения.
 t032	HALO SĀKUMA EKRĀNS	ГЛАВНЫЙ ЭКРАН HALO
@@ -38,7 +38,7 @@ t036	Tavi materiāli vienuviet.	Ваши материалы в одном мес
 t037	Saglabā piezīmes un failus, kārto idejas Canvas un mācies no paša izvēlētiem avotiem.	Храните заметки и файлы, упорядочивайте идеи в Canvas и учитесь по выбранным источникам.
 t038	Izvēlies Halo MI.	Выбирайте модель для Halo.
 t039	Izmanto saderīgu modeli tālrunī, savu serveri vai izvēlētu mākoņpakalpojumu. Privātums un veiktspēja atšķiras.	Используйте совместимую модель на телефоне, свой сервер или облачного провайдера. У каждого варианта свои условия приватности и производительности.
-t040	01 · LIETOTNĒ	01 · ВНУТРИ ПРИЛОЖЕНИЯ
+t040	04 · LIETOTNĒ	04 · ВНУТРИ ПРИЛОЖЕНИЯ
 t041	Ko var izmēģināt Android alfa versijā.	Что можно попробовать в Android-альфе.
 t042	Home saņem pieprasījumus. Activity rāda darbības un apstiprinājumus. Notebook glabā piezīmes un failus; Canvas un Study izmanto šos avotus. Devices un Settings pārvalda aparatūru, modeļus un atļaujas. Tie ir īsti Android ekrānattēli, nevis visu funkciju testu pierādījums.	Home принимает запросы. Activity показывает действия и запросы подтверждения. Notebook хранит заметки и файлы; Canvas и Study работают с этими источниками. Devices и Settings отвечают за устройства, модели и разрешения. Это реальные скриншоты Android, а не доказательство полной готовности всех функций.
 t043	Halo sākuma ekrāns.	Главный экран Halo.
@@ -74,7 +74,7 @@ t072	Halo Atmiņas ekrāns Android tālrunī.	Экран Памяти Halo на 
 t073	Atmiņa	Память
 t074	Izvēlies, kādus ieteikumus Halo var sniegt. To saglabāšanai nepieciešams tavs apstiprinājums.	Выбирай, какие предложения может делать Halo. Для сохранения нужно твоё подтверждение.
 t075	Īsti Android testa versijas ekrānuzņēmumi no 2026. gada 13. oktobra. Lietotne attēlota angļu valodā; valodas izvēlne maina vietnes tekstu, nevis ekrānuzņēmumus.	Настоящие снимки тестовой сборки Android от 13 октября 2026 года. Приложение показано на английском; переключатель языка переводит сайт, но не снимки экрана.
-t076	02 · TĀLRUŅA DARBĪBAS	02 · ДЕЙСТВИЯ НА ТЕЛЕФОНЕ
+t076	05 · TĀLRUŅA DARBĪBAS	05 · ДЕЙСТВИЯ НА ТЕЛЕФОНЕ
 t077	Lūdz Halo palīdzēt ar tālruni.	Попросите Halo помочь с телефоном.
 t078	Iestati taimeri, atver lietotni vai maini iestatījumu. Ar atļauju un apstiprinājumu Halo var izmantot arī redzamus ekrāna elementus. Vairāku soļu plūsmas un nodošana citām lietotnēm vēl tiek testēta.	Поставьте таймер, откройте приложение или измените настройку. С нужными разрешениями и подтверждением Halo может взаимодействовать с видимыми элементами экрана. Многошаговые сценарии и переходы в сторонние приложения ещё тестируются.
 t079	Pārvaldi tālruni	Управляй телефоном
@@ -92,7 +92,7 @@ t090	Pieejamības darbībām, kas maina ekrāna stāvokli, nepieciešams atsevi�
 t091	PATIESA DARBĪBU STATUSA UZSKAITE	ЧЕСТНЫЙ СТАТУС ДЕЙСТВИЙ
 t092	Pieprasījums vēl nenozīmē, ka darbība izdevās.	Команда ещё не означает успех.
 t093	Halo reģistrē mēģinātās darbības un to rezultātus. Ja vadību pārņem cita lietotne vai Android nevar apstiprināt rezultātu, palīgam tas jāpasaka, nevis jāapgalvo, ka uzdevums pabeigts.	Halo фиксирует попытки действий и их результаты. Если управление перешло другому приложению или Android не может подтвердить итог, помощник должен об этом сообщить, а не заявлять, что задача выполнена.
-t094	04 · MI IESPĒJAS	04 · ВАРИАНТЫ ИИ
+t094	07 · MI IESPĒJAS	07 · ВАРИАНТЫ ИИ
 t095	Izvēlies, kur Halo domā.	Выбирайте, где думает Halo.
 t096	Lejupielādē un testē modeli tālrunī, pieslēdz serveri savā tīklā vai konfigurē mākoņpakalpojumu. Attālinātiem pieprasījumiem var tikt nosūtīts atbilstošs konteksts. Pēc kļūmes Halo nedrīkst klusējot nodot datus citam pakalpojumam.	Скачайте и проверьте модель на телефоне, подключите сервер в своей сети или настройте облачного провайдера. Для удалённого запроса соответствующий контекст может передаваться выбранному провайдеру. После сбоя Halo не должен незаметно отправлять данные другому сервису.
 t097	TĀLRUNĪ	НА ТЕЛЕФОНЕ
@@ -113,7 +113,7 @@ t111	Tava izvēle tiek ievērota.	Твой выбор соблюдается.
 t112	Izvēlētā pakalpojuma sniedzēja kļūme nedod atļauju nemanāmi nosūtīt privāto kontekstu citam sniedzējam.	Сбой выбранного провайдера не даёт разрешения незаметно передать личный контекст другому.
 t113	Piekļuves dati ir aizsargāti.	Учётные данные защищены.
 t114	Piekļuves dati tiek glabāti ar Android Keystore aizsargātā krātuvē, nevis parastajos lietotnes iestatījumos.	Учётные данные хранятся в защищённом хранилище с использованием Android Keystore, а не в обычных настройках приложения.
-t115	03 · PIEZĪMES UN MĀCĪBAS	03 · ЗАМЕТКИ И УЧЁБА
+t115	06 · PIEZĪMES UN MĀCĪBAS	06 · ЗАМЕТКИ И УЧЁБА
 t116	Skaidra darba vide tavam MI.	Понятное рабочее пространство для твоего ИИ.
 t117	Halo glabā tavu darbu Piezīmju grāmatā. Tu izvēlies, ko pievienot darba kontekstam. Mācības pārvērš izvēlēto materiālu saglabājamā mācību sesijā, lai viss nepaliktu tikai sarunu vēsturē.	Halo хранит твою работу в Блокноте. Ты выбираешь, что включить в рабочий контекст. Учёба превращает выбранный материал в сохраняемую учебную сессию, чтобы всё не оставалось только в истории чата.
 t118	Halo Piezīmju grāmatas ekrānuzņēmums.	Скриншот Блокнота Halo.
@@ -130,7 +130,7 @@ t128	Mācību sesijas ir piesaistītas konkrētai avota versijai, saglabā tavas
 t129	ATMIŅA AR ZINĀMU IZCELSMI	ПАМЯТЬ С ИЗВЕСТНЫМ ИСТОЧНИКОМ
 t130	Saglabā atmiņā apzināti	Сохраняй в памяти осознанно
 t131	Piezīmju grāmata un palīga atmiņa ir atšķirīgas lietas. Saglabāšana atmiņā ir atsevišķa darbība; piezīmes izveidošana to automātiski nepievieno atmiņai.	Блокнот и память помощника — разные вещи. Сохранение в памяти — отдельное действие; создание заметки не добавляет её в память автоматически.
-t132	05 · PIEVIENOTĀS IERĪCES	05 · ПОДКЛЮЧЁННЫЕ УСТРОЙСТВА
+t132	08 · PIEVIENOTĀS IERĪCES	08 · ПОДКЛЮЧЁННЫЕ УСТРОЙСТВА
 t133	Sāc ar Android. Citas ierīces nav obligātas.	Начните с Android. Другие устройства необязательны.
 t134	Halo nav palīgs tikai brillēm. Android ir pirmā platforma. Brilles, austiņas un eksperimentāli roboti var papildināt iespējas, ja to atbalsta draiveri un īsti testi; citas platformas vēl tiek izstrādātas.	Halo — не помощник только для очков. Android — первая платформа. Очки, наушники и экспериментальные роботы расширяют возможности там, где есть поддержка драйверов и проверка на устройстве. Другие платформы ещё разрабатываются.
 t135	Halo Ierīču ekrānuzņēmums.	Скриншот Устройств Halo.
@@ -145,7 +145,7 @@ t143	Austiņas un brīvroku ierīces	Наушники и гарнитуры
 t144	Atbalstītās Android austiņas var nodrošināt mikrofonu un skaņas izvadi atkarībā no maršrutēšanas un atļaujām.	Совместимые Android-гарнитуры могут обеспечивать ввод и вывод звука с учётом маршрутизации и разрешений.
 t145	EKSPERIMENTĀLA APARATŪRA	ЭКСПЕРИМЕНТАЛЬНОЕ ОБОРУДОВАНИЕ
 t146	BuddyBot ir robotikas projekts fizisku darbību un drošības izpētei. Tas ir eksperimentāls un Halo lietošanai nav vajadzīgs.	BuddyBot — экспериментальный робототехнический проект для проверки физических действий и безопасности. Для использования Halo он не нужен.
-t147	07 · IZSTRĀDĀTĀJIEM	07 · ДЛЯ РАЗРАБОТЧИКОВ
+t147	10 · IZSTRĀDĀTĀJIEM	10 · ДЛЯ РАЗРАБОТЧИКОВ
 t148	Viens darbības kodols, dažādi modeļi un ierīces.	Одно ядро, разные модели и устройства.
 t149	Halo atdala ievadi, kontekstu, modeļa spriešanu, atļaujas un rīku izpildi. Android ir pirmā platforma; Linux un Windows vēl tiek izstrādāti. Mērķis ir nepakļaut palīgu vienam modelim vai ierīcei.	Halo разделяет ввод, контекст, работу модели, разрешения и выполнение инструментов. Android — первая платформа; Linux и Windows находятся в разработке. Цель — не привязывать помощника к одной модели или устройству.
 t150	Ievade	Ввод
@@ -167,7 +167,7 @@ t165	Izmanto lokālu modeli vai skaidri izvēlies tīkla pakalpojumu. Attālinā
 t166	DARBĪBU VĒSTURE	ИСТОРИЯ ДЕЙСТВИЙ
 t167	Redzi, kas izdevās un kas ne.	Видно, что выполнено, а что нет.
 t168	Halo reģistrē rīku izsaukumus un rezultātus, lai varētu pārbaudīt pārtrauktus uzdevumus un neatkārtotu jau izpildītas darbības.	Halo записывает вызовы инструментов и результаты, чтобы можно было проверить прерванную работу и не повторять вслепую уже выполненные действия.
-t169	06 · IZSTRĀDES STATUSS	06 · СТАТУС РАЗРАБОТКИ
+t169	09 · IZSTRĀDES STATUSS	09 · СТАТУС РАЗРАБОТКИ
 t170	Kodā jau ir. Vēl tiek pārbaudīts.	Есть в коде. Ещё проходит проверку.
 t171	Android alfa versijā ir daudz koda un strādājošu plūsmu, tomēr kompilācija, vienību testi un pārbaude uz īstas ierīces ir atšķirīgas lietas. Daļa integrāciju vēl nav apstiprināta. Skati GitHub Releases un zināmos ierobežojumus.	В Android-альфе уже много кода и работающих сценариев, но успешная сборка, модульные тесты и проверка на реальном устройстве — разные вещи. Часть интеграций ещё не подтверждена. Следите за GitHub Releases и известными ограничениями.
 t172	PĀRBAUDĪTS UZ IERĪCĒM	ПРОВЕРЕНО НА УСТРОЙСТВАХ
@@ -179,12 +179,12 @@ t177	Lietotnei ir koda līmeņa testi darbībām, darbvietai un modeļiem. Tas n
 t178	VAJADZĪGA PILNA TESTĒŠANA	НУЖНО СКВОЗНОЕ ТЕСТИРОВАНИЕ
 t179	Dažas integrācijas vēl nav pārbaudītas.	Часть интеграций ещё не проверена.
 t180	Modeļu saderība, vairāku soļu darbības, attālinātu pakalpojumu kļūmes un daži briļļu audio ceļi vēl jāpārbauda uz īstas aparatūras.	Совместимость моделей, многошаговые действия, ошибки удалённых провайдеров и некоторые аудиомаршруты очков ещё требуют испытаний на реальном оборудовании.
-t181	PIRMKODS UN TESTU REZULTĀTI	КОД И РЕЗУЛЬТАТЫ ТЕСТОВ
+t181	KODA PIERĀDĪJUMI	ДОКАЗАТЕЛЬСТВА В КОДЕ
 t182	Vēlies tehniskās detaļas?	Нужны технические подробности?
 t183	Repozitorijā ir nodalīts ieviestais kods, testu pierādījumi un zināmie trūkumi. Vari pārbaudīt progresu, nevis paļauties tikai uz vietnes apgalvojumiem.	В репозитории разделены реализованный код, результаты тестов и известные пробелы. Прогресс можно проверить, а не верить только тексту сайта.
 t184	Atvērt Halo GitHub ↗	Открыть Halo на GitHub ↗
 t185	Pašreizējais stāvoklis	Текущее состояние
-t186	08 · IZMĒĢINI ALFA VERSIJU	08 · ПОПРОБУЙ АЛЬФУ
+t186	11 · IZMĒĢINI ALFA VERSIJU	11 · ПОПРОБУЙ АЛЬФУ
 t187	Palīdzi testēt Halo Android vidē.	Помогите протестировать Halo на Android.
 t188	Pārbaudi GitHub Releases, vai ir instalējama Android versija. Ja ir, izmanto īso ceļvedi un piemēru failus un ziņo, kas strādā, nedarbojas vai mulsina. Brilles un privāti dokumenti nav vajadzīgi.	Проверьте наличие сборки в GitHub Releases. Если она есть, пройдите короткий тест по готовым материалам и расскажите, что работает, сломалось или оказалось непонятным. Очки и личные документы не нужны.
 t189	Kā piedalīties	Как участвовать
@@ -270,9 +270,9 @@ t268	Atvērtais kods · priekšroka vietējai darbībai · Halo konts nav vajadz
 t269	Alfa testēšanas materiāli ↗	Материалы для альфа-теста ↗
 brandPromise	Privātums pēc noklusējuma. Atvērts pēc būtības.	Приватность по умолчанию. Открытость по замыслу.
 brandTagline	MI, kas kļūst par otro dabu.	ИИ, который становится второй натурой.
-presenceLabel	DIZAINA SISTĒMA · ATVĒRTAIS GREDZENS	ДИЗАЙН-СИСТЕМА · ОТКРЫТОЕ КОЛЬЦО
+presenceLabel	03 · HALO KLĀTBŪTNE	03 · ПРИСУТСТВИЕ HALO
 presenceTitle	Skaidri redzams, ko dara Halo.	Понятно, чем занят Halo.
-presenceIntro	Atvērtajam gredzenam ir saprotami gatavības, klausīšanās, domāšanas un apstiprinājuma stāvokļi. Šie attēli ir no jaunā dizaina komplekta, nevis no strādājošas Android sesijas.	Открытое кольцо показывает понятные состояния готовности, прослушивания, обработки запроса и подтверждения. Иллюстрации из нового дизайн-комплекта, а не из работающей Android-сессии.
+presenceIntro	Atvērtais gredzens ir Halo ķermeņa valoda, un animāciju kopums nāk no Halo grafikas komplekta, nevis no darbojošas Android sesijas. Izvēlies stāvokli, lai redzētu to kustamies: gredzens atpūšas, kad Halo ir gatavs, ceļo, kamēr tas domā, noslēdzas, kad uzdevums ir izpildīts, un kļūst aprikozu, kad Halo gaida tevi.	Открытое кольцо — это язык тела Halo, а набор анимаций взят из графического комплекта Halo, а не из работающей сессии Android. Выбери состояние, чтобы увидеть движение: кольцо отдыхает, когда Halo готов, движется, пока он думает, закрывается, когда задача выполнена, и становится абрикосовым, когда Halo нужен ты.
 presenceIdle	Gatavs	Готов
 presenceIdleInfo	Klusi gaida, kamēr pajautāsi.	Ждёт, пока вы обратитесь.
 presenceListen	Klausās	Слушает
@@ -281,8 +281,114 @@ presenceThink	Domā	Думает
 presenceThinkInfo	Apstrādā tavu pieprasījumu.	Обрабатывает ваш запрос.
 presenceApprove	Vajadzīgs apstiprinājums	Нужно подтверждение
 presenceApproveInfo	Darbībai vajadzīga tava atļauja.	Для действия нужно ваше разрешение.
-presenceNote	Dizaina priekšskatījums, nevis pārbaudīta lietotnes funkcija. Indikatoriem jāatbilst reālam mikrofona, darbību un atļauju stāvoklim.	Это макеты, а не проверенная функция приложения. Индикаторы должны соответствовать реальным состояниям микрофона, действий и разрешений.
+presenceNote	Dizaina sistēmas priekšskatījums, nevis pārbaudīta lietotnes funkcija. Lietotnē stāvokļa indikatoriem jāseko reāliem mikrofona, darbību un atļauju notikumiem.	Предпросмотр дизайн-системы, а не проверенная функция приложения. В приложении индикаторы состояния должны следовать реальным событиям микрофона, действий и разрешений.
 presenceAltIdle	Halo atvērtais zaļais gredzens: gatavs.	Открытое мятное кольцо Halo: готов.
 presenceAltListen	Halo gredzens ar centrālo punktu: klausās.	Кольцо Halo с точкой: слушает.
 presenceAltThink	Halo gredzens ar trim punktiem: domā.	Кольцо Halo с тремя точками: думает.
 presenceAltApprove	Halo gredzens ar aprikožu krāsas apstiprinājuma zīmi.	Кольцо Halo с абрикосовым индикатором разрешения.
+navPresence	Klātbūtne	Присутствие
+heroOrbCaption	Halo miera stāvoklī · atvērtais gredzens	Halo в покое · открытое кольцо
+missionLabel	01 · MISIJA	01 · МИССИЯ
+missionTitle	Tehnoloģijām jākļūst par dabisku turpinājumu tam, ko jau proti.	Технологии должны быть естественным продолжением твоих возможностей.
+missionBody	Halo ir atvērtā koda personīgais palīgs ar privātumu pirmajā vietā. Tas apvieno balsi, redzi, atmiņu, ikdienas uzdevumus, tālruņa vadību un valkājamās ierīces vienā pieredzē, un darbojas vispirms tavā ierīcē: mākonis ir izvēle, nevis noklusējums.	Halo — личный помощник с открытым кодом и приоритетом приватности. Он объединяет голос, зрение, память, повседневные задачи, управление телефоном и носимые устройства в одном опыте и работает прежде всего на твоём устройстве: облако — это выбор, а не значение по умолчанию.
+missionPill1Title	Vispirms ierīcē	Сначала на устройстве
+missionPill1Body	Modeli var palaist tieši tālrunī, tāpēc ikdienas jautājumi strādā bez savienojuma un bez gājiena uz mākoni.	Модель может работать прямо на телефоне, поэтому повседневные вопросы решаются без подключения и без обращения в облако.
+missionPill2Title	Atvērts kods	Открытый код
+missionPill2Body	Atstarpe gredzenā ir vieta, kur piedalīties. Lietotne, izpildlaiks un šī vietne ir atvērti.	Разрыв в кольце — это место для участия. Приложение, среда выполнения и этот сайт открыты.
+missionPill3Title	Tavi dati paliek tavi	Твои данные остаются твоими
+missionPill3Body	Nekas no tālruņa neaiziet klusām. Attālinātie modeļi ir tavs apzināts lēmums, katrs pakalpojumu sniedzējs atsevišķi.	Ничего не покидает телефон незаметно. Удалённые модели — это твой осознанный выбор для каждого провайдера.
+ringLabel	02 · ATVĒRTAIS GREDZENS	02 · ОТКРЫТОЕ КОЛЬЦО
+ringTitle	Atvērts aplis.	Открытый круг.
+ringIntro	Slēgts gredzens ir robeža. Mūsējais ir atvērts ar nolūku.	Замкнутое кольцо — это граница. Наше открыто намеренно.
+ringGapTitle	Atstarpe nozīmē atvērtu kodu.	Разрыв означает открытый код.
+ringGapBody	Halo tiek veidots atklāti, ar vietu ikvienam, kas vēlas piedalīties.	Halo создаётся открыто, и место найдётся для каждого.
+ringRingTitle	Gredzens ir gaismas halo.	Кольцо — это ореол света.
+ringRingBody	Palīgs, kas klusi ir tev apkārt, nevis ekrāns, kurā jābliež acis.	Помощь, которая тихо окружает тебя, вместо экрана, в который нужно вглядываться.
+ringGradientTitle	Gradients iet no ierīces uz mākoni.	Градиент идёт от устройства к облаку.
+ringGradientBody	Košs un tuvu kodolā, maigāks, virzoties uz āru.	Яркий и близкий в ядре, мягче к краям.
+ringEndsTitle	Noapaļotie gali paliek cilvēciski.	Округлые концы остаются человечными.
+ringEndsBody	Nav asu stūru, nav nekas robotisks.	Ни острых углов, ни чего-то роботизированного.
+ringCaption	Atstarpe atpūšas, ceļo, noslēdzas un sauc tevi.	Разрыв отдыхает, движется, закрывается и зовёт тебя.
+presenceStageLabel	Izvēlētais Halo stāvoklis	Выбранное состояние Halo
+presenceStatesLabel	Halo klātbūtnes stāvokļi	Состояния присутствия Halo
+presenceMotionNote	15 no 21 stāvokļa zīmola komplektā ir animēti. Pārējie seši parādīti kā nekustīgi attēli.	15 из 21 состояния анимированы в графическом комплекте Halo. Остальные шесть показаны статично.
+layersTitle	Viens gredzens, trīs slāņi	Одно кольцо, три слоя
+layersIntro	Klātbūtne nemainās atkarībā no tā, kur rodas atbilde. Konteksts un nosacījumi tiek rādīti kā nozīmītes, tāpēc gredzens vienmēr nozīmē vienu un to pašu.	Присутствие не меняется от того, откуда приходит ответ. Контекст и условия показываются значками, поэтому кольцо всегда означает одно и то же.
+layer1Title	Klātbūtne	Присутствие
+layer1Body	Gredzens un tā simbols. To nosaka tas, ko Halo dara, nevis kurš modelis atbild.	Кольцо и его глиф. Их определяет то, что делает Halo, а не то, какая модель отвечает.
+layer2Title	Konteksts	Контекст
+layer2Body	Kur notiek apstrāde vai ko tā izmanto. Viena nozīmīte, apakšā pa labi.	Где выполняется запрос или что он использует. Один значок, справа внизу.
+layer3Title	Nosacījumi	Условия
+layer3Body	Kaut kas, kas tev jāzina vai jādara. Viena nozīmīte, apakšā pa kreisi, un tā piesaista uzmanību pirms konteksta.	То, что нужно знать или сделать. Один значок, слева внизу, и он важнее контекста.
+layerPresenceChip	Pats gredzens	Само кольцо
+layerPresenceChip2	Ar savu simbolu	С его глифом
+sizesTitle	Viens gredzens, četri izmēri	Одно кольцо, четыре размера
+sizeHero	Lielais	Крупный
+sizeHeroMeta	160–240dp · pilna kustība, spīdums un viļņi	160–240dp · полная анимация, свечение и волны
+sizeStandard	Standarta	Стандартный
+sizeStandardMeta	80–120dp · sākuma ekrāns un Mini Halo	80–120dp · главный экран и Mini Halo
+sizeCompact	Kompaktais	Компактный
+sizeCompactMeta	40–64dp · kartītes, pārklājumi, peldošais	40–64dp · карточки, оверлеи, плавающий
+sizeMicro	Mikro	Микро
+sizeMicroMeta	16–32dp · paziņojumi un sīki indikatori	16–32dp · уведомления и мелкие индикаторы
+ctxOnDevice	Šajā tālrunī	На этом телефоне
+ctxLan	Tavs tīkls	Твоя сеть
+ctxCloud	Mākonis	Облако
+ctxGlasses	Brilles	Очки
+ctxMic	Mikrofons	Микрофон
+ctxCamera	Kamera	Камера
+ctxTool	Rīks	Инструмент
+ctxMemory	Atmiņa	Память
+ctxPhoneAction	Tālruņa darbība	Действие с телефоном
+condApproval	Apstiprinājums	Подтверждение
+condPermission	Atļauja	Разрешение
+condFailure	Kļūme	Сбой
+condBatteryLow	Zems akumulators	Низкий заряд
+condDisconnected	Nav savienojuma	Нет подключения
+condUnavailable	Nav pieejams	Недоступно
+condAutomation	Automatizācija	Автоматизация
+condRetry	Atkārtot	Повтор
+condDownload	Lejupielāde	Загрузка
+stateIdle	Gatavs, kad esi gatavs	Готов, когда готов ты
+stateIdleInfo	Gredzens atpūšas ar atstarpi augšējā labajā pusē. Nekas nenotiek.	Кольцо отдыхает, разрыв — справа вверху. Ничего не выполняется.
+stateListening	Klausos…	Слушаю…
+stateListeningInfo	Gredzens kļūst gaišāks un punkts pulsē tikai tad, kamēr mikrofons ir atvērts.	Кольцо становится ярче, и точка пульсирует только пока открыт микрофон.
+stateCapturingVoice	Dzirdu tevi…	Слышу тебя…
+stateCapturingVoiceInfo	Piecas joslas kustas līdzi balsij, kamēr Halo ieraksta teikto.	Пять полос движутся вместе с голосом, пока Halo записывает сказанное.
+stateCapturingVision	Lūkojos…	Смотрю…
+stateCapturingVisionInfo	Diafragma griežas tikai tad, kamēr kamera uzņem, nevis pirms tam.	Диафрагма вращается только пока камера снимает, и не раньше.
+stateThinking	Domāju	Думаю
+stateThinkingInfo	Atstarpe apceļo pilnu loku, kamēr modelis meklē atbildi.	Разрыв проходит полный круг, пока модель ищет ответ.
+statePlanning	Plānoju soļus	Планирую шаги
+statePlanningInfo	Īss plāns tiek izveidots pirms uzdevuma ar vairākiem soļiem.	Короткий план появляется перед задачей из нескольких шагов.
+stateActing	Strādāju pie tā	Работаю над этим
+stateActingInfo	Trīs segmenti virzās uz priekšu, katrs par vienu uzdevuma posmu.	Три сегмента движутся вперёд, по одному на каждый этап задачи.
+stateActingPhone	Izmantoju tālruni	Использую телефон
+stateActingPhoneInfo	Tālruņa simbols parāda, ka solis notiek pašā ierīcē.	Значок телефона показывает, что шаг выполняется на самом устройстве.
+stateSpeaking	Runāju	Говорю
+stateSpeakingInfo	Viļņi iziet uz āru tikai tad, kamēr patiešām skan audio.	Волны расходятся только тогда, когда действительно звучит аудио.
+stateStreamingText	Rakstu atbildi	Пишу ответ
+stateStreamingTextInfo	Trīs līnijas parādās secīgi atbildei bez audio.	Три строки появляются по очереди для ответа без аудио.
+statePreparingContext	Vācu kontekstu	Собираю контекст
+statePreparingContextInfo	Halo apkopo materiālus, kas vajadzīgi pašreizējam jautājumam.	Halo собирает материалы, нужные для текущего вопроса.
+stateWaiting	Gaidu tevi	Жду тебя
+stateWaitingInfo	Gredzens kļūst blāvāks, un aprikozu punkts elpo, kamēr Halo gaida.	Кольцо тускнеет, и абрикосовая точка дышит, пока Halo ждёт.
+stateApprovalRequired	Vajadzīgs tavs apstiprinājums	Нужно твоё согласие
+stateApprovalRequiredInfo	Aprikozu loks atzīmē soli, kas bez tevis netiks izpildīts.	Абрикосовая дуга отмечает шаг, который не выполнится без тебя.
+stateSuccess	Gatavs	Готово
+stateSuccessInfo	Atstarpe noslēdzas pilnā gredzenā, atzīme parādās un paliek.	Разрыв закрывается в полное кольцо, появляется галочка, и состояние сохраняется.
+stateWarning	Kaut kas pārtrauca	Что-то помешало
+stateWarningInfo	Blakus simbolam parādās aprikozu loks un paliek, līdz to pamanīsi.	Рядом с глифом появляется абрикосовая дуга и остаётся, пока ты не посмотришь.
+stateError	Tas neizdevās	Не получилось
+stateErrorInfo	Ember ir vienīgā kļūdas krāsa, un tā vienmēr nāk kopā ar simbolu.	Ember — единственный цвет ошибки, и он всегда идёт вместе с глифом.
+stateRecovering	Mēģinu vēlreiz…	Пробую снова…
+stateRecoveringInfo	Atkārtošanas bulta var atkārtot vienu soli, nevis jau pabeigtu darbu.	Стрелка повтора может повторить один шаг, а не уже завершённую работу.
+stateModelLoading	Ielādēju modeli	Загружаю модель
+stateModelLoadingInfo	Progresa loks seko reālajam lejupielādes procentam.	Дуга прогресса следует реальному проценту загрузки.
+statePermissionMissing	Vajadzīga atļauja	Нужно разрешение
+statePermissionMissingInfo	Gredzens kļūst blāvāks un rāda slēdzeni, līdz atļauja tiek piešķirta.	Кольцо тускнеет и показывает замок, пока разрешение не выдано.
+stateOffline	Bez savienojuma	Нет сети
+stateOfflineInfo	Punktēts gredzens nozīmē, ka šobrīd nav pieejams savienojums.	Пунктирное кольцо означает, что сейчас нет подключения.
+stateStopped	Apturēts	Остановлено
+stateStoppedInfo	Apturēts gredzens rāda kvadrātu, līdz sāc kaut ko jaunu.	Остановленное кольцо держит квадрат, пока ты не начнёшь что-то новое.
+navAlpha	Alfa	Альфа

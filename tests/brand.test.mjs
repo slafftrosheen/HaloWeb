@@ -4,7 +4,11 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const exists=p=>existsSync(new URL('../'+p,import.meta.url));
-const html=read('index.html'),tokens=read('css/tokens.css'),css=read('css/main.css'),fonts=read('css/fonts.css');
+const html=read('index.html'),tokens=read('css/tokens.css'),css=read('css/main.css'),fonts=read('css/fonts.css'),main=read('js/main.js');
+const ORB_STATES=['idle','listening','capturing_voice','capturing_vision','thinking','planning','acting','acting_phone','speaking','streaming_text','preparing_context','waiting','approval_required','success','warning','error','recovering','model_loading','permission_missing','offline','stopped'];
+const ORB_ANIMATED=['idle','listening','capturing_voice','capturing_vision','thinking','acting','speaking','streaming_text','waiting','approval_required','success','warning','error','offline','stopped'];
+const ORB_STILL_ONLY=['planning','acting_phone','preparing_context','recovering','model_loading','permission_missing'];
+const orbKey=s=>'state'+s.split('_').map(p=>p[0].toUpperCase()+p.slice(1)).join('');
 const mark=read('assets/brand/halo-ring.svg'),wordmark=read('assets/brand/halo-wordmark.svg');
 const bundle=JSON.parse(read('js/translations.js').split('window.HaloTranslations = ')[1].replace(/;\s*$/,''));
 test('palette and typography are canonical',()=>{
@@ -43,10 +47,49 @@ test('Open Graph preview is a lightweight, brand-aligned PNG with correct dimens
  assert.match(html,/halo-og\.png\?v=2/);
 });
 
-test('design state examples are named, static, translated and not represented as live APK behavior',()=>{
- for(const state of ['idle','listening','thinking','approval']) assert.ok(exists('assets/brand/presence/'+state+'.svg'));
- for(const lang of ['en','lv','ru']) for(const key of ['presenceTitle','presenceIntro','presenceNote']) assert.ok(bundle[lang][key]);
- assert.match(html,/presence-story/);
+test('every presence state has kit artwork, a selector and translated copy',()=>{
+ for(const state of ORB_STATES){
+  assert.ok(exists('assets/brand/orb/svg/halo_orb_'+state+'.svg'),state+' still');
+  assert.ok(html.includes('data-orb-state="'+state+'"'),state+' selector');
+  for(const lang of ['en','lv','ru']){
+   assert.ok(bundle[lang][orbKey(state)],lang+' '+state);
+   assert.ok(bundle[lang][orbKey(state)+'Info'],lang+' '+state+' info');
+  }
+ }
+ for(const state of ORB_ANIMATED) assert.ok(exists('assets/brand/orb/lottie/halo_orb_'+state+'.json'),state+' lottie');
+ // The kit animates fifteen states; the other six are stills and must not
+ // pretend to be animated.
+ for(const state of ORB_STILL_ONLY) assert.ok(!exists('assets/brand/orb/lottie/halo_orb_'+state+'.json'),state+' must stay a still');
+ assert.match(html,/id="orb-stage"/);
+ assert.match(html,/data-orb-sequence=/);
+ for(const lang of ['en','lv','ru']) for(const key of ['presenceTitle','presenceIntro','presenceNote','presenceMotionNote','layersTitle','layer2Body','layer3Body','condBatteryLow','ctxOnDevice']) assert.ok(bundle[lang][key],lang+' '+key);
  assert.match(bundle.en.presenceIntro,/not from a running Android session/);
  assert.match(bundle.en.presenceNote,/not a verified app feature/);
+});
+
+test('the Lottie renderer is vendored, licensed and silent under reduced motion',()=>{
+ assert.ok(exists('js/vendor/lottie_light.min.js'));
+ assert.match(read('js/vendor/lottie-web-LICENSE.txt'),/MIT License/);
+ assert.ok(html.indexOf('js/vendor/lottie_light.min.js')<html.indexOf('js/main.js'),'lottie loads before the site script');
+ assert.match(main,/function orbMotionAllowed/);
+ assert.match(main,/!reducedQuery\.matches/);
+ assert.match(main,/orbStaticSource/);
+ assert.match(main,/IntersectionObserver/);
+});
+
+test('the icon library is used from one sprite that defines every referenced symbol',()=>{
+ const sprite=read('assets/brand/icons.svg');
+ assert.match(sprite,/viewBox="0 0 24 24"/);
+ assert.match(sprite,/currentColor/);
+ const refs=[...html.matchAll(/assets\/brand\/icons\.svg#(i-[a-z_0-9]+)/g)].map(m=>m[1]);
+ assert.ok(refs.length>8,'the page should use the in-app icon library');
+ for(const ref of new Set(refs)) assert.ok(sprite.includes('id="'+ref+'"'),'sprite is missing '+ref);
+});
+
+test('every class used by the page is styled',()=>{
+ const used=new Set([...html.matchAll(/class="([^"]+)"/g)].flatMap(m=>m[1].split(/\s+/).filter(Boolean)));
+ const defined=new Set([...(css+tokens).matchAll(/\.([A-Za-z][A-Za-z0-9_-]*)/g)].map(m=>m[1]));
+ const unstyled=[...used].filter(name=>!defined.has(name)).sort();
+ // "product" is only a section anchor hook.
+ assert.deepEqual(unstyled,['product'],'unstyled classes');
 });

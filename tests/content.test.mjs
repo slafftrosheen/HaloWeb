@@ -13,7 +13,8 @@ const read = (path) => readFileSync(join(root, path), 'utf8');
 const html = read('index.html');
 const english = JSON.parse(read('tools/english-catalog.json'));
 const bundle = JSON.parse(read('js/translations.js').split('window.HaloTranslations = ')[1].replace(/;\s*$/, ''));
-const rows = read('tools/translations.tsv').trimEnd().split('\n')
+// Normalise CRLF so the check reads the same on Windows (core.autocrlf) and elsewhere.
+const rows = read('tools/translations.tsv').replace(/\r\n?/g, '\n').trimEnd().split('\n')
   .map((line) => line.split('\t'));
 
 test('the visitor sees the product before technical architecture', () => {

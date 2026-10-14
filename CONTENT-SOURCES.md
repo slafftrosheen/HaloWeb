@@ -87,6 +87,16 @@ Read the supplied 31-page Halo Brand Book and Halo in-app graphics v0.3 ZIP. Com
 
 The new gallery demonstrates four open-ring states based on the supplied v0.3 graphics bundle. It is labelled design-only and does not claim runtime integration. The book's four-screen onboarding concept (PDF p.31) is a design direction; the Android FIRST-RUN-SETUP document describes the implemented nine-step guided setup. The website does not present the mockups as released app behavior.
 
+## 2026-10-14 — brand-book redesign
+
+The owner supplied the full 38-page `BrandBook.pdf` and the complete `BrandAssets/` graphics kit and asked for the site to be rebuilt around them. The design half of that work is recorded in `BRAND-IMPLEMENTATION.md`; this ledger records what the new artwork may and may not claim.
+
+- **State artwork is design specification, not runtime evidence.** Every ring shown in the presence studio and the open-ring chapter is the kit's own file. Copy states that the animation set comes from the Halo graphics kit and not from a running Android session, and that the studio is not a verified app feature. Selecting a state is a preview of the kit, not a report from a device.
+- **Still versus animated is stated, not implied.** Fifteen states have supplied animations and are shown moving; planning, acting_phone, preparing_context, recovering, model_loading and permission_missing have none, so they are shown as stills and the page says six are stills. No state is animated that the kit did not animate.
+- **State names reuse the kit's own strings.** The 21 state names and explanations come from `BrandAssets/copy/halo_strings_en.json` (the app's standard register) and were translated into Latvian and Russian alongside the rest of the page. The kids register was not used on the public site.
+- **Third-party code.** The only vendored dependency is the MIT-licensed lottie-web light build in `js/vendor/`, with its license text committed next to it. No font, script or animation is fetched from a CDN at runtime.
+- **Unchanged product claims.** The redesign changed narrative order and visuals, not maturity wording: the Android/alpha, provider, phone-action, HeyCyan, BuddyBot and acceptance qualifications below still apply, and the previously validated carousel, workspace, checklist, feedback form and no-JavaScript behaviour are intact.
+
 ### New site metadata · 2026-10-14
 
 The English/Latvian/Russian document descriptions now lead with Android product functionality and model choice rather than future platform promises. The build generator, initial HTML meta, and runtime language bundle are synchronized. Android source head reviewed: `303216f33a7f842faa7d0684ccef52afaeca6d0c`; brand-parity status remains source-integrated but not hardware-signed-off.
