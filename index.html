@@ -40,7 +40,7 @@
   <link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-variable.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="stylesheet" href="css/fonts.css?v=1" />
   <link rel="stylesheet" href="css/tokens.css?v=16" />
-  <link rel="stylesheet" href="css/main.css?v=19" />
+  <link rel="stylesheet" href="css/main.css?v=20" />
 
   <script type="application/ld+json">
   {
@@ -213,7 +213,7 @@
             <article><h4><span data-i18n="productKidsTitle">Kids Mode · experimental</span></h4><p><span data-i18n="productKidsBody">A simpler Home layout connects questions and guided learning to the same Study system. Parent controls and device testing still need review; do not treat it as an unsupervised safety boundary.</span></p></article>
           </div>
         </div>
-        <p class="asset-note reveal"><span data-i18n="t075">Real screenshots from the 13 October 2026 Android test build. The app has changed since these captures; some controls and visual details may differ. Switching the website language does not translate text inside screenshots.</span></p>
+        <p class="asset-note reveal"><span data-i18n="t075">Real screenshots of the Android test build from 13 October 2026. The app has changed since then, especially Devices, Settings and Home. These screenshots may not match the latest build. The language selector changes website copy, not text inside images.</span></p>
       </div>
     </section>
 
@@ -347,6 +347,17 @@
           <p><span data-i18n="t114">Credentials use Android Keystore-backed storage rather than ordinary app preferences.</span></p>
         </div>
       </div>
+    
+      <div class="container settings-map reveal" aria-labelledby="settings-map-title">
+        <h3 id="settings-map-title"><span data-i18n="settingsMapTitle">Find the setting you need.</span></h3>
+        <ul>
+          <li><span data-i18n="settingsMapModel">Intelligence — providers, model library and local models</span></li>
+          <li><span data-i18n="settingsMapVoice">Voice — speech input, playback and output devices</span></li>
+          <li><span data-i18n="settingsMapPrivacy">Privacy & Permissions — data choices and Android access</span></li>
+          <li><span data-i18n="settingsMapAdvanced">Advanced — diagnostics and runtime details for testers</span></li>
+        </ul>
+        <p><span data-i18n="settingsMapDisclaimer">The design book depicts the intended organization of Settings. The Android implementation is evolving; exact names and availability can differ by build.</span></p>
+      </div>
     </section>
 
     <section class="section devices" id="devices">
@@ -355,7 +366,7 @@
           <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-glasses"></use></svg><span data-i18n="t132">05 · CONNECTED DEVICES</span></p>
           <h2><span data-i18n="t133">Start on Android. Other devices are optional.</span></h2>
           <p>
-            <span data-i18n="t134">Halo is not a glasses-only assistant. Android is the first host platform. Glasses, headsets and experimental robots may extend interaction where drivers and hands-on tests support them; other host platforms remain in development.</span>
+            <span data-i18n="t134">Android works as a standalone host. Devices shows the phone first, then optional glasses, headsets and experimental hardware. A listed capability is not proof that a device is connected or permitted to act.</span>
           </p>
         </header>
 
@@ -373,7 +384,7 @@
             <article>
               <span><span data-i18n="t139">TEST HARDWARE</span></span>
               <h3><span data-i18n="t140">HeyCyan glasses</span></h3>
-              <p><span data-i18n="t141">HeyCyan glasses are the current Bluetooth and microphone integration target. Some speaker and media paths still need physical testing.</span></p>
+              <p><span data-i18n="t141">HeyCyan glasses are an active Bluetooth and microphone integration target. Pairing and basic device status have dedicated screens; speaker routing and media paths still need hands-on verification.</span></p>
             </article>
             <article>
               <span><span data-i18n="t142">AUDIO ACCESSORIES</span></span>
@@ -388,6 +399,37 @@
           </div>
         </div>
       </div>
+    
+        <div class="phone-abilities reveal" aria-labelledby="phone-abilities-title">
+          <p class="section-label"><span data-i18n="phoneAbilitiesLabel">PHONE ABILITIES</span></p>
+          <h3 id="phone-abilities-title"><span data-i18n="phoneAbilitiesTitle">Seven groups you can inspect.</span></h3>
+          <p><span data-i18n="phoneAbilitiesBody">Devices now groups the phone's reported capabilities into categories. “Available” means the runtime reported a capability; it is not a grant to read private information or control the phone. Permissions and confirmations remain separate.</span></p>
+          <ul class="phone-abilities__list">
+            <li><span data-i18n="phoneHear">Hear and speak</span></li>
+            <li><span data-i18n="phoneScreen">See and use the screen</span></li>
+            <li><span data-i18n="phoneControls">Phone controls</span></li>
+            <li><span data-i18n="phoneApps">Apps and the web</span></li>
+            <li><span data-i18n="phoneCalendar">Calendar and contacts</span></li>
+            <li><span data-i18n="phoneNotifications">Notifications</span></li>
+            <li><span data-i18n="phoneWorkspace">Clipboard and Notebook</span></li>
+          </ul>
+          <h4><span data-i18n="pairingTitle">Pairing happens in steps.</span></h4>
+          <p><span data-i18n="pairingBody">Allow nearby-device access if Android asks, search for powered-on glasses, select the right result, then connect. A successful connection does not automatically start recording, camera capture or audio routing.</span></p>
+        </div>
+        <div class="brand-updates reveal" aria-labelledby="brand-updates-title">
+          <header class="brand-updates__header">
+            <p class="section-label"><span data-i18n="brandUpdateTag">DESIGN REFERENCE · NOT A LIVE BUILD</span></p>
+            <h3 id="brand-updates-title"><span data-i18n="brandUpdateTitle">Devices, permissions and settings — explained clearly.</span></h3>
+            <p><span data-i18n="brandUpdateIntro">The updated design book covers device discovery, pairing and the Intelligence, Voice and Privacy settings. The examples below show intended layouts, not verified captures from a released APK.</span></p>
+          </header>
+          <div class="brand-updates__grid">
+            <figure><img loading="lazy" decoding="async" src="BrandAssets/devices/02-devices.png" alt="Devices and connection state" data-i18n-alt="brandUpdateDevices" /><figcaption><span data-i18n="brandUpdateDevices">Devices and connection state</span></figcaption></figure>
+            <figure><img loading="lazy" decoding="async" src="BrandAssets/devices/03-pairing.png" alt="Find, select, then connect" data-i18n-alt="brandUpdatePairing" /><figcaption><span data-i18n="brandUpdatePairing">Find, select, then connect</span></figcaption></figure>
+            <figure><img loading="lazy" decoding="async" src="BrandAssets/settings/01-settings-intelligence.png" alt="Intelligence and provider setup" data-i18n-alt="brandUpdateSettings" /><figcaption><span data-i18n="brandUpdateSettings">Intelligence and provider setup</span></figcaption></figure>
+            <figure><img loading="lazy" decoding="async" src="BrandAssets/settings/02-voice-privacy-advanced.png" alt="Voice, privacy and permissions" data-i18n-alt="brandUpdatePrivacy" /><figcaption><span data-i18n="brandUpdatePrivacy">Voice, privacy and permissions</span></figcaption></figure>
+          </div>
+          <p class="brand-updates__foot"><span data-i18n="brandUpdateFoot">Artwork from the supplied Brand Book, pages 42–45; screenshots elsewhere on this page are from an earlier Android test build. These two sources are intentionally labeled differently.</span></p>
+        </div>
     </section>
 
     <section class="section status" id="status">
@@ -396,7 +438,7 @@
           <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-runtime_status"></use></svg><span data-i18n="t169">06 · DEVELOPMENT STATUS</span></p>
           <h2><span data-i18n="t170">A real alpha, not a finished product.</span></h2>
           <p>
-            <span data-i18n="t171">Halo contains implemented Android features and automated tests, but compile checks, unit tests and physical device acceptance are different things. Recent branding, Kids Mode, Canvas and local-model work have not all received a single full device acceptance pass. Review GitHub Releases and known limitations before testing.</span>
+            <span data-i18n="t171">Android includes real implementations and automated tests, but compile checks, unit tests and physical device acceptance are different things. Recent Devices, pairing, Settings, brand presence, Kids Mode and model workflows have not all passed comprehensive testing on physical devices. Check GitHub Releases for supported builds and known limits.</span>
           </p>
         </header>
 
@@ -569,7 +611,7 @@
             <div class="alpha-progress" aria-live="polite" aria-atomic="true"><span id="alpha-progress-label"><span data-i18n="t232">0 of 7 tried</span></span><div class="alpha-progress__track"><span id="alpha-progress-fill"></span></div><button type="button" class="alpha-reset" id="alpha-reset"><span data-i18n="t233">Reset</span></button></div>
           </div>
           <ol class="alpha-checklist">
-            <li><label><input type="checkbox" data-alpha-step="setup" /><span class="alpha-checklist__body"><strong><span data-i18n="t234">Get oriented</span> <span><span data-i18n="t235">01 · SETUP</span></span></strong><small><span data-i18n="t236">Open Halo, find Home, Notebook, Devices and Settings. Configure one usable AI model/provider. If no APK is published, skip app tests for now.</span></small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="setup" /><span class="alpha-checklist__body"><strong><span data-i18n="t234">Get oriented</span> <span><span data-i18n="t235">01 · SETUP</span></span></strong><small><span data-i18n="t236">Open Home, Activity, Notebook, Devices and Settings. Follow guided setup, choose a provider or test a local model, and note what you could not complete. No APK available? Skip app-only steps.</span></small></span></label></li>
             <li><label><input type="checkbox" data-alpha-step="home" /><span class="alpha-checklist__body"><strong><span data-i18n="t237">Ask a basic question</span> <span><span data-i18n="t238">02 · HOME</span></span></strong><small><span data-i18n="t239">Try: “Explain photosynthesis in two simple sentences.” Look for a clear answer and honest processing or failure status.</span></small></span></label></li>
             <li><label><input type="checkbox" data-alpha-step="study-pdf" /><span class="alpha-checklist__body"><strong><span data-i18n="t240">Read from a real PDF</span> <span><span data-i18n="t241">03 · STUDY</span></span></strong><small><span data-i18n="t242">Start a lesson using the science PDF. Ask which days the plants were watered and how much each received altogether. Expected: days 1, 3, 5, 7, 9, 11;</span> <b><span data-i18n="t243">300 mL per pot</span></b>.</small></span></label></li>
             <li><label><input type="checkbox" data-alpha-step="study-image" /><span class="alpha-checklist__body"><strong><span data-i18n="t244">Understand the image</span> <span><span data-i18n="t245">04 · STUDY / VISION</span></span></strong><small><span data-i18n="t246">Use the basil PNG. Ask which pot is tallest and by how much compared with A. Expected:</span> <b><span data-i18n="t247">C at 14 cm, 8 cm taller than A</span></b><span data-i18n="t248">. If image analysis is unavailable, Halo should say so.</span></small></span></label></li>
@@ -652,7 +694,7 @@ Screenshot (redact private data):</pre>
           <article>
             <span class="pillar-icon"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-code"></use></svg></span>
             <h3><span data-i18n="missionPill2Title">Open source</span></h3>
-            <p><span data-i18n="missionPill2Body">The gap in the ring is room to contribute. The app, the runtime and this website are all in the open.</span></p>
+            <p><span data-i18n="missionPill2Body">The opening in the ring stands for an open project. The Android app, runtime and website can be examined and improved by contributors.</span></p>
           </article>
           <article>
             <span class="pillar-icon"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-privacy"></use></svg></span>
@@ -679,8 +721,8 @@ Screenshot (redact private data):</pre>
               <dd><span data-i18n="ringRingBody">A quiet visual signal for assistance, not another screen that demands attention.</span></dd>
             </div>
             <div>
-              <dt><span data-i18n="ringGradientTitle">A gradient from near to far.</span></dt>
-              <dd><span data-i18n="ringGradientBody">Mint at the core, softer at the edge. It is a brand symbol, not an indicator that data was sent to the cloud.</span></dd>
+              <dt><span data-i18n="ringGradientTitle">The gradient suggests near to far.</span></dt>
+              <dd><span data-i18n="ringGradientBody">It represents the journey from the device towards optional cloud computing. It is symbolic, not a live indicator of where a specific request was sent.</span></dd>
             </div>
             <div>
               <dt><span data-i18n="ringEndsTitle">Rounded ends, a softer feel.</span></dt>
@@ -878,7 +920,7 @@ Screenshot (redact private data):</pre>
   </footer>
 
   <script src="js/vendor/lottie_light.min.js" defer></script>
-  <script src="js/translations.js?v=9" defer></script>
+  <script src="js/translations.js?v=10" defer></script>
   <script src="js/main.js?v=15" defer></script>
 </body>
 </html>

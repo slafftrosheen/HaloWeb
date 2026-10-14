@@ -63,8 +63,8 @@ test('every presence state has kit artwork, a selector and translated copy',()=>
  assert.match(html,/id="orb-stage"/);
  assert.match(html,/data-orb-sequence=/);
  for(const lang of ['en','lv','ru']) for(const key of ['presenceTitle','presenceIntro','presenceNote','presenceMotionNote','layersTitle','layer2Body','layer3Body','condBatteryLow','ctxOnDevice']) assert.ok(bundle[lang][key],lang+' '+key);
- assert.match(bundle.en.presenceIntro,/not from a running Android session/);
- assert.match(bundle.en.presenceNote,/not a verified app feature/);
+ assert.match(bundle.en.presenceIntro,/not a live phone session/);
+ assert.match(bundle.en.presenceNote,/device verification/);
 });
 
 test('the Lottie renderer is vendored, licensed and silent under reduced motion',()=>{

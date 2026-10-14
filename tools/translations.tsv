@@ -23,7 +23,7 @@ t021	Skatīt Halo iespējas	Посмотреть возможности
 t022	Skatīt pirmkodu ↗	Посмотреть код ↗
 t023	VISPIRMS TĀLRUNIS	СНАЧАЛА ТЕЛЕФОН
 t024	Brilles nav nepieciešamas	Очки не нужны
-t025	IZVĒLIES SAVU MI	ВЫБИРАЙ ИИ
+t025	IZVĒLIES SAVU MI	ВЫБЕРИТЕ ИИ
 t026	Ierīcē, lokālajā tīklā vai mākonī	На устройстве, в сети или облаке
 t027	TĀLRUŅA DARBĪBAS	ДЕЙСТВИЯ НА ТЕЛЕФОНЕ
 t028	Iestatījumi, lietotnes un ekrāns	Настройки, приложения и экран
@@ -43,18 +43,18 @@ t041	Ko var izmēģināt Android alfa versijā.	Что можно попробо
 t042	Home ir pieprasījumiem, bet Activity rāda gaidošos apstiprinājumus un rezultātus. Notebook glabā piezīmes, failus un Canvas; Study ir atsevišķs mācību ekrāns. Devices un Settings pārvalda ierīces, MI modeļus, balsi un atļaujas. Attēlos redzama agrāka testa versija; pašreizējās lietotnes izskats var atšķirties.	Home — для запросов, Activity показывает ожидающие подтверждения действия и результаты. Notebook хранит заметки и файлы, включая Canvas, а Study — отдельный экран для обучения. Devices и Settings отвечают за устройства, модели ИИ, голос и разрешения. Здесь показана более ранняя тестовая сборка: актуальный интерфейс может отличаться.
 t043	Halo sākuma ekrāns.	Главный экран Halo.
 t044	Sākums	Главная
-t045	Jautā ar balsi vai tekstu, seko uzdevuma statusam, turpini sarunu un pārvaldi kontekstu.	Задавай вопросы голосом или текстом, следи за состоянием задачи, продолжай разговор и управляй контекстом.
+t045	Jautā ar balsi vai tekstu, seko uzdevuma statusam, turpini sarunu un pārvaldi kontekstu.	Задавайте вопросы голосом или текстом, следите за состоянием задачи, продолжайте беседу и управляйте контекстом.
 t046	Halo Piezīmju grāmatas ekrāns.	Экран Блокнота Halo.
 t047	Piezīmju grāmata	Блокнот
 t048	Piezīmes, faili, sarunas, kolekcijas, izlase, Canvas un tevis izvēlēts darba konteksts.	Заметки, файлы, разговоры, коллекции, избранное, Canvas и выбранный тобой рабочий контекст.
 t049	Halo Mācību ekrāns.	Экран Учёбы Halo.
 t050	Mācības	Учёба
-t051	Mācības ar taviem materiāliem, atbildēm, atgriezenisko saiti, atkārtošanas vēsturi un balss lasījumu.	Обучение по твоим материалам: ответы, обратная связь, история повторений и озвучивание.
+t051	Mācības ar taviem materiāliem, atbildēm, atgriezenisko saiti, atkārtošanas vēsturi un balss lasījumu.	Обучение по вашим материалам: ответы, обратная связь, история повторений и озвучивание.
 t052	Halo Iestatījumi ar intelekta, balss, valodas un izskata vadīklām.	Настройки Halo: интеллект, голос, язык и оформление.
 t053	Iestatījumi	Настройки
-t054	Izvēlies, kā Halo atbild, iestati valodu un izskatu, pārvaldi balsi un prasmes.	Выбирай, как отвечает Halo, настрой язык и оформление, управляй голосом и навыками.
+t054	Izvēlies, kā Halo atbild, iestati valodu un izskatu, pārvaldi balsi un prasmes.	Выбирайте, как отвечает Halo, настраивайте язык и оформление, управляйте голосом и навыками.
 t055	Halo Ierīču ekrāns.	Экран Устройств Halo.
-t056	Tavs tālrunis, saglabātās ierīces, pieejamās iespējas, ierīču stāvoklis un savienojumi.	Твой телефон, сохранённые устройства, доступные возможности, состояние оборудования и соединений.
+t056	Tavs tālrunis, saglabātās ierīces, pieejamās iespējas, ierīču stāvoklis un savienojumi.	Ваш телефон, сохранённые устройства, доступные возможности, состояние оборудования и подключений.
 t057	Halo Darbību ekrāns Android tālrunī.	Экран Действий Halo на Android-телефоне.
 t058	Darbības	Действия
 t059	Pārskati pieprasījumus, apstiprinājumus un reģistrētos rezultātus.	Просматривай запросы, подтверждения и записанные результаты.
@@ -66,18 +66,18 @@ t064	Darba vides rīki	Инструменты рабочего простран�
 t065	Atver Prasmes, Canvas, Atmiņu un Mācības no Piezīmju grāmatas.	Открывай Навыки, Canvas, Память и Учёбу из Блокнота.
 t066	Halo Prasmju ekrāns Android tālrunī.	Экран Навыков Halo на Android-телефоне.
 t067	Prasmes	Навыки
-t068	Pārvaldi pieejamās darbības un izvēlies modeļus savām prasmēm.	Управляй доступными действиями и выбирай модели для навыков.
+t068	Pārvaldi pieejamās darbības un izvēlies modeļus savām prasmēm.	Управляйте доступными действиями и выбирайте модели для навыков.
 t069	Halo piekļuves un iestatīšanas sadaļa Android tālrunī.	Раздел доступа и настройки Halo на Android-телефоне.
 t070	Piekļuve un iestatīšana	Доступ и настройка
 t071	Pārskati atļaujas, pirmreizējo iestatīšanu, krātuvi un dublējumus. Pieejamās iespējas ir atkarīgas no versijas.	Проверяйте разрешения, первоначальную настройку, хранилище и резервные копии. Доступные параметры зависят от сборки.
 t072	Halo Atmiņas ekrāns Android tālrunī.	Экран Памяти Halo на Android-телефоне.
 t073	Atmiņa	Память
 t074	Pārskati atmiņai piedāvāto informāciju un apstiprini, ko saglabāt. Piezīmes izveidošana automātiski neveido atmiņas ierakstu.	Просматривайте предложенные воспоминания и подтверждайте, что сохранить. Создание заметки не добавляет её в память автоматически.
-t075	Īsti ekrānuzņēmumi no 2026. gada 13. oktobra Android testa versijas. Kopš tā laika lietotne ir mainījusies, tāpēc daži elementi var atšķirties. Vietnes valodas maiņa netulko tekstu ekrānuzņēmumos.	Реальные скриншоты тестовой сборки Android от 13 октября 2026 года. С тех пор приложение изменилось, поэтому часть элементов может выглядеть иначе. Переключение языка сайта не переводит текст на скриншотах.
+t075	Īsti 2026. gada 13. oktobra Android testa versijas ekrānuzņēmumi. Kopš tā laika īpaši mainījušies Devices, Settings un Home. Attēli var neatbilst jaunākajai versijai. Valodas izvēle tulko vietnes tekstu, nevis attēlus.	Реальные скриншоты тестовой сборки Android от 13 октября 2026 года. С тех пор особенно изменились Devices, Settings и Home. Изображения могут не совпадать с актуальной сборкой. Переключатель языка переводит текст сайта, но не сами изображения.
 t076	02 · TĀLRUŅA DARBĪBAS	02 · ДЕЙСТВИЯ НА ТЕЛЕФОНЕ
 t077	Lūdz Halo palīdzēt ar tālruni.	Попросите Halo помочь с телефоном.
 t078	Iestati taimeri, atver lietotni vai maini iestatījumu. Ar atļauju un apstiprinājumu Halo var izmantot arī redzamus ekrāna elementus. Vairāku soļu plūsmas un nodošana citām lietotnēm vēl tiek testēta.	Поставьте таймер, откройте приложение или измените настройку. С нужными разрешениями и подтверждением Halo может взаимодействовать с видимыми элементами экрана. Многошаговые сценарии и переходы в сторонние приложения ещё тестируются.
-t079	Pārvaldi tālruni	Управляй телефоном
+t079	Pārvaldi tālruni	Управление телефоном
 t080	Iestati modinātājus un taimerus. Maini skaļumu, zvana režīmu, spilgtumu un zibspuldzi. Atver iestatījumus un lietotnes.	Ставь будильники и таймеры. Меняй громкость, режим звонка, яркость и состояние фонарика. Открывай настройки и приложения.
 t081	Piemēri: «Iestati taimeri uz 12 minūtēm.» · «Ieslēdz tālrunim vibrācijas režīmu.»	Примеры: «Поставь таймер на 12 минут». · «Переведи телефон в режим вибрации».
 t082	Sazinies un atrodi ceļu	Общайся и находи дорогу
@@ -97,9 +97,9 @@ t095	Izvēlies, kur Halo domā.	Выбирайте, где думает Halo.
 t096	Lejupielādē un testē modeli tālrunī, pieslēdz serveri savā tīklā vai konfigurē mākoņpakalpojumu. Attālinātiem pieprasījumiem var tikt nosūtīts atbilstošs konteksts. Pēc kļūmes Halo nedrīkst klusējot nodot datus citam pakalpojumam.	Скачайте и проверьте модель на телефоне, подключите сервер в своей сети или настройте облачного провайдера. Для удалённого запроса соответствующий контекст может передаваться выбранному провайдеру. После сбоя Halo не должен незаметно отправлять данные другому сервису.
 t097	TĀLRUNĪ	НА ТЕЛЕФОНЕ
 t098	Settings → Intelligence → On device vari atrast LiteRT modeļus, lejupielādēt tos, pārbaudīt atbildi un pats izvēlēties modeli atbalstītajām lomām. Paredzamā saderība vēl negarantē, ka modelis veiksmīgi darbosies tavā tālrunī.	В Settings → Intelligence → On device можно найти совместимые модели LiteRT, скачать их, проверить ответ и вручную назначить модель для поддерживаемых задач. Предварительная оценка совместимости не гарантирует, что модель запустится на вашем телефоне.
-t099	TAVĀ LOKĀLAJĀ TĪKLĀ	В ТВОЕЙ ЛОКАЛЬНОЙ СЕТИ
+t099	TAVĀ LOKĀLAJĀ TĪKLĀ	В ВАШЕЙ ЛОКАЛЬНОЙ СЕТИ
 t100	Lokāls modeļa serveris	Локальный сервер модели
-t101	Pieslēdz Ollama, OpenCode Companion vai saderīgu galapunktu savā datorā.	Подключи Ollama, OpenCode Companion или совместимый сервер на своём компьютере.
+t101	Pievieno Ollama, OpenCode Companion vai saderīgu serveri datorā, kuru pats pārvaldi.	Подключите Ollama, OpenCode Companion или совместимый сервер на своём компьютере.
 t102	MĀKONIS	ОБЛАКО
 t103	MI mākoņpakalpojumi pēc izvēles	Облачный ИИ по желанию
 t104	Iestati OpenRouter, Gemini, OpenAI vai citu atbalstītu pakalpojumu. Katram ir savi iestatījumi, izmaksas un ierobežojumi.	Настрой OpenRouter, Gemini, OpenAI или другого поддерживаемого провайдера. У каждого свои настройки, стоимость и ограничения.
@@ -109,12 +109,12 @@ t107	Gemini var izmantot Google OAuth.	Gemini поддерживает Google OA
 t108	Lietotne atbalsta Google autorizāciju ar Cloud projektu un arī pieslēgšanos ar API atslēgu.	Приложение поддерживает авторизацию Google с проектом Cloud и подключение через API-ключ.
 t109	Dažiem pakalpojumu sniedzējiem ir bezmaksas iespējas.	У некоторых провайдеров есть бесплатные тарифы.
 t110	Bezmaksas piekļuve, modeļu pieejamība un ierobežojumi ir atkarīgi no pakalpojuma sniedzēja un var mainīties.	Бесплатный доступ, наличие моделей и лимиты зависят от провайдера и могут меняться.
-t111	Tava izvēle tiek ievērota.	Твой выбор соблюдается.
+t111	Tava izvēle tiek ievērota.	Ваш выбор сохраняется.
 t112	Izvēlētā pakalpojuma sniedzēja kļūme nedod atļauju nemanāmi nosūtīt privāto kontekstu citam sniedzējam.	Сбой выбранного провайдера не даёт разрешения незаметно передать личный контекст другому.
 t113	Piekļuves dati ir aizsargāti.	Учётные данные защищены.
 t114	Piekļuves dati tiek glabāti ar Android Keystore aizsargātā krātuvē, nevis parastajos lietotnes iestatījumos.	Учётные данные хранятся в защищённом хранилище с использованием Android Keystore, а не в обычных настройках приложения.
 t115	03 · PIEZĪMES UN MĀCĪBAS	03 · ЗАМЕТКИ И ОБУЧЕНИЕ
-t116	Skaidra darba vide tavam MI.	Понятное рабочее пространство для твоего ИИ.
+t116	Pārskatāma darba vide tavam MI.	Понятное рабочее пространство для вашего ИИ.
 t117	Halo glabā tavu darbu Piezīmju grāmatā. Tu izvēlies, ko pievienot darba kontekstam. Mācības pārvērš izvēlēto materiālu saglabājamā mācību sesijā, lai viss nepaliktu tikai sarunu vēsturē.	Halo хранит твою работу в Блокноте. Ты выбираешь, что включить в рабочий контекст. Учёба превращает выбранный материал в сохраняемую учебную сессию, чтобы всё не оставалось только в истории чата.
 t118	Halo Piezīmju grāmatas ekrānuzņēmums.	Скриншот Блокнота Halo.
 t119	Halo Mācību ekrānuzņēmums.	Скриншот Учёбы Halo.
@@ -128,18 +128,18 @@ t126	Notebook glabā piezīmes, failus, sarunas un kolekcijas. Canvas kodā ir a
 t127	VADĪTAS MĀCĪBAS	ОБУЧЕНИЕ С ПОДДЕРЖКОЙ
 t128	Study izmanto izvēlētus materiālus nodarbībām, skaidrojumiem un uzdevumiem, saglabā atbildes un palīdz atkārtot apgūto. Nolasīšana, attēlu saprašana un MI atgriezeniskā saite ir atkarīga no konfigurētajām iespējām.	Study создаёт занятия по выбранным материалам, даёт объяснения и задания, сохраняет ответы и помогает повторять пройденное. Озвучивание, понимание изображений и обратная связь модели зависят от настроенных возможностей.
 t129	ATMIŅA AR ZINĀMU IZCELSMI	ПАМЯТЬ С ИЗВЕСТНЫМ ИСТОЧНИКОМ
-t130	Saglabā atmiņā apzināti	Сохраняй в памяти осознанно
+t130	Saglabā atmiņā apzināti	Сохраняйте в память осознанно
 t131	Piezīmju grāmata un palīga atmiņa ir atšķirīgas lietas. Saglabāšana atmiņā ir atsevišķa darbība; piezīmes izveidošana to automātiski nepievieno atmiņai.	Блокнот и память помощника — разные вещи. Сохранение в памяти — отдельное действие; создание заметки не добавляет её в память автоматически.
 t132	05 · PIEVIENOTĀS IERĪCES	05 · ПОДКЛЮЧЁННЫЕ УСТРОЙСТВА
 t133	Sāc ar Android. Citas ierīces nav obligātas.	Начните с Android. Другие устройства необязательны.
-t134	Halo nav palīgs tikai brillēm. Android ir pirmā platforma. Brilles, austiņas un eksperimentāli roboti var papildināt iespējas, ja to atbalsta draiveri un īsti testi; citas platformas vēl tiek izstrādātas.	Halo — не помощник только для очков. Android — первая платформа. Очки, наушники и экспериментальные роботы расширяют возможности там, где есть поддержка драйверов и проверка на устройстве. Другие платформы ещё разрабатываются.
+t134	Android darbojas patstāvīgi. Devices vispirms rāda tālruni, pēc tam brilles, austiņas un eksperimentālās ierīces. Iespējas parādīšana vēl nenozīmē, ka ierīce ir savienota vai darbība ir atļauta.	Android работает самостоятельно. Devices сначала показывает телефон, затем дополнительные очки, гарнитуры и экспериментальное оборудование. Наличие возможности в списке не доказывает, что устройство подключено или получило разрешение на действие.
 t135	Halo Ierīču ekrānuzņēmums.	Скриншот Устройств Halo.
 t136	PIRMĀ PLATFORMA	ПЕРВАЯ ПЛАТФОРМА
 t137	Android tālrunis	Android-телефон
 t138	Android lietotnē ir Home, Activity, Notebook, modeļu un balss iestatījumi, atbalstīti tālruņa rīki un Study. Jaunajiem ekrāniem un no ierīces atkarīgajām funkcijām vēl vajadzīga pārbaude praksē.	В Android-приложении есть Home, Activity, Notebook, настройки моделей и голоса, поддерживаемые действия с телефоном и Study. Новые экраны и функции, зависящие от устройства, ещё требуют практической проверки.
 t139	TESTĒŠANAS APARATŪRA	ТЕСТОВОЕ УСТРОЙСТВО
 t140	HeyCyan brilles	Очки HeyCyan
-t141	HeyCyan brilles ir pašreizējā Bluetooth un mikrofona integrācijas platforma. Daži skaļruņa un multivides scenāriji vēl jāpārbauda ar reālu aparatūru.	Очки HeyCyan — текущее тестовое устройство для Bluetooth и микрофона. Некоторые сценарии вывода звука и передачи медиа ещё требуют проверки на оборудовании.
+t141	HeyCyan brilles ir aktīvs Bluetooth un mikrofona integrācijas mērķis. Savienošanai un ierīces stāvoklim ir atsevišķi ekrāni; skaņas maršrutēšana un multivide vēl jāpārbauda praksē.	Очки HeyCyan используются для интеграции Bluetooth и микрофона. Для подключения и состояния устройства есть отдельные экраны; маршрутизация звука и работа с медиа ещё требуют проверки на оборудовании.
 t142	AUDIO PIEDERUMI	АУДИОАКСЕССУАРЫ
 t143	Austiņas un brīvroku ierīces	Наушники и гарнитуры
 t144	Atbalstītās Android austiņas var nodrošināt mikrofonu un skaņas izvadi atkarībā no maršrutēšanas un atļaujām.	Совместимые Android-гарнитуры могут обеспечивать ввод и вывод звука с учётом маршрутизации и разрешений.
@@ -162,14 +162,14 @@ t160	IERĪČU IESPĒJAS	ВОЗМОЖНОСТИ УСТРОЙСТВ
 t161	Dažāda aparatūra, kopīgi rīki.	Разные устройства, общие инструменты.
 t162	Pievienotās ierīces paziņo savas iespējas. Halo neuzskata, ka visām ir vienādi sensori vai vadības elementi.	Подключённые устройства сообщают о своих возможностях. Halo не предполагает, что у всех одинаковые датчики или органы управления.
 t163	MODEĻU MARŠRUTĒŠANA	МАРШРУТИЗАЦИЯ МОДЕЛЕЙ
-t164	Izvēlies, kad dati atstāj tālruni.	Решай, когда данные уходят с телефона.
+t164	Izvēlies, kad dati atstāj tālruni.	Решайте, когда данные покидают телефон.
 t165	Izmanto lokālu modeli vai skaidri izvēlies tīkla pakalpojumu. Attālinātiem pieprasījumiem piemēro šī pakalpojuma datu apstrādes noteikumus.	Используй локальную модель или явно выбери сетевого провайдера. При удалённых запросах действуют правила обработки данных выбранного сервиса.
 t166	DARBĪBU VĒSTURE	ИСТОРИЯ ДЕЙСТВИЙ
 t167	Redzi, kas izdevās un kas ne.	Видно, что выполнено, а что нет.
 t168	Halo reģistrē rīku izsaukumus un rezultātus, lai varētu pārbaudīt pārtrauktus uzdevumus un neatkārtotu jau izpildītas darbības.	Halo записывает вызовы инструментов и результаты, чтобы можно было проверить прерванную работу и не повторять вслепую уже выполненные действия.
 t169	06 · IZSTRĀDES STATUSS	06 · СТАТУС РАЗРАБОТКИ
 t170	Īsta alfa versija, nevis gatavs produkts.	Рабочая альфа-версия, а не готовый продукт.
-t171	Halo Android kodā ir ieviestas funkcijas un automātiskie testi, taču kompilācija, vienību testi un pārbaude uz reālas ierīces ir atšķirīgas lietas. Jaunākās zīmola izmaiņas, bērnu režīms, Canvas un lokālo modeļu darbs vēl nav pilnībā pārbaudīts vienotā ierīces testā. Pirms testēšanas apskati GitHub Releases un zināmos ierobežojumus.	В Android уже реализованы функции и автоматические тесты, но компиляция, модульные тесты и проверка на реальном устройстве — разные вещи. Недавние изменения дизайна, детский режим, Canvas и работа с локальными моделями пока не прошли единое полное испытание на устройстве. Перед тестированием изучите GitHub Releases и известные ограничения.
+t171	Android kodā ir īstas funkcijas un automātiskie testi, taču kompilācija, vienību testi un pārbaude uz īstām ierīcēm ir atšķirīgas lietas. Jaunās Devices, savienošanas, Settings, stāvokļu animāciju, bērnu režīma un modeļu plūsmas vēl nav pilnībā pārbaudītas uz reālām ierīcēm. Skati GitHub Releases un zināmos ierobežojumus.	В Android есть реализованные функции и автоматические тесты, но успешная сборка, модульные тесты и испытания на реальном устройстве — разные вещи. Новые экраны Devices, подключение, Settings, анимации, детский режим и работа с моделями ещё не прошли полную проверку на устройствах. Изучите GitHub Releases и известные ограничения.
 t172	PĀRBAUDĪTS UZ IERĪCĒM	ПРОВЕРЕНО НА УСТРОЙСТВАХ
 t173	Lokāls modelis ir atbildējis tālrunī.	Локальная модель отвечала на телефоне.
 t174	Neliels Qwen modelis ir sniedzis lokālas atbildes Android testa ierīcē. Arī HeyCyan mikrofona uztveršanai ir reālas aparatūras testu pierādījumi.	Небольшая модель Qwen отвечала локально на тестовом Android-устройстве. Захват звука с микрофона HeyCyan тоже подтверждён испытаниями на оборудовании.
@@ -194,8 +194,8 @@ t192	Android laidienus ↗	выпуски для Android ↗
 t193	. Ja APK vēl nav publicēts, lietotne šajā programmā pagaidām nav pieejama.	. Если APK ещё не опубликован, приложение пока недоступно в рамках этой программы.
 t194	Lejupielādē testēšanas materiālus	Скачай тестовые материалы
 t195	Īss lasāmais materiāls, novērojumu attēls un ātrs ceļvedis pa lietotni.	Короткий текст, изображение с наблюдениями и краткий маршрут по приложению.
-t196	Izmēģini īstus uzdevumus	Попробуй реальные задачи
-t197	Izmanto kontrolsarakstu, izlaid ierīces, kuru tev nav, un pieraksti, kas patiesībā notiek.	Используй список шагов, пропускай оборудование, которого у тебя нет, и записывай фактический результат.
+t196	Izmēģini īstus uzdevumus	Попробуйте реальные задачи
+t197	Izmanto kontrolsarakstu, izlaid ierīces, kuru tev nav, un pieraksti, kas patiesībā notiek.	Следуйте списку шагов, пропускайте оборудование, которого у вас нет, и записывайте фактический результат.
 t198	Dalies ar novērojumu	Поделись наблюдением
 t199	Ziņo gan par neskaidriem brīžiem, gan kļūmēm. Abi palīdz uzlabot Halo.	Сообщай и о непонятных моментах, и о поломках. И то и другое помогает улучшать Halo.
 t200	BEZMAKSAS PIEMĒRU FAILI	БЕСПЛАТНЫЕ ТЕСТОВЫЕ ФАЙЛЫ
@@ -234,10 +234,10 @@ t232	Izmēģināts: 0 no 7	Попробовано: 0 из 7
 t233	Notīrīt atzīmes	Сбросить отметки
 t234	Iepazīsti lietotni	Осмотрись в приложении
 t235	01 · IESTATĪŠANA	01 · НАСТРОЙКА
-t236	Atver Halo, atrodi Sākumu, Piezīmju grāmatu, Ierīces un Iestatījumus. Konfigurē vienu lietojamu MI modeli vai pakalpojuma sniedzēju. Ja APK nav publicēts, pagaidām izlaid lietotnes pārbaudes.	Открой Halo, найди Главную, Блокнот, Устройства и Настройки. Настрой одну доступную модель ИИ или провайдера. Если APK не опубликован, пока пропусти проверки приложения.
+t236	Atver Home, Activity, Notebook, Devices un Settings. Izpildi pirmreizējo iestatīšanu, izvēlies pakalpojumu vai pārbaudi lokālu modeli un pieraksti neizdevušos soļus. Ja APK nav pieejama, lietotnes soļus vari izlaist.	Откройте Home, Activity, Notebook, Devices и Settings. Пройдите мастер настройки, выберите провайдера или проверьте локальную модель и отметьте шаги, которые не удалось выполнить. Если APK нет, пропустите проверки приложения.
 t237	Uzdod vienkāršu jautājumu	Задай простой вопрос
 t238	02 · SĀKUMS	02 · ГЛАВНАЯ
-t239	Izmēģini: «Izskaidro fotosintēzi divos vienkāršos teikumos.» Sagaidi skaidru atbildi un precīzu apstrādes vai kļūmes statusu.	Попробуй: «Объясни фотосинтез двумя простыми предложениями». Оцени понятность ответа и точность статуса обработки или ошибки.
+t239	Izmēģini: «Izskaidro fotosintēzi divos vienkāršos teikumos.» Sagaidi skaidru atbildi un precīzu apstrādes vai kļūmes statusu.	Попросите: «Объясните фотосинтез двумя простыми предложениями». Проверьте понятность ответа и корректность статуса выполнения или ошибки.
 t240	Izmanto īstu PDF	Используй настоящий PDF
 t241	03 · MĀCĪBAS	03 · УЧЁБА
 t242	Sāc nodarbību ar dabaszinātņu PDF. Pajautā, kurās dienās augus laistīja un cik daudz ūdens katrs saņēma kopā. Sagaidāmais: 1., 3., 5., 7., 9. un 11. dienā;	Начни занятие с научным PDF. Спроси, в какие дни поливали растения и сколько воды каждое получило всего. Ожидается: дни 1, 3, 5, 7, 9, 11;
@@ -249,13 +249,13 @@ t247	C ir 14 cm augsts, par 8 cm augstāks nekā A	C — 14 см, на 8 см в
 t248	. Ja attēlu analīze nav pieejama, Halo tas jāpasaka.	. Если анализ изображений недоступен, Halo должен сообщить об этом.
 t249	Mācies, ne tikai saņem atbildes	Учись, а не только получай ответы
 t250	05 · MĀCĪBAS / VINGRINĀŠANĀS	05 · УЧЁБА / ПРАКТИКА
-t251	Saki: «Dod vienu norādi, nevis atbildi.» Mēģini atbildēt, lūdz citu skaidrojumu un izveido vingrinājumu kartīšu melnrakstu. Tām nevajadzētu nonākt atkārtošanas rindā bez tavas izvēles.	Скажи: «Дай одну подсказку, а не ответ». Попробуй ответить, попроси другое объяснение, затем создай черновики карточек для практики. Они не должны попадать в очередь повторения без твоего выбора.
+t251	Saki: «Dod vienu norādi, nevis atbildi.» Mēģini atbildēt, lūdz citu skaidrojumu un izveido vingrinājumu kartīšu melnrakstu. Tām nevajadzētu nonākt atkārtošanas rindā bez tavas izvēles.	Скажите: «Дайте одну подсказку, но не ответ». Попробуйте ответить, попросите другое объяснение, затем создайте черновики карточек для практики. Они не должны попадать в очередь повторения без вашего выбора.
 t252	Saglabā un atrodi saturu	Сохрани и найди материал
 t253	06 · PIEZĪMJU GRĀMATA / CANVAS	06 · БЛОКНОТ / CANVAS
-t254	Importē vai ielīmē piezīmes piemēru. Rediģē to, atrodi vēlreiz un mēģini pievienot saturu Canvas, ja tas ir pieejams. Sadaļā Darbības pārbaudi, vai ieraksts precīzi atspoguļo paveikto.	Импортируй или вставь пример заметки. Отредактируй её, найди снова и попробуй добавить содержимое в Canvas, если он доступен. В разделе Действия проверь точность записи о выполненном.
-t255	Izmēģini vēl vienu iespēju	Попробуй ещё одну возможность
-t256	07 · TAVA IZVĒLE	07 · ТВОЙ ВЫБОР
-t257	Izmēģini balsi savā valodā, atkārtoti pievieno atbalstītu ierīci, maini lietotnes valodu vai atkopies pēc nepieejama modeļa kļūmes. Izlaid visu, kam vajadzīga aparatūra vai piekļuves dati, kuru tev nav.	Попробуй голос на своём языке, переподключи поддерживаемое устройство, смени язык приложения или восстанови работу после недоступности модели. Пропускай всё, для чего нужны оборудование или учётные данные, которых у тебя нет.
+t254	Importē vai ielīmē piezīmes piemēru. Rediģē to, atrodi vēlreiz un mēģini pievienot saturu Canvas, ja tas ir pieejams. Sadaļā Darbības pārbaudi, vai ieraksts precīzi atspoguļo paveikto.	Импортируйте или вставьте пример заметки. Отредактируйте её, снова найдите и попробуйте перенести материал в Canvas, если функция доступна. В Activity проверьте точность записи о выполненном.
+t255	Izmēģini vēl vienu iespēju	Попробуйте ещё одну возможность
+t256	07 · TAVA IZVĒLE	07 · ВАШ ВЫБОР
+t257	Izmēģini balsi savā valodā, atkārtoti pievieno atbalstītu ierīci, maini lietotnes valodu vai atkopies pēc nepieejama modeļa kļūmes. Izlaid visu, kam vajadzīga aparatūra vai piekļuves dati, kuru tev nav.	Попробуйте голос на своём языке, переподключите поддерживаемое устройство, смените язык приложения или восстановите работу после недоступности модели. Пропускайте всё, для чего у вас нет оборудования или учётных данных.
 t258	Trūkstoša funkcija, neatbalstīts fails, pakalpojuma kļūme vai nepiešķirta atļauja ir vērtīgs pārbaudes rezultāts. Pieraksti faktisko iznākumu.	Отсутствующая функция, неподдерживаемый файл, сбой провайдера или недостающее разрешение — ценный результат проверки. Записывай фактический исход.
 t259	KO PAMANĪJI?	ЧТО-ТО ЗАМЕТИЛ?
 t260	Ir vērts ziņot pat par neskaidru pogu.	Даже о непонятной кнопке стоит сообщить.
@@ -294,20 +294,20 @@ missionBody	Halo Android ierīcē apvieno ikdienas jautājumus, atbalstītas tā
 missionPill1Title	Vispirms ierīcē	Сначала на устройстве
 missionPill1Body	Saderīgs modelis var atbildēt pašā tālrunī, kad esi to lejupielādējis un pārbaudījis. Nepieciešamā atmiņa, ātrums un valodu atbalsts ir atkarīgs no ierīces un modeļa.	Совместимая модель может отвечать прямо на телефоне после загрузки и проверки. Требования к памяти, скорость и поддержка языков зависят от устройства и модели.
 missionPill2Title	Atvērts kods	Открытый код
-missionPill2Body	Atstarpe gredzenā ir vieta, kur piedalīties. Lietotne, izpildlaiks un šī vietne ir atvērti.	Разрыв в кольце — это место для участия. Приложение, среда выполнения и этот сайт открыты.
-missionPill3Title	Tavi dati paliek tavi	Твои данные остаются твоими
+missionPill2Body	Gredzena atvērums simbolizē atvērtu projektu. Ikviens var iepazīt Android lietotnes, darbības kodola un vietnes pirmkodu un piedalīties izstrādē.	Разрыв в кольце символизирует открытость проекта. Исходный код Android-приложения, ядра и сайта доступен для изучения и участия в разработке.
+missionPill3Title	Tavi dati paliek tavā pārziņā	Ваши данные остаются вашими
 missionPill3Body	Tavi faili paliek ierīcē, ja vien neizvēlies darbību vai pakalpojumu, kas nosūta informāciju citur. Pārskati atļaujas un pievienoto pakalpojumu privātuma noteikumus.	Ваши файлы остаются на устройстве, пока вы сами не выберете действие или сервис, передающий информацию. Проверяйте разрешения и политику конфиденциальности подключаемых сервисов.
 ringLabel	ATVĒRTAIS GREDZENS	ОТКРЫТОЕ КОЛЬЦО
 ringTitle	Atvērts aplis.	Открытый круг.
 ringIntro	Gredzens ir apzināti atvērts: Halo veidots tā, lai tajā būtu viegli iesaistīties un dot savu ieguldījumu.	Разрыв в кольце сделан намеренно: Halo открыт для пользователей и тех, кто хочет участвовать в разработке.
-ringGapTitle	Atstarpe nozīmē atvērtu kodu.	Разрыв означает открытый код.
+ringGapTitle	Atvērums nozīmē atvērtu pirmkodu.	Разрыв означает открытый код.
 ringGapBody	Halo tiek veidots atklāti, ar vietu ikvienam, kas vēlas piedalīties.	Halo создаётся открыто, и место найдётся для каждого.
-ringRingTitle	Gredzens ir gaismas halo.	Кольцо — это ореол света.
+ringRingTitle	Gaismas gredzens.	Кольцо — это ореол света.
 ringRingBody	Mierīgs palīga darbības signāls, nevis vēl viens ekrāns, kas nepārtraukti pieprasa uzmanību.	Спокойный визуальный сигнал помощи, а не ещё один экран, который постоянно требует внимания.
-ringGradientTitle	Gradients no tuvā uz tālo.	Градиент от центра к краям.
-ringGradientBody	Spilgts piparmētru tonis centrā, maigāks ārmalā. Tas ir zīmola simbols, nevis norāde, ka dati nosūtīti mākonim.	У центра — яркий мятный цвет, ближе к краям — мягкие оттенки. Это элемент фирменного стиля, а не признак передачи данных в облако.
+ringGradientTitle	Gradients simbolizē ceļu no tuvā uz tālo.	Градиент — от ближнего к дальнему.
+ringGradientBody	Tas simbolizē ceļu no ierīces uz pēc izvēles izmantotu mākoņpakalpojumu. Tas nav reāllaika indikators, kas rāda, kur nosūtīts konkrēts pieprasījums.	Он символизирует путь от устройства к облачным вычислениям, которые пользователь может выбрать. Это образ бренда, а не индикатор фактической передачи запроса.
 ringEndsTitle	Noapaļoti gali, draudzīgāks iespaids.	Скруглённые края, мягкий характер.
-ringEndsBody	Vienkāršās formas ir draudzīgas, bet nepārvērš zīmi par multfilmas tēlu.	Простые формы делают знак дружелюбным, но не превращают его в мультяшного персонажа.
+ringEndsBody	Vienkāršas un draudzīgas formas bez robotiskām detaļām.	Простые формы делают знак дружелюбным, но не превращают его в мультяшного персонажа.
 ringCaption	Gredzena atvērums un centra simbols mainās atkarībā no stāvokļa.	Разрыв в кольце и символ в центре меняются в зависимости от состояния.
 presenceStageLabel	Izvēlētais Halo stāvoklis	Выбранное состояние Halo
 presenceStatesLabel	Halo klātbūtnes stāvokļi	Состояния присутствия Halo
@@ -349,41 +349,41 @@ condUnavailable	Nav pieejams	Недоступно
 condAutomation	Automatizācija	Автоматизация
 condRetry	Atkārtot	Повтор
 condDownload	Lejupielāde	Загрузка
-stateIdle	Gatavs, kad esi gatavs	Готов, когда готов ты
-stateIdleInfo	Gredzens atpūšas ar atstarpi augšējā labajā pusē. Nekas nenotiek.	Кольцо отдыхает, разрыв — справа вверху. Ничего не выполняется.
-stateListening	Klausos…	Слушаю…
+stateIdle	Gatavs darbam	Готов к работе
+stateIdleInfo	Gredzena atvērums paliek augšējā labajā pusē. Halo ir gatavs jaunam pieprasījumam.	Разрыв кольца остаётся справа вверху. Halo готов принять новый запрос.
+stateListening	Klausos…	Слушает…
 stateListeningInfo	Gredzens kļūst gaišāks un punkts pulsē tikai tad, kamēr mikrofons ir atvērts.	Кольцо становится ярче, и точка пульсирует только пока открыт микрофон.
-stateCapturingVoice	Dzirdu tevi…	Слышу тебя…
+stateCapturingVoice	Uztver balsi…	Распознаёт вашу речь…
 stateCapturingVoiceInfo	Piecas joslas kustas līdzi balsij, kamēr Halo ieraksta teikto.	Пять полос движутся вместе с голосом, пока Halo записывает сказанное.
-stateCapturingVision	Lūkojos…	Смотрю…
+stateCapturingVision	Uztver attēlu…	Смотрит…
 stateCapturingVisionInfo	Diafragma griežas tikai tad, kamēr kamera uzņem, nevis pirms tam.	Диафрагма вращается только пока камера снимает, и не раньше.
-stateThinking	Domāju	Думаю
-stateThinkingInfo	Atstarpe apceļo pilnu loku, kamēr modelis meklē atbildi.	Разрыв проходит полный круг, пока модель ищет ответ.
-statePlanning	Plānoju soļus	Планирую шаги
+stateThinking	Apstrādā pieprasījumu	Обрабатывает запрос
+stateThinkingInfo	Kamēr modelis apstrādā pieprasījumu, atvērums pārvietojas pa gredzenu.	Пока модель обрабатывает запрос, разрыв перемещается по окружности.
+statePlanning	Plānoju soļus	Планирует шаги
 statePlanningInfo	Īss plāns tiek izveidots pirms uzdevuma ar vairākiem soļiem.	Короткий план появляется перед задачей из нескольких шагов.
-stateActing	Strādāju pie tā	Работаю над этим
+stateActing	Strādāju pie tā	Выполняет задачу
 stateActingInfo	Trīs segmenti virzās uz priekšu, katrs par vienu uzdevuma posmu.	Три сегмента движутся вперёд, по одному на каждый этап задачи.
-stateActingPhone	Izmantoju tālruni	Использую телефон
+stateActingPhone	Izmantoju tālruni	Использует телефон
 stateActingPhoneInfo	Tālruņa simbols parāda, ka solis notiek pašā ierīcē.	Значок телефона показывает, что шаг выполняется на самом устройстве.
-stateSpeaking	Runāju	Говорю
+stateSpeaking	Runāju	Озвучивает ответ
 stateSpeakingInfo	Viļņi iziet uz āru tikai tad, kamēr patiešām skan audio.	Волны расходятся только тогда, когда действительно звучит аудио.
-stateStreamingText	Rakstu atbildi	Пишу ответ
+stateStreamingText	Rakstu atbildi	Пишет ответ
 stateStreamingTextInfo	Trīs līnijas parādās secīgi atbildei bez audio.	Три строки появляются по очереди для ответа без аудио.
-statePreparingContext	Vācu kontekstu	Собираю контекст
+statePreparingContext	Vācu kontekstu	Подбирает контекст
 statePreparingContextInfo	Halo apkopo materiālus, kas vajadzīgi pašreizējam jautājumam.	Halo собирает материалы, нужные для текущего вопроса.
-stateWaiting	Gaidu tevi	Жду тебя
+stateWaiting	Gaida tavu atbildi	Ожидает вашего ответа
 stateWaitingInfo	Gredzens kļūst blāvāks, un aprikozu punkts elpo, kamēr Halo gaida.	Кольцо тускнеет, и абрикосовая точка дышит, пока Halo ждёт.
-stateApprovalRequired	Vajadzīgs tavs apstiprinājums	Нужно твоё согласие
-stateApprovalRequiredInfo	Aprikozu loks atzīmē soli, kas bez tevis netiks izpildīts.	Абрикосовая дуга отмечает шаг, который не выполнится без тебя.
+stateApprovalRequired	Vajadzīgs tavs apstiprinājums	Требуется подтверждение
+stateApprovalRequiredInfo	Aprikozu loks atzīmē soli, kas bez tevis netiks izpildīts.	Абрикосовая дуга отмечает шаг, который не будет выполнен без вашего подтверждения.
 stateSuccess	Gatavs	Готово
 stateSuccessInfo	Atstarpe noslēdzas pilnā gredzenā, atzīme parādās un paliek.	Разрыв закрывается в полное кольцо, появляется галочка, и состояние сохраняется.
 stateWarning	Kaut kas pārtrauca	Что-то помешало
 stateWarningInfo	Blakus simbolam parādās aprikozu loks un paliek, līdz to pamanīsi.	Рядом с глифом появляется абрикосовая дуга и остаётся, пока ты не посмотришь.
 stateError	Tas neizdevās	Не получилось
 stateErrorInfo	Ember ir vienīgā kļūdas krāsa, un tā vienmēr nāk kopā ar simbolu.	Ember — единственный цвет ошибки, и он всегда идёт вместе с глифом.
-stateRecovering	Mēģinu vēlreiz…	Пробую снова…
+stateRecovering	Mēģinu vēlreiz…	Повторяет попытку…
 stateRecoveringInfo	Atkārtošanas bulta var atkārtot vienu soli, nevis jau pabeigtu darbu.	Стрелка повтора может повторить один шаг, а не уже завершённую работу.
-stateModelLoading	Ielādēju modeli	Загружаю модель
+stateModelLoading	Ielādēju modeli	Загружает модель
 stateModelLoadingInfo	Progresa loks seko reālajam lejupielādes procentam.	Дуга прогресса следует реальному проценту загрузки.
 statePermissionMissing	Vajadzīga atļauja	Нужно разрешение
 statePermissionMissingInfo	Gredzens kļūst blāvāks un rāda slēdzeni, līdz atļauja tiek piešķirta.	Кольцо тускнеет и показывает замок, пока разрешение не выдано.
@@ -400,3 +400,29 @@ productKidsTitle	Bērnu režīms · eksperimentāls	Детский режим ·
 productKidsBody	Vienkāršotā Home vide sasaista jautājumus un vadītu mācīšanos ar Study. Vecāku kontrole un darbība ierīcē vēl ir jāpārbauda; neuztver šo režīmu kā pilnīgu bērnu drošības aizsardzību.	Упрощённый Home объединяет вопросы и занятия на базе Study. Родительские ограничения и работа на устройствах ещё требуют проверки: этот режим не заменяет присмотр взрослых.
 productModelsTitle	Modeļi un balsis	Модели и голос
 productModelsBody	Atrodi un pārbaudi saderīgus lokālos LiteRT modeļus. Runas atpazīšanai un balss atskaņošanai ir atsevišķa modeļu iestatīšana; lejupielāde pati par sevi nemaina izvēlēto modeli.	Находите и проверяйте совместимые локальные модели LiteRT. Для распознавания и озвучивания речи есть отдельные настройки; загрузка не делает модель выбранной автоматически.
+brandUpdateTitle	Ierīces, atļaujas un iestatījumi — vienkārši izskaidroti.	Устройства, разрешения и настройки — без сложных терминов.
+brandUpdateIntro	Atjauninātajā dizaina grāmatā ir ierīču meklēšanas, savienošanas, kā arī Intelligence, Voice un Privacy iestatījumu piemēri. Šie attēli rāda plānoto izkārtojumu, nevis pārbaudītas publicētas lietotnes ekrānkopijas.	Обновлённый брендбук показывает поиск и подключение устройств, а также разделы Intelligence, Voice и Privacy. Иллюстрации демонстрируют проектный интерфейс, а не проверенные снимки опубликованной APK.
+brandUpdateTag	DIZAINA PARAUGI · NEVIS DARBOJOŠĀ VERSIJA	МАКЕТЫ ДИЗАЙНА · НЕ РАБОЧАЯ СБОРКА
+brandUpdateDevices	Ierīces un savienojuma stāvoklis	Устройства и состояние подключения
+brandUpdatePairing	Atrodi, izvēlies un savieno	Найдите устройство, выберите и подключите
+brandUpdateSettings	Modeļu un pakalpojumu iestatīšana	Настройка моделей и провайдеров
+brandUpdatePrivacy	Balss, privātums un atļaujas	Голос, конфиденциальность и разрешения
+brandUpdateFoot	Attēli no iesniegtās zīmola grāmatas 42.–45. lappuses. Citur vietnē ir agrākas Android testa versijas ekrānuzņēmumi. Šie attēlu veidi ir atsevišķi marķēti.	Изображения из брендбука, стр. 42–45. В других разделах сайта показаны снимки более ранней тестовой сборки Android. Эти материалы помечены отдельно.
+phoneAbilitiesLabel	TĀLRUŅA IESPĒJAS	ВОЗМОЖНОСТИ ТЕЛЕФОНА
+phoneAbilitiesTitle	Septiņas saprotamas iespēju grupas.	Семь понятных групп возможностей.
+phoneAbilitiesBody	Devices tagad sagrupē tālruņa ziņotās iespējas saprotamās kategorijās. “Pieejams” nozīmē, ka sistēma ir ziņojusi par iespēju, nevis devusi piekļuvi privātiem datiem vai tālruņa vadībai. Atļaujas un apstiprinājumi jāpiešķir atsevišķi.	Devices теперь объединяет заявленные телефоном возможности в группы. Статус «Доступно» означает, что система сообщает о возможности, а не разрешает читать личные данные или управлять телефоном. Разрешения и подтверждения проверяются отдельно.
+phoneHear	Dzirdēt un runāt	Слышать и говорить
+phoneScreen	Redzēt un lietot ekrānu	Видеть экран и управлять им
+phoneControls	Tālruņa vadība	Управление телефоном
+phoneApps	Lietotnes un tīmeklis	Приложения и интернет
+phoneCalendar	Kalendārs un kontakti	Календарь и контакты
+phoneNotifications	Paziņojumi	Уведомления
+phoneWorkspace	Starpliktuve un piezīmes	Буфер обмена и Блокнот
+pairingTitle	Savienošana notiek vairākos soļos.	Подключение проходит по шагам.
+pairingBody	Ja Android pieprasa, atļauj tuvumā esošo ierīču meklēšanu, ieslēdz brilles, atrodi tās sarakstā un izvēlies savienojumu. Veiksmīga savienošana automātiski nesāk ierakstu, kameras uzņemšanu vai skaņas pārsūtīšanu.	Если Android запросит доступ к устройствам поблизости, разрешите поиск, включите очки, выберите их в списке и подтвердите подключение. Успешное соединение само по себе не запускает запись, камеру или передачу звука.
+settingsMapTitle	Atrodi vajadzīgo iestatījumu.	Найдите нужную настройку.
+settingsMapModel	Intelligence — pakalpojumi, modeļu bibliotēka un lokālie modeļi	Intelligence — провайдеры, библиотека и локальные модели
+settingsMapVoice	Voice — runas ievade, atskaņošana un skaņas ierīces	Voice — распознавание, озвучивание и устройства вывода
+settingsMapPrivacy	Privacy un Permissions — datu apstrāde un Android atļaujas	Privacy и Permissions — работа с данными и разрешения Android
+settingsMapAdvanced	Advanced — diagnostika un tehniskās detaļas testētājiem	Advanced — диагностика и технические сведения для тестирования
+settingsMapDisclaimer	Dizaina grāmata rāda plānoto Settings izkārtojumu. Android lietotne vēl mainās; nosaukumi un pieejamība var atšķirties.	Брендбук показывает целевую структуру Settings. Android-приложение меняется, поэтому названия и доступность пунктов могут отличаться.

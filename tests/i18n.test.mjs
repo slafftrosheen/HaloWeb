@@ -176,3 +176,13 @@ test('legacy runtime: switching EN → LV → RU → EN restores all text and pr
 function metaValuesOutside() {
   return 'Halo is an open-source Android AI assistant and cognitive runtime: local LiteRT inference, phone actions, Notebook and Study, configurable providers, and capability-driven devices.';
 }
+
+test('latest brand and phone capability copy is covered in every language',()=>{
+ const keys=['brandUpdateTitle','brandUpdateIntro','brandUpdateTag','phoneAbilitiesTitle',
+  'phoneAbilitiesBody','phoneHear','phoneWorkspace','pairingBody','settingsMapPrivacy',
+  'settingsMapDisclaimer'];
+ for(const lang of ['en','lv','ru']) for(const key of keys)
+   assert.ok(activeLocales[lang][key]?.trim(),lang+': '+key);
+ assert.notEqual(activeLocales.ru.phoneAbilitiesBody,activeLocales.en.phoneAbilitiesBody);
+ assert.notEqual(activeLocales.lv.pairingBody,activeLocales.en.pairingBody);
+});
