@@ -100,3 +100,7 @@ The owner supplied the full 38-page `BrandBook.pdf` and the complete `BrandAsset
 ### New site metadata · 2026-10-14
 
 The English/Latvian/Russian document descriptions now lead with Android product functionality and model choice rather than future platform promises. The build generator, initial HTML meta, and runtime language bundle are synchronized. Android source head reviewed: `303216f33a7f842faa7d0684ccef52afaeca6d0c`; brand-parity status remains source-integrated but not hardware-signed-off.
+
+## 2026-10-14 — current Android source refresh and product-first editorial pass
+
+Reviewed Halo main `d1a713d4926dd4b83c7bbe9db408511cb5adcf8d` and the recent `be11bd25` brand/feature commit, with AppShell, KidsModeScreen, HaloSetupScreen, PresenceArtwork, and CURRENT-STATE (still topped by Oct 11 records). Explicit source integration is not device acceptance. Updated Android-first copy, LiteRT model discovery and roles, voice model separation, Notebook/Canvas media, source-linked Study, guided setup, experimental Kids Mode, screenshot age, and cautious claims in EN/LV/RU. Moved three lengthy identity/design sections after alpha testing so product information appears first; removed conflicting section numbers from identity labels. The three new quick-start cards explain first-run choices, voice/models, and experimental Kids Mode without claiming production safety.

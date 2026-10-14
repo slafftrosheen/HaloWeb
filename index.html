@@ -40,7 +40,7 @@
   <link rel="preload" href="assets/fonts/atkinson-hyperlegible-next-variable.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="stylesheet" href="css/fonts.css?v=1" />
   <link rel="stylesheet" href="css/tokens.css?v=16" />
-  <link rel="stylesheet" href="css/main.css?v=18" />
+  <link rel="stylesheet" href="css/main.css?v=19" />
 
   <script type="application/ld+json">
   {
@@ -96,7 +96,7 @@
           <h1><span data-i18n="t016">A personal AI assistant.</span><br><span class="hero-gradient"><span data-i18n="t017">Starting on Android.</span></span></h1>
           <p class="hero-tagline"><span data-i18n="brandTagline">AI that feels like second nature.</span></p>
           <p class="hero-lede">
-            <span data-i18n="t019">Halo is an open-source AI assistant for Android today, designed around a portable runtime for other devices in the future. Ask by voice or text, use supported phone actions, keep notes and files in Notebook and Canvas, and study from material you choose. Use a model on your phone or explicitly select your own network server or cloud provider. Glasses are optional; some workflows are still being tested.</span>
+            <span data-i18n="t019">Halo is an open-source AI assistant for Android today, built around a portable runtime for future hosts. Ask by voice or text, try supported phone actions, save notes, files and voice memos in Notebook, arrange them on Canvas, and learn from selected sources in Study. Choose a compatible on-device model, your own network server or an optional cloud provider. Glasses are optional. This alpha still has unverified workflows.</span>
           </p>
           <p class="hero-promise"><span data-i18n="brandPromise">Private by default. Open by design.</span></p>
           <div class="hero-actions">
@@ -133,18 +133,521 @@
       </div>
     </section>
 
-    <section class="section mission" id="mission">
+    <section class="plain-summary">
+      <div class="container summary-grid reveal">
+        <div>
+          <span>01</span>
+          <b><span data-i18n="t034">Ask, then see what happened.</span></b>
+          <p><span data-i18n="t035">Request an answer or a supported phone action by voice or text. Halo should distinguish completed work from failed and unconfirmed steps.</span></p>
+        </div>
+        <div>
+          <span>02</span>
+          <b><span data-i18n="t036">Keep your material together.</span></b>
+          <p><span data-i18n="t037">Save notes and files, arrange ideas in Canvas, and study from sources you choose.</span></p>
+        </div>
+        <div>
+          <span>03</span>
+          <b><span data-i18n="t038">Choose the AI behind it.</span></b>
+          <p><span data-i18n="t039">Run a compatible model on your phone, connect your own server or select a cloud provider. Privacy and performance differ by choice.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product" id="product">
       <div class="container">
         <header class="section-head reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-privacy"></use></svg><span data-i18n="missionLabel">01 · MISSION</span></p>
-          <h2><span data-i18n="missionTitle">Technology should feel like a natural extension of what you can do.</span></h2>
-          <p><span data-i18n="missionBody">Halo is an open-source, privacy-first personal assistant. It brings voice, vision, memory, everyday tasks, phone controls and wearables into one experience, and it runs on your device first: the cloud is something you reach for, not something you fall into.</span></p>
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-devices"></use></svg><span data-i18n="t040">01 · THE ANDROID APP</span></p>
+          <h2><span data-i18n="t041">What you can try in the Android alpha.</span></h2>
+          <p>
+            <span data-i18n="t042">Home is for requests; Activity shows pending approvals and results. Notebook is your workspace for notes, files and Canvas, while Study is a separate learning screen. Devices and Settings manage connected hardware, AI models, voice and permissions. These images show an earlier test build, not a guarantee that every screen still looks the same.</span>
+          </p>
+        </header>
+
+        <div class="app-carousel" role="region" aria-label="Explore the Android app" data-i18n-aria-label="carouselLabel">
+          <div class="carousel-top"><p data-i18n="carouselHint">Choose a screen, swipe, or use the arrows to explore the current Android implementation.</p><div class="carousel-controls"><button type="button" id="app-previous" aria-label="Previous screen" data-i18n-aria-label="previousScreen">←</button><span id="app-position" role="status" aria-live="polite">1 / 12</span><button type="button" id="app-next" aria-label="Next screen" data-i18n-aria-label="nextScreen">→</button></div></div>
+          <div class="carousel-nav"><button type="button" data-app-screen="0" aria-controls="app-slide-0" aria-pressed="true"><span data-i18n="t044">Home</span></button>
+<button type="button" data-app-screen="1" aria-controls="app-slide-1" aria-pressed="false"><span data-i18n="t047">Notebook</span></button>
+<button type="button" data-app-screen="2" aria-controls="app-slide-2" aria-pressed="false"><span data-i18n="t050">Study</span></button>
+<button type="button" data-app-screen="3" aria-controls="app-slide-3" aria-pressed="false"><span data-i18n="t053">Settings</span></button>
+<button type="button" data-app-screen="4" aria-controls="app-slide-4" aria-pressed="false"><span data-i18n="t007">Devices</span></button>
+<button type="button" data-app-screen="5" aria-controls="app-slide-5" aria-pressed="false"><span data-i18n="t058">Activity</span></button>
+<button type="button" data-app-screen="6" aria-controls="app-slide-6" aria-pressed="false"><span data-i18n="t061">Notifications</span></button>
+<button type="button" data-app-screen="7" aria-controls="app-slide-7" aria-pressed="false"><span data-i18n="t064">Workspace tools</span></button>
+<button type="button" data-app-screen="8" aria-controls="app-slide-8" aria-pressed="false"><span data-i18n="t067">Skills</span></button>
+<button type="button" data-app-screen="9" aria-controls="app-slide-9" aria-pressed="false"><span data-i18n="t070">Access and setup</span></button>
+<button type="button" data-app-screen="10" aria-controls="app-slide-10" aria-pressed="false"><span data-i18n="t073">Memory</span></button>
+<button type="button" data-app-screen="11" aria-controls="app-slide-11" aria-pressed="false">Canvas</button></div>
+          <div class="app-track" id="app-track" tabindex="0" aria-label="Explore the Android app" data-i18n-aria-label="carouselLabel"><figure class="app-slide" id="app-slide-0">
+            <a href="assets/screens/home.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/screens/home.jpg" width="1080" height="2400" alt="Halo Home screen." data-i18n-alt="t043" /></a>
+            <figcaption><b><span data-i18n="t044">Home</span></b><span><span data-i18n="t045">Ask by voice or text, follow task status, continue a conversation and manage context.</span></span><a class="capture-link" href="assets/screens/home.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
+          </figure>
+<figure class="app-slide" id="app-slide-1">
+            <a href="assets/screens/notebook.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/notebook.jpg" width="1080" height="2400" alt="Halo Notebook screen." data-i18n-alt="t046" /></a>
+            <figcaption><b><span data-i18n="t047">Notebook</span></b><span><span data-i18n="t048">Notes, files, conversations, collections, favorites, Canvas and explicit working context.</span></span><a class="capture-link" href="assets/screens/notebook.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
+          </figure>
+<figure class="app-slide" id="app-slide-2">
+            <a href="assets/screens/study.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/study.jpg" width="1080" height="2400" alt="Halo Study screen." data-i18n-alt="t049" /></a>
+            <figcaption><b><span data-i18n="t050">Study</span></b><span><span data-i18n="t051">Guided learning from a workspace source, with attempts, feedback, review history and narration.</span></span><a class="capture-link" href="assets/screens/study.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
+          </figure>
+<figure class="app-slide" id="app-slide-3">
+            <a href="assets/screens/settings.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/settings.jpg" width="1080" height="2400" alt="Halo Settings with Intelligence, Voice, Language and Appearance controls." data-i18n-alt="t052" /></a>
+            <figcaption><b><span data-i18n="t053">Settings</span></b><span><span data-i18n="t054">Choose how Halo answers, set your language and appearance, and manage voice and skills.</span></span><a class="capture-link" href="assets/screens/settings.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
+          </figure>
+<figure class="app-slide" id="app-slide-4">
+            <a href="assets/screens/devices.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/devices.jpg" width="1080" height="2400" alt="Halo Devices screen." data-i18n-alt="t055" /></a>
+            <figcaption><b><span data-i18n="t007">Devices</span></b><span><span data-i18n="t056">Your phone, saved hardware, available capabilities, device health and connections.</span></span><a class="capture-link" href="assets/screens/devices.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
+          </figure>
+<figure class="app-slide" id="app-slide-5"><a href="assets/screens/activity.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/activity.jpg" width="1080" height="2400" alt="Halo Activity on an Android phone." data-i18n-alt="t057" /></a><figcaption><b><span data-i18n="t058">Activity</span></b><span><span data-i18n="t059">Review requests, approvals and recorded outcomes.</span></span><a class="capture-link" href="assets/screens/activity.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
+<figure class="app-slide" id="app-slide-6"><a href="assets/screens/notifications.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/notifications.jpg" width="1080" height="2400" alt="Halo Notifications on an Android phone." data-i18n-alt="t060" /></a><figcaption><b><span data-i18n="t061">Notifications</span></b><span><span data-i18n="t062">View notifications from apps you have allowed.</span></span><a class="capture-link" href="assets/screens/notifications.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
+<figure class="app-slide" id="app-slide-7"><a href="assets/screens/workspace-tools.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/workspace-tools.jpg" width="1080" height="2400" alt="Halo Workspace tools on an Android phone." data-i18n-alt="t063" /></a><figcaption><b><span data-i18n="t064">Workspace tools</span></b><span><span data-i18n="t065">Reach Skills, Canvas, Memory and Study from Notebook.</span></span><a class="capture-link" href="assets/screens/workspace-tools.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
+<figure class="app-slide" id="app-slide-8"><a href="assets/screens/skills.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/skills.jpg" width="1080" height="2400" alt="Halo Skills on an Android phone." data-i18n-alt="t066" /></a><figcaption><b><span data-i18n="t067">Skills</span></b><span><span data-i18n="t068">Manage available actions and choose models for your skills.</span></span><a class="capture-link" href="assets/screens/skills.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
+<figure class="app-slide" id="app-slide-9"><a href="assets/screens/access.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/access.jpg" width="1080" height="2400" alt="Halo Access and setup on an Android phone." data-i18n-alt="t069" /></a><figcaption><b><span data-i18n="t070">Access and setup</span></b><span><span data-i18n="t071">Review permissions, guided setup, storage and backups. Available options depend on the build.</span></span><a class="capture-link" href="assets/screens/access.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
+<figure class="app-slide" id="app-slide-10"><a href="assets/screens/memory.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/memory.jpg" width="1080" height="2400" alt="Halo Memory on an Android phone." data-i18n-alt="t072" /></a><figcaption><b><span data-i18n="t073">Memory</span></b><span><span data-i18n="t074">Review proposed memories and approve what to keep. Saving a note does not automatically create a memory.</span></span><a class="capture-link" href="assets/screens/memory.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
+<figure class="app-slide" id="app-slide-11"><a href="assets/screens/canvas.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/canvas.jpg" width="1080" height="2400" alt="Halo Canvas UI capture." data-i18n-alt="t120" /></a><figcaption><b>Canvas</b><span data-i18n="t126">Notebook keeps notes, files, conversations and collections together. Canvas supports source-linked cards, voice memos, drawings, image tools and selected PDF-page extraction in code. Check transcripts and OCR results against the originals; some workflows still require device testing.</span><a class="capture-link" href="assets/screens/canvas.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure></div>
+        </div>
+<div class="product-onramp reveal" aria-label="STARTING HALO" data-i18n-aria-label="productFlowLabel">
+          <div class="product-onramp__heading"><p class="section-label"><span data-i18n="productFlowLabel">STARTING HALO</span></p><h3><span data-i18n="productFlowTitle">Start simple. Add more when you're ready.</span></h3></div>
+          <div class="product-onramp__grid">
+            <article><h4><span data-i18n="productSetupTitle">Guided first run</span></h4><p><span data-i18n="productSetupBody">Choose a language, decide where replies come from, and test the permissions and voice options you want. You can save progress and finish setup later.</span></p></article>
+            <article><h4><span data-i18n="productModelsTitle">Models and voices</span></h4><p><span data-i18n="productModelsBody">Find and test compatible local LiteRT models. Speech recognition and voice output have their own model setup; no download automatically makes a model your default.</span></p></article>
+            <article><h4><span data-i18n="productKidsTitle">Kids Mode · experimental</span></h4><p><span data-i18n="productKidsBody">A simpler Home layout connects questions and guided learning to the same Study system. Parent controls and device testing still need review; do not treat it as an unsupervised safety boundary.</span></p></article>
+          </div>
+        </div>
+        <p class="asset-note reveal"><span data-i18n="t075">Real screenshots from the 13 October 2026 Android test build. The app has changed since these captures; some controls and visual details may differ. Switching the website language does not translate text inside screenshots.</span></p>
+      </div>
+    </section>
+
+    <section class="section actions" id="actions">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-phone_action"></use></svg><span data-i18n="t076">02 · PHONE ACTIONS</span></p>
+          <h2><span data-i18n="t077">Ask Halo to help with a phone task.</span></h2>
+          <p>
+            <span data-i18n="t078">Try setting a timer, opening an app or adjusting a setting. With permission and approval, Halo can also work with visible screen controls. Multi-step actions and handoffs to third-party apps are still being tested.</span>
+          </p>
+        </header>
+
+        <div class="action-groups reveal">
+          <article>
+            <span class="action-number">A</span>
+            <div>
+              <h3><span data-i18n="t079">Control the phone</span></h3>
+              <p><span data-i18n="t080">Set alarms and timers. Change volume, ringer mode, brightness and flashlight. Open settings and apps.</span></p>
+              <small><span data-i18n="t081">Examples: “Set a timer for 12 minutes.” · “Put the phone on vibrate.”</span></small>
+            </div>
+          </article>
+
+          <article>
+            <span class="action-number">B</span>
+            <div>
+              <h3><span data-i18n="t082">Navigate and communicate</span></h3>
+              <p><span data-i18n="t083">Find contacts, open the dialer, launch navigation, open URLs, search the web, share text and control media.</span></p>
+              <small><span data-i18n="t084">When an action is handed to another app, Halo reports that the request was dispatched. Completion may still be unconfirmed.</span></small>
+            </div>
+          </article>
+
+          <article>
+            <span class="action-number">C</span>
+            <div>
+              <h3><span data-i18n="t085">Read useful context</span></h3>
+              <p><span data-i18n="t086">Inspect device, battery and network state; read clipboard text; fetch a web page; search files and Notebook.</span></p>
+              <small><span data-i18n="t087">Access to sensitive data follows tool policies and approval rules.</span></small>
+            </div>
+          </article>
+
+          <article>
+            <span class="action-number">D</span>
+            <div>
+              <h3><span data-i18n="t088">Work with the screen</span></h3>
+              <p><span data-i18n="t089">Read the current Android screen, find UI elements, and use accessibility-backed click, scroll and text entry when needed.</span></p>
+              <small><span data-i18n="t090">Screen-changing accessibility actions are explicitly confirmation-gated.</span></small>
+            </div>
+          </article>
+        </div>
+
+        <div class="truth-panel reveal">
+          <div>
+            <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-approval"></use></svg><span data-i18n="t091">HONEST ACTION STATUS</span></p>
+            <h3><span data-i18n="t092">A request is not proof it worked.</span></h3>
+          </div>
+          <p>
+            <span data-i18n="t093">Halo records attempted actions and their outcomes. If another app takes over or Android cannot confirm the result, the assistant should report that rather than claim the task is finished.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workspace" id="workspace">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-notebook"></use></svg><span data-i18n="t115">03 · NOTEBOOK AND STUDY</span></p>
+          <h2><span data-i18n="workspaceFlow">Notes, files and study tools in one place.</span></h2>
+          <p>
+            <span data-i18n="workspaceIntro">Notebook saves notes, files and voice memos. Canvas connects and annotates selected material; Study creates lessons from chosen sources. Adding something to the workspace does not automatically share it with AI.</span>
+          </p>
+        </header>
+
+<div class="workspace-explorer"><div class="workspace-steps" role="tablist" aria-orientation="vertical" aria-label="Explore the workspace" data-i18n-aria-label="workspaceTabs"><button type="button" role="tab" id="workspace-tab-notebook" aria-controls="workspace-panel-notebook" aria-selected="true" tabindex="0" data-workspace-tab="notebook"><span class="workspace-step">01</span><span class="workspace-step-copy"><b><span data-i18n="workspaceSave">Organize notes and files</span></b><small><span data-i18n="workspaceSaveHint">Notes, files and conversations in Notebook.</span></small></span><span class="workspace-step-arrow" aria-hidden="true">↗</span></button>
+<button type="button" role="tab" id="workspace-tab-canvas" aria-controls="workspace-panel-canvas" aria-selected="false" tabindex="-1" data-workspace-tab="canvas"><span class="workspace-step">02</span><span class="workspace-step-copy"><b><span data-i18n="workspaceConnect">Arrange ideas visually</span></b><small><span data-i18n="workspaceConnectHint">Arrange and connect your materials in Canvas.</span></small></span><span class="workspace-step-arrow" aria-hidden="true">↗</span></button>
+<button type="button" role="tab" id="workspace-tab-study" aria-controls="workspace-panel-study" aria-selected="false" tabindex="-1" data-workspace-tab="study"><span class="workspace-step">03</span><span class="workspace-step-copy"><b><span data-i18n="workspaceLearn">Study material you choose</span></b><small><span data-i18n="workspaceLearnHint">Choose a goal and materials in Study.</span></small></span><span class="workspace-step-arrow" aria-hidden="true">↗</span></button></div><div class="workspace-stage"><div class="workspace-panel" id="workspace-panel-notebook" role="tabpanel" aria-labelledby="workspace-tab-notebook" tabindex="0" ><div class="workspace-panel-copy"><p class="section-label"><span data-i18n="t047">Notebook</span></p><p><span data-i18n="workspaceNotebookBody">Find your notes, imported files and saved conversations in one library. Choose the materials you want to work with next.</span></p></div><figure><a href="assets/screens/notebook.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/notebook.jpg" width="1080" height="2400" alt="Halo Notebook screenshot." data-i18n-alt="t118" /></a><figcaption><a href="assets/screens/notebook.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure></div>
+<div class="workspace-panel" id="workspace-panel-canvas" role="tabpanel" aria-labelledby="workspace-tab-canvas" tabindex="0" hidden><div class="workspace-panel-copy"><p class="section-label">Canvas</p><p><span data-i18n="workspaceCanvasBody">Arrange notes, images, PDFs and recordings as source-linked cards. Draw, annotate, search, and review suggested arrangements before accepting them. Check imported or extracted content against the source.</span></p></div><figure><a href="assets/screens/canvas.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/canvas.jpg" width="1080" height="2400" alt="Halo Canvas screenshot." data-i18n-alt="t120" /></a><figcaption><a href="assets/screens/canvas.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure></div>
+<div class="workspace-panel" id="workspace-panel-study" role="tabpanel" aria-labelledby="workspace-tab-study" tabindex="0" hidden><div class="workspace-panel-copy"><p class="section-label"><span data-i18n="t050">Study</span></p><p><span data-i18n="workspaceStudyBody">Set a learning goal, select material, then try guided explanations and practice. Lessons can track attempts and reviews; AI feedback and image understanding depend on the selected model.</span></p></div><figure><a href="assets/screens/study.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/study.jpg" width="1080" height="2400" alt="Halo Study screenshot." data-i18n-alt="t119" /></a><figcaption><a href="assets/screens/study.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure></div></div></div><aside class="workspace-boundary" aria-labelledby="workspace-choice"><h3 id="workspace-choice"><span data-i18n="workspaceChoice">You choose what the assistant uses</span></h3><div><article><h4><span data-i18n="t122">Working context</span></h4><p><span data-i18n="workspaceContextBody">Adding an item to working context gives Halo material for the current task. You can add or remove items deliberately.</span></p></article><article><h4><span data-i18n="t073">Memory</span></h4><p><span data-i18n="workspaceMemoryBody">Saving a note does not save it as a memory. Keeping something in memory is a separate choice that requires your approval.</span></p></article></div></aside>
+      </div>
+    </section>
+
+    <section class="section ai" id="ai">
+      <div class="container ai-layout">
+        <div class="ai-copy reveal">
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-intelligence"></use></svg><span data-i18n="t094">04 · AI OPTIONS</span></p>
+          <h2><span data-i18n="t095">Choose where Halo thinks.</span></h2>
+          <p>
+            <span data-i18n="t096">Download and test a model on your phone, connect a server on your network, or configure a cloud provider. Remote requests can send relevant context to the provider you select. Halo must not silently move your data to a different provider after a failure.</span>
+          </p>
+
+          <div class="ai-lanes">
+            <article>
+              <span><span data-i18n="t097">ON DEVICE</span></span>
+              <h3>LiteRT-LM</h3>
+              <p><span data-i18n="t098">In Settings → Intelligence → On device, discover compatible LiteRT candidates, download one, test a reply, and explicitly select it for supported roles. A device-fit estimate is not proof that the model will run successfully on your phone.</span></p>
+            </article>
+            <article>
+              <span><span data-i18n="t099">ON YOUR NETWORK</span></span>
+              <h3><span data-i18n="t100">Local model server</span></h3>
+              <p><span data-i18n="t101">Connect to Ollama, OpenCode Companion or a compatible endpoint on a computer you control.</span></p>
+            </article>
+            <article>
+              <span><span data-i18n="t102">CLOUD</span></span>
+              <h3><span data-i18n="t103">Optional cloud AI</span></h3>
+              <p><span data-i18n="t104">Configure OpenRouter, Gemini, OpenAI or another supported provider. Each service has its own setup, costs and limits.</span></p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="ai-shot shot-reveal">
+          <img loading="lazy" src="assets/screens/settings.jpg" width="1080" height="2400" alt="Halo Settings showing the entry point to Intelligence and voice setup." data-i18n-alt="t105" />
+          <figcaption><span data-i18n="t106">Open Intelligence from Settings to configure models and providers.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="container provider-facts reveal">
+        <div>
+          <b><span data-i18n="t107">Gemini can use Google OAuth.</span></b>
+          <p><span data-i18n="t108">The current app supports Google authorization with a Cloud project, alongside an API-key fallback.</span></p>
+        </div>
+        <div>
+          <b><span data-i18n="t109">Some providers offer free-tier options.</span></b>
+          <p><span data-i18n="t110">Free access, model availability and limits depend on the provider and may change.</span></p>
+        </div>
+        <div>
+          <b><span data-i18n="t111">Your provider choice is respected.</span></b>
+          <p><span data-i18n="t112">A selected provider failure is not permission to silently move private context to another provider.</span></p>
+        </div>
+        <div>
+          <b><span data-i18n="t113">Credentials are protected.</span></b>
+          <p><span data-i18n="t114">Credentials use Android Keystore-backed storage rather than ordinary app preferences.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section devices" id="devices">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-glasses"></use></svg><span data-i18n="t132">05 · CONNECTED DEVICES</span></p>
+          <h2><span data-i18n="t133">Start on Android. Other devices are optional.</span></h2>
+          <p>
+            <span data-i18n="t134">Halo is not a glasses-only assistant. Android is the first host platform. Glasses, headsets and experimental robots may extend interaction where drivers and hands-on tests support them; other host platforms remain in development.</span>
+          </p>
+        </header>
+
+        <div class="devices-layout">
+          <figure class="devices-shot shot-reveal">
+            <img loading="lazy" src="assets/screens/devices.jpg" width="1080" height="2400" alt="Halo Devices UI capture." data-i18n-alt="t135" />
+          </figure>
+
+          <div class="device-list reveal">
+            <article>
+              <span><span data-i18n="t136">FIRST HOST PLATFORM</span></span>
+              <h3><span data-i18n="t137">Android phone</span></h3>
+              <p><span data-i18n="t138">The Android app includes Home, Activity, Notebook, model and voice setup, supported phone tools, and Study. New layouts and device-sensitive workflows still need hands-on validation.</span></p>
+            </article>
+            <article>
+              <span><span data-i18n="t139">TEST HARDWARE</span></span>
+              <h3><span data-i18n="t140">HeyCyan glasses</span></h3>
+              <p><span data-i18n="t141">HeyCyan glasses are the current Bluetooth and microphone integration target. Some speaker and media paths still need physical testing.</span></p>
+            </article>
+            <article>
+              <span><span data-i18n="t142">AUDIO ACCESSORIES</span></span>
+              <h3><span data-i18n="t143">Headsets and earbuds</span></h3>
+              <p><span data-i18n="t144">Supported Android headsets can provide microphone and audio output, depending on routing and permissions.</span></p>
+            </article>
+            <article>
+              <span><span data-i18n="t145">EXPERIMENTAL HARDWARE</span></span>
+              <h3>BuddyBot</h3>
+              <p><span data-i18n="t146">BuddyBot is a robot project exploring physical actions and safety. It is experimental and not needed to use Halo.</span></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section status" id="status">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-runtime_status"></use></svg><span data-i18n="t169">06 · DEVELOPMENT STATUS</span></p>
+          <h2><span data-i18n="t170">A real alpha, not a finished product.</span></h2>
+          <p>
+            <span data-i18n="t171">Halo contains implemented Android features and automated tests, but compile checks, unit tests and physical device acceptance are different things. Recent branding, Kids Mode, Canvas and local-model work have not all received a single full device acceptance pass. Review GitHub Releases and known limitations before testing.</span>
+          </p>
+        </header>
+
+        <div class="status-grid reveal">
+          <article class="status-good">
+            <span><span data-i18n="t172">TESTED ON HARDWARE</span></span>
+            <h3><span data-i18n="t173">A local model has answered on a phone.</span></h3>
+            <p><span data-i18n="t174">A small Qwen model has produced local responses on an Android test device. HeyCyan microphone capture also has real-hardware evidence.</span></p>
+          </article>
+          <article>
+            <span><span data-i18n="t175">AUTOMATED CHECKS</span></span>
+            <h3><span data-i18n="t176">Automated tests cover core paths.</span></h3>
+            <p><span data-i18n="t177">The app has code-level tests for actions, workspace and model-related behavior. Passing tests does not establish that every command works on every phone.</span></p>
+          </article>
+          <article class="status-warn">
+            <span><span data-i18n="t178">NEEDS END-TO-END TESTING</span></span>
+            <h3><span data-i18n="t179">Some integrations are still unverified.</span></h3>
+            <p><span data-i18n="t180">Recent layout changes, Kids Mode, LiteRT model downloads and roles, multi-step phone actions, provider failures and some wearable audio routes still need current end-to-end device testing.</span></p>
+          </article>
+        </div>
+
+        <div class="closing reveal">
+          <div>
+            <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-source"></use></svg><span data-i18n="t181">SOURCE EVIDENCE</span></p>
+            <h2><span data-i18n="t182">Want the engineering details?</span></h2>
+            <p>
+              <span data-i18n="t183">The repository separates implemented code, test evidence and known gaps. You can inspect the progress rather than rely on website claims.</span>
+            </p>
+          </div>
+          <div class="closing-actions">
+            <a class="button button--mint" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener"><span data-i18n="t184">Open Halo on GitHub ↗</span></a>
+            <a class="button button--ghost" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" target="_blank" rel="noopener"><span data-i18n="t185">Current state</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section runtime" id="runtime">
+      <div class="container">
+        <header class="section-head section-head--dark reveal">
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-code"></use></svg><span data-i18n="t147">07 · HOW HALO WORKS</span></p>
+          <h2><span data-i18n="t148">One runtime, different devices and models.</span></h2>
+          <p>
+            <span data-i18n="t149">Halo separates input, context, model reasoning, permissions and tool execution. Android is the first host; Linux and Windows are development targets, not released apps. The aim is to keep the assistant useful without committing to a single model or gadget.</span>
+          </p>
+        </header>
+
+        <div class="runtime-flow reveal" data-runtime-flow>
+          <div class="runtime-step">
+            <span class="runtime-index">01</span>
+            <div><b><span data-i18n="t150">Input</span></b><small><span data-i18n="t151">voice · text · image · device event</span></small></div>
+          </div>
+          <span class="runtime-link" aria-hidden="true"></span>
+          <div class="runtime-step">
+            <span class="runtime-index">02</span>
+            <div><b><span data-i18n="t152">Context</span></b><small><span data-i18n="t153">conversation · workspace · current surface</span></small></div>
+          </div>
+          <span class="runtime-link" aria-hidden="true"></span>
+          <div class="runtime-step runtime-step--core">
+            <span class="signal-mini" aria-hidden="true"></span>
+            <div><b><span data-i18n="t154">Reason</span></b><small><span data-i18n="t155">selected model · explicit sharing policy</span></small></div>
+          </div>
+          <span class="runtime-link" aria-hidden="true"></span>
+          <div class="runtime-step">
+            <span class="runtime-index">04</span>
+            <div><b><span data-i18n="t156">Act</span></b><small><span data-i18n="t157">discover tools · approve · execute</span></small></div>
+          </div>
+          <span class="runtime-link" aria-hidden="true"></span>
+          <div class="runtime-step">
+            <span class="runtime-index">05</span>
+            <div><b><span data-i18n="t158">Verify</span></b><small><span data-i18n="t159">result · failure · handoff · unknown</span></small></div>
+          </div>
+        </div>
+
+        <div class="runtime-evidence reveal">
+          <article>
+            <span><span data-i18n="t160">DEVICE CAPABILITIES</span></span>
+            <h3><span data-i18n="t161">Different hardware, common tools.</span></h3>
+            <p><span data-i18n="t162">Connected devices report what they can do. Halo does not assume every device has the same sensors or controls.</span></p>
+          </article>
+          <article>
+            <span><span data-i18n="t163">MODEL ROUTING</span></span>
+            <h3><span data-i18n="t164">Choose when data leaves the phone.</span></h3>
+            <p><span data-i18n="t165">Use a local model or explicitly choose a network provider. Remote requests follow that provider's data handling terms.</span></p>
+          </article>
+          <article>
+            <span><span data-i18n="t166">ACTION HISTORY</span></span>
+            <h3><span data-i18n="t167">See what ran and what failed.</span></h3>
+            <p><span data-i18n="t168">Halo records tool calls and their results so interrupted work can be inspected and recovery does not blindly repeat completed actions.</span></p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section alpha" id="alpha" aria-labelledby="alpha-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-download"></use></svg><span data-i18n="t186">08 · TRY THE ALPHA</span></p>
+          <h2 id="alpha-title"><span data-i18n="t187">Try the Android alpha and tell us what happened.</span></h2>
+          <p><span data-i18n="t188">Check GitHub Releases for an APK. If one is available, follow guided setup, test a model, and use the sample files and short checklist below. Report failed or confusing steps—even if you could not finish setup. No glasses or personal files are required.</span></p>
+        </header>
+
+        <div class="alpha-path reveal" aria-label="How to participate" data-i18n-aria-label="t189">
+          <article><span class="alpha-path__number">01</span><div><h3><span data-i18n="t190">Get Halo</span></h3><p><span data-i18n="t191">Check</span> <a href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer"><span data-i18n="t192">Android releases ↗</span></a><span data-i18n="t193">. No published APK? The app is not yet available through this programme.</span></p></div></article>
+          <article><span class="alpha-path__number">02</span><div><h3><span data-i18n="t194">Grab the test kit</span></h3><p><span data-i18n="t195">One short reading, one observation image, and a quick route through the wider app.</span></p></div></article>
+          <article><span class="alpha-path__number">03</span><div><h3><span data-i18n="t196">Try real workflows</span></h3><p><span data-i18n="t197">Use the checklist, skip hardware you don't own, and note what actually happens.</span></p></div></article>
+          <article><span class="alpha-path__number">04</span><div><h3><span data-i18n="t198">Share a finding</span></h3><p><span data-i18n="t199">Report confusing moments as well as broken features. Both help shape Halo.</span></p></div></article>
+        </div>
+
+        <div class="alpha-kit reveal" id="alpha-kit">
+          <div class="alpha-kit__copy">
+            <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-file_doc"></use></svg><span data-i18n="t200">FREE SAMPLE FILES</span></p>
+            <h3><span data-i18n="t201">Start with the short test guide.</span></h3>
+            <p><span data-i18n="t202">The Study example follows three basil seedlings with different daily light exposure. The PDF describes the conditions, and the image shows the final measurements. Together they help check whether Halo uses the source or invents a plausible answer. Downloadable examples are in English.</span></p>
+            <div class="alpha-kit__actions">
+              <a class="button button--dark" href="03_halo_alpha_quick_test.pdf" download="Halo_Alpha_Quick_Test.pdf" type="application/pdf"><span data-i18n="t203">Download quick test guide</span> <span aria-hidden="true">↓</span></a>
+              <a class="button" href="#alpha-files"><span data-i18n="t204">Browse all five files</span> <span aria-hidden="true">↘</span></a>
+            </div>
+            <p class="alpha-fineprint"><span data-i18n="t205">Sample measurements are fictional and intended only for testing. Some Study image tasks require a configured vision-capable model.</span></p>
+          </div>
+          <figure class="alpha-kit__visual">
+            <img src="/01_study_basil_observation.png" alt="Sample study illustration: basil pots A, B and C under different light exposure, labeled 6 cm, 10 cm and 14 cm in final height." data-i18n-alt="t206" loading="lazy" decoding="async" width="2100" height="1260" />
+            <figcaption><span><span data-i18n="t207">01 / OBSERVATION IMAGE</span></span><span><span data-i18n="t208">USE WITH THE ONE-PAGE READING</span></span></figcaption>
+          </figure>
+        </div>
+
+        <div class="alpha-resources reveal" id="alpha-files">
+          <div class="alpha-subhead">
+            <div><p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-collections"></use></svg><span data-i18n="t209">TEST MATERIALS</span></p><h3><span data-i18n="t210">Five downloadable example files.</span></h3><p><span data-i18n="t211">Each file downloads directly from this website. Start with the guide, then import the other materials into Halo as needed.</span></p></div>
+            <span class="alpha-count"><span data-i18n="t212">05 FILES · READY TO USE</span></span>
+          </div>
+          <div class="alpha-file-grid">
+            <a class="alpha-file alpha-file--guide" href="03_halo_alpha_quick_test.pdf" download="03_halo_alpha_quick_test.pdf" type="application/pdf" aria-label="Download Halo alpha quick test guide PDF" data-i18n-aria-label="t213">
+              <span class="alpha-file__type">PDF <span>57 KB</span></span>
+              <strong><span data-i18n="t214">Alpha quick test guide</span></strong>
+              <span class="alpha-file__description"><span data-i18n="t215">One-page checklist for trying the whole app. Best place to start.</span></span>
+              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
+            </a>
+            <a class="alpha-file" href="02_study_how_light_affects_plants.pdf" download="02_study_how_light_affects_plants.pdf" type="application/pdf" aria-label="Download How light affects plants study PDF" data-i18n-aria-label="t217">
+              <span class="alpha-file__type">PDF <span>56 KB</span></span>
+              <strong><span data-i18n="t218">Short science reading</span></strong>
+              <span class="alpha-file__description"><span data-i18n="t219">A one-page lesson about light, photosynthesis and a fair experiment.</span></span>
+              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
+            </a>
+            <a class="alpha-file" href="01_study_basil_observation.png" download="01_study_basil_observation.png" type="image/png" aria-label="Download basil observation study image PNG" data-i18n-aria-label="t220">
+              <span class="alpha-file__type">PNG <span>170 KB</span></span>
+              <strong><span data-i18n="t221">Plant observation image</span></strong>
+              <span class="alpha-file__description"><span data-i18n="t222">Three labeled pots and their measured heights; use it to check visual understanding.</span></span>
+              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
+            </a>
+            <a class="alpha-file" href="04_sample_note.txt" download="04_sample_note.txt" type="text/plain" aria-label="Download sample notebook note TXT" data-i18n-aria-label="t223">
+              <span class="alpha-file__type">TXT <span>285 B</span></span>
+              <strong><span data-i18n="t224">Sample Notebook note</span></strong>
+              <span class="alpha-file__description"><span data-i18n="t225">Ready-made text to test adding, editing and finding content in Notebook or Canvas.</span></span>
+              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
+            </a>
+            <a class="alpha-file" href="05_copy_paste_prompts.txt" download="05_copy_paste_prompts.txt" type="text/plain" aria-label="Download copy and paste test prompts TXT" data-i18n-aria-label="t226">
+              <span class="alpha-file__type">TXT <span>2.3 KB</span></span>
+              <strong><span data-i18n="t227">Copy-and-paste prompts</span></strong>
+              <span class="alpha-file__description"><span data-i18n="t228">Ready-to-use questions, expected observations and an issue report template.</span></span>
+              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="alpha-walkthrough reveal" id="alpha-walkthrough">
+          <div class="alpha-subhead">
+            <div><p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-check"></use></svg><span data-i18n="t229">QUICK TEST ROUTE</span></p><h3><span data-i18n="t230">A first test takes about 15–25 minutes.</span></h3><p><span data-i18n="t231">Tick each step you have tried, including failed attempts. Checkmarks stay in this browser; they are included when you choose to prepare feedback.</span></p></div>
+            <div class="alpha-progress" aria-live="polite" aria-atomic="true"><span id="alpha-progress-label"><span data-i18n="t232">0 of 7 tried</span></span><div class="alpha-progress__track"><span id="alpha-progress-fill"></span></div><button type="button" class="alpha-reset" id="alpha-reset"><span data-i18n="t233">Reset</span></button></div>
+          </div>
+          <ol class="alpha-checklist">
+            <li><label><input type="checkbox" data-alpha-step="setup" /><span class="alpha-checklist__body"><strong><span data-i18n="t234">Get oriented</span> <span><span data-i18n="t235">01 · SETUP</span></span></strong><small><span data-i18n="t236">Open Halo, find Home, Notebook, Devices and Settings. Configure one usable AI model/provider. If no APK is published, skip app tests for now.</span></small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="home" /><span class="alpha-checklist__body"><strong><span data-i18n="t237">Ask a basic question</span> <span><span data-i18n="t238">02 · HOME</span></span></strong><small><span data-i18n="t239">Try: “Explain photosynthesis in two simple sentences.” Look for a clear answer and honest processing or failure status.</span></small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="study-pdf" /><span class="alpha-checklist__body"><strong><span data-i18n="t240">Read from a real PDF</span> <span><span data-i18n="t241">03 · STUDY</span></span></strong><small><span data-i18n="t242">Start a lesson using the science PDF. Ask which days the plants were watered and how much each received altogether. Expected: days 1, 3, 5, 7, 9, 11;</span> <b><span data-i18n="t243">300 mL per pot</span></b>.</small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="study-image" /><span class="alpha-checklist__body"><strong><span data-i18n="t244">Understand the image</span> <span><span data-i18n="t245">04 · STUDY / VISION</span></span></strong><small><span data-i18n="t246">Use the basil PNG. Ask which pot is tallest and by how much compared with A. Expected:</span> <b><span data-i18n="t247">C at 14 cm, 8 cm taller than A</span></b><span data-i18n="t248">. If image analysis is unavailable, Halo should say so.</span></small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="guidance" /><span class="alpha-checklist__body"><strong><span data-i18n="t249">Learn rather than just receive answers</span> <span><span data-i18n="t250">05 · STUDY / PRACTICE</span></span></strong><small><span data-i18n="t251">Say “Give me one hint, not the answer.” Try an answer, request another explanation, then draft practice cards. They should not enter the review queue without your choice.</span></small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="workspace" /><span class="alpha-checklist__body"><strong><span data-i18n="t252">Save and find something</span> <span><span data-i18n="t253">06 · NOTEBOOK / CANVAS</span></span></strong><small><span data-i18n="t254">Import or paste the sample note. Edit it, locate it again, and try sending content into Canvas if available. Check Activity for an accurate record of actions.</span></small></span></label></li>
+            <li><label><input type="checkbox" data-alpha-step="extras" /><span class="alpha-checklist__body"><strong><span data-i18n="t255">Try one extra path</span> <span><span data-i18n="t256">07 · YOUR CHOICE</span></span></strong><small><span data-i18n="t257">Try voice in your language, reconnect a supported device, switch an app language, or recover from an unavailable model. Skip anything requiring hardware or credentials you don't have.</span></small></span></label></li>
+          </ol>
+          <p class="alpha-fineprint"><span data-i18n="t258">A missing feature, unsupported file, failed provider or missing permission is useful test evidence. Record the actual outcome.</span></p>
+        </div>
+
+
+        <section class="feedback-panel" id="feedback" aria-labelledby="feedback-title">
+          <div class="feedback-heading"><p class="section-label"><span data-i18n="feedbackDetails">Your feedback</span></p><h3 id="feedback-title"><span data-i18n="feedbackTitle">Tell us how your first run went.</span></h3><p><span data-i18n="feedbackIntro">A bug, a confusing moment or a small suggestion all help. Your tried checklist steps will be included in the email draft.</span></p></div>
+          <form id="feedback-form">
+            <fieldset><legend><span data-i18n="feedbackAbout">Your setup</span></legend><div class="feedback-grid">
+              <label><span data-i18n="feedbackName">Name (optional)</span><input name="name" autocomplete="name" maxlength="80" /></label>
+              <label><span data-i18n="feedbackEmail">Reply email (optional)</span><input name="email" type="email" autocomplete="email" maxlength="120" /></label>
+              <label><span data-i18n="feedbackVersion">Halo version (optional)</span><input name="version" maxlength="80" /></label>
+              <label><span data-i18n="feedbackHost">Host / device and OS (optional)</span><input name="host" maxlength="120" /></label>
+            </div></fieldset>
+            <fieldset><legend><span data-i18n="feedbackDetails">Your feedback</span></legend><div class="feedback-grid">
+              <label><span data-i18n="feedbackKind">What are you sharing?</span><select name="kind"><option value="kindConfusing" data-i18n="kindConfusing">Something confusing</option><option value="kindBug" data-i18n="kindBug">Something broken</option><option value="kindIdea" data-i18n="kindIdea">A suggestion</option><option value="kindGood" data-i18n="kindGood">Something that worked well</option></select></label>
+              <label><span data-i18n="feedbackScreen">Screen or feature (required)</span><input name="screen" required maxlength="100" /></label>
+              <label class="feedback-wide"><span data-i18n="feedbackSummary">What did you notice? (required)</span><textarea name="summary" required rows="4" maxlength="1000"></textarea></label>
+              <label><span data-i18n="feedbackExpected">What did you expect? (optional)</span><textarea name="expected" rows="3" maxlength="600"></textarea></label>
+              <label><span data-i18n="feedbackSteps">How can we reproduce it? (optional)</span><textarea name="steps" rows="3" maxlength="600"></textarea></label>
+              <label class="feedback-wide"><span data-i18n="feedbackRating">How clear did Halo feel? (optional)</span><select name="rating"><option value="" data-i18n="ratingNone">Choose an answer</option><option value="ratingEasy" data-i18n="ratingEasy">Clear and easy</option><option value="ratingMixed" data-i18n="ratingMixed">Mostly clear, with a few confusing parts</option><option value="ratingHard" data-i18n="ratingHard">Hard to understand</option></select></label>
+            </div></fieldset>
+            <p class="feedback-note"><span data-i18n="feedbackPrivacy">Only include details you want to share. This form does not store your answers. Add a screenshot in your mail app after hiding private information.</span></p>
+            <p class="feedback-note"><span data-i18n="feedbackDelivery">Opens an email draft to slaff.trosheen@gmail.com in your mail app. Review it and press Send there.</span></p>
+            <div class="feedback-actions"><button class="button button--dark" type="submit" disabled><span data-i18n="feedbackSubmit">Open email draft</span></button><button class="button" type="button" id="feedback-copy" disabled><span data-i18n="feedbackCopy">Copy feedback</span></button><button class="feedback-clear" type="reset"><span data-i18n="feedbackReset">Clear form</span></button></div>
+            <p id="feedback-status" role="status" aria-live="polite"></p>
+            <details id="feedback-preview"><summary><span data-i18n="feedbackPreview">Prepared feedback</span></summary><pre id="feedback-body"></pre></details>
+            <noscript><p>JavaScript is needed to prepare the draft. You can email your feedback directly to <a href="mailto:slaff.trosheen@gmail.com">slaff.trosheen@gmail.com</a>.</p></noscript>
+          </form>
+        </section>
+
+        <div class="alpha-report reveal" id="alpha-report">
+          <div class="alpha-report__intro">
+            <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-ask_mode"></use></svg><span data-i18n="t259">FOUND SOMETHING?</span></p>
+            <h3><span data-i18n="t260">Even a confusing button is worth reporting.</span></h3>
+            <p><span data-i18n="t261">Tell us which screen you were on, what you tried, what you expected and what actually happened. Include your Android and Halo versions if relevant. Never post API keys, personal files, identifiers, or unredacted private logs.</span></p>
+            <div class="alpha-report__actions">
+              <a class="button button--mint" href="https://github.com/slafftrosheen/Halo/issues/new/choose" target="_blank" rel="noopener noreferrer"><span data-i18n="t262">Report on GitHub</span> <span aria-hidden="true">↗</span></a>
+              <a class="button button--ghost" href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer"><span data-i18n="t263">Check Android releases</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <details class="alpha-report__template">
+            <summary><span data-i18n="t264">Quick issue template</span> <span aria-hidden="true">+</span></summary>
+            <div class="alpha-report__template-content">
+              <pre id="alpha-issue-template">Halo version / Android version:
+Screen or feature:
+What I tried:
+Expected:
+Actual:
+Steps to reproduce:
+Screenshot (redact private data):</pre>
+              <button type="button" id="alpha-copy-template" class="alpha-copy"><span data-i18n="t265">Copy template</span></button>
+              <span id="alpha-copy-status" class="alpha-copy-status" role="status" aria-live="polite"></span>
+            </div>
+          </details>
+        </div>
+
+        <p class="alpha-availability reveal"><span data-i18n="t266">Alpha means unfinished software. Features and supported devices can change. Back up important work and avoid relying on Halo for safety-critical tasks. A public build only exists when a release appears on</span> <a href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer"><span data-i18n="t267">GitHub Releases ↗</span></a>.</p>
+      </div>
+    </section>
+<section class="section mission" id="mission">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-privacy"></use></svg><span data-i18n="missionLabel">OUR PURPOSE</span></p>
+          <h2><span data-i18n="missionTitle">An assistant that fits into your day.</span></h2>
+          <p><span data-i18n="missionBody">Halo brings together everyday requests, supported phone actions, notes and learning on Android. You decide which sources and permissions it can use, and whether a request goes to an on-device model or a service you select.</span></p>
         </header>
         <div class="mission-pillars reveal">
           <article>
             <span class="pillar-icon"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-on_device"></use></svg></span>
             <h3><span data-i18n="missionPill1Title">On-device first</span></h3>
-            <p><span data-i18n="missionPill1Body">A model can run on the phone itself, so everyday questions work without a connection and without a round trip.</span></p>
+            <p><span data-i18n="missionPill1Body">A compatible model can answer on your phone after you download and test it. Available memory, performance and supported languages depend on the device and model.</span></p>
           </article>
           <article>
             <span class="pillar-icon"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-code"></use></svg></span>
@@ -154,7 +657,7 @@
           <article>
             <span class="pillar-icon"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-privacy"></use></svg></span>
             <h3><span data-i18n="missionPill3Title">Your data stays yours</span></h3>
-            <p><span data-i18n="missionPill3Body">Nothing leaves the phone quietly. Remote models are a choice you make, provider by provider.</span></p>
+            <p><span data-i18n="missionPill3Body">Your files stay local unless you choose an action or provider that shares information. Review permissions and the privacy terms of any service you connect.</span></p>
           </article>
         </div>
       </div>
@@ -163,9 +666,9 @@
     <section class="section ring" id="ring">
       <div class="container ring-grid">
         <div class="ring-copy reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-home"></use></svg><span data-i18n="ringLabel">02 · THE OPEN RING</span></p>
+          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-home"></use></svg><span data-i18n="ringLabel">OUR OPEN RING</span></p>
           <h2><span data-i18n="ringTitle">An open circle.</span></h2>
-          <p class="ring-intro"><span data-i18n="ringIntro">A closed ring is a boundary. Ours is open on purpose.</span></p>
+          <p class="ring-intro"><span data-i18n="ringIntro">The open gap is deliberate: Halo is designed to remain approachable and open to contribution.</span></p>
           <dl class="ring-meaning">
             <div>
               <dt><span data-i18n="ringGapTitle">The gap means open source.</span></dt>
@@ -173,15 +676,15 @@
             </div>
             <div>
               <dt><span data-i18n="ringRingTitle">The ring is a halo of light.</span></dt>
-              <dd><span data-i18n="ringRingBody">Help that surrounds you quietly, instead of a screen you stare at.</span></dd>
+              <dd><span data-i18n="ringRingBody">A quiet visual signal for assistance, not another screen that demands attention.</span></dd>
             </div>
             <div>
-              <dt><span data-i18n="ringGradientTitle">The gradient runs device to cloud.</span></dt>
-              <dd><span data-i18n="ringGradientBody">Bright and close at the core, softer as it reaches outward.</span></dd>
+              <dt><span data-i18n="ringGradientTitle">A gradient from near to far.</span></dt>
+              <dd><span data-i18n="ringGradientBody">Mint at the core, softer at the edge. It is a brand symbol, not an indicator that data was sent to the cloud.</span></dd>
             </div>
             <div>
-              <dt><span data-i18n="ringEndsTitle">Rounded ends stay human.</span></dt>
-              <dd><span data-i18n="ringEndsBody">No sharp edges, nothing robotic.</span></dd>
+              <dt><span data-i18n="ringEndsTitle">Rounded ends, a softer feel.</span></dt>
+              <dd><span data-i18n="ringEndsBody">Simple shapes keep the mark friendly without turning it into a cartoon character.</span></dd>
             </div>
           </dl>
         </div>
@@ -190,7 +693,7 @@
               <div class="orb-canvas" aria-hidden="true"></div>
               <img class="orb-fallback" src="assets/brand/orb/svg/halo_orb_idle.svg" width="320" height="320" alt="" />
           </div>
-          <figcaption><span data-i18n="ringCaption">The gap rests, travels, closes and calls for you.</span></figcaption>
+          <figcaption><span data-i18n="ringCaption">The gap and centre symbol change with the state.</span></figcaption>
         </figure>
       </div>
     </section>
@@ -198,9 +701,9 @@
     <section class="section presence" id="presence">
       <div class="container">
         <header class="section-head section-head--dark reveal">
-          <p class="section-label section-label--mint"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-runtime_status"></use></svg><span data-i18n="presenceLabel">03 · HALO'S PRESENCE</span></p>
+          <p class="section-label section-label--mint"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-runtime_status"></use></svg><span data-i18n="presenceLabel">THE PRESENCE SYSTEM</span></p>
           <h2><span data-i18n="presenceTitle">A clear signal for what Halo is doing.</span></h2>
-          <p><span data-i18n="presenceIntro">The open ring is Halo's body language, and the animation set comes from the Halo graphics kit, not from a running Android session. Choose a state to see it move: the ring rests when Halo is ready, travels while it thinks, closes when a task is done, and turns apricot when Halo needs you.</span></p>
+          <p><span data-i18n="presenceIntro">Explore the ring, icons and state animations from Halo's design kit. The current Android source includes presence assets, but this gallery is an interactive design preview, not a live phone session. A state should appear only when the app is actually doing that work.</span></p>
         </header>
 
         <div class="presence-studio reveal">
@@ -359,506 +862,11 @@
           </ol>
         </div>
 
-        <p class="presence-disclaimer reveal"><span data-i18n="presenceNote">Design-system preview, not a verified app feature. In the app, state indicators must follow real microphone, action and permission events.</span></p>
+        <p class="presence-disclaimer reveal"><span data-i18n="presenceNote">Design preview. The Android source includes presence assets, but each live indication and animation still needs device verification. Listening, camera, tool and cloud indicators must represent actual activity.</span></p>
       </div>
     </section>
 
-    <section class="plain-summary">
-      <div class="container summary-grid reveal">
-        <div>
-          <span>01</span>
-          <b><span data-i18n="t034">Ask, then see what happened.</span></b>
-          <p><span data-i18n="t035">Request an answer or a supported phone action by voice or text. Halo should distinguish completed work from failed and unconfirmed steps.</span></p>
-        </div>
-        <div>
-          <span>02</span>
-          <b><span data-i18n="t036">Keep your material together.</span></b>
-          <p><span data-i18n="t037">Save notes and files, arrange ideas in Canvas, and study from sources you choose.</span></p>
-        </div>
-        <div>
-          <span>03</span>
-          <b><span data-i18n="t038">Choose the AI behind it.</span></b>
-          <p><span data-i18n="t039">Run a compatible model on your phone, connect your own server or select a cloud provider. Privacy and performance differ by choice.</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section product" id="product">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-devices"></use></svg><span data-i18n="t040">04 · INSIDE THE APP</span></p>
-          <h2><span data-i18n="t041">What you can try in the Android alpha.</span></h2>
-          <p>
-            <span data-i18n="t042">Home handles requests. Activity shows actions and approvals. Notebook keeps notes and files; Canvas and Study work with those sources. Devices and Settings manage hardware, models and permissions. These are real Android screenshots, not proof that every feature is fully tested.</span>
-          </p>
-        </header>
-
-        <div class="app-carousel" role="region" aria-label="Explore the Android app" data-i18n-aria-label="carouselLabel">
-          <div class="carousel-top"><p data-i18n="carouselHint">Choose a screen, swipe, or use the arrows to explore the current Android implementation.</p><div class="carousel-controls"><button type="button" id="app-previous" aria-label="Previous screen" data-i18n-aria-label="previousScreen">←</button><span id="app-position" role="status" aria-live="polite">1 / 12</span><button type="button" id="app-next" aria-label="Next screen" data-i18n-aria-label="nextScreen">→</button></div></div>
-          <div class="carousel-nav"><button type="button" data-app-screen="0" aria-controls="app-slide-0" aria-pressed="true"><span data-i18n="t044">Home</span></button>
-<button type="button" data-app-screen="1" aria-controls="app-slide-1" aria-pressed="false"><span data-i18n="t047">Notebook</span></button>
-<button type="button" data-app-screen="2" aria-controls="app-slide-2" aria-pressed="false"><span data-i18n="t050">Study</span></button>
-<button type="button" data-app-screen="3" aria-controls="app-slide-3" aria-pressed="false"><span data-i18n="t053">Settings</span></button>
-<button type="button" data-app-screen="4" aria-controls="app-slide-4" aria-pressed="false"><span data-i18n="t007">Devices</span></button>
-<button type="button" data-app-screen="5" aria-controls="app-slide-5" aria-pressed="false"><span data-i18n="t058">Activity</span></button>
-<button type="button" data-app-screen="6" aria-controls="app-slide-6" aria-pressed="false"><span data-i18n="t061">Notifications</span></button>
-<button type="button" data-app-screen="7" aria-controls="app-slide-7" aria-pressed="false"><span data-i18n="t064">Workspace tools</span></button>
-<button type="button" data-app-screen="8" aria-controls="app-slide-8" aria-pressed="false"><span data-i18n="t067">Skills</span></button>
-<button type="button" data-app-screen="9" aria-controls="app-slide-9" aria-pressed="false"><span data-i18n="t070">Access and setup</span></button>
-<button type="button" data-app-screen="10" aria-controls="app-slide-10" aria-pressed="false"><span data-i18n="t073">Memory</span></button>
-<button type="button" data-app-screen="11" aria-controls="app-slide-11" aria-pressed="false">Canvas</button></div>
-          <div class="app-track" id="app-track" tabindex="0" aria-label="Explore the Android app" data-i18n-aria-label="carouselLabel"><figure class="app-slide" id="app-slide-0">
-            <a href="assets/screens/home.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/screens/home.jpg" width="1080" height="2400" alt="Halo Home screen." data-i18n-alt="t043" /></a>
-            <figcaption><b><span data-i18n="t044">Home</span></b><span><span data-i18n="t045">Ask by voice or text, follow task status, continue a conversation and manage context.</span></span><a class="capture-link" href="assets/screens/home.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
-          </figure>
-<figure class="app-slide" id="app-slide-1">
-            <a href="assets/screens/notebook.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/notebook.jpg" width="1080" height="2400" alt="Halo Notebook screen." data-i18n-alt="t046" /></a>
-            <figcaption><b><span data-i18n="t047">Notebook</span></b><span><span data-i18n="t048">Notes, files, conversations, collections, favorites, Canvas and explicit working context.</span></span><a class="capture-link" href="assets/screens/notebook.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
-          </figure>
-<figure class="app-slide" id="app-slide-2">
-            <a href="assets/screens/study.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/study.jpg" width="1080" height="2400" alt="Halo Study screen." data-i18n-alt="t049" /></a>
-            <figcaption><b><span data-i18n="t050">Study</span></b><span><span data-i18n="t051">Guided learning from a workspace source, with attempts, feedback, review history and narration.</span></span><a class="capture-link" href="assets/screens/study.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
-          </figure>
-<figure class="app-slide" id="app-slide-3">
-            <a href="assets/screens/settings.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/settings.jpg" width="1080" height="2400" alt="Halo Settings with Intelligence, Voice, Language and Appearance controls." data-i18n-alt="t052" /></a>
-            <figcaption><b><span data-i18n="t053">Settings</span></b><span><span data-i18n="t054">Choose how Halo answers, set your language and appearance, and manage voice and skills.</span></span><a class="capture-link" href="assets/screens/settings.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
-          </figure>
-<figure class="app-slide" id="app-slide-4">
-            <a href="assets/screens/devices.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/devices.jpg" width="1080" height="2400" alt="Halo Devices screen." data-i18n-alt="t055" /></a>
-            <figcaption><b><span data-i18n="t007">Devices</span></b><span><span data-i18n="t056">Your phone, saved hardware, available capabilities, device health and connections.</span></span><a class="capture-link" href="assets/screens/devices.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption>
-          </figure>
-<figure class="app-slide" id="app-slide-5"><a href="assets/screens/activity.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/activity.jpg" width="1080" height="2400" alt="Halo Activity on an Android phone." data-i18n-alt="t057" /></a><figcaption><b><span data-i18n="t058">Activity</span></b><span><span data-i18n="t059">Review requests, approvals and recorded outcomes.</span></span><a class="capture-link" href="assets/screens/activity.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
-<figure class="app-slide" id="app-slide-6"><a href="assets/screens/notifications.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/notifications.jpg" width="1080" height="2400" alt="Halo Notifications on an Android phone." data-i18n-alt="t060" /></a><figcaption><b><span data-i18n="t061">Notifications</span></b><span><span data-i18n="t062">View notifications from apps you have allowed.</span></span><a class="capture-link" href="assets/screens/notifications.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
-<figure class="app-slide" id="app-slide-7"><a href="assets/screens/workspace-tools.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/workspace-tools.jpg" width="1080" height="2400" alt="Halo Workspace tools on an Android phone." data-i18n-alt="t063" /></a><figcaption><b><span data-i18n="t064">Workspace tools</span></b><span><span data-i18n="t065">Reach Skills, Canvas, Memory and Study from Notebook.</span></span><a class="capture-link" href="assets/screens/workspace-tools.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
-<figure class="app-slide" id="app-slide-8"><a href="assets/screens/skills.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/skills.jpg" width="1080" height="2400" alt="Halo Skills on an Android phone." data-i18n-alt="t066" /></a><figcaption><b><span data-i18n="t067">Skills</span></b><span><span data-i18n="t068">Manage available actions and choose models for your skills.</span></span><a class="capture-link" href="assets/screens/skills.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
-<figure class="app-slide" id="app-slide-9"><a href="assets/screens/access.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/access.jpg" width="1080" height="2400" alt="Halo Access and setup on an Android phone." data-i18n-alt="t069" /></a><figcaption><b><span data-i18n="t070">Access and setup</span></b><span><span data-i18n="t071">Review permissions, storage, backup and setup readiness.</span></span><a class="capture-link" href="assets/screens/access.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
-<figure class="app-slide" id="app-slide-10"><a href="assets/screens/memory.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/memory.jpg" width="1080" height="2400" alt="Halo Memory on an Android phone." data-i18n-alt="t072" /></a><figcaption><b><span data-i18n="t073">Memory</span></b><span><span data-i18n="t074">Choose which suggestions Halo can make; saving them requires your approval.</span></span><a class="capture-link" href="assets/screens/memory.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure>
-<figure class="app-slide" id="app-slide-11"><a href="assets/screens/canvas.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/canvas.jpg" width="1080" height="2400" alt="Halo Canvas UI capture." data-i18n-alt="t120" /></a><figcaption><b>Canvas</b><span data-i18n="t126">Keep notes, files, conversations and collections together. Canvas gives you a visual space for ideas, images and documents. PDF tools are still in development.</span><a class="capture-link" href="assets/screens/canvas.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure></div>
-        </div>
-<p class="asset-note reveal"><span data-i18n="t075">Real Android test-build screenshots from 13 October 2026. The app is shown in English; the language picker changes website text, not screenshot content.</span></p>
-      </div>
-    </section>
-
-    <section class="section actions" id="actions">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-phone_action"></use></svg><span data-i18n="t076">05 · PHONE ACTIONS</span></p>
-          <h2><span data-i18n="t077">Ask Halo to help with a phone task.</span></h2>
-          <p>
-            <span data-i18n="t078">Try setting a timer, opening an app or adjusting a setting. With permission and approval, Halo can also work with visible screen controls. Multi-step actions and handoffs to third-party apps are still being tested.</span>
-          </p>
-        </header>
-
-        <div class="action-groups reveal">
-          <article>
-            <span class="action-number">A</span>
-            <div>
-              <h3><span data-i18n="t079">Control the phone</span></h3>
-              <p><span data-i18n="t080">Set alarms and timers. Change volume, ringer mode, brightness and flashlight. Open settings and apps.</span></p>
-              <small><span data-i18n="t081">Examples: “Set a timer for 12 minutes.” · “Put the phone on vibrate.”</span></small>
-            </div>
-          </article>
-
-          <article>
-            <span class="action-number">B</span>
-            <div>
-              <h3><span data-i18n="t082">Navigate and communicate</span></h3>
-              <p><span data-i18n="t083">Find contacts, open the dialer, launch navigation, open URLs, search the web, share text and control media.</span></p>
-              <small><span data-i18n="t084">When an action is handed to another app, Halo reports that the request was dispatched. Completion may still be unconfirmed.</span></small>
-            </div>
-          </article>
-
-          <article>
-            <span class="action-number">C</span>
-            <div>
-              <h3><span data-i18n="t085">Read useful context</span></h3>
-              <p><span data-i18n="t086">Inspect device, battery and network state; read clipboard text; fetch a web page; search files and Notebook.</span></p>
-              <small><span data-i18n="t087">Access to sensitive data follows tool policies and approval rules.</span></small>
-            </div>
-          </article>
-
-          <article>
-            <span class="action-number">D</span>
-            <div>
-              <h3><span data-i18n="t088">Work with the screen</span></h3>
-              <p><span data-i18n="t089">Read the current Android screen, find UI elements, and use accessibility-backed click, scroll and text entry when needed.</span></p>
-              <small><span data-i18n="t090">Screen-changing accessibility actions are explicitly confirmation-gated.</span></small>
-            </div>
-          </article>
-        </div>
-
-        <div class="truth-panel reveal">
-          <div>
-            <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-approval"></use></svg><span data-i18n="t091">HONEST ACTION STATUS</span></p>
-            <h3><span data-i18n="t092">A request is not proof it worked.</span></h3>
-          </div>
-          <p>
-            <span data-i18n="t093">Halo records attempted actions and their outcomes. If another app takes over or Android cannot confirm the result, the assistant should report that rather than claim the task is finished.</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section workspace" id="workspace">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-notebook"></use></svg><span data-i18n="t115">06 · NOTES AND STUDY</span></p>
-          <h2><span data-i18n="workspaceFlow">Notes, files and study tools in one place.</span></h2>
-          <p>
-            <span data-i18n="workspaceIntro">Notebook saves notes and files. Canvas lets you arrange, annotate and connect your sources. Study turns material you choose into explanations, questions and guided practice.</span>
-          </p>
-        </header>
-
-<div class="workspace-explorer"><div class="workspace-steps" role="tablist" aria-orientation="vertical" aria-label="Explore the workspace" data-i18n-aria-label="workspaceTabs"><button type="button" role="tab" id="workspace-tab-notebook" aria-controls="workspace-panel-notebook" aria-selected="true" tabindex="0" data-workspace-tab="notebook"><span class="workspace-step">01</span><span class="workspace-step-copy"><b><span data-i18n="workspaceSave">Organize notes and files</span></b><small><span data-i18n="workspaceSaveHint">Notes, files and conversations in Notebook.</span></small></span><span class="workspace-step-arrow" aria-hidden="true">↗</span></button>
-<button type="button" role="tab" id="workspace-tab-canvas" aria-controls="workspace-panel-canvas" aria-selected="false" tabindex="-1" data-workspace-tab="canvas"><span class="workspace-step">02</span><span class="workspace-step-copy"><b><span data-i18n="workspaceConnect">Arrange ideas visually</span></b><small><span data-i18n="workspaceConnectHint">Arrange and connect your materials in Canvas.</span></small></span><span class="workspace-step-arrow" aria-hidden="true">↗</span></button>
-<button type="button" role="tab" id="workspace-tab-study" aria-controls="workspace-panel-study" aria-selected="false" tabindex="-1" data-workspace-tab="study"><span class="workspace-step">03</span><span class="workspace-step-copy"><b><span data-i18n="workspaceLearn">Study material you choose</span></b><small><span data-i18n="workspaceLearnHint">Choose a goal and materials in Study.</span></small></span><span class="workspace-step-arrow" aria-hidden="true">↗</span></button></div><div class="workspace-stage"><div class="workspace-panel" id="workspace-panel-notebook" role="tabpanel" aria-labelledby="workspace-tab-notebook" tabindex="0" ><div class="workspace-panel-copy"><p class="section-label"><span data-i18n="t047">Notebook</span></p><p><span data-i18n="workspaceNotebookBody">Find your notes, imported files and saved conversations in one library. Choose the materials you want to work with next.</span></p></div><figure><a href="assets/screens/notebook.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/notebook.jpg" width="1080" height="2400" alt="Halo Notebook screenshot." data-i18n-alt="t118" /></a><figcaption><a href="assets/screens/notebook.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure></div>
-<div class="workspace-panel" id="workspace-panel-canvas" role="tabpanel" aria-labelledby="workspace-tab-canvas" tabindex="0" hidden><div class="workspace-panel-copy"><p class="section-label">Canvas</p><p><span data-i18n="workspaceCanvasBody">Place notes, images and documents on a visual canvas. Connect related ideas and arrange them in a way that makes sense to you.</span></p></div><figure><a href="assets/screens/canvas.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/canvas.jpg" width="1080" height="2400" alt="Halo Canvas screenshot." data-i18n-alt="t120" /></a><figcaption><a href="assets/screens/canvas.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure></div>
-<div class="workspace-panel" id="workspace-panel-study" role="tabpanel" aria-labelledby="workspace-tab-study" tabindex="0" hidden><div class="workspace-panel-copy"><p class="section-label"><span data-i18n="t050">Study</span></p><p><span data-i18n="workspaceStudyBody">Start with a question or learning goal. Add your own material when useful, then learn through explanations, practice and review.</span></p></div><figure><a href="assets/screens/study.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/screens/study.jpg" width="1080" height="2400" alt="Halo Study screenshot." data-i18n-alt="t119" /></a><figcaption><a href="assets/screens/study.jpg" target="_blank" rel="noopener"><span data-i18n="openCapture">Open full screenshot ↗</span></a></figcaption></figure></div></div></div><aside class="workspace-boundary" aria-labelledby="workspace-choice"><h3 id="workspace-choice"><span data-i18n="workspaceChoice">You choose what the assistant uses</span></h3><div><article><h4><span data-i18n="t122">Working context</span></h4><p><span data-i18n="workspaceContextBody">Adding an item to working context gives Halo material for the current task. You can add or remove items deliberately.</span></p></article><article><h4><span data-i18n="t073">Memory</span></h4><p><span data-i18n="workspaceMemoryBody">Saving a note does not save it as a memory. Keeping something in memory is a separate choice that requires your approval.</span></p></article></div></aside>
-      </div>
-    </section>
-
-    <section class="section ai" id="ai">
-      <div class="container ai-layout">
-        <div class="ai-copy reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-intelligence"></use></svg><span data-i18n="t094">07 · AI OPTIONS</span></p>
-          <h2><span data-i18n="t095">Choose where Halo thinks.</span></h2>
-          <p>
-            <span data-i18n="t096">Download and test a model on your phone, connect a server on your network, or configure a cloud provider. Remote requests can send relevant context to the provider you select. Halo must not silently move your data to a different provider after a failure.</span>
-          </p>
-
-          <div class="ai-lanes">
-            <article>
-              <span><span data-i18n="t097">ON DEVICE</span></span>
-              <h3>LiteRT-LM</h3>
-              <p><span data-i18n="t098">Discover and download LiteRT models in Settings, test an answer, then choose a model for supported roles. A fit estimate is not a real device test: speed and compatibility depend on the phone.</span></p>
-            </article>
-            <article>
-              <span><span data-i18n="t099">ON YOUR NETWORK</span></span>
-              <h3><span data-i18n="t100">Local model server</span></h3>
-              <p><span data-i18n="t101">Connect to Ollama, OpenCode Companion or a compatible endpoint on a computer you control.</span></p>
-            </article>
-            <article>
-              <span><span data-i18n="t102">CLOUD</span></span>
-              <h3><span data-i18n="t103">Optional cloud AI</span></h3>
-              <p><span data-i18n="t104">Configure OpenRouter, Gemini, OpenAI or another supported provider. Each service has its own setup, costs and limits.</span></p>
-            </article>
-          </div>
-        </div>
-
-        <figure class="ai-shot shot-reveal">
-          <img loading="lazy" src="assets/screens/settings.jpg" width="1080" height="2400" alt="Halo Settings showing the entry point to Intelligence and voice setup." data-i18n-alt="t105" />
-          <figcaption><span data-i18n="t106">Open Intelligence from Settings to configure models and providers.</span></figcaption>
-        </figure>
-      </div>
-
-      <div class="container provider-facts reveal">
-        <div>
-          <b><span data-i18n="t107">Gemini can use Google OAuth.</span></b>
-          <p><span data-i18n="t108">The current app supports Google authorization with a Cloud project, alongside an API-key fallback.</span></p>
-        </div>
-        <div>
-          <b><span data-i18n="t109">Some providers offer free-tier options.</span></b>
-          <p><span data-i18n="t110">Free access, model availability and limits depend on the provider and may change.</span></p>
-        </div>
-        <div>
-          <b><span data-i18n="t111">Your provider choice is respected.</span></b>
-          <p><span data-i18n="t112">A selected provider failure is not permission to silently move private context to another provider.</span></p>
-        </div>
-        <div>
-          <b><span data-i18n="t113">Credentials are protected.</span></b>
-          <p><span data-i18n="t114">Credentials use Android Keystore-backed storage rather than ordinary app preferences.</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section devices" id="devices">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-glasses"></use></svg><span data-i18n="t132">08 · CONNECTED DEVICES</span></p>
-          <h2><span data-i18n="t133">Start on Android. Other devices are optional.</span></h2>
-          <p>
-            <span data-i18n="t134">Halo is not a glasses-only assistant. Android is the first host platform. Glasses, headsets and experimental robots may extend interaction where drivers and hands-on tests support them; other host platforms remain in development.</span>
-          </p>
-        </header>
-
-        <div class="devices-layout">
-          <figure class="devices-shot shot-reveal">
-            <img loading="lazy" src="assets/screens/devices.jpg" width="1080" height="2400" alt="Halo Devices UI capture." data-i18n-alt="t135" />
-          </figure>
-
-          <div class="device-list reveal">
-            <article>
-              <span><span data-i18n="t136">FIRST HOST PLATFORM</span></span>
-              <h3><span data-i18n="t137">Android phone</span></h3>
-              <p><span data-i18n="t138">The Android app contains the assistant, model setup, phone tools, Notebook and Study. Some workflows still need validation on physical devices.</span></p>
-            </article>
-            <article>
-              <span><span data-i18n="t139">TEST HARDWARE</span></span>
-              <h3><span data-i18n="t140">HeyCyan glasses</span></h3>
-              <p><span data-i18n="t141">HeyCyan glasses are the current Bluetooth and microphone integration target. Some speaker and media paths still need physical testing.</span></p>
-            </article>
-            <article>
-              <span><span data-i18n="t142">AUDIO ACCESSORIES</span></span>
-              <h3><span data-i18n="t143">Headsets and earbuds</span></h3>
-              <p><span data-i18n="t144">Supported Android headsets can provide microphone and audio output, depending on routing and permissions.</span></p>
-            </article>
-            <article>
-              <span><span data-i18n="t145">EXPERIMENTAL HARDWARE</span></span>
-              <h3>BuddyBot</h3>
-              <p><span data-i18n="t146">BuddyBot is a robot project exploring physical actions and safety. It is experimental and not needed to use Halo.</span></p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section status" id="status">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-runtime_status"></use></svg><span data-i18n="t169">09 · DEVELOPMENT STATUS</span></p>
-          <h2><span data-i18n="t170">Built in the source. Still being tested.</span></h2>
-          <p>
-            <span data-i18n="t171">The Android alpha has working paths and substantial code, but compile checks, unit tests and physical device acceptance are different things. Some actions and integrations remain unverified. Check GitHub Releases for builds and their known limits.</span>
-          </p>
-        </header>
-
-        <div class="status-grid reveal">
-          <article class="status-good">
-            <span><span data-i18n="t172">TESTED ON HARDWARE</span></span>
-            <h3><span data-i18n="t173">A local model has answered on a phone.</span></h3>
-            <p><span data-i18n="t174">A small Qwen model has produced local responses on an Android test device. HeyCyan microphone capture also has real-hardware evidence.</span></p>
-          </article>
-          <article>
-            <span><span data-i18n="t175">AUTOMATED CHECKS</span></span>
-            <h3><span data-i18n="t176">Automated tests cover core paths.</span></h3>
-            <p><span data-i18n="t177">The app has code-level tests for actions, workspace and model-related behavior. Passing tests does not establish that every command works on every phone.</span></p>
-          </article>
-          <article class="status-warn">
-            <span><span data-i18n="t178">NEEDS END-TO-END TESTING</span></span>
-            <h3><span data-i18n="t179">Some integrations are still unverified.</span></h3>
-            <p><span data-i18n="t180">Model compatibility, multi-step actions, remote-provider failures and some wearable audio paths still need end-to-end acceptance on real hardware.</span></p>
-          </article>
-        </div>
-
-        <div class="closing reveal">
-          <div>
-            <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-source"></use></svg><span data-i18n="t181">SOURCE EVIDENCE</span></p>
-            <h2><span data-i18n="t182">Want the engineering details?</span></h2>
-            <p>
-              <span data-i18n="t183">The repository separates implemented code, test evidence and known gaps. You can inspect the progress rather than rely on website claims.</span>
-            </p>
-          </div>
-          <div class="closing-actions">
-            <a class="button button--mint" href="https://github.com/slafftrosheen/Halo" target="_blank" rel="noopener"><span data-i18n="t184">Open Halo on GitHub ↗</span></a>
-            <a class="button button--ghost" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" target="_blank" rel="noopener"><span data-i18n="t185">Current state</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section runtime" id="runtime">
-      <div class="container">
-        <header class="section-head section-head--dark reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-code"></use></svg><span data-i18n="t147">10 · FOR DEVELOPERS</span></p>
-          <h2><span data-i18n="t148">One runtime, different devices and models.</span></h2>
-          <p>
-            <span data-i18n="t149">Halo separates input, context, model reasoning, permissions and tool execution. Android is the first host; Linux and Windows are development targets, not released apps. The aim is to keep the assistant useful without committing to a single model or gadget.</span>
-          </p>
-        </header>
-
-        <div class="runtime-flow reveal" data-runtime-flow>
-          <div class="runtime-step">
-            <span class="runtime-index">01</span>
-            <div><b><span data-i18n="t150">Input</span></b><small><span data-i18n="t151">voice · text · image · device event</span></small></div>
-          </div>
-          <span class="runtime-link" aria-hidden="true"></span>
-          <div class="runtime-step">
-            <span class="runtime-index">02</span>
-            <div><b><span data-i18n="t152">Context</span></b><small><span data-i18n="t153">conversation · workspace · current surface</span></small></div>
-          </div>
-          <span class="runtime-link" aria-hidden="true"></span>
-          <div class="runtime-step runtime-step--core">
-            <span class="signal-mini" aria-hidden="true"></span>
-            <div><b><span data-i18n="t154">Reason</span></b><small><span data-i18n="t155">selected model · explicit sharing policy</span></small></div>
-          </div>
-          <span class="runtime-link" aria-hidden="true"></span>
-          <div class="runtime-step">
-            <span class="runtime-index">04</span>
-            <div><b><span data-i18n="t156">Act</span></b><small><span data-i18n="t157">discover tools · approve · execute</span></small></div>
-          </div>
-          <span class="runtime-link" aria-hidden="true"></span>
-          <div class="runtime-step">
-            <span class="runtime-index">05</span>
-            <div><b><span data-i18n="t158">Verify</span></b><small><span data-i18n="t159">result · failure · handoff · unknown</span></small></div>
-          </div>
-        </div>
-
-        <div class="runtime-evidence reveal">
-          <article>
-            <span><span data-i18n="t160">DEVICE CAPABILITIES</span></span>
-            <h3><span data-i18n="t161">Different hardware, common tools.</span></h3>
-            <p><span data-i18n="t162">Connected devices report what they can do. Halo does not assume every device has the same sensors or controls.</span></p>
-          </article>
-          <article>
-            <span><span data-i18n="t163">MODEL ROUTING</span></span>
-            <h3><span data-i18n="t164">Choose when data leaves the phone.</span></h3>
-            <p><span data-i18n="t165">Use a local model or explicitly choose a network provider. Remote requests follow that provider's data handling terms.</span></p>
-          </article>
-          <article>
-            <span><span data-i18n="t166">ACTION HISTORY</span></span>
-            <h3><span data-i18n="t167">See what ran and what failed.</span></h3>
-            <p><span data-i18n="t168">Halo records tool calls and their results so interrupted work can be inspected and recovery does not blindly repeat completed actions.</span></p>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section alpha" id="alpha" aria-labelledby="alpha-title">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-download"></use></svg><span data-i18n="t186">11 · TRY THE ALPHA</span></p>
-          <h2 id="alpha-title"><span data-i18n="t187">Help test Halo on Android.</span></h2>
-          <p><span data-i18n="t188">Check GitHub Releases for an installable Android build. If one is available, use the short test guide and sample files, then report what worked, failed or was confusing. Glasses and personal documents are not required.</span></p>
-        </header>
-
-        <div class="alpha-path reveal" aria-label="How to participate" data-i18n-aria-label="t189">
-          <article><span class="alpha-path__number">01</span><div><h3><span data-i18n="t190">Get Halo</span></h3><p><span data-i18n="t191">Check</span> <a href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer"><span data-i18n="t192">Android releases ↗</span></a><span data-i18n="t193">. No published APK? The app is not yet available through this programme.</span></p></div></article>
-          <article><span class="alpha-path__number">02</span><div><h3><span data-i18n="t194">Grab the test kit</span></h3><p><span data-i18n="t195">One short reading, one observation image, and a quick route through the wider app.</span></p></div></article>
-          <article><span class="alpha-path__number">03</span><div><h3><span data-i18n="t196">Try real workflows</span></h3><p><span data-i18n="t197">Use the checklist, skip hardware you don't own, and note what actually happens.</span></p></div></article>
-          <article><span class="alpha-path__number">04</span><div><h3><span data-i18n="t198">Share a finding</span></h3><p><span data-i18n="t199">Report confusing moments as well as broken features. Both help shape Halo.</span></p></div></article>
-        </div>
-
-        <div class="alpha-kit reveal" id="alpha-kit">
-          <div class="alpha-kit__copy">
-            <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-file_doc"></use></svg><span data-i18n="t200">FREE SAMPLE FILES</span></p>
-            <h3><span data-i18n="t201">Start with the short test guide.</span></h3>
-            <p><span data-i18n="t202">The Study example follows three basil seedlings with different daily light exposure. The PDF describes the conditions, and the image shows the final measurements. Together they help check whether Halo uses the source or invents a plausible answer. Downloadable examples are in English.</span></p>
-            <div class="alpha-kit__actions">
-              <a class="button button--dark" href="03_halo_alpha_quick_test.pdf" download="Halo_Alpha_Quick_Test.pdf" type="application/pdf"><span data-i18n="t203">Download quick test guide</span> <span aria-hidden="true">↓</span></a>
-              <a class="button" href="#alpha-files"><span data-i18n="t204">Browse all five files</span> <span aria-hidden="true">↘</span></a>
-            </div>
-            <p class="alpha-fineprint"><span data-i18n="t205">Sample measurements are fictional and intended only for testing. Some Study image tasks require a configured vision-capable model.</span></p>
-          </div>
-          <figure class="alpha-kit__visual">
-            <img src="/01_study_basil_observation.png" alt="Sample study illustration: basil pots A, B and C under different light exposure, labeled 6 cm, 10 cm and 14 cm in final height." data-i18n-alt="t206" loading="lazy" decoding="async" width="2100" height="1260" />
-            <figcaption><span><span data-i18n="t207">01 / OBSERVATION IMAGE</span></span><span><span data-i18n="t208">USE WITH THE ONE-PAGE READING</span></span></figcaption>
-          </figure>
-        </div>
-
-        <div class="alpha-resources reveal" id="alpha-files">
-          <div class="alpha-subhead">
-            <div><p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-collections"></use></svg><span data-i18n="t209">TEST MATERIALS</span></p><h3><span data-i18n="t210">Five downloadable example files.</span></h3><p><span data-i18n="t211">Each file downloads directly from this website. Start with the guide, then import the other materials into Halo as needed.</span></p></div>
-            <span class="alpha-count"><span data-i18n="t212">05 FILES · READY TO USE</span></span>
-          </div>
-          <div class="alpha-file-grid">
-            <a class="alpha-file alpha-file--guide" href="03_halo_alpha_quick_test.pdf" download="03_halo_alpha_quick_test.pdf" type="application/pdf" aria-label="Download Halo alpha quick test guide PDF" data-i18n-aria-label="t213">
-              <span class="alpha-file__type">PDF <span>57 KB</span></span>
-              <strong><span data-i18n="t214">Alpha quick test guide</span></strong>
-              <span class="alpha-file__description"><span data-i18n="t215">One-page checklist for trying the whole app. Best place to start.</span></span>
-              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
-            </a>
-            <a class="alpha-file" href="02_study_how_light_affects_plants.pdf" download="02_study_how_light_affects_plants.pdf" type="application/pdf" aria-label="Download How light affects plants study PDF" data-i18n-aria-label="t217">
-              <span class="alpha-file__type">PDF <span>56 KB</span></span>
-              <strong><span data-i18n="t218">Short science reading</span></strong>
-              <span class="alpha-file__description"><span data-i18n="t219">A one-page lesson about light, photosynthesis and a fair experiment.</span></span>
-              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
-            </a>
-            <a class="alpha-file" href="01_study_basil_observation.png" download="01_study_basil_observation.png" type="image/png" aria-label="Download basil observation study image PNG" data-i18n-aria-label="t220">
-              <span class="alpha-file__type">PNG <span>170 KB</span></span>
-              <strong><span data-i18n="t221">Plant observation image</span></strong>
-              <span class="alpha-file__description"><span data-i18n="t222">Three labeled pots and their measured heights; use it to check visual understanding.</span></span>
-              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
-            </a>
-            <a class="alpha-file" href="04_sample_note.txt" download="04_sample_note.txt" type="text/plain" aria-label="Download sample notebook note TXT" data-i18n-aria-label="t223">
-              <span class="alpha-file__type">TXT <span>285 B</span></span>
-              <strong><span data-i18n="t224">Sample Notebook note</span></strong>
-              <span class="alpha-file__description"><span data-i18n="t225">Ready-made text to test adding, editing and finding content in Notebook or Canvas.</span></span>
-              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
-            </a>
-            <a class="alpha-file" href="05_copy_paste_prompts.txt" download="05_copy_paste_prompts.txt" type="text/plain" aria-label="Download copy and paste test prompts TXT" data-i18n-aria-label="t226">
-              <span class="alpha-file__type">TXT <span>2.3 KB</span></span>
-              <strong><span data-i18n="t227">Copy-and-paste prompts</span></strong>
-              <span class="alpha-file__description"><span data-i18n="t228">Ready-to-use questions, expected observations and an issue report template.</span></span>
-              <span class="alpha-file__action"><span data-i18n="t216">Download file</span> <span aria-hidden="true">↘</span></span>
-            </a>
-          </div>
-        </div>
-
-        <div class="alpha-walkthrough reveal" id="alpha-walkthrough">
-          <div class="alpha-subhead">
-            <div><p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-check"></use></svg><span data-i18n="t229">QUICK TEST ROUTE</span></p><h3><span data-i18n="t230">A first test takes about 15–25 minutes.</span></h3><p><span data-i18n="t231">Tick each step you have tried, including failed attempts. Checkmarks stay in this browser; they are included when you choose to prepare feedback.</span></p></div>
-            <div class="alpha-progress" aria-live="polite" aria-atomic="true"><span id="alpha-progress-label"><span data-i18n="t232">0 of 7 tried</span></span><div class="alpha-progress__track"><span id="alpha-progress-fill"></span></div><button type="button" class="alpha-reset" id="alpha-reset"><span data-i18n="t233">Reset</span></button></div>
-          </div>
-          <ol class="alpha-checklist">
-            <li><label><input type="checkbox" data-alpha-step="setup" /><span class="alpha-checklist__body"><strong><span data-i18n="t234">Get oriented</span> <span><span data-i18n="t235">01 · SETUP</span></span></strong><small><span data-i18n="t236">Open Halo, find Home, Notebook, Devices and Settings. Configure one usable AI model/provider. If no APK is published, skip app tests for now.</span></small></span></label></li>
-            <li><label><input type="checkbox" data-alpha-step="home" /><span class="alpha-checklist__body"><strong><span data-i18n="t237">Ask a basic question</span> <span><span data-i18n="t238">02 · HOME</span></span></strong><small><span data-i18n="t239">Try: “Explain photosynthesis in two simple sentences.” Look for a clear answer and honest processing or failure status.</span></small></span></label></li>
-            <li><label><input type="checkbox" data-alpha-step="study-pdf" /><span class="alpha-checklist__body"><strong><span data-i18n="t240">Read from a real PDF</span> <span><span data-i18n="t241">03 · STUDY</span></span></strong><small><span data-i18n="t242">Start a lesson using the science PDF. Ask which days the plants were watered and how much each received altogether. Expected: days 1, 3, 5, 7, 9, 11;</span> <b><span data-i18n="t243">300 mL per pot</span></b>.</small></span></label></li>
-            <li><label><input type="checkbox" data-alpha-step="study-image" /><span class="alpha-checklist__body"><strong><span data-i18n="t244">Understand the image</span> <span><span data-i18n="t245">04 · STUDY / VISION</span></span></strong><small><span data-i18n="t246">Use the basil PNG. Ask which pot is tallest and by how much compared with A. Expected:</span> <b><span data-i18n="t247">C at 14 cm, 8 cm taller than A</span></b><span data-i18n="t248">. If image analysis is unavailable, Halo should say so.</span></small></span></label></li>
-            <li><label><input type="checkbox" data-alpha-step="guidance" /><span class="alpha-checklist__body"><strong><span data-i18n="t249">Learn rather than just receive answers</span> <span><span data-i18n="t250">05 · STUDY / PRACTICE</span></span></strong><small><span data-i18n="t251">Say “Give me one hint, not the answer.” Try an answer, request another explanation, then draft practice cards. They should not enter the review queue without your choice.</span></small></span></label></li>
-            <li><label><input type="checkbox" data-alpha-step="workspace" /><span class="alpha-checklist__body"><strong><span data-i18n="t252">Save and find something</span> <span><span data-i18n="t253">06 · NOTEBOOK / CANVAS</span></span></strong><small><span data-i18n="t254">Import or paste the sample note. Edit it, locate it again, and try sending content into Canvas if available. Check Activity for an accurate record of actions.</span></small></span></label></li>
-            <li><label><input type="checkbox" data-alpha-step="extras" /><span class="alpha-checklist__body"><strong><span data-i18n="t255">Try one extra path</span> <span><span data-i18n="t256">07 · YOUR CHOICE</span></span></strong><small><span data-i18n="t257">Try voice in your language, reconnect a supported device, switch an app language, or recover from an unavailable model. Skip anything requiring hardware or credentials you don't have.</span></small></span></label></li>
-          </ol>
-          <p class="alpha-fineprint"><span data-i18n="t258">A missing feature, unsupported file, failed provider or missing permission is useful test evidence. Record the actual outcome.</span></p>
-        </div>
-
-
-        <section class="feedback-panel" id="feedback" aria-labelledby="feedback-title">
-          <div class="feedback-heading"><p class="section-label"><span data-i18n="feedbackDetails">Your feedback</span></p><h3 id="feedback-title"><span data-i18n="feedbackTitle">Tell us how your first run went.</span></h3><p><span data-i18n="feedbackIntro">A bug, a confusing moment or a small suggestion all help. Your tried checklist steps will be included in the email draft.</span></p></div>
-          <form id="feedback-form">
-            <fieldset><legend><span data-i18n="feedbackAbout">Your setup</span></legend><div class="feedback-grid">
-              <label><span data-i18n="feedbackName">Name (optional)</span><input name="name" autocomplete="name" maxlength="80" /></label>
-              <label><span data-i18n="feedbackEmail">Reply email (optional)</span><input name="email" type="email" autocomplete="email" maxlength="120" /></label>
-              <label><span data-i18n="feedbackVersion">Halo version (optional)</span><input name="version" maxlength="80" /></label>
-              <label><span data-i18n="feedbackHost">Host / device and OS (optional)</span><input name="host" maxlength="120" /></label>
-            </div></fieldset>
-            <fieldset><legend><span data-i18n="feedbackDetails">Your feedback</span></legend><div class="feedback-grid">
-              <label><span data-i18n="feedbackKind">What are you sharing?</span><select name="kind"><option value="kindConfusing" data-i18n="kindConfusing">Something confusing</option><option value="kindBug" data-i18n="kindBug">Something broken</option><option value="kindIdea" data-i18n="kindIdea">A suggestion</option><option value="kindGood" data-i18n="kindGood">Something that worked well</option></select></label>
-              <label><span data-i18n="feedbackScreen">Screen or feature (required)</span><input name="screen" required maxlength="100" /></label>
-              <label class="feedback-wide"><span data-i18n="feedbackSummary">What did you notice? (required)</span><textarea name="summary" required rows="4" maxlength="1000"></textarea></label>
-              <label><span data-i18n="feedbackExpected">What did you expect? (optional)</span><textarea name="expected" rows="3" maxlength="600"></textarea></label>
-              <label><span data-i18n="feedbackSteps">How can we reproduce it? (optional)</span><textarea name="steps" rows="3" maxlength="600"></textarea></label>
-              <label class="feedback-wide"><span data-i18n="feedbackRating">How clear did Halo feel? (optional)</span><select name="rating"><option value="" data-i18n="ratingNone">Choose an answer</option><option value="ratingEasy" data-i18n="ratingEasy">Clear and easy</option><option value="ratingMixed" data-i18n="ratingMixed">Mostly clear, with a few confusing parts</option><option value="ratingHard" data-i18n="ratingHard">Hard to understand</option></select></label>
-            </div></fieldset>
-            <p class="feedback-note"><span data-i18n="feedbackPrivacy">Only include details you want to share. This form does not store your answers. Add a screenshot in your mail app after hiding private information.</span></p>
-            <p class="feedback-note"><span data-i18n="feedbackDelivery">Opens an email draft to slaff.trosheen@gmail.com in your mail app. Review it and press Send there.</span></p>
-            <div class="feedback-actions"><button class="button button--dark" type="submit" disabled><span data-i18n="feedbackSubmit">Open email draft</span></button><button class="button" type="button" id="feedback-copy" disabled><span data-i18n="feedbackCopy">Copy feedback</span></button><button class="feedback-clear" type="reset"><span data-i18n="feedbackReset">Clear form</span></button></div>
-            <p id="feedback-status" role="status" aria-live="polite"></p>
-            <details id="feedback-preview"><summary><span data-i18n="feedbackPreview">Prepared feedback</span></summary><pre id="feedback-body"></pre></details>
-            <noscript><p>JavaScript is needed to prepare the draft. You can email your feedback directly to <a href="mailto:slaff.trosheen@gmail.com">slaff.trosheen@gmail.com</a>.</p></noscript>
-          </form>
-        </section>
-
-        <div class="alpha-report reveal" id="alpha-report">
-          <div class="alpha-report__intro">
-            <p class="section-label"><svg class="ic" aria-hidden="true"><use href="assets/brand/icons.svg#i-ask_mode"></use></svg><span data-i18n="t259">FOUND SOMETHING?</span></p>
-            <h3><span data-i18n="t260">Even a confusing button is worth reporting.</span></h3>
-            <p><span data-i18n="t261">Tell us which screen you were on, what you tried, what you expected and what actually happened. Include your Android and Halo versions if relevant. Never post API keys, personal files, identifiers, or unredacted private logs.</span></p>
-            <div class="alpha-report__actions">
-              <a class="button button--mint" href="https://github.com/slafftrosheen/Halo/issues/new/choose" target="_blank" rel="noopener noreferrer"><span data-i18n="t262">Report on GitHub</span> <span aria-hidden="true">↗</span></a>
-              <a class="button button--ghost" href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer"><span data-i18n="t263">Check Android releases</span> <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-          <details class="alpha-report__template">
-            <summary><span data-i18n="t264">Quick issue template</span> <span aria-hidden="true">+</span></summary>
-            <div class="alpha-report__template-content">
-              <pre id="alpha-issue-template">Halo version / Android version:
-Screen or feature:
-What I tried:
-Expected:
-Actual:
-Steps to reproduce:
-Screenshot (redact private data):</pre>
-              <button type="button" id="alpha-copy-template" class="alpha-copy"><span data-i18n="t265">Copy template</span></button>
-              <span id="alpha-copy-status" class="alpha-copy-status" role="status" aria-live="polite"></span>
-            </div>
-          </details>
-        </div>
-
-        <p class="alpha-availability reveal"><span data-i18n="t266">Alpha means unfinished software. Features and supported devices can change. Back up important work and avoid relying on Halo for safety-critical tasks. A public build only exists when a release appears on</span> <a href="https://github.com/slafftrosheen/Halo/releases" target="_blank" rel="noopener noreferrer"><span data-i18n="t267">GitHub Releases ↗</span></a>.</p>
-      </div>
-    </section>
-  </main>
+      </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -870,7 +878,7 @@ Screenshot (redact private data):</pre>
   </footer>
 
   <script src="js/vendor/lottie_light.min.js" defer></script>
-  <script src="js/translations.js?v=8" defer></script>
+  <script src="js/translations.js?v=9" defer></script>
   <script src="js/main.js?v=15" defer></script>
 </body>
 </html>
