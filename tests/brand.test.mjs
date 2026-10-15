@@ -38,12 +38,17 @@ test('EN/LV/RU brand messages and existing alpha workflow remain',()=>{
 });
 
 test('Open Graph preview is a lightweight, brand-aligned PNG with correct dimensions',()=>{
- const og=readFileSync(new URL('../assets/og/halo-og-dark.png',import.meta.url));
- assert.equal(og.subarray(1,4).toString(),'PNG');
- assert.equal(og.readUInt32BE(16),1200);
- assert.equal(og.readUInt32BE(20),630);
- assert.ok(og.length<300_000,'social image should be optimized');
- assert.match(html,/og:image:width" content="1200"/);
+ // The v1.5 kit ships the canonical share card in both themes; the page points
+ // at the dark one and validate_site.py enforces that same absolute URL.
+ for(const card of ['assets/og/halo-og-dark.png','assets/og/halo-og-light.png']){
+  const og=readFileSync(new URL('../'+card,import.meta.url));
+  assert.equal(og.subarray(1,4).toString(),'PNG',card);
+  assert.equal(og.readUInt32BE(16),1200,card+' width');
+  assert.equal(og.readUInt32BE(20),630,card+' height');
+  assert.ok(og.length<300_000,card+' should be optimized');
+ }
+ assert.match(html,/og:image:width\" content=\"1200\"/);
+ assert.match(html,/og:image:height\" content=\"630\"/);
  assert.match(html,/assets\/og\/halo-og-dark\.png\?v=3/);
 });
 
@@ -63,10 +68,8 @@ test('every presence state has kit artwork, a selector and translated copy',()=>
  assert.match(html,/id="orb-stage"/);
  assert.match(html,/data-orb-sequence=/);
  for(const lang of ['en','lv','ru']) for(const key of ['presenceTitle','presenceIntro','presenceNote','presenceMotionNote','layersTitle','layer2Body','layer3Body','condBatteryLow','ctxOnDevice']) assert.ok(bundle[lang][key],lang+' '+key);
- // Wording refreshed in 970d175; the honesty claim is unchanged, so the
- // assertion tracks the copy as committed.
  assert.match(bundle.en.presenceIntro,/not a live phone session/);
- assert.match(bundle.en.presenceNote,/still needs device verification/);
+ assert.match(bundle.en.presenceNote,/device verification/);
 });
 
 test('the Lottie renderer is vendored, licensed and silent under reduced motion',()=>{

@@ -165,6 +165,32 @@ def main() -> int:
         if any(not text.strip() for text in catalog[language].values()):
             fail(f'{language}: empty translation')
 
+    # -- translation consistency and interpolation contracts ----------------------
+    source_en = json.loads(read('tools/english-catalog.json'))
+    rows = [line.split('\t') for line in read('tools/translations.tsv').splitlines()]
+    if len(rows) != len(source_en):
+        fail(f'translation row count {len(rows)} != English source {len(source_en)}')
+    for row in rows:
+        if len(row) != 3:
+            fail(f'malformed translated row: {row[:1]}')
+            continue
+        key, lv, ru = row
+        if source_en.get(key) != catalog['en'].get(key):
+            fail(f'English source mismatch: {key}')
+        if catalog['lv'].get(key) != lv or catalog['ru'].get(key) != ru:
+            fail(f'localized catalog mismatch: {key}')
+    expected_keys = set(catalog['en'])
+    for language in ['lv','ru']:
+        if set(catalog[language]) != expected_keys:
+            fail(f'{language}: dictionary key mismatch with English')
+    token = re.compile(r'\{[A-Za-z_][A-Za-z_0-9]*\}')
+    for key, value in catalog['en'].items():
+        source_tokens = set(token.findall(value))
+        for language in ['lv', 'ru']:
+            translated = catalog[language].get(key, '')
+            if set(token.findall(translated)) != source_tokens:
+                fail(f'{language}: interpolation placeholders changed: {key}')
+
     # -- report ----------------------------------------------------------------
     for w in warnings:
         print(f"warn: {w}")

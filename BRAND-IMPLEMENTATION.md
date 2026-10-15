@@ -66,3 +66,6 @@ The four-state static preview described above is therefore superseded by the 21-
 ## Cross-repository parity (Android main, 2026-10-14)
 
 Android `Halo/docs/15-brand/ANDROID-BRAND-PARITY.md` reports source-integrated matching tokens, ring/wordmark vector paths and licensed Sora, Atkinson and Onest fonts. It explicitly records **no Gradle/emulator/device pixel-acceptance sign-off**. HaloWeb and the Android app are aligned at the source/token level, not certified as visually identical in a running build. This is separate from the design-specification-only presence preview shown in the site runtime section.
+
+## October 14 / updated 45-page Brand Book
+The new supplied pages 42–45 describe Devices, pairing, and Settings/Intelligence/Voice/Privacy surfaces. Web references now use the existing `BrandAssets/devices` and `BrandAssets/settings` images with prominent DESIGN REFERENCE labels. App source `PhoneCapabilityGroups.kt` exposes seven groups, but its comments prohibit equating reported availability with permission state. The website retains this distinction and does not claim BrandBook mockups are physically accepted Android screenshots.
