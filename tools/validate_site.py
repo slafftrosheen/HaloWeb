@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CANONICAL = "https://haloweb.vercel.app"
+CANONICAL = "https://halo-web-blue.vercel.app"
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -120,15 +120,15 @@ def main() -> int:
             fail(f"{fname} does not match canonical {CANONICAL}")
     if f'href="{CANONICAL}/"' not in html:
         fail("canonical link missing or does not match")
-    if f'{CANONICAL}/assets/halo-og.png' not in html:
-        fail("og:image does not use the canonical URL")
+    if f'{CANONICAL}/assets/og/halo-og-dark.png' not in html:
+        fail("og:image does not use the canonical share card")
 
     # -- OG asset exists and is sane ------------------------------------------
-    og = ROOT / "assets" / "halo-og.png"
+    og = ROOT / "assets" / "og" / "halo-og-dark.png"
     if not og.exists():
-        fail("assets/halo-og.png missing")
+        fail("assets/og/halo-og-dark.png missing")
     elif og.stat().st_size > 300_000:
-        warn(f"halo-og.png is {og.stat().st_size // 1024} KB — consider optimizing")
+        warn(f"halo-og-dark.png is {og.stat().st_size // 1024} KB — consider optimizing")
 
     # -- external runtime deps -------------------------------------------------
     if re.search(r'<script[^>]+src="https?://', html):
@@ -136,10 +136,20 @@ def main() -> int:
     if re.search(r'<link[^>]+rel="stylesheet"[^>]+href="https?://', html):
         fail("external stylesheet reference found")
 
-    # Real device captures replace reconstructed screens throughout the page.
-    shots = set(re.findall(r'src="assets/screens/([^"]+)"', html))
-    if len(shots) != 12 or any(not shot.endswith('.jpg') for shot in shots):
-        fail(f"expected all 12 real JPG captures, found {sorted(shots)}")
+    # The gallery and supporting shots use the round-2 screens from the brand
+    # book (halo web assets v1.5); the older test-build .jpg captures are gone.
+    shots = set(re.findall(r'(?:src|href)="assets/screens/([^"]+)"', html))
+    if len(shots) < 12 or any(not shot.startswith('v2/') or shot.endswith('.jpg') for shot in shots):
+        fail(f"expected round-2 screens from assets/screens/v2, found {sorted(shots)}")
+
+    # The halo web assets v1.5 FX layer is wired, and only one Guide trace exists.
+    for ref in ('css/halo-fx.css', 'js/halo-fx.js', 'js/halo-lottie.js'):
+        if ref not in html:
+            fail(f"halo FX layer not wired: {ref}")
+    if 'data-halo-lottie=' not in html:
+        fail("no halo animations wired")
+    if html.count('hfx-trace') > 1:
+        fail("more than one Guide trace on the page")
     if 'reconstructed from' in html or 'Source-aligned UI capture' in html:
         fail('obsolete reconstruction label')
     for file in ['index.html', 'css/main.css', 'js/main.js', 'CONTENT-SOURCES.md', 'robots.txt', 'sitemap.xml']:

@@ -80,7 +80,7 @@ b,strong{font-weight:700}
 .summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .summary-grid>div{min-height:184px;padding:34px 34px 30px 0}
 .summary-grid>div+div{padding-left:34px;border-left:1px solid var(--line)}
-.summary-grid span{display:block;margin-bottom:30px;color:var(--accent-strong);font-family:var(--font-mono);font-size:.8rem;letter-spacing:.16em}
+.summary-grid>div>span{display:block;margin-bottom:30px;color:var(--accent-strong);font-family:var(--font-mono);font-size:.8rem;letter-spacing:.16em}
 .summary-grid b{display:block;margin-bottom:9px;font-family:var(--font-display);font-size:1.1rem;font-weight:600}
 .summary-grid p{margin:0;color:var(--text-secondary);font-size:var(--fs-small)}
 
@@ -207,7 +207,7 @@ b,strong{font-weight:700}
 .app-slide img{width:auto;max-width:100%;max-height:min(58svh,520px);object-fit:contain;border:1px solid var(--line);border-radius:22px;background:var(--night-ink);box-shadow:var(--shadow-shot)}
 .app-slide figcaption{display:flex;flex-direction:column;gap:12px}
 .app-slide figcaption b{font-family:var(--font-display);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:600;letter-spacing:-.02em}
-.app-slide figcaption span{max-width:48ch;color:var(--text-secondary);font-size:var(--fs-small)}
+.app-slide figcaption>span{max-width:48ch;color:var(--text-secondary);font-size:var(--fs-small)}
 .capture-link{color:var(--accent-strong);font-family:var(--font-display);font-size:.85rem;font-weight:600}
 
 /* 9 · phone tools ---------------------------------------------------------- */
@@ -253,7 +253,7 @@ b,strong{font-weight:700}
 .ai-copy>p{max-width:70ch;color:var(--text-secondary);font-size:var(--fs-small)}
 .ai-lanes{margin-top:34px;border-top:1px solid var(--line)}
 .ai-lanes article{padding:20px 0;border-bottom:1px solid var(--line)}
-.ai-lanes span{color:var(--text-tertiary);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
+.ai-lanes article>span{color:var(--text-tertiary);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
 .ai-lanes h3{margin:9px 0 7px;font-size:var(--fs-h3)}
 .ai-lanes p{margin:0;color:var(--text-secondary);font-size:var(--fs-small)}
 .ai-shot{margin:0;justify-self:center}
@@ -272,7 +272,7 @@ b,strong{font-weight:700}
 .devices-shot img{width:auto;max-width:100%;max-height:min(64svh,560px);object-fit:contain;margin-inline:auto;border:1px solid var(--line);border-radius:22px;background:var(--night-ink);box-shadow:var(--shadow-shot)}
 .device-list{border-top:1px solid var(--line-strong)}
 .device-list article{padding:22px 0;border-bottom:1px solid var(--line)}
-.device-list span{color:var(--text-tertiary);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
+.device-list article>span{color:var(--text-tertiary);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
 .device-list h3{margin:9px 0 8px;font-size:var(--fs-h3)}
 .device-list p{margin:0;color:var(--text-secondary);font-size:var(--fs-small)}
 
@@ -282,7 +282,7 @@ b,strong{font-weight:700}
 .status-grid article{min-height:250px;padding:clamp(22px,2.4vw,30px);border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow-card)}
 .status-grid article.status-good{background:color-mix(in srgb,var(--mint-tint) 26%,var(--surface))}
 .status-grid article.status-warn{background:color-mix(in srgb,var(--sunrise-apricot) 20%,var(--surface))}
-.status-grid span{color:var(--text-tertiary);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
+.status-grid article>span{color:var(--text-tertiary);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
 .status-grid h3{margin:34px 0 12px;font-size:var(--fs-h3);line-height:1.2}
 .status-grid p{margin:0;color:var(--text-secondary);font-size:var(--fs-small)}
 .closing{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:clamp(44px,5vw,72px);padding:clamp(30px,4vw,52px);border-radius:var(--r-xl);background:var(--night-ink);color:var(--cream)}
@@ -307,7 +307,7 @@ b,strong{font-weight:700}
 .runtime-evidence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:28px;border-top:1px solid #322F5C}
 .runtime-evidence article{padding:30px 26px 0 0}
 .runtime-evidence article+article{padding-left:26px;border-left:1px solid #322F5C}
-.runtime-evidence span{color:var(--mint-tint);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
+.runtime-evidence article>span{color:var(--mint-tint);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
 .runtime-evidence h3{margin:14px 0 10px;color:var(--cream);font-size:var(--fs-h3)}
 .runtime-evidence p{margin:0;color:var(--muted-dark);font-size:var(--fs-small)}
 
@@ -539,3 +539,85 @@ b,strong{font-weight:700}
 .product-onramp__grid h4{margin:0 0 10px;font:620 1.05rem/1.3 var(--font-display);color:var(--text)}
 .product-onramp__grid p{margin:0;color:var(--text-secondary);font-size:.94rem;line-height:1.65}
 @media(max-width:860px){.product-onramp__grid{grid-template-columns:1fr;gap:10px}}
+
+/* 20 · halo web assets v1.5 integration ------------------------------------
+   Layout only: css/halo-fx.css (the pack's drop-in) owns every effect — Aura,
+   Trace, Edge glow, Shimmer, Bloom, Ripple, card motion, parallax, card/tilt and
+   the halo-language atoms. This block composes them with the page: the hero
+   parallax stage, animation and figure sizing, card grids and the flow shorts.
+   No existing rule above is changed; everything here is additive. */
+
+/* hero parallax stage (snippet 03: phone 0.14 · ring 0.35 · chips).
+   The snippet's photo backdrop layer is intentionally not used: a still photo
+   sitting behind the animated ring, phone and chips does not belong there. The
+   stage reads on the hero's own --glow-mint/--glow-warm washes plus the Aura glow. */
+.hero-stage{position:relative;width:100%;min-height:clamp(430px,56svh,600px)}
+.hero-orb{position:absolute;z-index:1;left:-5%;top:0;width:min(48%,286px)}
+.hero-ring{width:100%;aspect-ratio:1}
+.hero-shot{position:absolute;z-index:2;right:6%;top:8%;width:min(40%,258px)}
+.hero-phone{width:100%;height:auto;display:block}
+.hero-chip{position:absolute;z-index:3}
+.hero-chip--1{left:0;bottom:24%}
+.hero-chip--2{right:0;top:40%}
+.hero-chip--3{left:24%;bottom:4%}
+
+/* animation frames: sized in CSS, decorative (snippet 05) */
+.h-lottie{width:100%;max-width:230px;aspect-ratio:1;margin-inline:auto}
+.h-lottie.scroll-cue{max-width:46px;aspect-ratio:1/1.6;margin:18px auto 0;opacity:.85}
+.h-lottie--sm{max-width:120px;margin:10px 0 0}
+.alpha-path article .ic{width:20px;height:20px;margin-top:6px;color:var(--accent-strong)}
+
+/* halo-language composition */
+.halo-cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(228px,1fr))}
+.h-card{padding:26px 24px 24px}
+.h-card .ic{width:28px;height:28px;color:var(--text)}
+.h-card h3{margin:16px 0 8px;font-size:var(--fs-h3)}
+.h-card p{margin:0;color:var(--text-secondary);font-size:var(--fs-small)}
+.h-card small{display:block;margin-top:10px;color:var(--text-tertiary);font-size:.86rem;line-height:1.6}
+.h-tag{display:block;margin:0 0 8px;color:var(--accent-strong);font-family:var(--font-display);font-size:var(--fs-label);font-weight:600;letter-spacing:var(--tracking-label);text-transform:uppercase}
+.h-stack{width:min(100%,340px);min-height:360px;margin-inline:auto}
+.h-stack img{width:min(100%,226px);height:auto;filter:drop-shadow(0 24px 50px rgba(6,3,48,.28))}
+.h-guide{max-width:430px}
+.h-guide h3{margin:10px 0 0;font-size:var(--fs-h3)}
+.h-guide .guide-row{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:16px}
+.h-ill,.h-ill-swap{display:block;width:100%;max-width:360px;margin-inline:auto}
+.h-ill img,.h-ill-swap img{width:100%;height:auto}
+/* illustrations swap with the site's own theme toggle, not just the system one */
+.h-ill-swap .ill-dark{display:none}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .h-ill-swap .ill-dark{display:block}
+  :root:not([data-theme="light"]) .h-ill-swap .ill-light{display:none}
+}
+:root[data-theme="dark"] .h-ill-swap .ill-dark{display:block}
+:root[data-theme="dark"] .h-ill-swap .ill-light{display:none}
+.phone{width:min(100%,300px)}
+.phone img{width:100%;display:block}
+.status-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.status-grid article>.ic{width:26px;height:26px;color:var(--accent-strong);margin-bottom:14px}
+.status-grid h3{margin-top:0}
+
+/* pose rows: photo / illustration / short bands added by the v1.5 pack */
+.section-visuals{margin-top:clamp(28px,3.6vw,46px)}
+.visual-split{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(18px,2.6vw,30px);align-items:center}
+.photo-figure{margin:0;min-width:0}
+.photo-figure img{width:100%;height:auto;border-radius:var(--r-lg);border:1px solid var(--line);box-shadow:var(--shadow-card)}
+.photo-figure figcaption{margin-top:10px;color:var(--text-tertiary);font-size:.84rem;line-height:1.55}
+.h-short{margin:0;min-width:0}
+.h-short video{width:100%;height:auto;border-radius:var(--r-lg);border:1px solid var(--line);background:var(--night-ink);box-shadow:var(--shadow-card)}
+.h-short figcaption{margin-top:10px;color:var(--text-tertiary);font-size:.85rem;line-height:1.55}
+.action-groups article.h-card{padding:26px 24px 24px}
+@media(max-width:960px){
+  .hero-stage{display:flex;flex-direction:column;align-items:center;gap:22px;min-height:0}
+  .hero-orb{position:relative;left:auto;top:auto;order:1;width:min(56%,240px)}
+  .hero-shot{position:relative;right:auto;top:auto;order:2;width:min(62%,270px)}
+  .hero-chip{position:relative;left:auto;right:auto;top:auto;bottom:auto;order:5}
+}
+/* 21 · verified legibility fixes -------------------------------------------
+   Measured with a real-engine audit (WCAG 1.4.3) at 390/768/1440 in both themes.
+   `#alpha`/`.alpha-report` sit on a light surface in the light theme, so the number
+   chips need a dark-theme ink; the hero stage is always dark, so its chips must not
+   inherit the page theme's dark ink (they were invisible in the light theme). */
+:root[data-theme="dark"] .alpha-path__number{color:var(--halo-mint)}
+.hero .h-state,.hero .h-status{background:var(--app-surface);border-color:#332F5B;color:var(--cream)}
+.hero .h-status::before{--dot:var(--halo-mint)}
+.hero .h-where{color:var(--mint-tint)}

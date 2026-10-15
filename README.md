@@ -177,7 +177,7 @@ HaloWeb/
 
 ## Alpha tester programme
 
-The website's [Early Access](https://haloweb.vercel.app/#alpha) section provides a lightweight test route rather than claiming there is already a public Android build. The release button goes to the canonical [Halo Android Releases](https://github.com/slafftrosheen/Halo/releases); no APK is bundled by HaloWeb.
+The website's [Early Access](https://halo-web-blue.vercel.app/#alpha) section provides a lightweight test route rather than claiming there is already a public Android build. The release button goes to the canonical [Halo Android Releases](https://github.com/slafftrosheen/Halo/releases); no APK is bundled by HaloWeb.
 
 The five example assets are committed **at the repository root** and served by Vercel as static files:
 

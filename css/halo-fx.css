@@ -1,0 +1,187 @@
+/* halo FX for the web · v1.1
+   Ports kit v0.9 tokens → CSS: Aura (presence), Trace (Guide, one next step), Edge glow (acting on the phone only),
+   Shimmer (thinking/loading), Bloom (success, once), Ripple (listening). One light at a time.
+   Plus card motion, parallax depth and halo-language components. Needs tokens.css (site) for colours/fonts.
+   Everything degrades to a still state under prefers-reduced-motion. */
+
+@property --hfx-a { syntax: "<angle>"; inherits: false; initial-value: 45deg; }
+@property --hfx-p { syntax: "<number>"; inherits: false; initial-value: 0; }
+
+:root {
+  --hfx-ring-start: var(--halo-mint, #0CF2BA);
+  --hfx-ring-end: var(--mint-tint, #B4E6D6);
+  --hfx-attn: var(--sunrise-apricot, #FF9F6B);
+  --hfx-breath: cubic-bezier(.45, 0, .55, 1);
+  --hfx-orbit: cubic-bezier(.6, 0, .4, 1);
+  --hfx-settle: cubic-bezier(.3, 0, .7, 1);
+  --hfx-out: cubic-bezier(.2, 0, .2, 1);
+  --hfx-card-r: 20px;
+}
+:root:not([data-theme="dark"]) { --hfx-attn-dot: #D9692A; }
+:root[data-theme="dark"] { --hfx-attn-dot: #FF9F6B; }
+
+/* ---------------------------------------------------------------- Aura · presence / hero (sizeRatio 2, breath 4s) */
+.hfx-aura { position: relative; isolation: isolate; }
+.hfx-aura::before {
+  content: ""; position: absolute; inset: -50%; z-index: -1; pointer-events: none; border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--hfx-ring-start) 42%, transparent) 0%,
+              color-mix(in srgb, var(--hfx-attn) 14%, transparent) 42%, transparent 68%);
+  filter: blur(6px); opacity: .55; animation: hfx-breath 4s var(--hfx-breath) infinite alternate;
+}
+@keyframes hfx-breath { to { opacity: .9; transform: scale(1.02); } }
+
+/* ---------------------------------------------------------------- Trace · halo Guide: the ONE next step
+   2.5px conic stroke, 30° gap travelling from 45°, one 2.4s lap, then rests as a quiet lit edge. Max one per screen. */
+.hfx-trace { position: relative; isolation: isolate; }
+.hfx-trace::after {
+  content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 2.5px; pointer-events: none;
+  background: conic-gradient(from var(--hfx-a), transparent 0deg 30deg, var(--hfx-ring-start) 30deg, var(--hfx-ring-end) 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--hfx-ring-start) 40%, transparent);
+  opacity: 0;
+}
+.hfx-trace.is-on::after { opacity: 1; animation: hfx-lap 2.4s var(--hfx-orbit) 1 forwards; }
+@keyframes hfx-lap { from { --hfx-a: 45deg; } to { --hfx-a: 405deg; } }
+
+/* ---------------------------------------------------------------- Edge glow · halo acting on the phone ONLY
+   inset 3px stroke + 26px glow at 45%, 20° gap at upper right, fade in 250ms / out 150ms */
+.hfx-edge { position: relative; }
+.hfx-edge::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 3px; pointer-events: none; z-index: 2;
+  background: conic-gradient(from 55deg, var(--hfx-ring-start), var(--hfx-ring-end) 340deg, transparent 340deg 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  filter: drop-shadow(0 0 13px color-mix(in srgb, var(--hfx-ring-start) 45%, transparent));
+  opacity: 0; transition: opacity .15s linear;
+}
+.hfx-edge.is-acting::before { opacity: 1; transition-duration: .25s; animation: hfx-edge-breathe 2.5s var(--hfx-breath) infinite alternate; }
+@keyframes hfx-edge-breathe { to { filter: drop-shadow(0 0 20px color-mix(in srgb, var(--hfx-ring-start) 55%, transparent)); } }
+
+/* ---------------------------------------------------------------- Shimmer · thinking / loading skeleton (1.6s, start → end) */
+.hfx-shimmer {
+  background: linear-gradient(100deg, var(--surface-subtle, #EFF2EC) 30%,
+              color-mix(in srgb, var(--hfx-ring-start) 22%, var(--surface-subtle, #EFF2EC)) 50%, var(--surface-subtle, #EFF2EC) 70%);
+  background-size: 300% 100%; animation: hfx-sweep 1.6s linear infinite; border-radius: 10px; color: transparent;
+}
+@keyframes hfx-sweep { from { background-position: 100% 0; } to { background-position: 0 0; } }
+
+/* ---------------------------------------------------------------- Bloom · success, 3 rings, 600ms ease-out, once */
+.hfx-bloom { position: relative; }
+.hfx-bloom i { position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--hfx-ring-start); opacity: 0; pointer-events: none; }
+.hfx-bloom.is-bloom i { animation: hfx-bloom .6s var(--hfx-out) both; }
+.hfx-bloom.is-bloom i:nth-child(2) { animation-delay: .08s; }
+.hfx-bloom.is-bloom i:nth-child(3) { animation-delay: .16s; }
+@keyframes hfx-bloom { from { opacity: .8; transform: scale(1); } to { opacity: 0; transform: scale(1.6); } }
+
+/* ---------------------------------------------------------------- Ripple · listening (only while the mic is open) */
+.hfx-ripple { position: relative; }
+.hfx-ripple::before, .hfx-ripple::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--hfx-ring-start); opacity: 0; }
+.hfx-ripple.is-listening::before { animation: hfx-rip 1.6s var(--hfx-out) infinite; }
+.hfx-ripple.is-listening::after { animation: hfx-rip 1.6s var(--hfx-out) .8s infinite; }
+@keyframes hfx-rip { from { opacity: .7; transform: scale(1); } to { opacity: 0; transform: scale(1.28); } }
+
+/* ================================================================ CARD MOTION */
+/* reveal on scroll · settle easing, staggered by --i */
+/* hidden only once halo-fx.js has run, so content never disappears if JS fails */
+.hfx-ready [data-reveal] { opacity: 0; transform: translateY(18px) scale(.985); transition: opacity .6s var(--hfx-settle), transform .7s var(--hfx-settle); transition-delay: calc(var(--i, 0) * 70ms); }
+.hfx-ready [data-reveal].is-in { opacity: 1; transform: none; }
+
+/* spotlight + tilt: a soft mint light follows the pointer; max 4° tilt; lift on hover */
+.h-card {
+  --mx: 50%; --my: 50%; --rx: 0deg; --ry: 0deg;
+  position: relative; border-radius: var(--hfx-card-r); background: var(--surface, #fff); border: 1px solid var(--line, #DCE1DC);
+  transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--lift, 0));
+  transition: transform .5s var(--hfx-settle), box-shadow .5s var(--hfx-settle), border-color .3s; transform-style: preserve-3d;
+}
+.h-card::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(420px circle at var(--mx) var(--my), color-mix(in srgb, var(--hfx-ring-start) 12%, transparent), transparent 60%);
+}
+.h-card:hover { --lift: -4px; box-shadow: var(--shadow-card); border-color: color-mix(in srgb, var(--hfx-ring-start) 35%, var(--line, #DCE1DC)); }
+.h-card:hover::before { opacity: 1; }
+.h-card > * { transform: translateZ(18px); }
+
+/* open-ring corner mark: draws on hover — "halo is here" (gap at upper right) */
+.h-card .h-mark { position: absolute; top: 16px; right: 16px; width: 22px; height: 22px; transform: translateZ(30px); }
+.h-card .h-mark circle { fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 0 100; transition: stroke-dasharray .6s var(--hfx-settle); }
+.h-card:hover .h-mark circle { stroke-dasharray: 48.5 100; }
+
+/* stacked screenshot deck: fans out on hover / focus */
+.h-stack { position: relative; display: grid; place-items: center; }
+.h-stack > * { grid-area: 1 / 1; transition: transform .7s var(--hfx-settle); }
+.h-stack > :nth-child(1) { transform: rotate(-6deg) translateX(-8%); }
+.h-stack > :nth-child(3) { transform: rotate(6deg) translateX(8%); }
+.h-stack:hover > :nth-child(1), .h-stack:focus-within > :nth-child(1) { transform: rotate(-10deg) translateX(-42%); }
+.h-stack:hover > :nth-child(3), .h-stack:focus-within > :nth-child(3) { transform: rotate(10deg) translateX(42%); }
+.h-stack > :nth-child(2) { z-index: 2; }
+
+/* ================================================================ PARALLAX ([data-depth] moved by halo-fx.js) */
+[data-depth] { will-change: transform; transform: translate3d(var(--px, 0), var(--py, 0), 0); }
+
+/* ================================================================ HALO LANGUAGE COMPONENTS */
+/* mini orb: CSS open ring (gap 44° at upper right) */
+.h-orb { --s: 22px; width: var(--s); height: var(--s); border-radius: 50%; flex: none; position: relative;
+  background: conic-gradient(from 67deg, var(--hfx-ring-start), var(--hfx-ring-end) 316deg, transparent 316deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--s) * .2), #000 calc(100% - var(--s) * .2 + 1px));
+          mask: radial-gradient(farthest-side, transparent calc(100% - var(--s) * .2), #000 calc(100% - var(--s) * .2 + 1px)); }
+.h-orb[data-state="thinking"] { animation: hfx-orbit 3s var(--hfx-orbit) infinite; }
+.h-orb[data-state="idle"] { animation: hfx-breath 4s var(--hfx-breath) infinite alternate; }
+.h-orb[data-state="done"] { background: conic-gradient(var(--hfx-ring-start), var(--hfx-ring-end), var(--hfx-ring-start)); }
+.h-orb[data-state="offline"] { background: conic-gradient(from 67deg, var(--dusk, #9A9EB5) 0 316deg, transparent 316deg); }
+.h-orb-wrap { position: relative; display: inline-grid; }
+.h-orb-wrap[data-needs]::after { content: ""; position: absolute; width: 30%; height: 30%; border-radius: 50%; right: 4%; top: 4%; background: var(--hfx-attn-dot); animation: hfx-needs 2s var(--hfx-breath) infinite alternate; }
+@keyframes hfx-orbit { to { transform: rotate(360deg); } }
+@keyframes hfx-needs { to { opacity: .35; } }
+
+/* state chip · uses the canonical state strings */
+.h-state { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 10px; border-radius: 999px;
+  background: var(--surface, #fff); border: 1px solid var(--line, #DCE1DC); font: 600 .95rem/1 var(--font-display); color: var(--text); }
+
+/* where it thinks · location chip (never implies a provider that wasn't used) */
+.h-where { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font: 600 .8rem/1 var(--font-sans);
+  background: color-mix(in srgb, var(--hfx-ring-start) 14%, transparent); color: var(--accent-strong, #05604B); }
+:root[data-theme="dark"] .h-where { color: var(--halo-mint); }
+.h-where .ic { width: 16px; height: 16px; }
+
+/* honest status pill: Done / Handed to app / Unconfirmed / Didn't work */
+.h-status { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font: 600 .82rem/1 var(--font-sans); border: 1px solid var(--line); color: var(--text); }
+.h-status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--dot, var(--accent)); }
+.h-status[data-s="handed"] { --dot: var(--text-secondary); }
+.h-status[data-s="unconfirmed"] { --dot: var(--hfx-attn-dot); }
+.h-status[data-s="failed"] { --dot: var(--ember, #D64545); }
+
+/* Guide · next-step card: trace once, says why, always offers a way out */
+.h-guide { padding: 20px 22px; border-radius: var(--hfx-card-r); background: var(--surface); border: 1px solid var(--line); }
+.h-guide .h-guide-label { font: 700 .72rem/1 var(--font-sans); letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+.h-guide .h-guide-why { color: var(--text-secondary); margin-top: 6px; }
+.h-guide .h-guide-out { background: none; border: 0; color: var(--text-secondary); font: 600 .9rem var(--font-sans); cursor: pointer; }
+
+/* open-ring divider + ring bullet section label */
+.h-divider { display: flex; align-items: center; gap: 14px; color: var(--line-strong); }
+.h-divider::before, .h-divider::after { content: ""; flex: 1; height: 1px; background: currentColor; }
+.h-divider .h-orb { --s: 14px; opacity: .8; }
+.h-label { display: inline-flex; align-items: center; gap: 10px; font: 700 var(--fs-label, .78rem)/1 var(--font-sans); letter-spacing: var(--tracking-label, .2em); text-transform: uppercase; color: var(--accent); }
+.h-label .h-orb { --s: 12px; }
+
+/* typing composer (demo of "Ask halo anything") */
+.h-type::after { content: ""; display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -2px; background: var(--accent); animation: hfx-caret 1s steps(1) infinite; }
+@keyframes hfx-caret { 50% { opacity: 0; } }
+
+/* ================================================================ REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .hfx-aura::before, .h-orb, .h-orb-wrap::after, .hfx-shimmer, .hfx-edge.is-acting::before { animation: none !important; }
+  .hfx-trace.is-on::after { animation: none; --hfx-a: 45deg; }
+  .hfx-bloom i, .hfx-ripple::before, .hfx-ripple::after { display: none; }
+  .hfx-ready [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .h-card { transform: none !important; }
+  [data-depth] { transform: none !important; }
+  .h-stack > * { transition: none; }
+}
+
+/* ================================================================ PRINT */
+@media print {
+  .hfx-ready [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .hfx-aura::before, .hfx-trace::after, .hfx-edge::before, .hfx-bloom, .hfx-ripple::before, .hfx-ripple::after { display: none !important; }
+  [data-depth], .h-card { transform: none !important; }
+}

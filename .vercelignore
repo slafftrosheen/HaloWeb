@@ -1,0 +1,4 @@
+# Static site: the repo root is the served output, so keep build-time only
+# material out of the upload. Vercel does not apply .gitignore to Git
+# deployments, so anything excluded for size must be listed here too.
+halo-web-assets/

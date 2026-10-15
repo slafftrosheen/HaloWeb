@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const exists=p=>existsSync(new URL('../'+p,import.meta.url));
-const html=read('index.html'),tokens=read('css/tokens.css'),css=read('css/main.css'),fonts=read('css/fonts.css'),main=read('js/main.js');
+const html=read('index.html'),tokens=read('css/tokens.css'),css=read('css/main.css'),fonts=read('css/fonts.css'),fx=read('css/halo-fx.css'),main=read('js/main.js');
 const ORB_STATES=['idle','listening','capturing_voice','capturing_vision','thinking','planning','acting','acting_phone','speaking','streaming_text','preparing_context','waiting','approval_required','success','warning','error','recovering','model_loading','permission_missing','offline','stopped'];
 const ORB_ANIMATED=['idle','listening','capturing_voice','capturing_vision','thinking','acting','speaking','streaming_text','waiting','approval_required','success','warning','error','offline','stopped'];
 const ORB_STILL_ONLY=['planning','acting_phone','preparing_context','recovering','model_loading','permission_missing'];
@@ -38,13 +38,13 @@ test('EN/LV/RU brand messages and existing alpha workflow remain',()=>{
 });
 
 test('Open Graph preview is a lightweight, brand-aligned PNG with correct dimensions',()=>{
- const og=readFileSync(new URL('../assets/halo-og.png',import.meta.url));
+ const og=readFileSync(new URL('../assets/og/halo-og-dark.png',import.meta.url));
  assert.equal(og.subarray(1,4).toString(),'PNG');
- assert.equal(og.readUInt32BE(16),600);
- assert.equal(og.readUInt32BE(20),315);
+ assert.equal(og.readUInt32BE(16),1200);
+ assert.equal(og.readUInt32BE(20),630);
  assert.ok(og.length<300_000,'social image should be optimized');
- assert.match(html,/og:image:width" content="600"/);
- assert.match(html,/halo-og\.png\?v=2/);
+ assert.match(html,/og:image:width" content="1200"/);
+ assert.match(html,/assets\/og\/halo-og-dark\.png\?v=3/);
 });
 
 test('every presence state has kit artwork, a selector and translated copy',()=>{
@@ -63,8 +63,10 @@ test('every presence state has kit artwork, a selector and translated copy',()=>
  assert.match(html,/id="orb-stage"/);
  assert.match(html,/data-orb-sequence=/);
  for(const lang of ['en','lv','ru']) for(const key of ['presenceTitle','presenceIntro','presenceNote','presenceMotionNote','layersTitle','layer2Body','layer3Body','condBatteryLow','ctxOnDevice']) assert.ok(bundle[lang][key],lang+' '+key);
- assert.match(bundle.en.presenceIntro,/not from a running Android session/);
- assert.match(bundle.en.presenceNote,/not a verified app feature/);
+ // Wording refreshed in 970d175; the honesty claim is unchanged, so the
+ // assertion tracks the copy as committed.
+ assert.match(bundle.en.presenceIntro,/not a live phone session/);
+ assert.match(bundle.en.presenceNote,/still needs device verification/);
 });
 
 test('the Lottie renderer is vendored, licensed and silent under reduced motion',()=>{
@@ -88,7 +90,7 @@ test('the icon library is used from one sprite that defines every referenced sym
 
 test('every class used by the page is styled',()=>{
  const used=new Set([...html.matchAll(/class="([^"]+)"/g)].flatMap(m=>m[1].split(/\s+/).filter(Boolean)));
- const defined=new Set([...(css+tokens).matchAll(/\.([A-Za-z][A-Za-z0-9_-]*)/g)].map(m=>m[1]));
+ const defined=new Set([...(css+tokens+fx).matchAll(/\.([A-Za-z][A-Za-z0-9_-]*)/g)].map(m=>m[1]));
  const unstyled=[...used].filter(name=>!defined.has(name)).sort();
  // "product" is only a section anchor hook.
  assert.deepEqual(unstyled,['product'],'unstyled classes');

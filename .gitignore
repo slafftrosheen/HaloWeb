@@ -12,3 +12,6 @@ desktop.ini
 
 ## Logs / temp
 *.log
+
+## Vendor asset pack (drop-in source, not deployed or tracked)
+halo-web-assets/

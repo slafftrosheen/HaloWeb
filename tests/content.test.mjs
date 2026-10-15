@@ -26,7 +26,7 @@ test('the visitor sees the product before technical architecture', () => {
   assert.match(bundle.en.t019, /Glasses are optional/);
   assert.match(bundle.en.t171, /compile checks, unit tests and physical device acceptance are different things/);
   assert.match(bundle.en.t188, /GitHub Releases/);
-  assert.match(bundle.en.t042, /Activity shows actions and approvals/);
+  assert.match(bundle.en.t042, /Activity shows pending approvals and results/);
   assert.match(bundle.en.t096, /Remote requests can send relevant context/);
   assert.ok(html.includes('href="https://github.com/slafftrosheen/Halo/releases"'));
 });
@@ -54,7 +54,7 @@ test('alpha visitor can reach the actual product and testing route before design
  assert.ok(index('product')>0&&index('alpha')>index('product'));
  assert.ok(index('mission')>index('alpha')&&index('ring')>index('mission')&&index('presence')>index('ring'));
  assert.match(bundle.en.t019,/AI assistant for Android/);
- assert.match(bundle.en.t075,/earlier/);
+ assert.match(bundle.en.t075,/has changed since these captures/);
  assert.match(bundle.en.productKidsBody,/device testing/);
  assert.match(bundle.en.t126,/PDF-page extraction/);
  assert.match(bundle.en.t098,/fit estimate/);
