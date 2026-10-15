@@ -178,7 +178,7 @@ function metaValuesOutside() {
 }
 
 test('latest brand and phone capability copy is covered in every language',()=>{
- const keys=['brandUpdateTitle','brandUpdateIntro','brandUpdateTag','phoneAbilitiesTitle',
+ const keys=['phoneAbilitiesTitle',
   'phoneAbilitiesBody','phoneHear','phoneWorkspace','pairingBody','settingsMapPrivacy',
   'settingsMapDisclaimer'];
  for(const lang of ['en','lv','ru']) for(const key of keys)

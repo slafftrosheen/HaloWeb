@@ -400,14 +400,6 @@ productKidsTitle	Bērnu režīms · eksperimentāls	Детский режим ·
 productKidsBody	Vienkāršotā Home vide sasaista jautājumus un vadītu mācīšanos ar Study. Vecāku kontrole un darbība ierīcē vēl ir jāpārbauda; neuztver šo režīmu kā pilnīgu bērnu drošības aizsardzību.	Упрощённый Home объединяет вопросы и занятия на базе Study. Родительские ограничения и работа на устройствах ещё требуют проверки: этот режим не заменяет присмотр взрослых.
 productModelsTitle	Modeļi un balsis	Модели и голос
 productModelsBody	Atrodi un pārbaudi saderīgus lokālos LiteRT modeļus. Runas atpazīšanai un balss atskaņošanai ir atsevišķa modeļu iestatīšana; lejupielāde pati par sevi nemaina izvēlēto modeli.	Находите и проверяйте совместимые локальные модели LiteRT. Для распознавания и озвучивания речи есть отдельные настройки; загрузка не делает модель выбранной автоматически.
-brandUpdateTitle	Ierīces, atļaujas un iestatījumi — vienkārši izskaidroti.	Устройства, разрешения и настройки — без сложных терминов.
-brandUpdateIntro	Atjauninātajā dizaina grāmatā ir ierīču meklēšanas, savienošanas, kā arī Intelligence, Voice un Privacy iestatījumu piemēri. Šie attēli rāda plānoto izkārtojumu, nevis pārbaudītas publicētas lietotnes ekrānkopijas.	Обновлённый брендбук показывает поиск и подключение устройств, а также разделы Intelligence, Voice и Privacy. Иллюстрации демонстрируют проектный интерфейс, а не проверенные снимки опубликованной APK.
-brandUpdateTag	DIZAINA PARAUGI · NEVIS DARBOJOŠĀ VERSIJA	МАКЕТЫ ДИЗАЙНА · НЕ РАБОЧАЯ СБОРКА
-brandUpdateDevices	Ierīces un savienojuma stāvoklis	Устройства и состояние подключения
-brandUpdatePairing	Atrodi, izvēlies un savieno	Найдите устройство, выберите и подключите
-brandUpdateSettings	Modeļu un pakalpojumu iestatīšana	Настройка моделей и провайдеров
-brandUpdatePrivacy	Balss, privātums un atļaujas	Голос, конфиденциальность и разрешения
-brandUpdateFoot	Attēli no iesniegtās zīmola grāmatas 42.–45. lappuses. Citur vietnē ir agrākas Android testa versijas ekrānuzņēmumi. Šie attēlu veidi ir atsevišķi marķēti.	Изображения из брендбука, стр. 42–45. В других разделах сайта показаны снимки более ранней тестовой сборки Android. Эти материалы помечены отдельно.
 phoneAbilitiesLabel	TĀLRUŅA IESPĒJAS	ВОЗМОЖНОСТИ ТЕЛЕФОНА
 phoneAbilitiesTitle	Septiņas saprotamas iespēju grupas.	Семь понятных групп возможностей.
 phoneAbilitiesBody	Devices tagad sagrupē tālruņa ziņotās iespējas saprotamās kategorijās. “Pieejams” nozīmē, ka sistēma ir ziņojusi par iespēju, nevis devusi piekļuvi privātiem datiem vai tālruņa vadībai. Atļaujas un apstiprinājumi jāpiešķir atsevišķi.	Devices теперь объединяет заявленные телефоном возможности в группы. Статус «Доступно» означает, что система сообщает о возможности, а не разрешает читать личные данные или управлять телефоном. Разрешения и подтверждения проверяются отдельно.
@@ -426,8 +418,3 @@ settingsMapVoice	Voice — runas ievade, atskaņošana un skaņas ierīces	Voice
 settingsMapPrivacy	Privacy un Permissions — datu apstrāde un Android atļaujas	Privacy и Permissions — работа с данными и разрешения Android
 settingsMapAdvanced	Advanced — diagnostika un tehniskās detaļas testētājiem	Advanced — диагностика и технические сведения для тестирования
 settingsMapDisclaimer	Dizaina grāmata rāda plānoto Settings izkārtojumu. Android lietotne vēl mainās; nosaukumi un pieejamība var atšķirties.	Брендбук показывает целевую структуру Settings. Android-приложение меняется, поэтому названия и доступность пунктов могут отличаться.
-brandViewFull	Skatīt pilna izmēra attēlu ↗	Открыть в полном размере ↗
-brandOpenDevices	Atvērt Devices dizaina attēlu pilnā izmērā	Открыть макет Devices в полном размере
-brandOpenPairing	Atvērt ierīču savienošanas dizaina attēlu pilnā izmērā	Открыть макет подключения устройств в полном размере
-brandOpenSettings	Atvērt Intelligence un Settings dizaina attēlu pilnā izmērā	Открыть макет Intelligence и Settings в полном размере
-brandOpenPrivacy	Atvērt Voice, Privacy un Permissions dizaina attēlu pilnā izmērā	Открыть макет Voice, Privacy и Permissions в полном размере

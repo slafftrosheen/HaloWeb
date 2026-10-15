@@ -401,14 +401,6 @@
   "productKidsBody": "A simpler Home layout connects questions and guided learning to the same Study system. Parent controls and device testing still need review; do not treat it as an unsupervised safety boundary.",
   "productModelsTitle": "Models and voices",
   "productModelsBody": "Find and test compatible local LiteRT models. Speech recognition and voice output have their own model setup; no download automatically makes a model your default.",
-  "brandUpdateTitle": "Devices, permissions and settings — explained clearly.",
-  "brandUpdateIntro": "The updated design book covers device discovery, pairing and the Intelligence, Voice and Privacy settings. The examples below show intended layouts, not verified captures from a released APK.",
-  "brandUpdateTag": "DESIGN REFERENCE · NOT A LIVE BUILD",
-  "brandUpdateDevices": "Devices and connection state",
-  "brandUpdatePairing": "Find, select, then connect",
-  "brandUpdateSettings": "Intelligence and provider setup",
-  "brandUpdatePrivacy": "Voice, privacy and permissions",
-  "brandUpdateFoot": "Artwork from the supplied Brand Book, pages 42–45; screenshots elsewhere on this page are from an earlier Android test build. These two sources are intentionally labeled differently.",
   "phoneAbilitiesLabel": "PHONE ABILITIES",
   "phoneAbilitiesTitle": "Seven groups you can inspect.",
   "phoneAbilitiesBody": "Devices now groups the phone's reported capabilities into categories. “Available” means the runtime reported a capability; it is not a grant to read private information or control the phone. Permissions and confirmations remain separate.",
@@ -426,10 +418,5 @@
   "settingsMapVoice": "Voice — speech input, playback and output devices",
   "settingsMapPrivacy": "Privacy & Permissions — data choices and Android access",
   "settingsMapAdvanced": "Advanced — diagnostics and runtime details for testers",
-  "settingsMapDisclaimer": "The design book depicts the intended organization of Settings. The Android implementation is evolving; exact names and availability can differ by build.",
-  "brandViewFull": "View full-size image ↗",
-  "brandOpenDevices": "Open the full-size Devices design image",
-  "brandOpenPairing": "Open the full-size pairing design image",
-  "brandOpenSettings": "Open the full-size Intelligence and Settings design image",
-  "brandOpenPrivacy": "Open the full-size Voice, Privacy and Permissions design image"
+  "settingsMapDisclaimer": "The design book depicts the intended organization of Settings. The Android implementation is evolving; exact names and availability can differ by build."
 }

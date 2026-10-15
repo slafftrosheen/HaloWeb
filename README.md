@@ -15,7 +15,7 @@ HaloWeb is deliberately static: plain HTML, CSS, JavaScript and checked-in UI as
 
 ## Brand-book redesign — 2026-10-14
 
-The page was rebuilt around the owner's 38-page *Halo Brand Book* and the supplied `BrandAssets/` graphics kit, keeping the static, dependency-free stack.
+The page was rebuilt around the owner's 38-page *Halo Brand Book* and the supplied graphics kit (now vendored as `halo-web-assets/`), keeping the static, dependency-free stack.
 
 - **Three new chapters before the product story:** `01 · Mission`, `02 · The open ring` and `03 · Halo's presence`. They explain why the ring is open, what the ring means, and what Halo is doing — before any feature list.
 - **Presence studio:** all 21 kit states are selectable. Each one swaps the large open ring, its localized name and its explanation. Fifteen states play their supplied Lottie animation; the six the kit never animated are shown as stills and labelled as such, so no state fakes motion. The open-ring chapter plays one short sequence (listening → thinking → acting → success) when it scrolls into view, then holds.

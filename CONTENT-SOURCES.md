@@ -114,3 +114,7 @@ The generator previously indexed main-page `en` when updating no-JavaScript fall
 
 ### Responsive design-board review — 2026-10-14
 The four uploaded BrandAssets devices/settings design images are each 2400×1500 PNG. They remain visual references, not app-build screenshots. The website now exposes the original source file through focusable, localized full-size links. CSS preserves native 8:5 aspect ratios, uses a single column at ≤600px, prevents 320px copy overflow and adds keyboard focus treatment. Main navigation now follows section reading order, with the design-system Presence section after the alpha route. Dynamic Russian feedback/template copy uses the same polite form as the website. This is a static source pass; browser-level visual acceptance remains pending.
+
+### Asset source narrowed to halo-web-assets — 2026-10-15
+
+`BrandAssets/` (482 files) is no longer tracked; `halo-web-assets/` is the only asset source for the site. The four design-board images and their full-resolution link lightbox were removed from the page on this date; the 2026-10-14 design-board entry above stays as history. All remaining imagery is the pack's own — screens, photos, meta, og, video.

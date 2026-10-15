@@ -47,7 +47,7 @@ The owner supplied the 38-page `BrandBook.pdf` and the complete `BrandAssets/` g
 
 **Presence studio (the states, brought to life).** All 21 states from the kit are selectable and each one changes the large ring, its name and its explanation. Fifteen states play their supplied Lottie animation; the six the kit never animated (planning, acting_phone, preparing_context, recovering, model_loading, permission_missing) are shown as stills and are labelled as stills, so nothing pretends to move. The 02 chapter plays a short one-shot sequence (listening → thinking → acting → success) when it scrolls into view, then holds.
 
-**Vendored kit artwork.** `BrandAssets/` stays the pristine source; the site serves copies under `assets/brand/`:
+**Vendored kit artwork.** The kit's web artwork ships in the repo as `halo-web-assets/` (the original `BrandAssets/` folder is no longer tracked); the site serves copies under `assets/brand/`:
 
 - `orb/svg/halo_orb_<state>.svg` — 21 state stills (kit artwork, `currentColor`, so one file serves both themes);
 - `orb/lottie/halo_orb_<state>.json` — the 15 supplied state animations;
@@ -69,3 +69,6 @@ Android `Halo/docs/15-brand/ANDROID-BRAND-PARITY.md` reports source-integrated m
 
 ## October 14 / updated 45-page Brand Book
 The new supplied pages 42–45 describe Devices, pairing, and Settings/Intelligence/Voice/Privacy surfaces. Web references now use the existing `BrandAssets/devices` and `BrandAssets/settings` images with prominent DESIGN REFERENCE labels. App source `PhoneCapabilityGroups.kt` exposes seven groups, but its comments prohibit equating reported availability with permission state. The website retains this distinction and does not claim BrandBook mockups are physically accepted Android screenshots.
+
+## October 15 / BrandAssets removed from the repository
+The site's only asset source is now `halo-web-assets/`. The 482-file `BrandAssets/` tree is no longer tracked, and the four 2400×1500 design-board figures (devices, pairing, settings, voice/privacy) were removed from the page together with their lightbox, hint and 8:5 CSS. Everything the page still shows comes from the pack: screens, photos, meta, og and video.
