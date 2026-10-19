@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://halo-web-blue.vercel.app/</loc>
-  </url>
+  <url><loc>https://halo-web-blue.vercel.app/</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/how-it-works</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/workspace</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/voice</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/kids</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/your-ai</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/devices</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/privacy</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/status</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/developers</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/alpha</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/design</loc></url>
 </urlset>

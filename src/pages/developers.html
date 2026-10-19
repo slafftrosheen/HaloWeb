@@ -1,0 +1,50 @@
+<!--{"title":"Developers — Halo architecture, repositories and contributing","desc":"How Halo is built: a portable runtime with host adapters, AI provider routing, local execution, permissions and actions, notes and memory. Repositories, building, contributing and reporting issues.","nav":"developers"}-->
+<section class="page-hero">
+ <div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Developers</p>
+  <h1 class="display" style="margin-top:var(--s4)">Built in the open.</h1>
+  <p class="lede" style="margin-top:var(--s5)">Halo is a portable runtime with a host for each platform. Android is the first host; Linux is next. Here’s how the pieces fit, and where to start.</p>
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="a-title">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">Architecture</span><h2 id="a-title" class="h2">One runtime, many hosts.</h2></div>
+  <div class="arch" role="list">
+   <div class="layer" role="listitem"><b>Hosts</b><div class="chips">{{STATUS:available|Android}}{{STATUS:dev|Linux}}{{STATUS:planned|Windows}}</div></div>
+   <div class="layer" role="listitem"><b>Host adapters</b><span>Platform services: audio, storage, permissions, phone actions, devices.</span></div>
+   <div class="layer" role="listitem"><b>Runtime</b><span>Conversation, tool use with approval, honest receipts, recovery after a crash, durable agent runs.</span></div>
+   <div class="layer" role="listitem"><b>Workspace &amp; memory</b><span>Notebook, Canvas, Study and approved memory, stored locally with search.</span></div>
+   <div class="layer" role="listitem"><b>Provider routing</b><span>On-device (LiteRT), your own server (OpenAI-compatible), or a cloud provider you configure — per job.</span></div>
+   <div class="layer" role="listitem"><b>Peer nodes</b><span>Private identity, pairing and sync between your devices.</span>{{STATUS:planned}}</div>
+  </div>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="r-title">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">Repositories</span><h2 id="r-title" class="h2">Three repositories.</h2></div>
+  <div class="grid3" style="margin-top:var(--s6)">
+   <article class="tile repo"><span class="mono">slafftrosheen/Halo</span><h3>Android app</h3><p>Kotlin and Jetpack Compose. The assistant in the alpha.</p>{{STATUS:available|Pre-release alpha}}<a class="link-arrow" href="https://github.com/slafftrosheen/Halo" rel="noopener">Open on GitHub {{I:external}}</a></article>
+   <article class="tile repo"><span class="mono">slafftrosheen/HaloLinux</span><h3>Linux node</h3><p>Headless host for ARM64 and x86-64: CLI, service, local storage.</p>{{STATUS:dev}}<a class="link-arrow" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">Open on GitHub {{I:external}}</a></article>
+   <article class="tile repo"><span class="mono">slafftrosheen/HaloWeb</span><h3>This website</h3><p>Static HTML, CSS and JavaScript. No build step, no tracking.</p>{{STATUS:available|Live}}<a class="link-arrow" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Open on GitHub {{I:external}}</a></article>
+  </div>
+  <p class="callout" style="margin-top:var(--s5);max-width:52rem">A licence file still needs to be added to each repository. Until it is, please ask before reusing the code.</p>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="c-title" style="padding-top:0">
+ <div class="wrap grid2">
+  <div class="head">
+   <span class="eyebrow">Contribute</span>
+   <h2 id="c-title" class="h2">Reports are contributions.</h2>
+   <p class="lede">The most useful thing right now is careful testing on real phones: what you tried, what you expected and what actually happened.</p>
+   <div class="cta-row" style="margin-top:var(--s5)"><a class="btn btn--pri" href="https://github.com/slafftrosheen/Halo/issues/new/choose" rel="noopener">Report on GitHub {{I:external}}</a><a class="btn btn--sec" href="alpha.html">Tester kit</a></div>
+  </div>
+  <div class="tile">
+   <h3>Before you open an issue</h3>
+   <p>Include your Halo and Android versions, the screen, the steps, and what happened. Never post API keys, personal files, identifiers or private logs.</p>
+   <p>Code changes: read the engineering notes in <span class="mono">docs/</span> first — they explain which parts are tested and which aren’t.</p>
+  </div>
+ </div>
+</section>

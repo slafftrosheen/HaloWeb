@@ -1,0 +1,189 @@
+<!--{"title":"Halo — AI that feels like second nature","desc":"Halo is a personal assistant that starts on your Android phone. Talk or type, approve what matters, see what actually happened — with the AI running where you choose.","nav":"home"}-->
+<section class="hero" aria-labelledby="hero-title">
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <span class="eyebrow">Your assistant · Your devices · Your choice</span>
+   <h1 id="hero-title" class="display">AI that feels like second nature.</h1>
+   <p class="lede">Halo is a personal assistant that starts on your Android phone. Talk or type, approve what matters, and see what actually happened — with the AI running where you choose.</p>
+   <div class="cta-row">
+    <a class="btn btn--pri" href="alpha.html">Explore the Android alpha {{I:arrow_right}}</a>
+    <a class="btn btn--sec" href="how-it-works.html">See how Halo works</a>
+   </div>
+   <a class="link-arrow" href="https://github.com/slafftrosheen/Halo" rel="noopener">{{I:repository}} Source code on GitHub</a>
+   <ul class="hero-status" aria-label="Where Halo is today">
+    <li class="status status--available"><span><b>Android</b> Alpha available</span></li>
+    <li class="status status--dev"><span><b>Linux</b> In development</span></li>
+    <li class="status status--planned"><span><b>Your AI</b> Phone, own machine or a provider</span></li>
+   </ul>
+  </div>
+  <div class="hero-stage">
+   <span class="aura" aria-hidden="true"></span>
+   <span class="ring" data-themed data-lottie="assets/brand/lottie/halo_hero_ring_intro_{theme}.json" data-play="intro" data-then-still aria-hidden="true"><img src="assets/brand/orb/svg/halo_orb_idle.svg" data-src-light="assets/brand/orb/svg/halo_orb_idle.svg" data-src-dark="assets/brand/orb/svg/halo_orb_idle.svg" alt="" width="240" height="240" fetchpriority="high"></span>
+   {{SLOT:SR-01|Home, idle — current build (dark and light)}}
+  </div>
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="b-title">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Ask, act, know what happened</span>
+   <h2 id="b-title" class="h2">Halo asks before it acts — and tells you what really happened.</h2>
+   <p class="lede">An assistant is only useful if you can trust it. So Halo checks in before anything that matters, and its Activity list never dresses up a guess as a success.</p>
+  </div>
+  <div class="journey" data-journey>
+   <div>
+    <ol class="steps">
+     <li class="step"><button type="button" data-step data-fig="f1" aria-pressed="true">{{RING:listening}}<span><span class="st-t">You speak or type</span><span class="st-d">“Remind me to call John tomorrow at ten.”</span></span></button></li>
+     <li class="step"><button type="button" data-step data-fig="f1" aria-pressed="false">{{RING:thinking}}<span><span class="st-t">Halo works out what you mean</span><span class="st-d">If it isn’t sure, it asks a short question instead of guessing.</span></span></button></li>
+     <li class="step"><button type="button" data-step data-fig="f3" aria-pressed="false">{{RING:approval_required}}<span><span class="st-t">You approve what matters</span><span class="st-d">The button names the action. You can say no, or press Stop at any time.</span></span></button></li>
+     <li class="step"><button type="button" data-step data-fig="f4" aria-pressed="false">{{RING:acting}}<span><span class="st-t">Your phone does it</span><span class="st-d">Only with the permissions you have given.</span></span></button></li>
+     <li class="step"><button type="button" data-step data-fig="f5" aria-pressed="false">{{RING:waiting}}<span><span class="st-t">Activity tells the truth</span><span class="st-d">Confirmed, failed, or “sent, but not verified”.</span></span></button></li>
+    </ol>
+    <div class="journey-controls"><button type="button" class="btn btn--sec btn--sm" data-journey-play>{{I:play}} Play the five steps</button><button type="button" class="btn btn--sec btn--sm" data-journey-stop hidden>{{I:pause}} Pause</button></div>
+    <p class="vh" aria-live="polite" data-journey-live></p>
+   </div>
+   <div class="journey-stage journey-figs">
+    <div data-fig="f1" class="is-on">{{SHOT:home|A real paused task: Halo says completion is unconfirmed.}}</div>
+    <div data-fig="f3">{{SLOT:SR-04|Approval sheet that names the action}}</div>
+    <div data-fig="f4">{{SLOT:SR-05|Halo acting — task in progress}}</div>
+    <div data-fig="f5">{{SHOT:activity|“Dispatched · effect not verified” is shown as it is.}}</div>
+   </div>
+  </div>
+  <ul class="outcomes" aria-label="How Halo reports an action">
+   <li class="outcome o-proposed">{{I:task}}<span><b>Proposed</b><span>Halo suggests an action. Nothing has happened.</span></span></li>
+   <li class="outcome o-approved">{{I:approval}}<span><b>Approved</b><span>You said yes. Halo can start.</span></span></li>
+   <li class="outcome o-running">{{I:act}}<span><b>Running</b><span>Working on it. Stop is always there.</span></span></li>
+   <li class="outcome o-confirmed">{{I:check}}<span><b>Confirmed</b><span>Halo checked the result and it worked.</span></span></li>
+   <li class="outcome o-failed">{{I:failure}}<span><b>Failed</b><span>It didn’t work. You get one clear next step.</span></span></li>
+   <li class="outcome o-unverified">{{I:unverified}}<span><b>Not verified</b><span>Sent to the app, but Halo couldn’t check the result.</span></span></li>
+  </ul>
+  <p class="more"><a class="link-arrow" href="how-it-works.html">How Halo works, step by step {{I:arrow_right}}</a></p>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="c-title">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Notes, Canvas, Memory &amp; Study</span>
+   <h2 id="c-title" class="h2">Your notes, your canvas, your pace.</h2>
+   <p class="lede">Keep notes, files and conversations in one Notebook. Halo helps you connect and learn from them — and never changes your work without asking.</p>
+  </div>
+  <div class="trio">
+   <article>{{SLOT:SR-11|Notebook library, English}}<div class="txt"><h3 class="h3">Notebook</h3><p class="muted">Notes, files, saved chats and an Inbox for quick captures. Search everything in one place.</p>{{STATUS:available}}</div></article>
+   <article>{{SHOT:canvas||sm}}<div class="txt"><h3 class="h3">Canvas</h3><p class="muted">Lay ideas out, group them and connect them. Halo’s suggestions arrive as drafts you keep or discard.</p>{{STATUS:available}}</div></article>
+   <article>{{SHOT:study||sm}}<div class="txt"><h3 class="h3">Study</h3><p class="muted">Pick a topic or your own material. Halo explains, you practise, then you review — one step at a time.</p>{{STATUS:available|Available · growing}}</div></article>
+  </div>
+  <p class="more"><a class="link-arrow" href="workspace.html">See how drafts, memory and lessons work {{I:arrow_right}}</a></p>
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="e-title">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">Voice</span>
+   <h2 id="e-title" class="h2">Talk, listen, read along.</h2>
+   <p class="lede">Speak instead of typing, hear answers read aloud, and interrupt whenever you like. Voice works in Home, your notes, Canvas and Study — not just in one corner of the app.</p>
+   {{STATUS:available|Available · depends on your phone and language}}
+   <p><a class="link-arrow" href="voice.html" style="color:var(--halo-mint)">How voice works {{I:arrow_right}}</a></p>
+  </div>
+  <ul class="vstates vstates--2" style="margin-top:0" aria-label="Halo’s voice states">
+   <li class="vstate">{{RING:listening||view}}<b>Listening</b><span>Halo hears you.</span></li>
+   <li class="vstate">{{RING:capturing_voice}}<b>Writing it down</b><span>Your words appear as you speak.</span></li>
+   <li class="vstate">{{RING:speaking}}<b>Speaking</b><span>Answers, read aloud.</span></li>
+   <li class="vstate">{{RING:stopped}}<b>Stopped</b><span>Tap or talk to interrupt.</span></li>
+  </ul>
+ </div>
+</section>
+
+<section class="section kids" aria-labelledby="d-title">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">Kids Mode</span>
+   <h2 id="d-title" class="h2">A gentler Halo for children.</h2>
+   <p class="lede">Simpler words, speech first, hints before answers, stories to make — and a grown-up gate for anything that matters.</p>
+   {{STATUS:dev}}
+   <p><a class="link-arrow" href="kids.html">What Kids Mode will be {{I:arrow_right}}</a></p>
+  </div>
+  <div>{{KRING:idle|ring-xl|view}}</div>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="f-title">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Your AI</span>
+   <h2 id="f-title" class="h2">You choose where Halo thinks.</h2>
+   <p class="lede">Every answer has to be worked out somewhere. You decide where — and you can change your mind.</p>
+  </div>
+  <div class="grid3" style="margin-top:var(--s6)">
+   <article class="tile">{{I:on_device}}<h3>On this phone</h3><p>Private and works offline once a model is downloaded. Smaller models, and they use storage and battery.</p>{{STATUS:available}}</article>
+   <article class="tile">{{I:lan}}<h3>On your own machine</h3><p>A computer at home answers over your own network. Bigger models, still under your roof.</p>{{STATUS:dev|Works with your own server · HaloLinux in development}}</article>
+   <article class="tile">{{I:cloud}}<h3>A provider you choose</h3><p>Bring your own account. That provider’s prices and privacy policy apply to what you send.</p>{{STATUS:available|Available · varies by provider}}</article>
+  </div>
+  <p class="more"><a class="link-arrow" href="your-ai.html">Compare the three choices {{I:arrow_right}}</a></p>
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="g-title">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">Your devices</span>
+   <h2 id="g-title" class="h2">Your phone first. Other devices when you want them.</h2>
+   <p class="lede">Halo works on your Android phone with nothing else. No glasses needed. A home computer running HaloLinux is the next host we’re building, and a private network of your own devices is where this is heading.</p>
+   <ul class="hero-status" style="margin-top:var(--s5)">
+    <li class="status status--available"><span><b>Android phone</b> Available</span></li>
+    <li class="status status--dev"><span><b>HaloLinux</b> In development</span></li>
+    <li class="status status--planned"><span><b>Sync between your devices</b> Planned</span></li>
+   </ul>
+   <p style="margin-top:var(--s5)"><a class="link-arrow" href="devices.html" style="color:var(--halo-mint)">Devices and HaloLinux {{I:arrow_right}}</a></p>
+  </div>
+  {{SHOT:devices|No saved devices — and Halo still works.}}
+ </div>
+</section>
+
+<section class="section" aria-labelledby="h-title">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Privacy &amp; price</span>
+   <h2 id="h-title" class="h2">Private by default. Clear when it isn’t.</h2>
+  </div>
+  <ul class="zones">
+   <li class="zone z-stays"><span class="zi">{{I:on_device}}</span><h3>Stays on your phone</h3><ul><li>Your notes, files and memory</li><li>Answers from on-device models</li><li>Your settings and permissions</li></ul></li>
+   <li class="zone z-choose"><span class="zi">{{I:cloud}}</span><h3>Leaves only if you choose</h3><ul><li>Requests to an AI provider you set up</li><li>Requests to your own computer on your network</li><li>Under that provider’s own terms</li></ul></li>
+   <li class="zone z-never"><span class="zi">{{I:no_account}}</span><h3>Halo itself doesn’t collect</h3><ul><li>No Halo account</li><li>No analytics or tracking</li><li>No Halo-run servers holding your data</li></ul></li>
+  </ul>
+  <p class="callout" style="margin-top:var(--s5);max-width:48rem"><b>No Halo subscription.</b> A one-time Google Play price of about US$5 is being considered for a future release. The alpha on GitHub is free to try.</p>
+  <p class="more"><a class="link-arrow" href="privacy.html">Privacy, openness and price in full {{I:arrow_right}}</a></p>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="i-title" style="padding-top:0">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">What’s real today</span>
+   <h2 id="i-title" class="h2">No percentages. No launch dates. Just where things stand.</h2>
+  </div>
+  <div class="lanes compact-lanes">
+   <section class="lane" aria-label="Available in the Android alpha"><h3>{{STATUS:available|Available in the alpha}}</h3><ul><li>Talk or type, with honest outcomes in Activity</li><li>Notebook, Canvas, Memory and Study</li><li>On-device models and providers you set up</li><li>Read-aloud and voice input</li></ul></section>
+   <section class="lane" aria-label="In active development"><h3>{{STATUS:dev|In active development}}</h3><ul><li>Kids Mode</li><li>Native assistant over other apps</li><li>HaloLinux home node</li><li>Local voice packs in more languages</li></ul></section>
+   <section class="lane" aria-label="Planned or research"><h3>{{STATUS:planned|Planned &amp; research}}</h3><ul><li>Private sync between your devices</li><li>Windows host</li><li>Google Play release</li><li>Robotics (experimental)</li></ul></section>
+  </div>
+  <p class="more"><a class="link-arrow" href="status.html">Full status and engineering evidence {{I:arrow_right}}</a></p>
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="j-title">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">Built in the open</span>
+   <h2 id="j-title" class="h2">Try it, break it, tell us.</h2>
+   <p class="lede">The Android alpha is a pre-release build on GitHub. Install it, use the five test files, and tell us what really happened — confusing moments count too.</p>
+   <div class="cta-row" style="margin-top:var(--s6)"><a class="btn btn--pri" href="alpha.html">Explore the Android alpha {{I:arrow_right}}</a><a class="btn btn--sec" href="developers.html">For developers</a></div>
+  </div>
+  <div style="align-self:center;display:grid;gap:var(--s3)">
+   <a class="tile repo" href="https://github.com/slafftrosheen/Halo" rel="noopener" style="text-decoration:none;color:inherit"><span class="mono">slafftrosheen/Halo</span><h3>Android app</h3><p>The assistant you can try today.</p></a>
+   <a class="tile repo" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener" style="text-decoration:none;color:inherit"><span class="mono">slafftrosheen/HaloLinux</span><h3>Linux node</h3><p>Early, headless, in development.</p></a>
+  </div>
+ </div>
+</section>

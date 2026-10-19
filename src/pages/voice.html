@@ -1,0 +1,68 @@
+<!--{"title":"Voice — talk, listen and read along with Halo","desc":"Voice in Halo: speak instead of typing, review dictation before it’s used, hear answers and notes read aloud, and interrupt at any time. Local voices when installed; support depends on your phone and language.","nav":"product"}-->
+<section class="page-hero">
+ <div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Voice</p>
+  <h1 class="display" style="margin-top:var(--s4)">Talk, listen, read along.</h1>
+  <p class="lede" style="margin-top:var(--s5)">Voice isn’t a separate mode in Halo. You can speak or listen in Home, in your notes, on a Canvas and in Study — wherever typing or reading is harder than talking.</p>
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="vs-title" data-vstates>
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">What the ring tells you</span><h2 id="vs-title" class="h2">You can always see what Halo is doing with your voice.</h2></div>
+  <ul class="vstates">
+   <li class="vstate">{{RING:listening}}<b>Listening</b><span>The microphone is on and Halo hears you. Nothing is recorded before you start.</span></li>
+   <li class="vstate">{{RING:capturing_voice}}<b>Writing it down</b><span>Your words appear on screen as you speak, so you can catch mistakes.</span></li>
+   <li class="vstate">{{RING:speaking}}<b>Speaking</b><span>Halo reads its answer — or your note — aloud.</span></li>
+   <li class="vstate">{{RING:stopped}}<b>Stopped</b><span>Press Stop or start talking, and Halo stops straight away.</span></li>
+  </ul>
+  <div class="cta-row" style="margin-top:var(--s5)"><button type="button" class="btn btn--sec btn--sm" data-vplay>{{I:play}} Show the four states</button></div>
+  <p class="vh" aria-live="polite" data-vlive></p>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="d-title">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">Everywhere you write and read</span><h2 id="d-title" class="h2">Speak it, check it, use it.</h2></div>
+  <div class="grid3" style="margin-top:var(--s6)">
+   <article class="tile">{{I:mic}}<h3>Dictation you review</h3><p>When you dictate into a note or field, Halo shows what it heard first. Choose Use, Edit or Discard — nothing goes in on its own.</p>{{STATUS:available}}</article>
+   <article class="tile">{{I:speaker}}<h3>Read aloud</h3><p>Hear answers, notes and lesson explanations, and stop whenever you like.</p>{{STATUS:available}}</article>
+   <article class="tile">{{I:voice}}<h3>Interrupt any time</h3><p>Start talking while Halo is speaking and it stops to listen. Conversation can continue back and forth.</p>{{STATUS:available|Available · depends on your phone}}</article>
+  </div>
+  <div class="grid3" style="margin-top:var(--s7)">
+   {{SLOT:SR-03|Typing box listening — words appearing}}
+   {{SLOT:SR-12|Note editor — dictation preview: Use, Edit, Discard}}
+   {{SLOT:SR-19|Read-aloud bar playing}}
+  </div>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="l-title" style="padding-top:0">
+ <div class="wrap grid2" style="gap:clamp(2rem,1rem + 4vw,4.5rem)">
+  <div class="head">
+   <span class="eyebrow">Voices on your phone</span>
+   <h2 id="l-title" class="h2">Local voices, when you install them.</h2>
+   <p class="lede">You can download a voice pack so Halo speaks without sending text anywhere. You pick it, you test it, and Halo only uses a voice you’ve listened to and approved.</p>
+   <p class="callout" style="margin-top:var(--s5)">How well voice works depends on your phone, your language and which packs you install. Speech isn’t offline in every language, and speed varies by device.</p>
+  </div>
+  <div>
+   <table class="roles">
+    <thead><tr><th>Part</th><th>What it does</th><th>Today</th></tr></thead>
+    <tbody>
+     <tr><td>Speaking voice</td><td>A downloadable local voice pack. In a tester’s phone check, 10 voices worked in English, Latvian, Russian and Polish.</td><td>{{STATUS:available|Optional download}}</td></tr>
+     <tr><td>Alternative voice</td><td>A second local pack covering English and Chinese.</td><td>{{STATUS:available|Optional download}}</td></tr>
+     <tr><td>Understanding speech</td><td>A local speech-recognition model you install, then check with your own microphone.</td><td>{{STATUS:dev|Being qualified on phones}}</td></tr>
+     <tr><td>Hearing when you talk</td><td>A tiny optional model that notices when you start and stop speaking.</td><td>{{STATUS:dev|Optional · being qualified}}</td></tr>
+     <tr><td>Fallback</td><td>Your phone’s built-in Android voice.</td><td>{{STATUS:available}}</td></tr>
+    </tbody>
+   </table>
+   <details class="plain" style="margin-top:var(--s4)"><summary>Model names, for the curious</summary><p class="small muted">Speaking voice: Supertonic 3 (INT8). Alternative: Kokoro 1.1 (published pack: English and Chinese). Speech recognition: Whisper Small INT8 (Whisper Base INT8 is the lighter option). Speech activity: Silero VAD. Each is downloaded only when you choose, and a download alone doesn’t mean it works well on your phone.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="a-title" style="padding-top:0">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">Accessibility</span><h2 id="a-title" class="h2">Voice is for everyone who finds typing or reading hard.</h2><p class="lede">That includes children, older people, people with low vision and anyone with their hands full. Text and voice always do the same things — neither is a lesser way to use Halo.</p></div>
+ </div>
+</section>

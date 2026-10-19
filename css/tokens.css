@@ -1,89 +1,93 @@
-/* Halo design tokens — Halo Brand Book v1.0 (2026).
-   Palette (p.11), type (p.13–14), app surfaces and presence (p.21–25), motion (p.24).
-   Single source of truth for colour, type scale, radii, glow and easing. */
+/* halo web · design tokens · Quiet Light v1.0 (Brand Book v3.0)
+   One file decides colour, type, space, radius, depth and motion for the whole site.
+   Light is the default; dark follows the system unless the visitor chooses. */
 :root{
-  /* --- palette · brand book p.11 ------------------------------------------------- */
-  --halo-mint:#0CF2BA;          /* primary, ~20% of a layout */
-  --night-ink:#060330;          /* secondary, the other ~70% with Cream */
-  --deep-mint:#047A5E;          /* mint-coloured text on light surfaces */
-  --cream:#FAFAF4;              /* neutral */
-  --slate:#4A4F63;              /* neutral, secondary text on light */
-  --sunrise-apricot:#FF9F6B;    /* accent, ≤5%: warmth and "Halo needs you" */
-  --mint-tint:#B4E6D6;          /* ring gradient end */
-  --dusk:#9A9EB5;               /* offline and stopped */
-  --ember:#D64545;              /* ERROR only, always with a glyph */
-  --apricot-ink:#A84B12;        /* apricot as text on light, for contrast */
+  /* palette — brand */
+  --halo-mint:#0CF2BA;      /* fills, ring, focus · never text on light */
+  --night-ink:#060330;
+  --deep-mint:#047A5E;      /* mint as text on light · 5.1:1 on Cream */
+  --cream:#FAFAF4;
+  --slate:#4A4F63;          /* 7.7:1 on Cream */
+  --mint-tint:#B4E6D6;
+  --apricot:#FF9F6B;        /* ≤5 % · needs-you, Kids warmth · fills only on light */
+  --apricot-ink:#A84B12;    /* apricot as text on light · 5.4:1 */
+  --dusk:#9A9EB5;           /* offline, stopped */
+  --ember:#D64545;          /* error glyphs & large text only */
+  --ink-2:#0D0A3F;          /* lifted ink surface */
+  --ink-3:#16134A;
 
-  /* --- app surfaces and badges · brand book p.24–25 ------------------------------ */
-  --app-surface:#110E45;
-  --app-surface-2:#1A1760;
-  --badge-context:#1A1760;
-  --badge-hairline:rgba(250,250,244,.10);
-  --muted-dark:#B7B9D3;
+  /* type */
+  --font-display:"Sora","Onest","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --font-body:"Atkinson Hyperlegible Next","Atkinson Hyperlegible","Onest","Segoe UI",system-ui,sans-serif;
+  --font-mono:ui-monospace,"SFMono-Regular","Cascadia Code",Consolas,monospace;
+  --fs-display:clamp(2.5rem,1.6rem + 3.9vw,4.75rem);  /* 40 → 76 */
+  --fs-h2:clamp(1.875rem,1.35rem + 2.1vw,3rem);       /* 30 → 48 */
+  --fs-h3:clamp(1.25rem,1.1rem + .55vw,1.625rem);     /* 20 → 26 */
+  --fs-lede:clamp(1.0625rem,.98rem + .4vw,1.3125rem); /* 17 → 21 */
+  --fs-body:clamp(1rem,.96rem + .18vw,1.125rem);      /* 16 → 18 */
+  --fs-small:.9375rem;                                /* 15 */
+  --fs-label:.8125rem;                                /* 13, caps */
+  --lh-tight:1.04;--lh-head:1.12;--lh-body:1.6;
+  --track-display:-.035em;--track-head:-.025em;--track-label:.14em;
 
-  /* --- type · brand book p.13–14 ------------------------------------------------- */
-  --font-display:"Sora","Onest","Avenir Next","Century Gothic","Trebuchet MS",sans-serif;
-  --font-sans:"Atkinson Hyperlegible Next","Atkinson Hyperlegible","Onest","Segoe UI",Arial,sans-serif;
-  --font-mono:"SFMono-Regular","Cascadia Code",Consolas,monospace;
-  --fs-display:clamp(2.9rem,6.2vw,4.5rem);   /* 72 / 1.05 / −2% */
-  --fs-h2:clamp(2.05rem,3.9vw,2.8rem);       /* 40 / 1.15 */
-  --fs-h3:clamp(1.15rem,1.5vw,1.35rem);
-  --fs-body:clamp(1rem,1.05vw,1.125rem);     /* 18–20 / 1.6, never below 16px */
-  --fs-small:clamp(.9rem,1vw,1rem);
-  --fs-label:.78rem;                         /* 14 / +22% / caps */
-  --lh-display:1.05;
-  --tracking-display:-.02em;
-  --tracking-label:.2em;
+  /* space (8-pt) */
+  --s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.5rem;--s6:2rem;--s7:3rem;--s8:4rem;--s9:6rem;--s10:8rem;
+  --section-y:clamp(4rem,2.5rem + 6vw,8rem);
+  --gutter:clamp(1.25rem,.6rem + 2.6vw,3.5rem);
+  --container:77.5rem;    /* 1240 */
+  --measure:38rem;        /* comfortable line length */
 
-  /* --- light theme · Cream daytime surface (p.18) -------------------------------- */
+  /* shape & depth */
+  --r-xs:.5rem;--r-sm:.75rem;--r-md:1.125rem;--r-lg:1.625rem;--r-shot:2.1rem;--r-pill:999px;
+  --tap:3rem;             /* 48 px minimum target */
+
+  /* motion */
+  --ease-standard:cubic-bezier(.42,0,.58,1);
+  --ease-out:cubic-bezier(.2,.7,.2,1);
+  --ease-breath:cubic-bezier(.45,0,.55,1);
+  --t-fast:160ms;--t-base:240ms;--t-slow:420ms;--t-reveal:600ms;
+
+  /* light theme (default) */
+  color-scheme:light;
   --bg:var(--cream);
   --surface:#FFFFFF;
-  --surface-subtle:#EFF2EC;
+  --surface-2:#F1F3EE;
   --text:var(--night-ink);
-  --text-secondary:#454961;
-  --text-tertiary:#555B6D;
+  --text-2:#33364D;
+  --text-3:#555A70;
   --line:#DCE1DC;
-  --line-strong:#BFCAC5;
-  --accent:var(--deep-mint);
-  --accent-strong:#05604B;
-  --primary:var(--halo-mint);
-  --primary-ink:var(--night-ink);
-  --on-dark:#FAFAF4;
-  --on-dark-muted:var(--muted-dark);
-
-  /* --- shape, depth and motion --------------------------------------------------- */
-  --container:1240px;
-  --header-h:72px;
-  --r-sm:12px;--r-md:18px;--r-lg:26px;--r-xl:34px;
-  --shadow-card:0 16px 44px rgba(6,3,48,.06);
-  --shadow-shot:0 34px 84px rgba(6,3,48,.20),0 3px 12px rgba(6,3,48,.08);
-  --glow-mint:radial-gradient(circle at 50% 50%,rgba(12,242,186,.30),rgba(12,242,186,.10) 44%,transparent 70%);
-  --glow-warm:radial-gradient(circle at 50% 50%,rgba(255,159,107,.28),transparent 68%);
-  --ease:cubic-bezier(.42,0,.58,1);          /* standard */
-  --ease-breath:cubic-bezier(.45,0,.55,1);
-  --ease-orbit:cubic-bezier(.6,0,.4,1);
-  --ease-settle:cubic-bezier(.3,0,.7,1);
+  --line-strong:#B9C3BE;
+  --link:var(--deep-mint);
+  --accent-ink:var(--deep-mint);   /* mint-family text: Deep Mint on light, Halo Mint on dark */
+  --focus:#047A5E;
+  --btn-pri-bg:var(--halo-mint);--btn-pri-fg:var(--night-ink);
+  --chip-bg:#FFFFFF;
+  --aura:rgba(12,242,186,.22);
+  --shot-shadow:0 2.5rem 5.5rem rgba(6,3,48,.20),0 .15rem .6rem rgba(6,3,48,.08);
+  --shot-outline:rgba(6,3,48,.09);
+  --band-bg:var(--night-ink);--band-text:var(--cream);--band-text-2:#C9CBE0;--band-line:#2A2660;--band-surface:var(--ink-2);
+  --wm-light:inline;--wm-dark:none;
 }
+/* dark — same system, Night Ink fields with lifted ink bands */
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:var(--night-ink);
-  --surface:var(--app-surface);
-  --surface-subtle:var(--app-surface-2);
-  --text:var(--cream);
-  --text-secondary:#CACCDC;
-  --text-tertiary:#BEC3D6;
-  --line:#332F5B;
-  --line-strong:#514E75;
-  --accent:var(--halo-mint);
-  --accent-strong:var(--mint-tint);
-  --shadow-card:0 20px 54px rgba(0,0,0,.34);
-  --shadow-shot:0 34px 90px rgba(0,0,0,.42),0 2px 10px rgba(0,0,0,.26);
+  --bg:var(--night-ink);--surface:var(--ink-2);--surface-2:var(--ink-3);
+  --text:var(--cream);--text-2:#D5D7E8;--text-3:#B7B9D3;
+  --line:#26225A;--line-strong:#3A3672;--link:var(--halo-mint);--accent-ink:var(--halo-mint);--focus:var(--halo-mint);
+  --chip-bg:var(--ink-2);--aura:rgba(12,242,186,.18);
+  --shot-shadow:0 2.5rem 6rem rgba(0,0,0,.5),0 .1rem .5rem rgba(0,0,0,.3);--shot-outline:rgba(250,250,244,.14);
+  --band-bg:#0A0738;--band-text:var(--cream);--band-text-2:#C9CBE0;--band-line:#2A2660;--band-surface:var(--ink-3);
+  --wm-light:none;--wm-dark:inline;
 }
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    scroll-behavior:auto!important;
-    animation-duration:1ms!important;
-    animation-iteration-count:1!important;
-    transition-duration:1ms!important;
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:var(--night-ink);--surface:var(--ink-2);--surface-2:var(--ink-3);
+    --text:var(--cream);--text-2:#D5D7E8;--text-3:#B7B9D3;
+    --line:#26225A;--line-strong:#3A3672;--link:var(--halo-mint);--accent-ink:var(--halo-mint);--focus:var(--halo-mint);
+    --chip-bg:var(--ink-2);--aura:rgba(12,242,186,.18);
+    --shot-shadow:0 2.5rem 6rem rgba(0,0,0,.5),0 .1rem .5rem rgba(0,0,0,.3);--shot-outline:rgba(250,250,244,.14);
+    --band-bg:#0A0738;--band-text:var(--cream);--band-text-2:#C9CBE0;--band-line:#2A2660;--band-surface:var(--ink-3);
+    --wm-light:none;--wm-dark:inline;
   }
 }
