@@ -1,0 +1,83 @@
+<!--{"title":"Your devices — Android first, HaloLinux in development","desc":"Halo starts on your Android phone. Wearables are optional, HaloLinux is an early home node in development, and private sync between your own devices is planned.","nav":"devices"}-->
+<section class="page-hero">
+ <div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Devices</p>
+  <h1 class="display" style="margin-top:var(--s4)">Your phone first. Other devices when you want them.</h1>
+  <p class="lede" style="margin-top:var(--s5)">Halo isn’t tied to one gadget. It starts on the Android phone you already have. Everything else is optional — and the parts that aren’t ready yet are labelled that way.</p>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="p-title" style="padding-top:0">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">Android phone</span>
+   <h2 id="p-title" class="h2">The first home for Halo.</h2>
+   <p class="lede">Your phone runs the conversation, your notes and your settings. It can run AI models itself, or reach a computer or provider you choose. No glasses or other hardware needed.</p>
+   {{STATUS:available}}
+  </div>
+  {{SHOT:devices|“Halo works on this phone.”}}
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="n-title">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Where this is heading</span>
+   <h2 id="n-title" class="h2">A private network of your own devices.</h2>
+   <p class="lede">The idea: your phone, a small computer at home and, one day, other devices work together — sharing your notes and tasks directly with each other, with no Halo server in the middle. This is the direction, not something you can use today.</p>
+  </div>
+  <div class="hosts" data-draw>
+   <svg viewBox="0 0 960 420" role="img" aria-labelledby="hd-t hd-d">
+    <title id="hd-t">Diagram of Halo hosts</title>
+    <desc id="hd-d">The Android phone, available today, sits at the centre. Dashed lines labelled planned connect it to a HaloLinux home node (in development), a Windows computer (planned), optional wearables (reference integration) and an experimental robot.</desc>
+    <path class="path" d="M480 210 L190 90"/><path class="path" d="M480 210 L770 90"/><path class="path" d="M480 210 L190 330"/><path class="path" d="M480 210 L770 330"/>
+    <g class="node is-avail"><rect x="380" y="165" width="200" height="90" rx="18"/><text x="480" y="203" text-anchor="middle">Android phone</text><text class="sub" x="480" y="228" text-anchor="middle">Available in the alpha</text></g>
+    <g class="node"><rect x="90" y="48" width="200" height="84" rx="18"/><text x="190" y="84" text-anchor="middle">HaloLinux node</text><text class="sub" x="190" y="108" text-anchor="middle">In development</text></g>
+    <g class="node"><rect x="670" y="48" width="200" height="84" rx="18"/><text x="770" y="84" text-anchor="middle">Windows</text><text class="sub" x="770" y="108" text-anchor="middle">Planned</text></g>
+    <g class="node"><rect x="90" y="288" width="200" height="84" rx="18"/><text x="190" y="324" text-anchor="middle">Wearables</text><text class="sub" x="190" y="348" text-anchor="middle">Optional · reference glasses</text></g>
+    <g class="node"><rect x="670" y="288" width="200" height="84" rx="18"/><text x="770" y="324" text-anchor="middle">BuddyBot</text><text class="sub" x="770" y="348" text-anchor="middle">Experimental robotics</text></g>
+    <rect class="tag-planned" x="395" y="118" width="170" height="28" rx="14"/><text x="480" y="137" text-anchor="middle">PRIVATE SYNC · PLANNED</text>
+   </svg>
+   <ul class="host-list">
+    <li><b>Android phone</b>{{STATUS:available}}<span>The first host.</span></li>
+    <li><b>HaloLinux node</b>{{STATUS:dev}}<span>Raspberry Pi 5 or Linux PC. No release yet.</span></li>
+    <li><b>Windows</b>{{STATUS:planned}}<span>Not started as a product.</span></li>
+    <li><b>Wearables</b>{{STATUS:exp|Optional}}<span>Glasses support is a reference integration.</span></li>
+    <li><b>BuddyBot</b>{{STATUS:exp}}<span>A research robot, not a product.</span></li>
+    <li><b>Private sync between devices</b>{{STATUS:planned}}<span>Pairing, identity and sync are on the roadmap.</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="l-title">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">HaloLinux</span>
+   <h2 id="l-title" class="h2">An early home node for a Raspberry Pi or Linux PC.</h2>
+   <p class="lede">HaloLinux is a separate, headless Halo host for ARM64 and x86-64 — a small computer that stays on at home. It’s early, and there’s no download yet.</p>
+   {{STATUS:dev}}
+   <h3 class="h3" style="margin-top:var(--s6)">What’s in the source today</h3>
+   <ul class="small" style="list-style:none;display:grid;gap:.5rem;margin-top:var(--s3)">
+    <li>A command-line tool and a background service that starts, stops and recovers</li>
+    <li>Connects to an AI server you choose (OpenAI-compatible)</li>
+    <li>Conversations and memory stored locally, with full-text search</li>
+    <li>Audio checks, and records of agent runs that survive a crash</li>
+   </ul>
+   <p class="callout" style="margin-top:var(--s5)">The newest batch of this work was written but not yet built, tested or tried on a device as a whole. We’ll call it ready only after it has been.</p>
+   <p style="margin-top:var(--s5)"><a class="link-arrow" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux on GitHub {{I:external}}</a></p>
+  </div>
+  {{SLOT:SR-30|Real terminal: HaloLinux status on a Pi 5 or PC}}
+ </div>
+</section>
+
+<section class="section" aria-labelledby="w-title" style="padding-top:0">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">Optional hardware</span><h2 id="w-title" class="h2">Add-ons, never requirements.</h2></div>
+  <div class="grid3" style="margin-top:var(--s6)">
+   <article class="tile">{{I:headphones}}<h3>Headphones</h3><p>Connect through Android’s Bluetooth settings, as usual.</p>{{STATUS:available}}</article>
+   <article class="tile">{{I:glasses}}<h3>Glasses</h3><p>HeyCyan glasses are a reference integration for trying Halo hands-free. Not needed, and support varies.</p>{{STATUS:exp|Reference integration}}</article>
+   <article class="tile">{{I:robot}}<h3>BuddyBot</h3><p>An experimental robot used for research. It’s not consumer hardware and not for sale.</p>{{STATUS:exp}}</article>
+  </div>
+ </div>
+</section>

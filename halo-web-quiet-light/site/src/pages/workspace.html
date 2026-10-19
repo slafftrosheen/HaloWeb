@@ -1,0 +1,102 @@
+<!--{"title":"Notes, Canvas, Memory and Study — Halo","desc":"Halo’s workspace: a Notebook for notes, files and chats, a Canvas where AI suggestions arrive as drafts you keep or discard, memory that saves nothing without you, and calm guided Study.","nav":"product"}-->
+<section class="page-hero">
+ <div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Notes, Canvas &amp; Study</p>
+  <h1 class="display" style="margin-top:var(--s4)">Your work stays yours.</h1>
+  <p class="lede" style="margin-top:var(--s5)">A Notebook for everything you keep, a Canvas for thinking in space, memory you approve, and lessons that go at your pace. Halo helps — and asks before it changes anything.</p>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="nb-title" style="padding-top:0">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">Notebook</span>
+   <h2 id="nb-title" class="h2">One place for notes, files and conversations.</h2>
+   <p class="lede">Write notes, import PDFs and photos, save a useful chat, or drop a quick capture into your Inbox. Search finds it all.</p>
+   <dl class="kv" style="grid-template-columns:auto 1fr">
+    <dt>Notes</dt><dd>Documents you write and edit — by keyboard or by voice.</dd>
+    <dt>Files</dt><dd>PDFs, images and documents, kept on your phone.</dd>
+    <dt>Inbox</dt><dd>New captures wait here until you sort them.</dd>
+    <dt>Context</dt><dd>Choose which notes Halo may use for an answer. Adding context doesn’t change what you share.</dd>
+   </dl>
+   {{STATUS:available}}
+  </div>
+  {{SHOT:tools|“Notes are documents. Canvas connects them.”}}
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="cv-title">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Canvas</span>
+   <h2 id="cv-title" class="h2">Think in space. Halo suggests; you decide.</h2>
+   <p class="lede">Put notes, images and files on a canvas, group them and draw connections. When Halo suggests a change, it shows up as a dashed draft — nothing is saved until you choose Keep.</p>
+  </div>
+  <div class="split" style="margin-top:var(--s6)">
+   <div class="sample" data-draft style="background:var(--band-surface);border-color:var(--band-line);color:var(--band-text);margin-top:0">
+    <span class="sample-label" style="color:var(--band-text-2)">{{I:info}} Sample — how drafts work. Not an app capture.</span>
+    <div class="board">
+     <svg class="links" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><path d="M50 40 C 90 40, 110 60, 150 60"/><path class="l-draft" d="M150 60 C 190 60, 210 40, 250 40"/></svg>
+     <div class="card" style="background:var(--band-bg);border-color:var(--band-line)"><p class="kind" style="color:var(--halo-mint)">Note</p><b>Basil experiment</b><span>Three pots, different hours of light.</span></div>
+     <div class="card card--draft" data-state="draft" style="background:var(--band-bg)"><p class="kind" style="color:var(--halo-mint)">Halo suggestion · draft</p><b>Link: more light, taller plant</b><span>Pot C had the most light and grew tallest.</span>
+      <div class="draft-actions"><button type="button" class="btn btn--pri" data-keep disabled>Keep</button><button type="button" class="btn btn--sec" data-discard disabled>Discard</button><button type="button" class="btn btn--sec" data-draft-reset hidden>Show the draft again</button></div></div>
+     <div class="card" style="background:var(--band-bg);border-color:var(--band-line)"><p class="kind" style="color:var(--halo-mint)">PDF</p><b>How light affects plants</b><span>One-page reading.</span></div>
+    </div>
+    <p class="sample-status" role="status" data-draft-status></p>
+   </div>
+   {{SLOT:SR-13|Canvas with a dashed AI draft and Keep / Discard}}
+  </div>
+  <div class="grid2" style="margin-top:var(--s7)">
+   {{SHOT:canvas|A real canvas: five cards, three connections, one group.|sm}}
+   <div class="head" style="align-self:center"><h3 class="h3">Drafts look different on purpose.</h3><p class="muted" style="color:var(--band-text-2)">Dashed and labelled while they’re suggestions; solid only after you keep them. You can always tell your work from Halo’s ideas.</p>{{STATUS:available}}</div>
+  </div>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="m-title">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">Memory</span>
+   <h2 id="m-title" class="h2">Nothing is remembered without you.</h2>
+   <p class="lede">Halo can suggest things worth remembering — a preference, a routine. Each suggestion waits for your yes. You can see, edit or forget anything it remembers.</p>
+   <dl class="kv" style="grid-template-columns:auto 1fr">
+    <dt>Suggestions</dt><dd>Off until you turn them on. Each one needs your approval.</dd>
+    <dt>Local reflection</dt><dd>Off by default. When on, it runs on your phone only.</dd>
+    <dt>Cloud</dt><dd>A provider you chose receives saved memory only when your settings allow it.</dd>
+   </dl>
+   {{STATUS:available}}
+  </div>
+  {{SHOT:memory|Cropped above the last line, which the original capture cuts off.}}
+ </div>
+</section>
+
+<section class="section" aria-labelledby="st-title" style="padding-top:0">
+ <div class="wrap">
+  <div class="split">
+   <div class="head">
+    <span class="eyebrow">Study</span>
+    <h2 id="st-title" class="h2">Learn it, don’t just get the answer.</h2>
+    <p class="lede">Choose a topic — or your own notes, a PDF or a photo of a page. Halo explains, you try, and you review later. Calm, no points, no streaks.</p>
+    {{STATUS:available|Available · growing}}
+   </div>
+   {{SHOT:study}}
+  </div>
+  <div data-ladder style="margin-top:var(--s7)">
+   <h3 class="h3">A lesson, one step at a time</h3>
+   <ol class="ladder">
+    <li class="rung"><span class="n">1</span><span><b>Choose what to learn</b><span>Type or say a topic, or start from a note, file or photo.</span></span></li>
+    <li class="rung"><span class="n">2</span><span><b>Hear it explained</b><span>Short, clear explanations — read aloud if you like.</span></span></li>
+    <li class="rung"><span class="n">3</span><span><b>Try it yourself</b><span>Answer in your own words. Ask for a hint, not the answer.</span></span></li>
+    <li class="rung"><span class="n">4</span><span><b>Review</b><span>Practice cards join your review only when you choose.</span></span></li>
+    <li class="rung"><span class="n">5</span><span><b>Go deeper</b><span>Explain it back, or follow a related question.</span></span></li>
+   </ol>
+   <div class="ladder-controls"><button type="button" class="btn btn--sec btn--sm" data-ladder-next>Next step {{I:arrow_right}}</button><button type="button" class="link-btn" data-ladder-reset>Start over</button></div>
+   <p class="vh" aria-live="polite" data-ladder-live></p>
+  </div>
+  <div class="grid3" style="margin-top:var(--s7)">
+   {{SLOT:SR-16|Study — choosing a topic and sources (current build)}}
+   {{SLOT:SR-17|Study — explain and practise step}}
+   {{SLOT:SR-18|Study — review and summary}}
+  </div>
+ </div>
+</section>

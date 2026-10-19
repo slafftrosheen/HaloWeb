@@ -1,0 +1,79 @@
+<!--{"title":"How Halo works — ask, approve, see what happened","desc":"How Halo turns what you say into actions on your Android phone: it asks before anything that matters, lets you stop at any time, and reports what really happened.","nav":"product"}-->
+<section class="page-hero">
+ <div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / How Halo works</p>
+  <h1 class="display" style="margin-top:var(--s4)">Ask. Approve. Know what happened.</h1>
+  <p class="lede" style="margin-top:var(--s5)">Halo can do things on your phone — set reminders, open apps, find things in your notes. Here is exactly how that works, and where you stay in charge.</p>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="j-title" style="padding-top:0">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">The journey</span><h2 id="j-title" class="h2">Five steps, from your words to a result you can trust.</h2></div>
+  <div class="journey" data-journey>
+   <div>
+    <ol class="steps">
+     <li class="step"><button type="button" data-step data-fig="f1" aria-pressed="true">{{RING:listening}}<span><span class="st-t">1 · You speak or type</span><span class="st-d">Hold Talk, or type in the box. Your words appear as you speak, so you can see what Halo heard.</span></span></button></li>
+     <li class="step"><button type="button" data-step data-fig="f2" aria-pressed="false">{{RING:thinking}}<span><span class="st-t">2 · Halo works out what you mean</span><span class="st-d">It picks the right tool for the job. When your request could mean two things, it asks one short question rather than guessing.</span></span></button></li>
+     <li class="step"><button type="button" data-step data-fig="f3" aria-pressed="false">{{RING:approval_required}}<span><span class="st-t">3 · You approve what matters</span><span class="st-d">Anything that sends, changes or spends waits for you. The button says what will happen — “Set alarm for 7:00”, not just “Allow”.</span></span></button></li>
+     <li class="step"><button type="button" data-step data-fig="f4" aria-pressed="false">{{RING:acting}}<span><span class="st-t">4 · Your phone does it</span><span class="st-d">Halo uses only the Android permissions you’ve granted. Stop is always on screen while it works.</span></span></button></li>
+     <li class="step"><button type="button" data-step data-fig="f5" aria-pressed="false">{{RING:waiting}}<span><span class="st-t">5 · Activity reports the outcome</span><span class="st-d">Every action ends with an honest receipt: confirmed, failed with one clear fix, or sent but not verified.</span></span></button></li>
+    </ol>
+    <div class="journey-controls"><button type="button" class="btn btn--sec btn--sm" data-journey-play>{{I:play}} Play the five steps</button><button type="button" class="btn btn--sec btn--sm" data-journey-stop hidden>{{I:pause}} Pause</button></div>
+    <p class="vh" aria-live="polite" data-journey-live></p>
+   </div>
+   <div class="journey-stage journey-figs">
+    <div data-fig="f1" class="is-on">{{SLOT:SR-03|Typing box listening — words appearing as you speak}}</div>
+    <div data-fig="f2">{{SHOT:home|Today’s capture shows a paused task; a fresh capture will show this step.}}</div>
+    <div data-fig="f3">{{SLOT:SR-04|Approval sheet that names the action}}</div>
+    <div data-fig="f4">{{SLOT:SR-05|Halo acting — task in progress, Stop visible}}</div>
+    <div data-fig="f5">{{SHOT:activity|Real receipts, including “effect not verified”.}}</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="o-title">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">Outcomes</span><h2 id="o-title" class="h2">Six words Halo uses — and never stretches.</h2><p class="lede">When an app doesn’t tell Halo whether something worked, Halo says so. It never shows a success it can’t check.</p></div>
+  <ul class="outcomes">
+   <li class="outcome o-proposed">{{I:task}}<span><b>Proposed</b><span>Halo suggests an action. Nothing has happened.</span></span></li>
+   <li class="outcome o-approved">{{I:approval}}<span><b>Approved</b><span>You said yes. Halo can start.</span></span></li>
+   <li class="outcome o-running">{{I:act}}<span><b>Running</b><span>Working on it. Stop is always there.</span></span></li>
+   <li class="outcome o-confirmed">{{I:check}}<span><b>Confirmed</b><span>Halo checked the result and it worked.</span></span></li>
+   <li class="outcome o-failed">{{I:failure}}<span><b>Failed</b><span>It didn’t work. You get one clear next step.</span></span></li>
+   <li class="outcome o-unverified">{{I:unverified}}<span><b>Not verified</b><span>Sent to the app, but Halo couldn’t check the result.</span></span></li>
+  </ul>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="s-title">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">Staying in charge</span><h2 id="s-title" class="h2">Stop, retry, and the permissions you control.</h2></div>
+  <div class="grid3" style="margin-top:var(--s6)">
+   <article class="tile">{{I:stop}}<h3>Stop means stop</h3><p>Press Stop, or start talking, and Halo stops speaking and stops the task. What already happened is listed in Activity.</p>{{STATUS:available}}</article>
+   <article class="tile">{{I:retry}}<h3>One clear fix</h3><p>When something fails, Halo offers one next step — try again, give a permission, or pick another way — not a wall of error text.</p>{{STATUS:available}}</article>
+   <article class="tile">{{I:permission}}<h3>Your permissions</h3><p>Halo asks for Android permissions only when a task needs them, and you can review or remove them in Settings.</p>{{STATUS:available}}</article>
+  </div>
+  <div class="split" style="margin-top:var(--s8)">
+   <div class="head">
+    <h3 class="h3">Halo in other apps</h3>
+    <p class="muted">Halo can also be Android’s assistant: call it up over any app, ask about what’s on screen, and hand off to the full app when you need more. Each part of this is being tested on real phones before we show it as working.</p>
+    {{STATUS:dev}}
+   </div>
+   {{SLOT:SR-10|Native assistant over another app — after device validation}}
+  </div>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="n-title" style="padding-top:0">
+ <div class="wrap split">
+  <div class="head">
+   <span class="eyebrow">Notifications</span>
+   <h2 id="n-title" class="h2">A private digest, only from apps you allow.</h2>
+   <p class="lede">Halo can summarise notifications from the apps you choose. Nothing is read until you switch it on.</p>
+   {{STATUS:available}}
+  </div>
+  {{SHOT:notifs}}
+ </div>
+</section>

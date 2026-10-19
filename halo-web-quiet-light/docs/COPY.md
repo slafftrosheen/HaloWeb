@@ -1,0 +1,858 @@
+# Halo web — final English copy
+
+Generated from the built pages. Keys are stable per page order; edit the source in `src/pages/` and rebuild.
+
+
+## nav
+
+- `nav.001` Product
+- `nav.002` How Halo worksAsk, approve, see what happened
+- `nav.003` Notes, Canvas & StudyYour own workspace, with help
+- `nav.004` VoiceTalk, listen and read along
+- `nav.005` Kids ModeA gentler Halo · in development
+- `nav.006` Your AI
+- `nav.007` Devices
+- `nav.008` Privacy
+- `nav.009` Status
+- `nav.010` Developers
+- `nav.011` Try the alpha
+- `nav.012` Menu
+- `nav.013` Home
+- `nav.014` How Halo works
+- `nav.015` Notes, Canvas & Study
+- `nav.016` Voice
+- `nav.017` Kids Mode
+- `nav.018` Your AI
+- `nav.019` Devices
+- `nav.020` Privacy & price
+- `nav.021` What’s real today
+- `nav.022` Developers
+- `nav.023` Try the Android alpha
+- `nav.024` Source code on GitHub
+
+## alpha
+
+- `alpha.001` Home / Try the alpha
+- `alpha.002` Try the Android alpha and tell us what happened.
+- `alpha.003` Install the pre-release build, follow guided setup, and use the sample files and short checklist below. Report failed or confusing steps — even if you couldn’t finish setup. No glasses or personal files needed.
+- `alpha.004` Halo for Android · v0.1.0-alpha.2
+- `alpha.005` Pre-release · published 15 October 2026 · debug-signed APK on GitHub Releases. Android only.
+- `alpha.006` Open Android releases
+- `alpha.007` A public build exists only when it appears on GitHub Releases. There is no desktop or Linux download yet.
+- `alpha.008` Four steps.
+- `alpha.009` Get Halo
+- `alpha.010` Open Android releases. No published APK? The app isn’t available through this programme yet.
+- `alpha.011` Grab the test kit
+- `alpha.012` One short reading, one observation image, and a quick route through the wider app.
+- `alpha.013` Try real workflows
+- `alpha.014` Use the checklist, skip hardware you don’t own, and note what actually happens.
+- `alpha.015` Share a finding
+- `alpha.016` Report confusing moments as well as broken features. Both help shape Halo.
+- `alpha.017` Free sample files
+- `alpha.018` Five downloadable test files.
+- `alpha.019` Start with the guide, then import the other files into Halo as needed. The Study example follows three basil seedlings with different daily light, so you can check whether Halo uses the source or invents a plausible answer. Files are in English.
+- `alpha.020` Alpha quick test guide
+- `alpha.021` Short science reading
+- `alpha.022` Plant observation image
+- `alpha.023` Sample Notebook note
+- `alpha.024` Copy-and-paste prompts
+- `alpha.025` Sample measurements are fictional and only for testing. Some Study image tasks need a configured model that can see images.
+- `alpha.026` Quick test route
+- `alpha.027` A first test takes about 15–25 minutes.
+- `alpha.028` Tick each step you’ve tried, including failed attempts. Ticks stay in this browser and are included when you choose to prepare feedback.
+- `alpha.029` 7 steps
+- `alpha.030` Reset
+- `alpha.031` Get oriented 01 · SETUP
+- `alpha.032` Open Home, Activity, Notebook, Devices and Settings. Follow guided setup, choose a provider or test a local model, and note what you couldn’t complete. No APK available? Skip app-only steps.
+- `alpha.033` Ask a basic question 02 · HOME
+- `alpha.034` Try: “Explain photosynthesis in two simple sentences.” Look for a clear answer and an honest processing or failure status.
+- `alpha.035` Read from a real PDF 03 · STUDY
+- `alpha.036` Start a lesson with the science PDF. Ask which days the plants were watered and how much each got altogether. Expected: days 1, 3, 5, 7, 9, 11; 300 mL per pot.
+- `alpha.037` Understand the image 04 · STUDY / VISION
+- `alpha.038` Use the basil PNG. Ask which pot is tallest and by how much compared with A. Expected: C at 14 cm, 8 cm taller than A. If image analysis isn’t available, Halo should say so.
+- `alpha.039` Learn rather than just receive answers 05 · STUDY / PRACTICE
+- `alpha.040` Say “Give me one hint, not the answer.” Try an answer, ask for another explanation, then draft practice cards. They shouldn’t enter the review queue without your choice.
+- `alpha.041` Save and find something 06 · NOTEBOOK / CANVAS
+- `alpha.042` Import or paste the sample note. Edit it, find it again, and try sending content to Canvas if available. Check Activity for an accurate record.
+- `alpha.043` Try one extra path 07 · YOUR CHOICE
+- `alpha.044` Try voice in your language, reconnect a supported device, switch the app language, or recover from an unavailable model. Skip anything needing hardware or accounts you don’t have.
+- `alpha.045` A missing feature, unsupported file, failed provider or missing permission is useful evidence. Record what actually happened.
+- `alpha.046` Your feedback
+- `alpha.047` Tell us how your first run went.
+- `alpha.048` A bug, a confusing moment or a small suggestion all help. Steps you’ve ticked are added to the email draft.
+- `alpha.049` Your setup
+- `alpha.050` Name (optional)
+- `alpha.051` Reply email (optional)
+- `alpha.052` Halo version (optional)
+- `alpha.053` Phone and Android version (optional)
+- `alpha.054` What happened
+- `alpha.055` What are you sharing?Something confusingSomething brokenA suggestionSomething that worked well
+- `alpha.056` Screen or feature (required)
+- `alpha.057` What did you notice? (required)
+- `alpha.058` What did you expect? (optional)
+- `alpha.059` How can we reproduce it? (optional)
+- `alpha.060` How clear did Halo feel? (optional)Choose an answerClear and easyMostly clear, with a few confusing partsHard to understand
+- `alpha.061` Only include what you want to share. This form doesn’t store or send anything. It opens an email draft to slaff.trosheen@gmail.com in your mail app — review it and press Send there. Add a screenshot after hiding private information.
+- `alpha.062` Open email draft
+- `alpha.063` Copy feedback
+- `alpha.064` Clear form
+- `alpha.065` Prepared feedback
+- `alpha.066` JavaScript is needed to prepare the draft. You can email your feedback directly to slaff.trosheen@gmail.com.
+- `alpha.067` Found something?
+- `alpha.068` Even a confusing button is worth reporting.
+- `alpha.069` Say which screen you were on, what you tried, what you expected and what actually happened. Include your Android and Halo versions if relevant. Never post API keys, personal files, identifiers or unredacted logs.
+- `alpha.070` Report on GitHub
+- `alpha.071` Android releases
+- `alpha.072` Quick issue template
+- `alpha.073` Copy template
+- `alpha.074` Alpha means unfinished software. Features and supported devices can change. Back up important work and don’t rely on Halo for safety-critical tasks.
+
+## footer
+
+- `footer.001` A personal assistant that starts on Android. Your assistant, your devices, your choice.
+- `footer.002` Product
+- `footer.003` How Halo works
+- `footer.004` Notes, Canvas & Study
+- `footer.005` Voice
+- `footer.006` Kids Mode
+- `footer.007` Your AI
+- `footer.008` Devices
+- `footer.009` Trust
+- `footer.010` Privacy & price
+- `footer.011` What’s real today
+- `footer.012` Engineering status
+- `footer.013` Presence & brand
+- `footer.014` Build & test
+- `footer.015` Try the alpha
+- `footer.016` Developers
+- `footer.017` Halo for Android
+- `footer.018` HaloLinux
+- `footer.019` This website
+- `footer.020` No cookies, analytics or tracking on this website. Your theme and checklist choices stay in your browser.
+- `footer.021` System
+- `footer.022` Light
+- `footer.023` Dark
+
+## design
+
+- `design.001` Home / Presence & brand
+- `design.002` An open ring.
+- `design.003` The gap is on purpose. Halo is never closed off: you can always see in, step in, or stop it. The same ring tells you what Halo is doing right now.
+- `design.004` Presence states
+- `design.005` Twelve states, each with one meaning.
+- `design.006` These are the brand animations used in the app. Here they play once when they come into view; they are design files, not a live report from a phone.
+- `design.007` Idle
+- `design.008` Listening
+- `design.009` Looking
+- `design.010` Thinking
+- `design.011` Acting
+- `design.012` Waiting
+- `design.013` Needs your OK
+- `design.014` Done
+- `design.015` Heads-up
+- `design.016` Problem
+- `design.017` Offline
+- `design.018` Stopped
+- `design.019` Brand basics
+- `design.020` Lowercase, open, mint.
+- `design.021` The wordmark
+- `design.022` Lowercase “halo” in Sora, with the open ring as the “o”. Never stretched, closed, recoloured or decorated.
+- `design.023` Colour
+- `design.024` Night Ink and Cream carry most of every layout; Halo Mint marks light and action; Sunrise Apricot is kept for warmth and “needs you”.
+- `design.025` Type
+- `design.026` Sora for headings, Atkinson Hyperlegible Next for reading — chosen to be easy for everyone.
+
+## developers
+
+- `developers.001` Home / Developers
+- `developers.002` Built in the open.
+- `developers.003` Halo is a portable runtime with a host for each platform. Android is the first host; Linux is next. Here’s how the pieces fit, and where to start.
+- `developers.004` Architecture
+- `developers.005` One runtime, many hosts.
+- `developers.006` Hosts
+- `developers.007` Android
+- `developers.008` Linux
+- `developers.009` Windows
+- `developers.010` Host adapters
+- `developers.011` Platform services: audio, storage, permissions, phone actions, devices.
+- `developers.012` Runtime
+- `developers.013` Conversation, tool use with approval, honest receipts, recovery after a crash, durable agent runs.
+- `developers.014` Workspace & memory
+- `developers.015` Notebook, Canvas, Study and approved memory, stored locally with search.
+- `developers.016` Provider routing
+- `developers.017` On-device (LiteRT), your own server (OpenAI-compatible), or a cloud provider you configure — per job.
+- `developers.018` Peer nodes
+- `developers.019` Private identity, pairing and sync between your devices.
+- `developers.020` Planned
+- `developers.021` Repositories
+- `developers.022` Three repositories.
+- `developers.023` slafftrosheen/Halo
+- `developers.024` Android app
+- `developers.025` Kotlin and Jetpack Compose. The assistant in the alpha.
+- `developers.026` Pre-release alpha
+- `developers.027` Open on GitHub
+- `developers.028` slafftrosheen/HaloLinux
+- `developers.029` Linux node
+- `developers.030` Headless host for ARM64 and x86-64: CLI, service, local storage.
+- `developers.031` In development
+- `developers.032` Open on GitHub
+- `developers.033` slafftrosheen/HaloWeb
+- `developers.034` This website
+- `developers.035` Static HTML, CSS and JavaScript. No build step, no tracking.
+- `developers.036` Live
+- `developers.037` Open on GitHub
+- `developers.038` A licence file still needs to be added to each repository. Until it is, please ask before reusing the code.
+- `developers.039` Contribute
+- `developers.040` Reports are contributions.
+- `developers.041` The most useful thing right now is careful testing on real phones: what you tried, what you expected and what actually happened.
+- `developers.042` Report on GitHub
+- `developers.043` Tester kit
+- `developers.044` Before you open an issue
+- `developers.045` Include your Halo and Android versions, the screen, the steps, and what happened. Never post API keys, personal files, identifiers or private logs.
+- `developers.046` Code changes: read the engineering notes in docs/ first — they explain which parts are tested and which aren’t.
+
+## devices
+
+- `devices.001` Home / Devices
+- `devices.002` Your phone first. Other devices when you want them.
+- `devices.003` Halo isn’t tied to one gadget. It starts on the Android phone you already have. Everything else is optional — and the parts that aren’t ready yet are labelled that way.
+- `devices.004` Android phone
+- `devices.005` The first home for Halo.
+- `devices.006` Your phone runs the conversation, your notes and your settings. It can run AI models itself, or reach a computer or provider you choose. No glasses or other hardware needed.
+- `devices.007` Available in the alpha
+- `devices.008` Real capture · Devices · Android test build, 13 Oct 2026. “Halo works on this phone.”
+- `devices.009` Where this is heading
+- `devices.010` A private network of your own devices.
+- `devices.011` The idea: your phone, a small computer at home and, one day, other devices work together — sharing your notes and tasks directly with each other, with no Halo server in the middle. This is the direction, not something you can use today.
+- `devices.012` Android phone
+- `devices.013` HaloLinux node
+- `devices.014` Windows
+- `devices.015` Wearables
+- `devices.016` BuddyBot
+- `devices.017` Private sync between devices
+- `devices.018` HaloLinux
+- `devices.019` An early home node for a Raspberry Pi or Linux PC.
+- `devices.020` HaloLinux is a separate, headless Halo host for ARM64 and x86-64 — a small computer that stays on at home. It’s early, and there’s no download yet.
+- `devices.021` In development
+- `devices.022` What’s in the source today
+- `devices.023` A command-line tool and a background service that starts, stops and recovers
+- `devices.024` Connects to an AI server you choose (OpenAI-compatible)
+- `devices.025` Conversations and memory stored locally, with full-text search
+- `devices.026` Audio checks, and records of agent runs that survive a crash
+- `devices.027` The newest batch of this work was written but not yet built, tested or tried on a device as a whole. We’ll call it ready only after it has been.
+- `devices.028` HaloLinux on GitHub
+- `devices.029` SR-30
+- `devices.030` Screenshot required
+- `devices.031` Real terminal: HaloLinux status on a Pi 5 or PC
+- `devices.032` Screenshot required · from the current Android build
+- `devices.033` Optional hardware
+- `devices.034` Add-ons, never requirements.
+- `devices.035` Headphones
+- `devices.036` Connect through Android’s Bluetooth settings, as usual.
+- `devices.037` Available in the alpha
+- `devices.038` Glasses
+- `devices.039` HeyCyan glasses are a reference integration for trying Halo hands-free. Not needed, and support varies.
+- `devices.040` Reference integration
+- `devices.041` BuddyBot
+- `devices.042` An experimental robot used for research. It’s not consumer hardware and not for sale.
+- `devices.043` Experimental
+
+## how-it-works
+
+- `how-it-works.001` Home / How Halo works
+- `how-it-works.002` Ask. Approve. Know what happened.
+- `how-it-works.003` Halo can do things on your phone — set reminders, open apps, find things in your notes. Here is exactly how that works, and where you stay in charge.
+- `how-it-works.004` The journey
+- `how-it-works.005` Five steps, from your words to a result you can trust.
+- `how-it-works.006` Play the five steps
+- `how-it-works.007` Pause
+- `how-it-works.008` SR-03
+- `how-it-works.009` Screenshot required
+- `how-it-works.010` Typing box listening — words appearing as you speak
+- `how-it-works.011` Screenshot required · from the current Android build
+- `how-it-works.012` Real capture · Home · Android test build, 13 Oct 2026. Today’s capture shows a paused task; a fresh capture will show this step.
+- `how-it-works.013` SR-04
+- `how-it-works.014` Screenshot required
+- `how-it-works.015` Approval sheet that names the action
+- `how-it-works.016` Screenshot required · from the current Android build
+- `how-it-works.017` SR-05
+- `how-it-works.018` Screenshot required
+- `how-it-works.019` Halo acting — task in progress, Stop visible
+- `how-it-works.020` Screenshot required · from the current Android build
+- `how-it-works.021` Real capture · Activity · Android test build, 13 Oct 2026. Real receipts, including “effect not verified”.
+- `how-it-works.022` Outcomes
+- `how-it-works.023` Six words Halo uses — and never stretches.
+- `how-it-works.024` When an app doesn’t tell Halo whether something worked, Halo says so. It never shows a success it can’t check.
+- `how-it-works.025` Proposed
+- `how-it-works.026` Approved
+- `how-it-works.027` Running
+- `how-it-works.028` Confirmed
+- `how-it-works.029` Failed
+- `how-it-works.030` Not verified
+- `how-it-works.031` Staying in charge
+- `how-it-works.032` Stop, retry, and the permissions you control.
+- `how-it-works.033` Stop means stop
+- `how-it-works.034` Press Stop, or start talking, and Halo stops speaking and stops the task. What already happened is listed in Activity.
+- `how-it-works.035` Available in the alpha
+- `how-it-works.036` One clear fix
+- `how-it-works.037` When something fails, Halo offers one next step — try again, give a permission, or pick another way — not a wall of error text.
+- `how-it-works.038` Available in the alpha
+- `how-it-works.039` Your permissions
+- `how-it-works.040` Halo asks for Android permissions only when a task needs them, and you can review or remove them in Settings.
+- `how-it-works.041` Available in the alpha
+- `how-it-works.042` Halo in other apps
+- `how-it-works.043` Halo can also be Android’s assistant: call it up over any app, ask about what’s on screen, and hand off to the full app when you need more. Each part of this is being tested on real phones before we show it as working.
+- `how-it-works.044` In development
+- `how-it-works.045` SR-10
+- `how-it-works.046` Screenshot required
+- `how-it-works.047` Native assistant over another app — after device validation
+- `how-it-works.048` Screenshot required · from the current Android build
+- `how-it-works.049` Notifications
+- `how-it-works.050` A private digest, only from apps you allow.
+- `how-it-works.051` Halo can summarise notifications from the apps you choose. Nothing is read until you switch it on.
+- `how-it-works.052` Available in the alpha
+- `how-it-works.053` Real capture · Notifications · Android test build, 13 Oct 2026
+
+## index
+
+- `index.001` Your assistant · Your devices · Your choice
+- `index.002` AI that feels like second nature.
+- `index.003` Halo is a personal assistant that starts on your Android phone. Talk or type, approve what matters, and see what actually happened — with the AI running where you choose.
+- `index.004` Explore the Android alpha
+- `index.005` See how Halo works
+- `index.006` Source code on GitHub
+- `index.007` Android
+- `index.008` Linux
+- `index.009` Your AI
+- `index.010` SR-01
+- `index.011` Screenshot required
+- `index.012` Home, idle — current build (dark and light)
+- `index.013` Screenshot required · from the current Android build
+- `index.014` Ask, act, know what happened
+- `index.015` Halo asks before it acts — and tells you what really happened.
+- `index.016` An assistant is only useful if you can trust it. So Halo checks in before anything that matters, and its Activity list never dresses up a guess as a success.
+- `index.017` Play the five steps
+- `index.018` Pause
+- `index.019` Real capture · Home · Android test build, 13 Oct 2026. A real paused task: Halo says completion is unconfirmed.
+- `index.020` SR-04
+- `index.021` Screenshot required
+- `index.022` Approval sheet that names the action
+- `index.023` Screenshot required · from the current Android build
+- `index.024` SR-05
+- `index.025` Screenshot required
+- `index.026` Halo acting — task in progress
+- `index.027` Screenshot required · from the current Android build
+- `index.028` Real capture · Activity · Android test build, 13 Oct 2026. “Dispatched · effect not verified” is shown as it is.
+- `index.029` Proposed
+- `index.030` Approved
+- `index.031` Running
+- `index.032` Confirmed
+- `index.033` Failed
+- `index.034` Not verified
+- `index.035` How Halo works, step by step
+- `index.036` Notes, Canvas, Memory & Study
+- `index.037` Your notes, your canvas, your pace.
+- `index.038` Keep notes, files and conversations in one Notebook. Halo helps you connect and learn from them — and never changes your work without asking.
+- `index.039` SR-11
+- `index.040` Screenshot required
+- `index.041` Notebook library, English
+- `index.042` Screenshot required · from the current Android build
+- `index.043` Notebook
+- `index.044` Notes, files, saved chats and an Inbox for quick captures. Search everything in one place.
+- `index.045` Available in the alpha
+- `index.046` Real capture · Canvas · Android test build, 13 Oct 2026
+- `index.047` Canvas
+- `index.048` Lay ideas out, group them and connect them. Halo’s suggestions arrive as drafts you keep or discard.
+- `index.049` Available in the alpha
+- `index.050` Real capture · Study · Android test build, 13 Oct 2026
+- `index.051` Study
+- `index.052` Pick a topic or your own material. Halo explains, you practise, then you review — one step at a time.
+- `index.053` Available · growing
+- `index.054` See how drafts, memory and lessons work
+- `index.055` Voice
+- `index.056` Talk, listen, read along.
+- `index.057` Speak instead of typing, hear answers read aloud, and interrupt whenever you like. Voice works in Home, your notes, Canvas and Study — not just in one corner of the app.
+- `index.058` Available · depends on your phone and language
+- `index.059` How voice works
+- `index.060` Listening
+- `index.061` Writing it down
+- `index.062` Speaking
+- `index.063` Stopped
+- `index.064` Kids Mode
+- `index.065` A gentler Halo for children.
+- `index.066` Simpler words, speech first, hints before answers, stories to make — and a grown-up gate for anything that matters.
+- `index.067` In development
+- `index.068` What Kids Mode will be
+- `index.069` Your AI
+- `index.070` You choose where Halo thinks.
+- `index.071` Every answer has to be worked out somewhere. You decide where — and you can change your mind.
+- `index.072` On this phone
+- `index.073` Private and works offline once a model is downloaded. Smaller models, and they use storage and battery.
+- `index.074` Available in the alpha
+- `index.075` On your own machine
+- `index.076` A computer at home answers over your own network. Bigger models, still under your roof.
+- `index.077` Works with your own server · HaloLinux in development
+- `index.078` A provider you choose
+- `index.079` Bring your own account. That provider’s prices and privacy policy apply to what you send.
+- `index.080` Available · varies by provider
+- `index.081` Compare the three choices
+- `index.082` Your devices
+- `index.083` Your phone first. Other devices when you want them.
+- `index.084` Halo works on your Android phone with nothing else. No glasses needed. A home computer running HaloLinux is the next host we’re building, and a private network of your own devices is where this is heading.
+- `index.085` Android phone
+- `index.086` HaloLinux
+- `index.087` Sync between your devices
+- `index.088` Devices and HaloLinux
+- `index.089` Real capture · Devices · Android test build, 13 Oct 2026. No saved devices — and Halo still works.
+- `index.090` Privacy & price
+- `index.091` Private by default. Clear when it isn’t.
+- `index.092` Stays on your phone
+- `index.093` Your notes, files and memory
+- `index.094` Answers from on-device models
+- `index.095` Your settings and permissions
+- `index.096` Leaves only if you choose
+- `index.097` Requests to an AI provider you set up
+- `index.098` Requests to your own computer on your network
+- `index.099` Under that provider’s own terms
+- `index.100` Halo itself doesn’t collect
+- `index.101` No Halo account
+- `index.102` No analytics or tracking
+- `index.103` No Halo-run servers holding your data
+- `index.104` No Halo subscription. A one-time Google Play price of about US$5 is being considered for a future release. The alpha on GitHub is free to try.
+- `index.105` Privacy, openness and price in full
+- `index.106` What’s real today
+- `index.107` No percentages. No launch dates. Just where things stand.
+- `index.108` Talk or type, with honest outcomes in Activity
+- `index.109` Notebook, Canvas, Memory and Study
+- `index.110` On-device models and providers you set up
+- `index.111` Read-aloud and voice input
+- `index.112` Kids Mode
+- `index.113` Native assistant over other apps
+- `index.114` HaloLinux home node
+- `index.115` Local voice packs in more languages
+- `index.116` Private sync between your devices
+- `index.117` Windows host
+- `index.118` Google Play release
+- `index.119` Robotics (experimental)
+- `index.120` Full status and engineering evidence
+- `index.121` Built in the open
+- `index.122` Try it, break it, tell us.
+- `index.123` The Android alpha is a pre-release build on GitHub. Install it, use the five test files, and tell us what really happened — confusing moments count too.
+- `index.124` Explore the Android alpha
+- `index.125` For developers
+- `index.126` Android app
+- `index.127` The assistant you can try today.
+- `index.128` Linux node
+- `index.129` Early, headless, in development.
+
+## kids
+
+- `kids.001` Home / Kids Mode
+- `kids.002` A gentler Halo for children.
+- `kids.003` The same careful Halo, made for younger people: simple words, talking first, help that teaches rather than tells — and a grown-up in charge of anything that matters.
+- `kids.004` Kids Mode isn’t in a public build yet. This page describes what we’re building. We’ll show real screenshots once a public build includes it, and we won’t describe safety features beyond what is built and tested.
+- `kids.005` What’s different
+- `kids.006` Its own space, not a recoloured grown-up app.
+- `kids.007` Talk first
+- `kids.008` A big microphone button, answers read aloud, and short sentences. Reading is welcome but never required.
+- `kids.009` Few choices at a time
+- `kids.010` At most three options on screen, large buttons, and one obvious next step.
+- `kids.011` A grown-up gate
+- `kids.012` Phone actions, the camera, permissions and settings always ask a grown-up first.
+- `kids.013` Homework help
+- `kids.014` Hints before answers.
+- `kids.015` A child can take a photo of their homework and ask for help. Halo guides them one small step at a time, so the understanding is theirs.
+- `kids.016` “What is the question asking?”
+- `kids.017` A small hint
+- `kids.018` Explain it another way
+- `kids.019` “Let’s try again”
+- `kids.020` Show the solution — only if asked
+- `kids.021` Next step
+- `kids.022` Start over
+- `kids.023` SR-25
+- `kids.024` Screenshot required
+- `kids.025` Kids homework: photo, then a first hint
+- `kids.026` Screenshot required · from the current Android build
+- `kids.027` Make and read
+- `kids.028` Stories to make, stories to hear.
+- `kids.029` Children can make a story or a picture with Halo, then listen to it read aloud with the words lighting up as they go. Encouragement is kind and optional — no points, no streaks, no pressure.
+- `kids.030` SR-24
+- `kids.031` Screenshot required
+- `kids.032` Kids home — only once a public build includes it
+- `kids.033` Screenshot required · from the current Android build
+- `kids.034` SR-26
+- `kids.035` Screenshot required
+- `kids.036` Kids story reader
+- `kids.037` Screenshot required · from the current Android build
+- `kids.038` SR-27
+- `kids.039` Screenshot required
+- `kids.040` Grown-up gate
+- `kids.041` Screenshot required · from the current Android build
+- `kids.042` For grown-ups
+- `kids.043` What you can count on — and what we won’t claim.
+- `kids.044` What Kids Mode is designed to do
+- `kids.045` Ask a grown-up before any phone action, camera use or settings change
+- `kids.046` Keep advanced settings behind a grown-up lock
+- `kids.047` Use simple, kind language, and say “ask a grown-up if you’re not sure”
+- `kids.048` Teach with hints rather than handing over answers
+- `kids.049` What we don’t claim
+- `kids.050` That Kids Mode is finished or safe for unsupervised use
+- `kids.051` That any AI answer is always correct
+- `kids.052` That a provider you connect follows child-specific rules — check its policy
+- `kids.053` Any certification or regulatory approval
+
+## kit
+
+- `kit.001` Internal · living style guide · not linked from the navigation
+- `kit.002` Design kit
+- `kit.003` Every component on the site, in its real states. Tokens live in css/tokens.css; components in css/site.css. Switch the theme in the footer to see dark.
+- `kit.004` Colour
+- `kit.005` Cream
+- `kit.006` #FAFAF4 · page (light)
+- `kit.007` Night Ink
+- `kit.008` #060330 · text · bands
+- `kit.009` Halo Mint
+- `kit.010` #0CF2BA · fills, ring, focus
+- `kit.011` Deep Mint
+- `kit.012` #047A5E · mint text on light · 5.1:1
+- `kit.013` Slate
+- `kit.014` #4A4F63 · 7.7:1 on Cream
+- `kit.015` Sunrise Apricot
+- `kit.016` #FF9F6B · fills only · ≤5%
+- `kit.017` Apricot Ink
+- `kit.018` #A84B12 · apricot text · 5.4:1
+- `kit.019` Ember
+- `kit.020` #D64545 · glyphs & large text · Night Ink on it 4.7:1
+- `kit.021` Type
+- `kit.022` Eyebrow · 13 / 700 / +14% caps
+- `kit.023` Display · 40→76
+- `kit.024` Heading 2 · 30→48
+- `kit.025` Heading 3 · 20→26
+- `kit.026` Lede · 17→21 · Atkinson Hyperlegible Next, 1.55 line height, 36 characters max.
+- `kit.027` Body · 16→18 · never below 16 px. Short sentences. One idea each.
+- `kit.028` Actions
+- `kit.029` Primary
+- `kit.030` Secondary
+- `kit.031` Small
+- `kit.032` Disabled
+- `kit.033` Text link
+- `kit.034` Link button
+- `kit.035` Primary on ink
+- `kit.036` Secondary on ink
+- `kit.037` Link on ink
+- `kit.038` Status & evidence
+- `kit.039` Available in the alpha
+- `kit.040` In development
+- `kit.041` Planned
+- `kit.042` Research
+- `kit.043` Experimental
+- `kit.044` Real capture · Home · Android test build, 13 Oct 2026. Caption note goes here.
+- `kit.045` SR-00
+- `kit.046` Screenshot required
+- `kit.047` What the missing capture must show
+- `kit.048` Screenshot required · from the current Android build
+- `kit.049` Proposed
+- `kit.050` Confirmed
+- `kit.051` Failed
+- `kit.052` Not verified
+- `kit.053` Open ring — presence
+- `kit.054` Shows a real state only. Sizes: 56 (step), 72 (state card), 64 (release card), 18rem (page hero). Lottie plays once per event; the SVG still is the reduced-motion and no-JS state.
+- `kit.055` idle
+- `kit.056` approval_required
+- `kit.057` acting
+- `kit.058` waiting
+- `kit.059` Inputs
+- `kit.060` Field group
+- `kit.061` Text field (optional)
+- `kit.062` SelectOption one
+- `kit.063` Text area (required)
+- `kit.064` Checklist item 01 · AREA
+- `kit.065` Helper text explains what to try and what to expect.
+
+## privacy
+
+- `privacy.001` Home / Privacy & price
+- `privacy.002` Private by default. Clear when it isn’t.
+- `privacy.003` Plain answers to the questions you’d ask a friend who built an assistant: where does my stuff go, who can see it, and what does it cost?
+- `privacy.004` Three places your information can be.
+- `privacy.005` Stays on your phone
+- `privacy.006` Notes, files, saved chats and memory
+- `privacy.007` Answers from models running on your phone
+- `privacy.008` Local voices and speech recognition you install
+- `privacy.009` Settings, permissions and provider keys (kept in Android’s secure storage)
+- `privacy.010` Leaves only if you choose
+- `privacy.011` Requests you send to an AI provider you set up — under that provider’s privacy policy
+- `privacy.012` Requests to your own computer on your network
+- `privacy.013` Notes you add as context to a cloud request
+- `privacy.014` Feedback you decide to email us
+- `privacy.015` Halo itself doesn’t collect
+- `privacy.016` No Halo account or sign-up
+- `privacy.017` No analytics, tracking or advertising
+- `privacy.018` No Halo-run server that stores your data
+- `privacy.019` No Halo-run AI service you’re required to use
+- `privacy.020` Some things are naturally online: the source code lives on GitHub, this website is hosted, and some Android features come from Google’s own system services, under Google’s terms. Halo doesn’t add a data service of its own on top.
+- `privacy.021` You stay in control
+- `privacy.022` See and change what Halo can use.
+- `privacy.023` Permissions, memory, storage and backups each have one clear place in Settings. Halo asks for Android permissions only when a task needs them.
+- `privacy.024` Real capture · Access & data · Android test build, 13 Oct 2026
+- `privacy.025` Price
+- `privacy.026` No Halo subscription.
+- `privacy.027` A one-time Google Play price of about US$5 is being considered for a future release. Nothing is decided, and nothing is on sale today.
+- `privacy.028` The alpha
+- `privacy.029` Free to try from GitHub Releases while it’s a pre-release.
+- `privacy.030` Available in the alpha
+- `privacy.031` A future Play release
+- `privacy.032` About US$5, once, if we go ahead. Any purchase would be handled by Google Play — Halo wouldn’t run its own billing.
+- `privacy.033` Under consideration
+- `privacy.034` Cloud AI, if you want it
+- `privacy.035` Providers you connect may charge you directly. That’s optional and isn’t a Halo fee.
+- `privacy.036` Optional · your provider
+- `privacy.037` Openness
+- `privacy.038` Read the code. Check our claims.
+- `privacy.039` The Android app, HaloLinux and this website are developed in public on GitHub. Engineering notes say what has been built, what has been tested and what hasn’t.
+- `privacy.040` Source code on GitHub
+- `privacy.041` What’s real today
+
+## status
+
+- `status.001` Home / What’s real today
+- `status.002` What’s real today.
+- `status.003` Three lists, kept honest. No progress bars, no launch dates — just where each part stands, with links to the evidence.
+- `status.004` Last checked against the source on 19 October 2026. Latest public build: Android v0.1.0-alpha.2 (pre-release, 15 Oct 2026).
+- `status.005` Talk or typeHome, voice input and answers read aloud.
+- `status.006` Actions with approvalPhone tasks that wait for your OK, with Stop.
+- `status.007` Honest ActivityConfirmed, failed and not-verified receipts.
+- `status.008` Notebook & CanvasNotes, files, Inbox, drafts you keep or discard.
+- `status.009` MemorySuggestions that need your approval.
+- `status.010` StudyLessons from a topic, note, file or photo.
+- `status.011` Your AIOn-device models; your own server; providers you set up.
+- `status.012` Guided setupA step-by-step first run you can revisit.
+- `status.013` Kids ModeA separate, gentler experience with a grown-up gate.
+- `status.014` Native assistantHalo over other apps, being validated on phones.
+- `status.015` Local speechSpeech recognition and voice packs, qualified per phone and language.
+- `status.016` Local intent modelA small on-device model for understanding requests.
+- `status.017` HaloLinuxEarly home node; latest work not yet tested as a release.
+- `status.018` Provider setupSome connectors still have known issues.
+- `status.019` Private syncPairing and sharing between your own devices.
+- `status.020` Windows hostPlanned, not started as a product.
+- `status.021` Google Play releaseA one-time price is being considered.
+- `status.022` More wearablesBeyond the reference glasses integration.
+- `status.023` BuddyBotExperimental robotics research.
+- `status.024` Why this order
+- `status.025` Trust first, gadgets later.
+- `status.026` An assistant that controls your phone has to be trustworthy before it’s everywhere. So we’re building three things first: AI you control, actions that report honestly, and setup that anyone can follow. More devices come after that.
+- `status.027` Engineering status
+- `status.028` For people who want the detail: what was built, what was unit-tested, and what was tried on a real phone are recorded separately.
+- `status.029` Current state (Android)
+- `status.030` Android releases
+- `status.031` Open issues
+- `status.032` HaloLinux roadmap
+
+## voice
+
+- `voice.001` Home / Voice
+- `voice.002` Talk, listen, read along.
+- `voice.003` Voice isn’t a separate mode in Halo. You can speak or listen in Home, in your notes, on a Canvas and in Study — wherever typing or reading is harder than talking.
+- `voice.004` What the ring tells you
+- `voice.005` You can always see what Halo is doing with your voice.
+- `voice.006` Listening
+- `voice.007` Writing it down
+- `voice.008` Speaking
+- `voice.009` Stopped
+- `voice.010` Show the four states
+- `voice.011` Everywhere you write and read
+- `voice.012` Speak it, check it, use it.
+- `voice.013` Dictation you review
+- `voice.014` When you dictate into a note or field, Halo shows what it heard first. Choose Use, Edit or Discard — nothing goes in on its own.
+- `voice.015` Available in the alpha
+- `voice.016` Read aloud
+- `voice.017` Hear answers, notes and lesson explanations, and stop whenever you like.
+- `voice.018` Available in the alpha
+- `voice.019` Interrupt any time
+- `voice.020` Start talking while Halo is speaking and it stops to listen. Conversation can continue back and forth.
+- `voice.021` Available · depends on your phone
+- `voice.022` SR-03
+- `voice.023` Screenshot required
+- `voice.024` Typing box listening — words appearing
+- `voice.025` Screenshot required · from the current Android build
+- `voice.026` SR-12
+- `voice.027` Screenshot required
+- `voice.028` Note editor — dictation preview: Use, Edit, Discard
+- `voice.029` Screenshot required · from the current Android build
+- `voice.030` SR-19
+- `voice.031` Screenshot required
+- `voice.032` Read-aloud bar playing
+- `voice.033` Screenshot required · from the current Android build
+- `voice.034` Voices on your phone
+- `voice.035` Local voices, when you install them.
+- `voice.036` You can download a voice pack so Halo speaks without sending text anywhere. You pick it, you test it, and Halo only uses a voice you’ve listened to and approved.
+- `voice.037` How well voice works depends on your phone, your language and which packs you install. Speech isn’t offline in every language, and speed varies by device.
+- `voice.038` Part
+- `voice.039` What it does
+- `voice.040` Today
+- `voice.041` Speaking voice
+- `voice.042` A downloadable local voice pack. In a tester’s phone check, 10 voices worked in English, Latvian, Russian and Polish.
+- `voice.043` Optional download
+- `voice.044` Alternative voice
+- `voice.045` A second local pack covering English and Chinese.
+- `voice.046` Optional download
+- `voice.047` Understanding speech
+- `voice.048` A local speech-recognition model you install, then check with your own microphone.
+- `voice.049` Being qualified on phones
+- `voice.050` Hearing when you talk
+- `voice.051` A tiny optional model that notices when you start and stop speaking.
+- `voice.052` Optional · being qualified
+- `voice.053` Fallback
+- `voice.054` Your phone’s built-in Android voice.
+- `voice.055` Available in the alpha
+- `voice.056` Model names, for the curious
+- `voice.057` Speaking voice: Supertonic 3 (INT8). Alternative: Kokoro 1.1 (published pack: English and Chinese). Speech recognition: Whisper Small INT8 (Whisper Base INT8 is the lighter option). Speech activity: Silero VAD. Each is downloaded only when you choose, and a download alone doesn’t mean it works well on your phone.
+- `voice.058` Accessibility
+- `voice.059` Voice is for everyone who finds typing or reading hard.
+- `voice.060` That includes children, older people, people with low vision and anyone with their hands full. Text and voice always do the same things — neither is a lesser way to use Halo.
+
+## workspace
+
+- `workspace.001` Home / Notes, Canvas & Study
+- `workspace.002` Your work stays yours.
+- `workspace.003` A Notebook for everything you keep, a Canvas for thinking in space, memory you approve, and lessons that go at your pace. Halo helps — and asks before it changes anything.
+- `workspace.004` Notebook
+- `workspace.005` One place for notes, files and conversations.
+- `workspace.006` Write notes, import PDFs and photos, save a useful chat, or drop a quick capture into your Inbox. Search finds it all.
+- `workspace.007` Notes
+- `workspace.008` Documents you write and edit — by keyboard or by voice.
+- `workspace.009` Files
+- `workspace.010` PDFs, images and documents, kept on your phone.
+- `workspace.011` Inbox
+- `workspace.012` New captures wait here until you sort them.
+- `workspace.013` Context
+- `workspace.014` Choose which notes Halo may use for an answer. Adding context doesn’t change what you share.
+- `workspace.015` Available in the alpha
+- `workspace.016` Real capture · Notebook tools · Android test build, 13 Oct 2026. “Notes are documents. Canvas connects them.”
+- `workspace.017` Canvas
+- `workspace.018` Think in space. Halo suggests; you decide.
+- `workspace.019` Put notes, images and files on a canvas, group them and draw connections. When Halo suggests a change, it shows up as a dashed draft — nothing is saved until you choose Keep.
+- `workspace.020` Sample — how drafts work. Not an app capture.
+- `workspace.021` Note
+- `workspace.022` Basil experiment
+- `workspace.023` Three pots, different hours of light.
+- `workspace.024` Halo suggestion · draft
+- `workspace.025` Link: more light, taller plant
+- `workspace.026` Pot C had the most light and grew tallest.
+- `workspace.027` Keep
+- `workspace.028` Discard
+- `workspace.029` Show the draft again
+- `workspace.030` PDF
+- `workspace.031` How light affects plants
+- `workspace.032` One-page reading.
+- `workspace.033` SR-13
+- `workspace.034` Screenshot required
+- `workspace.035` Canvas with a dashed AI draft and Keep / Discard
+- `workspace.036` Screenshot required · from the current Android build
+- `workspace.037` Real capture · Canvas · Android test build, 13 Oct 2026. A real canvas: five cards, three connections, one group.
+- `workspace.038` Drafts look different on purpose.
+- `workspace.039` Dashed and labelled while they’re suggestions; solid only after you keep them. You can always tell your work from Halo’s ideas.
+- `workspace.040` Available in the alpha
+- `workspace.041` Memory
+- `workspace.042` Nothing is remembered without you.
+- `workspace.043` Halo can suggest things worth remembering — a preference, a routine. Each suggestion waits for your yes. You can see, edit or forget anything it remembers.
+- `workspace.044` Suggestions
+- `workspace.045` Off until you turn them on. Each one needs your approval.
+- `workspace.046` Local reflection
+- `workspace.047` Off by default. When on, it runs on your phone only.
+- `workspace.048` Cloud
+- `workspace.049` A provider you chose receives saved memory only when your settings allow it.
+- `workspace.050` Available in the alpha
+- `workspace.051` Real capture · Memory · Android test build, 13 Oct 2026. Cropped above the last line, which the original capture cuts off.
+- `workspace.052` Study
+- `workspace.053` Learn it, don’t just get the answer.
+- `workspace.054` Choose a topic — or your own notes, a PDF or a photo of a page. Halo explains, you try, and you review later. Calm, no points, no streaks.
+- `workspace.055` Available · growing
+- `workspace.056` Real capture · Study · Android test build, 13 Oct 2026
+- `workspace.057` A lesson, one step at a time
+- `workspace.058` Choose what to learn
+- `workspace.059` Hear it explained
+- `workspace.060` Try it yourself
+- `workspace.061` Review
+- `workspace.062` Go deeper
+- `workspace.063` Next step
+- `workspace.064` Start over
+- `workspace.065` SR-16
+- `workspace.066` Screenshot required
+- `workspace.067` Study — choosing a topic and sources (current build)
+- `workspace.068` Screenshot required · from the current Android build
+- `workspace.069` SR-17
+- `workspace.070` Screenshot required
+- `workspace.071` Study — explain and practise step
+- `workspace.072` Screenshot required · from the current Android build
+- `workspace.073` SR-18
+- `workspace.074` Screenshot required
+- `workspace.075` Study — review and summary
+- `workspace.076` Screenshot required · from the current Android build
+
+## your-ai
+
+- `your-ai.001` Home / Your AI
+- `your-ai.002` You choose where Halo thinks.
+- `your-ai.003` Every answer is worked out by an AI model somewhere. Halo lets you decide where: on your phone, on your own computer, or with a provider you pick. You can mix them, and change your mind.
+- `your-ai.004` Three choices
+- `your-ai.005` Choose a place to compare
+- `your-ai.006` On this phone
+- `your-ai.007` On your own machine
+- `your-ai.008` A provider you choose
+- `your-ai.009` On this phone
+- `your-ai.010` Good for
+- `your-ai.011` Privacy, quick everyday tasks, working without a connection once a model is downloaded.
+- `your-ai.012` Trade-offs
+- `your-ai.013` Phone models are small. Downloads take storage (hundreds of MB to a few GB), and heavy use costs battery.
+- `your-ai.014` Worth knowing
+- `your-ai.015` Halo checks how well a model fits your phone. Downloading a model doesn’t switch it on — you test it, then choose it.
+- `your-ai.016` On your own machine
+- `your-ai.017` Good for
+- `your-ai.018` Bigger models than a phone can run, while your requests stay on your own network.
+- `your-ai.019` Trade-offs
+- `your-ai.020` You need a computer that’s switched on and set up. Today that means running a compatible AI server yourself.
+- `your-ai.021` Worth knowing
+- `your-ai.022` HaloLinux, a Halo home node for a Raspberry Pi 5 or a Linux PC, is in development. There’s no release yet. More about HaloLinux
+- `your-ai.023` A provider you choose
+- `your-ai.024` Good for
+- `your-ai.025` The most capable models, image understanding and long documents.
+- `your-ai.026` Trade-offs
+- `your-ai.027` What you send goes to that provider under its privacy policy, and it may charge you. That cost is between you and the provider — it isn’t a Halo fee.
+- `your-ai.028` Worth knowing
+- `your-ai.029` Halo never picks the cloud for you. Some provider setups still have known issues, so each one is tested before we list it as working.
+- `your-ai.030` Different jobs, different models
+- `your-ai.031` Halo uses the right model for each job.
+- `your-ai.032` You don’t have to know model names. Halo sorts the work into a few jobs, and you can let it choose or pick for each one.
+- `your-ai.033` Job
+- `your-ai.034` What it means for you
+- `your-ai.035` Answers & chat
+- `your-ai.036` Writing replies, explaining, summarising.
+- `your-ai.037` Understanding requests
+- `your-ai.038` Working out which action you mean, and asking when it isn’t sure.
+- `your-ai.039` Seeing
+- `your-ai.040` Reading a photo, a document or what’s on screen.
+- `your-ai.041` Hearing
+- `your-ai.042` Turning your speech into text.
+- `your-ai.043` Speaking
+- `your-ai.044` Reading answers aloud.
+- `your-ai.045` Finding
+- `your-ai.046` Searching your notes and memory by meaning.
+- `your-ai.047` Advanced notes: models being tested on Android
+- `your-ai.048` Understanding requests: Qwen3 0.6B (LiteRT, INT4) is the first suggestion for small on-device tool and intent work. It’s only given this job after it passes Halo’s checks on your phone.
+- `your-ai.049` Answers: LFM2.5 is an optional on-device chat model, English first.
+- `your-ai.050` Seeing: multimodal models are supported where the phone and model pass qualification.
+- `your-ai.051` Finding: on-device text embeddings for search.
+- `your-ai.052` No model listing is a performance promise. Results vary by phone, memory and model.
+- `your-ai.053` SR-21
+- `your-ai.054` Screenshot required
+- `your-ai.055` “How Halo answers” — phone, own machine, provider
+- `your-ai.056` Screenshot required · from the current Android build
+- `your-ai.057` Honest limits
+- `your-ai.058` What depends on your phone.
+- `your-ai.059` Memory
+- `your-ai.060` Larger models need more RAM. Halo warns you before you download one that’s too big for your phone.
+- `your-ai.061` Speed
+- `your-ai.062` On-device answers can be slower than the cloud, especially on older phones. We don’t promise response times.
+- `your-ai.063` Abilities
+- `your-ai.064` Not every model can use tools, see images or speak every language. Halo shows what a model has passed on your phone.

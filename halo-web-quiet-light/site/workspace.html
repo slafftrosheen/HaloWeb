@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Notes, Canvas, Memory and Study — Halo</title>
+<meta content="Halo’s workspace: a Notebook for notes, files and chats, a Canvas where AI suggestions arrive as drafts you keep or discard, memory that saves nothing without you, and calm guided Study." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/workspace" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Notes, Canvas, Memory and Study — Halo" property="og:title"/>
+<meta content="Halo’s workspace: a Notebook for notes, files and chats, a Canvas where AI suggestions arrive as drafts you keep or discard, memory that saves nothing without you, and calm guided Study." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link href="css/tokens.css" rel="stylesheet"/>
+<link href="css/site.css" rel="stylesheet"/>
+<script defer="" src="js/vendor/lottie_light.min.js"></script>
+<script defer="" src="js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Halo home" class="brand" href="index.html"><img alt="" class="wm-l" height="80" src="assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Main" class="nav">
+<details class="nav-product" data-current=""><summary data-k="nav.001">Product <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="how-it-works.html">How Halo works<small>Ask, approve, see what happened</small></a>
+<a aria-current="page" data-k="nav.003" href="workspace.html">Notes, Canvas &amp; Study<small>Your own workspace, with help</small></a>
+<a data-k="nav.004" href="voice.html">Voice<small>Talk, listen and read along</small></a>
+<a data-k="nav.005" href="kids.html">Kids Mode<small>A gentler Halo · in development</small></a>
+</div></details>
+<a data-k="nav.006" href="your-ai.html">Your AI</a>
+<a data-k="nav.007" href="devices.html">Devices</a>
+<a data-k="nav.008" href="privacy.html">Privacy</a>
+<a data-k="nav.009" href="status.html">Status</a>
+<a data-k="nav.010" href="developers.html">Developers</a>
+</nav>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="alpha.html">Try the alpha</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Menu</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Main">
+<a data-k="nav.013" href="index.html">Home <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="how-it-works.html">How Halo works <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a aria-current="page" class="sub" data-k="nav.015" href="workspace.html">Notes, Canvas &amp; Study <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.016" href="voice.html">Voice <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="kids.html">Kids Mode <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="your-ai.html">Your AI <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="devices.html">Devices <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="privacy.html">Privacy &amp; price <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="status.html">What’s real today <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="developers.html">Developers <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="alpha.html">Try the Android alpha</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Source code on GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="workspace.001"><a href="index.html">Home</a> / Notes, Canvas &amp; Study</p>
+<h1 class="display" data-k="workspace.002" style="margin-top:var(--s4)">Your work stays yours.</h1>
+<p class="lede" data-k="workspace.003" style="margin-top:var(--s5)">A Notebook for everything you keep, a Canvas for thinking in space, memory you approve, and lessons that go at your pace. Halo helps — and asks before it changes anything.</p>
+</div>
+</section>
+<section aria-labelledby="nb-title" class="section" style="padding-top:0">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.004">Notebook</span>
+<h2 class="h2" data-k="workspace.005" id="nb-title">One place for notes, files and conversations.</h2>
+<p class="lede" data-k="workspace.006">Write notes, import PDFs and photos, save a useful chat, or drop a quick capture into your Inbox. Search finds it all.</p>
+<dl class="kv" style="grid-template-columns:auto 1fr">
+<dt data-k="workspace.007">Notes</dt><dd data-k="workspace.008">Documents you write and edit — by keyboard or by voice.</dd>
+<dt data-k="workspace.009">Files</dt><dd data-k="workspace.010">PDFs, images and documents, kept on your phone.</dd>
+<dt data-k="workspace.011">Inbox</dt><dd data-k="workspace.012">New captures wait here until you sort them.</dd>
+<dt data-k="workspace.013">Context</dt><dd data-k="workspace.014">Choose which notes Halo may use for an answer. Adding context doesn’t change what you share.</dd>
+</dl>
+<span class="status status--available" data-k="workspace.015">Available in the alpha</span>
+</div>
+<figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="assets/screens/real/halo-notebook-tools-20261013-480.webp 480w, assets/screens/real/halo-notebook-tools-20261013-720.webp 720w, assets/screens/real/halo-notebook-tools-20261013-1080.webp 1080w" type="image/webp"/><img alt="Notebook tools in Halo: Skills, Canvas, Memory and Study, with the note: Notes are documents. Canvas connects them." decoding="async" height="2400" loading="lazy" src="assets/screens/real/halo-notebook-tools-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.016"><b>Real capture</b> · Notebook tools · Android test build, 13 Oct 2026. “Notes are documents. Canvas connects them.”</span></figcaption></figure>
+</div>
+</section>
+<section aria-labelledby="cv-title" class="band section">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" data-k="workspace.017">Canvas</span>
+<h2 class="h2" data-k="workspace.018" id="cv-title">Think in space. Halo suggests; you decide.</h2>
+<p class="lede" data-k="workspace.019">Put notes, images and files on a canvas, group them and draw connections. When Halo suggests a change, it shows up as a dashed draft — nothing is saved until you choose Keep.</p>
+</div>
+<div class="split" style="margin-top:var(--s6)">
+<div class="sample" data-draft="" style="background:var(--band-surface);border-color:var(--band-line);color:var(--band-text);margin-top:0">
+<span class="sample-label" data-k="workspace.020" style="color:var(--band-text-2)"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg> Sample — how drafts work. Not an app capture.</span>
+<div class="board">
+<svg aria-hidden="true" class="links" preserveaspectratio="none" viewbox="0 0 300 100"><path d="M50 40 C 90 40, 110 60, 150 60"></path><path class="l-draft" d="M150 60 C 190 60, 210 40, 250 40"></path></svg>
+<div class="card" style="background:var(--band-bg);border-color:var(--band-line)"><p class="kind" data-k="workspace.021" style="color:var(--halo-mint)">Note</p><b data-k="workspace.022">Basil experiment</b><span data-k="workspace.023">Three pots, different hours of light.</span></div>
+<div class="card card--draft" data-state="draft" style="background:var(--band-bg)"><p class="kind" data-k="workspace.024" style="color:var(--halo-mint)">Halo suggestion · draft</p><b data-k="workspace.025">Link: more light, taller plant</b><span data-k="workspace.026">Pot C had the most light and grew tallest.</span>
+<div class="draft-actions"><button class="btn btn--pri" data-k="workspace.027" data-keep="" disabled="" type="button">Keep</button><button class="btn btn--sec" data-discard="" data-k="workspace.028" disabled="" type="button">Discard</button><button class="btn btn--sec" data-draft-reset="" data-k="workspace.029" hidden="" type="button">Show the draft again</button></div></div>
+<div class="card" style="background:var(--band-bg);border-color:var(--band-line)"><p class="kind" data-k="workspace.030" style="color:var(--halo-mint)">PDF</p><b data-k="workspace.031">How light affects plants</b><span data-k="workspace.032">One-page reading.</span></div>
+</div>
+<p class="sample-status" data-draft-status="" role="status"></p>
+</div>
+<figure class="shot" data-required="SR-13" style="--ratio:1080/2400"><div aria-label="Screenshot required: Canvas with a dashed AI draft and Keep / Discard" class="slot" role="img"><span class="slot-id" data-k="workspace.033">SR-13</span><b data-k="workspace.034">Screenshot required</b><span data-k="workspace.035">Canvas with a dashed AI draft and Keep / Discard</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg><span data-k="workspace.036"><b>Screenshot required</b> · from the current Android build</span></figcaption></figure>
+</div>
+<div class="grid2" style="margin-top:var(--s7)">
+<figure class="shot shot--sm" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="assets/screens/real/halo-canvas-group-20261013-480.webp 480w, assets/screens/real/halo-canvas-group-20261013-720.webp 720w, assets/screens/real/halo-canvas-group-20261013-1080.webp 1080w" type="image/webp"/><img alt="A Halo canvas titled Alpha demo, Light and growth, with five cards, three connections and a selected group." decoding="async" height="2400" loading="lazy" src="assets/screens/real/halo-canvas-group-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.037"><b>Real capture</b> · Canvas · Android test build, 13 Oct 2026. A real canvas: five cards, three connections, one group.</span></figcaption></figure>
+<div class="head" style="align-self:center"><h3 class="h3" data-k="workspace.038">Drafts look different on purpose.</h3><p class="muted" data-k="workspace.039" style="color:var(--band-text-2)">Dashed and labelled while they’re suggestions; solid only after you keep them. You can always tell your work from Halo’s ideas.</p><span class="status status--available" data-k="workspace.040">Available in the alpha</span></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="m-title" class="section">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.041">Memory</span>
+<h2 class="h2" data-k="workspace.042" id="m-title">Nothing is remembered without you.</h2>
+<p class="lede" data-k="workspace.043">Halo can suggest things worth remembering — a preference, a routine. Each suggestion waits for your yes. You can see, edit or forget anything it remembers.</p>
+<dl class="kv" style="grid-template-columns:auto 1fr">
+<dt data-k="workspace.044">Suggestions</dt><dd data-k="workspace.045">Off until you turn them on. Each one needs your approval.</dd>
+<dt data-k="workspace.046">Local reflection</dt><dd data-k="workspace.047">Off by default. When on, it runs on your phone only.</dd>
+<dt data-k="workspace.048">Cloud</dt><dd data-k="workspace.049">A provider you chose receives saved memory only when your settings allow it.</dd>
+</dl>
+<span class="status status--available" data-k="workspace.050">Available in the alpha</span>
+</div>
+<figure class="shot" style="--ratio:1080/1960"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="assets/screens/real/halo-memory-suggest-20261013-480.webp 480w, assets/screens/real/halo-memory-suggest-20261013-720.webp 720w, assets/screens/real/halo-memory-suggest-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo memory settings. Halo may suggest useful memories. Nothing is saved automatically. Local reflection is off by default." decoding="async" height="1960" loading="lazy" src="assets/screens/real/halo-memory-suggest-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.051"><b>Real capture</b> · Memory · Android test build, 13 Oct 2026. Cropped above the last line, which the original capture cuts off.</span></figcaption></figure>
+</div>
+</section>
+<section aria-labelledby="st-title" class="section" style="padding-top:0">
+<div class="wrap">
+<div class="split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.052">Study</span>
+<h2 class="h2" data-k="workspace.053" id="st-title">Learn it, don’t just get the answer.</h2>
+<p class="lede" data-k="workspace.054">Choose a topic — or your own notes, a PDF or a photo of a page. Halo explains, you try, and you review later. Calm, no points, no streaks.</p>
+<span class="status status--available" data-k="workspace.055">Available · growing</span>
+</div>
+<figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="assets/screens/real/halo-study-new-lesson-20261013-480.webp 480w, assets/screens/real/halo-study-new-lesson-20261013-720.webp 720w, assets/screens/real/halo-study-new-lesson-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo Study: Start a new lesson. Step 1, your learning goal. Step 2, add material, including reading text from a photo or file." decoding="async" height="2400" loading="lazy" src="assets/screens/real/halo-study-new-lesson-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.056"><b>Real capture</b> · Study · Android test build, 13 Oct 2026</span></figcaption></figure>
+</div>
+<div data-ladder="" style="margin-top:var(--s7)">
+<h3 class="h3" data-k="workspace.057">A lesson, one step at a time</h3>
+<ol class="ladder">
+<li class="rung"><span class="n">1</span><span><b data-k="workspace.058">Choose what to learn</b><span>Type or say a topic, or start from a note, file or photo.</span></span></li>
+<li class="rung"><span class="n">2</span><span><b data-k="workspace.059">Hear it explained</b><span>Short, clear explanations — read aloud if you like.</span></span></li>
+<li class="rung"><span class="n">3</span><span><b data-k="workspace.060">Try it yourself</b><span>Answer in your own words. Ask for a hint, not the answer.</span></span></li>
+<li class="rung"><span class="n">4</span><span><b data-k="workspace.061">Review</b><span>Practice cards join your review only when you choose.</span></span></li>
+<li class="rung"><span class="n">5</span><span><b data-k="workspace.062">Go deeper</b><span>Explain it back, or follow a related question.</span></span></li>
+</ol>
+<div class="ladder-controls"><button class="btn btn--sec btn--sm" data-k="workspace.063" data-ladder-next="" type="button">Next step <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-arrow_right"></use></svg></button><button class="link-btn" data-k="workspace.064" data-ladder-reset="" type="button">Start over</button></div>
+<p aria-live="polite" class="vh" data-ladder-live=""></p>
+</div>
+<div class="grid3" style="margin-top:var(--s7)">
+<figure class="shot" data-required="SR-16" style="--ratio:1080/2400"><div aria-label="Screenshot required: Study — choosing a topic and sources (current build)" class="slot" role="img"><span class="slot-id" data-k="workspace.065">SR-16</span><b data-k="workspace.066">Screenshot required</b><span data-k="workspace.067">Study — choosing a topic and sources (current build)</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg><span data-k="workspace.068"><b>Screenshot required</b> · from the current Android build</span></figcaption></figure>
+<figure class="shot" data-required="SR-17" style="--ratio:1080/2400"><div aria-label="Screenshot required: Study — explain and practise step" class="slot" role="img"><span class="slot-id" data-k="workspace.069">SR-17</span><b data-k="workspace.070">Screenshot required</b><span data-k="workspace.071">Study — explain and practise step</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg><span data-k="workspace.072"><b>Screenshot required</b> · from the current Android build</span></figcaption></figure>
+<figure class="shot" data-required="SR-18" style="--ratio:1080/2400"><div aria-label="Screenshot required: Study — review and summary" class="slot" role="img"><span class="slot-id" data-k="workspace.073">SR-18</span><b data-k="workspace.074">Screenshot required</b><span data-k="workspace.075">Study — review and summary</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg><span data-k="workspace.076"><b>Screenshot required</b> · from the current Android build</span></figcaption></figure>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">A personal assistant that starts on Android. Your assistant, your devices, your choice.</p></div>
+<div><h2 data-k="footer.002">Product</h2><ul><li><a data-k="footer.003" href="how-it-works.html">How Halo works</a></li><li><a data-k="footer.004" href="workspace.html">Notes, Canvas &amp; Study</a></li><li><a data-k="footer.005" href="voice.html">Voice</a></li><li><a data-k="footer.006" href="kids.html">Kids Mode</a></li><li><a data-k="footer.007" href="your-ai.html">Your AI</a></li><li><a data-k="footer.008" href="devices.html">Devices</a></li></ul></div>
+<div><h2 data-k="footer.009">Trust</h2><ul><li><a data-k="footer.010" href="privacy.html">Privacy &amp; price</a></li><li><a data-k="footer.011" href="status.html">What’s real today</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Engineering status</a></li><li><a data-k="footer.013" href="design.html">Presence &amp; brand</a></li></ul></div>
+<div><h2 data-k="footer.014">Build &amp; test</h2><ul><li><a data-k="footer.015" href="alpha.html">Try the alpha</a></li><li><a data-k="footer.016" href="developers.html">Developers</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo for Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">This website</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">No cookies, analytics or tracking on this website. Your theme and checklist choices stay in your browser.</span>
+<div aria-label="Colour theme" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">System</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Light</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Dark</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

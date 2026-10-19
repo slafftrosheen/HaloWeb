@@ -1,0 +1,46 @@
+HALO ALPHA - COPY/PASTE PROMPTS AND EXPECTATIONS
+Use only when the relevant feature is configured; otherwise mark as SKIP.
+
+HOME (no attachment)
+> Explain photosynthesis in two simple sentences.
+Expect: clear short answer. Follow up: "Why do leaves look green?"
+
+STUDY PDF only - attach 02_study_how_light_affects_plants.pdf
+> According to the attached material, which days were the plants watered? How much water did each pot receive in total? Point to the source.
+Expect: days 1, 3, 5, 7, 9, 11; 6 x 50 mL = 300 mL per pot.
+
+STUDY IMAGE only - attach 01_study_basil_observation.png
+> From this image only: which pot finished tallest, what was its height, and how much taller was it than pot A?
+Expect: C, 14 cm, 8 cm taller than A (6 cm). If the provider cannot read images, it must say so rather than guess.
+
+STUDY PDF + IMAGE - both attached to the same study session, if supported
+> Compare these two materials: what variable changed? What was kept the same? Does this alone prove that more light always makes plants taller?
+Expect: amount of light changed; basil species, soil, pot/water, initial height same; no, invented single illustration is not proof.
+
+STUDY GUIDANCE (after opening a session)
+> I think plant B grew taller than C. Please give me one hint, not the answer.
+Expect: gentle scaffold without immediate full solution; learner can revise answer.
+
+STUDY PRACTICE
+> Draft two practice cards from the study material and let me review them before keeping them.
+Expect: drafts displayed without silent acceptance into the spaced-review queue.
+
+HOME TOOL TRUTH
+> Please tell me what you can actually do on this phone right now, and what needs setup.
+Expect: truthful capability limitations, no imaginary completed actions.
+
+VOICE (optional)
+Speak: "What is six times seven?"
+Expect: intelligible transcript  and correct answer (42), or an actionable speech/model limitation.
+
+MULTILINGUAL (optional)
+> Explain photosynthesis simply in Russian. Then explain it in Latvian.
+Expect: readable localized answer if provider supports those languages; UI labels should also switch correctly when app language changes.
+
+REPORT TEMPLATE
+Screen/feature:
+Prompt or action:
+Expected:
+Actual:
+PASS / ISSUE / SKIP:
+Screenshot or log (no tokens, credentials, or private documents):

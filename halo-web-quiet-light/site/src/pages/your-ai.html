@@ -1,0 +1,71 @@
+<!--{"title":"Where your AI runs — on your phone, your machine, or a provider you choose","desc":"Halo lets you choose where answers are worked out: on your Android phone, on your own computer, or with an AI provider you set up yourself. Here are the trade-offs in plain words.","nav":"your-ai"}-->
+<section class="page-hero">
+ <div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Your AI</p>
+  <h1 class="display" style="margin-top:var(--s4)">You choose where Halo thinks.</h1>
+  <p class="lede" style="margin-top:var(--s5)">Every answer is worked out by an AI model somewhere. Halo lets you decide where: on your phone, on your own computer, or with a provider you pick. You can mix them, and change your mind.</p>
+ </div>
+</section>
+
+<section class="section choices-wrap" aria-labelledby="c-title" style="padding-top:0">
+ <div class="wrap">
+  <h2 id="c-title" class="vh">Three choices</h2>
+  <fieldset class="choices">
+   <legend class="vh">Choose a place to compare</legend>
+   <label class="choice"><input type="radio" name="ai" id="ai-phone" checked>{{I:on_device}}<b>On this phone</b><span>Models you download run right on your Android phone.</span>{{STATUS:available}}</label>
+   <label class="choice"><input type="radio" name="ai" id="ai-machine">{{I:lan}}<b>On your own machine</b><span>A computer you own answers over your home network.</span>{{STATUS:dev|Your own server today · HaloLinux in development}}</label>
+   <label class="choice"><input type="radio" name="ai" id="ai-provider">{{I:cloud}}<b>A provider you choose</b><span>Your own account with an AI company, added with your own key.</span>{{STATUS:available|Available · varies by provider}}</label>
+  </fieldset>
+  <section class="choice-detail" id="d-phone" aria-labelledby="dp"><h3 id="dp">On this phone</h3><dl>
+   <div><dt>Good for</dt><dd>Privacy, quick everyday tasks, working without a connection once a model is downloaded.</dd></div>
+   <div><dt>Trade-offs</dt><dd>Phone models are small. Downloads take storage (hundreds of MB to a few GB), and heavy use costs battery.</dd></div>
+   <div><dt>Worth knowing</dt><dd>Halo checks how well a model fits your phone. Downloading a model doesn’t switch it on — you test it, then choose it.</dd></div></dl></section>
+  <section class="choice-detail" id="d-machine" aria-labelledby="dm"><h3 id="dm">On your own machine</h3><dl>
+   <div><dt>Good for</dt><dd>Bigger models than a phone can run, while your requests stay on your own network.</dd></div>
+   <div><dt>Trade-offs</dt><dd>You need a computer that’s switched on and set up. Today that means running a compatible AI server yourself.</dd></div>
+   <div><dt>Worth knowing</dt><dd>HaloLinux, a Halo home node for a Raspberry Pi 5 or a Linux PC, is in development. There’s no release yet. <a href="devices.html">More about HaloLinux</a></dd></div></dl></section>
+  <section class="choice-detail" id="d-provider" aria-labelledby="dv"><h3 id="dv">A provider you choose</h3><dl>
+   <div><dt>Good for</dt><dd>The most capable models, image understanding and long documents.</dd></div>
+   <div><dt>Trade-offs</dt><dd>What you send goes to that provider under its privacy policy, and it may charge you. That cost is between you and the provider — it isn’t a Halo fee.</dd></div>
+   <div><dt>Worth knowing</dt><dd>Halo never picks the cloud for you. Some provider setups still have known issues, so each one is tested before we list it as working.</dd></div></dl></section>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="r-title" style="padding-top:0">
+ <div class="wrap split">
+  <div>
+   <div class="head"><span class="eyebrow">Different jobs, different models</span><h2 id="r-title" class="h2">Halo uses the right model for each job.</h2><p class="lede">You don’t have to know model names. Halo sorts the work into a few jobs, and you can let it choose or pick for each one.</p></div>
+   <table class="roles">
+    <thead><tr><th>Job</th><th>What it means for you</th></tr></thead>
+    <tbody>
+     <tr><td>Answers &amp; chat</td><td>Writing replies, explaining, summarising.</td></tr>
+     <tr><td>Understanding requests</td><td>Working out which action you mean, and asking when it isn’t sure.</td></tr>
+     <tr><td>Seeing</td><td>Reading a photo, a document or what’s on screen.</td></tr>
+     <tr><td>Hearing</td><td>Turning your speech into text.</td></tr>
+     <tr><td>Speaking</td><td>Reading answers aloud.</td></tr>
+     <tr><td>Finding</td><td>Searching your notes and memory by meaning.</td></tr>
+    </tbody>
+   </table>
+   <details class="plain" style="margin-top:var(--s5)"><summary>Advanced notes: models being tested on Android</summary>
+    <ul class="small muted" style="list-style:none;display:grid;gap:.5rem;margin-top:var(--s2)">
+     <li><b>Understanding requests:</b> Qwen3 0.6B (LiteRT, INT4) is the first suggestion for small on-device tool and intent work. It’s only given this job after it passes Halo’s checks on your phone.</li>
+     <li><b>Answers:</b> LFM2.5 is an optional on-device chat model, English first.</li>
+     <li><b>Seeing:</b> multimodal models are supported where the phone and model pass qualification.</li>
+     <li><b>Finding:</b> on-device text embeddings for search.</li>
+     <li>No model listing is a performance promise. Results vary by phone, memory and model.</li>
+    </ul></details>
+  </div>
+  {{SLOT:SR-21|“How Halo answers” — phone, own machine, provider}}
+ </div>
+</section>
+
+<section class="section" aria-labelledby="h-title" style="padding-top:0">
+ <div class="wrap">
+  <div class="head"><span class="eyebrow">Honest limits</span><h2 id="h-title" class="h2">What depends on your phone.</h2></div>
+  <div class="grid3" style="margin-top:var(--s6)">
+   <article class="tile"><h3>Memory</h3><p>Larger models need more RAM. Halo warns you before you download one that’s too big for your phone.</p></article>
+   <article class="tile"><h3>Speed</h3><p>On-device answers can be slower than the cloud, especially on older phones. We don’t promise response times.</p></article>
+   <article class="tile"><h3>Abilities</h3><p>Not every model can use tools, see images or speak every language. Halo shows what a model has passed on your phone.</p></article>
+  </div>
+ </div>
+</section>

@@ -1,0 +1,13 @@
+priority,topic,finding,needed
+P0,Licence,"Still no LICENSE in Halo, HaloLinux or HaloWeb. Site says “Source code on GitHub” and Developers asks people to ask before reusing code.",Choose and commit a licence; then I switch copy to “open source” (4 strings).
+P0,Real captures,21 ‘Screenshot required’ slots remain (SR list). The release gate (build_pages.py --check) fails until they're filled.,Capture per rules; drop files into assets/screens/real/ and swap {{SLOT}} → {{SHOT}}.
+P0,Hero capture,Hero uses an SR-01 slot; home.jpg is the interim real capture used further down.,SR-01 dark + light from the current build.
+P1,Lowercase in prose,Copy uses “Halo” in sentences; wordmark is lowercase.,Confirm (recommended) or ask for lowercase everywhere.
+P1,Voice pack naming,"Supertonic 3, Kokoro 1.1, Whisper, Silero named only inside a collapsed ‘for the curious’ note.",Confirm naming is allowed and licences permit it.
+P1,Provider list,No connector is named as working.,List connectors verified on device; I'll add them to Your AI.
+P1,HaloLinux wording,"Devices says the newest batch ‘was written but not yet built, tested or tried on a device as a whole’.","Confirm, or tell me when a tested build exists."
+P1,Google components,Privacy mentions ‘some Android features come from Google’s own system services’.,Confirm wording for the ML Kit document scanner and Wear components.
+P1,OG images,assets/og/*.png still carry the old headline.,Regenerate from the new hero copy (no photo) — I can do this in the next round.
+P2,LV / RU,New pages are English only; copy/en.json carries 700+ keys for the translation pass.,Hide the old language switch until translated (done in this build).
+P2,Feedback address,Personal Gmail stays public on the Alpha page.,Confirm.
+P2,Test-kit image,01_study_basil_observation.png origin unconfirmed.,"Confirm real/authored, or replace."

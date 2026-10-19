@@ -1,0 +1,28 @@
+slot,page_section,current_asset,crop_aspect,caption,status
+SR-01,Home · hero (right column; mobile under CTAs),— (home.jpg is the interim real capture),"Full 1080×2400, no crop. Desktop 20 rem wide (~320 px); mobile 74 % of width",Real capture · Home · <build> · <date>,REQUIRED (P0)
+SR-02,"Home · hero, light theme",—,As SR-01,As SR-01,REQUIRED (P0)
+SR-03,How it works step 1 · Voice,—,Full frame; keyboard closed,Words appearing as you speak,REQUIRED (P0)
+SR-04,Home Ch. B step 3 · How it works step 3,—,Full frame; approval sheet visible with action-named button,Approval names the action,REQUIRED (P0)
+SR-05,Home Ch. B step 4 · How it works step 4,—,Full frame; Stop visible,Halo acting,REQUIRED (P1)
+SR-06,How it works · outcomes (future),—,Full frame,Confirmed receipt,REQUIRED (P0)
+SR-07,Replaces activity.jpg when captured,"activity.jpg (real, 13 Oct)",Full frame,"Sent, not verified",REQUIRED (P0)
+SR-10,How it works · Halo in other apps,—,Full frame over a neutral app (no personal data),Native assistant,REQUIRED after validation (P1)
+SR-11,Home Ch. C · Notebook,notebook.jpg NOT usable (Russian timestamps),Full frame; English locale,Notebook library,REQUIRED (P0)
+SR-12,Voice · dictation,—,Full frame,Use / Edit / Discard,REQUIRED (P1)
+SR-13,Workspace · Canvas,—,Full frame; dashed draft + Keep/Discard visible,AI draft on canvas,REQUIRED (P0)
+SR-16/17/18,Workspace · Study row,"study.jpg (interim, Home Ch. C + Workspace)",Full frame each,Study entry / practise / review,REQUIRED (P0/P1/P2)
+SR-19,Voice · read aloud,—,Full frame,Read-aloud bar,REQUIRED (P1)
+SR-21,Your AI · ‘How Halo answers’,settings.jpg kept off-site (pre-v3 structure),Full frame,Where Halo thinks,REQUIRED (P0)
+SR-24…27,Kids page,—,"Full frame each, only from a public build",Kids home / homework / reader / gate,REQUIRED when Kids ships (P1)
+SR-25,Kids · homework ladder,—,Full frame,First hint,REQUIRED (P1)
+SR-30,Devices · HaloLinux,—,"Terminal capture 16:10, ≥1600 px wide, dark terminal, no hostnames/IPs",Real terminal output,REQUIRED (P1)
+home,"Home Ch. B (step 1–2), How it works step 2",assets/screens/real/halo-home-paused-20261013,Full frame,"Real capture · Home · Android test build, 13 Oct 2026",IN USE (interim)
+activity,"Home Ch. B step 5, How it works step 5",halo-activity-history-20261013,Full frame,…“effect not verified” is shown as it is,IN USE
+canvas,"Home Ch. C, Workspace",halo-canvas-group-20261013,Full frame,"Five cards, three connections, one group",IN USE
+study,"Home Ch. C, Workspace Study",halo-study-new-lesson-20261013,Full frame,Real capture · Study,IN USE (interim)
+tools,Workspace Notebook,halo-notebook-tools-20261013,Full frame,Notes are documents. Canvas connects them.,IN USE
+memory,Workspace Memory,halo-memory-suggest-20261013,CROPPED to 1080×1960 (cuts the truncated last line),Cropped above the last line,IN USE
+devices,"Home Ch. G, Devices",halo-devices-this-phone-20261013,Full frame,No saved devices — and Halo still works,IN USE
+access,Privacy,halo-settings-access-20261013,Full frame,Real capture · Access & data,IN USE
+notifs,How it works · Notifications,halo-notifications-empty-20261013,Full frame,Real capture · Notifications,IN USE
+"skills, settings",Not placed,halo-skills / halo-settings-20261013,—,Technical / pre-v3 structure,"KEPT, NOT SHOWN"

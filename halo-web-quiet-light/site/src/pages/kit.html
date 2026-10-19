@@ -1,0 +1,90 @@
+<!--{"title":"Halo web design kit — components and tokens","desc":"Living style guide for the Halo website: tokens, type, buttons, status, capture tags, rings, cards and forms.","nav":"kit"}-->
+<section class="page-hero">
+ <div class="wrap">
+  <p class="crumbs">Internal · living style guide · not linked from the navigation</p>
+  <h1 class="display" style="margin-top:var(--s4)">Design kit</h1>
+  <p class="lede" style="margin-top:var(--s5)">Every component on the site, in its real states. Tokens live in css/tokens.css; components in css/site.css. Switch the theme in the footer to see dark.</p>
+ </div>
+</section>
+
+<section class="section" style="padding-top:0" aria-labelledby="k-col">
+ <div class="wrap">
+  <h2 id="k-col" class="h2">Colour</h2>
+  <div class="grid3" style="margin-top:var(--s5);grid-template-columns:repeat(auto-fill,minmax(11rem,1fr))">
+   <div class="tile" style="background:#FAFAF4;color:#060330;border-color:#DCE1DC"><b>Cream</b><span class="mono">#FAFAF4 · page (light)</span></div>
+   <div class="tile" style="background:#060330;color:#FAFAF4;border-color:#060330"><b>Night Ink</b><span class="mono">#060330 · text · bands</span></div>
+   <div class="tile" style="background:#0CF2BA;color:#060330;border-color:#0CF2BA"><b>Halo Mint</b><span class="mono">#0CF2BA · fills, ring, focus</span></div>
+   <div class="tile" style="background:#047A5E;color:#FAFAF4;border-color:#047A5E"><b>Deep Mint</b><span class="mono">#047A5E · mint text on light · 5.1:1</span></div>
+   <div class="tile" style="background:#4A4F63;color:#FAFAF4;border-color:#4A4F63"><b>Slate</b><span class="mono">#4A4F63 · 7.7:1 on Cream</span></div>
+   <div class="tile" style="background:#FF9F6B;color:#060330;border-color:#FF9F6B"><b>Sunrise Apricot</b><span class="mono">#FF9F6B · fills only · ≤5%</span></div>
+   <div class="tile" style="background:#A84B12;color:#FAFAF4;border-color:#A84B12"><b>Apricot Ink</b><span class="mono">#A84B12 · apricot text · 5.4:1</span></div>
+   <div class="tile" style="background:#D64545;color:#060330;border-color:#D64545"><b>Ember</b><span class="mono">#D64545 · glyphs &amp; large text · Night Ink on it 4.7:1</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" style="padding-top:0" aria-labelledby="k-type">
+ <div class="wrap">
+  <h2 id="k-type" class="h2">Type</h2>
+  <div class="stack" style="margin-top:var(--s5)">
+   <p class="eyebrow">Eyebrow · 13 / 700 / +14% caps</p>
+   <p class="display">Display · 40→76</p>
+   <p class="h2">Heading 2 · 30→48</p>
+   <p class="h3">Heading 3 · 20→26</p>
+   <p class="lede">Lede · 17→21 · Atkinson Hyperlegible Next, 1.55 line height, 36 characters max.</p>
+   <p>Body · 16→18 · never below 16 px. Short sentences. One idea each.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section" style="padding-top:0" aria-labelledby="k-btn">
+ <div class="wrap">
+  <h2 id="k-btn" class="h2">Actions</h2>
+  <div class="cta-row" style="margin-top:var(--s5)"><a class="btn btn--pri" href="#">Primary {{I:arrow_right}}</a><a class="btn btn--sec" href="#">Secondary</a><a class="btn btn--pri btn--sm" href="#">Small</a><button class="btn btn--pri" disabled>Disabled</button><a class="link-arrow" href="#">Text link {{I:arrow_right}}</a><button class="link-btn" type="button">Link button</button></div>
+  <div class="band" style="margin-top:var(--s5);padding:var(--s5);border-radius:var(--r-lg)"><div class="cta-row"><a class="btn btn--pri" href="#">Primary on ink</a><a class="btn btn--sec" href="#">Secondary on ink</a><a class="link-arrow" href="#">Link on ink {{I:arrow_right}}</a></div></div>
+ </div>
+</section>
+
+<section class="section" style="padding-top:0" aria-labelledby="k-st">
+ <div class="wrap">
+  <h2 id="k-st" class="h2">Status &amp; evidence</h2>
+  <div class="cta-row" style="margin-top:var(--s5)">{{STATUS:available}}{{STATUS:dev}}{{STATUS:planned}}{{STATUS:research}}{{STATUS:exp}}</div>
+  <div class="grid3" style="margin-top:var(--s6)">
+   {{SHOT:home|Caption note goes here.|sm}}
+   {{SLOT:SR-00|What the missing capture must show}}
+   <ul class="outcomes" style="grid-template-columns:1fr;margin-top:0">
+    <li class="outcome o-proposed">{{I:task}}<span><b>Proposed</b><span>Nothing has happened.</span></span></li>
+    <li class="outcome o-confirmed">{{I:check}}<span><b>Confirmed</b><span>Checked and worked.</span></span></li>
+    <li class="outcome o-failed">{{I:failure}}<span><b>Failed</b><span>One clear next step.</span></span></li>
+    <li class="outcome o-unverified">{{I:unverified}}<span><b>Not verified</b><span>Sent, result unknown.</span></span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="band section" aria-labelledby="k-ring">
+ <div class="wrap">
+  <h2 id="k-ring" class="h2">Open ring — presence</h2>
+  <p class="lede" style="margin-top:var(--s4)">Shows a real state only. Sizes: 56 (step), 72 (state card), 64 (release card), 18rem (page hero). Lottie plays once per event; the SVG still is the reduced-motion and no-JS state.</p>
+  <ul class="vstates" style="margin-top:var(--s5)">
+   <li class="vstate">{{RING:idle}}<b>idle</b><span>default · logo frame</span></li>
+   <li class="vstate">{{RING:approval_required}}<b>approval_required</b><span>needs your OK</span></li>
+   <li class="vstate">{{RING:acting}}<b>acting</b><span>approved work running</span></li>
+   <li class="vstate">{{RING:waiting}}<b>waiting</b><span>sent · not verified</span></li>
+  </ul>
+ </div>
+</section>
+
+<section class="section" aria-labelledby="k-form">
+ <div class="wrap">
+  <h2 id="k-form" class="h2">Inputs</h2>
+  <form class="form" onsubmit="return false">
+   <fieldset><legend>Field group</legend><div class="fgrid">
+    <label>Text field (optional)<input></label>
+    <label>Select<select><option>Option one</option></select></label>
+    <label class="wide">Text area (required)<textarea rows="3"></textarea></label>
+   </div></fieldset>
+  </form>
+  <ol class="checklist"><li><label><input type="checkbox" checked><span><strong>Checklist item <small>01 · AREA</small></strong><small>Helper text explains what to try and what to expect.</small></span></label></li></ol>
+ </div>
+</section>

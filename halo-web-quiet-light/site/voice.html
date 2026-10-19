@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Voice — talk, listen and read along with Halo</title>
+<meta content="Voice in Halo: speak instead of typing, review dictation before it’s used, hear answers and notes read aloud, and interrupt at any time. Local voices when installed; support depends on your phone and language." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/voice" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Voice — talk, listen and read along with Halo" property="og:title"/>
+<meta content="Voice in Halo: speak instead of typing, review dictation before it’s used, hear answers and notes read aloud, and interrupt at any time. Local voices when installed; support depends on your phone and language." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link href="css/tokens.css" rel="stylesheet"/>
+<link href="css/site.css" rel="stylesheet"/>
+<script defer="" src="js/vendor/lottie_light.min.js"></script>
+<script defer="" src="js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Halo home" class="brand" href="index.html"><img alt="" class="wm-l" height="80" src="assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Main" class="nav">
+<details class="nav-product" data-current=""><summary data-k="nav.001">Product <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="how-it-works.html">How Halo works<small>Ask, approve, see what happened</small></a>
+<a data-k="nav.003" href="workspace.html">Notes, Canvas &amp; Study<small>Your own workspace, with help</small></a>
+<a aria-current="page" data-k="nav.004" href="voice.html">Voice<small>Talk, listen and read along</small></a>
+<a data-k="nav.005" href="kids.html">Kids Mode<small>A gentler Halo · in development</small></a>
+</div></details>
+<a data-k="nav.006" href="your-ai.html">Your AI</a>
+<a data-k="nav.007" href="devices.html">Devices</a>
+<a data-k="nav.008" href="privacy.html">Privacy</a>
+<a data-k="nav.009" href="status.html">Status</a>
+<a data-k="nav.010" href="developers.html">Developers</a>
+</nav>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="alpha.html">Try the alpha</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Menu</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Main">
+<a data-k="nav.013" href="index.html">Home <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="how-it-works.html">How Halo works <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.015" href="workspace.html">Notes, Canvas &amp; Study <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a aria-current="page" class="sub" data-k="nav.016" href="voice.html">Voice <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="kids.html">Kids Mode <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="your-ai.html">Your AI <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="devices.html">Devices <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="privacy.html">Privacy &amp; price <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="status.html">What’s real today <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="developers.html">Developers <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="alpha.html">Try the Android alpha</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Source code on GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="voice.001"><a href="index.html">Home</a> / Voice</p>
+<h1 class="display" data-k="voice.002" style="margin-top:var(--s4)">Talk, listen, read along.</h1>
+<p class="lede" data-k="voice.003" style="margin-top:var(--s5)">Voice isn’t a separate mode in Halo. You can speak or listen in Home, in your notes, on a Canvas and in Study — wherever typing or reading is harder than talking.</p>
+</div>
+</section>
+<section aria-labelledby="vs-title" class="band section" data-vstates="">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.004">What the ring tells you</span><h2 class="h2" data-k="voice.005" id="vs-title">You can always see what Halo is doing with your voice.</h2></div>
+<ul class="vstates">
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="assets/brand/orb/lottie/halo_orb_listening.json"><img alt="" decoding="async" height="240" loading="lazy" src="assets/brand/orb/svg/halo_orb_listening.svg" width="240"/></span><b data-k="voice.006">Listening</b><span>The microphone is on and Halo hears you. Nothing is recorded before you start.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="assets/brand/orb/lottie/halo_orb_capturing_voice.json"><img alt="" decoding="async" height="240" loading="lazy" src="assets/brand/orb/svg/halo_orb_capturing_voice.svg" width="240"/></span><b data-k="voice.007">Writing it down</b><span>Your words appear on screen as you speak, so you can catch mistakes.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="assets/brand/orb/lottie/halo_orb_speaking.json"><img alt="" decoding="async" height="240" loading="lazy" src="assets/brand/orb/svg/halo_orb_speaking.svg" width="240"/></span><b data-k="voice.008">Speaking</b><span>Halo reads its answer — or your note — aloud.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="assets/brand/orb/lottie/halo_orb_stopped.json"><img alt="" decoding="async" height="240" loading="lazy" src="assets/brand/orb/svg/halo_orb_stopped.svg" width="240"/></span><b data-k="voice.009">Stopped</b><span>Press Stop or start talking, and Halo stops straight away.</span></li>
+</ul>
+<div class="cta-row" style="margin-top:var(--s5)"><button class="btn btn--sec btn--sm" data-k="voice.010" data-vplay="" type="button"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-play"></use></svg> Show the four states</button></div>
+<p aria-live="polite" class="vh" data-vlive=""></p>
+</div>
+</section>
+<section aria-labelledby="d-title" class="section">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.011">Everywhere you write and read</span><h2 class="h2" data-k="voice.012" id="d-title">Speak it, check it, use it.</h2></div>
+<div class="grid3" style="margin-top:var(--s6)">
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-mic"></use></svg><h3 data-k="voice.013">Dictation you review</h3><p data-k="voice.014">When you dictate into a note or field, Halo shows what it heard first. Choose Use, Edit or Discard — nothing goes in on its own.</p><span class="status status--available" data-k="voice.015">Available in the alpha</span></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-speaker"></use></svg><h3 data-k="voice.016">Read aloud</h3><p data-k="voice.017">Hear answers, notes and lesson explanations, and stop whenever you like.</p><span class="status status--available" data-k="voice.018">Available in the alpha</span></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-voice"></use></svg><h3 data-k="voice.019">Interrupt any time</h3><p data-k="voice.020">Start talking while Halo is speaking and it stops to listen. Conversation can continue back and forth.</p><span class="status status--available" data-k="voice.021">Available · depends on your phone</span></article>
+</div>
+<div class="grid3" style="margin-top:var(--s7)">
+<figure class="shot" data-required="SR-03" style="--ratio:1080/2400"><div aria-label="Screenshot required: Typing box listening — words appearing" class="slot" role="img"><span class="slot-id" data-k="voice.022">SR-03</span><b data-k="voice.023">Screenshot required</b><span data-k="voice.024">Typing box listening — words appearing</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg><span data-k="voice.025"><b>Screenshot required</b> · from the current Android build</span></figcaption></figure>
+<figure class="shot" data-required="SR-12" style="--ratio:1080/2400"><div aria-label="Screenshot required: Note editor — dictation preview: Use, Edit, Discard" class="slot" role="img"><span class="slot-id" data-k="voice.026">SR-12</span><b data-k="voice.027">Screenshot required</b><span data-k="voice.028">Note editor — dictation preview: Use, Edit, Discard</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg><span data-k="voice.029"><b>Screenshot required</b> · from the current Android build</span></figcaption></figure>
+<figure class="shot" data-required="SR-19" style="--ratio:1080/2400"><div aria-label="Screenshot required: Read-aloud bar playing" class="slot" role="img"><span class="slot-id" data-k="voice.030">SR-19</span><b data-k="voice.031">Screenshot required</b><span data-k="voice.032">Read-aloud bar playing</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg><span data-k="voice.033"><b>Screenshot required</b> · from the current Android build</span></figcaption></figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="l-title" class="section" style="padding-top:0">
+<div class="wrap grid2" style="gap:clamp(2rem,1rem + 4vw,4.5rem)">
+<div class="head">
+<span class="eyebrow" data-k="voice.034">Voices on your phone</span>
+<h2 class="h2" data-k="voice.035" id="l-title">Local voices, when you install them.</h2>
+<p class="lede" data-k="voice.036">You can download a voice pack so Halo speaks without sending text anywhere. You pick it, you test it, and Halo only uses a voice you’ve listened to and approved.</p>
+<p class="callout" data-k="voice.037" style="margin-top:var(--s5)">How well voice works depends on your phone, your language and which packs you install. Speech isn’t offline in every language, and speed varies by device.</p>
+</div>
+<div>
+<table class="roles">
+<thead><tr><th data-k="voice.038">Part</th><th data-k="voice.039">What it does</th><th data-k="voice.040">Today</th></tr></thead>
+<tbody>
+<tr><td data-k="voice.041">Speaking voice</td><td data-k="voice.042">A downloadable local voice pack. In a tester’s phone check, 10 voices worked in English, Latvian, Russian and Polish.</td><td><span class="status status--available" data-k="voice.043">Optional download</span></td></tr>
+<tr><td data-k="voice.044">Alternative voice</td><td data-k="voice.045">A second local pack covering English and Chinese.</td><td><span class="status status--available" data-k="voice.046">Optional download</span></td></tr>
+<tr><td data-k="voice.047">Understanding speech</td><td data-k="voice.048">A local speech-recognition model you install, then check with your own microphone.</td><td><span class="status status--dev" data-k="voice.049">Being qualified on phones</span></td></tr>
+<tr><td data-k="voice.050">Hearing when you talk</td><td data-k="voice.051">A tiny optional model that notices when you start and stop speaking.</td><td><span class="status status--dev" data-k="voice.052">Optional · being qualified</span></td></tr>
+<tr><td data-k="voice.053">Fallback</td><td data-k="voice.054">Your phone’s built-in Android voice.</td><td><span class="status status--available" data-k="voice.055">Available in the alpha</span></td></tr>
+</tbody>
+</table>
+<details class="plain" style="margin-top:var(--s4)"><summary data-k="voice.056">Model names, for the curious</summary><p class="small muted" data-k="voice.057">Speaking voice: Supertonic 3 (INT8). Alternative: Kokoro 1.1 (published pack: English and Chinese). Speech recognition: Whisper Small INT8 (Whisper Base INT8 is the lighter option). Speech activity: Silero VAD. Each is downloaded only when you choose, and a download alone doesn’t mean it works well on your phone.</p></details>
+</div>
+</div>
+</section>
+<section aria-labelledby="a-title" class="section" style="padding-top:0">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.058">Accessibility</span><h2 class="h2" data-k="voice.059" id="a-title">Voice is for everyone who finds typing or reading hard.</h2><p class="lede" data-k="voice.060">That includes children, older people, people with low vision and anyone with their hands full. Text and voice always do the same things — neither is a lesser way to use Halo.</p></div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">A personal assistant that starts on Android. Your assistant, your devices, your choice.</p></div>
+<div><h2 data-k="footer.002">Product</h2><ul><li><a data-k="footer.003" href="how-it-works.html">How Halo works</a></li><li><a data-k="footer.004" href="workspace.html">Notes, Canvas &amp; Study</a></li><li><a data-k="footer.005" href="voice.html">Voice</a></li><li><a data-k="footer.006" href="kids.html">Kids Mode</a></li><li><a data-k="footer.007" href="your-ai.html">Your AI</a></li><li><a data-k="footer.008" href="devices.html">Devices</a></li></ul></div>
+<div><h2 data-k="footer.009">Trust</h2><ul><li><a data-k="footer.010" href="privacy.html">Privacy &amp; price</a></li><li><a data-k="footer.011" href="status.html">What’s real today</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Engineering status</a></li><li><a data-k="footer.013" href="design.html">Presence &amp; brand</a></li></ul></div>
+<div><h2 data-k="footer.014">Build &amp; test</h2><ul><li><a data-k="footer.015" href="alpha.html">Try the alpha</a></li><li><a data-k="footer.016" href="developers.html">Developers</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo for Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">This website</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">No cookies, analytics or tracking on this website. Your theme and checklist choices stay in your browser.</span>
+<div aria-label="Colour theme" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">System</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Light</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Dark</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

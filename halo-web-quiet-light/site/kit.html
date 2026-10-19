@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Halo web design kit — components and tokens</title>
+<meta content="Living style guide for the Halo website: tokens, type, buttons, status, capture tags, rings, cards and forms." name="description"/>
+<meta content="noindex" name="robots"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/kit" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Halo web design kit — components and tokens" property="og:title"/>
+<meta content="Living style guide for the Halo website: tokens, type, buttons, status, capture tags, rings, cards and forms." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link href="css/tokens.css" rel="stylesheet"/>
+<link href="css/site.css" rel="stylesheet"/>
+<script defer="" src="js/vendor/lottie_light.min.js"></script>
+<script defer="" src="js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Halo home" class="brand" href="index.html"><img alt="" class="wm-l" height="80" src="assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Main" class="nav">
+<details class="nav-product"><summary data-k="nav.001">Product <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="how-it-works.html">How Halo works<small>Ask, approve, see what happened</small></a>
+<a data-k="nav.003" href="workspace.html">Notes, Canvas &amp; Study<small>Your own workspace, with help</small></a>
+<a data-k="nav.004" href="voice.html">Voice<small>Talk, listen and read along</small></a>
+<a data-k="nav.005" href="kids.html">Kids Mode<small>A gentler Halo · in development</small></a>
+</div></details>
+<a data-k="nav.006" href="your-ai.html">Your AI</a>
+<a data-k="nav.007" href="devices.html">Devices</a>
+<a data-k="nav.008" href="privacy.html">Privacy</a>
+<a data-k="nav.009" href="status.html">Status</a>
+<a data-k="nav.010" href="developers.html">Developers</a>
+</nav>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="alpha.html">Try the alpha</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Menu</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Main">
+<a data-k="nav.013" href="index.html">Home <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="how-it-works.html">How Halo works <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.015" href="workspace.html">Notes, Canvas &amp; Study <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.016" href="voice.html">Voice <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="kids.html">Kids Mode <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="your-ai.html">Your AI <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="devices.html">Devices <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="privacy.html">Privacy &amp; price <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="status.html">What’s real today <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="developers.html">Developers <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="alpha.html">Try the Android alpha</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Source code on GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="kit.001">Internal · living style guide · not linked from the navigation</p>
+<h1 class="display" data-k="kit.002" style="margin-top:var(--s4)">Design kit</h1>
+<p class="lede" data-k="kit.003" style="margin-top:var(--s5)">Every component on the site, in its real states. Tokens live in css/tokens.css; components in css/site.css. Switch the theme in the footer to see dark.</p>
+</div>
+</section>
+<section aria-labelledby="k-col" class="section" style="padding-top:0">
+<div class="wrap">
+<h2 class="h2" data-k="kit.004" id="k-col">Colour</h2>
+<div class="grid3" style="margin-top:var(--s5);grid-template-columns:repeat(auto-fill,minmax(11rem,1fr))">
+<div class="tile" style="background:#FAFAF4;color:#060330;border-color:#DCE1DC"><b data-k="kit.005">Cream</b><span class="mono" data-k="kit.006">#FAFAF4 · page (light)</span></div>
+<div class="tile" style="background:#060330;color:#FAFAF4;border-color:#060330"><b data-k="kit.007">Night Ink</b><span class="mono" data-k="kit.008">#060330 · text · bands</span></div>
+<div class="tile" style="background:#0CF2BA;color:#060330;border-color:#0CF2BA"><b data-k="kit.009">Halo Mint</b><span class="mono" data-k="kit.010">#0CF2BA · fills, ring, focus</span></div>
+<div class="tile" style="background:#047A5E;color:#FAFAF4;border-color:#047A5E"><b data-k="kit.011">Deep Mint</b><span class="mono" data-k="kit.012">#047A5E · mint text on light · 5.1:1</span></div>
+<div class="tile" style="background:#4A4F63;color:#FAFAF4;border-color:#4A4F63"><b data-k="kit.013">Slate</b><span class="mono" data-k="kit.014">#4A4F63 · 7.7:1 on Cream</span></div>
+<div class="tile" style="background:#FF9F6B;color:#060330;border-color:#FF9F6B"><b data-k="kit.015">Sunrise Apricot</b><span class="mono" data-k="kit.016">#FF9F6B · fills only · ≤5%</span></div>
+<div class="tile" style="background:#A84B12;color:#FAFAF4;border-color:#A84B12"><b data-k="kit.017">Apricot Ink</b><span class="mono" data-k="kit.018">#A84B12 · apricot text · 5.4:1</span></div>
+<div class="tile" style="background:#D64545;color:#060330;border-color:#D64545"><b data-k="kit.019">Ember</b><span class="mono" data-k="kit.020">#D64545 · glyphs &amp; large text · Night Ink on it 4.7:1</span></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="k-type" class="section" style="padding-top:0">
+<div class="wrap">
+<h2 class="h2" data-k="kit.021" id="k-type">Type</h2>
+<div class="stack" style="margin-top:var(--s5)">
+<p class="eyebrow" data-k="kit.022">Eyebrow · 13 / 700 / +14% caps</p>
+<p class="display" data-k="kit.023">Display · 40→76</p>
+<p class="h2" data-k="kit.024">Heading 2 · 30→48</p>
+<p class="h3" data-k="kit.025">Heading 3 · 20→26</p>
+<p class="lede" data-k="kit.026">Lede · 17→21 · Atkinson Hyperlegible Next, 1.55 line height, 36 characters max.</p>
+<p data-k="kit.027">Body · 16→18 · never below 16 px. Short sentences. One idea each.</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="k-btn" class="section" style="padding-top:0">
+<div class="wrap">
+<h2 class="h2" data-k="kit.028" id="k-btn">Actions</h2>
+<div class="cta-row" style="margin-top:var(--s5)"><a class="btn btn--pri" data-k="kit.029" href="#">Primary <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-arrow_right"></use></svg></a><a class="btn btn--sec" data-k="kit.030" href="#">Secondary</a><a class="btn btn--pri btn--sm" data-k="kit.031" href="#">Small</a><button class="btn btn--pri" data-k="kit.032" disabled="">Disabled</button><a class="link-arrow" data-k="kit.033" href="#">Text link <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-arrow_right"></use></svg></a><button class="link-btn" data-k="kit.034" type="button">Link button</button></div>
+<div class="band" style="margin-top:var(--s5);padding:var(--s5);border-radius:var(--r-lg)"><div class="cta-row"><a class="btn btn--pri" data-k="kit.035" href="#">Primary on ink</a><a class="btn btn--sec" data-k="kit.036" href="#">Secondary on ink</a><a class="link-arrow" data-k="kit.037" href="#">Link on ink <svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-arrow_right"></use></svg></a></div></div>
+</div>
+</section>
+<section aria-labelledby="k-st" class="section" style="padding-top:0">
+<div class="wrap">
+<h2 class="h2" data-k="kit.038" id="k-st">Status &amp; evidence</h2>
+<div class="cta-row" style="margin-top:var(--s5)"><span class="status status--available" data-k="kit.039">Available in the alpha</span><span class="status status--dev" data-k="kit.040">In development</span><span class="status status--planned" data-k="kit.041">Planned</span><span class="status status--research" data-k="kit.042">Research</span><span class="status status--exp" data-k="kit.043">Experimental</span></div>
+<div class="grid3" style="margin-top:var(--s6)">
+<figure class="shot shot--sm" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="assets/screens/real/halo-home-paused-20261013-480.webp 480w, assets/screens/real/halo-home-paused-20261013-720.webp 720w, assets/screens/real/halo-home-paused-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo Home on Android. A paused task card says: Action dispatched; completion is unconfirmed. A Talk button sits at the bottom." decoding="async" height="2400" loading="lazy" src="assets/screens/real/halo-home-paused-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-verify"></use></svg><span data-k="kit.044"><b>Real capture</b> · Home · Android test build, 13 Oct 2026. Caption note goes here.</span></figcaption></figure>
+<figure class="shot" data-required="SR-00" style="--ratio:1080/2400"><div aria-label="Screenshot required: What the missing capture must show" class="slot" role="img"><span class="slot-id" data-k="kit.045">SR-00</span><b data-k="kit.046">Screenshot required</b><span data-k="kit.047">What the missing capture must show</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-info"></use></svg><span data-k="kit.048"><b>Screenshot required</b> · from the current Android build</span></figcaption></figure>
+<ul class="outcomes" style="grid-template-columns:1fr;margin-top:0">
+<li class="outcome o-proposed"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-task"></use></svg><span><b data-k="kit.049">Proposed</b><span>Nothing has happened.</span></span></li>
+<li class="outcome o-confirmed"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-check"></use></svg><span><b data-k="kit.050">Confirmed</b><span>Checked and worked.</span></span></li>
+<li class="outcome o-failed"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-failure"></use></svg><span><b data-k="kit.051">Failed</b><span>One clear next step.</span></span></li>
+<li class="outcome o-unverified"><svg aria-hidden="true" class="ic" focusable="false"><use href="assets/brand/icons.svg#i-unverified"></use></svg><span><b data-k="kit.052">Not verified</b><span>Sent, result unknown.</span></span></li>
+</ul>
+</div>
+</div>
+</section>
+<section aria-labelledby="k-ring" class="band section">
+<div class="wrap">
+<h2 class="h2" data-k="kit.053" id="k-ring">Open ring — presence</h2>
+<p class="lede" data-k="kit.054" style="margin-top:var(--s4)">Shows a real state only. Sizes: 56 (step), 72 (state card), 64 (release card), 18rem (page hero). Lottie plays once per event; the SVG still is the reduced-motion and no-JS state.</p>
+<ul class="vstates" style="margin-top:var(--s5)">
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="assets/brand/orb/lottie/halo_orb_idle.json"><img alt="" decoding="async" height="240" loading="lazy" src="assets/brand/orb/svg/halo_orb_idle.svg" width="240"/></span><b data-k="kit.055">idle</b><span>default · logo frame</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="assets/brand/orb/lottie/halo_orb_approval_required.json"><img alt="" decoding="async" height="240" loading="lazy" src="assets/brand/orb/svg/halo_orb_approval_required.svg" width="240"/></span><b data-k="kit.056">approval_required</b><span>needs your OK</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="assets/brand/orb/lottie/halo_orb_acting.json"><img alt="" decoding="async" height="240" loading="lazy" src="assets/brand/orb/svg/halo_orb_acting.svg" width="240"/></span><b data-k="kit.057">acting</b><span>approved work running</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="assets/brand/orb/lottie/halo_orb_waiting.json"><img alt="" decoding="async" height="240" loading="lazy" src="assets/brand/orb/svg/halo_orb_waiting.svg" width="240"/></span><b data-k="kit.058">waiting</b><span>sent · not verified</span></li>
+</ul>
+</div>
+</section>
+<section aria-labelledby="k-form" class="section">
+<div class="wrap">
+<h2 class="h2" data-k="kit.059" id="k-form">Inputs</h2>
+<form class="form" onsubmit="return false">
+<fieldset><legend data-k="kit.060">Field group</legend><div class="fgrid">
+<label data-k="kit.061">Text field (optional)<input/></label>
+<label data-k="kit.062">Select<select><option>Option one</option></select></label>
+<label class="wide" data-k="kit.063">Text area (required)<textarea rows="3"></textarea></label>
+</div></fieldset>
+</form>
+<ol class="checklist"><li><label><input checked="" type="checkbox"/><span><strong data-k="kit.064">Checklist item <small>01 · AREA</small></strong><small data-k="kit.065">Helper text explains what to try and what to expect.</small></span></label></li></ol>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">A personal assistant that starts on Android. Your assistant, your devices, your choice.</p></div>
+<div><h2 data-k="footer.002">Product</h2><ul><li><a data-k="footer.003" href="how-it-works.html">How Halo works</a></li><li><a data-k="footer.004" href="workspace.html">Notes, Canvas &amp; Study</a></li><li><a data-k="footer.005" href="voice.html">Voice</a></li><li><a data-k="footer.006" href="kids.html">Kids Mode</a></li><li><a data-k="footer.007" href="your-ai.html">Your AI</a></li><li><a data-k="footer.008" href="devices.html">Devices</a></li></ul></div>
+<div><h2 data-k="footer.009">Trust</h2><ul><li><a data-k="footer.010" href="privacy.html">Privacy &amp; price</a></li><li><a data-k="footer.011" href="status.html">What’s real today</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Engineering status</a></li><li><a data-k="footer.013" href="design.html">Presence &amp; brand</a></li></ul></div>
+<div><h2 data-k="footer.014">Build &amp; test</h2><ul><li><a data-k="footer.015" href="alpha.html">Try the alpha</a></li><li><a data-k="footer.016" href="developers.html">Developers</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo for Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">This website</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">No cookies, analytics or tracking on this website. Your theme and checklist choices stay in your browser.</span>
+<div aria-label="Colour theme" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">System</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Light</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Dark</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>
