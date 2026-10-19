@@ -125,11 +125,10 @@
   }
   /* Background tabs: freeze every animation */
   document.addEventListener('visibilitychange', function () {
-    if (!window.lottie) return;
     if (document.hidden) {
-      window.lottie.freeze();
+      if (window.lottie) window.lottie.freeze();
       document.dispatchEvent(new Event('halo:motion-pause'));
-    } else if (!reduce.matches) window.lottie.unfreeze();
+    } else if (!reduce.matches && window.lottie) window.lottie.unfreeze();
   });
 
   /* System theme and runtime accessibility changes must never leave an
