@@ -156,3 +156,12 @@ Contract: one play per event · no permanent loops · paused off-screen and in b
 - `halo_honest_status` — Replaced by the static outcome legend; success only appears for Confirmed
 - `4 video shorts + posters` — Built from design references — removed
 - `assets/photos/* (7 scenes)` — Generated imagery — removed
+## Implementation follow-up · motion hardening (2026-10-20)
+
+- Visibility return resumes unfinished Lottie only while visible; finished animations do not replay automatically.
+- System theme changes update themed stills; toggling reduced motion destroys active animation and retains semantic copy.
+- Hidden tabs cancel demonstration playback and stop global Lottie; no background journey auto-advance.
+- Voice preview has an explicit Stop preview control, and stops cleanly when page becomes hidden.
+- Canvas Keep and the final Study ladder step use authentic, event-triggered Halo FX JSON and SVG, not generated graphics. Discard is intentionally not a success effect.
+- Standard section reveals activate only with JavaScript, IntersectionObserver and motion allowed; no-JS and reduced-motion retain visible content.
+- Motion remains a website demo, not evidence the Android application has completed an action.

@@ -66,7 +66,7 @@
   }
   function mount(r, opts) {
     opts = opts || {};
-    if (reduce.matches || !window.lottie) return null;
+    if (reduce.matches || document.hidden || !window.lottie) return null;
     var src = lottieSrc(r); if (!src) return null;
     if (r._anim) r._anim.destroy();
     var box = $('.ring-lottie', r);
@@ -74,11 +74,13 @@
     var a = window.lottie.loadAnimation({ container: box, renderer: 'svg', loop: false, autoplay: false, path: src,
       rendererSettings: { preserveAspectRatio: 'xMidYMid meet', progressiveLoad: true } });
     r._anim = a;
+    r._finished = false; r._suspended = false;
     a.addEventListener('DOMLoaded', function () {
       r.classList.add('is-live');
       if (opts.segment) a.playSegments(opts.segment, true); else a.goToAndPlay(0, true);
     });
     a.addEventListener('complete', function () {
+      r._finished = true;
       if (opts.loops && (r._loops = (r._loops || 0) + 1) < opts.loops && r.classList.contains('is-on')) { a.goToAndPlay(0, true); return; }
       r._loops = 0;
       if (opts.thenStill) { r.classList.remove('is-live'); }   /* hand back to the exact static logo frame */
@@ -90,8 +92,12 @@
   var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
     entries.forEach(function (en) {
       var r = en.target;
-      if (en.isIntersecting && !r._played) { r._played = true; mount(r, { thenStill: r.hasAttribute('data-then-still') }); }
-      if (!en.isIntersecting && r._anim) r._anim.pause();
+      if (en.isIntersecting) {
+        if (!r._played) { r._played = true; mount(r, { thenStill: r.hasAttribute('data-then-still') }); }
+        else if (r._suspended && r._anim && !r._finished && !reduce.matches && !document.hidden) {
+          r._anim.play(); r._suspended = false;
+        }
+      } else if (r._anim && !r._finished) { r._anim.pause(); r._suspended = true; }
     });
   }, { threshold: .4 }) : null;
   $$('.ring[data-play="view"]').forEach(function (r) { swapStill(r); if (io) io.observe(r); });
@@ -109,8 +115,56 @@
   /* Background tabs: freeze every animation */
   document.addEventListener('visibilitychange', function () {
     if (!window.lottie) return;
-    if (document.hidden) window.lottie.freeze(); else window.lottie.unfreeze();
+    if (document.hidden) {
+      window.lottie.freeze();
+      document.dispatchEvent(new Event('halo:motion-pause'));
+    } else if (!reduce.matches) window.lottie.unfreeze();
   });
+
+  /* System theme and runtime accessibility changes must never leave an
+     invisible old-theme animation running behind the static fallback. */
+  var scheme = window.matchMedia('(prefers-color-scheme: dark)');
+  if (scheme.addEventListener) scheme.addEventListener('change', function () {
+    if (currentMode() === 'system') setTheme('system');
+  });
+  function stopForReducedMotion() {
+    if (!reduce.matches) return;
+    $('.ring').forEach(function (r) {
+      if (r._anim) { r._anim.destroy(); r._anim = null; }
+      r._suspended = false;
+      r.classList.remove('is-live');
+    });
+    document.dispatchEvent(new Event('halo:motion-pause'));
+  }
+  if (reduce.addEventListener) reduce.addEventListener('change', stopForReducedMotion);
+
+  /* Section reveals are progressive enhancement only: the real content stays
+     readable without JS and with reduced motion. */
+  if ('IntersectionObserver' in window && !reduce.matches) {
+    $('.section > .wrap, .hero-copy, .hero-stage').forEach(function (el) { el.classList.add('reveal'); });
+  }
+
+  /* A small, genuine brand asset is used for completed illustrative steps.
+     A draft Discard never plays the success animation. */
+  function microFx(host, name, still) {
+    if (reduce.matches || document.hidden || !window.lottie || !host) return;
+    var old = $('.micro-fx', host);
+    if (old) { if (old._anim) old._anim.destroy(); old.remove(); }
+    var el = document.createElement('span');
+    el.className = 'ring micro-fx';
+    el.setAttribute('aria-hidden', 'true');
+    el.setAttribute('data-themed', '');
+    el.setAttribute('data-lottie', 'assets/brand/fx/lottie/halo_fx_' + name + '_{theme}.json');
+    var img = document.createElement('img');
+    img.setAttribute('alt', '');
+    img.setAttribute('width', '96'); img.setAttribute('height', '96');
+    img.setAttribute('data-src-light', 'assets/brand/fx/svg/' + still + '_light.svg');
+    img.setAttribute('data-src-dark', 'assets/brand/fx/svg/' + still + '_dark.svg');
+    el.appendChild(img);
+    host.appendChild(el);
+    swapStill(el);
+    mount(el, { thenStill: true });
+  }
 
   /* ---------- journey stepper ---------- */
   $$('[data-journey]').forEach(function (j) {
@@ -133,22 +187,36 @@
       timer = setInterval(function () { if (cur >= btns.length - 1) { stop(); playBtn.focus(); return; } go(cur + 1); }, reduce.matches ? 3200 : 2600);
     });
     if (stopBtn) stopBtn.addEventListener('click', function () { stop(); playBtn.focus(); });
+    document.addEventListener('halo:motion-pause', stop);
     go(0);
   });
 
   /* ---------- voice states example ---------- */
   $$('[data-vstates]').forEach(function (w) {
-    var list = $('.vstates', w), items = $$('.vstate', w), btn = $('[data-vplay]', w), live = $('[data-vlive]', w), t = null;
+    var list = $('.vstates', w), items = $('.vstate', w), btn = $('[data-vplay]', w), live = $('[data-vlive]', w), t = null;
     if (!btn) return;
+    var stopVoice = document.createElement('button');
+    stopVoice.type = 'button'; stopVoice.className = 'btn btn--sec btn--sm';
+    stopVoice.textContent = 'Stop preview'; stopVoice.hidden = true;
+    stopVoice.setAttribute('data-voice-stop', '');
+    btn.insertAdjacentElement('afterend', stopVoice);
+    function halt() {
+      if (t !== null) { clearTimeout(t); t = null; }
+      items.forEach(function (it) { it.classList.remove('is-on'); var ring = $('.ring', it); if (ring && ring._anim) ring._anim.pause(); });
+      list.classList.remove('is-playing'); btn.disabled = false; stopVoice.hidden = true;
+      if (live) live.textContent = '';
+    }
+    stopVoice.addEventListener('click', function () { halt(); btn.focus(); });
+    document.addEventListener('halo:motion-pause', halt);
     btn.addEventListener('click', function () {
-      var i = 0; list.classList.add('is-playing'); btn.disabled = true;
+      var i = 0; list.classList.add('is-playing'); btn.disabled = true; stopVoice.hidden = false;
       function step() {
         items.forEach(function (it, k) { it.classList.toggle('is-on', k === i); var r = $('.ring', it); if (r) r.classList.toggle('is-on', k === i); });
         var r = $('.ring', items[i]); if (r) mount(r, { loops: 2 });
         if (live) live.textContent = $('b', items[i]).textContent;
         i++;
         if (i < items.length) t = setTimeout(step, 2200);
-        else t = setTimeout(function () { list.classList.remove('is-playing'); btn.disabled = false; items.forEach(function (it) { it.classList.remove('is-on'); }); }, 2400);
+        else t = setTimeout(halt, 2400);
       }
       step();
     });
@@ -162,7 +230,7 @@
       rungs.forEach(function (r, k) { r.classList.toggle('is-reached', k <= i); r.classList.toggle('is-current', k === i); });
       if (live) live.textContent = $('b', rungs[i]).textContent;
       next.disabled = i >= rungs.length - 1;
-      var fx = $('.ring', w); if (fx && i === rungs.length - 1) mount(fx, {});
+      if (i === rungs.length - 1) microFx(w, 'learn_advance', 'halo_fx_learn_advance');
     }
     next.addEventListener('click', function () { if (i < rungs.length - 1) { i++; show(); } });
     reset.addEventListener('click', function () { i = 0; show(); });
@@ -181,9 +249,9 @@
       keep.hidden = discard.hidden = state !== 'draft'; reset.hidden = state === 'draft';
       st.textContent = msg;
     }
-    keep.addEventListener('click', function () { set('saved', 'Kept. The card is now part of your canvas.'); reset.focus(); });
+    keep.addEventListener('click', function () { set('saved', 'Kept. The card is now part of your canvas.'); microFx(w, 'apply_draft', 'halo_fx_apply_draft_applied'); reset.focus(); });
     discard.addEventListener('click', function () { set('discarded', 'Discarded. Your canvas is exactly as it was.'); reset.focus(); });
-    reset.addEventListener('click', function () { set('draft', ''); keep.focus(); });
+    reset.addEventListener('click', function () { set('draft', ''); var f = $('.micro-fx', w); if (f) { if (f._anim) f._anim.destroy(); f.remove(); } keep.focus(); });
   });
 
   /* ---------- one-time path draw (host diagram) ---------- */

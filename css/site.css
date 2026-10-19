@@ -440,3 +440,13 @@ details.plain summary{cursor:pointer;font-weight:700;min-height:var(--tap);displ
 .evidence-card--linux{max-width:none;aspect-ratio:4/3}
 @media(max-width:40rem){.evidence-card{aspect-ratio:auto;min-height:22rem;max-width:none}}
 @media(prefers-reduced-motion:reduce){.evidence-card{transition:none!important;animation:none!important}}
+
+/* Interaction-specific authentic Halo motion; sized containers prevent layout shift. */
+[data-draft],[data-ladder]{position:relative}
+.micro-fx{position:absolute;z-index:2;right:var(--s3);bottom:var(--s3);width:clamp(3.5rem,8vw,5rem);height:clamp(3.5rem,8vw,5rem);pointer-events:none}
+[data-ladder] .micro-fx{right:var(--s4);bottom:var(--s6)}
+[data-voice-stop]{margin-inline-start:var(--s3)}
+:root[data-ready] .section>.wrap.reveal,
+:root[data-ready] .hero-copy.reveal,
+:root[data-ready] .hero-stage.reveal{will-change:auto}
+@media(prefers-reduced-motion:reduce){.micro-fx{display:none}[data-ready] .section>.wrap.reveal{opacity:1;transform:none}}
