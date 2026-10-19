@@ -85,8 +85,8 @@ def main():
             (target / (page + '.html')).write_text(output, encoding='utf-8')
         print('Localized', len(PAGES), 'pages for', lang)
     (ROOT / 'js' / 'locale-data.js').write_text(
-        '/* HaloWeb localized content. */\\nwindow.HaloLocaleStrings = '
-        + json.dumps(catalogs, ensure_ascii=False, indent=2) + ';\\n',
+        '/* HaloWeb localized content. */\nwindow.HaloLocaleStrings = '
+        + json.dumps(catalogs, ensure_ascii=False, indent=2) + ';\n',
         encoding='utf-8')
 
 if __name__ == '__main__':
