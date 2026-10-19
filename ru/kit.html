@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>HaloWeb — компоненты и дизайн-токены</title>
+<meta content="Интерактивный дизайн-гайд сайта Halo: токены, шрифты, кнопки, статусы, подписи скриншотов, кольца, карточки и формы." name="description"/>
+<meta content="noindex" name="robots"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/ru/kit" rel="canonical"/>
+<link rel="alternate" hreflang="en" href="https://halo-web-blue.vercel.app/kit"><link rel="alternate" hreflang="lv" href="https://halo-web-blue.vercel.app/lv/kit"><link rel="alternate" hreflang="ru" href="https://halo-web-blue.vercel.app/ru/kit"><link rel="alternate" hreflang="x-default" href="https://halo-web-blue.vercel.app/kit">
+<meta content="website" property="og:type"/>
+<meta content="HaloWeb — компоненты и дизайн-токены" property="og:title"/>
+<meta content="Интерактивный дизайн-гайд сайта Halo: токены, шрифты, кнопки, статусы, подписи скриншотов, кольца, карточки и формы." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="/assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="/css/fonts.css" rel="stylesheet"/>
+<link href="/css/tokens.css" rel="stylesheet"/>
+<link href="/css/site.css" rel="stylesheet"/>
+<script defer="" src="/js/vendor/lottie_light.min.js"></script>
+<script defer="" src="/js/locale-data.js"></script>
+<script defer="" src="/js/i18n.js"></script>
+<script defer="" src="/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Главная Halo" class="brand" href="/ru/index.html"><img alt="" class="wm-l" height="80" src="/assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Главная навигация" class="nav">
+<details class="nav-product"><summary data-k="nav.001">Продукт <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="/ru/how-it-works.html">Как работает Halo<small>Спросите, подтвердите, проверьте результат</small></a>
+<a data-k="nav.003" href="/ru/workspace.html">Заметки, Canvas и Study<small>Ваше рабочее пространство с помощью Halo</small></a>
+<a data-k="nav.004" href="/ru/voice.html">Голос<small>Говорите, слушайте и читайте</small></a>
+<a data-k="nav.005" href="/ru/kids.html">Детский режим<small>Более заботливый Halo · в разработке</small></a>
+</div></details>
+<a data-k="nav.006" href="/ru/your-ai.html">Ваш ИИ</a>
+<a data-k="nav.007" href="/ru/devices.html">Устройства</a>
+<a data-k="nav.008" href="/ru/privacy.html">Приватность</a>
+<a data-k="nav.009" href="/ru/status.html">Статус</a>
+<a data-k="nav.010" href="/ru/developers.html">Разработчикам</a>
+</nav>
+<label class="locale-picker" hidden=""><span class="vh">Язык сайта</span><select id="site-language" aria-label="Язык сайта"><option value="en">EN</option><option value="lv">LV</option><option value="ru">RU</option></select></label>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="/ru/alpha.html">Попробовать альфу</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Меню</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Главная навигация">
+<a data-k="nav.013" href="/ru/index.html">Главная <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="/ru/how-it-works.html">Как работает Halo <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.015" href="/ru/workspace.html">Заметки, Canvas и Study <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.016" href="/ru/voice.html">Голос <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="/ru/kids.html">Детский режим <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="/ru/your-ai.html">Ваш ИИ <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="/ru/devices.html">Устройства <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="/ru/privacy.html">Приватность и цена <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="/ru/status.html">Что работает сейчас <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="/ru/developers.html">Разработчикам <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="/ru/alpha.html">Попробовать альфу для Android</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Исходный код на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="kit.001">Внутренний интерактивный дизайн-гайд · без ссылки в навигации</p>
+<h1 class="display" data-k="kit.002" style="margin-top:var(--s4)">Дизайн-кит</h1>
+<p class="lede" data-k="kit.003" style="margin-top:var(--s5)">Все компоненты сайта в реальных состояниях. Токены — в /css/tokens.css, компоненты — в /css/site.css. Чтобы посмотреть тёмную тему, переключите оформление внизу страницы.</p>
+</div>
+</section>
+<section aria-labelledby="k-col" class="section" style="padding-top:0">
+<div class="wrap">
+<h2 class="h2" data-k="kit.004" id="k-col">Цвет</h2>
+<div class="grid3" style="margin-top:var(--s5);grid-template-columns:repeat(auto-fill,minmax(11rem,1fr))">
+<div class="tile" style="background:#FAFAF4;color:#060330;border-color:#DCE1DC"><b data-k="kit.005">Кремовый</b><span class="mono" data-k="kit.006">#FAFAF4 · светлая страница</span></div>
+<div class="tile" style="background:#060330;color:#FAFAF4;border-color:#060330"><b data-k="kit.007">Ночной индиго</b><span class="mono" data-k="kit.008">#060330 · текст · тёмные блоки</span></div>
+<div class="tile" style="background:#0CF2BA;color:#060330;border-color:#0CF2BA"><b data-k="kit.009">Мятный Halo</b><span class="mono" data-k="kit.010">#0CF2BA · заливки, кольцо, фокус</span></div>
+<div class="tile" style="background:#047A5E;color:#FAFAF4;border-color:#047A5E"><b data-k="kit.011">Тёмная мята</b><span class="mono" data-k="kit.012">#047A5E · мятный текст на светлом · 5,1:1</span></div>
+<div class="tile" style="background:#4A4F63;color:#FAFAF4;border-color:#4A4F63"><b data-k="kit.013">Сланцевый</b><span class="mono" data-k="kit.014">#4A4F63 · 7,7:1 на кремовом</span></div>
+<div class="tile" style="background:#FF9F6B;color:#060330;border-color:#FF9F6B"><b data-k="kit.015">Абрикосовый рассвет</b><span class="mono" data-k="kit.016">#FF9F6B · только заливки · ≤5%</span></div>
+<div class="tile" style="background:#A84B12;color:#FAFAF4;border-color:#A84B12"><b data-k="kit.017">Тёмный абрикос</b><span class="mono" data-k="kit.018">#A84B12 · абрикосовый текст · 5,4:1</span></div>
+<div class="tile" style="background:#D64545;color:#060330;border-color:#D64545"><b data-k="kit.019">Угольный красный</b><span class="mono" data-k="kit.020">#D64545 · значки и крупный текст · Night Ink на нём 4,7:1</span></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="k-type" class="section" style="padding-top:0">
+<div class="wrap">
+<h2 class="h2" data-k="kit.021" id="k-type">Типографика</h2>
+<div class="stack" style="margin-top:var(--s5)">
+<p class="eyebrow" data-k="kit.022">Надзаголовок · 13 / 700 / +14% прописные</p>
+<p class="display" data-k="kit.023">Крупный заголовок · 40→76</p>
+<p class="h2" data-k="kit.024">Заголовок 2 · 30→48</p>
+<p class="h3" data-k="kit.025">Заголовок 3 · 20→26</p>
+<p class="lede" data-k="kit.026">Вступление · 17→21 · Atkinson Hyperlegible Next, межстрочный интервал 1,55, до 36 символов в строке.</p>
+<p data-k="kit.027">Основной текст · 16→18 · не меньше 16 px. Короткие предложения, одна мысль в каждом.</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="k-btn" class="section" style="padding-top:0">
+<div class="wrap">
+<h2 class="h2" data-k="kit.028" id="k-btn">Действия</h2>
+<div class="cta-row" style="margin-top:var(--s5)"><a class="btn btn--pri" data-k="kit.029" href="#">Основная <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a><a class="btn btn--sec" data-k="kit.030" href="#">Вторичная</a><a class="btn btn--pri btn--sm" data-k="kit.031" href="#">Маленькая</a><button class="btn btn--pri" data-k="kit.032" disabled="">Отключена</button><a class="link-arrow" data-k="kit.033" href="#">Текстовая ссылка <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a><button class="link-btn" data-k="kit.034" type="button">Кнопка-ссылка</button></div>
+<div class="band" style="margin-top:var(--s5);padding:var(--s5);border-radius:var(--r-lg)"><div class="cta-row"><a class="btn btn--pri" data-k="kit.035" href="#">Основная на тёмном фоне</a><a class="btn btn--sec" data-k="kit.036" href="#">Вторичная на тёмном фоне</a><a class="link-arrow" data-k="kit.037" href="#">Ссылка на тёмном фоне <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></div></div>
+</div>
+</section>
+<section aria-labelledby="k-st" class="section" style="padding-top:0">
+<div class="wrap">
+<h2 class="h2" data-k="kit.038" id="k-st">Статусы и подтверждения</h2>
+<div class="cta-row" style="margin-top:var(--s5)"><span class="status status--available" data-k="kit.039">Доступно в альфа-версии</span><span class="status status--dev" data-k="kit.040">В разработке</span><span class="status status--planned" data-k="kit.041">Запланировано</span><span class="status status--research" data-k="kit.042">Исследование</span><span class="status status--exp" data-k="kit.043">Экспериментально</span></div>
+<div class="grid3" style="margin-top:var(--s6)">
+<figure class="shot shot--sm" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-home-paused-20261013-480.webp 480w, /assets/screens/real/halo-home-paused-20261013-720.webp 720w, /assets/screens/real/halo-home-paused-20261013-1080.webp 1080w" type="image/webp"/><img alt="Главная Halo на Android. Приостановленная задача: действие отправлено, завершение не подтверждено. Внизу кнопка «Говорить»." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-home-paused-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="kit.044"><b>Настоящий снимок экрана</b> · Главная · тестовая сборка Android, 13.10.2026. Здесь будет подпись.</span></figcaption></figure>
+<figure class="shot" data-required="SR-00" style="--ratio:1080/2400"><div aria-label="Нужен снимок экрана: что требуется показать" class="slot" role="img"><span class="slot-id" data-k="kit.045">SR-00</span><b data-k="kit.046">Нужен снимок экрана</b><span data-k="kit.047">Что должно быть видно на отсутствующем снимке</span></div><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-info"></use></svg><span data-k="kit.048"><b>Нужен снимок экрана</b> · из актуальной сборки Android</span></figcaption></figure>
+<ul class="outcomes" style="grid-template-columns:1fr;margin-top:0">
+<li class="outcome o-proposed"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-task"></use></svg><span><b data-k="kit.049">Предложено</b><span>Ничего ещё не произошло.</span></span></li>
+<li class="outcome o-confirmed"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-check"></use></svg><span><b data-k="kit.050">Подтверждён результат</b><span>Проверено и работает.</span></span></li>
+<li class="outcome o-failed"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-failure"></use></svg><span><b data-k="kit.051">Ошибка</b><span>Один понятный следующий шаг.</span></span></li>
+<li class="outcome o-unverified"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-unverified"></use></svg><span><b data-k="kit.052">Результат не проверен</b><span>Отправлено, результат неизвестен.</span></span></li>
+</ul>
+</div>
+</div>
+</section>
+<section aria-labelledby="k-ring" class="band section">
+<div class="wrap">
+<h2 class="h2" data-k="kit.053" id="k-ring">Открытое кольцо — состояния</h2>
+<p class="lede" data-k="kit.054" style="margin-top:var(--s4)">Показывает только реальное состояние. Размеры: 56 (шаг), 72 (карточка состояния), 64 (карточка релиза), 18rem (герой страницы). Lottie запускается один раз на событие; статичный SVG используется при уменьшенном движении или без JavaScript.</p>
+<ul class="vstates" style="margin-top:var(--s5)">
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_idle.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_idle.svg" width="240"/></span><b data-k="kit.055">ожидание</b><span>по умолчанию · кадр логотипа</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_approval_required.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_approval_required.svg" width="240"/></span><b data-k="kit.056">нужно_подтверждение</b><span>нужно ваше подтверждение</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_acting.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_acting.svg" width="240"/></span><b data-k="kit.057">выполнение</b><span>выполняется подтверждённая задача</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_waiting.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_waiting.svg" width="240"/></span><b data-k="kit.058">ожидание_результата</b><span>отправлено · не проверено</span></li>
+</ul>
+</div>
+</section>
+<section aria-labelledby="k-form" class="section">
+<div class="wrap">
+<h2 class="h2" data-k="kit.059" id="k-form">Поля ввода</h2>
+<form class="form" onsubmit="return false">
+<fieldset><legend data-k="kit.060">Группа полей</legend><div class="fgrid">
+<label data-k="kit.061">Текстовое поле (необязательно)<input/></label>
+<label data-k="kit.062">Список выбора<select><option>Первый вариант</option></select></label>
+<label class="wide" data-k="kit.063">Текстовая область (обязательно)<textarea rows="3"></textarea></label>
+</div></fieldset>
+</form>
+<ol class="checklist"><li><label><input checked="" type="checkbox"/><span><strong data-k="kit.064">Пункт чек-листа <small>01 · РАЗДЕЛ</small></strong><small data-k="kit.065">Подсказка объясняет, что попробовать и какого результата ожидать.</small></span></label></li></ol>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">Персональный ассистент, начинающийся с Android. Ваш ассистент, ваши устройства, ваш выбор.</p></div>
+<div><h2 data-k="footer.002">Продукт</h2><ul><li><a data-k="footer.003" href="/ru/how-it-works.html">Как работает Halo</a></li><li><a data-k="footer.004" href="/ru/workspace.html">Заметки, Canvas и Study</a></li><li><a data-k="footer.005" href="/ru/voice.html">Голос</a></li><li><a data-k="footer.006" href="/ru/kids.html">Детский режим</a></li><li><a data-k="footer.007" href="/ru/your-ai.html">Ваш ИИ</a></li><li><a data-k="footer.008" href="/ru/devices.html">Устройства</a></li></ul></div>
+<div><h2 data-k="footer.009">Доверие</h2><ul><li><a data-k="footer.010" href="/ru/privacy.html">Приватность и цена</a></li><li><a data-k="footer.011" href="/ru/status.html">Что работает сейчас</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Состояние разработки</a></li><li><a data-k="footer.013" href="/ru/design.html">Состояния и стиль</a></li></ul></div>
+<div><h2 data-k="footer.014">Разработка и тестирование</h2><ul><li><a data-k="footer.015" href="/ru/alpha.html">Попробовать альфу</a></li><li><a data-k="footer.016" href="/ru/developers.html">Разработчикам</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo для Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Этот сайт</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">На этом сайте нет cookie, аналитики или отслеживания. Выбор темы и отметки тестов остаются в вашем браузере.</span>
+<div aria-label="Цветовая тема" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">Системная</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Светлая</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Тёмная</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

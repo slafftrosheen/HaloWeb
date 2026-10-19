@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://halo-web-blue.vercel.app/</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/how-it-works</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/how-it-works</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/how-it-works</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/workspace</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/workspace</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/workspace</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/voice</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/voice</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/voice</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/kids</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/kids</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/kids</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/your-ai</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/your-ai</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/your-ai</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/devices</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/devices</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/devices</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/privacy</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/privacy</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/privacy</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/status</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/status</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/status</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/developers</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/developers</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/developers</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/alpha</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/alpha</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/alpha</loc></url>
   <url><loc>https://halo-web-blue.vercel.app/design</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/lv/design</loc></url>
+  <url><loc>https://halo-web-blue.vercel.app/ru/design</loc></url>
 </urlset>

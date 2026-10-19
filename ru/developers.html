@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Разработчикам — архитектура Halo и репозитории</title>
+<meta content="Как устроен Halo: переносимая среда исполнения, платформенные адаптеры, маршрутизация ИИ, локальные вычисления, разрешения, инструменты, заметки и память. Репозитории и участие в разработке." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/ru/developers" rel="canonical"/>
+<link rel="alternate" hreflang="en" href="https://halo-web-blue.vercel.app/developers"><link rel="alternate" hreflang="lv" href="https://halo-web-blue.vercel.app/lv/developers"><link rel="alternate" hreflang="ru" href="https://halo-web-blue.vercel.app/ru/developers"><link rel="alternate" hreflang="x-default" href="https://halo-web-blue.vercel.app/developers">
+<meta content="website" property="og:type"/>
+<meta content="Разработчикам — архитектура Halo и репозитории" property="og:title"/>
+<meta content="Как устроен Halo: переносимая среда исполнения, платформенные адаптеры, маршрутизация ИИ, локальные вычисления, разрешения, инструменты, заметки и память. Репозитории и участие в разработке." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="/assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="/css/fonts.css" rel="stylesheet"/>
+<link href="/css/tokens.css" rel="stylesheet"/>
+<link href="/css/site.css" rel="stylesheet"/>
+<script defer="" src="/js/vendor/lottie_light.min.js"></script>
+<script defer="" src="/js/locale-data.js"></script>
+<script defer="" src="/js/i18n.js"></script>
+<script defer="" src="/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Главная Halo" class="brand" href="/ru/index.html"><img alt="" class="wm-l" height="80" src="/assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Главная навигация" class="nav">
+<details class="nav-product"><summary data-k="nav.001">Продукт <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="/ru/how-it-works.html">Как работает Halo<small>Спросите, подтвердите, проверьте результат</small></a>
+<a data-k="nav.003" href="/ru/workspace.html">Заметки, Canvas и Study<small>Ваше рабочее пространство с помощью Halo</small></a>
+<a data-k="nav.004" href="/ru/voice.html">Голос<small>Говорите, слушайте и читайте</small></a>
+<a data-k="nav.005" href="/ru/kids.html">Детский режим<small>Более заботливый Halo · в разработке</small></a>
+</div></details>
+<a data-k="nav.006" href="/ru/your-ai.html">Ваш ИИ</a>
+<a data-k="nav.007" href="/ru/devices.html">Устройства</a>
+<a data-k="nav.008" href="/ru/privacy.html">Приватность</a>
+<a data-k="nav.009" href="/ru/status.html">Статус</a>
+<a aria-current="page" data-k="nav.010" href="/ru/developers.html">Разработчикам</a>
+</nav>
+<label class="locale-picker" hidden=""><span class="vh">Язык сайта</span><select id="site-language" aria-label="Язык сайта"><option value="en">EN</option><option value="lv">LV</option><option value="ru">RU</option></select></label>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="/ru/alpha.html">Попробовать альфу</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Меню</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Главная навигация">
+<a data-k="nav.013" href="/ru/index.html">Главная <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="/ru/how-it-works.html">Как работает Halo <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.015" href="/ru/workspace.html">Заметки, Canvas и Study <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.016" href="/ru/voice.html">Голос <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="/ru/kids.html">Детский режим <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="/ru/your-ai.html">Ваш ИИ <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="/ru/devices.html">Устройства <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="/ru/privacy.html">Приватность и цена <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="/ru/status.html">Что работает сейчас <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a aria-current="page" data-k="nav.022" href="/ru/developers.html">Разработчикам <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="/ru/alpha.html">Попробовать альфу для Android</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Исходный код на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="developers.001"><a href="/ru/index.html">Главная</a> / Developers</p>
+<h1 class="display" data-k="developers.002" style="margin-top:var(--s4)">Разрабатывается открыто.</h1>
+<p class="lede" data-k="developers.003" style="margin-top:var(--s5)">Halo — переносимая среда исполнения с отдельными хостами для платформ. Первый — Android, следующий — Linux. Здесь объясняется архитектура и с чего начать.</p>
+</div>
+</section>
+<section aria-labelledby="a-title" class="band section">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="developers.004">Архитектура</span><h2 class="h2" data-k="developers.005" id="a-title">Одно ядро, множество платформ.</h2></div>
+<div class="arch" role="list">
+<div class="layer" role="listitem"><b data-k="developers.006">Платформы</b><div class="chips"><span class="status status--available" data-k="developers.007">Android</span><span class="status status--dev" data-k="developers.008">Linux</span><span class="status status--planned" data-k="developers.009">Windows</span></div></div>
+<div class="layer" role="listitem"><b data-k="developers.010">Адаптеры платформ</b><span data-k="developers.011">Сервисы платформы: аудио, хранилище, разрешения, действия с телефоном, устройства.</span></div>
+<div class="layer" role="listitem"><b data-k="developers.012">Среда исполнения</b><span data-k="developers.013">Диалоги, подтверждаемые инструменты, честные статусы, восстановление после сбоев и надёжные записи запусков агента.</span></div>
+<div class="layer" role="listitem"><b data-k="developers.014">Рабочее пространство и память</b><span data-k="developers.015">Блокнот, Canvas, Study и разрешённая пользователем память с локальным поиском.</span></div>
+<div class="layer" role="listitem"><b data-k="developers.016">Маршрутизация моделей</b><span data-k="developers.017">По отдельным задачам: локальные модели (LiteRT), собственный OpenAI-совместимый сервер или настроенный облачный провайдер.</span></div>
+<div class="layer" role="listitem"><b data-k="developers.018">Узлы сети</b><span data-k="developers.019">Приватная идентификация, сопряжение и синхронизация ваших устройств.</span><span class="status status--planned" data-k="developers.020">Запланировано</span></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="r-title" class="section">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="developers.021">Репозитории</span><h2 class="h2" data-k="developers.022" id="r-title">Три репозитория.</h2></div>
+<div class="grid3" style="margin-top:var(--s6)">
+<article class="tile repo"><span class="mono" data-k="developers.023">slafftrosheen/Halo</span><h3 data-k="developers.024">Приложение Android</h3><p data-k="developers.025">Kotlin и Jetpack Compose. Ассистент в альфа-версии.</p><span class="status status--available" data-k="developers.026">Предварительная альфа</span><a class="link-arrow" data-k="developers.027" href="https://github.com/slafftrosheen/Halo" rel="noopener">Открыть на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a></article>
+<article class="tile repo"><span class="mono" data-k="developers.028">slafftrosheen/HaloLinux</span><h3 data-k="developers.029">Узел Linux</h3><p data-k="developers.030">Фоновый хост ARM64 и x86-64: CLI, сервис, локальное хранилище.</p><span class="status status--dev" data-k="developers.031">В разработке</span><a class="link-arrow" data-k="developers.032" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">Открыть на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a></article>
+<article class="tile repo"><span class="mono" data-k="developers.033">slafftrosheen/HaloWeb</span><h3 data-k="developers.034">Этот сайт</h3><p data-k="developers.035">Статический HTML, CSS и JavaScript. Без сборки и отслеживания.</p><span class="status status--available" data-k="developers.036">Опубликовано</span><a class="link-arrow" data-k="developers.037" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Открыть на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a></article>
+</div>
+<p class="callout" data-k="developers.038" style="margin-top:var(--s5);max-width:52rem">В репозиториях пока нет файлов лицензий. До их добавления уточните условия повторного использования кода.</p>
+</div>
+</section>
+<section aria-labelledby="c-title" class="section" style="padding-top:0">
+<div class="wrap grid2">
+<div class="head">
+<span class="eyebrow" data-k="developers.039">Участие в разработке</span>
+<h2 class="h2" data-k="developers.040" id="c-title">Отчёты об ошибках тоже помогают.</h2>
+<p class="lede" data-k="developers.041">Сейчас самая полезная помощь — внимательное тестирование на реальных телефонах: что вы попробовали, чего ожидали и что произошло.</p>
+<div class="cta-row" style="margin-top:var(--s5)"><a class="btn btn--pri" data-k="developers.042" href="https://github.com/slafftrosheen/Halo/issues/new/choose" rel="noopener">Сообщить на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a><a class="btn btn--sec" data-k="developers.043" href="/ru/alpha.html">Набор для тестирования</a></div>
+</div>
+<div class="tile">
+<h3 data-k="developers.044">Перед созданием issue</h3>
+<p data-k="developers.045">Укажите версии Halo и Android, экран, шаги и результат. Никогда не публикуйте API-ключи, личные файлы, идентификаторы и приватные журналы.</p>
+<p data-k="developers.046">Перед изменением кода прочтите технические заметки в <span class="mono">docs/</span>  — там указано, что испытано, а что ещё нет.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">Персональный ассистент, начинающийся с Android. Ваш ассистент, ваши устройства, ваш выбор.</p></div>
+<div><h2 data-k="footer.002">Продукт</h2><ul><li><a data-k="footer.003" href="/ru/how-it-works.html">Как работает Halo</a></li><li><a data-k="footer.004" href="/ru/workspace.html">Заметки, Canvas и Study</a></li><li><a data-k="footer.005" href="/ru/voice.html">Голос</a></li><li><a data-k="footer.006" href="/ru/kids.html">Детский режим</a></li><li><a data-k="footer.007" href="/ru/your-ai.html">Ваш ИИ</a></li><li><a data-k="footer.008" href="/ru/devices.html">Устройства</a></li></ul></div>
+<div><h2 data-k="footer.009">Доверие</h2><ul><li><a data-k="footer.010" href="/ru/privacy.html">Приватность и цена</a></li><li><a data-k="footer.011" href="/ru/status.html">Что работает сейчас</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Состояние разработки</a></li><li><a data-k="footer.013" href="/ru/design.html">Состояния и стиль</a></li></ul></div>
+<div><h2 data-k="footer.014">Разработка и тестирование</h2><ul><li><a data-k="footer.015" href="/ru/alpha.html">Попробовать альфу</a></li><li><a data-k="footer.016" href="/ru/developers.html">Разработчикам</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo для Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Этот сайт</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">На этом сайте нет cookie, аналитики или отслеживания. Выбор темы и отметки тестов остаются в вашем браузере.</span>
+<div aria-label="Цветовая тема" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">Системная</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Светлая</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Тёмная</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>
