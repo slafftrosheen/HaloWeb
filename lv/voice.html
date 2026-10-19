@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="lv">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Balss — runājiet, klausieties un lasiet ar Halo</title>
+<meta content="Balss Halo: runājiet rakstīšanas vietā, pārbaudiet diktātu, klausieties atbildes un piezīmes un pārtrauciet atskaņošanu. Vietējās balsis pēc instalēšanas; atbalsts atkarīgs no tālruņa un valodas." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/lv/voice" rel="canonical"/>
+<link rel="alternate" hreflang="en" href="https://halo-web-blue.vercel.app/voice"><link rel="alternate" hreflang="lv" href="https://halo-web-blue.vercel.app/lv/voice"><link rel="alternate" hreflang="ru" href="https://halo-web-blue.vercel.app/ru/voice"><link rel="alternate" hreflang="x-default" href="https://halo-web-blue.vercel.app/voice">
+<meta content="website" property="og:type"/>
+<meta content="Balss — runājiet, klausieties un lasiet ar Halo" property="og:title"/>
+<meta content="Balss Halo: runājiet rakstīšanas vietā, pārbaudiet diktātu, klausieties atbildes un piezīmes un pārtrauciet atskaņošanu. Vietējās balsis pēc instalēšanas; atbalsts atkarīgs no tālruņa un valodas." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="/assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="/css/fonts.css" rel="stylesheet"/>
+<link href="/css/tokens.css" rel="stylesheet"/>
+<link href="/css/site.css" rel="stylesheet"/>
+<script defer="" src="/js/vendor/lottie_light.min.js"></script>
+<script defer="" src="/js/locale-data.js"></script>
+<script defer="" src="/js/i18n.js"></script>
+<script defer="" src="/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Pāriet uz saturu</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Halo sākumlapa" class="brand" href="/lv/index.html"><img alt="" class="wm-l" height="80" src="/assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Galvenā navigācija" class="nav">
+<details class="nav-product" data-current=""><summary data-k="nav.001">Produkts <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="/lv/how-it-works.html">Kā darbojas Halo<small>Jautājiet, apstipriniet, pārbaudiet rezultātu</small></a>
+<a data-k="nav.003" href="/lv/workspace.html">Piezīmes, Canvas un Study<small>Jūsu darba vide ar Halo palīdzību</small></a>
+<a aria-current="page" data-k="nav.004" href="/lv/voice.html">Balss<small>Runājiet, klausieties un lasiet</small></a>
+<a data-k="nav.005" href="/lv/kids.html">Bērnu režīms<small>Saudzīgāks Halo · izstrādē</small></a>
+</div></details>
+<a data-k="nav.006" href="/lv/your-ai.html">Jūsu MI</a>
+<a data-k="nav.007" href="/lv/devices.html">Ierīces</a>
+<a data-k="nav.008" href="/lv/privacy.html">Privātums</a>
+<a data-k="nav.009" href="/lv/status.html">Statuss</a>
+<a data-k="nav.010" href="/lv/developers.html">Izstrādātājiem</a>
+</nav>
+<label class="locale-picker" hidden=""><span class="vh">Vietnes valoda</span><select id="site-language" aria-label="Vietnes valoda"><option value="en">EN</option><option value="lv">LV</option><option value="ru">RU</option></select></label>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="/lv/alpha.html">Izmēģināt alfa versiju</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Izvēlne</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Galvenā navigācija">
+<a data-k="nav.013" href="/lv/index.html">Sākums <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="/lv/how-it-works.html">Kā darbojas Halo <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.015" href="/lv/workspace.html">Piezīmes, Canvas un Study <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a aria-current="page" class="sub" data-k="nav.016" href="/lv/voice.html">Balss <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="/lv/kids.html">Bērnu režīms <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="/lv/your-ai.html">Jūsu MI <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="/lv/devices.html">Ierīces <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="/lv/privacy.html">Privātums un cena <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="/lv/status.html">Kas darbojas šobrīd <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="/lv/developers.html">Izstrādātājiem <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="/lv/alpha.html">Izmēģināt Android alfa versiju</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Pirmkods GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="voice.001"><a href="/lv/index.html">Sākums</a> / Voice</p>
+<h1 class="display" data-k="voice.002" style="margin-top:var(--s4)">Runājiet, klausieties, lasiet kopā ar Halo.</h1>
+<p class="lede" data-k="voice.003" style="margin-top:var(--s5)">Balss Halo nav atsevišķs režīms. Var runāt un klausīties sākumlapā, piezīmēs, Canvas un Study — visur, kur tas ir ērtāk nekā rakstīt vai lasīt.</p>
+</div>
+</section>
+<section aria-labelledby="vs-title" class="band section" data-vstates="">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.004">Ko rāda Halo gredzens</span><h2 class="h2" data-k="voice.005" id="vs-title">Vienmēr redzams, ko Halo dara ar balsi.</h2></div>
+<ul class="vstates">
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_listening.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_listening.svg" width="240"/></span><b data-k="voice.006">Klausās</b><span>Mikrofons ir ieslēgts, un Halo jūs dzird. Pirms ieslēgšanas nekas netiek ierakstīts.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_capturing_voice.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_capturing_voice.svg" width="240"/></span><b data-k="voice.007">Pieraksta runu</b><span>Vārdi parādās ekrānā runāšanas laikā, lai jūs varētu pamanīt kļūdas.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_speaking.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_speaking.svg" width="240"/></span><b data-k="voice.008">Runā</b><span>Halo skaļi nolasa savu atbildi vai jūsu piezīmi.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_stopped.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_stopped.svg" width="240"/></span><b data-k="voice.009">Apturēts</b><span>Nospiediet «Apturēt» vai sāciet runāt — Halo nekavējoties apstāsies.</span></li>
+</ul>
+<div class="cta-row" style="margin-top:var(--s5)"><button class="btn btn--sec btn--sm" data-k="voice.010" data-vplay="" type="button"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-play"></use></svg> Parādīt četrus stāvokļus</button></div>
+<p aria-live="polite" class="vh" data-vlive=""></p>
+</div>
+</section>
+<section aria-labelledby="d-title" class="section">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.011">Visur, kur rakstāt un lasāt</span><h2 class="h2" data-k="voice.012" id="d-title">Nodiktējiet, pārbaudiet, izmantojiet.</h2></div>
+<div class="grid3" style="margin-top:var(--s6)">
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-mic"></use></svg><h3 data-k="voice.013">Diktāts ar apstiprinājumu</h3><p data-k="voice.014">Diktējot piezīmi vai lauku, Halo vispirms parāda atpazīto tekstu. Izvēlieties «Lietot», «Labot» vai «Atmest» — nekas netiek ievietots automātiski.</p><span class="status status--available" data-k="voice.015">Pieejams alfa versijā</span></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-speaker"></use></svg><h3 data-k="voice.016">Lasīt skaļi</h3><p data-k="voice.017">Klausieties atbildes, piezīmes un nodarbību skaidrojumus. Atskaņošanu var apturēt jebkurā brīdī.</p><span class="status status--available" data-k="voice.018">Pieejams alfa versijā</span></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-voice"></use></svg><h3 data-k="voice.019">Pārtraukt jebkurā brīdī</h3><p data-k="voice.020">Sāciet runāt, kamēr Halo atbild: tas apstāsies un klausīsies. Sarunu var turpināt.</p><span class="status status--available" data-k="voice.021">Pieejams · atkarīgs no tālruņa</span></article>
+</div>
+<div class="grid3" style="margin-top:var(--s7)">
+<figure class="evidence-card" data-capture-key="SR-03"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_listening.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">HALO DARBĪBAS PLŪSMA</p><strong>Klausās</strong><p class="evidence-card__desc">Pašreizējais diktēšanas ekrāns vēl jāuzņem īstā tālrunī.</p><figcaption>Halo stāvokļa ilustrācija · nevis lietotnes ekrānuzņēmums</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-12"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_capturing_voice.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">HALO DARBĪBAS PLŪSMA</p><strong>Pārbaudiet, ko Halo sadzirdēja</strong><p class="evidence-card__desc">Diktāta apstiprināšana ir paredzēta dizainā; pēc pārbaudes nepieciešams jauns īsts ekrānuzņēmums.</p><figcaption>Halo stāvokļa ilustrācija · nevis lietotnes ekrānuzņēmums</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-19"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_speaking.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">HALO DARBĪBAS PLŪSMA</p><strong>Klausieties vai lasiet</strong><p class="evidence-card__desc">Skaļa lasīšana ir īsta funkcija; šī zīmola ilustrācija nav ekrānuzņēmums.</p><figcaption>Halo stāvokļa ilustrācija · nevis lietotnes ekrānuzņēmums</figcaption></figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="l-title" class="section" style="padding-top:0">
+<div class="wrap grid2" style="gap:clamp(2rem,1rem + 4vw,4.5rem)">
+<div class="head">
+<span class="eyebrow" data-k="voice.034">Balsis tālrunī</span>
+<h2 class="h2" data-k="voice.035" id="l-title">Vietējās balsis pēc instalēšanas.</h2>
+<p class="lede" data-k="voice.036">Instalējiet vietēju balss pakotni, lai Halo runātu, nesūtot tekstu internetā. Jūs pats izvēlaties, noklausāties un apstiprināt balsi.</p>
+<p class="callout" data-k="voice.037" style="margin-top:var(--s5)">Balss funkciju kvalitāte ir atkarīga no tālruņa, valodas un instalētajām pakotnēm. Bezsaistes režīms nav pieejams visās valodās, un ātrums atšķiras pēc ierīces.</p>
+</div>
+<div>
+<table class="roles">
+<thead><tr><th data-k="voice.038">Komponents</th><th data-k="voice.039">Ko tas dara</th><th data-k="voice.040">Šobrīd</th></tr></thead>
+<tbody>
+<tr><td data-k="voice.041">Runas sintēze</td><td data-k="voice.042">Lejupielādējama vietējā balss pakotne. Testētāja tālrunī desmit balsis darbojās angļu, latviešu, krievu un poļu valodā.</td><td><span class="status status--available" data-k="voice.043">Neobligāta lejupielāde</span></td></tr>
+<tr><td data-k="voice.044">Alternatīva balss</td><td data-k="voice.045">Otra vietējā pakotne angļu un ķīniešu valodai.</td><td><span class="status status--available" data-k="voice.046">Neobligāta lejupielāde</span></td></tr>
+<tr><td data-k="voice.047">Runas atpazīšana</td><td data-k="voice.048">Vietējais runas atpazīšanas modelis: instalējiet un pārbaudiet ar savu mikrofonu.</td><td><span class="status status--dev" data-k="voice.049">Tiek pārbaudīts tālruņos</span></td></tr>
+<tr><td data-k="voice.050">Runas sākuma un beigu noteikšana</td><td data-k="voice.051">Neliels neobligāts modelis, kas nosaka, kad sākat un beidzat runāt.</td><td><span class="status status--dev" data-k="voice.052">Neobligāti · tiek pārbaudīts</span></td></tr>
+<tr><td data-k="voice.053">Rezerves variants</td><td data-k="voice.054">Tālruņa iebūvētais Android balss dzinis.</td><td><span class="status status--available" data-k="voice.055">Pieejams alfa versijā</span></td></tr>
+</tbody>
+</table>
+<details class="plain" style="margin-top:var(--s4)"><summary data-k="voice.056">Modeļu nosaukumi interesentiem</summary><p class="small muted" data-k="voice.057">Runas sintēze: Supertonic 3 (INT8). Alternatīva: Kokoro 1.1 (publicētā pakotne angļu un ķīniešu valodai). Runas atpazīšana: Whisper Small INT8 (Whisper Base INT8 ir vieglāks variants). Runas aktivitātes noteikšana: Silero VAD. Katru pakotni lejupielādējat pēc savas izvēles, taču lejupielāde negarantē labu darbību konkrētajā tālrunī.</p></details>
+</div>
+</div>
+</section>
+<section aria-labelledby="a-title" class="section" style="padding-top:0">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.058">Pieejamība</span><h2 class="h2" data-k="voice.059" id="a-title">Balss palīdz ikvienam, kam ir grūti rakstīt vai lasīt.</h2><p class="lede" data-k="voice.060">Tas ir svarīgi bērniem, senioriem, cilvēkiem ar vāju redzi un ikvienam, kam aizņemtas rokas. Balss un teksts nodrošina piekļuvi tām pašām Halo iespējām.</p></div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">Personīgais asistents, kas sākas Android ierīcē. Jūsu asistents, jūsu ierīces, jūsu izvēle.</p></div>
+<div><h2 data-k="footer.002">Produkts</h2><ul><li><a data-k="footer.003" href="/lv/how-it-works.html">Kā darbojas Halo</a></li><li><a data-k="footer.004" href="/lv/workspace.html">Piezīmes, Canvas un Study</a></li><li><a data-k="footer.005" href="/lv/voice.html">Balss</a></li><li><a data-k="footer.006" href="/lv/kids.html">Bērnu režīms</a></li><li><a data-k="footer.007" href="/lv/your-ai.html">Jūsu MI</a></li><li><a data-k="footer.008" href="/lv/devices.html">Ierīces</a></li></ul></div>
+<div><h2 data-k="footer.009">Uzticēšanās</h2><ul><li><a data-k="footer.010" href="/lv/privacy.html">Privātums un cena</a></li><li><a data-k="footer.011" href="/lv/status.html">Kas darbojas šobrīd</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Izstrādes statuss</a></li><li><a data-k="footer.013" href="/lv/design.html">Stāvokļi un zīmols</a></li></ul></div>
+<div><h2 data-k="footer.014">Izstrāde un testēšana</h2><ul><li><a data-k="footer.015" href="/lv/alpha.html">Izmēģināt alfa versiju</a></li><li><a data-k="footer.016" href="/lv/developers.html">Izstrādātājiem</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo Android ierīcēm</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Šī vietne</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">Šajā vietnē nav sīkdatņu, analītikas vai izsekošanas. Motīva izvēle un testu atzīmes paliek jūsu pārlūkā.</span>
+<div aria-label="Krāsu tēma" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">Sistēmas</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Gaiša</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Tumša</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

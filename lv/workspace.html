@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="lv">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Piezīmes, Canvas, atmiņa un mācības — Halo</title>
+<meta content="Halo darba vide: Notebook piezīmēm, failiem un sarunām, Canvas ar apstiprināmiem MI melnrakstiem, atmiņa tikai ar jūsu piekrišanu un mierīgas Study mācības." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/lv/workspace" rel="canonical"/>
+<link rel="alternate" hreflang="en" href="https://halo-web-blue.vercel.app/workspace"><link rel="alternate" hreflang="lv" href="https://halo-web-blue.vercel.app/lv/workspace"><link rel="alternate" hreflang="ru" href="https://halo-web-blue.vercel.app/ru/workspace"><link rel="alternate" hreflang="x-default" href="https://halo-web-blue.vercel.app/workspace">
+<meta content="website" property="og:type"/>
+<meta content="Piezīmes, Canvas, atmiņa un mācības — Halo" property="og:title"/>
+<meta content="Halo darba vide: Notebook piezīmēm, failiem un sarunām, Canvas ar apstiprināmiem MI melnrakstiem, atmiņa tikai ar jūsu piekrišanu un mierīgas Study mācības." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="/assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="/css/fonts.css" rel="stylesheet"/>
+<link href="/css/tokens.css" rel="stylesheet"/>
+<link href="/css/site.css" rel="stylesheet"/>
+<script defer="" src="/js/vendor/lottie_light.min.js"></script>
+<script defer="" src="/js/locale-data.js"></script>
+<script defer="" src="/js/i18n.js"></script>
+<script defer="" src="/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Pāriet uz saturu</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Halo sākumlapa" class="brand" href="/lv/index.html"><img alt="" class="wm-l" height="80" src="/assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Galvenā navigācija" class="nav">
+<details class="nav-product" data-current=""><summary data-k="nav.001">Produkts <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="/lv/how-it-works.html">Kā darbojas Halo<small>Jautājiet, apstipriniet, pārbaudiet rezultātu</small></a>
+<a aria-current="page" data-k="nav.003" href="/lv/workspace.html">Piezīmes, Canvas un Study<small>Jūsu darba vide ar Halo palīdzību</small></a>
+<a data-k="nav.004" href="/lv/voice.html">Balss<small>Runājiet, klausieties un lasiet</small></a>
+<a data-k="nav.005" href="/lv/kids.html">Bērnu režīms<small>Saudzīgāks Halo · izstrādē</small></a>
+</div></details>
+<a data-k="nav.006" href="/lv/your-ai.html">Jūsu MI</a>
+<a data-k="nav.007" href="/lv/devices.html">Ierīces</a>
+<a data-k="nav.008" href="/lv/privacy.html">Privātums</a>
+<a data-k="nav.009" href="/lv/status.html">Statuss</a>
+<a data-k="nav.010" href="/lv/developers.html">Izstrādātājiem</a>
+</nav>
+<label class="locale-picker" hidden=""><span class="vh">Vietnes valoda</span><select id="site-language" aria-label="Vietnes valoda"><option value="en">EN</option><option value="lv">LV</option><option value="ru">RU</option></select></label>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="/lv/alpha.html">Izmēģināt alfa versiju</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Izvēlne</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Galvenā navigācija">
+<a data-k="nav.013" href="/lv/index.html">Sākums <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="/lv/how-it-works.html">Kā darbojas Halo <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a aria-current="page" class="sub" data-k="nav.015" href="/lv/workspace.html">Piezīmes, Canvas un Study <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.016" href="/lv/voice.html">Balss <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="/lv/kids.html">Bērnu režīms <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="/lv/your-ai.html">Jūsu MI <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="/lv/devices.html">Ierīces <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="/lv/privacy.html">Privātums un cena <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="/lv/status.html">Kas darbojas šobrīd <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="/lv/developers.html">Izstrādātājiem <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="/lv/alpha.html">Izmēģināt Android alfa versiju</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Pirmkods GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="workspace.001"><a href="/lv/index.html">Sākums</a> / Notes, Canvas &amp; Study</p>
+<h1 class="display" data-k="workspace.002" style="margin-top:var(--s4)">Jūsu darbs paliek jūsu.</h1>
+<p class="lede" data-k="workspace.003" style="margin-top:var(--s5)">Piezīmju grāmata materiāliem, Canvas ideju vizualizēšanai, jūsu pārvaldīta atmiņa un mācības jūsu tempā. Halo palīdz, bet pirms izmaiņām lūdz atļauju.</p>
+</div>
+</section>
+<section aria-labelledby="nb-title" class="section" style="padding-top:0">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.004">Piezīmju grāmata</span>
+<h2 class="h2" data-k="workspace.005" id="nb-title">Viena vieta piezīmēm, failiem un sarunām.</h2>
+<p class="lede" data-k="workspace.006">Rakstiet piezīmes, importējiet PDF un fotoattēlus, saglabājiet noderīgas sarunas vai ātrus ierakstus iesūtnē. Meklēšana palīdz visu atrast.</p>
+<dl class="kv" style="grid-template-columns:auto 1fr">
+<dt data-k="workspace.007">Piezīmes</dt><dd data-k="workspace.008">Dokumenti, ko rakstāt un labojat ar tastatūru vai balsi.</dd>
+<dt data-k="workspace.009">Faili</dt><dd data-k="workspace.010">PDF, attēli un dokumenti, kas glabājas jūsu tālrunī.</dd>
+<dt data-k="workspace.011">Iesūtne</dt><dd data-k="workspace.012">Šeit jaunie materiāli gaida, līdz tos sakārtosiet.</dd>
+<dt data-k="workspace.013">Konteksts</dt><dd data-k="workspace.014">Izvēlieties, kuras piezīmes Halo drīkst izmantot atbildei. Konteksta pievienošana nemaina kopīgošanas iestatījumus.</dd>
+</dl>
+<span class="status status--available" data-k="workspace.015">Pieejams alfa versijā</span>
+</div>
+<figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-notebook-tools-20261013-480.webp 480w, /assets/screens/real/halo-notebook-tools-20261013-720.webp 720w, /assets/screens/real/halo-notebook-tools-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo Notebook rīki: prasmes, Canvas, atmiņa un Study. Piezīme: «Piezīmes ir dokumenti. Canvas tos savieno.»" decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-notebook-tools-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.016"><b>Īsts ekrānuzņēmums</b> · Notebook rīki · Android, 13.10.2026. «Piezīmes ir dokumenti. Canvas tos savieno.»</span></figcaption></figure>
+</div>
+</section>
+<section aria-labelledby="cv-title" class="band section">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" data-k="workspace.017">Canvas</span>
+<h2 class="h2" data-k="workspace.018" id="cv-title">Telpa idejām. Halo iesaka — jūs izlemjat.</h2>
+<p class="lede" data-k="workspace.019">Izvietojiet piezīmes, attēlus un failus Canvas, grupējiet un savienojiet tos. Halo ieteikumi parādās kā pārtrauktas kontūras melnraksti un netiek saglabāti, kamēr nenospiežat «Paturēt».</p>
+</div>
+<div class="split" style="margin-top:var(--s6)">
+<div class="sample" data-draft="" style="background:var(--band-surface);border-color:var(--band-line);color:var(--band-text);margin-top:0">
+<span class="sample-label" data-k="workspace.020" style="color:var(--band-text-2)"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-info"></use></svg> Melnrakstu darbības piemērs. Nevis lietotnes ekrānuzņēmums.</span>
+<div class="board">
+<svg aria-hidden="true" class="links" preserveaspectratio="none" viewbox="0 0 300 100"><path d="M50 40 C 90 40, 110 60, 150 60"></path><path class="l-draft" d="M150 60 C 190 60, 210 40, 250 40"></path></svg>
+<div class="card" style="background:var(--band-bg);border-color:var(--band-line)"><p class="kind" data-k="workspace.021" style="color:var(--halo-mint)">Piezīme</p><b data-k="workspace.022">Bazilika eksperiments</b><span data-k="workspace.023">Trīs podi ar atšķirīgu apgaismojuma ilgumu.</span></div>
+<div class="card card--draft" data-state="draft" style="background:var(--band-bg)"><p class="kind" data-k="workspace.024" style="color:var(--halo-mint)">Halo ieteikums · melnraksts</p><b data-k="workspace.025">Saikne: vairāk gaismas — garāks augs</b><span data-k="workspace.026">Pods C saņēma visvairāk gaismas, un tā augs izauga visgarākais.</span>
+<div class="draft-actions"><button class="btn btn--pri" data-k="workspace.027" data-keep="" disabled="" type="button">Paturēt</button><button class="btn btn--sec" data-discard="" data-k="workspace.028" disabled="" type="button">Atmest</button><button class="btn btn--sec" data-draft-reset="" data-k="workspace.029" hidden="" type="button">Parādīt melnrakstu vēlreiz</button></div></div>
+<div class="card" style="background:var(--band-bg);border-color:var(--band-line)"><p class="kind" data-k="workspace.030" style="color:var(--halo-mint)">PDF</p><b data-k="workspace.031">Kā gaisma ietekmē augus</b><span data-k="workspace.032">Vienas lapas teksts.</span></div>
+</div>
+<p class="sample-status" data-draft-status="" role="status"></p>
+</div>
+<figure class="shot" data-capture-key="SR-13" style="--ratio:1080/2400"><picture><source type="image/webp" srcset="/assets/screens/real/halo-canvas-group-20261013-480.webp 480w, /assets/screens/real/halo-canvas-group-20261013-720.webp 720w, /assets/screens/real/halo-canvas-group-20261013-1080.webp 1080w" sizes="(max-width:52rem) 72vw,22rem"><img src="/assets/screens/real/halo-canvas-group-20261013-720.jpg" width="1080" height="2400" decoding="async" loading="lazy" alt="Īsts Halo Android Canvas ekrānuzņēmums, 2026. gada 13. oktobrī"></picture><figcaption class="captag"><b>Īsts ekrānuzņēmums</b> · Canvas · īsts 13. oktobra alfa ekrāns; tajā vēl nav jauno «Paturēt / Atmest» pogu.</figcaption></figure>
+</div>
+<div class="grid2" style="margin-top:var(--s7)">
+<figure class="shot shot--sm" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-canvas-group-20261013-480.webp 480w, /assets/screens/real/halo-canvas-group-20261013-720.webp 720w, /assets/screens/real/halo-canvas-group-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo Canvas ar nosaukumu «Alpha demo, Light and growth»: piecas kartītes, trīs saiknes un izvēlēta grupa." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-canvas-group-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.037"><b>Īsts ekrānuzņēmums</b> · Canvas · Android, 13.10.2026. Īsts Canvas: piecas kartītes, trīs savienojumi, viena grupa.</span></figcaption></figure>
+<div class="head" style="align-self:center"><h3 class="h3" data-k="workspace.038">Melnraksti apzināti izskatās citādi.</h3><p class="muted" data-k="workspace.039" style="color:var(--band-text-2)">Ieteikumi ir pārtrauktā kontūrā ar apzīmējumu; tie kļūst par pilnvērtīgu saturu tikai pēc saglabāšanas. Savu darbu vienmēr var atšķirt no Halo idejām.</p><span class="status status--available" data-k="workspace.040">Pieejams alfa versijā</span></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="m-title" class="section">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.041">Atmiņa</span>
+<h2 class="h2" data-k="workspace.042" id="m-title">Bez jūsu atļaujas nekas netiek atcerēts.</h2>
+<p class="lede" data-k="workspace.043">Halo var ieteikt atcerēties jūsu izvēles vai paradumus. Katrs ieteikums gaida jūsu apstiprinājumu. Atmiņu var apskatīt, labot vai dzēst.</p>
+<dl class="kv" style="grid-template-columns:auto 1fr">
+<dt data-k="workspace.044">Ieteikumi</dt><dd data-k="workspace.045">Izslēgts, līdz ieslēdzat. Katram ieteikumam vajadzīgs apstiprinājums.</dd>
+<dt data-k="workspace.046">Vietējā pārdomāšana</dt><dd data-k="workspace.047">Pēc noklusējuma izslēgts. Pēc ieslēgšanas darbojas tikai tālrunī.</dd>
+<dt data-k="workspace.048">Mākonis</dt><dd data-k="workspace.049">Izvēlētais pakalpojumu sniedzējs saņem saglabāto atmiņu tikai tad, ja to atļauj iestatījumi.</dd>
+</dl>
+<span class="status status--available" data-k="workspace.050">Pieejams alfa versijā</span>
+</div>
+<figure class="shot" style="--ratio:1080/1960"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-memory-suggest-20261013-480.webp 480w, /assets/screens/real/halo-memory-suggest-20261013-720.webp 720w, /assets/screens/real/halo-memory-suggest-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo atmiņas iestatījumi. Halo var ieteikt noderīgas atmiņas. Nekas netiek saglabāts automātiski. Vietējā pārdomāšana pēc noklusējuma ir izslēgta." decoding="async" height="1960" loading="lazy" src="/assets/screens/real/halo-memory-suggest-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.051"><b>Īsts ekrānuzņēmums</b> · Atmiņa · Android, 13.10.2026. Apgriezts virs pēdējās rindas, kas sākotnējā uzņēmumā ir nogriezta.</span></figcaption></figure>
+</div>
+</section>
+<section aria-labelledby="st-title" class="section" style="padding-top:0">
+<div class="wrap">
+<div class="split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.052">Mācības</span>
+<h2 class="h2" data-k="workspace.053" id="st-title">Mācieties saprast, nevis tikai saņemt atbildi.</h2>
+<p class="lede" data-k="workspace.054">Izvēlieties tēmu, savas piezīmes, PDF vai lapas fotoattēlu. Halo paskaidro, jūs mēģināt un vēlāk atkārtojat. Mierīgi, bez punktiem un sērijām.</p>
+<span class="status status--available" data-k="workspace.055">Pieejams · tiek pilnveidots</span>
+</div>
+<figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-study-new-lesson-20261013-480.webp 480w, /assets/screens/real/halo-study-new-lesson-20261013-720.webp 720w, /assets/screens/real/halo-study-new-lesson-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo Study: jauna nodarbība. 1. solis — mācību mērķis, 2. solis — materiāla pievienošana, tostarp teksta nolasīšana no foto vai faila." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-study-new-lesson-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.056"><b>Īsts ekrānuzņēmums</b> · Study · Android testa būvējums, 13.10.2026</span></figcaption></figure>
+</div>
+<div data-ladder="" style="margin-top:var(--s7)">
+<h3 class="h3" data-k="workspace.057">Nodarbība soli pa solim</h3>
+<ol class="ladder">
+<li class="rung"><span class="n">1</span><span><b data-k="workspace.058">Izvēlieties, ko mācīties</b><span>Ierakstiet vai pasakiet tēmu vai sāciet ar piezīmi, failu vai fotoattēlu.</span></span></li>
+<li class="rung"><span class="n">2</span><span><b data-k="workspace.059">Noklausieties skaidrojumu</b><span>Īsi, skaidri paskaidrojumi — pēc vēlēšanās skaļi.</span></span></li>
+<li class="rung"><span class="n">3</span><span><b data-k="workspace.060">Mēģiniet paši</b><span>Atbildiet saviem vārdiem. Lūdziet padomu, nevis gatavu atbildi.</span></span></li>
+<li class="rung"><span class="n">4</span><span><b data-k="workspace.061">Atkārtošana</b><span>Vingrinājumu kartītes tiek pievienotas atkārtošanai tikai pēc jūsu izvēles.</span></span></li>
+<li class="rung"><span class="n">5</span><span><b data-k="workspace.062">Iedziļinieties</b><span>Izskaidrojiet apgūto saviem vārdiem vai uzdodiet saistītu jautājumu.</span></span></li>
+</ol>
+<div class="ladder-controls"><button class="btn btn--sec btn--sm" data-k="workspace.063" data-ladder-next="" type="button">Nākamais solis <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></button><button class="link-btn" data-k="workspace.064" data-ladder-reset="" type="button">Sākt no jauna</button></div>
+<p aria-live="polite" class="vh" data-ladder-live=""></p>
+</div>
+<div class="grid3" style="margin-top:var(--s7)">
+<figure class="shot" data-capture-key="SR-16" style="--ratio:1080/2400"><picture><source type="image/webp" srcset="/assets/screens/real/halo-study-new-lesson-20261013-480.webp 480w, /assets/screens/real/halo-study-new-lesson-20261013-720.webp 720w, /assets/screens/real/halo-study-new-lesson-20261013-1080.webp 1080w" sizes="(max-width:52rem) 72vw,22rem"><img src="/assets/screens/real/halo-study-new-lesson-20261013-720.jpg" width="1080" height="2400" decoding="async" loading="lazy" alt="Īsts Halo Android Study ekrānuzņēmums, 2026. gada 13. oktobrī"></picture><figcaption class="captag"><b>Īsts ekrānuzņēmums</b> · Study · īsts 13. oktobra nodarbības sākuma ekrāns. Praksei un atkārtošanai vajadzīgi jauni uzņēmumi.</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-17"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_thinking.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">HALO DARBĪBAS PLŪSMA</p><strong>Vingrinieties mazos soļos</strong><p class="evidence-card__desc">Vingrinājumu ekrāns ir dokumentēts, bet vēl vajadzīgs īstas ierīces ekrānuzņēmums.</p><figcaption>Halo stāvokļa ilustrācija · nevis lietotnes ekrānuzņēmums</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-18"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_idle.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">HALO DARBĪBAS PLŪSMA</p><strong>Atkārtojiet apgūto</strong><p class="evidence-card__desc">Atkārtošanas plūsma tiek pilnveidota; pašreizējās versijas ekrānuzņēmums vēl nav pieejams.</p><figcaption>Halo stāvokļa ilustrācija · nevis lietotnes ekrānuzņēmums</figcaption></figure>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">Personīgais asistents, kas sākas Android ierīcē. Jūsu asistents, jūsu ierīces, jūsu izvēle.</p></div>
+<div><h2 data-k="footer.002">Produkts</h2><ul><li><a data-k="footer.003" href="/lv/how-it-works.html">Kā darbojas Halo</a></li><li><a data-k="footer.004" href="/lv/workspace.html">Piezīmes, Canvas un Study</a></li><li><a data-k="footer.005" href="/lv/voice.html">Balss</a></li><li><a data-k="footer.006" href="/lv/kids.html">Bērnu režīms</a></li><li><a data-k="footer.007" href="/lv/your-ai.html">Jūsu MI</a></li><li><a data-k="footer.008" href="/lv/devices.html">Ierīces</a></li></ul></div>
+<div><h2 data-k="footer.009">Uzticēšanās</h2><ul><li><a data-k="footer.010" href="/lv/privacy.html">Privātums un cena</a></li><li><a data-k="footer.011" href="/lv/status.html">Kas darbojas šobrīd</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Izstrādes statuss</a></li><li><a data-k="footer.013" href="/lv/design.html">Stāvokļi un zīmols</a></li></ul></div>
+<div><h2 data-k="footer.014">Izstrāde un testēšana</h2><ul><li><a data-k="footer.015" href="/lv/alpha.html">Izmēģināt alfa versiju</a></li><li><a data-k="footer.016" href="/lv/developers.html">Izstrādātājiem</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo Android ierīcēm</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Šī vietne</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">Šajā vietnē nav sīkdatņu, analītikas vai izsekošanas. Motīva izvēle un testu atzīmes paliek jūsu pārlūkā.</span>
+<div aria-label="Krāsu tēma" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">Sistēmas</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Gaiša</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Tumša</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

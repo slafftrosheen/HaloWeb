@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Halo — ИИ, который становится второй натурой</title>
+<meta content="Halo — личный ассистент для Android. Говорите или печатайте, подтверждайте важные действия и проверяйте результат. Где работает ИИ — решаете вы." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/ru/" rel="canonical"/>
+<link rel="alternate" hreflang="en" href="https://halo-web-blue.vercel.app/"><link rel="alternate" hreflang="lv" href="https://halo-web-blue.vercel.app/lv/"><link rel="alternate" hreflang="ru" href="https://halo-web-blue.vercel.app/ru/"><link rel="alternate" hreflang="x-default" href="https://halo-web-blue.vercel.app/">
+<meta content="website" property="og:type"/>
+<meta content="Halo — ИИ, который становится второй натурой" property="og:title"/>
+<meta content="Halo — личный ассистент для Android. Говорите или печатайте, подтверждайте важные действия и проверяйте результат. Где работает ИИ — решаете вы." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="/assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="/css/fonts.css" rel="stylesheet"/>
+<link href="/css/tokens.css" rel="stylesheet"/>
+<link href="/css/site.css" rel="stylesheet"/>
+<script defer="" src="/js/vendor/lottie_light.min.js"></script>
+<script defer="" src="/js/locale-data.js"></script>
+<script defer="" src="/js/i18n.js"></script>
+<script defer="" src="/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Главная Halo" class="brand" href="/ru/index.html"><img alt="" class="wm-l" height="80" src="/assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Главная навигация" class="nav">
+<details class="nav-product"><summary data-k="nav.001">Продукт <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="/ru/how-it-works.html">Как работает Halo<small>Спросите, подтвердите, проверьте результат</small></a>
+<a data-k="nav.003" href="/ru/workspace.html">Заметки, Canvas и Study<small>Ваше рабочее пространство с помощью Halo</small></a>
+<a data-k="nav.004" href="/ru/voice.html">Голос<small>Говорите, слушайте и читайте</small></a>
+<a data-k="nav.005" href="/ru/kids.html">Детский режим<small>Более заботливый Halo · в разработке</small></a>
+</div></details>
+<a data-k="nav.006" href="/ru/your-ai.html">Ваш ИИ</a>
+<a data-k="nav.007" href="/ru/devices.html">Устройства</a>
+<a data-k="nav.008" href="/ru/privacy.html">Приватность</a>
+<a data-k="nav.009" href="/ru/status.html">Статус</a>
+<a data-k="nav.010" href="/ru/developers.html">Разработчикам</a>
+</nav>
+<label class="locale-picker" hidden=""><span class="vh">Язык сайта</span><select id="site-language" aria-label="Язык сайта"><option value="en">EN</option><option value="lv">LV</option><option value="ru">RU</option></select></label>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="/ru/alpha.html">Попробовать альфу</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Меню</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Главная навигация">
+<a data-k="nav.013" href="/ru/index.html">Главная <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="/ru/how-it-works.html">Как работает Halo <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.015" href="/ru/workspace.html">Заметки, Canvas и Study <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.016" href="/ru/voice.html">Голос <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="/ru/kids.html">Детский режим <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="/ru/your-ai.html">Ваш ИИ <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="/ru/devices.html">Устройства <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="/ru/privacy.html">Приватность и цена <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="/ru/status.html">Что работает сейчас <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="/ru/developers.html">Разработчикам <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="/ru/alpha.html">Попробовать альфу для Android</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Исходный код на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="hero-title" class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<span class="eyebrow" data-k="index.001">Ваш ассистент · Ваши устройства · Ваш выбор</span>
+<h1 class="display" data-k="index.002" id="hero-title">ИИ, который становится второй натурой.</h1>
+<p class="lede" data-k="index.003">Персональный ассистент Halo начинает работу на вашем Android-телефоне. Говорите или печатайте, подтверждайте важные действия и проверяйте реальные результаты. Где работает ИИ — решаете вы.</p>
+<div class="cta-row">
+<a class="btn btn--pri" data-k="index.004" href="/ru/alpha.html">Посмотреть альфа-версию Android <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a>
+<a class="btn btn--sec" data-k="index.005" href="/ru/how-it-works.html">Узнать, как работает Halo</a>
+</div>
+<a class="link-arrow" data-k="index.006" href="https://github.com/slafftrosheen/Halo" rel="noopener"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-repository"></use></svg> Исходный код на GitHub</a>
+<ul aria-label="Состояние Halo на сегодня" class="hero-status">
+<li class="status status--available"><span><b data-k="index.007">Android</b> Альфа доступна</span></li>
+<li class="status status--dev"><span><b data-k="index.008">Linux</b> В разработке</span></li>
+<li class="status status--planned"><span><b data-k="index.009">Ваш ИИ</b> Телефон, собственный компьютер или провайдер</span></li>
+</ul>
+</div>
+<div class="hero-stage">
+<span aria-hidden="true" class="aura"></span>
+<span aria-hidden="true" class="ring" data-lottie="/assets/brand/lottie/halo_hero_ring_intro_{theme}.json" data-play="intro" data-themed="" data-then-still=""><img alt="" data-src-dark="/assets/brand/orb/svg/halo_orb_idle.svg" data-src-light="/assets/brand/orb/svg/halo_orb_idle.svg" fetchpriority="high" height="240" src="/assets/brand/orb/svg/halo_orb_idle.svg" width="240"/></span>
+<figure class="shot" style="--ratio:1080/2400"><picture><source type="image/webp" srcset="/assets/screens/real/halo-home-paused-20261013-480.webp 480w, /assets/screens/real/halo-home-paused-20261013-720.webp 720w, /assets/screens/real/halo-home-paused-20261013-1080.webp 1080w" sizes="(max-width:52rem) 72vw,22rem"><img src="/assets/screens/real/halo-home-paused-20261013-720.jpg" width="1080" height="2400" loading="eager" fetchpriority="high" decoding="async" alt="Реальный снимок главной Halo на Android, 13 октября 2026"></picture><figcaption class="captag"><b>Настоящий снимок экрана</b> · Главная · реальный снимок от 13 октября с приостановленной задачей без проверки результата, не новый дизайн ожидания.</figcaption></figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="b-title" class="band section">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" data-k="index.014">Спросить, выполнить, проверить</span>
+<h2 class="h2" data-k="index.015" id="b-title">Halo спрашивает разрешения на действие и честно сообщает результат.</h2>
+<p class="lede" data-k="index.016">Ассистент полезен лишь тогда, когда ему можно доверять. Поэтому Halo спрашивает перед важными действиями, а журнал Activity не выдаёт предположения за подтверждённый успех.</p>
+</div>
+<div class="journey" data-journey="">
+<div>
+<ol class="steps">
+<li class="step"><button aria-pressed="true" data-fig="f1" data-step="" type="button"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_listening.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_listening.svg" width="240"/></span><span><span class="st-t">Вы говорите или печатаете</span><span class="st-d">«Напомни завтра в десять позвонить Джону».</span></span></button></li>
+<li class="step"><button aria-pressed="false" data-fig="f1" data-step="" type="button"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_thinking.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_thinking.svg" width="240"/></span><span><span class="st-t">Halo разбирается в вашей просьбе</span><span class="st-d">Если Halo не уверен, он задаёт уточняющий вопрос, а не угадывает.</span></span></button></li>
+<li class="step"><button aria-pressed="false" data-fig="f3" data-step="" type="button"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_approval_required.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_approval_required.svg" width="240"/></span><span><span class="st-t">Вы подтверждаете важные действия</span><span class="st-d">На кнопке указано конкретное действие. Можно отказаться или в любой момент нажать «Стоп».</span></span></button></li>
+<li class="step"><button aria-pressed="false" data-fig="f4" data-step="" type="button"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_acting.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_acting.svg" width="240"/></span><span><span class="st-t">Ваш телефон выполняет действие</span><span class="st-d">Только с предоставленными вами разрешениями.</span></span></button></li>
+<li class="step"><button aria-pressed="false" data-fig="f5" data-step="" type="button"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_waiting.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_waiting.svg" width="240"/></span><span><span class="st-t">Журнал действий сообщает факты</span><span class="st-d">Подтверждено, ошибка или «отправлено, но не проверено».</span></span></button></li>
+</ol>
+<div class="journey-controls"><button class="btn btn--sec btn--sm" data-journey-play="" data-k="index.017" type="button"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-play"></use></svg> Показать пять шагов</button><button class="btn btn--sec btn--sm" data-journey-stop="" data-k="index.018" hidden="" type="button"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-pause"></use></svg> Пауза</button></div>
+<p aria-live="polite" class="vh" data-journey-live=""></p>
+</div>
+<div class="journey-stage journey-figs">
+<div class="is-on" data-fig="f1"><figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-home-paused-20261013-480.webp 480w, /assets/screens/real/halo-home-paused-20261013-720.webp 720w, /assets/screens/real/halo-home-paused-20261013-1080.webp 1080w" type="image/webp"/><img alt="Главная Halo на Android. Приостановленная задача: действие отправлено, завершение не подтверждено. Внизу кнопка «Говорить»." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-home-paused-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="index.019"><b>Настоящий снимок экрана</b> · Главная · тестовая сборка Android, 13.10.2026. Приостановленная задача: Halo сообщает, что выполнение не подтверждено.</span></figcaption></figure></div>
+<div data-fig="f3"><figure class="evidence-card"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_approval_required.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">СЦЕНАРИЙ РАБОТЫ HALO</p><strong>Вы решаете до начала действия</strong><p class="evidence-card__desc">Экран подтверждения ещё нужно снять на реальном устройстве.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure></div>
+<div data-fig="f4"><figure class="evidence-card"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_acting.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">СЦЕНАРИЙ РАБОТЫ HALO</p><strong>Останавливайте выполняемую задачу</strong><p class="evidence-card__desc">Актуальный экран выполнения задачи ещё не снят.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure></div>
+<div data-fig="f5"><figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-activity-history-20261013-480.webp 480w, /assets/screens/real/halo-activity-history-20261013-720.webp 720w, /assets/screens/real/halo-activity-history-20261013-1080.webp 1080w" type="image/webp"/><img alt="Журнал действий Halo. Одна запись: открытие приложения, отправлено, результат не проверен, выполнен 1 из 2 шагов, ожидание подтверждения. Другая — выполненное напоминание." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-activity-history-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="index.028"><b>Настоящий снимок экрана</b> · Журнал действий · Android, 13.10.2026. Статус «Отправлено · эффект не проверен» показан честно.</span></figcaption></figure></div>
+</div>
+</div>
+<ul aria-label="Как Halo сообщает о результатах действий" class="outcomes">
+<li class="outcome o-proposed"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-task"></use></svg><span><b data-k="index.029">Предложено</b><span>Halo предлагает действие. Пока ничего не выполнено.</span></span></li>
+<li class="outcome o-approved"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-approval"></use></svg><span><b data-k="index.030">Подтверждено</b><span>Вы подтвердили. Halo может начать.</span></span></li>
+<li class="outcome o-running"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-act"></use></svg><span><b data-k="index.031">Выполняется</b><span>Выполняется. Остановка всегда доступна.</span></span></li>
+<li class="outcome o-confirmed"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-check"></use></svg><span><b data-k="index.032">Подтверждён результат</b><span>Halo проверил результат: всё получилось.</span></span></li>
+<li class="outcome o-failed"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-failure"></use></svg><span><b data-k="index.033">Ошибка</b><span>Не удалось. Halo подскажет один понятный следующий шаг.</span></span></li>
+<li class="outcome o-unverified"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-unverified"></use></svg><span><b data-k="index.034">Результат не проверен</b><span>Отправлено приложению, но Halo не смог проверить результат.</span></span></li>
+</ul>
+<p class="more"><a class="link-arrow" data-k="index.035" href="/ru/how-it-works.html">Как работает Halo — шаг за шагом <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></p>
+</div>
+</section>
+<section aria-labelledby="c-title" class="section">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" data-k="index.036">Заметки, Canvas, память и обучение</span>
+<h2 class="h2" data-k="index.037" id="c-title">Ваши заметки, ваши идеи, ваш темп.</h2>
+<p class="lede" data-k="index.038">Храните заметки, файлы и переписки в одном блокноте. Halo помогает связывать материалы и учиться на них, но не меняет вашу работу без разрешения.</p>
+</div>
+<div class="trio">
+<article><figure class="shot" style="--ratio:1080/2400"><picture><source type="image/webp" srcset="/assets/screens/real/halo-notebook-tools-20261013-480.webp 480w, /assets/screens/real/halo-notebook-tools-20261013-720.webp 720w, /assets/screens/real/halo-notebook-tools-20261013-1080.webp 1080w" sizes="(max-width:52rem) 72vw,22rem"><img src="/assets/screens/real/halo-notebook-tools-20261013-720.jpg" width="1080" height="2400" loading="lazy"  decoding="async" alt="Реальный снимок инструментов Notebook на Android, 13 октября 2026"></picture><figcaption class="captag"><b>Настоящий снимок экрана</b> · Инструменты Notebook · реальный снимок от 13 октября. Для новой библиотеки Notebook ещё нужен актуальный скриншот.</figcaption></figure><div class="txt"><h3 class="h3" data-k="index.043">Блокнот</h3><p class="muted" data-k="index.044">Заметки, файлы, сохранённые диалоги и входящие для быстрых записей. Всё ищется в одном месте.</p><span class="status status--available" data-k="index.045">Доступно в альфа-версии</span></div></article>
+<article><figure class="shot shot--sm" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-canvas-group-20261013-480.webp 480w, /assets/screens/real/halo-canvas-group-20261013-720.webp 720w, /assets/screens/real/halo-canvas-group-20261013-1080.webp 1080w" type="image/webp"/><img alt="Canvas Halo с названием «Alpha demo, Light and growth»: пять карточек, три связи и выбранная группа." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-canvas-group-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="index.046"><b>Настоящий снимок экрана</b> · Canvas · тестовая сборка Android, 13.10.2026</span></figcaption></figure><div class="txt"><h3 class="h3" data-k="index.047">Canvas</h3><p class="muted" data-k="index.048">Раскладывайте идеи, объединяйте их и связывайте. Предложения Halo поступают как черновики: сохраняйте или отклоняйте.</p><span class="status status--available" data-k="index.049">Доступно в альфа-версии</span></div></article>
+<article><figure class="shot shot--sm" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-study-new-lesson-20261013-480.webp 480w, /assets/screens/real/halo-study-new-lesson-20261013-720.webp 720w, /assets/screens/real/halo-study-new-lesson-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo Study: создание урока. Шаг 1 — цель обучения, шаг 2 — добавление материалов, включая текст из фото или файла." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-study-new-lesson-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="index.050"><b>Настоящий снимок экрана</b> · Study · тестовая сборка Android, 13.10.2026</span></figcaption></figure><div class="txt"><h3 class="h3" data-k="index.051">Обучение</h3><p class="muted" data-k="index.052">Выберите тему или свои материалы. Halo объяснит, затем вы попрактикуетесь и повторите — шаг за шагом.</p><span class="status status--available" data-k="index.053">Доступно · развивается</span></div></article>
+</div>
+<p class="more"><a class="link-arrow" data-k="index.054" href="/ru/workspace.html">Как работают черновики, память и уроки <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></p>
+</div>
+</section>
+<section aria-labelledby="e-title" class="band section">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="index.055">Голос</span>
+<h2 class="h2" data-k="index.056" id="e-title">Говорите, слушайте, читайте вместе с Halo.</h2>
+<p class="lede" data-k="index.057">Вместо набора текста говорите с Halo, слушайте ответы и прерывайте озвучивание в любой момент. Голос доступен на главной, в заметках, Canvas и Study.</p>
+<span class="status status--available" data-k="index.058">Доступно · зависит от телефона и языка</span>
+<p><a class="link-arrow" data-k="index.059" href="/ru/voice.html" style="color:var(--halo-mint)">Как работает голос <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></p>
+</div>
+<ul aria-label="Голосовые состояния Halo" class="vstates vstates--2" style="margin-top:0">
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_listening.json" data-play="view"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_listening.svg" width="240"/></span><b data-k="index.060">Слушает</b><span>Halo вас слышит.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_capturing_voice.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_capturing_voice.svg" width="240"/></span><b data-k="index.061">Записывает речь</b><span>Ваши слова появляются во время речи.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_speaking.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_speaking.svg" width="240"/></span><b data-k="index.062">Говорит</b><span>Ответы, прочитанные вслух.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_stopped.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_stopped.svg" width="240"/></span><b data-k="index.063">Остановлено</b><span>Нажмите или начните говорить, чтобы прервать.</span></li>
+</ul>
+</div>
+</section>
+<section aria-labelledby="d-title" class="section kids">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="index.064">Детский режим</span>
+<h2 class="h2" data-k="index.065" id="d-title">Более заботливый Halo для детей.</h2>
+<p class="lede" data-k="index.066">Простые слова, голосовое управление, подсказки вместо готовых ответов, создание историй и подтверждение взрослого для важных действий.</p>
+<span class="status status--dev" data-k="index.067">В разработке</span>
+<p><a class="link-arrow" data-k="index.068" href="/ru/kids.html">Каким будет детский режим <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></p>
+</div>
+<div><span aria-hidden="true" class="ring ring-xl" data-lottie="/assets/brand/kids/lottie/halo_kids_orb_idle_{theme}.json" data-play="view" data-themed=""><img alt="" data-src-dark="/assets/brand/kids/svg/halo_kids_orb_idle_dark.svg" data-src-light="/assets/brand/kids/svg/halo_kids_orb_idle_light.svg" height="240" loading="lazy" src="/assets/brand/kids/svg/halo_kids_orb_idle_light.svg" width="240"/></span></div>
+</div>
+</section>
+<section aria-labelledby="f-title" class="section">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" data-k="index.069">Ваш ИИ</span>
+<h2 class="h2" data-k="index.070" id="f-title">Вы выбираете, где работает интеллект Halo.</h2>
+<p class="lede" data-k="index.071">Каждый ответ где-то вычисляется. Вы сами выбираете где — и можете изменить выбор.</p>
+</div>
+<div class="grid3" style="margin-top:var(--s6)">
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-on_device"></use></svg><h3 data-k="index.072">На этом телефоне</h3><p data-k="index.073">Приватно и без интернета после загрузки модели. Локальные модели компактнее, но требуют памяти и расходуют батарею.</p><span class="status status--available" data-k="index.074">Доступно в альфа-версии</span></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-lan"></use></svg><h3 data-k="index.075">На вашем компьютере</h3><p data-k="index.076">Ваш домашний компьютер отвечает через локальную сеть. Можно использовать более крупные модели, не выходя в облако.</p><span class="status status--dev" data-k="index.077">Работает с вашим сервером · HaloLinux в разработке</span></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-cloud"></use></svg><h3 data-k="index.078">У выбранного вами провайдера</h3><p data-k="index.079">Подключите собственный аккаунт. На отправляемые данные распространяются тарифы и политика приватности провайдера.</p><span class="status status--available" data-k="index.080">Доступно · зависит от провайдера</span></article>
+</div>
+<p class="more"><a class="link-arrow" data-k="index.081" href="/ru/your-ai.html">Сравнить три варианта <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></p>
+</div>
+</section>
+<section aria-labelledby="g-title" class="band section">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="index.082">Ваши устройства</span>
+<h2 class="h2" data-k="index.083" id="g-title">Сначала телефон. Другие устройства — по вашему желанию.</h2>
+<p class="lede" data-k="index.084">Halo работает на Android-телефоне без дополнительных устройств. Очки не нужны. Следующая платформа — домашний компьютер с HaloLinux, а в перспективе — приватная сеть ваших устройств.</p>
+<ul class="hero-status" style="margin-top:var(--s5)">
+<li class="status status--available"><span><b data-k="index.085">Телефон Android</b> Доступно</span></li>
+<li class="status status--dev"><span><b data-k="index.086">HaloLinux</b> В разработке</span></li>
+<li class="status status--planned"><span><b data-k="index.087">Синхронизация между устройствами</b> Запланировано</span></li>
+</ul>
+<p style="margin-top:var(--s5)"><a class="link-arrow" data-k="index.088" href="/ru/devices.html" style="color:var(--halo-mint)">Устройства и HaloLinux <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></p>
+</div>
+<figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-devices-this-phone-20261013-480.webp 480w, /assets/screens/real/halo-devices-this-phone-20261013-720.webp 720w, /assets/screens/real/halo-devices-this-phone-20261013-1080.webp 1080w" type="image/webp"/><img alt="Устройства Halo. Этот телефон управляет диалогами. Нет сохранённых устройств, Halo работает на телефоне. Кнопка «Добавить устройство»." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-devices-this-phone-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="index.089"><b>Настоящий снимок экрана</b> · Устройства · Android, 13.10.2026. Нет сохранённых устройств, но Halo работает.</span></figcaption></figure>
+</div>
+</section>
+<section aria-labelledby="h-title" class="section">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" data-k="index.090">Приватность и цена</span>
+<h2 class="h2" data-k="index.091" id="h-title">Приватность по умолчанию. Прозрачность всегда.</h2>
+</div>
+<ul class="zones">
+<li class="zone z-stays"><span class="zi"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-on_device"></use></svg></span><h3 data-k="index.092">Остаётся на телефоне</h3><ul><li data-k="index.093">Ваши заметки, файлы и память</li><li data-k="index.094">Ответы локальных моделей</li><li data-k="index.095">Ваши настройки и разрешения</li></ul></li>
+<li class="zone z-choose"><span class="zi"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-cloud"></use></svg></span><h3 data-k="index.096">Передаётся только по вашему выбору</h3><ul><li data-k="index.097">Запросы настроенному вами ИИ-провайдеру</li><li data-k="index.098">Запросы к вашему компьютеру в локальной сети</li><li data-k="index.099">На условиях выбранного провайдера</li></ul></li>
+<li class="zone z-never"><span class="zi"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-no_account"></use></svg></span><h3 data-k="index.100">Halo самостоятельно не собирает данные</h3><ul><li data-k="index.101">Без аккаунта Halo</li><li data-k="index.102">Без аналитики и отслеживания</li><li data-k="index.103">Без серверов Halo, хранящих ваши данные</li></ul></li>
+</ul>
+<p class="callout" data-k="index.104" style="margin-top:var(--s5);max-width:48rem"><b>Без подписки Halo.</b> Для будущего релиза рассматривается разовая цена в Google Play около 5 долларов. Альфу на GitHub можно попробовать бесплатно.</p>
+<p class="more"><a class="link-arrow" data-k="index.105" href="/ru/privacy.html">Подробнее о приватности, открытости и цене <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></p>
+</div>
+</section>
+<section aria-labelledby="i-title" class="section" style="padding-top:0">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" data-k="index.106">Что работает сейчас</span>
+<h2 class="h2" data-k="index.107" id="i-title">Никаких процентов и дат релиза. Только реальное состояние.</h2>
+</div>
+<div class="lanes compact-lanes">
+<section aria-label="Доступно в Android-альфе" class="lane"><h3><span class="status status--available">Доступно в альфа-версии</span></h3><ul><li data-k="index.108">Говорите или пишите — журнал покажет реальные результаты</li><li data-k="index.109">Блокнот, Canvas, память и Study</li><li data-k="index.110">Локальные модели и настроенные провайдеры</li><li data-k="index.111">Озвучивание и голосовой ввод</li></ul></section>
+<section aria-label="В активной разработке" class="lane"><h3><span class="status status--dev">В активной разработке</span></h3><ul><li data-k="index.112">Детский режим</li><li data-k="index.113">Системный ассистент поверх других приложений</li><li data-k="index.114">Домашний узел HaloLinux</li><li data-k="index.115">Локальные голосовые пакеты для других языков</li></ul></section>
+<section aria-label="Запланировано или исследуется" class="lane"><h3><span class="status status--planned">Запланировано и исследуется</span></h3><ul><li data-k="index.116">Приватная синхронизация ваших устройств</li><li data-k="index.117">Хост Windows</li><li data-k="index.118">Релиз в Google Play</li><li data-k="index.119">Робототехника (экспериментально)</li></ul></section>
+</div>
+<p class="more"><a class="link-arrow" data-k="index.120" href="/ru/status.html">Полный статус и технические подтверждения <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a></p>
+</div>
+</section>
+<section aria-labelledby="j-title" class="band section">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="index.121">Открытая разработка</span>
+<h2 class="h2" data-k="index.122" id="j-title">Пробуйте, находите ошибки, рассказывайте.</h2>
+<p class="lede" data-k="index.123">Android-альфа — предварительная сборка на GitHub. Установите её, попробуйте пять тестовых файлов и расскажите, что произошло. Непонятные моменты тоже важны.</p>
+<div class="cta-row" style="margin-top:var(--s6)"><a class="btn btn--pri" data-k="index.124" href="/ru/alpha.html">Посмотреть альфа-версию Android <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></a><a class="btn btn--sec" data-k="index.125" href="/ru/developers.html">Разработчикам</a></div>
+</div>
+<div style="align-self:center;display:grid;gap:var(--s3)">
+<a class="tile repo" href="https://github.com/slafftrosheen/Halo" rel="noopener" style="text-decoration:none;color:inherit"><span class="mono">slafftrosheen/Halo</span><h3 data-k="index.126">Приложение Android</h3><p data-k="index.127">Ассистент, которого уже можно испытать.</p></a>
+<a class="tile repo" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener" style="text-decoration:none;color:inherit"><span class="mono">slafftrosheen/HaloLinux</span><h3 data-k="index.128">Узел Linux</h3><p data-k="index.129">Ранний фоновый хост в разработке.</p></a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">Персональный ассистент, начинающийся с Android. Ваш ассистент, ваши устройства, ваш выбор.</p></div>
+<div><h2 data-k="footer.002">Продукт</h2><ul><li><a data-k="footer.003" href="/ru/how-it-works.html">Как работает Halo</a></li><li><a data-k="footer.004" href="/ru/workspace.html">Заметки, Canvas и Study</a></li><li><a data-k="footer.005" href="/ru/voice.html">Голос</a></li><li><a data-k="footer.006" href="/ru/kids.html">Детский режим</a></li><li><a data-k="footer.007" href="/ru/your-ai.html">Ваш ИИ</a></li><li><a data-k="footer.008" href="/ru/devices.html">Устройства</a></li></ul></div>
+<div><h2 data-k="footer.009">Доверие</h2><ul><li><a data-k="footer.010" href="/ru/privacy.html">Приватность и цена</a></li><li><a data-k="footer.011" href="/ru/status.html">Что работает сейчас</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Состояние разработки</a></li><li><a data-k="footer.013" href="/ru/design.html">Состояния и стиль</a></li></ul></div>
+<div><h2 data-k="footer.014">Разработка и тестирование</h2><ul><li><a data-k="footer.015" href="/ru/alpha.html">Попробовать альфу</a></li><li><a data-k="footer.016" href="/ru/developers.html">Разработчикам</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo для Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Этот сайт</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">На этом сайте нет cookie, аналитики или отслеживания. Выбор темы и отметки тестов остаются в вашем браузере.</span>
+<div aria-label="Цветовая тема" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">Системная</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Светлая</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Тёмная</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

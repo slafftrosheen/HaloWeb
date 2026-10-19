@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Заметки, Canvas, память и обучение — Halo</title>
+<meta content="Рабочее пространство Halo: Notebook для заметок, файлов и переписки, Canvas с подтверждаемыми черновиками ИИ, память только с вашего согласия и спокойное обучение Study." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/ru/workspace" rel="canonical"/>
+<link rel="alternate" hreflang="en" href="https://halo-web-blue.vercel.app/workspace"><link rel="alternate" hreflang="lv" href="https://halo-web-blue.vercel.app/lv/workspace"><link rel="alternate" hreflang="ru" href="https://halo-web-blue.vercel.app/ru/workspace"><link rel="alternate" hreflang="x-default" href="https://halo-web-blue.vercel.app/workspace">
+<meta content="website" property="og:type"/>
+<meta content="Заметки, Canvas, память и обучение — Halo" property="og:title"/>
+<meta content="Рабочее пространство Halo: Notebook для заметок, файлов и переписки, Canvas с подтверждаемыми черновиками ИИ, память только с вашего согласия и спокойное обучение Study." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="/assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="/css/fonts.css" rel="stylesheet"/>
+<link href="/css/tokens.css" rel="stylesheet"/>
+<link href="/css/site.css" rel="stylesheet"/>
+<script defer="" src="/js/vendor/lottie_light.min.js"></script>
+<script defer="" src="/js/locale-data.js"></script>
+<script defer="" src="/js/i18n.js"></script>
+<script defer="" src="/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Главная Halo" class="brand" href="/ru/index.html"><img alt="" class="wm-l" height="80" src="/assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Главная навигация" class="nav">
+<details class="nav-product" data-current=""><summary data-k="nav.001">Продукт <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="/ru/how-it-works.html">Как работает Halo<small>Спросите, подтвердите, проверьте результат</small></a>
+<a aria-current="page" data-k="nav.003" href="/ru/workspace.html">Заметки, Canvas и Study<small>Ваше рабочее пространство с помощью Halo</small></a>
+<a data-k="nav.004" href="/ru/voice.html">Голос<small>Говорите, слушайте и читайте</small></a>
+<a data-k="nav.005" href="/ru/kids.html">Детский режим<small>Более заботливый Halo · в разработке</small></a>
+</div></details>
+<a data-k="nav.006" href="/ru/your-ai.html">Ваш ИИ</a>
+<a data-k="nav.007" href="/ru/devices.html">Устройства</a>
+<a data-k="nav.008" href="/ru/privacy.html">Приватность</a>
+<a data-k="nav.009" href="/ru/status.html">Статус</a>
+<a data-k="nav.010" href="/ru/developers.html">Разработчикам</a>
+</nav>
+<label class="locale-picker" hidden=""><span class="vh">Язык сайта</span><select id="site-language" aria-label="Язык сайта"><option value="en">EN</option><option value="lv">LV</option><option value="ru">RU</option></select></label>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="/ru/alpha.html">Попробовать альфу</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Меню</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Главная навигация">
+<a data-k="nav.013" href="/ru/index.html">Главная <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="/ru/how-it-works.html">Как работает Halo <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a aria-current="page" class="sub" data-k="nav.015" href="/ru/workspace.html">Заметки, Canvas и Study <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.016" href="/ru/voice.html">Голос <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="/ru/kids.html">Детский режим <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="/ru/your-ai.html">Ваш ИИ <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="/ru/devices.html">Устройства <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="/ru/privacy.html">Приватность и цена <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="/ru/status.html">Что работает сейчас <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="/ru/developers.html">Разработчикам <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="/ru/alpha.html">Попробовать альфу для Android</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Исходный код на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="workspace.001"><a href="/ru/index.html">Главная</a> / Notes, Canvas &amp; Study</p>
+<h1 class="display" data-k="workspace.002" style="margin-top:var(--s4)">Ваша работа остаётся вашей.</h1>
+<p class="lede" data-k="workspace.003" style="margin-top:var(--s5)">Блокнот для материалов, Canvas для визуального мышления, память под вашим контролем и уроки в вашем темпе. Halo помогает, но спрашивает разрешение перед изменениями.</p>
+</div>
+</section>
+<section aria-labelledby="nb-title" class="section" style="padding-top:0">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.004">Блокнот</span>
+<h2 class="h2" data-k="workspace.005" id="nb-title">Одно место для заметок, файлов и диалогов.</h2>
+<p class="lede" data-k="workspace.006">Создавайте заметки, импортируйте PDF и фотографии, сохраняйте полезные беседы или быстрые записи во входящих. Поиск поможет всё найти.</p>
+<dl class="kv" style="grid-template-columns:auto 1fr">
+<dt data-k="workspace.007">Заметки</dt><dd data-k="workspace.008">Документы, которые вы создаёте и редактируете клавиатурой или голосом.</dd>
+<dt data-k="workspace.009">Файлы</dt><dd data-k="workspace.010">PDF, изображения и документы, хранящиеся на телефоне.</dd>
+<dt data-k="workspace.011">Входящие</dt><dd data-k="workspace.012">Здесь новые материалы ждут, пока вы их разберёте.</dd>
+<dt data-k="workspace.013">Контекст</dt><dd data-k="workspace.014">Выбирайте, какие заметки Halo может использовать в ответе. Контекст не меняет настройки передачи данных.</dd>
+</dl>
+<span class="status status--available" data-k="workspace.015">Доступно в альфа-версии</span>
+</div>
+<figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-notebook-tools-20261013-480.webp 480w, /assets/screens/real/halo-notebook-tools-20261013-720.webp 720w, /assets/screens/real/halo-notebook-tools-20261013-1080.webp 1080w" type="image/webp"/><img alt="Инструменты Notebook в Halo: навыки, Canvas, память и Study. Подпись: «Заметки — документы. Canvas связывает их»." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-notebook-tools-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.016"><b>Настоящий снимок экрана</b> · Инструменты Notebook · Android, 13.10.2026. «Заметки — документы. Canvas связывает их».</span></figcaption></figure>
+</div>
+</section>
+<section aria-labelledby="cv-title" class="band section">
+<div class="wrap">
+<div class="head">
+<span class="eyebrow" data-k="workspace.017">Canvas</span>
+<h2 class="h2" data-k="workspace.018" id="cv-title">Пространство для идей. Halo предлагает — вы решаете.</h2>
+<p class="lede" data-k="workspace.019">Размещайте заметки, изображения и файлы на Canvas, группируйте и соединяйте их. Предложения Halo появляются как пунктирные черновики и не сохраняются, пока вы не нажмёте «Сохранить».</p>
+</div>
+<div class="split" style="margin-top:var(--s6)">
+<div class="sample" data-draft="" style="background:var(--band-surface);border-color:var(--band-line);color:var(--band-text);margin-top:0">
+<span class="sample-label" data-k="workspace.020" style="color:var(--band-text-2)"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-info"></use></svg> Пример работы с черновиками. Не скриншот приложения.</span>
+<div class="board">
+<svg aria-hidden="true" class="links" preserveaspectratio="none" viewbox="0 0 300 100"><path d="M50 40 C 90 40, 110 60, 150 60"></path><path class="l-draft" d="M150 60 C 190 60, 210 40, 250 40"></path></svg>
+<div class="card" style="background:var(--band-bg);border-color:var(--band-line)"><p class="kind" data-k="workspace.021" style="color:var(--halo-mint)">Заметка</p><b data-k="workspace.022">Эксперимент с базиликом</b><span data-k="workspace.023">Три горшка с разной продолжительностью освещения.</span></div>
+<div class="card card--draft" data-state="draft" style="background:var(--band-bg)"><p class="kind" data-k="workspace.024" style="color:var(--halo-mint)">Предложение Halo · черновик</p><b data-k="workspace.025">Связь: больше света — выше растение</b><span data-k="workspace.026">Горшок C получал больше всего света, растение выросло выше остальных.</span>
+<div class="draft-actions"><button class="btn btn--pri" data-k="workspace.027" data-keep="" disabled="" type="button">Сохранить</button><button class="btn btn--sec" data-discard="" data-k="workspace.028" disabled="" type="button">Отклонить</button><button class="btn btn--sec" data-draft-reset="" data-k="workspace.029" hidden="" type="button">Снова показать черновик</button></div></div>
+<div class="card" style="background:var(--band-bg);border-color:var(--band-line)"><p class="kind" data-k="workspace.030" style="color:var(--halo-mint)">PDF</p><b data-k="workspace.031">Как свет влияет на растения</b><span data-k="workspace.032">Текст на одной странице.</span></div>
+</div>
+<p class="sample-status" data-draft-status="" role="status"></p>
+</div>
+<figure class="shot" data-capture-key="SR-13" style="--ratio:1080/2400"><picture><source type="image/webp" srcset="/assets/screens/real/halo-canvas-group-20261013-480.webp 480w, /assets/screens/real/halo-canvas-group-20261013-720.webp 720w, /assets/screens/real/halo-canvas-group-20261013-1080.webp 1080w" sizes="(max-width:52rem) 72vw,22rem"><img src="/assets/screens/real/halo-canvas-group-20261013-720.jpg" width="1080" height="2400" decoding="async" loading="lazy" alt="Реальный снимок Canvas в Halo на Android, 13 октября 2026"></picture><figcaption class="captag"><b>Настоящий снимок экрана</b> · Canvas · реальный экран альфы от 13 октября; новые кнопки «Сохранить / Отклонить» там ещё не показаны.</figcaption></figure>
+</div>
+<div class="grid2" style="margin-top:var(--s7)">
+<figure class="shot shot--sm" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-canvas-group-20261013-480.webp 480w, /assets/screens/real/halo-canvas-group-20261013-720.webp 720w, /assets/screens/real/halo-canvas-group-20261013-1080.webp 1080w" type="image/webp"/><img alt="Canvas Halo с названием «Alpha demo, Light and growth»: пять карточек, три связи и выбранная группа." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-canvas-group-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.037"><b>Настоящий снимок экрана</b> · Canvas · Android, 13.10.2026. Настоящий Canvas: пять карточек, три связи, одна группа.</span></figcaption></figure>
+<div class="head" style="align-self:center"><h3 class="h3" data-k="workspace.038">Черновики специально выделяются.</h3><p class="muted" data-k="workspace.039" style="color:var(--band-text-2)">Предложения выделены пунктиром и подписью; сплошными они станут только после сохранения. Вы всегда отличите свою работу от идей Halo.</p><span class="status status--available" data-k="workspace.040">Доступно в альфа-версии</span></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="m-title" class="section">
+<div class="wrap split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.041">Память</span>
+<h2 class="h2" data-k="workspace.042" id="m-title">Без вашего разрешения ничего не запоминается.</h2>
+<p class="lede" data-k="workspace.043">Halo может предложить запомнить ваши предпочтения или привычки. Каждое предложение ждёт вашего одобрения. Память можно просматривать, менять и очищать.</p>
+<dl class="kv" style="grid-template-columns:auto 1fr">
+<dt data-k="workspace.044">Предложения</dt><dd data-k="workspace.045">Выключено до вашего включения. Каждое предложение требует подтверждения.</dd>
+<dt data-k="workspace.046">Локальное осмысление</dt><dd data-k="workspace.047">По умолчанию выключено. После включения работает только на телефоне.</dd>
+<dt data-k="workspace.048">Облако</dt><dd data-k="workspace.049">Выбранный провайдер получает сохранённую память только если это разрешено в настройках.</dd>
+</dl>
+<span class="status status--available" data-k="workspace.050">Доступно в альфа-версии</span>
+</div>
+<figure class="shot" style="--ratio:1080/1960"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-memory-suggest-20261013-480.webp 480w, /assets/screens/real/halo-memory-suggest-20261013-720.webp 720w, /assets/screens/real/halo-memory-suggest-20261013-1080.webp 1080w" type="image/webp"/><img alt="Настройки памяти Halo. Halo может предлагать полезные сведения к запоминанию. Автоматически ничего не сохраняется. Локальное осмысление по умолчанию отключено." decoding="async" height="1960" loading="lazy" src="/assets/screens/real/halo-memory-suggest-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.051"><b>Настоящий снимок экрана</b> · Память · Android, 13.10.2026. Обрезано выше последней строки исходного снимка.</span></figcaption></figure>
+</div>
+</section>
+<section aria-labelledby="st-title" class="section" style="padding-top:0">
+<div class="wrap">
+<div class="split">
+<div class="head">
+<span class="eyebrow" data-k="workspace.052">Обучение</span>
+<h2 class="h2" data-k="workspace.053" id="st-title">Учитесь понимать, а не просто получать ответ.</h2>
+<p class="lede" data-k="workspace.054">Выберите тему, собственные заметки, PDF или фотографию страницы. Halo объясняет, вы пробуете и позже повторяете материал. Спокойно, без очков и серий.</p>
+<span class="status status--available" data-k="workspace.055">Доступно · развивается</span>
+</div>
+<figure class="shot" style="--ratio:1080/2400"><picture><source sizes="(max-width: 52rem) 72vw, 22rem" srcset="/assets/screens/real/halo-study-new-lesson-20261013-480.webp 480w, /assets/screens/real/halo-study-new-lesson-20261013-720.webp 720w, /assets/screens/real/halo-study-new-lesson-20261013-1080.webp 1080w" type="image/webp"/><img alt="Halo Study: создание урока. Шаг 1 — цель обучения, шаг 2 — добавление материалов, включая текст из фото или файла." decoding="async" height="2400" loading="lazy" src="/assets/screens/real/halo-study-new-lesson-20261013-720.jpg" width="1080"/></picture><figcaption class="captag"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-verify"></use></svg><span data-k="workspace.056"><b>Настоящий снимок экрана</b> · Study · тестовая сборка Android, 13.10.2026</span></figcaption></figure>
+</div>
+<div data-ladder="" style="margin-top:var(--s7)">
+<h3 class="h3" data-k="workspace.057">Урок шаг за шагом</h3>
+<ol class="ladder">
+<li class="rung"><span class="n">1</span><span><b data-k="workspace.058">Выберите тему обучения</b><span>Введите или произнесите тему либо начните с заметки, файла или фото.</span></span></li>
+<li class="rung"><span class="n">2</span><span><b data-k="workspace.059">Послушайте объяснение</b><span>Короткие понятные объяснения, при желании вслух.</span></span></li>
+<li class="rung"><span class="n">3</span><span><b data-k="workspace.060">Попробуйте сами</b><span>Ответьте своими словами. Попросите подсказку, а не готовый ответ.</span></span></li>
+<li class="rung"><span class="n">4</span><span><b data-k="workspace.061">Повторение</b><span>Карточки попадут в повторение только по вашему выбору.</span></span></li>
+<li class="rung"><span class="n">5</span><span><b data-k="workspace.062">Изучайте глубже</b><span>Объясните изученное своими словами или задайте связанный вопрос.</span></span></li>
+</ol>
+<div class="ladder-controls"><button class="btn btn--sec btn--sm" data-k="workspace.063" data-ladder-next="" type="button">Следующий шаг <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></button><button class="link-btn" data-k="workspace.064" data-ladder-reset="" type="button">Начать сначала</button></div>
+<p aria-live="polite" class="vh" data-ladder-live=""></p>
+</div>
+<div class="grid3" style="margin-top:var(--s7)">
+<figure class="shot" data-capture-key="SR-16" style="--ratio:1080/2400"><picture><source type="image/webp" srcset="/assets/screens/real/halo-study-new-lesson-20261013-480.webp 480w, /assets/screens/real/halo-study-new-lesson-20261013-720.webp 720w, /assets/screens/real/halo-study-new-lesson-20261013-1080.webp 1080w" sizes="(max-width:52rem) 72vw,22rem"><img src="/assets/screens/real/halo-study-new-lesson-20261013-720.jpg" width="1080" height="2400" decoding="async" loading="lazy" alt="Реальный снимок Study в Halo на Android, 13 октября 2026"></picture><figcaption class="captag"><b>Настоящий снимок экрана</b> · Study · реальный экран начала урока от 13 октября. Для практики и повторения нужны новые снимки.</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-17"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_thinking.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">СЦЕНАРИЙ РАБОТЫ HALO</p><strong>Практика маленькими шагами</strong><p class="evidence-card__desc">Экран практики описан, но ещё нужен снимок с настоящего устройства.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-18"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_idle.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">СЦЕНАРИЙ РАБОТЫ HALO</p><strong>Повторите изученное</strong><p class="evidence-card__desc">Сценарий повторения дорабатывается, снимок актуальной сборки ещё не сделан.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">Персональный ассистент, начинающийся с Android. Ваш ассистент, ваши устройства, ваш выбор.</p></div>
+<div><h2 data-k="footer.002">Продукт</h2><ul><li><a data-k="footer.003" href="/ru/how-it-works.html">Как работает Halo</a></li><li><a data-k="footer.004" href="/ru/workspace.html">Заметки, Canvas и Study</a></li><li><a data-k="footer.005" href="/ru/voice.html">Голос</a></li><li><a data-k="footer.006" href="/ru/kids.html">Детский режим</a></li><li><a data-k="footer.007" href="/ru/your-ai.html">Ваш ИИ</a></li><li><a data-k="footer.008" href="/ru/devices.html">Устройства</a></li></ul></div>
+<div><h2 data-k="footer.009">Доверие</h2><ul><li><a data-k="footer.010" href="/ru/privacy.html">Приватность и цена</a></li><li><a data-k="footer.011" href="/ru/status.html">Что работает сейчас</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Состояние разработки</a></li><li><a data-k="footer.013" href="/ru/design.html">Состояния и стиль</a></li></ul></div>
+<div><h2 data-k="footer.014">Разработка и тестирование</h2><ul><li><a data-k="footer.015" href="/ru/alpha.html">Попробовать альфу</a></li><li><a data-k="footer.016" href="/ru/developers.html">Разработчикам</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo для Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Этот сайт</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">На этом сайте нет cookie, аналитики или отслеживания. Выбор темы и отметки тестов остаются в вашем браузере.</span>
+<div aria-label="Цветовая тема" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">Системная</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Светлая</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Тёмная</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

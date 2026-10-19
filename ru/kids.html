@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Детский режим — заботливый Halo для детей (в разработке)</title>
+<meta content="Kids Mode — отдельный заботливый Halo для детей: простые слова, голос, подсказки до ответа, создание историй и подтверждение взрослого. В разработке." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/ru/kids" rel="canonical"/>
+<link rel="alternate" hreflang="en" href="https://halo-web-blue.vercel.app/kids"><link rel="alternate" hreflang="lv" href="https://halo-web-blue.vercel.app/lv/kids"><link rel="alternate" hreflang="ru" href="https://halo-web-blue.vercel.app/ru/kids"><link rel="alternate" hreflang="x-default" href="https://halo-web-blue.vercel.app/kids">
+<meta content="website" property="og:type"/>
+<meta content="Детский режим — заботливый Halo для детей (в разработке)" property="og:title"/>
+<meta content="Kids Mode — отдельный заботливый Halo для детей: простые слова, голос, подсказки до ответа, создание историй и подтверждение взрослого. В разработке." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="/assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="/css/fonts.css" rel="stylesheet"/>
+<link href="/css/tokens.css" rel="stylesheet"/>
+<link href="/css/site.css" rel="stylesheet"/>
+<script defer="" src="/js/vendor/lottie_light.min.js"></script>
+<script defer="" src="/js/locale-data.js"></script>
+<script defer="" src="/js/i18n.js"></script>
+<script defer="" src="/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Главная Halo" class="brand" href="/ru/index.html"><img alt="" class="wm-l" height="80" src="/assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Главная навигация" class="nav">
+<details class="nav-product" data-current=""><summary data-k="nav.001">Продукт <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="/ru/how-it-works.html">Как работает Halo<small>Спросите, подтвердите, проверьте результат</small></a>
+<a data-k="nav.003" href="/ru/workspace.html">Заметки, Canvas и Study<small>Ваше рабочее пространство с помощью Halo</small></a>
+<a data-k="nav.004" href="/ru/voice.html">Голос<small>Говорите, слушайте и читайте</small></a>
+<a aria-current="page" data-k="nav.005" href="/ru/kids.html">Детский режим<small>Более заботливый Halo · в разработке</small></a>
+</div></details>
+<a data-k="nav.006" href="/ru/your-ai.html">Ваш ИИ</a>
+<a data-k="nav.007" href="/ru/devices.html">Устройства</a>
+<a data-k="nav.008" href="/ru/privacy.html">Приватность</a>
+<a data-k="nav.009" href="/ru/status.html">Статус</a>
+<a data-k="nav.010" href="/ru/developers.html">Разработчикам</a>
+</nav>
+<label class="locale-picker" hidden=""><span class="vh">Язык сайта</span><select id="site-language" aria-label="Язык сайта"><option value="en">EN</option><option value="lv">LV</option><option value="ru">RU</option></select></label>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="/ru/alpha.html">Попробовать альфу</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Меню</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Главная навигация">
+<a data-k="nav.013" href="/ru/index.html">Главная <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="/ru/how-it-works.html">Как работает Halo <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.015" href="/ru/workspace.html">Заметки, Canvas и Study <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.016" href="/ru/voice.html">Голос <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a aria-current="page" class="sub" data-k="nav.017" href="/ru/kids.html">Детский режим <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="/ru/your-ai.html">Ваш ИИ <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="/ru/devices.html">Устройства <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="/ru/privacy.html">Приватность и цена <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="/ru/status.html">Что работает сейчас <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="/ru/developers.html">Разработчикам <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="/ru/alpha.html">Попробовать альфу для Android</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Исходный код на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero kids">
+<div class="wrap split">
+<div>
+<p class="crumbs" data-k="kids.001"><a href="/ru/index.html">Главная</a> / Kids Mode</p>
+<h1 class="display" data-k="kids.002" style="margin-top:var(--s4)">Более заботливый Halo для детей.</h1>
+<p class="lede" data-k="kids.003" style="margin-top:var(--s5)">Тот же внимательный Halo, но для младших пользователей: простые слова, голос в первую очередь, помощь в понимании, а не выдача ответов, и контроль взрослых.</p>
+<p style="margin-top:var(--s5)"><span class="status status--dev">В разработке</span></p>
+<p class="callout" data-k="kids.004" style="margin-top:var(--s5)"><b>Детский режим пока не входит в публичную сборку.</b> Эта страница рассказывает о разрабатываемых возможностях. Реальные скриншоты появятся после публичного релиза, а меры безопасности мы будем описывать только после реализации и проверки.</p>
+</div>
+<div><span aria-hidden="true" class="ring ring-xl" data-lottie="/assets/brand/kids/lottie/halo_kids_orb_idle_{theme}.json" data-play="view" data-themed=""><img alt="" data-src-dark="/assets/brand/kids/svg/halo_kids_orb_idle_dark.svg" data-src-light="/assets/brand/kids/svg/halo_kids_orb_idle_light.svg" height="240" loading="lazy" src="/assets/brand/kids/svg/halo_kids_orb_idle_light.svg" width="240"/></span></div>
+</div>
+</section>
+<section aria-labelledby="k1-title" class="section kids" style="padding-top:0">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="kids.005">Что меняется</span><h2 class="h2" data-k="kids.006" id="k1-title">Отдельный мир, а не перекрашенный взрослый интерфейс.</h2></div>
+<div class="grid3" style="margin-top:var(--s6)">
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-voice"></use></svg><h3 data-k="kids.007">Сначала голос</h3><p data-k="kids.008">Большая кнопка микрофона, ответы вслух и короткие фразы. Уметь читать полезно, но не обязательно.</p></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-guide_me"></use></svg><h3 data-k="kids.009">Немного вариантов за раз</h3><p data-k="kids.010">Не больше трёх вариантов на экране, крупные кнопки и понятный следующий шаг.</p></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-privacy"></use></svg><h3 data-k="kids.011">Разрешение взрослого</h3><p data-k="kids.012">Действия с телефоном, камера, разрешения и настройки требуют подтверждения взрослого.</p></article>
+</div>
+</div>
+</section>
+<section aria-labelledby="k2-title" class="section kids" style="padding-top:0">
+<div class="wrap">
+<div class="split">
+<div data-ladder="">
+<span class="eyebrow" data-k="kids.013">Помощь с домашними заданиями</span>
+<h2 class="h2" data-k="kids.014" id="k2-title">Подсказки прежде ответов.</h2>
+<p class="lede" data-k="kids.015">Ребёнок сможет сфотографировать домашнее задание и попросить помощи. Halo будет вести его маленькими шагами, чтобы понимание пришло самостоятельно.</p>
+<ol class="ladder">
+<li class="rung"><span class="n">1</span><span><b data-k="kids.016">«Что спрашивается в задаче?»</b><span>Halo читает задание вслух и проверяет, правильно ли понял фотографию.</span></span></li>
+<li class="rung"><span class="n">2</span><span><b data-k="kids.017">Небольшая подсказка</b><span>Небольшая подсказка в нужную сторону.</span></span></li>
+<li class="rung"><span class="n">3</span><span><b data-k="kids.018">Объяснить по-другому</b><span>Более простая иллюстрация или знакомый пример.</span></span></li>
+<li class="rung"><span class="n">4</span><span><b data-k="kids.019">«Попробуем ещё раз»</b><span>Ребёнок отвечает самостоятельно. Ошибки — часть обучения.</span></span></li>
+<li class="rung"><span class="n">5</span><span><b data-k="kids.020">Показать решение — только по запросу</b><span>После попытки решения и дополнительного подтверждения.</span></span></li>
+</ol>
+<div class="ladder-controls"><button class="btn btn--sec btn--sm" data-k="kids.021" data-ladder-next="" type="button">Следующий шаг <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-arrow_right"></use></svg></button><button class="link-btn" data-k="kids.022" data-ladder-reset="" type="button">Начать сначала</button></div>
+<p aria-live="polite" class="vh" data-ladder-live=""></p>
+</div>
+<figure class="evidence-card" data-capture-key="SR-25"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/kids/svg/halo_kids_orb_listening_light.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">ДЕТСКИЙ РЕЖИМ · В РАЗРАБОТКЕ</p><strong>Помощь с домашними заданиями</strong><p class="evidence-card__desc">Помощь по фото домашних заданий с подсказками разрабатывается и пока не прошла проверку для выпуска.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="k3-title" class="section kids" style="padding-top:0">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="kids.027">Создавать и читать</span><h2 class="h2" data-k="kids.028" id="k3-title">Истории, которые можно создать и послушать.</h2><p class="lede" data-k="kids.029">Дети смогут сочинять истории или создавать картинки с Halo, слушать чтение вслух с подсветкой слов. Поддержка будет доброжелательной, без обязательных баллов, серий и давления.</p></div>
+<div class="grid3" style="margin-top:var(--s6)">
+<figure class="evidence-card" data-capture-key="SR-24"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/kids/svg/halo_kids_orb_idle_light.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">ДЕТСКИЙ РЕЖИМ · В РАЗРАБОТКЕ</p><strong>Более заботливый Halo</strong><p class="evidence-card__desc">Детский режим ещё разрабатывается. Это фирменная иллюстрация, не скриншот готового режима.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-26"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/kids/svg/halo_kids_orb_speaking_light.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">ДЕТСКИЙ РЕЖИМ · В РАЗРАБОТКЕ</p><strong>Читайте истории вместе</strong><p class="evidence-card__desc">Чтение и совместное прослушивание историй планируются для детского режима.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-27"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/kids/svg/halo_kids_orb_approval_required_light.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">ДЕТСКИЙ РЕЖИМ · В РАЗРАБОТКЕ</p><strong>Решение принимает взрослый</strong><p class="evidence-card__desc">Подтверждение взрослого ещё разрабатывается и тестируется; функция не объявляется готовой.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="k4-title" class="section" style="padding-top:0">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="kids.042">Для взрослых</span><h2 class="h2" data-k="kids.043" id="k4-title">Что мы обещаем и чего пока не можем гарантировать.</h2></div>
+<div class="grid2" style="margin-top:var(--s6)">
+<article class="tile"><h3 data-k="kids.044">На что рассчитан детский режим</h3><ul class="small" style="list-style:none;display:grid;gap:.5rem;margin-top:var(--s2)"><li data-k="kids.045">Спрашивать взрослого перед действиями с телефоном, камерой и настройками</li><li data-k="kids.046">Скрывать расширенные настройки за разрешением взрослого</li><li data-k="kids.047">Говорить просто и доброжелательно, советовать спросить взрослого при сомнениях</li><li data-k="kids.048">Учить с помощью подсказок, а не выдавать готовые ответы</li></ul></article>
+<article class="tile"><h3 data-k="kids.049">Чего мы не утверждаем</h3><ul class="small" style="list-style:none;display:grid;gap:.5rem;margin-top:var(--s2)"><li data-k="kids.050">Что детский режим готов или безопасен без присмотра взрослых</li><li data-k="kids.051">Что любой ответ ИИ всегда верен</li><li data-k="kids.052">Что выбранный провайдер соблюдает детские ограничения — проверяйте его правила</li><li data-k="kids.053">Наличие какой-либо сертификации или нормативного одобрения</li></ul></article>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">Персональный ассистент, начинающийся с Android. Ваш ассистент, ваши устройства, ваш выбор.</p></div>
+<div><h2 data-k="footer.002">Продукт</h2><ul><li><a data-k="footer.003" href="/ru/how-it-works.html">Как работает Halo</a></li><li><a data-k="footer.004" href="/ru/workspace.html">Заметки, Canvas и Study</a></li><li><a data-k="footer.005" href="/ru/voice.html">Голос</a></li><li><a data-k="footer.006" href="/ru/kids.html">Детский режим</a></li><li><a data-k="footer.007" href="/ru/your-ai.html">Ваш ИИ</a></li><li><a data-k="footer.008" href="/ru/devices.html">Устройства</a></li></ul></div>
+<div><h2 data-k="footer.009">Доверие</h2><ul><li><a data-k="footer.010" href="/ru/privacy.html">Приватность и цена</a></li><li><a data-k="footer.011" href="/ru/status.html">Что работает сейчас</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Состояние разработки</a></li><li><a data-k="footer.013" href="/ru/design.html">Состояния и стиль</a></li></ul></div>
+<div><h2 data-k="footer.014">Разработка и тестирование</h2><ul><li><a data-k="footer.015" href="/ru/alpha.html">Попробовать альфу</a></li><li><a data-k="footer.016" href="/ru/developers.html">Разработчикам</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo для Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Этот сайт</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">На этом сайте нет cookie, аналитики или отслеживания. Выбор темы и отметки тестов остаются в вашем браузере.</span>
+<div aria-label="Цветовая тема" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">Системная</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Светлая</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Тёмная</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>

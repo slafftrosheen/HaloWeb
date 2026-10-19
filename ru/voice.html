@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Голос — говорите, слушайте и читайте с Halo</title>
+<meta content="Голос в Halo: говорите вместо набора текста, проверяйте диктовку, слушайте ответы и заметки и прерывайте озвучивание. Локальные голоса доступны после установки; поддержка зависит от телефона и языка." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#FAFAF4" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#060330" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<link href="https://halo-web-blue.vercel.app/ru/voice" rel="canonical"/>
+<link rel="alternate" hreflang="en" href="https://halo-web-blue.vercel.app/voice"><link rel="alternate" hreflang="lv" href="https://halo-web-blue.vercel.app/lv/voice"><link rel="alternate" hreflang="ru" href="https://halo-web-blue.vercel.app/ru/voice"><link rel="alternate" hreflang="x-default" href="https://halo-web-blue.vercel.app/voice">
+<meta content="website" property="og:type"/>
+<meta content="Голос — говорите, слушайте и читайте с Halo" property="og:title"/>
+<meta content="Голос в Halo: говорите вместо набора текста, проверяйте диктовку, слушайте ответы и заметки и прерывайте озвучивание. Локальные голоса доступны после установки; поддержка зависит от телефона и языка." property="og:description"/>
+<meta content="https://halo-web-blue.vercel.app/assets/og/halo-og-light.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/meta/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<link as="font" crossorigin="" href="/assets/fonts/sora-variable.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/atkinson-hyperlegible-next-variable.woff2" rel="preload" type="font/woff2"/>
+<script>document.documentElement.setAttribute('data-js','');try{var t=localStorage.getItem('halo-web-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link href="/css/fonts.css" rel="stylesheet"/>
+<link href="/css/tokens.css" rel="stylesheet"/>
+<link href="/css/site.css" rel="stylesheet"/>
+<script defer="" src="/js/vendor/lottie_light.min.js"></script>
+<script defer="" src="/js/locale-data.js"></script>
+<script defer="" src="/js/i18n.js"></script>
+<script defer="" src="/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+<div class="wrap hdr">
+<a aria-label="Главная Halo" class="brand" href="/ru/index.html"><img alt="" class="wm-l" height="80" src="/assets/brand/halo-wordmark-light.svg" width="200"/><img alt="" class="wm-d" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/></a>
+<nav aria-label="Главная навигация" class="nav">
+<details class="nav-product" data-current=""><summary data-k="nav.001">Продукт <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_down"></use></svg></summary>
+<div class="panel">
+<a data-k="nav.002" href="/ru/how-it-works.html">Как работает Halo<small>Спросите, подтвердите, проверьте результат</small></a>
+<a data-k="nav.003" href="/ru/workspace.html">Заметки, Canvas и Study<small>Ваше рабочее пространство с помощью Halo</small></a>
+<a aria-current="page" data-k="nav.004" href="/ru/voice.html">Голос<small>Говорите, слушайте и читайте</small></a>
+<a data-k="nav.005" href="/ru/kids.html">Детский режим<small>Более заботливый Halo · в разработке</small></a>
+</div></details>
+<a data-k="nav.006" href="/ru/your-ai.html">Ваш ИИ</a>
+<a data-k="nav.007" href="/ru/devices.html">Устройства</a>
+<a data-k="nav.008" href="/ru/privacy.html">Приватность</a>
+<a data-k="nav.009" href="/ru/status.html">Статус</a>
+<a data-k="nav.010" href="/ru/developers.html">Разработчикам</a>
+</nav>
+<label class="locale-picker" hidden=""><span class="vh">Язык сайта</span><select id="site-language" aria-label="Язык сайта"><option value="en">EN</option><option value="lv">LV</option><option value="ru">RU</option></select></label>
+<div class="hdr-cta"><a class="btn btn--pri btn--sm" data-k="nav.011" href="/ru/alpha.html">Попробовать альфу</a></div>
+<details class="menu"><summary class="menu-btn"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-menu"></use></svg><span data-k="nav.012">Меню</span></summary>
+<div class="menu-sheet">
+<nav aria-label="Главная навигация">
+<a data-k="nav.013" href="/ru/index.html">Главная <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.014" href="/ru/how-it-works.html">Как работает Halo <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.015" href="/ru/workspace.html">Заметки, Canvas и Study <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a aria-current="page" class="sub" data-k="nav.016" href="/ru/voice.html">Голос <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a class="sub" data-k="nav.017" href="/ru/kids.html">Детский режим <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.018" href="/ru/your-ai.html">Ваш ИИ <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.019" href="/ru/devices.html">Устройства <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.020" href="/ru/privacy.html">Приватность и цена <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.021" href="/ru/status.html">Что работает сейчас <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+<a data-k="nav.022" href="/ru/developers.html">Разработчикам <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-chevron_right"></use></svg></a>
+</nav>
+<div class="menu-foot">
+<a class="btn btn--pri" data-k="nav.023" href="/ru/alpha.html">Попробовать альфу для Android</a>
+<a class="btn btn--sec" data-k="nav.024" href="https://github.com/slafftrosheen/Halo" rel="noopener">Исходный код на GitHub <svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-external"></use></svg></a>
+</div>
+</div></details>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="wrap">
+<p class="crumbs" data-k="voice.001"><a href="/ru/index.html">Главная</a> / Voice</p>
+<h1 class="display" data-k="voice.002" style="margin-top:var(--s4)">Говорите, слушайте, читайте вместе с Halo.</h1>
+<p class="lede" data-k="voice.003" style="margin-top:var(--s5)">Голос в Halo — не отдельный режим. Можно говорить и слушать на главной, в заметках, Canvas и Study — везде, где это удобнее чтения и набора текста.</p>
+</div>
+</section>
+<section aria-labelledby="vs-title" class="band section" data-vstates="">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.004">Что показывает кольцо Halo</span><h2 class="h2" data-k="voice.005" id="vs-title">Всегда видно, что Halo делает с голосом.</h2></div>
+<ul class="vstates">
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_listening.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_listening.svg" width="240"/></span><b data-k="voice.006">Слушает</b><span>Микрофон включён, Halo вас слышит. До запуска прослушивание не ведётся.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_capturing_voice.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_capturing_voice.svg" width="240"/></span><b data-k="voice.007">Записывает речь</b><span>Слова появляются на экране во время речи, чтобы вы могли заметить ошибки.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_speaking.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_speaking.svg" width="240"/></span><b data-k="voice.008">Говорит</b><span>Halo читает свой ответ или вашу заметку вслух.</span></li>
+<li class="vstate"><span aria-hidden="true" class="ring" data-lottie="/assets/brand/orb/lottie/halo_orb_stopped.json"><img alt="" decoding="async" height="240" loading="lazy" src="/assets/brand/orb/svg/halo_orb_stopped.svg" width="240"/></span><b data-k="voice.009">Остановлено</b><span>Нажмите «Стоп» или начните говорить — Halo немедленно остановится.</span></li>
+</ul>
+<div class="cta-row" style="margin-top:var(--s5)"><button class="btn btn--sec btn--sm" data-k="voice.010" data-vplay="" type="button"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-play"></use></svg> Показать четыре состояния</button></div>
+<p aria-live="polite" class="vh" data-vlive=""></p>
+</div>
+</section>
+<section aria-labelledby="d-title" class="section">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.011">Везде, где пишете и читаете</span><h2 class="h2" data-k="voice.012" id="d-title">Продиктуйте, проверьте, используйте.</h2></div>
+<div class="grid3" style="margin-top:var(--s6)">
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-mic"></use></svg><h3 data-k="voice.013">Диктовка с подтверждением</h3><p data-k="voice.014">При диктовке в заметку или поле Halo сначала показывает распознанный текст. Выберите «Использовать», «Изменить» или «Отклонить» — ничего не вставляется автоматически.</p><span class="status status--available" data-k="voice.015">Доступно в альфа-версии</span></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-speaker"></use></svg><h3 data-k="voice.016">Читать вслух</h3><p data-k="voice.017">Слушайте ответы, заметки и объяснения уроков. Остановить можно в любой момент.</p><span class="status status--available" data-k="voice.018">Доступно в альфа-версии</span></article>
+<article class="tile"><svg aria-hidden="true" class="ic" focusable="false"><use href="/assets/brand/icons.svg#i-voice"></use></svg><h3 data-k="voice.019">Прервать в любой момент</h3><p data-k="voice.020">Начните говорить, пока Halo отвечает: он остановится и выслушает вас. Диалог можно продолжать.</p><span class="status status--available" data-k="voice.021">Доступно · зависит от телефона</span></article>
+</div>
+<div class="grid3" style="margin-top:var(--s7)">
+<figure class="evidence-card" data-capture-key="SR-03"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_listening.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">СЦЕНАРИЙ РАБОТЫ HALO</p><strong>Слушает</strong><p class="evidence-card__desc">Актуальный экран диктовки ещё нужно снять с реального телефона.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-12"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_capturing_voice.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">СЦЕНАРИЙ РАБОТЫ HALO</p><strong>Проверьте, что услышал Halo</strong><p class="evidence-card__desc">Подтверждение диктовки предусмотрено дизайном; после проверки нужен новый реальный скриншот.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+<figure class="evidence-card" data-capture-key="SR-19"><div class="evidence-card__mark" aria-hidden="true"><img src="/assets/brand/orb/svg/halo_orb_speaking.svg" alt="" width="180" height="180" loading="lazy"></div><p class="evidence-card__label">СЦЕНАРИЙ РАБОТЫ HALO</p><strong>Слушайте или читайте</strong><p class="evidence-card__desc">Чтение вслух — настоящая функция; эта фирменная иллюстрация не является скриншотом.</p><figcaption>Иллюстрация состояния Halo · не скриншот приложения</figcaption></figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="l-title" class="section" style="padding-top:0">
+<div class="wrap grid2" style="gap:clamp(2rem,1rem + 4vw,4.5rem)">
+<div class="head">
+<span class="eyebrow" data-k="voice.034">Голоса на телефоне</span>
+<h2 class="h2" data-k="voice.035" id="l-title">Локальные голоса после установки.</h2>
+<p class="lede" data-k="voice.036">Установите локальный голосовой пакет, чтобы Halo озвучивал текст без отправки его в интернет. Выбирайте, слушайте и подтверждайте голос сами.</p>
+<p class="callout" data-k="voice.037" style="margin-top:var(--s5)">Качество голосовых функций зависит от телефона, языка и установленных пакетов. Офлайн-режим доступен не для всех языков, скорость зависит от устройства.</p>
+</div>
+<div>
+<table class="roles">
+<thead><tr><th data-k="voice.038">Компонент</th><th data-k="voice.039">Что делает</th><th data-k="voice.040">Сейчас</th></tr></thead>
+<tbody>
+<tr><td data-k="voice.041">Синтез речи</td><td data-k="voice.042">Загружаемый локальный голосовой пакет. При проверке на телефоне тестера десять голосов работали на английском, латышском, русском и польском.</td><td><span class="status status--available" data-k="voice.043">Необязательная загрузка</span></td></tr>
+<tr><td data-k="voice.044">Альтернативный голос</td><td data-k="voice.045">Другой локальный пакет для английского и китайского языков.</td><td><span class="status status--available" data-k="voice.046">Необязательная загрузка</span></td></tr>
+<tr><td data-k="voice.047">Распознавание речи</td><td data-k="voice.048">Локальная модель распознавания речи: установите и проверьте со своим микрофоном.</td><td><span class="status status--dev" data-k="voice.049">Проверяется на телефонах</span></td></tr>
+<tr><td data-k="voice.050">Определение начала и конца речи</td><td data-k="voice.051">Небольшая необязательная модель, определяющая начало и конец речи.</td><td><span class="status status--dev" data-k="voice.052">Необязательно · на проверке</span></td></tr>
+<tr><td data-k="voice.053">Резервный вариант</td><td data-k="voice.054">Встроенный голосовой движок Android.</td><td><span class="status status--available" data-k="voice.055">Доступно в альфа-версии</span></td></tr>
+</tbody>
+</table>
+<details class="plain" style="margin-top:var(--s4)"><summary data-k="voice.056">Названия моделей для интересующихся</summary><p class="small muted" data-k="voice.057">Озвучивание: Supertonic 3 (INT8). Альтернатива: Kokoro 1.1 (опубликованный пакет для английского и китайского). Распознавание речи: Whisper Small INT8 (Whisper Base INT8 — облегчённый вариант). Определение речевой активности: Silero VAD. Каждый пакет загружается по вашему выбору, но загрузка не гарантирует хорошую работу на конкретном телефоне.</p></details>
+</div>
+</div>
+</section>
+<section aria-labelledby="a-title" class="section" style="padding-top:0">
+<div class="wrap">
+<div class="head"><span class="eyebrow" data-k="voice.058">Доступность</span><h2 class="h2" data-k="voice.059" id="a-title">Голос помогает всем, кому неудобно печатать или читать.</h2><p class="lede" data-k="voice.060">Это важно детям, пожилым людям, людям со слабым зрением и тем, у кого заняты руки. Голос и текст дают доступ к одним и тем же возможностям Halo.</p></div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><img alt="halo" class="wm" height="80" src="/assets/brand/halo-wordmark-dark.svg" width="200"/><p data-k="footer.001">Персональный ассистент, начинающийся с Android. Ваш ассистент, ваши устройства, ваш выбор.</p></div>
+<div><h2 data-k="footer.002">Продукт</h2><ul><li><a data-k="footer.003" href="/ru/how-it-works.html">Как работает Halo</a></li><li><a data-k="footer.004" href="/ru/workspace.html">Заметки, Canvas и Study</a></li><li><a data-k="footer.005" href="/ru/voice.html">Голос</a></li><li><a data-k="footer.006" href="/ru/kids.html">Детский режим</a></li><li><a data-k="footer.007" href="/ru/your-ai.html">Ваш ИИ</a></li><li><a data-k="footer.008" href="/ru/devices.html">Устройства</a></li></ul></div>
+<div><h2 data-k="footer.009">Доверие</h2><ul><li><a data-k="footer.010" href="/ru/privacy.html">Приватность и цена</a></li><li><a data-k="footer.011" href="/ru/status.html">Что работает сейчас</a></li><li><a data-k="footer.012" href="https://github.com/slafftrosheen/Halo/blob/main/CURRENT-STATE.md" rel="noopener">Состояние разработки</a></li><li><a data-k="footer.013" href="/ru/design.html">Состояния и стиль</a></li></ul></div>
+<div><h2 data-k="footer.014">Разработка и тестирование</h2><ul><li><a data-k="footer.015" href="/ru/alpha.html">Попробовать альфу</a></li><li><a data-k="footer.016" href="/ru/developers.html">Разработчикам</a></li><li><a data-k="footer.017" href="https://github.com/slafftrosheen/Halo" rel="noopener">Halo для Android</a></li><li><a data-k="footer.018" href="https://github.com/slafftrosheen/HaloLinux" rel="noopener">HaloLinux</a></li><li><a data-k="footer.019" href="https://github.com/slafftrosheen/HaloWeb" rel="noopener">Этот сайт</a></li></ul></div>
+</div>
+<div class="foot-base">
+<span data-k="footer.020">На этом сайте нет cookie, аналитики или отслеживания. Выбор темы и отметки тестов остаются в вашем браузере.</span>
+<div aria-label="Цветовая тема" class="theme-pick" role="group"><button aria-pressed="true" data-k="footer.021" data-theme-set="system" type="button">Системная</button><button aria-pressed="false" data-k="footer.022" data-theme-set="light" type="button">Светлая</button><button aria-pressed="false" data-k="footer.023" data-theme-set="dark" type="button">Тёмная</button></div>
+</div>
+</div>
+</footer>
+</body>
+</html>
