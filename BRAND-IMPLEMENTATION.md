@@ -11,7 +11,7 @@ The authoritative design sources are retained at:
 
 ## Production implementation
 
-Pages are served from the root. Editable sources live in `src/pages/` and `src/partials/`; `tools/build_pages.py` regenerates the public HTML. English is the active language. Previous EN/LV/RU runtime translation scripts were retired in this UI migration; add localized page variants from the source templates in a subsequent coordinated pass.
+Pages are served from the root. Editable sources live in `src/pages/` and `src/partials/`; `tools/build_pages.py` regenerates the public HTML. English is the canonical static source. A compact EN/LV/RU selector and curated locale dictionaries in `js/locale-data.js` and `copy/{lv,ru}.json` translate reviewed text without network calls. Untranslated long-form passages intentionally fall back to English; fully localized static pages, QA and editorial review are still pending.
 
 Visual tokens use Night Ink, Halo Mint, Cream and Deep Mint, Sora display type and Atkinson Hyperlegible Next body type. Brand animations are self-hosted, event-driven, stop when hidden, and honor reduced motion. The 13-page family includes a noindex design kit.
 

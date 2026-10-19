@@ -404,7 +404,22 @@ window.HaloLocaleStrings = {
     "No percentages. No launch dates. Just where things stand.": "Никаких процентов и дат релиза. Только реальное состояние.",
     "Real capture · Home · Android alpha test build, 13 Oct 2026.": "Настоящий снимок · Главная · Android-альфа от 13.10.2026.",
     "Bring your own account.": "Используйте собственный аккаунт.",
-    "No tracking.": "Без отслеживания."
+    "No tracking.": "Без отслеживания.",
+    "Halo — AI that feels like second nature": "Halo — ИИ, который становится второй натурой",
+    "How Halo works — ask, approve, see what happened": "Как работает Halo — спросите, подтвердите, проверьте",
+    "Notes, Canvas, Memory and Study — Halo": "Заметки, Canvas, память и обучение — Halo",
+    "Voice — talk, listen and read along with Halo": "Голос — говорите, слушайте и читайте с Halo",
+    "Kids Mode — a gentler Halo for children (in development)": "Детский режим — заботливый Halo для детей (в разработке)",
+    "Where your AI runs — on your phone, your machine, or a provider you choose": "Где работает ваш ИИ — на телефоне, компьютере или у выбранного провайдера",
+    "Your devices — Android first, HaloLinux in development": "Ваши устройства — Android сейчас, HaloLinux в разработке",
+    "Privacy, openness and price — Halo": "Приватность, открытость и цена — Halo",
+    "What’s real today — Halo status": "Что работает сейчас — состояние Halo",
+    "Developers — Halo architecture, repositories and contributing": "Разработчикам — архитектура Halo и репозитории",
+    "Try the Halo Android alpha — download, test kit and feedback": "Попробуйте Halo для Android — загрузка, тесты и отзывы",
+    "Presence and brand — the Halo open ring": "Состояния и фирменный стиль — открытое кольцо Halo",
+    "Email draft requested. Your feedback has not been sent yet. If your mail app did not open, copy the feedback and email it to slaff.trosheen@gmail.com.": "Запрошено создание черновика письма. Отзыв ещё не отправлен. Если почтовое приложение не открылось, скопируйте отзыв и отправьте его на slaff.trosheen@gmail.com.",
+    "A personal assistant that starts on Android. Your assistant, your devices, your choice.": "Персональный ассистент, начинающийся с Android. Ваш ассистент, ваши устройства, ваш выбор.",
+    "No cookies, analytics or tracking on this website. Your theme and checklist choices stay in your browser.": "На этом сайте нет cookie, аналитики или отслеживания. Выбор темы и отметки тестов остаются в вашем браузере."
   },
   "lv": {
     "Product": "Produkts",
@@ -810,6 +825,21 @@ window.HaloLocaleStrings = {
     "No percentages. No launch dates. Just where things stand.": "Bez procentiem un izlaišanas datumiem. Tikai īstais stāvoklis.",
     "Real capture · Home · Android alpha test build, 13 Oct 2026.": "Īsts ekrānuzņēmums · Sākumlapa · Android alfa, 13.10.2026.",
     "Bring your own account.": "Izmantojiet savu kontu.",
-    "No tracking.": "Bez izsekošanas."
+    "No tracking.": "Bez izsekošanas.",
+    "Halo — AI that feels like second nature": "Halo — MI, kas kļūst par otro dabu",
+    "How Halo works — ask, approve, see what happened": "Kā darbojas Halo — jautājiet, apstipriniet, pārbaudiet",
+    "Notes, Canvas, Memory and Study — Halo": "Piezīmes, Canvas, atmiņa un mācības — Halo",
+    "Voice — talk, listen and read along with Halo": "Balss — runājiet, klausieties un lasiet ar Halo",
+    "Kids Mode — a gentler Halo for children (in development)": "Bērnu režīms — saudzīgāks Halo bērniem (izstrādē)",
+    "Where your AI runs — on your phone, your machine, or a provider you choose": "Kur darbojas jūsu MI — tālrunī, datorā vai pie izvēlēta pakalpojumu sniedzēja",
+    "Your devices — Android first, HaloLinux in development": "Jūsu ierīces — Android tagad, HaloLinux izstrādē",
+    "Privacy, openness and price — Halo": "Privātums, atklātība un cena — Halo",
+    "What’s real today — Halo status": "Kas darbojas šobrīd — Halo statuss",
+    "Developers — Halo architecture, repositories and contributing": "Izstrādātājiem — Halo arhitektūra un repozitoriji",
+    "Try the Halo Android alpha — download, test kit and feedback": "Izmēģiniet Halo Android alfa versiju — lejupielāde, testi un atsauksmes",
+    "Presence and brand — the Halo open ring": "Stāvokļi un zīmols — Halo atvērtais gredzens",
+    "Email draft requested. Your feedback has not been sent yet. If your mail app did not open, copy the feedback and email it to slaff.trosheen@gmail.com.": "Pieprasīta e-pasta melnraksta atvēršana. Atsauksme vēl nav nosūtīta. Ja pasta lietotne neatvērās, kopējiet atsauksmi un nosūtiet to uz slaff.trosheen@gmail.com.",
+    "A personal assistant that starts on Android. Your assistant, your devices, your choice.": "Personīgais asistents, kas sākas Android ierīcē. Jūsu asistents, jūsu ierīces, jūsu izvēle.",
+    "No cookies, analytics or tracking on this website. Your theme and checklist choices stay in your browser.": "Šajā vietnē nav sīkdatņu, analītikas vai izsekošanas. Motīva izvēle un testu atzīmes paliek jūsu pārlūkā."
   }
 };

@@ -25,7 +25,16 @@
   function setTheme(mode) {
     if (mode === 'system') { root.removeAttribute('data-theme'); try { localStorage.removeItem(THEME_KEY); } catch (_) {} }
     else { root.setAttribute('data-theme', mode); try { localStorage.setItem(THEME_KEY, mode); } catch (_) {} }
-    $$('[data-theme-set]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-set') === mode)); });
+    $('[data-theme-set]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-set') === mode)); });
+    /* Kids illustrations ship as distinct dark/light branded stills. */
+    $('img[src*="assets/brand/kids/svg/halo_kids_orb_"]').forEach(function (img) {
+      var original = img.getAttribute('data-light-base');
+      if (!original) {
+        original = img.getAttribute('src').replace(/_(?:light|dark)\.svg$/, '');
+        img.setAttribute('data-light-base', original);
+      }
+      img.setAttribute('src', original + '_' + theme() + '.svg');
+    });
     $$('.ring[data-themed]').forEach(function (r) { if (r._anim) { r._anim.destroy(); r._anim = null; r.classList.remove('is-live'); } swapStill(r); });
   }
   function currentMode() { try { return localStorage.getItem(THEME_KEY) || 'system'; } catch (_) { return 'system'; } }

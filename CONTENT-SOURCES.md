@@ -15,7 +15,7 @@
 - Kids, native overlay and HaloLinux previews require current physical acceptance before being marketed as shipped.
 - Private peer synchronization, Windows and Google Play are future directions, not existing public release capabilities.
 - No generated lifestyle photos, simulated videos or hand-drawn faux-Android screens remain in the deployed site.
-- English is the sole new design language until a full translation pass; the archived documentation contains prior trilingual history.
+- English is the canonical source; Russian and Latvian translation catalogs now cover core UI, navigation, product introductions and status text. Some longer English fallback content remains; source-language review and native-language QA are pending.
 
 ## Feedback and privacy
 

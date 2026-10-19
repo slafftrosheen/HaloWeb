@@ -22,7 +22,7 @@ The website is a product introduction and accurate alpha programme, not a remote
 
 ## Edit workflow
 
-Edit `src/pages/*.html` and `src/partials/*.html`. Use `tools/build_pages.py` to regenerate the checked-in HTML and `copy/en.json`. English is the only new design language; translate in a separate coordinated pass.
+Edit `src/pages/*.html` and `src/partials/*.html`. Use `tools/build_pages.py` to regenerate the checked-in HTML and `copy/en.json`. English is the canonical source. A progressive Russian/Latvian selector localizes reviewed core copy; long-form English fallbacks remain until editorial completion.
 
 `css/tokens.css`, `css/site.css`, `css/fonts.css`, `js/site.js`, `js/alpha.js` and the self-hosted Lottie renderer implement the delivered design. Responsive output is pure HTML/CSS/JS with no package manager or client API.
 
