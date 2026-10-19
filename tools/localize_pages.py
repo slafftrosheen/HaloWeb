@@ -64,11 +64,12 @@ def translate_html(source, language, catalog, name):
     output = re.sub(r'\bhref="([\w-]+\.html)(#[^"]*)?"',
                     lambda m: 'href="/' + language + '/' + m.group(1) + (m.group(2) or '') + '"', output)
 
-    canonical = BASE + '/' + language + '/' + ('' if name == 'index' else name)
-    output = re.sub(r'(<link\s+[^>]*rel="canonical"\s+href=")[^"]+',
-                    lambda m: m.group(1) + canonical, output)
-    # English hreflang stays on the site root; other entries keep their paths.
-    # Every source page is also available without JavaScript.
+    canonical_en = BASE + '/' + ('' if name == 'index' else name)
+    canonical_locale = BASE + '/' + language + '/' + ('' if name == 'index' else name)
+    output = output.replace('href="' + canonical_en + '"',
+                            'href="' + canonical_locale + '"', 1)
+    # English hreflang continues to point at the root; localized pages
+    # remain directly available without JavaScript.
     return output
 
 def main():
