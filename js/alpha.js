@@ -45,7 +45,7 @@
     var preview = document.getElementById('feedback-preview');
     var fieldLabel = function (name) { var el = form.elements[name]; return el ? el.closest('label').firstChild.textContent.trim().replace(/\s*\((optional|required)\)$/, '') : name; };
     function prepare() {
-      var data = new FormData(form), lines = [COPY.subject, ''];
+      var data = new FormData(form), lines = [tr(COPY.subject), ''];
       ['name', 'email', 'version', 'host', 'screen', 'summary', 'expected', 'steps'].forEach(function (n) {
         var v = String(data.get(n) || '').trim(); if (v) lines.push(fieldLabel(n) + ':\n' + v + '\n');
       });
@@ -58,14 +58,14 @@
       var body = lines.join('\n'); pre.textContent = body; return body;
     }
     function valid() {
-      ['screen', 'summary'].forEach(function (n) { var f = form.elements[n]; f.setCustomValidity(f.value.trim() ? '' : COPY.required); });
+      ['screen', 'summary'].forEach(function (n) { var f = form.elements[n]; f.setCustomValidity(f.value.trim() ? '' : tr(COPY.required)); });
       if (form.reportValidity()) return true; status.textContent = tr(COPY.required); return false;
     }
     Array.prototype.forEach.call(form.querySelectorAll('[data-needs-js]'), function (b) { b.disabled = false; });
     form.addEventListener('submit', function (e) {
       e.preventDefault(); if (!valid()) return;
       var body = prepare(), a = document.createElement('a');
-      a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent(COPY.subject + ' — ' + form.elements.screen.value.trim()) + '&body=' + encodeURIComponent(body);
+      a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent(tr(COPY.subject) + ' — ' + form.elements.screen.value.trim()) + '&body=' + encodeURIComponent(body);
       a.hidden = true; document.body.appendChild(a); a.click(); a.remove();
       preview.open = true; status.textContent = tr(COPY.opened);   /* a draft, never "sent" */
     });
