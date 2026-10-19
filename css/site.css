@@ -459,3 +459,4 @@ details.plain summary{cursor:pointer;font-weight:700;min-height:var(--tap);displ
 .locale-picker select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 @media(max-width:63.99rem){.hdr{gap:var(--s2)}.locale-picker{margin-left:auto}.menu{margin-left:0}}
 @media(max-width:23.4rem){.hdr-cta{display:none}.locale-picker{margin-left:auto}}
+@media(max-width:30rem){.hdr-cta{display:none}.hdr{gap:var(--s2)}.locale-picker{margin-inline-start:auto}}

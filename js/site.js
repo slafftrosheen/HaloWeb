@@ -9,6 +9,7 @@
   var THEME_KEY = 'halo-web-theme';
   function $(s, c) { return (c || document).querySelector(s); }
   function $$(s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
+  function tr(s) { return window.HaloI18n ? window.HaloI18n.t(s) : s; }
   function theme() {
     var t = root.getAttribute('data-theme');
     if (t) return t;
@@ -35,6 +36,7 @@
   var header = $('.site-header');
   function onScroll() { if (header) header.classList.toggle('is-scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  window.addEventListener('halo:language', function () { if (typeof fit === 'function') fit(); });
   $$('details.menu, details.nav-product').forEach(function (d) {
     d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; $('summary', d).focus(); } });
     $$('a', d).forEach(function (a) { a.addEventListener('click', function () { d.open = false; }); });
@@ -177,7 +179,7 @@
       var target = btns[i].getAttribute('data-fig');
       figs.forEach(function (f) { f.classList.toggle('is-on', f.getAttribute('data-fig') === target); });
       var r = $('.ring', btns[i]); if (r) mount(r, { thenStill: false });
-      if (live) live.textContent = 'Step ' + (i + 1) + ' of ' + btns.length + ': ' + $('.st-t', btns[i]).textContent;
+      if (live) live.textContent = tr('Step') + ' ' + (i + 1) + ' ' + tr('of') + ' ' + btns.length + ': ' + $('.st-t', btns[i]).textContent;
       if (fromUser) stop();
     }
     function stop() { if (timer) { clearInterval(timer); timer = null; } if (playBtn) playBtn.hidden = false; if (stopBtn) stopBtn.hidden = true; }
@@ -197,7 +199,7 @@
     if (!btn) return;
     var stopVoice = document.createElement('button');
     stopVoice.type = 'button'; stopVoice.className = 'btn btn--sec btn--sm';
-    stopVoice.textContent = 'Stop preview'; stopVoice.hidden = true;
+    stopVoice.textContent = tr('Stop preview'); stopVoice.hidden = true;
     stopVoice.setAttribute('data-voice-stop', '');
     btn.insertAdjacentElement('afterend', stopVoice);
     function halt() {
@@ -244,10 +246,10 @@
     [keep, discard].forEach(function (b) { b.disabled = false; });
     function set(state, msg) {
       card.setAttribute('data-state', state);
-      $('.kind', card).textContent = state === 'saved' ? 'Saved card' : 'Halo suggestion · draft';
+      $('.kind', card).textContent = tr(state === 'saved' ? 'Saved card' : 'Halo suggestion · draft');
       if (line) { line.classList.toggle('is-saved', state === 'saved'); line.classList.toggle('is-gone', state === 'discarded'); }
       keep.hidden = discard.hidden = state !== 'draft'; reset.hidden = state === 'draft';
-      st.textContent = msg;
+      st.textContent = tr(msg);
     }
     keep.addEventListener('click', function () { set('saved', 'Kept. The card is now part of your canvas.'); microFx(w, 'apply_draft', 'halo_fx_apply_draft_applied'); reset.focus(); });
     discard.addEventListener('click', function () { set('discarded', 'Discarded. Your canvas is exactly as it was.'); reset.focus(); });

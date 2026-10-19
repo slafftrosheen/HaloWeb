@@ -3,6 +3,7 @@
    The form never stores or sends anything: it prepares a mail draft or copies text. */
 (function () {
   'use strict';
+  function tr(s) { return window.HaloI18n ? window.HaloI18n.t(s) : s; }
   var COPY = {
     progress: '{done} of {total} tried',
     subject: 'Halo feedback',
@@ -23,10 +24,11 @@
 
   function refresh() {
     var done = checks.filter(function (c) { return c.checked; });
-    if (label) label.textContent = COPY.progress.replace('{done}', done.length).replace('{total}', checks.length);
+    if (label) label.textContent = tr(COPY.progress).replace('{done}', done.length).replace('{total}', checks.length);
     if (bar) bar.style.width = (done.length / checks.length * 100) + '%';
     try { localStorage.setItem(KEY, JSON.stringify(done.map(function (c) { return c.getAttribute('data-alpha-step'); }))); } catch (_) {}
   }
+  window.addEventListener('halo:language', refresh);
   if (checks.length) {
     var saved = [];
     try { saved = JSON.parse(localStorage.getItem(KEY) || '[]'); if (!Array.isArray(saved)) saved = []; } catch (_) { saved = []; }
@@ -49,15 +51,15 @@
       });
       lines.push(fieldLabel('kind') + ': ' + form.elements.kind.selectedOptions[0].textContent);
       if (data.get('rating')) lines.push(fieldLabel('rating') + ': ' + form.elements.rating.selectedOptions[0].textContent);
-      lines.push('', COPY.tried + ':');
+      lines.push('', tr(COPY.tried) + ':');
       var tried = checks.filter(function (c) { return c.checked; });
-      if (!tried.length) lines.push(COPY.notTried);
+      if (!tried.length) lines.push(tr(COPY.notTried));
       tried.forEach(function (c) { lines.push('- ' + c.closest('label').querySelector('strong').firstChild.textContent.trim()); });
       var body = lines.join('\n'); pre.textContent = body; return body;
     }
     function valid() {
       ['screen', 'summary'].forEach(function (n) { var f = form.elements[n]; f.setCustomValidity(f.value.trim() ? '' : COPY.required); });
-      if (form.reportValidity()) return true; status.textContent = COPY.required; return false;
+      if (form.reportValidity()) return true; status.textContent = tr(COPY.required); return false;
     }
     Array.prototype.forEach.call(form.querySelectorAll('[data-needs-js]'), function (b) { b.disabled = false; });
     form.addEventListener('submit', function (e) {
@@ -65,11 +67,11 @@
       var body = prepare(), a = document.createElement('a');
       a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent(COPY.subject + ' — ' + form.elements.screen.value.trim()) + '&body=' + encodeURIComponent(body);
       a.hidden = true; document.body.appendChild(a); a.click(); a.remove();
-      preview.open = true; status.textContent = COPY.opened;   /* a draft, never "sent" */
+      preview.open = true; status.textContent = tr(COPY.opened);   /* a draft, never "sent" */
     });
     document.getElementById('feedback-copy').addEventListener('click', function () {
       if (!valid()) return; var body = prepare(); preview.open = true;
-      (navigator.clipboard ? navigator.clipboard.writeText(body) : Promise.reject()).then(function () { status.textContent = COPY.copied; }, function () { status.textContent = COPY.copyFailed; });
+      (navigator.clipboard ? navigator.clipboard.writeText(body) : Promise.reject()).then(function () { status.textContent = tr(COPY.copied); }, function () { status.textContent = tr(COPY.copyFailed); });
     });
     form.addEventListener('input', function () { form.elements.screen.setCustomValidity(''); form.elements.summary.setCustomValidity(''); status.textContent = ''; if (pre.textContent) prepare(); });
     form.addEventListener('reset', function () { status.textContent = ''; pre.textContent = ''; preview.open = false; });
@@ -81,7 +83,7 @@
     tplBtn.addEventListener('click', function () {
       var s = document.getElementById('alpha-copy-status');
       var text = document.getElementById('alpha-issue-template').textContent;
-      (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () { s.textContent = COPY.tplCopied; }, function () { s.textContent = COPY.tplFailed; });
+      (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () { s.textContent = tr(COPY.tplCopied); }, function () { s.textContent = tr(COPY.tplFailed); });
     });
   }
 })();
