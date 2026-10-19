@@ -450,3 +450,12 @@ details.plain summary{cursor:pointer;font-weight:700;min-height:var(--tap);displ
 :root[data-ready] .hero-copy.reveal,
 :root[data-ready] .hero-stage.reveal{will-change:auto}
 @media(prefers-reduced-motion:reduce){.micro-fx{display:none}[data-ready] .section>.wrap.reveal{opacity:1;transform:none}}
+
+/* Compact accessible language selector; JS reveals it only when translations run. */
+.locale-picker{flex:none;min-width:3.5rem;margin-inline-start:auto}
+.locale-picker[hidden]{display:none!important}
+.locale-picker select{cursor:pointer;min-height:var(--tap);min-width:3.5rem;padding:.45rem .4rem;border:1px solid var(--line-strong);border-radius:var(--r-pill);background:var(--surface);color:var(--text);font:700 .9rem/1 var(--font-body);letter-spacing:.02em}
+.locale-picker select:hover{border-color:var(--accent-ink)}
+.locale-picker select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media(max-width:63.99rem){.hdr{gap:var(--s2)}.locale-picker{margin-left:auto}.menu{margin-left:0}}
+@media(max-width:23.4rem){.hdr-cta{display:none}.locale-picker{margin-left:auto}}
