@@ -1,4 +1,4 @@
-/* HaloWeb completed EN/LV/RU texts. */
+/* HaloWeb localized content. */
 window.HaloLocaleStrings = {
   "ru": {
     "Product": "Продукт",
@@ -859,7 +859,18 @@ window.HaloLocaleStrings = {
     "Real Halo Android Canvas screenshot, 13 October 2026": "Реальный снимок Canvas в Halo на Android, 13 октября 2026",
     "Halo memory settings. Halo may suggest useful memories. Nothing is saved automatically. Local reflection is off by default.": "Настройки памяти Halo. Halo может предлагать полезные сведения к запоминанию. Автоматически ничего не сохраняется. Локальное осмысление по умолчанию отключено.",
     "Real Halo Android Study screenshot, 13 October 2026": "Реальный снимок Study в Halo на Android, 13 октября 2026",
-    "Halo Access and data settings: Permissions, Memory and learning, Storage and backup, Setup readiness and Android assistant.": "Настройки доступа и данных Halo: разрешения, память и обучение, хранилище и резервные копии, готовность системы и Android-ассистент."
+    "Halo Access and data settings: Permissions, Memory and learning, Storage and backup, Setup readiness and Android assistant.": "Настройки доступа и данных Halo: разрешения, память и обучение, хранилище и резервные копии, готовность системы и Android-ассистент.",
+    "/ How Halo works": "/ Как работает Halo",
+    "/ Notes, Canvas & Study": "/ Заметки, Canvas и Study",
+    "/ Voice": "/ Голос",
+    "/ Kids Mode": "/ Детский режим",
+    "/ Your AI": "/ Ваш ИИ",
+    "/ Devices": "/ Устройства",
+    "/ Privacy & price": "/ Приватность и цена",
+    "/ What’s real today": "/ Что работает сейчас",
+    "/ Developers": "/ Разработчикам",
+    "/ Try the alpha": "/ Попробовать альфу",
+    "/ Presence & brand": "/ Состояния и стиль"
   },
   "lv": {
     "Product": "Produkts",
@@ -1720,6 +1731,17 @@ window.HaloLocaleStrings = {
     "Real Halo Android Canvas screenshot, 13 October 2026": "Īsts Halo Android Canvas ekrānuzņēmums, 2026. gada 13. oktobrī",
     "Halo memory settings. Halo may suggest useful memories. Nothing is saved automatically. Local reflection is off by default.": "Halo atmiņas iestatījumi. Halo var ieteikt noderīgas atmiņas. Nekas netiek saglabāts automātiski. Vietējā pārdomāšana pēc noklusējuma ir izslēgta.",
     "Real Halo Android Study screenshot, 13 October 2026": "Īsts Halo Android Study ekrānuzņēmums, 2026. gada 13. oktobrī",
-    "Halo Access and data settings: Permissions, Memory and learning, Storage and backup, Setup readiness and Android assistant.": "Halo piekļuves un datu iestatījumi: atļaujas, atmiņa un mācīšanās, krātuve un dublējumi, sistēmas gatavība un Android asistents."
+    "Halo Access and data settings: Permissions, Memory and learning, Storage and backup, Setup readiness and Android assistant.": "Halo piekļuves un datu iestatījumi: atļaujas, atmiņa un mācīšanās, krātuve un dublējumi, sistēmas gatavība un Android asistents.",
+    "/ How Halo works": "/ Kā darbojas Halo",
+    "/ Notes, Canvas & Study": "/ Piezīmes, Canvas un Study",
+    "/ Voice": "/ Balss",
+    "/ Kids Mode": "/ Bērnu režīms",
+    "/ Your AI": "/ Jūsu MI",
+    "/ Devices": "/ Ierīces",
+    "/ Privacy & price": "/ Privātums un cena",
+    "/ What’s real today": "/ Kas darbojas šobrīd",
+    "/ Developers": "/ Izstrādātājiem",
+    "/ Try the alpha": "/ Izmēģināt alfa versiju",
+    "/ Presence & brand": "/ Stāvokļi un zīmols"
   }
 };

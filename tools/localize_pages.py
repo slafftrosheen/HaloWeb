@@ -73,8 +73,10 @@ def translate_html(source, language, catalog, name):
     return output
 
 def main():
+    catalogs = {}
     for lang in ('lv', 'ru'):
         strings = json.loads((ROOT / 'copy' / (lang + '.json')).read_text(encoding='utf-8'))
+        catalogs[lang] = strings
         target = ROOT / lang
         target.mkdir(exist_ok=True)
         for page in PAGES:
@@ -82,6 +84,10 @@ def main():
             output = translate_html(source, lang, strings, page)
             (target / (page + '.html')).write_text(output, encoding='utf-8')
         print('Localized', len(PAGES), 'pages for', lang)
+    (ROOT / 'js' / 'locale-data.js').write_text(
+        '/* HaloWeb localized content. */\\nwindow.HaloLocaleStrings = '
+        + json.dumps(catalogs, ensure_ascii=False, indent=2) + ';\\n',
+        encoding='utf-8')
 
 if __name__ == '__main__':
     main()
