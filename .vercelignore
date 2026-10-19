@@ -1,5 +1,4 @@
-# HaloWeb Quiet Light: only deploy the public static site.
-# Design source, reference renders, and local authoring tooling remain in Git.
+# Quiet Light web deployment: design archive and authoring sources stay in Git.
 halo-web-quiet-light/
 halo-web-assets/
 src/
@@ -7,10 +6,3 @@ tools/
 tests/
 copy/
 *.md
-*.pdf
-# Keep the five alpha kit files at the site root publicly downloadable.
-!01_study_basil_observation.png
-!02_study_how_light_affects_plants.pdf
-!03_halo_alpha_quick_test.pdf
-!04_sample_note.txt
-!05_copy_paste_prompts.txt
