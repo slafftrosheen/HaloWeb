@@ -6,7 +6,7 @@
 2. **Picsart Quiet Light source pack**, committed at `halo-web-quiet-light/`: all English copy, source HTML, tokens, 156 viewport/theme reference renders, animations, design kit and release handoff.
 3. **Live Halo Android repository**, `https://github.com/slafftrosheen/Halo`, for Android implementation claims, local-model roles, voice provider selection, action evidence and alpha releases.
 4. **Live HaloLinux repository**, `https://github.com/slafftrosheen/HaloLinux`, for CLI, SDK, durable AgentRunStore, Linux adapters and proposed device sync.
-5. **Real Android test screenshots**, from the 13 October 2026 phone test build, served unmodified in `assets/screens/real/` with origin/date captions.
+5. **Real Android test screenshots**: ten unmodified 20 October 2026 screenshots from the original configured 1.0-RC1 app in `assets/screens/captures-2026-10-20/`, with documented state limits and integrity hashes; older 13 October states remain at `assets/screens/real/`.
 
 ## Provenance rules
 
@@ -23,4 +23,4 @@ Website itself is static; no Halo backend, analytics SDK or account collection. 
 
 ## Outstanding needs
 
-Current-build real phone screenshots for the handoff's SR inventory; a real Linux terminal capture after qualification; real Kids screenshots when a public build supports Kids; final licence decision by repo owner; render and accessibility verification of the deployed result; synchronized translations. Do not substitute generated imagery for missing evidence.
+Still-missing accurate live speech (SR-03), phone-action approval (SR-04), externally confirmed action (SR-06), and Canvas AI Keep/Discard draft (SR-13); a real Linux terminal capture after qualification; real Kids screenshots when a public build supports Kids; final licence decision by repo owner; render and accessibility verification of the deployed result; synchronized translations. Do not substitute generated imagery for missing evidence.

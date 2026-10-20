@@ -30,7 +30,7 @@ Motion plays on action/visibility, then stops; reduced-motion presents the final
 
 ## Asset and status boundaries
 
-- Actual phone captures: `assets/screens/real/` (13 October 2026 alpha test build; newer build evidence not automatically assumed).
+- Actual phone captures: ten original, unedited Android screenshots from 20 October 2026 in `assets/screens/captures-2026-10-20/` (see manifest and SHA-256 integrity data), plus prior 13 October state captures in `assets/screens/real/`. The Home hero uses the authentic light/dark pair.
 - Current state/reference: `https://github.com/slafftrosheen/Halo` and `https://github.com/slafftrosheen/HaloLinux`.
 - The complete Picsart source handoff, 156 reference renders and guidance are retained at `halo-web-quiet-light/`. This folder is excluded from Vercel via `.vercelignore`.
 - Missing capture state requirements are listed in `halo-web-quiet-light/docs/screenshot-map.csv`; do not replace them with fabricated user interfaces.

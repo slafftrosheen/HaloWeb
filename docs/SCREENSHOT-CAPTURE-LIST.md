@@ -2,6 +2,20 @@
 
 Source: Picsart Quiet Light handoff, `halo-web-quiet-light/docs/screenshot-map.csv` (19 October 2026). This list is for capturing **evidence**, not designing fake product screens. New images must originate from an actual running version of Halo and be associated with a recorded app version and date. The website is English-first during screenshot capture; Latvian/Russian localized screenshots are later optional additions.
 
+## Received and integrated · 20 October 2026
+
+Ten unedited, full-screen original Android app captures are in [the batch folder](../assets/screens/captures-2026-10-20/README.md), with SHA-256 and state constraints in the [manifest](../assets/screens/captures-2026-10-20/manifest.json). EN, LV and RU pages use the actual screenshots rather than generated renders. Theme-aware Home uses distinct dark and light PNGs.
+
+| IDs | Evidence now on site | Validated boundary |
+| --- | --- | --- |
+| SR-01, SR-02 | Home dark/light | Idle with existing Task paused and Waiting for you; not an empty-account state |
+| SR-07 | Activity Calculator launch | Dispatched, effect unverified after restart |
+| SR-11 + supplements | Seasons library, saved note | Original scrolled library; local Notebook save approval is **not** phone-action approval |
+| SR-16-goal/material | Study goal and imported text | Wizard draft/material readable; no successful AI lesson turn |
+| SR-21-roles/partial | Model role assignments and selection | Actual configured routing; no general compatibility promise |
+
+**Still needed before substitution:** SR-03 (live transcription), SR-04 (external phone action approval), SR-06 (externally confirmed result), SR-13 (AI Canvas draft with Keep/Discard). P1/P2 device/hardware captures remain pending. Keep each explicit state distinction visible in captions.
+
 ## P0 · Core website launch captures
 
 | ID | Source | Required state | Evidence notes |

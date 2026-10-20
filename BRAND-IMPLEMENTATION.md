@@ -17,9 +17,13 @@ Visual tokens use Night Ink, Halo Mint, Cream and Deep Mint, Sora display type a
 
 ## Source evidence
 
-Real screenshots under `assets/screens/real/` are **October 13 Android test-build captures**. The Home hero, Notebook, Canvas and Study sections use the closest honest capture with dated captions; there are no fake app screenshots. An uncaptured state is an `evidence-card` with official brand-state artwork and a statement that it is not a device screenshot. Do **not** replace these with generated phone renders.
+The current website uses genuine, unedited **20 October 2026** Android screenshots from `assets/screens/captures-2026-10-20/`. Source proof and qualification live in the batch `README.md`, `manifest.json` (APK and PNG SHA-256), and `capture-index.csv`. Captures are original-device Android 1.0-RC1 states; they are not renders.
 
-There is one intentionally visible `SR-00` placeholder in the unindexed `kit.html`, demonstrating a component state. All 12 public pages have no capture-request placeholders. The pending physical capture inventory is retained in `halo-web-quiet-light/docs/screenshot-map.csv`; adding new real screenshots and revisiting captions remains a release requirement.
+The Home hero switches between original Dark/Blue and Light/Lilac screenshots based on website/OS theme. The Notebook collection, sample saved note, local save approval, Study topic and import, model catalogue and role assignments, and unverified Calculator launch Activity receipt now appear in the appropriate product pages. Each new capture links to the unedited full-resolution PNG, with eager loading only for the hero. Native resolution is 1080 × 2400; no fabricated device pixels or upscaled render exists. Original 13 October captures remain for states not newly captured.
+
+**Limits are intentional:** Home still has Task paused / Waiting for you; Notebook save approval is not phone-action approval; the Study material sheet is not a successful AI lesson; the Activity launch is dispatched but not externally confirmed; a model appearing in the catalogue does not prove its compatibility. Missing P0 states SR-03, SR-04, SR-06 and SR-13 remain labelled illustrations and requests, not screenshots. Android/Linux/Kids acceptance claims remain separate.
+
+Edit the canonical `src/pages/` and rebuild with `tools/build_pages.py` when changing text, translated copy or macro mapping. Compiled EN/LV/RU static pages are also updated with the same capture imagery, without adding any backend or GitHub Actions.
 
 ## Evidence and claims
 
