@@ -1,0 +1,183 @@
+{
+  "capture_date": "2026-10-20",
+  "source_repo": "https://github.com/slafftrosheen/Halo.git",
+  "source_base_sha": "b9c1408cc76ade76429d42c6715f457bc3e638af",
+  "source_dirty": true,
+  "version_name": "1.0-RC1",
+  "version_code": 2,
+  "capture_package": "com.aistudio.braintool.xkqzps",
+  "package_note": "All retained screenshots use the original configured app. Temporary isolated installation removed; its initial Home capture was replaced. Original provider credentials/data retained.",
+  "device_resolution": [
+    1080,
+    2400
+  ],
+  "format": "PNG",
+  "ui_language": "English",
+  "ui_editing": "None; full native adb screencap.",
+  "captures": [
+    {
+      "id": "SR-11-supplement",
+      "file": "halo-notebook-seasons-note-20261020.png",
+      "state": "Original configured app; genuine AI response saved as a local sample note. Does not replace the requested library capture.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "14989be13c10a112ed0045168082abfb649e71e1b16a339fe94ceb3fe6b497ae",
+      "sha256": "aaa75d1618fcc396c62ecf971e8fa362919598528ba7c9342c22240b9a7156e0",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-21-partial",
+      "file": "halo-model-selection-20261020.png",
+      "state": "Original configured app; real model catalogue and Conversation default. Role-assignment capture still missing.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "14989be13c10a112ed0045168082abfb649e71e1b16a339fe94ceb3fe6b497ae",
+      "sha256": "e506e0b072a8a79e7115e4a40da91a391c33c80d15455883102dac9a370dd125",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-21-roles",
+      "file": "halo-model-role-assignments-dark-20261020.png",
+      "state": "Original configured app; actual explicit routing and Conversation model-role assignment.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "14989be13c10a112ed0045168082abfb649e71e1b16a339fe94ceb3fe6b497ae",
+      "sha256": "d470ea0fcb0313736b5e4469deb34d45fce8998a83db0b8f1105f9f5f6ee013b",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-01",
+      "file": "halo-home-idle-dark-20261020.png",
+      "state": "Idle conversation, Dark/Blue. Existing global Task paused and Waiting for you states preserved.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "ff7e2aa1893355fa2d4cfc4ee294a794794d74465862733a37110134e9250ee9",
+      "sha256": "3958a87be458ad44f3f7fe96d0efbb4f0877255be82ff9da2849bcfe5895d493",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-02",
+      "file": "halo-home-idle-light-20261020.png",
+      "state": "Idle conversation, Light/Lilac. Existing global Task paused and Waiting for you states preserved.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "ff7e2aa1893355fa2d4cfc4ee294a794794d74465862733a37110134e9250ee9",
+      "sha256": "cde41c69f85d99681e93e0b2b9a728220699a9a54194f778a3689a6490e4dfe7",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-11",
+      "file": "halo-notebook-seasons-collection-20261020.png",
+      "state": "English Library filtered to the new Seasons study collection with sample canvas, chat, notes and files. Native scrolled viewport; other user content excluded.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "ff7e2aa1893355fa2d4cfc4ee294a794794d74465862733a37110134e9250ee9",
+      "sha256": "2776bbdc20da07c5a64659ec9d6499c320c1a428b27505c2eca31ff5f315a3a1",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-16-goal",
+      "file": "halo-study-topic-selection-20261020.png",
+      "state": "New lesson topic selection with clean English sample goal, keyboard closed. Wizard draft; no additional lesson started.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "ff7e2aa1893355fa2d4cfc4ee294a794794d74465862733a37110134e9250ee9",
+      "sha256": "6182af7d883fa84bc76d42fd80d2189db9a03ef72325b7326c136bceb0009ef7",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-16-material",
+      "file": "halo-study-imported-material-20261020.png",
+      "state": "Actual imported seasons text, one readable source, expanded Material sheet. Does not assert that an AI lesson turn succeeded.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "ff7e2aa1893355fa2d4cfc4ee294a794794d74465862733a37110134e9250ee9",
+      "sha256": "e647744067c8da9fd90e0cba90ff40bfe7c4a02720c7b471b38ba16330a10476",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-04-supplement",
+      "file": "halo-notebook-save-approval-20261020.png",
+      "state": "Genuine Save result to Notebook confirmation naming the local operation and showing the clean generated sample text. Does not replace a phone-action approval capture.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "14989be13c10a112ed0045168082abfb649e71e1b16a339fe94ceb3fe6b497ae",
+      "sha256": "d9cbd8c3a135d51ef3887ff1970708b2cf84dab4e8f19810f93d0b01b0ca3ae9",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    },
+    {
+      "id": "SR-07",
+      "file": "halo-activity-dispatched-unverified-20261020.png",
+      "state": "Original app; durable exact Calculator launch receipt remains Result not confirmed after restart. Dispatched intent is not proof of external completion.",
+      "capture_package": "com.aistudio.braintool.xkqzps",
+      "apk_sha256": "f613089cd431444c21381e01a13ace52aba98814d02a5497ef8acaedb8e02989",
+      "sha256": "267d65fd0a87f0015744199353af857f08fd565027d18b91bf8875e0cdb8f1ef",
+      "dimensions": [
+        1080,
+        2400
+      ],
+      "accepted": true
+    }
+  ],
+  "missing": [
+    {
+      "id": "SR-03",
+      "reason": "Listening/Stop exercised, but no clean recognized speech sample captured. PC speaker test failed because no audio device was available."
+    },
+    {
+      "id": "SR-04",
+      "reason": "Notebook save approval captured as a supplement; no new phone-action approval sheet with a harmless exact target was reached."
+    },
+    {
+      "id": "SR-06",
+      "reason": "No genuinely confirmed external action receipt produced. Calculator launch is dispatched, not effect-confirmed."
+    },
+    {
+      "id": "SR-13",
+      "reason": "Real draft request on the sample canvas failed under current sample-object AI-access/local-provider configuration; no Keep/Discard draft state reached."
+    }
+  ],
+  "rejected": [
+    "Settings capture interrupted by an incoming-call overlay; excluded from public assets."
+  ],
+  "runtime_findings": [
+    "Existing cloud provider produced a clean English seasons answer, saved into Notebook.",
+    "Imported seasons text is readable by the new Study lesson; its first AI turn reported No permitted provider can serve this study turn.",
+    "Exact Calculator package opened; Halo records delivery unconfirmed. Activity projection correction is being built."
+  ],
+  "later_states": "P1/P2 and hardware-dependent states remain uncaptured unless individually listed. No Linux, Kids, assistant-overlay or playback claim is made.",
+  "latest_installed_apk_sha256": "f613089cd431444c21381e01a13ace52aba98814d02a5497ef8acaedb8e02989",
+  "latest_tests": {
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}
