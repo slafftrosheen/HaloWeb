@@ -25,9 +25,9 @@
   function setTheme(mode) {
     if (mode === 'system') { root.removeAttribute('data-theme'); try { localStorage.removeItem(THEME_KEY); } catch (_) {} }
     else { root.setAttribute('data-theme', mode); try { localStorage.setItem(THEME_KEY, mode); } catch (_) {} }
-    $('[data-theme-set]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-set') === mode)); });
+    $$('[data-theme-set]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-set') === mode)); });
     /* Kids illustrations ship as distinct dark/light branded stills. */
-    $('img[src*="assets/brand/kids/svg/halo_kids_orb_"]').forEach(function (img) {
+    $$('img[src*="assets/brand/kids/svg/halo_kids_orb_"]').forEach(function (img) {
       var original = img.getAttribute('data-light-base');
       if (!original) {
         original = img.getAttribute('src').replace(/_(?:light|dark)\.svg$/, '');
@@ -139,7 +139,7 @@
   });
   function stopForReducedMotion() {
     if (!reduce.matches) return;
-    $('.ring').forEach(function (r) {
+    $$('.ring').forEach(function (r) {
       if (r._anim) { r._anim.destroy(); r._anim = null; }
       r._suspended = false;
       r.classList.remove('is-live');
@@ -151,7 +151,7 @@
   /* Section reveals are progressive enhancement only: the real content stays
      readable without JS and with reduced motion. */
   if ('IntersectionObserver' in window && !reduce.matches) {
-    $('.section > .wrap, .hero-copy, .hero-stage').forEach(function (el) { el.classList.add('reveal'); });
+    $$('.section > .wrap, .hero-copy, .hero-stage').forEach(function (el) { el.classList.add('reveal'); });
   }
 
   /* A small, genuine brand asset is used for completed illustrative steps.
@@ -203,7 +203,7 @@
 
   /* ---------- voice states example ---------- */
   $$('[data-vstates]').forEach(function (w) {
-    var list = $('.vstates', w), items = $('.vstate', w), btn = $('[data-vplay]', w), live = $('[data-vlive]', w), t = null;
+    var list = $('.vstates', w), items = $$('.vstate', w), btn = $('[data-vplay]', w), live = $('[data-vlive]', w), t = null;
     if (!btn) return;
     var stopVoice = document.createElement('button');
     stopVoice.type = 'button'; stopVoice.className = 'btn btn--sec btn--sm';

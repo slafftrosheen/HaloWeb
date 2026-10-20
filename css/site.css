@@ -460,3 +460,18 @@ details.plain summary{cursor:pointer;font-weight:700;min-height:var(--tap);displ
 @media(max-width:63.99rem){.hdr{gap:var(--s2)}.locale-picker{margin-left:auto}.menu{margin-left:0}}
 @media(max-width:23.4rem){.hdr-cta{display:none}.locale-picker{margin-left:auto}}
 @media(max-width:30rem){.hdr-cta{display:none}.hdr{gap:var(--s2)}.locale-picker{margin-inline-start:auto}}
+
+/* Genuine October 20 app captures: theme-aware Home, full-size source, no pixel cropping */
+.shot .shot-open{display:block;cursor:zoom-in;text-decoration:none;border-radius:var(--r-shot)}
+.shot .shot-open picture{display:block}
+.shot .shot-open img{display:block;width:100%;height:auto;object-fit:contain}
+.shot .shot-open:focus-visible{outline:3px solid var(--accent-ink);outline-offset:4px}
+.shot--themed .capture--dark{display:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme]) .shot--themed .capture--light{display:none}:root:not([data-theme]) .shot--themed .capture--dark{display:block}}
+:root[data-theme="light"] .shot--themed .capture--light{display:block}
+:root[data-theme="light"] .shot--themed .capture--dark{display:none}
+:root[data-theme="dark"] .shot--themed .capture--light{display:none}
+:root[data-theme="dark"] .shot--themed .capture--dark{display:block}
+.capture-section .capture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,4vw,3rem);max-width:52rem;margin:var(--s6) auto 0}
+.capture-section .capture-grid .shot{min-width:0}
+@media(max-width:36rem){.capture-section .capture-grid{grid-template-columns:1fr;max-width:23rem}}

@@ -17,31 +17,46 @@ E = html.escape
 
 # Real captures only. key: (file stem, width, height, screen name, alt text)
 SHOTS = {
- 'home':      ('halo-home-paused-20261013', 1080, 2400, 'Home', 'Halo Home on Android. A paused task card says: Action dispatched; completion is unconfirmed. A Talk button sits at the bottom.'),
- 'activity':  ('halo-activity-history-20261013', 1080, 2400, 'Activity', 'Halo Activity. One entry reads: open app, Dispatched, effect not verified, 1 of 2 steps complete, waiting for approval. Another shows a completed reminder.'),
+ 'home':      ('halo-home-idle-light-20261020', 1080, 2400, 'Home', 'Idle Home with a paused task and waiting state.'),
+ 'activity':  ('halo-activity-dispatched-unverified-20261020', 1080, 2400, 'Activity', 'Calculator launch dispatched; effect not verified.'),
  'notifs':    ('halo-notifications-empty-20261013', 1080, 2400, 'Notifications', 'Halo Notifications, private, last 24 hours. Nothing waiting here.'),
- 'tools':     ('halo-notebook-tools-20261013', 1080, 2400, 'Notebook tools', 'Notebook tools in Halo: Skills, Canvas, Memory and Study, with the note: Notes are documents. Canvas connects them.'),
+ 'tools':     ('halo-notebook-seasons-collection-20261020', 1080, 2400, 'Notebook', 'Real Seasons collection including notes, files, chat and Canvas.'),
  'skills':    ('halo-skills-20261013', 1080, 2400, 'Skills', 'Halo Skills screen listing on-device models, model roles and phone actions such as alarms and timers.'),
  'canvas':    ('halo-canvas-group-20261013', 1080, 2400, 'Canvas', 'A Halo canvas titled Alpha demo, Light and growth, with five cards, three connections and a selected group.'),
- 'study':     ('halo-study-new-lesson-20261013', 1080, 2400, 'Study', 'Halo Study: Start a new lesson. Step 1, your learning goal. Step 2, add material, including reading text from a photo or file.'),
+ 'study':     ('halo-study-topic-selection-20261020', 1080, 2400, 'Study', 'New lesson topic, no successful AI response yet.'),
+ 'study_material': ('halo-study-imported-material-20261020', 1080, 2400, 'Study material', 'Readable imported Seasons text in Study.'),
+ 'roles': ('halo-model-role-assignments-dark-20261020', 1080, 2400, 'Model roles', 'Real model routing assignments.'),
  'devices':   ('halo-devices-this-phone-20261013', 1080, 2400, 'Devices', 'Halo Devices. This phone manages your conversation. No saved devices: Halo works on this phone. An Add device button.'),
  'settings':  ('halo-settings-20261013', 1080, 2400, 'Settings', 'Halo Settings listing Intelligence, Voice, Language, Appearance and Actions and connections.'),
  'access':    ('halo-settings-access-20261013', 1080, 2400, 'Access & data', 'Halo Access and data settings: Permissions, Memory and learning, Storage and backup, Setup readiness and Android assistant.'),
  'memory':    ('halo-memory-suggest-20261013', 1080, 1960, 'Memory', 'Halo memory settings. Halo may suggest useful memories. Nothing is saved automatically. Local reflection is off by default.'),
 }
 BUILD_NOTE = 'Android test build, 13 Oct 2026'
+CAPTURE_DIR = '/assets/screens/captures-2026-10-20/'
+NEW_BUILD_NOTE = 'Halo Android 1.0-RC1 original-device capture, 20 Oct 2026'
 
 def icon(name):
     return f'<svg class="ic" aria-hidden="true" focusable="false"><use href="assets/brand/icons.svg#i-{name}"/></svg>'
 
 def shot(key, note='', size='md', sizes='(max-width: 52rem) 72vw, 22rem'):
     stem, w, h, name, alt = SHOTS[key]
-    p = 'assets/screens/real/' + stem
-    cap = f'<b>Real capture</b> · {E(name)} · {BUILD_NOTE}' + (f'. {note}' if note else '')
+    fresh = stem.endswith('20261020')
     cls = 'shot' + (' shot--sm' if size == 'sm' else '')
-    return (f'<figure class="{cls}" style="--ratio:{w}/{h}"><picture>'
-            f'<source type="image/webp" srcset="{p}-480.webp 480w, {p}-720.webp 720w, {p}-1080.webp 1080w" sizes="{sizes}">'
-            f'<img src="{p}-720.jpg" width="{w}" height="{h}" alt="{E(alt)}" loading="lazy" decoding="async"></picture>'
+    if fresh:
+        p = CAPTURE_DIR + stem + '.png'
+        ids = {'home':'SR-02','activity':'SR-07','tools':'SR-11','study':'SR-16-goal','study_material':'SR-16-material','roles':'SR-21-roles'}
+        media = (f'<a class="shot-open" href="{p}" target="_blank" rel="noopener" aria-label="Open full-size screenshot"><picture>'
+                 f'<img src="{p}" width="{w}" height="{h}" alt="{E(alt)}" loading="lazy" decoding="async"></picture></a>')
+        note_build = NEW_BUILD_NOTE
+        capture_attr = f' data-capture-key="{ids[key]}"'
+    else:
+        p = 'assets/screens/real/' + stem
+        media = (f'<picture><source type="image/webp" srcset="{p}-480.webp 480w, {p}-720.webp 720w, {p}-1080.webp 1080w" sizes="{sizes}">'
+                 f'<img src="{p}-720.jpg" width="{w}" height="{h}" alt="{E(alt)}" loading="lazy" decoding="async"></picture>')
+        note_build = BUILD_NOTE
+        capture_attr = ''
+    cap = f'<b>Real capture</b> · {E(name)} · {note_build}' + (f'. {note}' if note else '')
+    return (f'<figure class="{cls}" style="--ratio:{w}/{h}"{capture_attr}>{media}'
             f'<figcaption class="captag">{icon("verify")}<span>{cap}</span></figcaption></figure>')
 
 def slot(sid, what, ratio='1080/2400'):
