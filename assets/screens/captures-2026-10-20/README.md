@@ -30,4 +30,4 @@ P1/P2/hardware-dependent states remain uncaptured unless listed. No Linux, Kids,
 
 The temporary isolated capture app was removed. Its initial Home image was replaced; every retained PNG now comes from the original configured app. Existing keys, model choices and original user content were retained. Only clean sample content was added through the UI.
 
-These source PNGs have not been substituted into website HTML. Review the state caveats before using them in public pages.
+**Website integration:** the genuine PNGs are now used in the HaloWeb Home, Workspace, Your AI, How it works and design kit pages. The Home hero switches original dark/light captures with the theme. Each capture links to its original full-resolution PNG; state caveats are visible in captions. The EN, LV and RU public pages were updated on 20 October 2026. Uncaptured conditions continue to use explicitly labelled brand-state illustrations, never synthetic phone screens.
