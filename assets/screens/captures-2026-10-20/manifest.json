@@ -31,7 +31,7 @@
     {
       "id": "SR-21-partial",
       "file": "halo-model-selection-20261020.png",
-      "state": "Original configured app; real model catalogue and Conversation default. Role-assignment capture still missing.",
+      "state": "Original configured app; real model catalogue and Conversation default. Paired with SR-21-roles for role assignments.",
       "capture_package": "com.aistudio.braintool.xkqzps",
       "apk_sha256": "14989be13c10a112ed0045168082abfb649e71e1b16a339fe94ceb3fe6b497ae",
       "sha256": "e506e0b072a8a79e7115e4a40da91a391c33c80d15455883102dac9a370dd125",
@@ -170,7 +170,7 @@
   "runtime_findings": [
     "Existing cloud provider produced a clean English seasons answer, saved into Notebook.",
     "Imported seasons text is readable by the new Study lesson; its first AI turn reported No permitted provider can serve this study turn.",
-    "Exact Calculator package opened; Halo records delivery unconfirmed. Activity projection correction is being built."
+    "Exact Calculator package opened. Installed Activity correction preserves Result not confirmed for dispatched receipts after restart; device capture verified."
   ],
   "later_states": "P1/P2 and hardware-dependent states remain uncaptured unless individually listed. No Linux, Kids, assistant-overlay or playback claim is made.",
   "latest_installed_apk_sha256": "f613089cd431444c21381e01a13ace52aba98814d02a5497ef8acaedb8e02989",
@@ -179,5 +179,6 @@
     "failures": 0,
     "errors": 0,
     "skipped": 0
-  }
+  },
+  "restoration": "Russian interface and Dark theme restored before the phone disconnected. Original provider credentials and app data retained; temporary capture app removed."
 }
